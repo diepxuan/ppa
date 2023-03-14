@@ -1,6 +1,9 @@
 # Install public key for ppa.launchpad.net
 # curl -SsL https://diepxuan.github.io/ppa/key.gpg | sudo apt-key add -
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF8545DBEDD9351A
+# gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv CF8545DBEDD9351A
+# gpg --export --armor CF8545DBEDD9351A | sudo apt-key add -
+
 
 # Add source list
 #sudo add-apt-repository ppa:caothu91/ppa
