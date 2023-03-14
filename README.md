@@ -1,7 +1,7 @@
 A PPA repository for DiepXuan Personal Package Archives
 
 ```bash
-curl -s https://diepxuan.github.io/ppa/install.sh | bash
+curl -s https://diepxuan.github.io/ppa/install.sh | sudo bash
 ```
 
 Or
