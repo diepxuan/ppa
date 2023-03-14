@@ -1,5 +1,10 @@
-# Diepxuan Personal Package Archives
-A PPA repository for my packages:
+A PPA repository for DiepXuan Personal Package Archives
+
+```bash
+curl -s https://diepxuan.github.io/ppa/install.sh | bash
+```
+
+Or
 
 ```bash
 curl -SsL https://diepxuan.github.io/ppa/key.gpg | sudo apt-key add -
