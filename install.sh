@@ -11,3 +11,7 @@ sudo curl -SsL -o /etc/apt/sources.list.d/caothu91-ubuntu-ppa-focal.list https:/
 
 sudo apt update
 sudo apt install ductn
+
+sudo systemctl daemon-reload
+sudo systemctl enable ductnd
+sudo systemctl restart ductnd
