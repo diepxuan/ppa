@@ -38,8 +38,15 @@ sub custom_line {
 # CUSTOM1_LOG = "/var/log/syslog"
 # Login failed for user 'sa'. Reason: An error occurred while evaluating the password. [CLIENT: 220.166.230.56]
 # Mssql Login failed from  (Default: 5 errors bans for 24 hours)
-if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /.*Login failed for user '.*'. Reason: .*. \[CLIENT: (\S+)\]/)) {
-        return ("Mssql Login failed from",$1,"mssql_authentication","5","1433","86400","0");
+if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /.*Login failed for user '.*'. Reason: .*password. \[CLIENT: (\S+)\]/)) {
+        return ("Mssql Login failed password from",$1,"mssql_authentication","5","1433","86400","0");
+}
+
+# CUSTOM1_LOG = "/var/log/syslog"
+# Login failed for user 'sa:Windows2016'. Reason: Could not find a login matching the name provided. [CLIENT: 31.7.57.178]
+# Mssql Login failed from  (Default: 5 errors bans for 24 hours)
+if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /.*Login failed for user '.*'. Reason: .*provided. \[CLIENT: (\S+)\]/)) {
+        return ("Mssql Login failed provided from",$1,"mssql_authentication","5","1433","86400","0");
 }
 
 # If the matches in this file are not syntactically correct for perl then lfd
