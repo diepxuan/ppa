@@ -51,3 +51,5 @@ if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /.*Login failed for user '.*
 
         return 0;
 }
+
+1;
