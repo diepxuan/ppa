@@ -783,12 +783,12 @@ Version: 3.1.2
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 188
-Depends: net-tools, jq, curl, bash-completion, openssl, unzip, libwww-perl, perl, apt-transport-https
+Depends: net-tools, jq, curl, bash-completion, openssl, unzip, libwww-perl, perl, apt-transport-https, bind9-dnsutils, bind9-host
 Filename: ./ductn_3.1.2_amd64.deb
-Size: 39180
-MD5sum: afc272b001a124518b40d3aacbec26fc
-SHA1: b29b66655dcbb7331afbe18d862d899b9f07b198
-SHA256: 789cbb0ca6555aa8af5997e0a6ba9176f580a8db667bfbccf3081a77ef4080b1
+Size: 39208
+MD5sum: eca2e518afe777bba5b3383e3c2b7b26
+SHA1: 485c165e60592b59fefa732e1cb17bcc6ad084a7
+SHA256: aff260a9143fb17f6f40c21999173c9521d52d4994cdbdcec8f5ae0e054642d5
 Section: devel
 Priority: optional
 Homepage: https://diepxuan.github.io/ppa/
