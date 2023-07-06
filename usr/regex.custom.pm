@@ -53,7 +53,7 @@ if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /.*Login failed for user '.*
 # Jul  6 07:05:19 dns mitmdump[1987326]: 64.112.72.106:45796: GET https://asmrbuluo.com/archives/380
 # Jul  6 07:05:19 dns mitmdump[1987326]:                   << 407 Proxy Authentication Required 129b
 # Mssql Login failed from  (Default: 5 errors bans for 24 hours)
-if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /^.*\]: (\S+):\d+:.*\n.*<< 407 Proxy Authentication Required.*/)) {
+if (($globlogs{CUSTOM1_LOG}{$lgfile}) and ($line =~ /.*\]: (\S+):\d+:.*\n.*<< 407 Proxy Authentication Required.*/)) {
         return ("Proxy Login failed provided from",$1,"proxy_authentication","5","1433","86400","0");
 }
 
