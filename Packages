@@ -1408,3 +1408,21 @@ Description: DiepXuan super package
     Private package for DiepXuan Co.,Ltd
     Building by Tran Ngoc Duc
 
+Package: ductn
+Version: 3.2.7.5
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 21227
+Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, mariadb-client | mysql-client, libwww-perl, perl, php-pear, php8.1-cli | php8.2-cli, bind9-dnsutils, bind9-host
+Filename: ./ductn/ductn_3.2.7.5_amd64.deb
+Size: 2479408
+MD5sum: ac040dc51ac3198f8dce24593aa8e942
+SHA1: 78da5113e4f56301e0e17f15c6faddb3f672bee1
+SHA256: 150b5a80acb27bbaf8948fb918ac08d75a5637d6bbf6aabb2fee52567c67d87c
+Section: devel
+Priority: optional
+Homepage: https://diepxuan.github.io/ppa/
+Description: DiepXuan super package
+    Private package for DiepXuan Co.,Ltd
+    Building by Tran Ngoc Duc
+
