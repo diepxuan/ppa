@@ -1521,12 +1521,12 @@ Version: 3.2.8.1
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 21233
-Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, software-properties-common, mariadb-client | mysql-client, libwww-perl, perl, php-pear, bind9-dnsutils, bind9-host
+Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, software-properties-common, mariadb-client | mysql-client, libwww-perl, perl, php-pear, php-cli, php-xml, php-dev, bind9-dnsutils, bind9-host
 Filename: ./ductn/ductn_3.2.8.1_amd64.deb
-Size: 2480344
-MD5sum: 7b50a5adeb4235cbefbba3e77b75b58a
-SHA1: 0aefa988334310cdb6e768625f766de179bb3c4f
-SHA256: 726f0dccec25cc7a42c73601597d76fdf1f6e20e61d22a0ef29d4dcf9fcf299b
+Size: 2479344
+MD5sum: 6d90489b162a768370b136cfd24c604b
+SHA1: c479e0c230a840a2f6ef7156493fb37b44bad1b7
+SHA256: f5d0e1a334460fa5abb5281e3b3beb9971c4d1861beda22dd3fb1e9998bce507
 Section: devel
 Priority: optional
 Homepage: https://diepxuan.github.io/ppa/
