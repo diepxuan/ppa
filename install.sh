@@ -6,7 +6,7 @@
 
 # Ubuntu key
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF8545DBEDD9351A
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7E0EC917A5074BD3
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7E0EC917A5074BD3
 
 # Older version
 # gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv CF8545DBEDD9351A
