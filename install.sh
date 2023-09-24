@@ -21,16 +21,12 @@ EOF
   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7E0EC917A5074BD3
 )
 
-sudo apt update
-
-# sudo add-apt-repository ppa:caothu91/ppa
-
 ### Install public key for ppa.launchpad.net
 # Manual key
 # curl -SsL https://diepxuan.github.io/ppa/key.gpg | sudo apt-key add -
 
 # Ubuntu key
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF8545DBEDD9351A
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF8545DBEDD9351A
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7E0EC917A5074BD3
 
 # Older version
