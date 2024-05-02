@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:caothu91/ppa
 
 #### Use own custom installer
 ```bash
-curl -s https://raw.githubusercontent.com/diepxuan/ppa/main/install.sh | sudo bash
+curl -s https://raw.githubusercontent.com/diepxuan/ppa/main/install.sh | bash
 ```
 
 #### Manual install
