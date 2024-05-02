@@ -7,7 +7,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7E0EC917A5074BD3
 
 command -v add-apt-repository >/dev/null 2>&1 && (
     add-apt-repository ppa:ondrej/php -y
-) || cat <<EOF | tee /etc/apt/sources.list.d/ondrej-ubuntu-php-focal.list >/dev/null &&
+) || cat <<EOF | tee /etc/apt/sources.list.d/ondrej-ubuntu-php-focal.list >/dev/null
 deb http://ppa.launchpad.net/ondrej/php/ubuntu focal main
 # deb-src http://ppa.launchpad.net/ondrej/php/ubuntu focal main
 EOF
