@@ -3,4 +3,4 @@ add-apt-repository ppa:ondrej/php -y
 
 # Install package
 apt update
-apt install ductn
+apt install ductn -y
