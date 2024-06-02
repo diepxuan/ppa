@@ -1,6 +1,4 @@
 apt install -y software-properties-common
-add-apt-repository ppa:ondrej/php -y
-
-# Install package
+sudo add-apt-repository ppa:caothu91/ppa
 apt update
 apt install -y ductn
