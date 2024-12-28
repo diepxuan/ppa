@@ -51,9 +51,10 @@ jobs:
       - name: Add .deb files to APT repository
         run: |
           while read -r file; do
+            dpkg-deb -I "dists/$file"
             codename=$(dpkg-deb -I "dists/$file" | grep -i Distribution | awk '{print $2}')
             if [ -z "$codename" ]; then
-                echo "Codename not found for $deb. Defaulting to focal."
+                echo "Codename not found for dists/$file. Defaulting to focal."
                 codename="focal"
             fi
             echo "Adding $file to $codename repository..."
