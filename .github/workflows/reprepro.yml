@@ -8,8 +8,8 @@ on:
     branches: [main]
     # paths:
     # - "src/debian/changelog"
-    paths-ignore:
-      - "**.md"
+    # paths-ignore:
+      # - "**.md"
     paths:
       - "**.deb"
   pull_request:
