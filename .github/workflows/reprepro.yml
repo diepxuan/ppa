@@ -1,0 +1,81 @@
+# Runs tests and verifies that the package can be built.
+name: Build
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [main]
+    # paths:
+    # - "src/debian/changelog"
+    paths-ignore:
+      - "**.md"
+    paths:
+      - "**.deb"
+  pull_request:
+    branches: [main]
+    # paths:
+    # - "src/debian/changelog"
+    paths-ignore:
+      - "**.md"
+    paths:
+      - "**.deb"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # if: ${{ false }}
+    runs-on: ${{matrix.operating-system}}
+    strategy:
+      fail-fast: false
+      matrix:
+        # operating-system: [ubuntu-22.04, ubuntu-20.04]
+        operating-system: [ubuntu-latest]
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Cài đặt reprepro
+      - name: Install reprepro
+        run: |
+          sudo apt update
+          sudo apt install -y reprepro gnupg
+      
+      # Thêm file .deb vào repository
+      - name: Add .deb files to APT repository
+        run: |
+          while read -r file; do
+            codename=$(dpkg-deb -I "$file" | grep -i Distribution | awk '{print $2}')
+            if [ -z "$codename" ]; then
+                echo "Codename not found for $deb. Defaulting to focal."
+                codename="focal"
+            fi
+            echo "Adding $file to $codename repository..."
+            reprepro -V includedeb "$codename" "$file" || true
+          done < <(ls dists/ | grep -E '.*(.deb)$')
+
+      - name: Git configuration
+        run: |
+          echo "$GPG_KEY====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
+          gpg --list-secret-keys --keyid-format=long
+          git config --global user.email "$GIT_COMMITTER_EMAIL"
+          git config --global user.name "$GIT_COMMITTER_NAME"
+          git config --global commit.gpgsign true
+          git config --global user.signingkey $GPG_KEY_ID
+        env:
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          GIT_COMMITTER_NAME: ${{ github.repository_owner }}
+          GPG_KEY: ${{ secrets.GPG_KEY }}
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+
+      - name: Push changes to GitHub
+        run: | 
+          git add .
+          git commit -m "Add .deb files to APT repository"
+          git push origin main
