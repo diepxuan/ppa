@@ -47,6 +47,10 @@ jobs:
           sudo apt update
           sudo apt install -y reprepro gnupg
       
+      - name: Output Payload
+        run: |
+          echo "Repository: ${{ github.event.client_payload.repository }}"
+      
       # Thêm file .deb vào repository
       - name: Add .deb files to APT repository
         run: |
