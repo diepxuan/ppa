@@ -9,27 +9,63 @@
 
         # execute every 30mins
         if [[ $second == 0 ]] && [[ $(($minute % 30)) == 0 ]]; then
-            --cron:cronjob:hour
+            :
+            # --cron:cronjob:hour
         fi
 
         # execute every 5mins at 0 second
         if [[ $second == 0 ]] && [[ $(($minute % 5)) == 0 ]]; then
-            --cron:cronjob:5min
+            :
+            # --cron:cronjob:5min
         fi
 
         # execute every minute at 1 second
         if [[ $second == 1 ]]; then
-            --cron:cronjob:min
+            :
+            # --cron:cronjob:min
         fi
 
         # execute every 5 seconds
         if [[ $(expr $(date +%S) % 5) == 0 ]]; then
-            _cron:cronjob:5seconds
+            :
+            # _cron:cronjob:5seconds
         fi
+    done
+
+    return 0
+
+    # Đọc và lưu cấu hình từ file
+    cron_file="tasks.cron"
+    while true; do
+        sleep 1
+
+        current_time=$(date "+%S %M")
+        current_second=$(echo "$current_time" | cut -d' ' -f1)
+        current_minute=$(echo "$current_time" | cut -d' ' -f2)
+
+        # Đọc từng dòng trong file cấu hình
+        while IFS= read -r line; do
+            # Bỏ qua các dòng trống hoặc dòng bắt đầu bằng #
+            [[ -z "$line" || $line =~ ^# ]] && continue
+
+            # Tách cột minute, second và command
+            minute=$(echo "$line" | awk '{print $1}')
+            second=$(echo "$line" | awk '{print $2}')
+            command=$(echo "$line" | awk '{print $3}')
+
+            # Kiểm tra điều kiện theo cột minute
+            if [[ "$minute" == "*" || $((current_minute % ${minute//\*/1})) -eq 0 ]]; then
+                # Kiểm tra điều kiện theo cột second
+                if [[ "$second" == "*" || $((current_second % ${second//\*/1})) -eq 0 ]]; then
+                    # Thực thi command
+                    eval "$command"
+                fi
+            fi
+        done <"$cron_file"
     done
 }
 
---run_as_service() {
+d_run_as_service() {
     _SERVICE_NAME=ductnd
     if [ ! "$(--sys:service:isactive $_SERVICE_NAME)" == "active" ]; then
         sudo systemctl stop ${_SERVICE_NAME//'.service'/}
@@ -39,7 +75,6 @@
     --sys:service:main
 }
 
-_DUCTN_COMMANDS+=("sys:service:isactive")
 --sys:service:isactive() { #SERVICE_NAME
     _SERVICE_NAME=ductnd
     if [[ ! -z ${@+x} ]]; then
@@ -49,7 +84,6 @@ _DUCTN_COMMANDS+=("sys:service:isactive")
     echo $IS_ACTIVE
 }
 
-_DUCTN_COMMANDS+=("sys:service:restart")
 --sys:service:restart() { #SERVICE_NAME
     _SERVICE_NAME=ductnd
     if [[ ! -z ${@+x} ]]; then
@@ -61,13 +95,11 @@ _DUCTN_COMMANDS+=("sys:service:restart")
     fi
 }
 
-_DUCTN_COMMANDS+=("sys:service:re-install")
 --sys:service:re-install() {
     --sys:service:unistall
     --sys:service:install
 }
 
-_DUCTN_COMMANDS+=("sys:service:install")
 --sys:service:install() {
     # sudo systemctl daemon-reload
     if [ "$(--sys:service:isactive)" == "failed" ]; then
@@ -99,7 +131,6 @@ _DUCTN_COMMANDS+=("sys:service:install")
     fi
 }
 
-_DUCTN_COMMANDS+=("sys:service:uninstall")
 --sys:service:unistall() {
     sudo systemctl kill ductnd    # remove the extension
     sudo systemctl stop ductnd    # remove the extension

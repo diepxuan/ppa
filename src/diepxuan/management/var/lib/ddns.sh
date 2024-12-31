@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 #!/bin/bash
 
-_DUCTN_COMMANDS+=("dns:disable")
+d_ddns:enable() {
+    sudo apt-get install -y bind9
+    sudo systemctl enable bind9.service
+    sudo systemctl start bind9.service
+}
+
 --dns:disable() {
     sudo systemctl stop systemd-resolved.service
     sudo systemctl disable systemd-resolved.service
@@ -25,7 +30,6 @@ search diepxuan.com
 EOF
 }
 
-_DUCTN_COMMANDS+=("dns:resolved")
 --dns:resolved() {
     sudo rm -rf /etc/resolv.conf
     sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf

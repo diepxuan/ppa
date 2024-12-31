@@ -13,6 +13,9 @@ source $_LIB/php.m2.sh
 source $_LIB/php.lar.sh
 source $_LIB/git.sh
 source $_LIB/log.sh
+source $_LIB/ddns.sh
+source $_LIB/host.sh
+source $_LIB/sys.service.sh
 
 d_commands() {
     # echo "--commands"

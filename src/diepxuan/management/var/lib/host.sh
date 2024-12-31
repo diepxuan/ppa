@@ -1,26 +1,22 @@
 #!/usr/bin/env bash
 #!/bin/bash
 
-_DUCTN_COMMANDS+=("host:name")
---host:name() { # FQDN dc
+d_host:name() { # FQDN dc
     hostname -s
 }
 
-_DUCTN_COMMANDS+=("host:domain")
-host_domain=$(hostname -d)
---host:domain() { # FQDN diepxuan.com
-    [[ -z $host_domain ]] && host_domain=diepxuan.com
+d_host:domain() { # FQDN diepxuan.com
+    host_domain=$(hostname -d)
+    [[ -z $host_domain ]] && host_domain=diepxuan.corp
     echo $host_domain
 }
 
-_DUCTN_COMMANDS+=("host:fullname")
-host_fullname=
---host:fullname() { # FQDN dc.diepxuan.com
-    [[ -z $host_fullname ]] && host_fullname="$(--host:name).$(--host:domain)"
+d_host:fullname() { # FQDN dc.diepxuan.com
+    host_fullname=$(hostname -f)
+    [[ -z $host_fullname ]] && host_fullname="$(d_host:name).$(d_host:domain)"
     echo $host_fullname
 }
 
-_DUCTN_COMMANDS+=("host:address")
 --host:address() {
     if [[ -n "$*" ]]; then
         --host:address:valid $(host $@ | grep -wv -e alias | cut -f4 -d' ')
@@ -33,7 +29,6 @@ _DUCTN_COMMANDS+=("host:address")
     --ip:valid "$@"
 }
 
-#_DUCTN_COMMANDS+=("host:ip")
 --host:ip() {
     --host:address "$@"
 }
@@ -50,7 +45,6 @@ _DUCTN_COMMANDS+=("host:address")
     unset host_name
 }
 
-_DUCTN_COMMANDS+=("host:serial")
 host_serial=
 --host:serial() {
     [[ -z $host_serial ]] && host_serial=$(--host:name) && host_serial=${host_serial:3}
@@ -58,28 +52,20 @@ host_serial=
     echo $host_serial
 }
 
-# copy from https://gist.github.com/irazasyed/a7b0a079e7727a4315b9
-
-_DUCTN_COMMANDS+=("hosts:remove")
 --hosts:remove() {
     --sys:hosts:remove $1 $2
 }
 
-_DUCTN_COMMANDS+=("hosts:add")
 --hosts:add() {
     --sys:hosts:add $1 $2
 }
 
-_DUCTN_COMMANDS+=("hosts")
 --hosts() {
     "--hosts:$*"
 }
 
 ETC_HOSTS=/etc/hosts
 
-# sed -i 's/var=.*/var=new_value/' file_name
-
-_DUCTN_COMMANDS+=("sys:hosts:add")
 --sys:hosts:add() {
     IP=$1
     HOSTNAME=$2
@@ -89,22 +75,15 @@ _DUCTN_COMMANDS+=("sys:hosts:add")
     if [[ ! -n $(grep -P "${IP}[[:space:]]${HOSTNAME}" $ETC_HOSTS) ]]; then
         echo -e $HOSTS_LINE | sudo tee -a /etc/hosts >/dev/null
     fi
-
-    # [[ -n $(grep -P "$IP[[:space:]]$HOSTNAME" $ETC_HOSTS) ]] && echo ">> Hosts added: $(grep $HOSTNAME $ETC_HOSTS)" || echo "Failed to Add $HOSTNAME, Try again!"
 }
 
-_DUCTN_COMMANDS+=("sys:hosts:remove")
 --sys:hosts:remove() {
     IP=$1
     HOSTNAME=$2
 
     sudo sed -i "/$HOSTNAME/d" $ETC_HOSTS
-    # grep -P "pve2.vpn" | sudo tee $ETC_HOSTS
-
-    # [[ -n "$(grep $HOSTNAME /etc/hosts)" ]] && echo ">> Hosts removed: $HOSTNAME" || echo "$HOSTNAME was not found!"
 }
 
-_DUCTN_COMMANDS+=("sys:hosts:domain")
 --sys:hosts:domain() {
     IP=$(--ip:wan)
     HOSTNAME="$(--host:fullname) $(--host:name)"
@@ -112,7 +91,11 @@ _DUCTN_COMMANDS+=("sys:hosts:domain")
     echo -e $HOSTS_LINE
 }
 
-_DUCTN_COMMANDS+=("sys:hosts:update")
 --sys:hosts:update() {
     sed -i 's/var=.*/var=new_value/' ${ETC_HOSTS}
 }
+
+# d_host() {
+#     [[ $(type -t _dev:host:$1) == function ]] && "_dev:host:$@" && exit 0
+#     [[ $(type -t --host:$1) == function ]] && "--host:$@" && exit 0
+# }
