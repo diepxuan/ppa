@@ -1,0 +1,57 @@
+#!/bin/bash
+# Installation:
+#  Append to ~/.bash_completion
+# open new or restart existing shell session
+
+_ductn() {
+    local cur script coms opts com
+    COMPREPLY=()
+    _get_comp_words_by_ref -n : cur words
+
+    for word in ${words[@]:1}; do
+        [[ $word != -* ]] && com=$word
+        [[ $word != -* ]] && break
+    done
+
+    if [[ $cur == $com ]]; then
+
+        readarray -d ' ' -t coms <<<$(ductn commands)
+
+        separator=" "
+        coms="$(printf "${separator}%s" "${coms[@]}")"
+        coms="${coms:${#separator}}"
+
+        COMPREPLY=($(compgen -W "${coms}" -- ${cur}))
+        __ltrim_colon_completions "$cur"
+
+        return 0
+    fi
+}
+
+_ductn_m2() {
+    local cur script coms opts com
+    COMPREPLY=()
+    _get_comp_words_by_ref -n : cur words
+
+    for word in ${words[@]:1}; do
+        [[ $word != -* ]] && com=$word
+        [[ $word != -* ]] && break
+    done
+
+    if [[ $cur == $com ]]; then
+
+        readarray -d ' ' -t coms <<<$(m2 completion:commands)
+
+        separator=" "
+        coms="$(printf "${separator}%s" "${coms[@]}")"
+        coms="${coms:${#separator}}"
+
+        COMPREPLY=($(compgen -W "${coms}" -- ${cur}))
+        __ltrim_colon_completions "$cur"
+
+        return 0
+    fi
+}
+
+complete -o default -F _ductn_m2 m2
+complete -o default -F _ductn ductn
