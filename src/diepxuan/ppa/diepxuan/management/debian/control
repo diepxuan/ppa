@@ -1,0 +1,18 @@
+Source: ductn
+Priority: optional
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Build-Depends: debhelper-compat (= 12)
+Section: devel
+Standards-Version: 3.0.1ppa1-1
+Homepage: https://diepxuan.github.io/ppa/
+#Vcs-Git: git://git.debian.org/collab-maint/ductn.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/ductn.git;a=summary
+
+Package: ductn
+Architecture: any
+Depends: ${misc:Depends},
+  net-tools, jq, curl, bash-completion, openssl, unzip,
+  apt-transport-https
+Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
