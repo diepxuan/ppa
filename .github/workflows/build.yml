@@ -6,40 +6,40 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [main]
-    # paths:
-    # - "src/debian/changelog"
-    # paths-ignore:
-      # - "**.md"
-    paths:
-      - "**.deb"
-      - "src/"
+
   pull_request:
     branches: [main]
-    # paths:
-    # - "src/debian/changelog"
-    # paths-ignore:
-      # - "**.md"
-    paths:
-      - "**.deb"
-      - "src/"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  # repository_dispatch:
-    # types: [build_trigger]
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  package-load:
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.packages.outputs.packages }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate matrix data
+        id: packages
+        shell: bash
+        run: |
+          pkgs=$(ls -l src/diepxuan/ | grep '^d' | awk '{print $NF}' | while read dir; do echo $dir; done)
+          json=$(printf '%s\n' "${pkgs}" | jq -R . | jq -s -c .)
+          echo "packages=$json" >> "$GITHUB_OUTPUT"
   # This workflow contains a single job called "build"
-  build:
+  package-build:
+    needs: package-load
     # if: ${{ false }}
     runs-on: ${{matrix.operating-system}}
     strategy:
       fail-fast: false
       matrix:
         # operating-system: [ubuntu-22.04, ubuntu-20.04]
+        m2module: ${{ fromJSON(needs.package-load.outputs.packages) }}
         operating-system: [ubuntu-latest]
+    name: Test and Build ${{ matrix.m2module }} module
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -48,16 +48,14 @@ jobs:
 
       # Cài đặt reprepro
       - name: Install reprepro
+        # if: ${{ false }}
         run: |
           sudo apt update
           sudo apt install -y reprepro gnupg
       
-      - name: Output Payload
-        run: |
-          echo "Repository: ${{ github.event.client_payload.repository }}"
-      
       # Thêm file .deb vào repository
       - name: Add .deb files to APT repository
+        # if: ${{ false }}
         run: |
           while read -r file; do
             dpkg-deb -I "dists/$file"
@@ -71,6 +69,7 @@ jobs:
           done < <(ls dists/ | grep -E '.*(.deb)$')
 
       - name: Git configuration
+        # if: ${{ false }}
         run: |
           echo "$GPG_KEY====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
           gpg --list-secret-keys --keyid-format=long
@@ -85,7 +84,19 @@ jobs:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
 
       - name: Push changes to GitHub
+        # if: ${{ false }}
         run: | 
           git add .
           git commit -m "Add .deb files to APT repository"
           git push origin main
+
+  package-publish:
+    needs: package-build
+    permissions:
+      contents: write
+    uses: diepxuan/.github/.github/workflows/debian-package-publish.yml@main
+    secrets:
+      GPG_KEY: ${{ secrets.GPG_KEY }}
+      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
