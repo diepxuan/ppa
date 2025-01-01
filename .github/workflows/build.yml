@@ -92,7 +92,7 @@ jobs:
 
   package-publish:
     needs: package-build
-    # if: ${{ false }}
+    if: ${{ false }}
     permissions:
       contents: write
     uses: diepxuan/.github/.github/workflows/debian-package-publish.yml@main
