@@ -48,14 +48,14 @@ jobs:
 
       # Cài đặt reprepro
       - name: Install reprepro
-        # if: ${{ false }}
+        if: ${{ false }}
         run: |
           sudo apt update
           sudo apt install -y reprepro gnupg
       
       # Thêm file .deb vào repository
       - name: Add .deb files to APT repository
-        # if: ${{ false }}
+        if: ${{ false }}
         run: |
           while read -r file; do
             dpkg-deb -I "dists/$file"
@@ -69,7 +69,7 @@ jobs:
           done < <(ls dists/ | grep -E '.*(.deb)$')
 
       - name: Git configuration
-        # if: ${{ false }}
+        if: ${{ false }}
         run: |
           echo "$GPG_KEY====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
           gpg --list-secret-keys --keyid-format=long
@@ -84,7 +84,7 @@ jobs:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
 
       - name: Push changes to GitHub
-        # if: ${{ false }}
+        if: ${{ false }}
         run: | 
           git add .
           git commit -m "Add .deb files to APT repository"
@@ -92,6 +92,7 @@ jobs:
 
   package-publish:
     needs: package-build
+    # if: ${{ false }}
     permissions:
       contents: write
     uses: diepxuan/.github/.github/workflows/debian-package-publish.yml@main
