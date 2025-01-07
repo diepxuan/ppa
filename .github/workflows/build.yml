@@ -61,12 +61,6 @@ jobs:
         uses: diepxuan/.github/.github/actions/ssh-setup@main
         with:
           ssh_key_id: ${{ secrets.SSH_ID_RSA }}
-
-      - name: Installing build dependencies
-        if: ${{ false }}
-        run: |
-          sudo apt update
-          sudo apt install -y reprepro gnupg
       
       - name: Dynamically environment
         shell: bash
@@ -87,12 +81,18 @@ jobs:
           OBS_PW: ${{ secrets.OBS_PW }}
           OBS_OPPW: ${{ secrets.OBS_OPPW }}
           KITE_TOKEN: ${{ secrets.KITE_TOKEN }}
+
+      - name: Installing build dependencies
+        working-directory: src/diepxuan/${{ matrix.m2module }}
+        run: |
+          sudo apt update
+          sudo apt-get build-dep -y -- .
+          sudo apt install -y reprepro gnupg
       
       - name: Build package
         working-directory: src/diepxuan/${{ matrix.m2module }}
         shell: bash
         run: |
-          sudo apt-get build-dep -y -- .
           dpkg-buildpackage --force-sign
 
       - name: Add .deb files to APT repository
@@ -105,10 +105,18 @@ jobs:
           done < <(ls dists/ | grep -E '.*(.deb)$')
 
       - name: Push changes to GitHub
-        run: | 
-          git add .
-          git commit -m "Automatic add .deb files to APT repository"
-          git push origin main
+        run: |
+          # if git -C src/ status --porcelain=v1 2>/dev/null | grep -q .; then
+          if [ -n "$(git -C src/ status --porcelain=v1 2>/dev/null)" ]; then
+            git add src/
+            git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}"
+            if ! git push; then
+              git stash
+              git pull --rebase
+              git stash pop
+              git push || true
+            fi
+          fi
 
   package-publish:
     needs: package-build
