@@ -39,8 +39,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        operating-system: [ubuntu-22.04, ubuntu-20.04]
-        # operating-system: [ubuntu-latest]
+        # operating-system: [ubuntu-22.04, ubuntu-20.04]
+        operating-system: [ubuntu-latest]
         m2module: ${{ fromJSON(needs.package-load.outputs.packages) }}
     name: Build "${{ matrix.m2module }}" module on ${{ matrix.operating-system }}
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -117,15 +117,3 @@ jobs:
               git push || true
             fi
           fi
-
-  package-publish:
-    needs: package-build
-    if: ${{ false }}
-    permissions:
-      contents: write
-    uses: diepxuan/.github/.github/workflows/debian-package-publish.yml@main
-    secrets:
-      GPG_KEY: ${{ secrets.GPG_KEY }}
-      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
