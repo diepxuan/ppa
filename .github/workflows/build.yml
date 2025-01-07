@@ -106,9 +106,9 @@ jobs:
 
       - name: Push changes to GitHub
         run: |
-          # if git -C src/ status --porcelain=v1 2>/dev/null | grep -q .; then
-          if [ -n "$(git -C src/ status --porcelain=v1 2>/dev/null)" ]; then
-            git add src/
+          # if git status --porcelain=v1 2>/dev/null | grep -q .; then
+          if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
+            git add .
             git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}"
             if ! git push; then
               git stash
