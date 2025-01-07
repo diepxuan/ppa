@@ -39,22 +39,22 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu:18.04, ubuntu:20.04, ubuntu:22.04, ubuntu:24.04, debian:10, debian:11, debian:12]  # Các phiên bản OS để build
+        os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, debian-10, debian-11, debian-12]  # Các phiên bản OS để build
         architecture: [amd64, arm64]
         include:
-          - os: ubuntu:18.04
+          - os: ubuntu-18.04
             codename: bionic
-          - os: ubuntu:20.04
+          - os: ubuntu-20.04
             codename: focal
-          - os: ubuntu:22.04
+          - os: ubuntu-22.04
             codename: jammy
-          - os: ubuntu:24.04
+          - os: ubuntu-24.04
             codename: lunar
-          - os: debian:10
+          - os: debian-10
             codename: buster
-          - os: debian:11
+          - os: debian-11
             codename: bullseye
-          - os: debian:12
+          - os: debian-12
             codename: bookworm
         m2module: ${{ fromJSON(needs.package-load.outputs.packages) }}
     name: Build "${{ matrix.m2module }}" module on ${{ matrix.architecture }}/${{ matrix.os }} (${{ matrix.codename }})
@@ -88,7 +88,7 @@ jobs:
           push: false  # Chỉ build mà không push image
           tags: diepxuan:build-${{ matrix.os }}-${{ matrix.architecture }}  # Tag cho Docker image theo OS
           build-args: |
-            BASE_IMAGE=${{ matrix.os }}
+            BASE_IMAGE=${{ matrix.os | replace('-', ':') }}
             TIMEZONE=Asia/Ho_Chi_Minh
         env:
           TZ: Asia/Ho_Chi_Minh
