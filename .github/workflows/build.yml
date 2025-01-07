@@ -93,22 +93,18 @@ jobs:
           context: . # Thư mục chứa Dockerfile
           no-cache: true  # Không sử dụng cache
           push: false  # Chỉ build mà không push image
-          tags: diepxuan:build-${{ matrix.os }}-${{ matrix.architecture }}  # Tag cho Docker image theo OS
+          platforms: linux/${{ matrix.architecture }} # Kiến trúc của Docker image
+          tags: diepxuan:${{ matrix.os }}-${{ matrix.architecture }}  # Tag cho Docker image theo OS
           build-args: |
             BASE_IMAGE=${{ matrix.base_image }}
             TIMEZONE=Asia/Ho_Chi_Minh
+            WORKDIR=/src/diepxuan/${{ matrix.m2module }}
         env:
           TZ: Asia/Ho_Chi_Minh
       
       - name: Run build package inside Docker container
         run: |
-          docker run --rm -v ${{ github.workspace }}:/workspace diepxuan:build-${{ matrix.os }}-${{ matrix.architecture }} bash -c "
-            apt update
-            apt-get build-dep -y -- src/diepxuan/${{ matrix.m2module }}
-            apt install -y reprepro gnupg
-            cd src/diepxuan/${{ matrix.m2module }}
-            dpkg-buildpackage --force-sign
-          "
+          docker run --rm -v ${{ github.workspace }}:/src diepxuan:${{ matrix.os }}-${{ matrix.architecture }}
 
       - name: Installing build dependencies
         working-directory: src/diepxuan/${{ matrix.m2module }}
