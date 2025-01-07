@@ -99,3 +99,11 @@ ETC_HOSTS=/etc/hosts
 #     [[ $(type -t _dev:host:$1) == function ]] && "_dev:host:$@" && exit 0
 #     [[ $(type -t --host:$1) == function ]] && "--host:$@" && exit 0
 # }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

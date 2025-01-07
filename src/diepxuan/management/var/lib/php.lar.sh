@@ -9,3 +9,11 @@ _laravel() {
 d_lar() {
     _laravel $@
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

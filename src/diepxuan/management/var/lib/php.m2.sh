@@ -220,3 +220,11 @@ d_m2() {
     [[ $(type -t _dev:m2:$1) == function ]] && "_dev:m2:$@" && exit 0
     [[ ! $(type -t _dev:m2:$1) == function ]] && php -d memory_limit=756M -d max_execution_time=18000 bin/magento $@
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

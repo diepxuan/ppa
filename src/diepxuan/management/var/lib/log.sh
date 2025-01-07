@@ -2,6 +2,10 @@
 #!/bin/bash
 
 d_log() {
+    d_log:watch "$@"
+}
+
+d_log:watch() {
     local service=$*
     [[ -z $service ]] && --log:watch
     [[ -n $service ]] && --log:watch:service ${service//.service/}
@@ -109,3 +113,11 @@ d_log() {
     fi
 
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

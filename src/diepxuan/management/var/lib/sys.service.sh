@@ -138,3 +138,11 @@ d_run_as_service() {
     sudo rm -rf /etc/systemd/system/*ductnd.service
     sudo rm -rf /usr/lib/systemd/system/*ductnd.service
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

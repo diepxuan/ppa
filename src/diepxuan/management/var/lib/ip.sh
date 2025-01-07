@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #!/bin/bash
 
-_DUCTN_COMMANDS+=("ip:wan")
 _IP_EXTEND=
 --ip:wan() {
 
@@ -33,7 +32,6 @@ _IP_EXTEND=
     dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6
 }
 
-_DUCTN_COMMANDS+=("ip:local")
 ip_local=
 --local() {
     ips=$(--localAll)
@@ -112,5 +110,3 @@ ip_local=
         fi
     done
 }
-
-"--$@"

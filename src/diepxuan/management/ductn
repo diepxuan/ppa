@@ -2,26 +2,22 @@
 #!/bin/bash
 
 _GLOBAL_EXEC=d_
-_LIB=/var/lib/ductn
+_SRC_DIR=$(dirname $(realpath $0))
 
 [[ $# -eq 0 ]] &&
     echo "No arguments supplied" &&
     exit 1
 
-source $_LIB/sys.sh
-source $_LIB/php.m2.sh
-source $_LIB/php.lar.sh
-source $_LIB/git.sh
-source $_LIB/log.sh
-source $_LIB/ddns.sh
-source $_LIB/host.sh
-source $_LIB/sys.service.sh
+_LIB_DIR=/var/lib/ductn
+[[ -d "$_SRC_DIR/var/lib" ]] &&
+    _LIB_DIR="$_SRC_DIR/var/lib"
+for file in $_LIB_DIR/*.sh; do
+    [[ -f "$file" ]] &&
+        [[ $(bash $file --isenabled) == '1' ]] &&
+        source $file
+done
 
 d_commands() {
-    # echo "--commands"
-    # declare -F | awk '{print $3}' | cut -f3 -d':' | grep -v -e "^$" | awk '{print " - " $1}'
-    # declare -F | awk '{print $3}' | grep -e "^--"
-    # declare -F | awk '{print $3}' | grep -e "^--" | awk '{print substr($1, 3, length($1))}'
     declare -F | awk '{print $3}' | grep -e "^$_GLOBAL_EXEC" | sed "s/$_GLOBAL_EXEC//g" | grep -v "commands"
 }
 
