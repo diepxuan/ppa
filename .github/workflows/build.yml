@@ -78,7 +78,7 @@ jobs:
           CODENAME=${CODENAME:-$DISTRIB_CODENAME}
           CODENAME=${CODENAME:-$VERSION_CODENAME}
           CODENAME=${CODENAME:-$UBUNTU_CODENAME}
-          env CODENAME $CODENAME
+          echo "CODENAME=$CODENAME" >> $GITHUB_ENV
         env:
           repository: ${{ github.repository }}
           branch: ${{ github.ref_name }}
