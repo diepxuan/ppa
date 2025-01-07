@@ -1,3 +1,5 @@
+ARG BASE_IMAGE=ubuntu:20.04
+ARG WORKDIR=/src
 FROM ${BASE_IMAGE}
 
 # Cập nhật hệ thống và cài đặt các công cụ cần thiết
