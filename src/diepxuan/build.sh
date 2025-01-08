@@ -2,6 +2,10 @@
 #!/bin/bash
 
 APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
+pwd_dir=$(dirname $(realpath "$BASH_SOURCE"))
+source_dir=$pwd_dir/${MODULE:-'management'}
+source_dir=$(realpath $source_dir 2>/dev/null)
+source_dir=${source_dir:-$pwd_dir}
 
 export DEBIAN_FRONTEND=noninteractive
 
@@ -19,8 +23,6 @@ apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-per
 apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
-
-source_dir=${MODULE:-'management'}
 
 apt-get build-dep -y -- "$source_dir"
 cd $source_dir
