@@ -128,7 +128,7 @@ jobs:
           update-locale LANG=en_US.UTF-8
           cd /src/${{ matrix.m2module }}
           ls -la
-          apt-get build-dep -y -- .
+          apt-get build-dep -y -- . || true
           # echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
           # gpg --list-secret-keys --keyid-format=long
           # dpkg-buildpackage --force-sign
