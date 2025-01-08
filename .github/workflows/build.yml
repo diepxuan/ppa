@@ -129,10 +129,11 @@ jobs:
           cd /src/${{ matrix.m2module }}
           ls -la
           apt-get build-dep -y -- .
-          echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
-          gpg --list-secret-keys --keyid-format=long
-          ls -la
-          dpkg-buildpackage --force-sign
+          # echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
+          # gpg --list-secret-keys --keyid-format=long
+          # ls -la
+          # dpkg-buildpackage --force-sign
+          dpkg-buildpackage -us -uc -b
           "
         env:
           TZ: Asia/Ho_Chi_Minh
