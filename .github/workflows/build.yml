@@ -111,11 +111,23 @@ jobs:
           docker run --rm --platform=linux/${{ matrix.architecture }} \
             -e DEBIAN_FRONTEND=noninteractive \
             -v $(pwd):/src ${{ matrix.base_image }} bash -c "
+          cat | sudo tee /etc/apt/apt.conf.d/50build-deb-action <<-EOF
+          APT::Get::Assume-Yes \"yes\";
+          APT::Install-Recommends \"no\";
+          Acquire::Languages \"none\";
+          quiet \"yes\";
+          EOF
           ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
           apt-get update
+          apt-get install -y dpkg-dev libdpkg-perl \
+            dput \
+            tree \
+            devscripts \
+            libdistro-info-perl \
+            software-properties-common \
+            debhelper-compat
           apt-get install -y \
             build-essential \
-            devscripts \
             debhelper \
             fakeroot \
             gnupg \
@@ -130,7 +142,7 @@ jobs:
           update-locale LANG=en_US.UTF-8
           cd /src/${{ matrix.m2module }}
           ls -la
-          apt-get build-dep -y -- . || true
+          # apt-get build-dep -y -- . || true
           # echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
           # gpg --list-secret-keys --keyid-format=long
           # dpkg-buildpackage --force-sign
