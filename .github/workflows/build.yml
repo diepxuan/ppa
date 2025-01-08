@@ -131,6 +131,7 @@ jobs:
       - name: Add .deb files to APT repository
         shell: bash
         run: |
+          reprepro clearvanished
           # mv src/diepxuan/*.deb dists/
           while read -r file; do
             dpkg-deb -I "src/diepxuan/$file"

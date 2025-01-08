@@ -52,11 +52,20 @@ Components: main
 Description: Ubuntu 22.04 (Jammy)
 SignWith: yes
 
-# Ubuntu 24.04 (Oracular)
+# Ubuntu 24.04 (Noble)
 Origin: DiepXuan
 Label: DiepXuan
-Codename: oracular
+Codename: noble
 Architectures: amd64 arm64 i386
 Components: main
-Description: Ubuntu 24.04 (Oracular)
+Description: Ubuntu 24.04 (Noble)
+SignWith: yes
+
+# Ubuntu 25.04 (Plucky)
+Origin: DiepXuan
+Label: DiepXuan
+Codename: plucky
+Architectures: amd64 arm64 i386
+Components: main
+Description: Ubuntu 25.04 (Plucky)
 SignWith: yes
