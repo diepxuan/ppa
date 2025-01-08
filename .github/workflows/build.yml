@@ -87,7 +87,22 @@ jobs:
 
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v3  # Cài đặt Docker Buildx
-      
+
+      # Cài đặt QEMU
+      - name: Set up QEMU for multi-architecture
+        run: |
+          apt update
+          apt install -y qemu-user-static
+          # Cài đặt và cấu hình QEMU cho kiến trúc ARM
+          docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+
+      - name: Installing build dependencies
+        working-directory: src/diepxuan/${{ matrix.m2module }}
+        run: |
+          sudo apt update
+          sudo apt-get build-dep -y -- .
+          sudo apt install -y reprepro gnupg
+
       - name: Run build package inside Docker container
         working-directory: src/diepxuan
         shell: bash
@@ -121,13 +136,6 @@ jobs:
           "
         env:
           TZ: Asia/Ho_Chi_Minh
-
-      - name: Installing build dependencies
-        working-directory: src/diepxuan/${{ matrix.m2module }}
-        run: |
-          sudo apt update
-          sudo apt-get build-dep -y -- .
-          sudo apt install -y reprepro gnupg
       
       - name: Build package
         if: false
