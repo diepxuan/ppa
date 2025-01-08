@@ -65,7 +65,7 @@ jobs:
             base_image: debian:12
             codename: bookworm
         m2module: ${{ fromJSON(needs.package-load.outputs.packages) }}
-    name: Build "${{ matrix.m2module }}" module on ${{ matrix.architecture }}/${{ matrix.os }} (${{ matrix.codename }})
+    name: ${{ matrix.architecture }}/${{ matrix.os }} (${{ matrix.codename }}) build "${{ matrix.m2module }}"
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -91,8 +91,8 @@ jobs:
       # Cài đặt QEMU
       - name: Set up QEMU for multi-architecture
         run: |
-          apt update
-          apt install -y qemu-user-static
+          sudo apt update
+          sudo apt install -y qemu-user-static
           # Cài đặt và cấu hình QEMU cho kiến trúc ARM
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
@@ -124,7 +124,8 @@ jobs:
             vim \
             locales \
             tzdata
-          ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime 
+          echo "Asia/Ho_Chi_Minh" > /etc/timezone
+          ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
           dpkg-reconfigure -f noninteractive tzdata
           locale-gen en_US.UTF-8
           update-locale LANG=en_US.UTF-8
