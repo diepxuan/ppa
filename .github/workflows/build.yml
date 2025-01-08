@@ -109,11 +109,10 @@ jobs:
         run: |
           docker run --rm --platform=linux/${{ matrix.architecture }} \
             -e DEBIAN_FRONTEND=noninteractive \
-            -e MODULE=$MODULE \
-            -e GPG_KEY=$GPG_KEY \
+            -e MODULE=${{ matrix.m2module }} \
+            -e GPG_KEY=${{ secrets.GPG_KEY }} \
             -v $(pwd):/src \
-            -v $(pwd)/build.sh:/build.sh \
-            ${{ matrix.base_image }} bash -c "/build.sh"
+            ${{ matrix.base_image }} bash -c "/src/build.sh"
         env:
           TZ: Asia/Ho_Chi_Minh
           GPG_KEY: ${{ secrets.GPG_KEY }}
