@@ -1,7 +1,7 @@
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bionic
-Date: Wed, 08 Jan 2025 17:17:51 UTC
+Date: Wed, 08 Jan 2025 17:30:20 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 18.04 (Bionic)
@@ -9,8 +9,8 @@ MD5Sum:
  f2258da22583416cd3580564dfb2481e 629 main/binary-amd64/Packages
  2fae99e5f412b57de0a530e33bdb6853 448 main/binary-amd64/Packages.gz
  26631d079bfb1095a70e63e00cf01342 104 main/binary-amd64/Release
- d41d8cd98f00b204e9800998ecf8427e 0 main/binary-arm64/Packages
- 7029066c27ac6f5ef18d660d5741979a 20 main/binary-arm64/Packages.gz
+ 2e2a06f9d996619fd84c273ea612a7b5 629 main/binary-arm64/Packages
+ 78cf9043eebe3e07015afbfe46218aba 449 main/binary-arm64/Packages.gz
  7e4ac491ed1b4290828910dba3955745 104 main/binary-arm64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
@@ -19,8 +19,8 @@ SHA1:
  49e5e4d7e4ab498d37788ee129a2b6d0c8be1e9a 629 main/binary-amd64/Packages
  62e74458ba13228928ea2e909964a8fb397cdfc0 448 main/binary-amd64/Packages.gz
  3740f8b7e61e7f96030a646f346ed62556076226 104 main/binary-amd64/Release
- da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-arm64/Packages
- 46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-arm64/Packages.gz
+ bcbd8b7253f946c78f0b535c50383b30f0696c32 629 main/binary-arm64/Packages
+ 9042013290a5785dc0d6121fe4c2e81b5b9235a8 449 main/binary-arm64/Packages.gz
  3a68ec90214681bb89d44427cb0d8894a85d5e23 104 main/binary-arm64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
@@ -29,8 +29,8 @@ SHA256:
  4c4c92a2ccbdb4d35fe9256f8af5e5c3c227101ddaf42dd876753d7185fbdf05 629 main/binary-amd64/Packages
  a074f8f75c390a8f080c003cb5744579ff95d26067a291f9563a797b6a279702 448 main/binary-amd64/Packages.gz
  c082832d4af813a54ac4147509ca1242f45688d1439e9dade4c4ed5dbc459493 104 main/binary-amd64/Release
- e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-arm64/Packages
- 59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-arm64/Packages.gz
+ de56be1cedb04784046b1cb1aa05aa59b7a4dc0580555a1c6999ea7ecaa9791d 629 main/binary-arm64/Packages
+ 3ab3acc4a513346b91e8eb68eeda2da44ca065cf82a50f4ad69e0f20c031a1b8 449 main/binary-arm64/Packages.gz
  c3935ce4a72be993c9212c15d1d33697f86d57726d3fb36cb8aaccfa66bd2911 104 main/binary-arm64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
