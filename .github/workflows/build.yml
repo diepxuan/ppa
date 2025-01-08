@@ -57,7 +57,7 @@ jobs:
             codename: noble
           - os: ubuntu-25.04
             base_image: ubuntu:25.04
-            codename: oracular
+            codename: plucky
           - os: debian-10
             base_image: debian:10
             codename: buster

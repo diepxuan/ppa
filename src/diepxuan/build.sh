@@ -21,6 +21,7 @@ RELEASE=${RELEASE:-$(echo $PRETTY_NAME | awk '{print $2}')}
 RELEASE=${RELEASE:-${DISTRIB_RELEASE}}
 RELEASE=${RELEASE:-${VERSION_ID}}
 RELEASE=$(echo "$RELEASE" | awk -F. '{print $1"."$2}')
+RELEASE=$(echo "$RELEASE" | tr '[:upper:]' '[:lower:]')
 
 DISTRIB=${DISTRIB:-$DISTRIB_ID}
 DISTRIB=${DISTRIB:-$ID}
