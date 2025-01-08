@@ -133,8 +133,6 @@ jobs:
         shell: bash
         run: |
           reprepro clearvanished
-          git status
-          git pull --rebase
           # mv src/diepxuan/*.deb dists/
           while read -r file; do
             dpkg-deb -I "src/diepxuan/$file"
@@ -144,7 +142,7 @@ jobs:
       - name: Push changes to GitHub
         run: |
           # if git status --porcelain=v1 2>/dev/null | grep -q .; then
-          git checkout -- src/diepxuan
+          git checkout -- src/diepxuan/*/debian/changelog
           if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
             git add .
             git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}"
