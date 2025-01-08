@@ -29,7 +29,7 @@ DISTRIB=$(echo "$DISTRIB" | tr '[:upper:]' '[:lower:]')
 
 export DEBIAN_FRONTEND=noninteractive
 
-cat | sudo tee "$APT_CONF_FILE" <<-EOF
+cat | tee "$APT_CONF_FILE" <<-EOF
 APT::Get::Assume-Yes "yes";
 APT::Install-Recommends "no";
 Acquire::Languages "none";
@@ -37,6 +37,7 @@ quiet "yes";
 EOF
 
 ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
+apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
 
 apt-get update
@@ -63,4 +64,4 @@ sed -i -e "s|$codename_os|$CODENAME|g" $source_dir/debian/changelog
 
 cd $source_dir
 dpkg-parsechangelog
-dpkg-buildpackage --force-sign
+dpkg-buildpackage --force-sign || dpkg-buildpackage --force-sign -d
