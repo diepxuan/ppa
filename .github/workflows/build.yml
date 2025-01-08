@@ -40,6 +40,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, debian-10, debian-11, debian-12]  # Các phiên bản OS để build
+        # architecture: [amd64]
         architecture: [amd64, arm64]
         include:
           - os: ubuntu-18.04
@@ -86,25 +87,40 @@ jobs:
 
       - name: Set up Docker Build
         uses: docker/setup-buildx-action@v3  # Cài đặt Docker Buildx
-
-      - name: Build and push Docker container
-        uses: docker/build-push-action@v6  # Sử dụng Docker Build and Push Action
-        with:
-          context: . # Thư mục chứa Dockerfile
-          no-cache: true  # Không sử dụng cache
-          push: false  # Chỉ build mà không push image
-          platforms: linux/${{ matrix.architecture }} # Kiến trúc của Docker image
-          tags: diepxuan:${{ matrix.os }}-${{ matrix.architecture }}  # Tag cho Docker image theo OS
-          build-args: |
-            BASE_IMAGE=${{ matrix.base_image }}
-            TIMEZONE=Asia/Ho_Chi_Minh
-            WORKDIR=/src/diepxuan/${{ matrix.m2module }}
-        env:
-          TZ: Asia/Ho_Chi_Minh
       
       - name: Run build package inside Docker container
+        working-directory: src/diepxuan
+        shell: bash
         run: |
-          docker run --rm -v ${{ github.workspace }}:/src diepxuan:${{ matrix.os }}-${{ matrix.architecture }}
+          docker run --rm --platform=linux/${{ matrix.architecture }} \
+            -v $(pwd):/src ${{ matrix.base_image }} bash -c "
+          apt-get update
+          apt-get install -y \
+            build-essential \
+            devscripts \
+            debhelper \
+            fakeroot \
+            gnupg \
+            reprepro \
+            wget \
+            curl \
+            git \
+            sudo \
+            vim \
+            locales \
+            tzdata
+          ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime 
+          dpkg-reconfigure -f noninteractive tzdata
+          locale-gen en_US.UTF-8
+          update-locale LANG=en_US.UTF-8
+          cd /src/${{ matrix.m2module }}
+          apt-get build-dep -y -- .
+          echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
+          gpg --list-secret-keys --keyid-format=long
+          dpkg-buildpackage --force-sign
+          "
+        env:
+          TZ: Asia/Ho_Chi_Minh
 
       - name: Installing build dependencies
         working-directory: src/diepxuan/${{ matrix.m2module }}

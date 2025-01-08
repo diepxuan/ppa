@@ -1,5 +1,4 @@
 ARG BASE_IMAGE=ubuntu:20.04
-ARG WORKDIR=/src
 FROM ${BASE_IMAGE}
 
 # Đặt timezone để tránh yêu cầu nhập liệu khi cài đặt package
@@ -31,11 +30,12 @@ RUN apt-get update && apt-get install -y tzdata locales && \
     update-locale LANG=en_US.UTF-8
 
 # Thiết lập biến môi trường
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
 
 # Thiết lập thư mục làm việc
+ARG WORKDIR=/src
 WORKDIR ${WORKDIR}
 
 # Định nghĩa lệnh chạy chính

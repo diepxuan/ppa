@@ -2,7 +2,7 @@
 Origin: DiepXuan
 Label: DiepXuan
 Codename: buster
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 10 (Buster)
 SignWith: yes
@@ -11,7 +11,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bullseye
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 11 (Bullseye)
 SignWith: yes
@@ -20,7 +20,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bookworm
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 12 (Bookworm)
 SignWith: yes
@@ -29,7 +29,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bionic
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 18.04 (Bionic)
 SignWith: yes
@@ -38,7 +38,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: focal
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 20.04 (Focal)
 SignWith: yes
@@ -47,7 +47,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: jammy
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 22.04 (Jammy)
 SignWith: yes
@@ -56,7 +56,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: lunar
-Architectures: amd64 i386
+Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 24.04 (Lunar)
 SignWith: yes
