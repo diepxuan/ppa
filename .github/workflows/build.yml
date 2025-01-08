@@ -107,8 +107,8 @@ jobs:
         working-directory: src/diepxuan
         shell: bash
         run: |
+          # docker run --rm --platform=linux/${{ matrix.architecture }} -e TZ="$TZ" \
           docker run --rm --platform=linux/${{ matrix.architecture }} \
-            # -e TZ="$TZ" \
             -v $(pwd):/src ${{ matrix.base_image }} bash -c "
           apt-get update
           apt-get install -y \
