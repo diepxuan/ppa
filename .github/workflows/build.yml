@@ -133,6 +133,7 @@ jobs:
         shell: bash
         run: |
           reprepro clearvanished
+          git status
           git pull --rebase
           # mv src/diepxuan/*.deb dists/
           while read -r file; do
