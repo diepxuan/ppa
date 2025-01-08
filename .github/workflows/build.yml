@@ -107,52 +107,17 @@ jobs:
         working-directory: src/diepxuan
         shell: bash
         run: |
-          # docker run --rm --platform=linux/${{ matrix.architecture }} -e TZ="$TZ" \
           docker run --rm --platform=linux/${{ matrix.architecture }} \
             -e DEBIAN_FRONTEND=noninteractive \
-            -v $(pwd):/src ${{ matrix.base_image }} bash -c "
-          cat | sudo tee /etc/apt/apt.conf.d/50build-deb-action <<-EOF
-          APT::Get::Assume-Yes \"yes\";
-          APT::Install-Recommends \"no\";
-          Acquire::Languages \"none\";
-          quiet \"yes\";
-          EOF
-          ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
-          apt-get update
-          apt-get install -y dpkg-dev libdpkg-perl \
-            dput \
-            tree \
-            devscripts \
-            libdistro-info-perl \
-            software-properties-common \
-            debhelper-compat
-          apt-get install -y \
-            build-essential \
-            debhelper \
-            fakeroot \
-            gnupg \
-            reprepro \
-            wget \
-            curl \
-            git \
-            sudo \
-            vim \
-            locales
-          locale-gen en_US.UTF-8
-          update-locale LANG=en_US.UTF-8
-          cd /src/${{ matrix.m2module }}
-          ls -la
-          # apt-get build-dep -y -- . || true
-          # echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
-          # gpg --list-secret-keys --keyid-format=long
-          # dpkg-buildpackage --force-sign
-          pwd
-          ls -la
-          ls -la debian
-          dpkg-buildpackage -us -uc -b
-          "
+            -e MODULE=$MODULE \
+            -e GPG_KEY=$GPG_KEY \
+            -v $(pwd):/src \
+            -v $(pwd)/build.sh:/build.sh \
+            ${{ matrix.base_image }} bash -c "/build.sh"
         env:
           TZ: Asia/Ho_Chi_Minh
+          GPG_KEY: ${{ secrets.GPG_KEY }}
+          MODULE: ${{ matrix.m2module }}
       
       - name: Build package
         if: false
