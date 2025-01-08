@@ -112,7 +112,7 @@ jobs:
             -e MODULE=$MODULE \
             -e GPG_KEY="$GPG_KEY" \
             -v $(pwd):/src \
-            ${{ matrix.base_image }} bash -c "/src/build.sh"
+            ${{ matrix.base_image }} bash -c "bash /src/build.sh"
         env:
           TZ: Asia/Ho_Chi_Minh
           GPG_KEY: ${{ secrets.GPG_KEY }}
