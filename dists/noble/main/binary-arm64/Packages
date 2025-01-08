@@ -1,0 +1,18 @@
+Package: ductn
+Version: 4.3.4-ubuntu-24.04
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 216
+Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https
+Homepage: https://diepxuan.github.io/ppa/
+Priority: optional
+Section: devel
+Filename: pool/main/d/ductn/ductn_4.3.4-ubuntu-24.04_arm64.deb
+Size: 45114
+SHA256: c29f4a5c1e43f43e50e23a6c8fe758dd9e5c4285b5061c444319e2147c6e6a56
+SHA1: fe110f408dcf75d762d48bec62118c30631d4659
+MD5sum: de01b2f3810fa72db3c16d88b196252f
+Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
