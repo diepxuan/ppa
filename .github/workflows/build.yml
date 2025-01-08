@@ -109,7 +109,9 @@ jobs:
         run: |
           # docker run --rm --platform=linux/${{ matrix.architecture }} -e TZ="$TZ" \
           docker run --rm --platform=linux/${{ matrix.architecture }} \
+            -e DEBIAN_FRONTEND=noninteractive \
             -v $(pwd):/src ${{ matrix.base_image }} bash -c "
+          ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
           apt-get update
           apt-get install -y \
             build-essential \
