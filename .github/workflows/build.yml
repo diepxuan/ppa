@@ -108,7 +108,7 @@ jobs:
         shell: bash
         run: |
           docker run --rm --platform=linux/${{ matrix.architecture }} \
-            -e TZ="$TZ" \
+            # -e TZ="$TZ" \
             -v $(pwd):/src ${{ matrix.base_image }} bash -c "
           apt-get update
           apt-get install -y \
@@ -131,8 +131,10 @@ jobs:
           apt-get build-dep -y -- .
           # echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
           # gpg --list-secret-keys --keyid-format=long
-          # ls -la
           # dpkg-buildpackage --force-sign
+          pwd
+          ls -la
+          ls -la debian
           dpkg-buildpackage -us -uc -b
           "
         env:
