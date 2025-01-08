@@ -52,7 +52,14 @@ gpg --list-secret-keys --keyid-format=long
 version=${version:-"$(dpkg-parsechangelog -S Version -l $source_dir/debian/changelog 2>/dev/null)"}
 version=${version:-"$(head -n 1 $source_dir/debian/changelog | awk -F '[()]' '{print $2}')"}
 version=${version:-"0.0.0"}
-version="${version}-${DISTRIB}-${RELEASE}"
+new_version="${version}-${DISTRIB}-${RELEASE}"
+sed -i -e "s|$version|$new_version|g" $source_dir/debian/changelog
+
+codename_os=${codename_os:-"$(dpkg-parsechangelog -S Distribution -l $source_dir/debian/changelog 2>/dev/null)"}
+codename_os=${codename_os:-"$(head -n 1 $source_dir/debian/changelog | awk '{print $3}' | sed 's|;||g')"}
+codename_os=${codename_os:-"jammy"}
+sed -i -e "s|$codename_os|$CODENAME|g" $source_dir/debian/changelog
 
 cd $source_dir
+dpkg-parsechangelog
 dpkg-buildpackage --force-sign

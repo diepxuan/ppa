@@ -39,7 +39,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, debian-10, debian-11, debian-12]  # Các phiên bản OS để build
+        os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, ubuntu-25.04, debian-10, debian-11, debian-12]  # Các phiên bản OS để build
         # architecture: [amd64]
         architecture: [amd64, arm64]
         include:
@@ -54,7 +54,10 @@ jobs:
             codename: jammy
           - os: ubuntu-24.04
             base_image: ubuntu:24.04
-            codename: lunar
+            codename: noble
+          - os: ubuntu-25.04
+            base_image: ubuntu:25.04
+            codename: oracular
           - os: debian-10
             base_image: debian:10
             codename: buster
