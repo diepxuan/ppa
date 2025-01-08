@@ -133,6 +133,8 @@ jobs:
         shell: bash
         run: |
           reprepro clearvanished
+          git checkout -- src/diepxuan
+          git pull --rebase
           # mv src/diepxuan/*.deb dists/
           while read -r file; do
             dpkg-deb -I "src/diepxuan/$file"
