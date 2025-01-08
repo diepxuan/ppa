@@ -130,6 +130,7 @@ jobs:
           apt-get build-dep -y -- .
           echo "${{ secrets.GPG_KEY }}====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
           gpg --list-secret-keys --keyid-format=long
+          ls -la
           dpkg-buildpackage --force-sign
           "
         env:
