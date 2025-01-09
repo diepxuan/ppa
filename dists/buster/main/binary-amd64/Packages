@@ -1,0 +1,18 @@
+Package: ductn
+Version: 4.3.3~debian10.
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 216
+Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https
+Homepage: https://diepxuan.github.io/ppa/
+Priority: optional
+Section: devel
+Filename: pool/main/d/ductn/ductn_4.3.3~debian10._amd64.deb
+Size: 44424
+SHA256: e73e9252cdc5087d2b826e41a4dee5f43bb16438541596c89384092644b7af9a
+SHA1: 80662da8b7e2a4e5804ad070bcfebf4a9eb5ee1b
+MD5sum: 7e6afa43487bd0940bf64dcaf30ad990
+Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
