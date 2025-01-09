@@ -20,8 +20,11 @@ RELEASE=${RELEASE:-$(echo $VERSION | awk '{print $1}')}
 RELEASE=${RELEASE:-$(echo $PRETTY_NAME | awk '{print $2}')}
 RELEASE=${RELEASE:-${DISTRIB_RELEASE}}
 RELEASE=${RELEASE:-${VERSION_ID}}
-RELEASE=$(echo "$RELEASE" | awk -F. '{print $1"."$2}')
+# RELEASE=$(echo "$RELEASE" | awk -F. '{print $1"."$2}')
+RELEASE=$(echo "$RELEASE" | cut -d. -f1-2)
 RELEASE=$(echo "$RELEASE" | tr '[:upper:]' '[:lower:]')
+RELEASE=${RELEASE//[[:space:]]/}
+RELEASE=${RELEASE%.}
 
 DISTRIB=${DISTRIB:-$DISTRIB_ID}
 DISTRIB=${DISTRIB:-$ID}
@@ -54,7 +57,7 @@ gpg --list-secret-keys --keyid-format=long
 version=${version:-"$(dpkg-parsechangelog -S Version -l $source_dir/debian/changelog 2>/dev/null)"}
 version=${version:-"$(head -n 1 $source_dir/debian/changelog | awk -F '[()]' '{print $2}')"}
 version=${version:-"0.0.0"}
-new_version=$version~$DISTRIB$RELEASE
+new_version=$version-$DISTRIB$RELEASE
 sed -i -e "s|$version|$new_version|g" $source_dir/debian/changelog
 
 codename_os=${codename_os:-"$(dpkg-parsechangelog -S Distribution -l $source_dir/debian/changelog 2>/dev/null)"}
