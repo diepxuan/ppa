@@ -132,12 +132,11 @@ jobs:
       - name: Add .deb files to APT repository
         shell: bash
         run: |
-          reprepro clearvanished
           git status
           git stash
           git pull --rebase
           git stash pop
-          # mv src/diepxuan/*.deb dists/
+          reprepro clearvanished
           while read -r file; do
             dpkg-deb -I "src/diepxuan/$file"
             reprepro -V --keepunusednewfiles includedeb ${{ matrix.codename }} "src/diepxuan/$file" || true
@@ -145,10 +144,11 @@ jobs:
 
       - name: Push changes to GitHub
         run: |
-          # if git status --porcelain=v1 2>/dev/null | grep -q .; then
-          git checkout -- src/diepxuan/*/debian/changelog
           if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
-            git add .
+            git add db/
+            git add conf/
+            git add pool/
+            git add dists/
             git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}"
             if ! git push; then
               git stash
