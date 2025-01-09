@@ -134,7 +134,9 @@ jobs:
         run: |
           reprepro clearvanished
           git status
+          git stash
           git pull --rebase
+          git stash pop
           # mv src/diepxuan/*.deb dists/
           while read -r file; do
             dpkg-deb -I "src/diepxuan/$file"
