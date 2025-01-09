@@ -12,7 +12,7 @@ Package: ductn
 Architecture: any
 Depends: ${misc:Depends},
   net-tools, jq, curl, bash-completion, openssl, unzip,
-  apt-transport-https
+  apt-transport-https, sudo, dnsutils
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc

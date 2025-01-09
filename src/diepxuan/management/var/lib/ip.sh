@@ -2,7 +2,7 @@
 #!/bin/bash
 
 _IP_EXTEND=
---ip:wan() {
+d_ip:wan() {
 
     # IPANY="$(dig @ns1.google.com -t txt o-o.myaddr.l.google.com +short | tr -d \")"
     # GOOGv4="$(dig -4 @ns1.google.com -t txt o-o.myaddr.l.google.com +short | tr -d \")"
@@ -19,6 +19,9 @@ _IP_EXTEND=
     # fi
 
     [[ -z "$_IP_EXTEND" ]] && _IP_EXTEND="$(dig -4 @ns1.google.com -t txt o-o.myaddr.l.google.com +short 2>&1 | tr -d \" 2>/dev/null)"
+    [[ -z "$_IP_EXTEND" ]] && _IP_EXTEND="$(dig -4 @resolver1.opendns.com -t A myip.opendns.com +short 2>/dev/null)"
+    [[ -z "$_IP_EXTEND" ]] && _IP_EXTEND="$(curl -s https://api.ipify.org 2>/dev/null)"
+    [[ -z "$_IP_EXTEND" ]] && _IP_EXTEND="$(curl -s http://ifconfig.me 2>/dev/null)"
 
     _IP_EXTEND=$(--ip:valid $_IP_EXTEND)
     echo "$_IP_EXTEND"
@@ -32,8 +35,7 @@ _IP_EXTEND=
     dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6
 }
 
-ip_local=
---local() {
+d_ip:local() {
     ips=$(--localAll)
     echo ${ips[0]}
 }
@@ -110,3 +112,11 @@ ip_local=
         fi
     done
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi
