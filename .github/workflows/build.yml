@@ -145,6 +145,7 @@ jobs:
       - name: Push changes to GitHub
         run: |
           if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
+            git checkout -- src/diepxuan/*/
             git add db/
             git add conf/
             git add pool/
