@@ -146,6 +146,7 @@ jobs:
       - name: Push changes to GitHub
         run: |
           if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
+            rm -rf src/diepxuan/*/debian/debhelper-build-stamp
             git checkout -- src/diepxuan/*/
             git add db/
             git add conf/
