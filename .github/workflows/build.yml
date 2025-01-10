@@ -122,13 +122,6 @@ jobs:
           GPG_KEY: ${{ secrets.GPG_KEY }}
           MODULE: ${{ matrix.m2module }}
       
-      - name: Build package
-        if: false
-        working-directory: src/diepxuan/${{ matrix.m2module }}
-        shell: bash
-        run: |
-          dpkg-buildpackage --force-sign
-
       - name: Add .deb files to APT repository
         shell: bash
         run: |
@@ -152,7 +145,7 @@ jobs:
             git add conf/
             git add pool/
             git add dists/
-            git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}"
+            git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}" || true
             if ! git push; then
               git stash
               git pull --rebase

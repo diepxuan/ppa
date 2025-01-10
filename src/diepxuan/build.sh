@@ -39,6 +39,15 @@ Acquire::Languages "none";
 quiet "yes";
 EOF
 
+cat | tee ~/.dput.cf <<-EOF
+[caothu91ppa]
+fqdn = ppa.launchpad.net
+method = ftp
+incoming = ~caothu91/ubuntu/ppa/
+login = anonymous
+allow_unsigned_uploads = 0
+EOF
+
 ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
 apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
@@ -68,3 +77,9 @@ sed -i -e "s|$codename_os|$CODENAME|g" $source_dir/debian/changelog
 cd $source_dir
 dpkg-parsechangelog
 dpkg-buildpackage --force-sign || dpkg-buildpackage --force-sign -d
+dpkg-buildpackage --force-sign -S || dpkg-buildpackage --force-sign -S -d
+
+cd $pwd_dir
+while read -r package; do
+    dput caothu91ppa $pwd_dir/$package || true
+done < <(ls $pwd_dir | grep -E '.*(_source.changes)$')
