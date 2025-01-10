@@ -2,12 +2,18 @@
 #!/bin/bash
 
 d_ddns:bind9:install() {
+    [[ "$1" == "--help" ]] &&
+        echo "Install bind9 dns server" &&
+        return
     sudo apt-get install -y bind9
     sudo systemctl enable bind9.service
     sudo systemctl start bind9.service
 }
 
 d_ddns:technitium:install() {
+    [[ "$1" == "--help" ]] &&
+        echo "Install Technitium dns server" &&
+        return
     sudo bash <(curl -fsSL https://download.technitium.com/dns/install.sh)
 }
 
@@ -35,6 +41,9 @@ EOF
 }
 
 d_ddns:resolved() {
+    [[ "$1" == "--help" ]] &&
+        echo "Revert system resolved" &&
+        return
     sudo rm -rf /etc/resolv.conf
     sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
     sudo systemctl enable systemd-resolved.service

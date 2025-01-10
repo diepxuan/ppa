@@ -26,6 +26,9 @@ fi
 }
 
 d_sys:sysctl() {
+    [[ "$1" == "--help" ]] &&
+        echo "Update sysctl for ductn package" &&
+        return
     _sysctl="fs.inotify.max_user_watches=524288
 net.ipv4.ip_forward=1"
 

@@ -3,6 +3,9 @@
 
 _IP_EXTEND=
 d_ip:wan() {
+    [[ "$1" == "--help" ]] &&
+        echo "Get public ip address" &&
+        return
 
     # IPANY="$(dig @ns1.google.com -t txt o-o.myaddr.l.google.com +short | tr -d \")"
     # GOOGv4="$(dig -4 @ns1.google.com -t txt o-o.myaddr.l.google.com +short | tr -d \")"
@@ -36,6 +39,9 @@ d_ip:wan() {
 }
 
 d_ip:local() {
+    [[ "$1" == "--help" ]] &&
+        echo "Get local ip addresses" &&
+        return
     ips=$(--localAll)
     echo ${ips[0]}
 }

@@ -2,16 +2,25 @@
 #!/bin/bash
 
 d_host:name() { # FQDN dc
+    [[ "$1" == "--help" ]] &&
+        echo "Get hostname - example FQDN ppa" &&
+        return
     hostname -s
 }
 
 d_host:domain() { # FQDN diepxuan.com
+    [[ "$1" == "--help" ]] &&
+        echo "Get domainname - example FQDN diepxuan.com" &&
+        return
     host_domain=$(hostname -d)
     [[ -z $host_domain ]] && host_domain=diepxuan.corp
     echo $host_domain
 }
 
-d_host:fullname() { # FQDN dc.diepxuan.com
+d_host:fullname() { # FQDN ppa.diepxuan.com
+    [[ "$1" == "--help" ]] &&
+        echo "Get fullname - example FQDN ppa.diepxuan.com" &&
+        return
     host_fullname=$(hostname -f)
     [[ -z $host_fullname ]] && host_fullname="$(d_host:name).$(d_host:domain)"
     echo $host_fullname

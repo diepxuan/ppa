@@ -66,6 +66,9 @@
 }
 
 d_run_as_service() {
+    [[ "$1" == "--help" ]] &&
+        echo "Run package as service" &&
+        return
     _SERVICE_NAME=ductnd
     if [ ! "$(--sys:service:isactive $_SERVICE_NAME)" == "active" ]; then
         sudo systemctl stop ${_SERVICE_NAME//'.service'/}

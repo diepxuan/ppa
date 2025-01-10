@@ -215,7 +215,10 @@ _grunt() {
     npx grunt --version >/dev/null 2>&1 && npx grunt $*
 }
 
-d_m2() {
+d_php:m2() {
+    [[ "$1" == "--help" ]] &&
+        echo "Magento 2 extend command" &&
+        return
     [[ ! -f bin/magento ]] && exit 0
     [[ $(type -t _dev:m2:$1) == function ]] && "_dev:m2:$@" && exit 0
     [[ ! $(type -t _dev:m2:$1) == function ]] && php -d memory_limit=756M -d max_execution_time=18000 bin/magento $@

@@ -6,7 +6,10 @@ _laravel() {
     php artisan $*
 }
 
-d_lar() {
+d_php:lar() {
+    [[ "$1" == "--help" ]] &&
+        echo "Laravel extend command" &&
+        return
     _laravel $@
 }
 

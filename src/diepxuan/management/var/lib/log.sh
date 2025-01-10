@@ -2,10 +2,16 @@
 #!/bin/bash
 
 d_log() {
+    [[ "$1" == "--help" ]] &&
+        echo "Show system log" &&
+        return
     d_log:watch "$@"
 }
 
 d_log:watch() {
+    [[ "$1" == "--help" ]] &&
+        echo "Watch service log" &&
+        return
     local service=$*
     [[ -z $service ]] && --log:watch
     [[ -n $service ]] && --log:watch:service ${service//.service/}
