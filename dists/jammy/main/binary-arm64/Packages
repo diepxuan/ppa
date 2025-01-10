@@ -1,5 +1,5 @@
 Package: ductn
-Version: 4.3.6+ubuntu22.04
+Version: 4.3.8+ubuntu22.04
 Architecture: arm64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 219
@@ -7,11 +7,11 @@ Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-htt
 Homepage: https://diepxuan.github.io/ppa/
 Priority: optional
 Section: devel
-Filename: pool/main/d/ductn/ductn_4.3.6+ubuntu22.04_arm64.deb
-Size: 45960
-SHA256: 1b62ccf995fa7c0f4ad05850c332bc491e4cbc5fb691a0a6c5830024978e8cca
-SHA1: 182faf0b66bd384eb5e598084920cf85cb07a4fa
-MD5sum: f8f7a3b8379d7a473c97043be4c99ca8
+Filename: pool/main/d/ductn/ductn_4.3.8+ubuntu22.04_arm64.deb
+Size: 46062
+SHA256: b35a98c7fa3d3966f3b5f824e36e931ce7249db4490858650ddd151f4bd21189
+SHA1: 2608b28827d16b099875106edc5ecc1a01b4b541
+MD5sum: 1acd9d207831a7794027ebe489812e30
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
