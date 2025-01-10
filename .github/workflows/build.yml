@@ -139,7 +139,8 @@ jobs:
           reprepro clearvanished
           while read -r file; do
             dpkg-deb -I "src/diepxuan/$file"
-            reprepro -V --keepunusednewfiles includedeb ${{ matrix.codename }} "src/diepxuan/$file" || true
+            # reprepro -V --keepunusednewfiles includedeb ${{ matrix.codename }} "src/diepxuan/$file" || true
+            reprepro -V includedeb ${{ matrix.codename }} "src/diepxuan/$file" || true
           done < <(ls src/diepxuan/ | grep -E '.*(.deb)$')
 
       - name: Push changes to GitHub
