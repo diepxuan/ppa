@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bullseye
-Date: Fri, 10 Jan 2025 06:47:57 UTC
+Date: Fri, 10 Jan 2025 06:54:20 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 11 (Bullseye)
@@ -12,8 +12,8 @@ MD5Sum:
  092d785987138ea00dd8d6d07f440ef0 637 main/binary-amd64/Packages
  acd2a8aedf31c8878749a2873ad83e8f 456 main/binary-amd64/Packages.gz
  48f58df194a70cbcb5068e57c6e9739b 103 main/binary-amd64/Release
- edab2c57146ff05160068136ff721052 637 main/binary-arm64/Packages
- 7b20bd8de2ac9b7c1bc7803669946f05 455 main/binary-arm64/Packages.gz
+ e490fcd3a708b1a77e99ae93e651424b 637 main/binary-arm64/Packages
+ 8d42edfe923fe98a3b6beb5d2184794a 453 main/binary-arm64/Packages.gz
  00dd72958792f6a52983856a7fe8f24e 103 main/binary-arm64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-i386/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  3234df411fd49352d58e23977b97bdde2ec314d4 637 main/binary-amd64/Packages
  a6aa51f95160370af602b524281c067b904bb256 456 main/binary-amd64/Packages.gz
  6e1a65df0a754f29dc5c33150179f6ce42799d4d 103 main/binary-amd64/Release
- 238af97295037296873bb7ea210cfc8cee9005be 637 main/binary-arm64/Packages
- 81064e6e085c231cf7eb2b21ac47b7e9fc05414d 455 main/binary-arm64/Packages.gz
+ e9333fc8916579a0f909c55f00bf0bf79467143f 637 main/binary-arm64/Packages
+ 0139a3d89d1d6d47b74093d2132f3d23533b6f6e 453 main/binary-arm64/Packages.gz
  437450fbcbf0623b5077cfb8424dc13251de0257 103 main/binary-arm64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-i386/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  c143a57133ec34784e2842addde752de1afe005e7643c9db7c201a9a838fa402 637 main/binary-amd64/Packages
  a2fa9e03694fa20cbe388a45780b2e1628c5e769092ba20c945b87e88e247feb 456 main/binary-amd64/Packages.gz
  e0236c200899ed40a0aa0261e1077a47d492ea3b5bf444e943a953f3c9c2d21e 103 main/binary-amd64/Release
- ff6ced964c14dd499fc6eff880ea55737fe173be406bfc6e9cc00c2427bb22fe 637 main/binary-arm64/Packages
- 052097cc3553ba41d9842de71622c956e940a8cffe6d6962ed66d753f9c98c20 455 main/binary-arm64/Packages.gz
+ 258dc5f0c62305ad87be3f2cb3a5b4613a50d27ab6845a7e02950fb8074c2b6c 637 main/binary-arm64/Packages
+ 6dc942e6cb2f8fd263ca3a3a919c7520b40b435f5ff7d060791e71befa19219a 453 main/binary-arm64/Packages.gz
  aed7ed4d370cff8554c3e722e1fb78015baa074f695f73940e73d98dc3516f46 103 main/binary-arm64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-i386/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-i386/Packages.gz
  55bf4cde892f94d0d2e38289ecb5e9472b677e68d02ac8eb7fb0c2a2602be8ab 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeAwp0ACgkQfg7JF6UH
-S9NHZwv+KC8CPFEJ9S4vDiYRNvx6ZhaGKgFUJ99rWz1msy7dKG1E8nrccSr/DsTW
-4AX1b7pGEi44yNHuSx3+GAPYQbJ3gzzArLPN6d8vEl6bSu/2buF6zFJM762SVRLy
-MSkofiwDDH2c7Kxn9HO+J44yzlpSgMPM52U8HpQhXk/U2NgULywDSf1xGSYz14WE
-kZ1OmNf1pdjaO5UZW4ZXNISImLp6omcYa8H9CQeRQT1zigf7REkttWJFbS/5ioit
-S+jI9YSxdEa4trHS+14pYXdHG7yC6kVTXTcgSBabGv3IKmAGScrF6pVb5X+ZotmI
-nRMv6MWVbl2GRmmT46ttt5zfuO7+jrA5nthvun4N9T76mwo8PbD8riMksVAq07ZO
-zRHCyNIKLx3JHV4CsYwfcMev+MVcx/sF8f9RaXfmWFvSdzEvCosb0/hweZbwzS47
-Zry7BNq2ws/KbVSYeJ7/nT/B7t5qdkHaAxJImgqe0S7oNB7PMyo0ga3cFlCstZg9
-PrgpVmTS
-=hmVT
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeAxBwACgkQfg7JF6UH
+S9OFfwwAquj8cgGjyha3zwJcUSLO1J9g6YKGxABD5K9w4r42eC9Qdc92eYnGis+R
+dmZ9oAsvh1wZGnOsP8ksJcxvR57T2CEu4+522IMuqfRyqIrApXRzaLKo/SscK3Cz
+FoKdjYxyrdO7w+63fFm6LlEPYLlUkD4QB/sspV4sRMoyybF4vSevXg0KDcvEQztL
+76lc6sIMYnMTv/7kfYJVOzOzReMea2xm/IvbC8hFUL3CURLYQCfqexZYBau7mmQd
+x1CVNrng70Gx8w+kLpCThN720zO4CtbngIs1IFxQEjUaSv3ag/qT/DGJPH4UD9Wg
+QwIwnxMBBNG2wDCV/3e0HZG3jGeFpRsNrc4ZVbaWzTtVNz0DWSDWJm7m1xCl4+pT
+FeUaJdRvW+IxJdkqS0DqeGODV03xzXyDGEz8LCkr//b71QeSHA2aq5tU0t83YisS
+dX6pd3HVlbwDzz+Y156NjDlGORRySkgF1wlaEe/aG1/I06KiVe7C0TCdLlafQzTv
+Ooii+1tA
+=uoK1
 -----END PGP SIGNATURE-----
