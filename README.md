@@ -1,7 +1,7 @@
 A PPA repository for DiepXuan Personal Package Archives
 
-#### Use own custom installer
+#### Repository Installer
 
 ```bash
-curl -s https://raw.githubusercontent.com/diepxuan/ppa/main/install.sh | bash
+curl -s https://ppa.diepxuan.com/install.sh | bash
 ```
