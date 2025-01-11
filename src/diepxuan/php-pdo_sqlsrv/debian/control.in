@@ -1,4 +1,4 @@
-Source: _PROJECT_
+Source: php-pdo-sqlsrv
 Priority: optional
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Uploaders: Tran Ngoc Duc <ductn@diepxuan.com>
@@ -8,16 +8,16 @@ Build-Depends: debhelper-compat (= 12),
                php-all-dev, tar
 Section: php
 Standards-Version: 2.0.1
-Homepage: https://pecl.php.net/package/_MODULE_
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
 
-Package: _PROJECT_
+Package: php-pdo-sqlsrv
 Architecture: all
 Pre-Depends: php-common (>= 2:69~)
 Depends: ${misc:Depends},
          ${pecl:Depends},
          ${php:Depends},
          ${shlibs:Depends},
-         ${_PROJECT_:Depends}
+         ${php-pdo-sqlsrv:Depends}
 Recommends: ghostscript,
             ttf-dejavu-core,
             ${pecl:Recommends}
@@ -27,8 +27,8 @@ Provides: ${pecl:Provides},
 Breaks: ${pecl:Breaks}
 Replaces: ${pecl:Replaces}
 Suggests: ${pecl:Suggests}
-Description: _MODULE_ module for PHP
- ${_PROJECT_:Description}
+Description: pdo_sqlsrv module for PHP
+ ${php-pdo-sqlsrv:Description}
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
  open source general-purpose scripting language that is especially suited
