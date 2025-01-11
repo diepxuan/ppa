@@ -108,6 +108,14 @@ codename_os=${codename_os:-"jammy"}
 sed -i -e "s|$codename_os|$CODENAME|g" $source_dir/debian/changelog
 end_group
 
+start_group "changelog"
+cat $source_dir/debian/changelog
+end_group
+
+start_group "show source"
+ls -la $source_dir
+end_group
+
 start_group "Build package"
 cd $source_dir
 dpkg-parsechangelog
