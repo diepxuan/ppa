@@ -37,8 +37,8 @@ env() {
 start_group "Dynamically set environment variable"
 env source_dir $(dirname $(realpath "$BASH_SOURCE"))
 env debian_dir $(realpath $source_dir/debian)
-env dists_dir $(realpath $source_dir/dists)
 env pwd_dir $(realpath $(dirname $source_dir))
+env dists_dir $(realpath $pwd_dir/dists)
 env ppa_dir $(realpath $pwd_dir/ppa)
 
 # user evironment
@@ -102,12 +102,21 @@ EOF
 # essential packages. It is reasonably safe to blindly assume it is installed.
 printf "man-db man-db/auto-update boolean false\n" | sudo debconf-set-selections
 
-# curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
-# curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
+    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
+    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+    sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+
+[[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
+    ! grep -q 'https://packages.microsoft.com/ubuntu/24.04/prod' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
+    curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list |
+    sudo tee /etc/apt/sources.list.d/prod.list >/dev/null
 
 # add repository for install missing depends
 sudo apt install software-properties-common
-# sudo add-apt-repository ppa:ondrej/php -y
+sudo add-apt-repository ppa:ondrej/php -y
 end_group
 
 start_group "Install Build Dependencies"
