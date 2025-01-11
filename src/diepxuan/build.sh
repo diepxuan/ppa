@@ -78,17 +78,17 @@ dpkg-reconfigure -f noninteractive tzdata
 end_group
 
 start_group "Install depends"
+curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
+
 apt-get update
 apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
 apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 apt-get build-dep -y -- "$source_dir" || true
-
-curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
-curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
-
-locale-gen en_US.UTF-8
-update-locale LANG=en_US.UTF-8
 end_group
+
+locale-gen en_US.UTF-8 || true
+update-locale LANG=en_US.UTF-8 || true
 
 start_group "GPG/SSH Configuration"
 echo "$GPG_KEY====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
