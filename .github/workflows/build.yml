@@ -103,6 +103,7 @@ jobs:
       - name: Installing build dependencies
         working-directory: src/diepxuan/${{ matrix.m2module }}
         run: |
+          ls -la
           sudo apt update
           sudo apt-get build-dep -y -- .
           sudo apt install -y reprepro gnupg
