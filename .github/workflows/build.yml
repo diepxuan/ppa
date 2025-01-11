@@ -102,10 +102,11 @@ jobs:
 
       - name: Installing build dependencies
         working-directory: src/diepxuan/${{ matrix.m2module }}
+        shell: bash
         run: |
           ls -la
           sudo apt update
-          sudo apt-get build-dep -y -- .
+          sudo apt-get build-dep -y -- . || true
           sudo apt install -y reprepro gnupg
 
       - name: Run build package inside Docker container

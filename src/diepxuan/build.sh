@@ -52,10 +52,13 @@ ln -fs /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime
 apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
 
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | sudo tee /etc/apt/sources.list.d/mssql-release.list
+
 apt-get update
 apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
 apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales
-apt-get build-dep -y -- "$source_dir"
+apt-get build-dep -y -- "$source_dir" || true
 
 locale-gen en_US.UTF-8
 update-locale LANG=en_US.UTF-8
