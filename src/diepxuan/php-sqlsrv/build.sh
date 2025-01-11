@@ -206,6 +206,10 @@ start_group "log package changelog"
 echo $package_clog
 end_group
 
+start_group log GPG key before build
+gpg --list-secret-keys --keyid-format=long
+end_group
+
 start_group Building package binary
 dpkg-buildpackage --force-sign
 end_group
