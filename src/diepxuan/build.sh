@@ -83,8 +83,20 @@ apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-per
 apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 apt-get build-dep -y -- "$source_dir" || true
 
-curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
-curl https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list | tee /etc/apt/sources.list.d/mssql-release.list
+printf "man-db man-db/auto-update boolean false\n" | sudo debconf-set-selections
+
+[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
+    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
+    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+    sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+
+[[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
+    ! grep -q 'https://packages.microsoft.com' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
+    curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list |
+    sudo tee /etc/apt/sources.list.d/prod.list >/dev/null
+
 apt-get update
 end_group
 

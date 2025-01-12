@@ -37,10 +37,10 @@ jobs:
     needs: package-load
     runs-on: ubuntu-latest
     strategy:
-      # max-parallel: 1
+      max-parallel: 1
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, ubuntu-25.04, debian-10, debian-11, debian-12]  # Các phiên bản OS để build
+        os: [debian-10, debian-11, debian-12, ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, ubuntu-25.04]  # Các phiên bản OS để build
         # architecture: [amd64]
         architecture: [amd64, arm64]
         include:
@@ -100,15 +100,6 @@ jobs:
           # Cài đặt và cấu hình QEMU cho kiến trúc ARM
           docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
-      - name: Installing build dependencies
-        working-directory: src/diepxuan/${{ matrix.m2module }}
-        shell: bash
-        run: |
-          ls -la
-          sudo apt update
-          sudo apt-get build-dep -y -- . || true
-          sudo apt install -y reprepro gnupg
-
       - name: Run build package inside Docker container
         working-directory: src/diepxuan
         shell: bash
@@ -123,6 +114,15 @@ jobs:
           TZ: Asia/Ho_Chi_Minh
           GPG_KEY: ${{ secrets.GPG_KEY }}
           MODULE: ${{ matrix.m2module }}
+
+      - name: Installing build dependencies
+        working-directory: src/diepxuan/${{ matrix.m2module }}
+        shell: bash
+        run: |
+          ls -la
+          sudo apt update
+          sudo apt-get build-dep -y -- . || true
+          sudo apt install -y reprepro gnupg
       
       - name: Add .deb files to APT repository
         shell: bash
