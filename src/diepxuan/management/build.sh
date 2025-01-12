@@ -101,7 +101,7 @@ env RELEASE $RELEASE
 env DISTRIB $DISTRIB
 end_group
 
-start_group "add apt source"
+start_group Install Build Source Dependencies
 APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
 
 cat | $SUDO tee "$APT_CONF_FILE" <<-EOF
@@ -114,6 +114,14 @@ EOF
 # debconf has priority “required” and is indirectly depended on by some
 # essential packages. It is reasonably safe to blindly assume it is installed.
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
+
+$SUDO apt update
+$SUDO apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
+$SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
+
+# shellcheck disable=SC2086
+$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
+$SUDO apt-get build-dep -y -- "$source_dir" || true
 
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
@@ -130,17 +138,8 @@ printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selection
 # add repository for install missing depends
 # $SUDO apt install software-properties-common
 # $SUDO add-apt-repository ppa:ondrej/php -y
-end_group
 
-start_group Install Build Source Dependencies
 $SUDO apt update
-# shellcheck disable=SC2086
-$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
-$SUDO apt-get build-dep -y -- "$source_dir" || true
-
-$SUDO apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
-$SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
-
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
 # But let’s be explicit here.

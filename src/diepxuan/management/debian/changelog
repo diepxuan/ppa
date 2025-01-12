@@ -1,3 +1,9 @@
+ductn (4.4.5+ubuntu~24.04) noble; urgency=medium
+
+  * Refactor build script to improve installation of source dependencies
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Mon, 13 Jan 2025 01:28:27 +0700
+
 ductn (4.4.4+ubuntu~24.04) noble; urgency=medium
 
   * Add GIT_COMMITTER_MESSAGE to build script for improved logging
