@@ -131,29 +131,14 @@ printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selection
 # $SUDO add-apt-repository ppa:ondrej/php -y
 end_group
 
-start_group "Install Build Dependencies"
+start_group Install Build Source Dependencies
 $SUDO apt update
 # shellcheck disable=SC2086
-$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir"
+$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
+$SUDO apt-get build-dep -y -- "$source_dir" || true
 
-# In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
-# build-dep` will *always* install build-essential which depends on dpkg-dev.
-# But let’s be explicit here.
-# shellcheck disable=SC2086
-$SUDO apt install $INPUT_APT_OPTS -- dpkg-dev unixodbc-dev libdpkg-perl dput devscripts $INPUT_EXTRA_BUILD_DEPS
-end_group
-
-start_group View Source Code
-echo $source_dir
-ls -la $source_dir
-echo $debian_dir
-ls -la $debian_dir
-end_group
-
-start_group Install Source Dependencies
-$SUDO apt update
-# shellcheck disable=SC2086
-$SUDO apt-get build-dep $INPUT_APT_OPTS -- "$source_dir"
+$SUDO apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
+$SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
@@ -161,6 +146,13 @@ $SUDO apt-get build-dep $INPUT_APT_OPTS -- "$source_dir"
 # shellcheck disable=SC2086
 $SUDO apt install $INPUT_APT_OPTS -- dpkg-dev libdpkg-perl dput tree devscripts $INPUT_EXTRA_BUILD_DEPS
 $SUDO apt install $INPUT_APT_OPTS -- libdistro-info-perl $INPUT_EXTRA_BUILD_DEPS
+end_group
+
+start_group View Source Code
+echo $source_dir
+ls -la $source_dir
+echo $debian_dir
+ls -la $debian_dir
 end_group
 
 # Update os release latest
