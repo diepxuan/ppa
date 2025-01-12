@@ -1,3 +1,9 @@
+ductn (4.4.0+ubuntu~24.04) noble; urgency=medium
+
+  * [ISSUES] syntax error in expression (error token is "~2404 + 1")
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Mon, 13 Jan 2025 00:06:48 +0700
+
 ductn (4.3.9+ubuntu~24.04) noble; urgency=medium
 
   * Improve error handling in build script by adding fallback for

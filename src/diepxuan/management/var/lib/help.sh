@@ -39,14 +39,17 @@ d_version() {
 }
 
 d_version:newrelease() {
-    echo $(($(d_version | tr -d '.') + 1)) | sed "s/\(.\)\(.\)\(.\)/\1.\2.\3/"
+    [[ "$1" == "--help" ]] &&
+        echo "Get next release" &&
+        return
+    echo $(($(d_version | cut -d+ -f1 | tr -d '.') + 1)) | sed "s/\(.\)\(.\)\(.\)/\1.\2.\3/"
 }
 
 d_--version() {
     [[ "$1" == "--help" ]] &&
-        echo "Get fullname - example FQDN ppa.diepxuan.com" &&
+        echo "Alias for Version Command | Display Package Version" &&
         return
-    echo $(($(d_version | tr -d '.') + 1)) | sed "s/\(.\)\(.\)\(.\)/\1.\2.\3/"
+    d_version
 }
 
 --isenabled() {
