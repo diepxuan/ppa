@@ -35,6 +35,7 @@ env() {
 }
 
 start_group "Dynamically set environment variable"
+# directory
 env source_dir $(dirname $(realpath "$BASH_SOURCE"))
 env debian_dir $(realpath $source_dir/debian)
 env pwd_dir $(realpath $(dirname $source_dir))
@@ -47,6 +48,11 @@ env DEBEMAIL ductn@diepxuan.com
 env EMAIL ductn@diepxuan.com
 env DEBFULLNAME Tran Ngoc Duc
 env NAME Tran Ngoc Duc
+
+# gpg key
+env GPG_KEY_ID $GPG_KEY_ID
+env DEB_SIGN_KEYID $(gpg --list-keys --with-colons --fingerprint | awk -F: '/fpr:/ {print $10; exit}')
+# env DEB_SIGN_KEYID $DEB_SIGN_KEYID
 
 # debian
 env changelog $(realpath $debian_dir/changelog)
