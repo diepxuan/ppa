@@ -87,7 +87,7 @@ RELEASE=${RELEASE%.}
 
 DISTRIB=${DISTRIB:-$DISTRIB_ID}
 DISTRIB=${DISTRIB:-$ID}
-DISTRIB=$(echo "$DISTRIB" | awk '{print tolower($0)}')
+DISTRIB=$(echo "$DISTRIB" | tr '[:upper:]' '[:lower:]')
 
 env CODENAME $CODENAME
 env RELEASE $RELEASE
@@ -175,19 +175,20 @@ EOF
 [[ -f "$debian_dir/extend.$module.ini" ]] && cat "$debian_dir/extend.$module.ini" >>"$debian_dir/$module.ini"
 end_group
 
-start_group "update package config"
+start_group Update Package Configuration in Changelog
 cd $source_dir
 release_tag=$(echo $package_dist | sed 's|.tgz||g' | cut -d '-' -f2)
-release_tag="$release_tag+$DISTRIB~$RELEASE"
+# release_tag="$release_tag+$DISTRIB~$RELEASE"
 old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
 old_release_tag=$(cat $changelog | head -n 1 | awk '{print $2}' | sed 's|[()]||g')
 old_codename_os=$(cat $changelog | head -n 1 | awk '{print $3}' | sed 's|;||g')
 
-sed -i -e "s|$old_project|$_project|g" $changelog
-sed -i -e "s|$old_release_tag|$release_tag|g" $changelog
-sed -i -e "s|$old_codename_os|$CODENAME|g" $changelog
-sed -i -e "s|<$email>  .*|<$email>  $timelog|g" $changelog
-dch -a $package_clog -m
+# sed -i -e "s|$old_project|$_project|g" $changelog
+# sed -i -e "s|$old_release_tag|$release_tag|g" $changelog
+# sed -i -e "s|$old_codename_os|$CODENAME|g" $changelog
+# sed -i -e "s|<$email>  .*|<$email>  $timelog|g" $changelog
+# dch -a $package_clog -m
+dch --package $_project --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$package_clog"
 cd -
 end_group
 
@@ -195,20 +196,20 @@ rm -rf "$control-e"
 rm -rf "$controlin-e"
 rm -rf "$changelog-e"
 
-start_group log
+start_group Show log
 echo $control
-cat $control
+cat $control || true
 echo $controlin
-cat $controlin
+cat $controlin || true
 echo $rules
-cat $rules
+cat $rules || true
 end_group
 
-start_group changelog
+start_group Show changelog
 cat $changelog
 end_group
 
-start_group "log package changelog"
+start_group Show package changelog
 echo $package_clog
 end_group
 
@@ -217,14 +218,16 @@ gpg --list-secret-keys --keyid-format=long
 end_group
 
 start_group Building package binary
+# shellcheck disable=SC2086
 dpkg-buildpackage --force-sign
 end_group
 
 start_group Building package source
+# shellcheck disable=SC2086
 dpkg-buildpackage --force-sign -S
 end_group
 
-start_group "Move build artifacts"
+start_group Move build artifacts
 regex='^php.*(.deb|.ddeb|.buildinfo|.changes|.dsc|.tar.xz|.tar.gz|.tar.[[:alpha:]]+)$'
 mkdir -p $dists_dir
 while read -r file; do
@@ -238,7 +241,7 @@ done < <(ls $pwd_dir/ | grep -E $regex)
 ls -la $dists_dir
 end_group
 
-start_group "Publish Package to Launchpad"
+start_group Publish Package to Launchpad
 cat | tee ~/.dput.cf <<-EOF
 [caothu91ppa]
 fqdn = ppa.launchpad.net
@@ -248,31 +251,13 @@ login = anonymous
 allow_unsigned_uploads = 0
 EOF
 
-package=$(ls -a $dists_dir | grep _source.changes | head -n 1)
+# package=$(ls -a $dists_dir | grep _source.changes | head -n 1)
 
-[[ -n $package ]] &&
-    package=$dists_dir/$package &&
-    [[ -f $package ]] &&
-    dput caothu91ppa $package || true
-end_group
-
-start_group "Publish package to Personal Package archives"
-cd $pwd_dir
-git clone --depth=1 --branch=main git@github.com:diepxuan/ppa.git
-
-rm -rf $ppa_dir/src/$repository
-mkdir -p $ppa_dir/src/$repository/
-cp -r $source_dir/. $ppa_dir/src/$repository/
-
-cd $ppa_dir
-if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
-    git add src/
-    git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit'}"
-    if ! git push; then
-        git stash
-        git pull --rebase
-        git stash pop
-        git push || true
-    fi
-fi
+# [[ -n $package ]] &&
+#     package=$dists_dir/$package &&
+#     [[ -f $package ]] &&
+#     dput caothu91ppa $package || true
+while read -r package; do
+    dput caothu91ppa $pwd_dir/$package || true
+done < <(ls $dists_dir | grep -E '.*(_source.changes)$')
 end_group
