@@ -25,6 +25,7 @@ start_group() {
 }
 
 env() {
+    GITHUB_ENV=${GITHUB_ENV:-.env}
     param=$1
     value="${@:2}"
     grep -q "^$param=" $GITHUB_ENV &&
