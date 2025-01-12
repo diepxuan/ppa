@@ -1,3 +1,10 @@
+ductn (4.3.9+ubuntu~24.04) noble; urgency=medium
+
+  * Improve error handling in build script by adding fallback for
+    missing control files
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Sun, 12 Jan 2025 23:43:49 +0700
+
 ductn (4.3.8) noble; urgency=medium
 
   * Add GIT_COMMITTER_MESSAGE to CI workflow and update package
