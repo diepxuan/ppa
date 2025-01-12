@@ -101,6 +101,8 @@ env RELEASE $RELEASE
 env DISTRIB $DISTRIB
 end_group
 
+cd $source_dir
+
 start_group Install Build Source Dependencies
 APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
 
@@ -168,8 +170,6 @@ end_group
 # sed -i -e "0,/<$email>  .*/ s/<$email>  .*/<$email>  $BUILDPACKAGE_EPOCH/g" $changelog
 
 start_group Update Package Configuration in Changelog
-cd $source_dir
-
 release_tag=$($source_dir/ductn version:newrelease)
 
 # old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
@@ -189,7 +189,6 @@ dch --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$packa
 # dch --newversion $release_tag --distribution $CODENAME "$package_clog"
 # dch --newversion $release_tag~$DISTRIB$RELEASE
 # dch -a "$package_clog"
-cd -
 end_group
 
 start_group Show log
