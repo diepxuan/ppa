@@ -98,6 +98,8 @@ env RELEASE $RELEASE
 env DISTRIB $DISTRIB
 end_group
 
+cd $source_dir
+
 start_group "Install Build Dependencies"
 APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
 
@@ -182,7 +184,6 @@ EOF
 end_group
 
 start_group Update Package Configuration in Changelog
-cd $source_dir
 release_tag=$(echo $package_dist | sed 's|.tgz||g' | cut -d '-' -f2)
 # release_tag="$release_tag+$DISTRIB~$RELEASE"
 # old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
@@ -195,7 +196,6 @@ release_tag=$(echo $package_dist | sed 's|.tgz||g' | cut -d '-' -f2)
 # sed -i -e "s|<$email>  .*|<$email>  $timelog|g" $changelog
 # dch -a $package_clog -m
 dch --package $_project --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$package_clog"
-cd -
 end_group
 
 rm -rf "$control-e"
