@@ -1,3 +1,9 @@
+ductn (4.4.1+ubuntu~24.04) noble; urgency=medium
+
+  * Set default GITHUB_ENV to .env in build script
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Mon, 13 Jan 2025 00:17:07 +0700
+
 ductn (4.4.0+ubuntu~24.04) noble; urgency=medium
 
   * [ISSUES] syntax error in expression (error token is "~2404 + 1")
