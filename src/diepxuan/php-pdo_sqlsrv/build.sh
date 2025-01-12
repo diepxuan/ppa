@@ -35,6 +35,9 @@ env() {
     echo $param: $value
 }
 
+SUDO=sudo
+command -v sudo &>/dev/null || SUDO=''
+
 start_group "Dynamically set environment variable"
 # directory
 env source_dir $(dirname $(realpath "$BASH_SOURCE"))
@@ -98,7 +101,7 @@ end_group
 start_group "add apt source"
 APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
 
-cat | sudo tee "$APT_CONF_FILE" <<-EOF
+cat | $SUDO tee "$APT_CONF_FILE" <<-EOF
 APT::Get::Assume-Yes "yes";
 APT::Install-Recommends "no";
 Acquire::Languages "none";
@@ -107,36 +110,36 @@ EOF
 
 # debconf has priority “required” and is indirectly depended on by some
 # essential packages. It is reasonably safe to blindly assume it is installed.
-printf "man-db man-db/auto-update boolean false\n" | sudo debconf-set-selections
+printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
 
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
-    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+    $SUDO tee /etc/apt/trusted.gpg.d/microsoft.asc
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
-    sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+    $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
 
 [[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
     ! grep -q 'https://packages.microsoft.com' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
     curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list |
-    sudo tee /etc/apt/sources.list.d/prod.list >/dev/null
+    $SUDO tee /etc/apt/sources.list.d/prod.list >/dev/null
 
 # add repository for install missing depends
-sudo apt install software-properties-common
-sudo add-apt-repository ppa:ondrej/php -y
+$SUDO apt install software-properties-common
+$SUDO add-apt-repository ppa:ondrej/php -y
 end_group
 
 start_group "Install Build Dependencies"
-sudo apt update
+$SUDO apt update
 # shellcheck disable=SC2086
 cat $controlin | tee $control
-sudo apt build-dep $INPUT_APT_OPTS -- "$source_dir"
+$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir"
 
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
 # But let’s be explicit here.
 # shellcheck disable=SC2086
-sudo apt install $INPUT_APT_OPTS -- dpkg-dev unixodbc-dev libdpkg-perl dput devscripts $INPUT_EXTRA_BUILD_DEPS
+$SUDO apt install $INPUT_APT_OPTS -- dpkg-dev unixodbc-dev libdpkg-perl dput devscripts $INPUT_EXTRA_BUILD_DEPS
 end_group
 
 start_group "extract package source"
