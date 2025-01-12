@@ -229,6 +229,7 @@ end_group
 
 start_group Move build artifacts
 regex='^php.*(.deb|.ddeb|.buildinfo|.changes|.dsc|.tar.xz|.tar.gz|.tar.[[:alpha:]]+)$'
+regex='.*(.deb|.ddeb|.buildinfo|.changes|.dsc|.tar.xz|.tar.gz|.tar.[[:alpha:]]+)$'
 mkdir -p $dists_dir
 while read -r file; do
     mv -vf "$source_dir/$file" "$dists_dir/" || true
