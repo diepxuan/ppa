@@ -115,12 +115,7 @@ EOF
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
 
 $SUDO apt update
-$SUDO apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
-
-# shellcheck disable=SC2086
-cat $controlin | tee $control
-$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir"
 
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
@@ -138,12 +133,18 @@ $SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir"
 $SUDO apt install software-properties-common
 $SUDO add-apt-repository ppa:ondrej/php -y
 
-# $SUDO apt update
+$SUDO apt update
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
 # But let’s be explicit here.
 # shellcheck disable=SC2086
-$SUDO apt install $INPUT_APT_OPTS -- dpkg-dev unixodbc-dev libdpkg-perl dput devscripts $INPUT_EXTRA_BUILD_DEPS
+$SUDO apt install -y debhelper-compat dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl
+$SUDO apt install -y unixodbc-dev
+$SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
+
+# shellcheck disable=SC2086
+cat $controlin | tee $control
+$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
 end_group
 
 start_group "GPG/SSH Configuration"
