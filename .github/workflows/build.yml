@@ -140,18 +140,18 @@ jobs:
 
       - name: Push changes to GitHub
         run: |
-          rm -rf src/diepxuan/*/debian/debhelper-build-stamp
-          git checkout -- src/diepxuan/*/
-          if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
-            git add db/
-            git add conf/
-            git add pool/
-            git add dists/
-            git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}" || true
-            if ! git push; then
-              git stash
-              git pull --rebase
-              git stash pop
-              git push || true
-            fi
+          # rm -rf src/diepxuan/*/debian/*-stamp
+          # git checkout -- src/diepxuan/*/
+          # if [ -n "$(git status --porcelain=v1 2>/dev/null)" ]; then
+          git add db/
+          git add conf/
+          git add pool/
+          git add dists/
+          git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit add .deb files to APT repository'}" || true
+          if ! git push; then
+            git stash
+            git pull --rebase
+            git stash pop
+            git push || true
           fi
+          # fi
