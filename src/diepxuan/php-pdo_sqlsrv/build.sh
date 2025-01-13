@@ -148,7 +148,7 @@ $SUDO apt update || true
 # But let’s be explicit here.
 # shellcheck disable=SC2086
 $SUDO apt install -y debhelper-compat dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl
-$SUDO apt install -y unixodbc-dev
+$SUDO apt install -y unixodbc-dev php-pear
 $SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
 
 # shellcheck disable=SC2086
@@ -245,13 +245,11 @@ gpg --list-secret-keys --keyid-format=long
 end_group
 
 start_group Building package binary
+dpkg-parsechangelog
 # shellcheck disable=SC2086
-dpkg-buildpackage --force-sign
-end_group
-
-start_group Building package source
+dpkg-buildpackage --force-sign || dpkg-buildpackage --force-sign -d
 # shellcheck disable=SC2086
-dpkg-buildpackage --force-sign -S
+dpkg-buildpackage --force-sign -S || dpkg-buildpackage --force-sign -S -d
 end_group
 
 start_group Move build artifacts
