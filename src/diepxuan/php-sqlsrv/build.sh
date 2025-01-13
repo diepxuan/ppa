@@ -116,6 +116,7 @@ printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selection
 
 $SUDO apt update
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
+${SUDO} apt-get -y install lsb-release ca-certificates curl
 
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
@@ -130,8 +131,15 @@ $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget 
     $SUDO tee /etc/apt/sources.list.d/prod.list >/dev/null
 
 # add repository for install missing depends
-$SUDO apt install software-properties-common
-$SUDO add-apt-repository ppa:ondrej/php -y
+if [[ $DISTRIB == "ubuntu" ]]; then
+    $SUDO apt install software-properties-common
+    $SUDO add-apt-repository ppa:ondrej/php -y
+elif [[ $DISTRIB == "debian" ]]; then
+    ${SUDO} curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+    ${SUDO} dpkg -i /tmp/debsuryorg-archive-keyring.deb
+    echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" |
+        $SUDO tee /etc/apt/sources.list.d/php.list >/dev/null
+fi
 
 $SUDO apt update
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
