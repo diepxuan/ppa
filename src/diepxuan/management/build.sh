@@ -232,13 +232,11 @@ gpg --list-secret-keys --keyid-format=long
 end_group
 
 start_group Building package binary
+dpkg-parsechangelog
 # shellcheck disable=SC2086
-dpkg-buildpackage --force-sign
-end_group
-
-start_group Building package source
+dpkg-buildpackage --force-sign || dpkg-buildpackage --force-sign -d
 # shellcheck disable=SC2086
-dpkg-buildpackage --force-sign -S
+dpkg-buildpackage --force-sign -S || dpkg-buildpackage --force-sign -S -d
 end_group
 
 start_group Move build artifacts
