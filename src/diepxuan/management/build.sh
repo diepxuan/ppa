@@ -69,7 +69,7 @@ env rules $(realpath $debian_dir/rules)
 env timelog "$(Lang=C date -R)"
 
 # plugin
-env repository $repository
+env repository ${repository:-diepxuan/$MODULE}
 env owner $(echo $repository | cut -d '/' -f1)
 env project $(echo $repository | cut -d '/' -f2)
 env module $(echo $project | sed 's/^php-//g')
