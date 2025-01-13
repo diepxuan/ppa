@@ -55,8 +55,8 @@ env NAME Tran Ngoc Duc
 
 # gpg key
 env GPG_KEY_ID $GPG_KEY_ID
-env DEB_SIGN_KEYID $(gpg --list-keys --with-colons --fingerprint | awk -F: '/fpr:/ {print $10; exit}')
-# env DEB_SIGN_KEYID $DEB_SIGN_KEYID
+env GPG_KEY $GPG_KEY
+env DEB_SIGN_KEYID $DEB_SIGN_KEYID
 
 # debian
 env changelog $(realpath $debian_dir/changelog)
@@ -144,6 +144,17 @@ $SUDO add-apt-repository ppa:ondrej/php -y
 # But let’s be explicit here.
 # shellcheck disable=SC2086
 $SUDO apt install $INPUT_APT_OPTS -- dpkg-dev unixodbc-dev libdpkg-perl dput devscripts $INPUT_EXTRA_BUILD_DEPS
+end_group
+
+start_group "GPG/SSH Configuration"
+if ! gpg --list-keys --with-colons | grep -q "fpr"; then
+    echo "$GPG_KEY====" | tr -d '\n' | fold -w 4 | sed '$ d' | tr -d '\n' | fold -w 76 | base64 -di | gpg --batch --import || true
+fi
+
+if gpg --list-secret-keys --keyid-format=long | grep -q "sec"; then
+    export DEB_SIGN_KEYID=$(gpg --list-keys --with-colons --fingerprint | awk -F: '/fpr:/ {print $10; exit}')
+fi
+gpg --list-secret-keys --keyid-format=long
 end_group
 
 start_group "extract package source"
