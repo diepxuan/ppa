@@ -121,7 +121,7 @@ ${SUDO} apt-get -y install lsb-release ca-certificates curl
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
     $SUDO tee /etc/apt/trusted.gpg.d/microsoft.asc
-[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
+[[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
     $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
 
@@ -142,7 +142,7 @@ elif [[ $DISTRIB == "debian" ]]; then
         $SUDO tee /etc/apt/sources.list.d/php.list >/dev/null
 fi
 
-$SUDO apt update
+$SUDO apt update || true
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
 # But let’s be explicit here.
