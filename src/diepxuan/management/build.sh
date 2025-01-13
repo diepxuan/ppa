@@ -118,12 +118,7 @@ EOF
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
 
 $SUDO apt update
-$SUDO apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
-
-# shellcheck disable=SC2086
-$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
-$SUDO apt-get build-dep -y -- "$source_dir" || true
 
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
@@ -146,8 +141,13 @@ $SUDO apt update
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
 # But let’s be explicit here.
 # shellcheck disable=SC2086
-$SUDO apt install $INPUT_APT_OPTS -- dpkg-dev libdpkg-perl dput tree devscripts $INPUT_EXTRA_BUILD_DEPS
-$SUDO apt install $INPUT_APT_OPTS -- libdistro-info-perl $INPUT_EXTRA_BUILD_DEPS
+$SUDO apt install -y debhelper-compat dpkg-dev libdpkg-perl dput tree devscripts
+$SUDO apt install -y libdistro-info-perl
+$SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
+
+# shellcheck disable=SC2086
+$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
+$SUDO apt-get build-dep -y -- "$source_dir" || true
 end_group
 
 start_group "GPG/SSH Configuration"
