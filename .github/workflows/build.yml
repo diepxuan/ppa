@@ -6,9 +6,15 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "**.yml"
 
   pull_request:
     branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "**.yml"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -69,7 +75,7 @@ jobs:
             base_image: debian:12
             codename: bookworm
         m2module: ${{ fromJSON(needs.package-load.outputs.packages) }}
-    name: ${{ matrix.architecture }}/${{ matrix.os }} (${{ matrix.codename }}) build "${{ matrix.m2module }}"
+    name: ${{ matrix.m2module }} on ${{ matrix.os }} ${{ matrix.architecture }} ${{ matrix.codename }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
