@@ -127,7 +127,8 @@ ${SUDO} apt-get -y install lsb-release ca-certificates curl
 
 [[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
     ! grep -q 'https://packages.microsoft.com' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
-    curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list |
+    echo https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list &&
+    curl -fsSL https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list |
     $SUDO tee /etc/apt/sources.list.d/prod.list >/dev/null
 
 # add repository for install missing depends
@@ -137,7 +138,7 @@ if [[ $DISTRIB == "ubuntu" ]]; then
 elif [[ $DISTRIB == "debian" ]]; then
     ${SUDO} curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
     ${SUDO} dpkg -i /tmp/debsuryorg-archive-keyring.deb
-    echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $(lsb_release -sc) main" |
+    echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $CODENAME main" |
         $SUDO tee /etc/apt/sources.list.d/php.list >/dev/null
 fi
 
