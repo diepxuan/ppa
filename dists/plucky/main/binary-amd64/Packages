@@ -1,18 +1,57 @@
 Package: ductn
-Version: 4.5.7+ubuntu~plucky
+Source: diepxuan
+Version: 4.5.9+ubuntu~plucky
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 220
+Installed-Size: 218
 Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/ductn/ductn_4.5.7+ubuntu~plucky_amd64.deb
-Size: 46984
-SHA256: 237be2898b7a09280599e1640d70f6409f9af2c5341118663ec81ccbf2311620
-SHA1: 6a7d78bacceaaf0ac43ee955a07e63685833ba6e
-MD5sum: e69f29d0b359f151eb6c516e79d8dfa7
+Filename: pool/main/d/diepxuan/ductn_4.5.9+ubuntu~plucky_amd64.deb
+Size: 47014
+SHA256: 5be3424eadcc276c8f40174cc74e1cd449d0d3582a7d3f8c632d9bea0fdde75d
+SHA1: 0569a5c3f5686ad2d37a917988f07c94a4524700
+MD5sum: 32d756a3aa7d369ac6212cefbc8d3132
 Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: lar
+Source: diepxuan
+Version: 4.5.9+ubuntu~plucky
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/lar_4.5.9+ubuntu~plucky_amd64.deb
+Size: 2518
+SHA256: 3bad2c971d0658fa926706dadb22d5bd1f8611cf71302a2edaa7e62fa22a427f
+SHA1: d1e4ad245339f1737992da7c93a65167517e0d46
+MD5sum: ff4f3e7b634797e77911dc5fa1ca629f
+Description: Laravel support package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: m2
+Source: diepxuan
+Version: 4.5.9+ubuntu~plucky
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/m2_4.5.9+ubuntu~plucky_amd64.deb
+Size: 2516
+SHA256: cbb218affc27d73ad30fc6a4f602054429de7257924e3f1679bf1c311e8537fe
+SHA1: e222e0c280914040c5355f4596eb3b3cea68581c
+MD5sum: 0e29f8625be1897984ae9809491b6e01
+Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
