@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: focal
-Date: Tue, 14 Jan 2025 04:42:09 UTC
+Date: Tue, 14 Jan 2025 05:18:59 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 20.04 (Focal)
@@ -12,8 +12,8 @@ MD5Sum:
  aab620e5a45a064a6b68d53c0b5bb129 13470 main/binary-amd64/Packages
  2678341c60a37ae9868a89dca3e0790d 2310 main/binary-amd64/Packages.gz
  b9b101b734c5e5795e722ab02068faf8 103 main/binary-amd64/Release
- a9188c40828860ec35025fca877db62a 4750 main/binary-arm64/Packages
- 40560bdad1672fb347ba5230a61976d7 1281 main/binary-arm64/Packages.gz
+ 96d94ef7a7eaf9ee667978010cf6c32f 9182 main/binary-arm64/Packages
+ 68e029611e289c026a74ba0acb91b1ad 1853 main/binary-arm64/Packages.gz
  6a08c52b38f8b00dd1d9fa489c234595 103 main/binary-arm64/Release
  481af2e2ad678f3290db23c405fcd540 4112 main/binary-i386/Packages
  482764605d2eca1d3435eb7bd62ccee7 1023 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  3b246f5bab958cec7909efe1e7853c20bd368965 13470 main/binary-amd64/Packages
  e5b6e5c4647a130577a4bdb2c54afb0e41efa371 2310 main/binary-amd64/Packages.gz
  d4b5058a132675617ada8a803bfe28cfa9e15f57 103 main/binary-amd64/Release
- 934f7e5e5ea0b436e2133d3b525fda7590ab94a9 4750 main/binary-arm64/Packages
- 6638dd7aac10623732caec09325d82d62d683ba0 1281 main/binary-arm64/Packages.gz
+ 3d9d2184f197d8fa6a0bcf63767f8264fd36eb4e 9182 main/binary-arm64/Packages
+ 17c868fc2c5c413671c212432bee9e643eec0c6f 1853 main/binary-arm64/Packages.gz
  d9b2b0f7befb9b995cd3a6cbbbb0ea628ec1ff73 103 main/binary-arm64/Release
  62a6f4922b1c3d97401aab10bcf430a68c4f13ce 4112 main/binary-i386/Packages
  c537d203c5fc752064063da45f01c71e94775623 1023 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  bf0dbbe7ed2367fa741e55c524e2511d97e3e073dc6e2a004820b2bad6064795 13470 main/binary-amd64/Packages
  202dcdfc2cf69ea8179fecde8c252d826c925f536a5e22b18bdb66ff9959f70e 2310 main/binary-amd64/Packages.gz
  8bc0f9637e82a62e1cc892fd6c5e7bbdd5b0edff54370a615d5cd6e359d417fc 103 main/binary-amd64/Release
- 6edcfe104cd773ae9f827ef31e3c1b732cd133e870dfafc3f37554754a4299ac 4750 main/binary-arm64/Packages
- ddf9a4b2df463ffa62e315ab6dca937b20bd378a1c4867acf8df5c939210fa63 1281 main/binary-arm64/Packages.gz
+ 06fd1ae3aa5658a5d8932590cff992bbd4350838c934ebdb4f661761ade91818 9182 main/binary-arm64/Packages
+ 53ad5d7b5151484fb20af27b33098bfd204924cf8210f39e6563f92cd4cf009e 1853 main/binary-arm64/Packages.gz
  e1d06060a54a77a0dd8418a092543e3656d0f59ba5f5bf1289cae4e50a524dd3 103 main/binary-arm64/Release
  e3fc1f046cac7ebf6239125d66c05aed4c8e2cab74d926f2b6240add6ade6292 4112 main/binary-i386/Packages
  8a3375ee219976912d30ebce54a671f77980f36757da659811ed96eade577c43 1023 main/binary-i386/Packages.gz
  a0827ba54da323f9c3e8ce2afd8a81bb965b7709f95aa06ae6d3937d5274e72c 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF6yEACgkQfg7JF6UH
-S9P6GAwAoDlsNPxjKYFQUfW+LsUUf48QIcv/DDUTpSGj5TRTYQmr00OsqUr4ulS0
-c6ZnfWMsmU7JolaW7mn3r7M9rhKB/ib2HaZjWNjvP/qbxd3OFeTnG0ciBl2vD7KD
-wp6qm2Mn39sUD86famGhAYx2m1zRVFEBXG2c65qPKCEnO9jjw1+5v1oFEKu6zEFF
-/bGg45jrhB7D3IKitx1yRz3IGliibn5eO7OwXrnOmBFwjopm3aUi1IBHnofQ1REZ
-UXthbijj7Wl46elxOra6LtnJlGf4W0t0NifLaVc1OVWyuAkV1Oy711MRDdqymKqi
-LWUxZ4MMLQn8mniFnxF3JkgyEdte9hCfxm6HRfNtyNXmWizD2LOZwpBnuBBvFXok
-P/DNsbIQB12KWWmARZdWYxrqazhc8LQwIBcHZ/Vmn2WS79xIK7A/E6/2d3w373wi
-EeIPYAI+pCU+MTwL+Ej9o4kDILHvjx18gi08MGsztC33ixiDFOhZFkfrVCF1mee6
-HjlJHOmC
-=2yT0
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF88MACgkQfg7JF6UH
+S9OWhgv/S3AQDtkpQqU+1OD6ofeUUpOQvjhjleBV4dqKz/3R4lZMlabPphpXsaKp
+AS6E4HsnsFAUbPHtfu3p87UpfpJUHMGHQ5tGanBAL0kFqpEO8pRtJQQvuAfOiG3a
+tgLx728dYsnCyuNW+Qq2kgYy3DncsWfSf3/dO2Dpi1Bshkq7dunrmB9dkJ4RF75p
+3Y7uH9pCkqKE697/LPNEWYhAXUNu1MkNuOUF5idF0NduUNkCWYk3yInFx5kHbw24
+/+WlnyrOkoSC7LCPs0PX/mXTDAij7xSvsOA8ZZ2xsSmqmC0UjEcWday+scRt9eII
+xdyltqlBBLqrxH0c9D+C8dyM4QNEKjg8dRTYrflmlWg8ogmDF6BjtFmihOQPwph9
+HQ4DfE1wMKev0AyLEnZ9BvRUd2pAkxvqmMTxGbRjhlYCwpoAVKTHU/6rZJgivHoy
+8fr4cNiazfrJNj2cGuWaLsG5GidY5Wke/TFUKYmNRmxfofyhE7o/H6uroNnR2pzt
+ZsEFPAAU
+=hBon
 -----END PGP SIGNATURE-----
