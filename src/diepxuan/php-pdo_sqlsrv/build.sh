@@ -34,16 +34,19 @@ env() {
     export $param="$value"
     echo $param: $value
 }
+# SUDO=sudo
+# command -v sudo &>/dev/null || SUDO=''
 run_as_sudo() {
-    _SUDO=$(command -v sudo)
+    _SUDO=sudo
+    command -v sudo &>/dev/null || _SUDO=''
     echo "Running as sudo: $*"
     if [[ $EUID -ne 0 ]]; then
-        ${_SUDO:-} "$@"
+        $_SUDO $@
     else
-        "$@"
+        $@
     fi
 }
-SUDO=${_SUDO:-'run_as_sudo'}
+SUDO=${SUDO:-'run_as_sudo'}
 
 start_group "Dynamically set environment variable"
 # directory
