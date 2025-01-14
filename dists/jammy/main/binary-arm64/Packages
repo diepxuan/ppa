@@ -150,6 +150,34 @@ Description: pdo_sqlsrv module for PHP
  for web development and can be embedded into HTML.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.1-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~22.04
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 301
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.17), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.1-sqlsrv_5.12.0+ubuntu~22.04_arm64.deb
+Size: 120156
+SHA256: 7d176e9ab5593b3cc48222f1369badfe53c6078deaf77c9a6e27199e4e67de33
+SHA1: f4c11ba63c18ff752ff7ab1e695c1c15555e6131
+MD5sum: 7b0fb5ea513d554c8a9eb71e4cc7637f
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.2-pdo-sqlsrv
 Source: php-pdo-sqlsrv
 Version: 5.12.0+ubuntu~22.04
@@ -171,6 +199,34 @@ SHA256: 0107a3f4e2a1c09832878b384d80c75a49378ab3b2b637ed42bc8340045809b8
 SHA1: 988b1cd4d1487b0baf668d50b10c44c9e250d584
 MD5sum: ff023bebe5dff982d1fbb4bccb6c2757
 Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~22.04
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 301
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.17), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.2-sqlsrv_5.12.0+ubuntu~22.04_arm64.deb
+Size: 120526
+SHA256: 0fb11112f8c5eeb45b5abab76445ca6fe50d262c5a262fe7af62ce98e0e9e6f4
+SHA1: 45b2453eee771f4218b686b1cbda5311c71c1b41
+MD5sum: 0a09461425028e06d2175fe09bd07ee3
+Description: sqlsrv module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
@@ -206,6 +262,34 @@ Description: pdo_sqlsrv module for PHP
  for web development and can be embedded into HTML.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.3-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~22.04
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 301
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.17), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.12.0+ubuntu~22.04_arm64.deb
+Size: 120544
+SHA256: b868cd0a67c631af7c0227c789869eac60964d1403f7b5b553c1d0f298a3f81b
+SHA1: eda16e97b72ecad50b1f554ee7cfcddc98fb290c
+MD5sum: 6ee9c42722bcd23ec927367248010780
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.4-pdo-sqlsrv
 Source: php-pdo-sqlsrv
 Version: 5.12.0+ubuntu~22.04
@@ -227,6 +311,34 @@ SHA256: 769c96ab27b29aa0cd8cecc1dfbf1ffa15e761bb1a9964c8c0fef28e33d060fc
 SHA1: 06ba2bb596e8d2882439de5c155a7189bcd3b452
 MD5sum: 0fa062f5c3dc3f6332834f416e6d14c4
 Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~22.04
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 302
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.17), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.12.0+ubuntu~22.04_arm64.deb
+Size: 120668
+SHA256: e82c5139bb6e61cbb393a4d5089a551d5e36168c8acf7670e37a62ac0be7f7c5
+SHA1: 90d3e81510ae3d5e67b9cc975f7a5050a5ad0450
+MD5sum: baa0dbd6d2ccfc120cdd867145d1b9e7
+Description: sqlsrv module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
