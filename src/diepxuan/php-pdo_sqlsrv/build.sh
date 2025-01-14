@@ -34,9 +34,16 @@ env() {
     export $param="$value"
     echo $param: $value
 }
-
-SUDO=sudo
-command -v sudo &>/dev/null || SUDO=''
+run_as_sudo() {
+    _SUDO=$(command -v sudo)
+    echo "Running as sudo: $*"
+    if [[ $EUID -ne 0 ]]; then
+        ${_SUDO:-} "$@"
+    else
+        "$@"
+    fi
+}
+SUDO=${_SUDO:-'run_as_sudo'}
 
 start_group "Dynamically set environment variable"
 # directory
@@ -116,7 +123,7 @@ printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selection
 
 $SUDO apt update
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
-${SUDO} apt-get -y install lsb-release ca-certificates curl
+$SUDO apt-get -y install lsb-release ca-certificates curl
 
 [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
     curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
