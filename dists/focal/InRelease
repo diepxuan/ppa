@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: focal
-Date: Tue, 14 Jan 2025 05:18:59 UTC
+Date: Tue, 14 Jan 2025 05:20:56 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 20.04 (Focal)
@@ -12,8 +12,8 @@ MD5Sum:
  aab620e5a45a064a6b68d53c0b5bb129 13470 main/binary-amd64/Packages
  2678341c60a37ae9868a89dca3e0790d 2310 main/binary-amd64/Packages.gz
  b9b101b734c5e5795e722ab02068faf8 103 main/binary-amd64/Release
- 96d94ef7a7eaf9ee667978010cf6c32f 9182 main/binary-arm64/Packages
- 68e029611e289c026a74ba0acb91b1ad 1853 main/binary-arm64/Packages.gz
+ e66c786f56c9279549d883eff246f6f8 13470 main/binary-arm64/Packages
+ f4b36c5387a3893323229375cb6a0210 2326 main/binary-arm64/Packages.gz
  6a08c52b38f8b00dd1d9fa489c234595 103 main/binary-arm64/Release
  481af2e2ad678f3290db23c405fcd540 4112 main/binary-i386/Packages
  482764605d2eca1d3435eb7bd62ccee7 1023 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  3b246f5bab958cec7909efe1e7853c20bd368965 13470 main/binary-amd64/Packages
  e5b6e5c4647a130577a4bdb2c54afb0e41efa371 2310 main/binary-amd64/Packages.gz
  d4b5058a132675617ada8a803bfe28cfa9e15f57 103 main/binary-amd64/Release
- 3d9d2184f197d8fa6a0bcf63767f8264fd36eb4e 9182 main/binary-arm64/Packages
- 17c868fc2c5c413671c212432bee9e643eec0c6f 1853 main/binary-arm64/Packages.gz
+ 5d7d72e8feddf1919dd388d8f8617347a05ee3ae 13470 main/binary-arm64/Packages
+ c1c1e45d8f39e930d86452ce9d8f1ba7794022cf 2326 main/binary-arm64/Packages.gz
  d9b2b0f7befb9b995cd3a6cbbbb0ea628ec1ff73 103 main/binary-arm64/Release
  62a6f4922b1c3d97401aab10bcf430a68c4f13ce 4112 main/binary-i386/Packages
  c537d203c5fc752064063da45f01c71e94775623 1023 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  bf0dbbe7ed2367fa741e55c524e2511d97e3e073dc6e2a004820b2bad6064795 13470 main/binary-amd64/Packages
  202dcdfc2cf69ea8179fecde8c252d826c925f536a5e22b18bdb66ff9959f70e 2310 main/binary-amd64/Packages.gz
  8bc0f9637e82a62e1cc892fd6c5e7bbdd5b0edff54370a615d5cd6e359d417fc 103 main/binary-amd64/Release
- 06fd1ae3aa5658a5d8932590cff992bbd4350838c934ebdb4f661761ade91818 9182 main/binary-arm64/Packages
- 53ad5d7b5151484fb20af27b33098bfd204924cf8210f39e6563f92cd4cf009e 1853 main/binary-arm64/Packages.gz
+ 2fb33ee323054fd1494302441b7bee5e01ffa721e92fe60e8f4cbb948eb364f5 13470 main/binary-arm64/Packages
+ 145abf5da5cbad8dbccddd86869af3ffa8af7272b5461d580ae794098c8c5191 2326 main/binary-arm64/Packages.gz
  e1d06060a54a77a0dd8418a092543e3656d0f59ba5f5bf1289cae4e50a524dd3 103 main/binary-arm64/Release
  e3fc1f046cac7ebf6239125d66c05aed4c8e2cab74d926f2b6240add6ade6292 4112 main/binary-i386/Packages
  8a3375ee219976912d30ebce54a671f77980f36757da659811ed96eade577c43 1023 main/binary-i386/Packages.gz
  a0827ba54da323f9c3e8ce2afd8a81bb965b7709f95aa06ae6d3937d5274e72c 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF88MACgkQfg7JF6UH
-S9OWhgv/S3AQDtkpQqU+1OD6ofeUUpOQvjhjleBV4dqKz/3R4lZMlabPphpXsaKp
-AS6E4HsnsFAUbPHtfu3p87UpfpJUHMGHQ5tGanBAL0kFqpEO8pRtJQQvuAfOiG3a
-tgLx728dYsnCyuNW+Qq2kgYy3DncsWfSf3/dO2Dpi1Bshkq7dunrmB9dkJ4RF75p
-3Y7uH9pCkqKE697/LPNEWYhAXUNu1MkNuOUF5idF0NduUNkCWYk3yInFx5kHbw24
-/+WlnyrOkoSC7LCPs0PX/mXTDAij7xSvsOA8ZZ2xsSmqmC0UjEcWday+scRt9eII
-xdyltqlBBLqrxH0c9D+C8dyM4QNEKjg8dRTYrflmlWg8ogmDF6BjtFmihOQPwph9
-HQ4DfE1wMKev0AyLEnZ9BvRUd2pAkxvqmMTxGbRjhlYCwpoAVKTHU/6rZJgivHoy
-8fr4cNiazfrJNj2cGuWaLsG5GidY5Wke/TFUKYmNRmxfofyhE7o/H6uroNnR2pzt
-ZsEFPAAU
-=hBon
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF9DgACgkQfg7JF6UH
+S9Oqagv/Q0ymIa82ZXEWIlo0II1Q8a3FzcN018DgLBhCfnnsbXGPg47v+BnKsRzZ
+uF+e8U/dcgvBrHR/ijulcjWhvsDlY/hATlhCZYAAiB1QRduEn2j3MZPr1RxJy6wk
+kxUDdKLUEkefQxMLOLPnMD+MxYqE8zIWs3i4V9FHaerGTnJ5HfnmhFLAlGEPXRm7
+x/ie0Pk3qA0U22s29ePrAua4fGo22cDoMe5dQoIGodrec4GRXec4/eM/24iqklv1
+u42tOyhkeEocqvqAFkI9Hlab21uO+Q7oeVYEqE6/JdUYkZw8oIRxEM0Nqc3oEC86
+/t8KVhawOHW0RL2Of2huzWbCCKTRzB061PTX++QDLW5Ybsuuasyp0mxXP/Mc7GB3
+S1o0HsI38YPpC3vAjwqfkLPcke9JW1FtPeUTHq5iJjqch4CuUTwYsv5G2CHSurhE
+sAYZuUVNtB7ZQtDs0dMC+Qh1MhNc70R2PLlDQelD/yWQ0WC0+nfkwPjpMFl3xyjt
+yoqJD681
+=43Vb
 -----END PGP SIGNATURE-----
