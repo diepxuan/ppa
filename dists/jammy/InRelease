@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: jammy
-Date: Tue, 14 Jan 2025 04:44:27 UTC
+Date: Tue, 14 Jan 2025 04:47:36 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 22.04 (Jammy)
@@ -12,8 +12,8 @@ MD5Sum:
  5b4fc3dd26218943592a3966ce63079f 13846 main/binary-amd64/Packages
  e42d9325dfaa3ce6f17086b218450604 2335 main/binary-amd64/Packages.gz
  4bffc06e32fddcdb7fa06640127f4a04 103 main/binary-amd64/Release
- 9a7ba1ebaa4e4a90ed2e113c8b495e33 4755 main/binary-arm64/Packages
- c342d852bd39ff6fb1a7aef2f1e5f21d 1290 main/binary-arm64/Packages.gz
+ 7cde76c47d97fe698dc46e11cd3555a1 4750 main/binary-arm64/Packages
+ 34a13789ff0c1647b65d5685c504e469 1280 main/binary-arm64/Packages.gz
  26cbc07e892f48bc4a23fe62ebcaef17 103 main/binary-arm64/Release
  ffdfb28ede560130865c773b06a18a3e 4112 main/binary-i386/Packages
  52ef432520ae5865d53245927fec94e6 1021 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  4953dc01cf683854cbd44930b8447f290af547e0 13846 main/binary-amd64/Packages
  3e756dc82062329e3d70f226fc676b4d381672fc 2335 main/binary-amd64/Packages.gz
  d26d92d29d4b3cbd407630ff15ad06e506556319 103 main/binary-amd64/Release
- fd72105340ee2685641820ca9f718c4faf240ec4 4755 main/binary-arm64/Packages
- a670159ec396864e057cbcf247ddc61b2280af90 1290 main/binary-arm64/Packages.gz
+ 780ada86daf59e088f3400b1dafd46f8df59ae3c 4750 main/binary-arm64/Packages
+ c6e754148bb0905dbf5ae941ec24302321133be3 1280 main/binary-arm64/Packages.gz
  f62f7b13e0b60e960158c76697eeb2632a49f88c 103 main/binary-arm64/Release
  2f3a039ed554a122966c581651e8562fefe2d808 4112 main/binary-i386/Packages
  746e9d2a22071a1ea4e61ba9a628c0bfc2ea3714 1021 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  1927caf125c89aef91dfdb39da704e782277ab90b5faf233c2a8e19b25e3eeea 13846 main/binary-amd64/Packages
  ff7749dbee952706022a1ad01f80949421a34da29ad4aeaff5dcee23968100fe 2335 main/binary-amd64/Packages.gz
  ab8fa8f517ca8e30fa522ad93ef6a94a788a899ab542403db316a66de11d030e 103 main/binary-amd64/Release
- b65d945960a789ba0cbf7413c20fdd1065941060f5ea00c78833e99f4475e438 4755 main/binary-arm64/Packages
- 1c9a51467323bfbd7904675cd79552d219c64ab2adbec338db431d73fc8a90c3 1290 main/binary-arm64/Packages.gz
+ 378d628f9078d1a4e33cb279a5cdfe43fe9f7c552bdebab04e2479e6a29e8380 4750 main/binary-arm64/Packages
+ 833235a06653ca64decba6343f759768d72a62c2a5d78202007c52807aba3a18 1280 main/binary-arm64/Packages.gz
  f6f85425b33c3c6fa138d077d990b55b574685fb2d8926562bb070f39f4b6b20 103 main/binary-arm64/Release
  97d4d96c720ae7b45f63894ff91f63012a8654af85bca2d832ea7a220e1fca1f 4112 main/binary-i386/Packages
  d90aae4865ffd89575a834b9406c75ec291b02bf0e09ada5c98526cb0e03bed3 1021 main/binary-i386/Packages.gz
  5142599bd9398f26cd6f08103a02e142140cc2b3adb2944e56f772bec2f9b3f5 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF66sACgkQfg7JF6UH
-S9MQTQv/aixGWBy8/fa42fz7iwI+0XWctqWdve37rBbsJyurSHlGH5nn4P7qhkTC
-NxGiGH+6OvRAo6EdiHTATmYbTcHq+efNeLJXqmLyMcjOAIeYCw+AHUqmeQAPZzlS
-LY3doJioIxlEiFETuEAEEobYQxKvmGr3HM3g8BDul504Gsb2amRyKK8Nj3TeKU5H
-6DP9lf46/mrnHynZUrawWn+cQTGiyVPlOsNLBc9b/OaZhy764kUTN0jHrzbhftSC
-+oCMtK8nlHWVhmOmFIuDcBMFjIxTyU/I9YFjsoIE1ppWxQTM0gPy9vCFQ433ev/6
-GIhbXW8X7X6c0Hb9VdYydZtyLn/9sqQPoFxPqk7xia4EEjxqpRbjjaDNhS8PwTQ1
-nW+ZyFKNJZib+/ypSj2nm4qAgyxbB4fSsPCn+bkNyRcI1shrokgHXjNlqM/X0YF1
-4vc71JSEVB3hIubAX3F4sXLG6RIAYVt6wQyx8rGd48WDna8LLhEfUtIhQAsj0WVE
-urHI0kB8
-=bMRB
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF7GgACgkQfg7JF6UH
+S9NriQv+Pte8TkdmxaC2281ovxBCacMUXCJxg2BdW6AN/hD0ziCIK3EgcA9SN3K3
+6PQ3T9mPLuvGtobyq/zz3+2HPsLErpx3hzJzobaWv7Fb12pI3LYCYzP/UATWrnoJ
+7M7Xnzh047NVx0c5w92G1Fd7N1/dewRxA878muKe2S6nYjk/a1OdQxlkaaoPTSX7
+8p6ruLOcuRtrXKkOLIC3jmtxrLrWjtHByRIjYo4dmurkXv2xqGgifpaSPyLJdJ0K
+3X6i0vhh0O/HDOZeEVTXXyuRkr0JFX7ZiKtQijypc1o4tEJEjZ3LkLB5USdBx2tL
+n6yfZCP8wfaIUQNdiPx0joX8UxnUrVMzX5oRTBpoMw6hieBtlfC13s0edfKK7360
+0XMDhvdrmmAAquWtqGKdOWjZOd4eGUVf4fKseYfGa5rTEFQTvxnhnJ27k4evvX0W
+sDAbClxMZG45nFZ7Fx9XZMATxHjUS1A75pGD+4dEJXY8j1U+p+93eV64OyKL5yIY
+TAcuJv/f
+=zrhX
 -----END PGP SIGNATURE-----
