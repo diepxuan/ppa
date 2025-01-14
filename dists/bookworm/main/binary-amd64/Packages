@@ -1,5 +1,5 @@
 Package: ductn
-Version: 4.5.5+debian~12
+Version: 4.5.7+debian~12
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 220
@@ -7,11 +7,11 @@ Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-htt
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/ductn/ductn_4.5.5+debian~12_amd64.deb
-Size: 46068
-SHA256: 7ca3f9af51bfb1f82fda38d7782bc0aaa63b3ac0824b4c85a2ddc5dd8ee9998a
-SHA1: f376076a31681752dcc7cd8ef930afdf971f2a29
-MD5sum: 7054b8928f3c1e1f1909b3d20e87c3e7
+Filename: pool/main/d/ductn/ductn_4.5.7+debian~12_amd64.deb
+Size: 46112
+SHA256: 6e078fd9c182d3f85ac3d79813589b5f34507643f96836a12586fc01e73e822e
+SHA1: 687db4e49572ce847908e1cee83a9c15006eaf9e
+MD5sum: 558046800e39ad8be1e59050be89fa40
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
