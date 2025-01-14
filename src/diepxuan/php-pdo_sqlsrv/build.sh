@@ -54,6 +54,7 @@ env source_dir $(dirname $(realpath "$BASH_SOURCE"))
 env debian_dir $(realpath $source_dir/debian)
 env pwd_dir $(realpath $(dirname $source_dir))
 env dists_dir $(realpath $pwd_dir/dists)
+env build_dir $(realpath $pwd_dir/build)
 env ppa_dir $(realpath $pwd_dir/ppa)
 
 # user evironment
@@ -207,13 +208,13 @@ end_group
 
 _project=$(echo $project | sed 's|_|-|g')
 
-start_group "update control"
+start_group update control file
 sed -i -e "s|_PROJECT_|$_project|g" $controlin
 sed -i -e "s|_MODULE_|$module|g" $controlin
 cat $controlin | tee $control
 end_group
 
-start_group "create php config files"
+start_group create build files
 cat | tee "$debian_dir/$module.ini" <<-EOF
 ; configuration for pecl $module module
 ; priority=20
@@ -224,6 +225,8 @@ mod debian/$module.ini
 EOF
 [[ -f "$debian_dir/php-$module.rules" ]] && cat "$debian_dir/php-$module.rules" >>"$rules"
 [[ -f "$debian_dir/extend.$module.ini" ]] && cat "$debian_dir/extend.$module.ini" >>"$debian_dir/$module.ini"
+[[ -f "$build_dir/$module.config.m4" ]] &&
+    cat "$build_dir/$module.config.m4" >>"$source/${package_dist%.tgz}/config.m4"
 end_group
 
 start_group Update Package Configuration in Changelog
