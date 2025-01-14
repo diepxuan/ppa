@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bullseye
-Date: Tue, 14 Jan 2025 04:31:22 UTC
+Date: Tue, 14 Jan 2025 04:32:23 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 11 (Bullseye)
@@ -12,8 +12,8 @@ MD5Sum:
  c1e9c41cd631243056de52a9234ff536 18880 main/binary-amd64/Packages
  16ee35536082c24eab6348c48aef43d0 3504 main/binary-amd64/Packages.gz
  48f58df194a70cbcb5068e57c6e9739b 103 main/binary-amd64/Release
- 7653fc3cb6971ad790a25ae5b61652b4 4701 main/binary-arm64/Packages
- 30a945d70b05348595b2144aa66ac8d0 1284 main/binary-arm64/Packages.gz
+ 696c21cd582b341d76f27be43b5072de 4696 main/binary-arm64/Packages
+ 2409d2e9935ebd40fb20096d41144493 1272 main/binary-arm64/Packages.gz
  00dd72958792f6a52983856a7fe8f24e 103 main/binary-arm64/Release
  a0d934f121775241e165648ce63ed497 4064 main/binary-i386/Packages
  d200928f6db2ee3e4194087ceaceb8ef 1017 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  c4bf5cc629f9a396cf4ba5317cb1844869e6a6b9 18880 main/binary-amd64/Packages
  37317805b2fbb8a22a77c1485b0749357a388eed 3504 main/binary-amd64/Packages.gz
  6e1a65df0a754f29dc5c33150179f6ce42799d4d 103 main/binary-amd64/Release
- 7c25faa67d553bec0826936208fb55cebf045172 4701 main/binary-arm64/Packages
- 68fa722a146c904a5ae8274a7111536bee527337 1284 main/binary-arm64/Packages.gz
+ d853887f84f6e9aad47933a911a6930e80b9681c 4696 main/binary-arm64/Packages
+ 086e1eb9490324319aefb1290e60627a5426bcc2 1272 main/binary-arm64/Packages.gz
  437450fbcbf0623b5077cfb8424dc13251de0257 103 main/binary-arm64/Release
  7de61837490f7c7b805885634c59cca9c3aa4c5e 4064 main/binary-i386/Packages
  79d51c6dc880d2822aa7f102acf40c42dce48dac 1017 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  d7bedb31ef7a0d305f8a0a81265e3263542148014b03dd14180b8bffaae738ba 18880 main/binary-amd64/Packages
  b637cc1a6c26cd952745129b8325230a6ccefec2d3703fbb6907691870afd766 3504 main/binary-amd64/Packages.gz
  e0236c200899ed40a0aa0261e1077a47d492ea3b5bf444e943a953f3c9c2d21e 103 main/binary-amd64/Release
- 7638115e1020117ae0f71e15bf6641250da27c177c6be7fbf165aad5b4c23f2b 4701 main/binary-arm64/Packages
- 220a3115a60e3dba5e460f202260e62229c3824044d2a13e89c3b45f0c4ebf0f 1284 main/binary-arm64/Packages.gz
+ fa916636ab2cb9dd72586ab008bdb4297d3a0e0f1831e575f90da845e6def616 4696 main/binary-arm64/Packages
+ 6f78545f6b3f15bccb1fe1aa37e761654d66b59074373bc5a7bbedb8a859eb7a 1272 main/binary-arm64/Packages.gz
  aed7ed4d370cff8554c3e722e1fb78015baa074f695f73940e73d98dc3516f46 103 main/binary-arm64/Release
  391e56c9dff9e7afa00c409e095e0f740ec2d9ee3f6f002d3c5bc47eabbfe878 4064 main/binary-i386/Packages
  80a6470c7fffd14775d8b2e1b9bcc7f94ea5c772c9917a6fdccd29cf576e4697 1017 main/binary-i386/Packages.gz
  55bf4cde892f94d0d2e38289ecb5e9472b677e68d02ac8eb7fb0c2a2602be8ab 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF6JoACgkQfg7JF6UH
-S9MJHQv/QIs7e/Juj6WwdTsYUeXRQY/nXV/zs4ltiUu9G0QEKt51A5gktB0vzRe1
-A+mSjsPhJiS7t0WxKjs/YedobMKxMHuOiwHbqEnKqLytxUz5KDRuL+xY/V/2yGOZ
-j7izIkPXX/+AK8lZBkAC7shVzpsfMCyBdyrUEo/cXJelTtc6SBs60uxoiIqVvuBX
-kjZcQV5l/pyhP1ijlfAwPiGvy3X6YzcKHgT43x/kzQa6/8+7xnlsPlXRD86hrJqX
-XobovdHBPj9oNpuo7BSPFvceTW4b1mHXahPPxgJqeRTEhmzCivvQN8NdFtphOPy9
-6ApUFb1C5jcHQB4MWcIcgoZqyN+g0XVyS1mHPt6DBs1nnjjf8tXR+vGzUK839ejJ
-yCWMhgKUqLbZPY/KsHnO6HiU+Gmzm6LfGihO6KxWD1c+bRZIbEnmKW9aekq7MWZt
-CfKYPwZbqx1t+fFh5YizRXnQcT4SYSHKxRnSXB6njDvhw/FFdzLFctjubdd597Nd
-AxLsgC0B
-=y+gw
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF6NcACgkQfg7JF6UH
+S9Oo0Av7B7f/HlL6Ax4vVYEw1u41phhEh6ZYckn21BQZeeyoRg4cnFinGIeyABol
+4zrUs+XDJC1j37Qh5O4Pda32aOkFvAR+l6CIE11dhK9XLqBif8b0jTZnrfQBSzgB
+XztmCDuvEuAANsA3rayekDNiv/GGFWnZVM+QvBw4z/g75bCL1vAvuN5oSdOOD7oy
+v1nxuqQC9bkyZEz/tWwFe+70S6tSY9nrxOqQMwq9LvijYXyQKHjCpPqOVY/05b6u
+EnNWiqFBYSpp3dR6GvZdcXQrxD27I4AKzANGw+mymJZUpF61VCHzPx8SeoRmRViX
+iVeLuL+jBOdlfPKAu7YyjxMIVt/hYDzCdkPbzEQPwovuP0q3PTOT5WQlpLooq6eB
+O9yL2dzEO7QDcrxSYKZxxxb0MulKTDfPXXfiiW2+ifoWNiI7uKcndn6JES0rIeU4
+5s96xBCemKfpwYNwEU3vvW9BWYFCdgf6BSHLx/rebhD6Y2jqX1RkAOU27n/TwgNg
+RZpwCRh0
+=o6Wp
 -----END PGP SIGNATURE-----
