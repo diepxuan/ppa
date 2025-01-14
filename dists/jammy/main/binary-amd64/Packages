@@ -1,18 +1,57 @@
 Package: ductn
-Version: 4.5.7+ubuntu~22.04
+Source: diepxuan
+Version: 4.5.9+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 220
+Installed-Size: 218
 Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/ductn/ductn_4.5.7+ubuntu~22.04_amd64.deb
-Size: 47048
-SHA256: 47985f8cfe65ec70ecd5ff6d09f08bb0ccf3dc356ca5e755d70ba4eaf660056b
-SHA1: 62417786d679e60c86fc9315db926c27bc00cce3
-MD5sum: feceb462c303dd35ce63d0f017c6bcd5
+Filename: pool/main/d/diepxuan/ductn_4.5.9+ubuntu~22.04_amd64.deb
+Size: 47068
+SHA256: c33f2f7425d6b89fb470d1d5666c1403cbe3071fd428d52f71d3a5fd79ebf3fc
+SHA1: 66bcf1788bb22e869fc7b01181af4d515ec0c958
+MD5sum: 657a2df7d5e7a4113178c4f472c429bf
 Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: lar
+Source: diepxuan
+Version: 4.5.9+ubuntu~22.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/lar_4.5.9+ubuntu~22.04_amd64.deb
+Size: 2504
+SHA256: 6fd50da41ffb824c23c6d89136395ff7fa641700d1ea1854a9be76fdd3ab0445
+SHA1: 199643d0ebd726a891fec72d8c396df931652f3a
+MD5sum: 079f191783782b05863f879d208f496d
+Description: Laravel support package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: m2
+Source: diepxuan
+Version: 4.5.9+ubuntu~22.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/m2_4.5.9+ubuntu~22.04_amd64.deb
+Size: 2498
+SHA256: 268b9dcfa44deb8b942608bac0803eeb2b3500bd2d7bd0efe2423b464c58d1f5
+SHA1: 6011a81ececbd444ca1ce1f7273077ab150236a0
+MD5sum: 024156ccce2ec507d3fc4275dc3d853b
+Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
