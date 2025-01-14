@@ -1,3 +1,10 @@
+ductn (4.5.7+ubuntu~24.04) noble; urgency=medium
+
+  * [ISSUES] OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to
+    packages.microsoft.com:443
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Tue, 14 Jan 2025 15:53:39 +0700
+
 ductn (4.5.6+ubuntu~24.04) noble; urgency=medium
 
   * Refactor sudo command handling in build script for improved

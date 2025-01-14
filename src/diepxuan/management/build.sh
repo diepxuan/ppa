@@ -131,17 +131,29 @@ $SUDO apt update
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 $SUDO apt-get -y install lsb-release ca-certificates curl
 
-[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
-    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
-    $SUDO tee /etc/apt/trusted.gpg.d/microsoft.asc
-[[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] &&
-    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
-    $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+# [[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] && {
+#     [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] && {
+#         curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+#             $SUDO tee /etc/apt/trusted.gpg.d/microsoft.asc >/dev/null ||
+#             echo "Failed to download Microsoft key to /etc/apt/trusted.gpg.d/microsoft.asc"
+#     }
 
-[[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
-    ! grep -q 'https://packages.microsoft.com' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
-    curl -fsSL https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list |
-    $SUDO tee /etc/apt/sources.list.d/prod.list >/dev/null
+#     [[ -f /etc/apt/trusted.gpg.d/microsoft.asc ]] && {
+#         cat /etc/apt/trusted.gpg.d/microsoft.asc |
+#             $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg ||
+#             echo "Failed to dearmor key from /etc/apt/trusted.gpg.d/microsoft.asc"
+#     } || {
+#         curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+#             $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg ||
+#             echo "Failed to download and dearmor Microsoft key to /usr/share/keyrings/microsoft-prod.gpg"
+#     }
+# }
+
+# [[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
+#     ! grep -q 'https://packages.microsoft.com' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
+#     echo https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list &&
+#     curl -fsSL https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list |
+#     $SUDO tee /etc/apt/sources.list.d/prod.list >/dev/null
 
 # add repository for install missing depends
 # if [[ $DISTRIB == "ubuntu" ]]; then
