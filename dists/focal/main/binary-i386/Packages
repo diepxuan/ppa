@@ -1,0 +1,53 @@
+Package: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~20.04_all.deb
+Size: 3858
+SHA256: 90fe0982a810d06f666e9805882c5bffc1364358b583084bffd03a3826c82fe6
+SHA1: 0f567e4b9de0df71e92d5604fc9b0463432590ea
+MD5sum: 42449629709a1011fbf57a6c176a9f3f
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-pdo-sqlsrv-all-dev
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.3-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.2-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.1-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+ubuntu~20.04_all.deb
+Size: 3894
+SHA256: c5265739abbbd51dbf03ff9eb2a34775fef0c9ee9070d1d1b373debf080d758c
+SHA1: 7735ef2a3576171f49bc845897da4a78e76fb35f
+MD5sum: 539bb734b604bcef09469eb0d49d98c5
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
