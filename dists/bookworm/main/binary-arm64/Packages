@@ -169,6 +169,53 @@ Description: debug symbols for php8.1-pdo-sqlsrv
 Build-Ids: ea37041ecb7ec1b2088e596e0b8f8198b8faff15
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.1-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 353
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.17), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+debian~12~)
+Replaces: php-sqlsrv (<< 5.12.0+debian~12~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.1-sqlsrv_5.12.0+debian~12_arm64.deb
+Size: 129448
+SHA256: 2e9819309e4787e940b19e4174f96856607228db160892a636bdcc0232a87de1
+SHA1: 88e89852ad53f003d096a580d681354dc4a37db0
+MD5sum: a72889fa6e466de237d7917f7cefc41d
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-sqlsrv-dbgsym
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 817
+Depends: php8.1-sqlsrv (= 5.12.0+debian~12)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-sqlsrv/php8.1-sqlsrv-dbgsym_5.12.0+debian~12_arm64.deb
+Size: 772004
+SHA256: 9e4c56a7a9d72c00ef0f75b60830ea981c22225cf23701ae3cda840a0083119f
+SHA1: 3a914377f3aad5a6a9546c7b5d6e77c715edc6fd
+MD5sum: c69bfa674d83c0f453e4ff1b3ad4584f
+Description: debug symbols for php8.1-sqlsrv
+Build-Ids: e6365864022d3950c874d423b4b9689c5bc8ed1c
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.2-pdo-sqlsrv
 Source: php-pdo-sqlsrv
 Version: 5.12.0+debian~12
@@ -214,6 +261,53 @@ SHA1: 4139e672d1f5d253b740e3c253f874d9192f4335
 MD5sum: 167e0fd7fd9651ec9e08c34442b913bf
 Description: debug symbols for php8.2-pdo-sqlsrv
 Build-Ids: c8d11b5727b99cbf7def69113e7b530c17c996da
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 353
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.17), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+debian~12~)
+Replaces: php-sqlsrv (<< 5.12.0+debian~12~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.2-sqlsrv_5.12.0+debian~12_arm64.deb
+Size: 129688
+SHA256: 8c54c7884bb61f157ae0c079996da145307bc35682a0150e2aca88cb891ac348
+SHA1: a1f902c002d9a0e7182ae25415079cd4721fd4c3
+MD5sum: 5356b003b29c64625b6d23131f1befc6
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-sqlsrv-dbgsym
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 819
+Depends: php8.2-sqlsrv (= 5.12.0+debian~12)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-sqlsrv/php8.2-sqlsrv-dbgsym_5.12.0+debian~12_arm64.deb
+Size: 773888
+SHA256: 92d58d974a12b2fc09974e3da75237b5e6ca52e0516e3311d54c504e9e7b4a60
+SHA1: 6f1aa49ff75107004e5a795fae57de8be25c0239
+MD5sum: 79ecf21eab92522fa2ccf39942092b27
+Description: debug symbols for php8.2-sqlsrv
+Build-Ids: 8632ea190a7e048e862b4e961207ca679bfd2547
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-pdo-sqlsrv
@@ -263,6 +357,53 @@ Description: debug symbols for php8.3-pdo-sqlsrv
 Build-Ids: 3983adb27c25bdc30043140b1f896158ab0654ab
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.3-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 353
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.17), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+debian~12~)
+Replaces: php-sqlsrv (<< 5.12.0+debian~12~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.12.0+debian~12_arm64.deb
+Size: 129688
+SHA256: b7044c2c89152eff1bf72180c9695a6153ffda3c76d11c7c5e8e96106713292c
+SHA1: d15401c79adbff0a06e984d64edf6ad8da191939
+MD5sum: 44353265edbfad07ed7e8d471b05bbcf
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-sqlsrv-dbgsym
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 819
+Depends: php8.3-sqlsrv (= 5.12.0+debian~12)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv-dbgsym_5.12.0+debian~12_arm64.deb
+Size: 774152
+SHA256: 1118adebf2f342062473ea54851daa92f010e4a310d52d85976345e79940c75e
+SHA1: 7d8dc450a62072f4080913a59d088c52cf1b11eb
+MD5sum: 3d8eedc29de9e5f7809c449b708a4950
+Description: debug symbols for php8.3-sqlsrv
+Build-Ids: 55dd6529af7e939a33a1916e592a164b18fd085d
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.4-pdo-sqlsrv
 Source: php-pdo-sqlsrv
 Version: 5.12.0+debian~12
@@ -308,5 +449,52 @@ SHA1: a94509c7e83f5535bde0594244f6dcd2b7a5fc3c
 MD5sum: e4a6d862ba16fe0de97d6f5a008029ed
 Description: debug symbols for php8.4-pdo-sqlsrv
 Build-Ids: 04b82f6a7b2c39992a4819e24264f0ade011a309
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 354
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.17), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+debian~12~)
+Replaces: php-sqlsrv (<< 5.12.0+debian~12~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.12.0+debian~12_arm64.deb
+Size: 129742
+SHA256: c55119cdb4733171765c763df3724606b97c8cb209640261c8ae675847cfeb7b
+SHA1: d141b4d6f66768fd711cc4afc22a9af8b79470a8
+MD5sum: 603d07935dcb3e4c0b651644b41c44c0
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-sqlsrv-dbgsym
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Auto-Built-Package: debug-symbols
+Architecture: arm64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 831
+Depends: php8.4-sqlsrv (= 5.12.0+debian~12)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv-dbgsym_5.12.0+debian~12_arm64.deb
+Size: 786128
+SHA256: 5d02cca6bb5f8f7abfe24754f6d7563cd78b1b507ae893023e454fd33dea4b52
+SHA1: 9438c1f47dce26758e603f04b69c5bd2c1a30ddb
+MD5sum: 57f02a585b3cd38980870b30c4c333a8
+Description: debug symbols for php8.4-sqlsrv
+Build-Ids: 415589c8d6726856022cb3ad36520091d0a0edf6
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
