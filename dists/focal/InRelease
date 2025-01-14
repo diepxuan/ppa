@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: focal
-Date: Tue, 14 Jan 2025 06:17:13 UTC
+Date: Tue, 14 Jan 2025 06:23:42 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 20.04 (Focal)
@@ -12,8 +12,8 @@ MD5Sum:
  76a60f238c0a50963fc077e1da7a492d 13470 main/binary-amd64/Packages
  74b42d71fd1091b30101ce0fd7f36a4b 2310 main/binary-amd64/Packages.gz
  b9b101b734c5e5795e722ab02068faf8 103 main/binary-amd64/Release
- e66c786f56c9279549d883eff246f6f8 13470 main/binary-arm64/Packages
- f4b36c5387a3893323229375cb6a0210 2326 main/binary-arm64/Packages.gz
+ 0e08d57796171cb71a83680d0f9afbe8 13470 main/binary-arm64/Packages
+ 524df3eb419b600d02de02e45692a1ad 2325 main/binary-arm64/Packages.gz
  6a08c52b38f8b00dd1d9fa489c234595 103 main/binary-arm64/Release
  481af2e2ad678f3290db23c405fcd540 4112 main/binary-i386/Packages
  482764605d2eca1d3435eb7bd62ccee7 1023 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  6ab4c92d2dd9b5a0127a6f28deb17d28c758cfd5 13470 main/binary-amd64/Packages
  ac8d86d24553afb7699ba55e8ed59dc85b896712 2310 main/binary-amd64/Packages.gz
  d4b5058a132675617ada8a803bfe28cfa9e15f57 103 main/binary-amd64/Release
- 5d7d72e8feddf1919dd388d8f8617347a05ee3ae 13470 main/binary-arm64/Packages
- c1c1e45d8f39e930d86452ce9d8f1ba7794022cf 2326 main/binary-arm64/Packages.gz
+ f545231094340fb14223a9c35c6b95177fcc23a4 13470 main/binary-arm64/Packages
+ 69423423c8ed6910ce99e409ba341866a93e46fb 2325 main/binary-arm64/Packages.gz
  d9b2b0f7befb9b995cd3a6cbbbb0ea628ec1ff73 103 main/binary-arm64/Release
  62a6f4922b1c3d97401aab10bcf430a68c4f13ce 4112 main/binary-i386/Packages
  c537d203c5fc752064063da45f01c71e94775623 1023 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  0e5560b84cf640ec26125c82c4aa6a3392fb2619944db50a72bd7db3a6d4aa64 13470 main/binary-amd64/Packages
  dc26ec360366ccd561be24ed125acd7ebbf99455462e6a78eb2a6d648ab8a81c 2310 main/binary-amd64/Packages.gz
  8bc0f9637e82a62e1cc892fd6c5e7bbdd5b0edff54370a615d5cd6e359d417fc 103 main/binary-amd64/Release
- 2fb33ee323054fd1494302441b7bee5e01ffa721e92fe60e8f4cbb948eb364f5 13470 main/binary-arm64/Packages
- 145abf5da5cbad8dbccddd86869af3ffa8af7272b5461d580ae794098c8c5191 2326 main/binary-arm64/Packages.gz
+ 5bda4670e875b5e0520f5e42bb5f37ccc6a664f5fe3e8b24f84dc0e3b8339ce1 13470 main/binary-arm64/Packages
+ 4b4e64cfc1113161d90ea51d76022c301d878f27dbde3bcc5a601204ed43f37d 2325 main/binary-arm64/Packages.gz
  e1d06060a54a77a0dd8418a092543e3656d0f59ba5f5bf1289cae4e50a524dd3 103 main/binary-arm64/Release
  e3fc1f046cac7ebf6239125d66c05aed4c8e2cab74d926f2b6240add6ade6292 4112 main/binary-i386/Packages
  8a3375ee219976912d30ebce54a671f77980f36757da659811ed96eade577c43 1023 main/binary-i386/Packages.gz
  a0827ba54da323f9c3e8ce2afd8a81bb965b7709f95aa06ae6d3937d5274e72c 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeGAWkACgkQfg7JF6UH
-S9Mewwv+OlRTnQV+3gdIyS+/pG1U0/f3lr8PrKxuz07yb3mgZ1iPyeO9uBJuVTds
-9bLzXLWmmHGfduGhBLGoEth25LvJ78TU5zx0XC3IVWDMYV9JibLTZMJwjyIbP27J
-RlwlXvoNuyPyZtDSC63gulKyR5B6WqWn8h690WxEszCpuX48BRBMCEIWpD3ZONLp
-OKdjmAbTxASm9+vNDN++RPkPjJMa6v8YaJEoM6b0qwugKdKDPbB+Z+lumkKLYEfE
-wzNmonpS3d6Cu6oOClu836zp4fzo4D0+o8W3zuiYXKM708rCM6DiXMFxIwWI+InY
-6g9nuzBOQAdQWqBBCOj7jMpSQilgOUcf19RhoeCpWHxOQHrprhUCjLmwKA8D2V2d
-ikqBfow+5qdLecD3iYSLmBF+FBDrALSt5K2p3EhyXD4Ivf+9i0sBLJ8HjXaZiTUL
-UWjp+LwXKyRrEIIW4RjO83we1OyDECi534SArs/4c2ef1v62Fna8HPHWbALbiaa5
-MUr8Q2Tn
-=kPW2
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeGAu4ACgkQfg7JF6UH
+S9MNFAv+IE60++SMxZwZXVwaBJGD9EMrFqp3EQ1FErUPmhOBMAqAsGL8YgKsbkcN
+Ma2sRkAtlYh1XWUf1IahSiu7Uj8elSrvWN8YzsvXlJL3BpfCDjOjmBKPMNAr+Tvi
+z9iFq+l4t2hJiAcYOpjBb8KQygK0faNG8HUR5Tp7n/zcP0g8M4RZc1goj3Cigsp0
+S52N3scKzeSzMEdi79oXmzehO7tInacJjGWG+92eADxx9IoXQr/tTpBmqv408vhF
+IH3rhIQH7+9Iup3skyazl0BXMpvVNdHyQbkRLcopzFEtep8ScgIUMzEcN6lz9p/q
+19IRiNGiOlfv5ryndayefJlIzBm7WXoAtwGaSlPnp43WX7aF9yquKdZ9b8iHgRB8
+ukX+cOfK6zELVtdDZSPXDtlHKuwAjlUzb2TRxjdtz1WafUT8VtU0TP2xy9lqYOyA
+1HqyHzkybmo+uZ8m3twyIDhs+j6F8XLtSTsqI4EvecJtO5ArMDjuEYKbVlVsCBOr
+Z6SbGmuU
+=PLVK
 -----END PGP SIGNATURE-----
