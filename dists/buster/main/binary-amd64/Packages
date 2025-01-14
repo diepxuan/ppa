@@ -79,6 +79,31 @@ Description: pdo_sqlsrv module for PHP
  for web development and can be embedded into HTML.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php-runkit7
+Version: 4.0.0a6+debian~10
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 621
+Pre-Depends: php-common (>= 2:69~)
+Depends: phpapi-20180731
+Recommends: ghostscript, ttf-dejavu-core
+Provides: php7.3-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+debian~10_all.deb
+Size: 240832
+SHA256: 3d4a15270f49da37e8d3232976e1948c74c8f9d85098767fe07d7f5613903dbd
+SHA1: 3edeffa1a1a994adf7418c86665f8464b2f2acd0
+MD5sum: 27acfd03ba0c47b77956b84f0267e07e
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php-sqlsrv
 Version: 5.12.0+debian~10
 Architecture: all
