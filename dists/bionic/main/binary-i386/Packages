@@ -1,0 +1,24 @@
+Package: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~18.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 22
+Pre-Depends: php-common (>= 2:69~)
+Depends: phpapi-20170718
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~18.04_all.deb
+Size: 4720
+SHA256: b72df972a1aec17459fb4b8bab3bf63b327b52d21b57ae20102e6eb0697d1222
+SHA1: 76f97537c4eb05fcf2647f0761d75e51688a4db1
+MD5sum: 078be92cd4e7044f9cd1509b0b106e61
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
