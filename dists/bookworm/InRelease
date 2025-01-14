@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bookworm
-Date: Tue, 14 Jan 2025 04:33:24 UTC
+Date: Tue, 14 Jan 2025 04:36:03 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 12 (Bookworm)
@@ -12,8 +12,8 @@ MD5Sum:
  27e88a94b9840443f61d154edb1465ec 19240 main/binary-amd64/Packages
  86e56c0551efef0e12e8ef9e93caa882 3531 main/binary-amd64/Packages.gz
  3372616b55fd40c53bb28aa5db5f722c 103 main/binary-amd64/Release
- 9e3ad62d572263577859ba97b244a2d2 4701 main/binary-arm64/Packages
- 0c5faf4be56b017583ccf1f68a7403a5 1290 main/binary-arm64/Packages.gz
+ 98f48636f49b28c0749b0a86b7fc3afc 4696 main/binary-arm64/Packages
+ d193663afe62655b6f76eae1cb232133 1277 main/binary-arm64/Packages.gz
  50879736cab1e86009f95a8b568fc04a 103 main/binary-arm64/Release
  6dc6333a1269c645b2b67a1643393bc9 4064 main/binary-i386/Packages
  cb4f59eecc82a2049ab82c87f84e7e3a 1019 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  06edcfee70165cd9212061dd612862d47ff84235 19240 main/binary-amd64/Packages
  f556c583a5a102c5980a6b9030aba759ac037c73 3531 main/binary-amd64/Packages.gz
  e27528aa94b18fb9299115e5917c778c5f12083e 103 main/binary-amd64/Release
- b899373da26f1c7565733b09462628a1e1f800d7 4701 main/binary-arm64/Packages
- 806ff57361041d43bd1158a7ca27424e395759a4 1290 main/binary-arm64/Packages.gz
+ 77902a05b5a7acf4eec75feff226b04ef0efe515 4696 main/binary-arm64/Packages
+ fdaeb64ce5ccaa4219a0c63779e71e6b464929ec 1277 main/binary-arm64/Packages.gz
  651c0b9d51bf09bb18820bdb273e1201bed1c026 103 main/binary-arm64/Release
  594f50b325c845f65d07d19ada6a369002f6d267 4064 main/binary-i386/Packages
  257aa1e220d785bbb253683277d66a277ad788a1 1019 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  dc50bdaa030debb996516b7791fdbc70245b0ce3594774c28e4e7b3dc70ab60b 19240 main/binary-amd64/Packages
  3c1760a7649482e84a2a0727327ca1ab0c811945f24142c86db2782711653684 3531 main/binary-amd64/Packages.gz
  be01e1a4561e9f2e0f7bd2c46dd9cdf9c8686b548fb582bec25b6c820a0b05d0 103 main/binary-amd64/Release
- 65c5f8f8f2093e3cde321ff585ea0dfc0b309063833125e17072fe6b3febef7c 4701 main/binary-arm64/Packages
- d805839670efac811c51c09c67bfed256b92e451d5af180e10ab0c88e1a985bb 1290 main/binary-arm64/Packages.gz
+ ebac986719eb47440839b43cac066920b70914cec58142886411b0a8d061a02e 4696 main/binary-arm64/Packages
+ 1732f965c5f7279481a582975d053ac09a3ee9e0fe23ce8cb2a9c6f4d946a181 1277 main/binary-arm64/Packages.gz
  1daf647509b49a016a1ec4adb4127dbcceecac391702424d20bf7d6de8de0a79 103 main/binary-arm64/Release
  a80ed2360b7598bfde52e27a3a81fb5282de9d9ef8649fd1a0df4d8826750a1b 4064 main/binary-i386/Packages
  b020da3f672397823d6815033b6f48b08724f0f0dea765521c45834accf88a75 1019 main/binary-i386/Packages.gz
  6ec2bf044f3075d6e5fea8c7517c8c9b88d3fc7a1fbfb7dfbdbec0ba7c1f081e 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF6RQACgkQfg7JF6UH
-S9NG0Qv/cxMiQI3dgbDbXt30RBDQ4FyPWwogKU5cjJkdeuLmyq7OTWgw/emY8zRH
-Xjn09t5LSTDBCHn8ARwnVG0iOWtiLl0xlTqu3LpvTsLV61S18Vq60EPhbtSMlgFh
-wCzFD1wVRWlxZuvv/2ixwfU3GdwuETj84Bk0nXQHV/GFIIWsPxw8vYZJw4KN90X0
-mOTv6rglErSxRIH8Tvmdoy0I/f6V9M6DhyD/xHpp5xkVWj2MtMjopCb+ESI4xeDl
-rRhCVTbuBIUQctpMYtQLIGs8OLdo0CHRcCgmqKIEBzE/h3PwX1ete02H+nyf6d/J
-btekk9riUjfKHA1jQj8ik06rakltnsPoOXaKlR5NHZIQeEdSv58rX9aBW9J1khio
-b5rhLx87f9mf5XHCbuN8685ZkIL/ZKElieDkm33ga4jlSDPMw7uH5BsQxRZbxDaa
-APyyqdMkoN4ZxZvejE4kzWWEYWQ6MD5Vj74Zh2Mfzu+rz0aOgqLapZoDw74N1Mr+
-/lBXslAz
-=2wrE
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF6bMACgkQfg7JF6UH
+S9OKUAv+NNp7AsvLu8K9DLla2KItNQmQFPjfthwEn00JDZC0KQxjKTnN5uxi9eQd
+25lyzknnJF/935QB7HZcWfn0G1i9RA4rhQKZg6L3qxwHRL0XminxBJqTeZY50qKC
+tFR4rAqbURzTWWh8fYvZULkMmCyC5Olurk/ke1jwzfLiExe7Pb/BztiJyIvBofj1
+iPgLv6UshjP9oZgF9ic7HmAEMISTL3D9ckALlR/kKrcwookkYFdGjUXXpouMhvmS
+YLwIGG/CUqbdTajV4qgzEdyA/h3KgLYK0Cc7eS1o9/ay2McxJRNrM99jRLoE12Fe
+XppoBt7wUKbBfk+iIOtMwbQVoxvM80OJSxjVg3Zqa5Xi3+ziGt2O/1DNelQF4Xoz
+/Z1faxbQUhwRCl/rb7ova0osHEFtOBPXTkjqIdElEEkA2uTaTn5yheWQrgK/Gq7i
+1sNFki9dUVFGikBk4Hc1eP/49FxXsVFElYGiD/h9GPZjdI8iSCuI/JTx2i86Q48N
+IQ1sMF0Y
+=blYg
 -----END PGP SIGNATURE-----
