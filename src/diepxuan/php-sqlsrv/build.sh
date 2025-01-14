@@ -52,9 +52,9 @@ start_group "Dynamically set environment variable"
 # directory
 env source_dir $(dirname $(realpath "$BASH_SOURCE"))
 env debian_dir $(realpath $source_dir/debian)
+env build_dir $(realpath $source_dir/build)
 env pwd_dir $(realpath $(dirname $source_dir))
 env dists_dir $(realpath $pwd_dir/dists)
-env build_dir $(realpath $pwd_dir/build)
 env ppa_dir $(realpath $pwd_dir/ppa)
 
 # user evironment
@@ -209,6 +209,8 @@ end_group
 _project=$(echo $project | sed 's|_|-|g')
 
 start_group update control file
+[[ -f $(realpath $debian_dir/$module.control.in) ]] &&
+    cat $(realpath $debian_dir/$module.control.in) | tee $controlin
 sed -i -e "s|_PROJECT_|$_project|g" $controlin
 sed -i -e "s|_MODULE_|$module|g" $controlin
 cat $controlin | tee $control
@@ -226,11 +228,12 @@ EOF
 [[ -f "$debian_dir/php-$module.rules" ]] && cat "$debian_dir/php-$module.rules" >>"$rules"
 [[ -f "$debian_dir/extend.$module.ini" ]] && cat "$debian_dir/extend.$module.ini" >>"$debian_dir/$module.ini"
 [[ -f "$build_dir/$module.config.m4" ]] &&
-    cat "$build_dir/$module.config.m4" >>"$source/${package_dist%.tgz}/config.m4"
+    cat "$build_dir/$module.config.m4" |
+    tee -a "$source_dir/${package_dist%.tgz}/config.m4"
 end_group
 
 start_group Update Package Configuration in Changelog
-release_tag=$(echo $package_dist | sed 's|.tgz||g' | cut -d '-' -f2)
+release_tag=$(echo ${package_dist%.tgz} | cut -d '-' -f2)
 # release_tag="$release_tag+$DISTRIB~$RELEASE"
 # old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
 # old_release_tag=$(cat $changelog | head -n 1 | awk '{print $2}' | sed 's|[()]||g')
