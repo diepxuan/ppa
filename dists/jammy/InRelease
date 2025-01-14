@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: jammy
-Date: Tue, 14 Jan 2025 04:47:36 UTC
+Date: Tue, 14 Jan 2025 05:25:51 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 22.04 (Jammy)
@@ -12,8 +12,8 @@ MD5Sum:
  5b4fc3dd26218943592a3966ce63079f 13846 main/binary-amd64/Packages
  e42d9325dfaa3ce6f17086b218450604 2335 main/binary-amd64/Packages.gz
  4bffc06e32fddcdb7fa06640127f4a04 103 main/binary-amd64/Release
- 7cde76c47d97fe698dc46e11cd3555a1 4750 main/binary-arm64/Packages
- 34a13789ff0c1647b65d5685c504e469 1280 main/binary-arm64/Packages.gz
+ 31b03fd49601710d99d884a3d4e51de6 9370 main/binary-arm64/Packages
+ a16707dc82f710811f8545a55354c0e4 1867 main/binary-arm64/Packages.gz
  26cbc07e892f48bc4a23fe62ebcaef17 103 main/binary-arm64/Release
  ffdfb28ede560130865c773b06a18a3e 4112 main/binary-i386/Packages
  52ef432520ae5865d53245927fec94e6 1021 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  4953dc01cf683854cbd44930b8447f290af547e0 13846 main/binary-amd64/Packages
  3e756dc82062329e3d70f226fc676b4d381672fc 2335 main/binary-amd64/Packages.gz
  d26d92d29d4b3cbd407630ff15ad06e506556319 103 main/binary-amd64/Release
- 780ada86daf59e088f3400b1dafd46f8df59ae3c 4750 main/binary-arm64/Packages
- c6e754148bb0905dbf5ae941ec24302321133be3 1280 main/binary-arm64/Packages.gz
+ 87d12e9680965a6ac117dd8d7267dd4ef07c92dc 9370 main/binary-arm64/Packages
+ 7675be406650544891a891e50c5dda4ff42e57a6 1867 main/binary-arm64/Packages.gz
  f62f7b13e0b60e960158c76697eeb2632a49f88c 103 main/binary-arm64/Release
  2f3a039ed554a122966c581651e8562fefe2d808 4112 main/binary-i386/Packages
  746e9d2a22071a1ea4e61ba9a628c0bfc2ea3714 1021 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  1927caf125c89aef91dfdb39da704e782277ab90b5faf233c2a8e19b25e3eeea 13846 main/binary-amd64/Packages
  ff7749dbee952706022a1ad01f80949421a34da29ad4aeaff5dcee23968100fe 2335 main/binary-amd64/Packages.gz
  ab8fa8f517ca8e30fa522ad93ef6a94a788a899ab542403db316a66de11d030e 103 main/binary-amd64/Release
- 378d628f9078d1a4e33cb279a5cdfe43fe9f7c552bdebab04e2479e6a29e8380 4750 main/binary-arm64/Packages
- 833235a06653ca64decba6343f759768d72a62c2a5d78202007c52807aba3a18 1280 main/binary-arm64/Packages.gz
+ 985585aa274391961552a9b0a80631f548597e08ea292acfa7d0845e696fbb41 9370 main/binary-arm64/Packages
+ 78cc72f04a132488b1649a5f6bddd12ddfe6ae8a7eb8b78cbbf70112e930a989 1867 main/binary-arm64/Packages.gz
  f6f85425b33c3c6fa138d077d990b55b574685fb2d8926562bb070f39f4b6b20 103 main/binary-arm64/Release
  97d4d96c720ae7b45f63894ff91f63012a8654af85bca2d832ea7a220e1fca1f 4112 main/binary-i386/Packages
  d90aae4865ffd89575a834b9406c75ec291b02bf0e09ada5c98526cb0e03bed3 1021 main/binary-i386/Packages.gz
  5142599bd9398f26cd6f08103a02e142140cc2b3adb2944e56f772bec2f9b3f5 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF7GgACgkQfg7JF6UH
-S9NriQv+Pte8TkdmxaC2281ovxBCacMUXCJxg2BdW6AN/hD0ziCIK3EgcA9SN3K3
-6PQ3T9mPLuvGtobyq/zz3+2HPsLErpx3hzJzobaWv7Fb12pI3LYCYzP/UATWrnoJ
-7M7Xnzh047NVx0c5w92G1Fd7N1/dewRxA878muKe2S6nYjk/a1OdQxlkaaoPTSX7
-8p6ruLOcuRtrXKkOLIC3jmtxrLrWjtHByRIjYo4dmurkXv2xqGgifpaSPyLJdJ0K
-3X6i0vhh0O/HDOZeEVTXXyuRkr0JFX7ZiKtQijypc1o4tEJEjZ3LkLB5USdBx2tL
-n6yfZCP8wfaIUQNdiPx0joX8UxnUrVMzX5oRTBpoMw6hieBtlfC13s0edfKK7360
-0XMDhvdrmmAAquWtqGKdOWjZOd4eGUVf4fKseYfGa5rTEFQTvxnhnJ27k4evvX0W
-sDAbClxMZG45nFZ7Fx9XZMATxHjUS1A75pGD+4dEJXY8j1U+p+93eV64OyKL5yIY
-TAcuJv/f
-=zrhX
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeF9V8ACgkQfg7JF6UH
+S9Nvggv+J1bP6wvLP6FPZf3UzkXUbE8/bpBtck2Au7XwH1yaPPWirOxBcL6w2xT1
+w+5TzVxZMQa11HfWmnjd2pRK/n1ym2Dohhsey2vSLKUJSIRpmXQ2yMUkQy7BeHwS
+i9nGDs1kt2S3sBs6hlVOCrPF4jcWf4goH8YdxKWwDOoT+BPBb7oDVvsexMh/TlfH
+ekZcDpVe9ZDrqIOPtmTjaK65eLRZM5FbfLtQT6F/OmEexdMsnmAeCraNUqfbSPvB
+otL8YOMDX/bUe5srmb1oa6IHmOGmkCrNPlDByrMqexOKuKYWd7TWvnovkwWqJ3ia
+GWjusPc73x8hqcfTdPPPTIXLddguAaptjFozqHO3B08t84AefknSWnhASFzGfw9Z
+YpJFSWVdXdmRkfewBS26rCoBYJhtnHtvB/IPY5MiStfvPF3VVsk48Tf4AZZo2p2k
+V/7/NYj+Ftc6/iDtKO6qXfgkr848RA9sYpn4HEHYUcjvvxpqchr7zKQwt3Ba+/RX
+QlmWTDcc
+=7nEt
 -----END PGP SIGNATURE-----
