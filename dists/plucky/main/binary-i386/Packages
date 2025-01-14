@@ -51,6 +51,59 @@ Description: pdo_sqlsrv module for PHP
  This is empty package that depends on all PHP versions.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php-runkit7
+Version: 4.0.0a6+ubuntu~plucky
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-runkit7
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~plucky_all.deb
+Size: 2842
+SHA256: de407dd00d6886aeec817b4e81a78133160931ac5bf235d7bf39a727998c3b2f
+SHA1: fd36450d32c7e4eb30cd52a20f66bfc8e1fb225c
+MD5sum: 2e027b3c57a14c179037699854e4cb12
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7-all-dev
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~plucky
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-runkit7 (>= 4.0.0a6+ubuntu~plucky~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~plucky_all.deb
+Size: 2866
+SHA256: 75f79205c91cf32f34804a157787e3eb485bdc84b565bcb9ac96b161706320a1
+SHA1: 246cb056166d00522f0c8fcb028615b8d3881e1c
+MD5sum: 5bd6463c245b265c0878291c86c41723
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php-sqlsrv
 Version: 5.12.0+ubuntu~plucky
 Architecture: all
