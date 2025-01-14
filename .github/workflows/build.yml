@@ -74,8 +74,8 @@ jobs:
           - os: debian-12
             base_image: debian:12
             codename: bookworm
-        m2module: ${{ fromJSON(needs.package-load.outputs.packages) }}
-    name: ${{ matrix.m2module }} on ${{ matrix.os }} ${{ matrix.architecture }} ${{ matrix.codename }}
+        packagename: ${{ fromJSON(needs.package-load.outputs.packages) }}
+    name: ${{ matrix.packagename }} on ${{ matrix.os }} ${{ matrix.architecture }} ${{ matrix.codename }}
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -118,14 +118,14 @@ jobs:
             -e MODULE=$MODULE \
             -e GPG_KEY="$GPG_KEY" \
             -v $(pwd):/src \
-            ${{ matrix.base_image }} bash -c "bash /src/${{ matrix.m2module }}/build.sh"
+            ${{ matrix.base_image }} bash -c "bash /src/${{ matrix.packagename }}/build.sh"
         env:
           TZ: Asia/Ho_Chi_Minh
           GPG_KEY: ${{ secrets.GPG_KEY }}
-          MODULE: ${{ matrix.m2module }}
+          MODULE: ${{ matrix.packagename }}
 
       - name: Installing build dependencies
-        working-directory: src/diepxuan/${{ matrix.m2module }}
+        working-directory: src/diepxuan/${{ matrix.packagename }}
         shell: bash
         run: |
           ls -la
@@ -142,10 +142,10 @@ jobs:
           git stash pop
           reprepro clearvanished
           while read -r file; do
-            dpkg-deb -I "src/diepxuan/$file"
-            # reprepro -V --keepunusednewfiles includedeb ${{ matrix.codename }} "src/diepxuan/$file" || true
-            reprepro -V includedeb ${{ matrix.codename }} "src/diepxuan/$file" || true
-          done < <(ls src/diepxuan/ | grep -E '.*(.deb)$')
+            dpkg-deb -I "src/diepxuan/dists/$file"
+            # reprepro -V --keepunusednewfiles includedeb ${{ matrix.codename }} "src/diepxuan/dists/$file" || true
+            reprepro -V includedeb ${{ matrix.codename }} "src/diepxuan/dists/$file" || true
+          done < <(ls src/diepxuan/dists/ | grep -E '.*(.deb)$')
 
       - name: Push changes to GitHub
         run: |
