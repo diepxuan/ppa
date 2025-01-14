@@ -108,6 +108,59 @@ Description: pdo_sqlsrv module for PHP
  This is empty package that depends on all PHP versions.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-runkit7
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~20.04_all.deb
+Size: 2834
+SHA256: 09f321bf95ff8160b7e67b6232256625c5a6fa23f9e7622797a5af9171600e37
+SHA1: 0d738ab3f181fbbdd7cfe1e82e8eed85fc38bf3c
+MD5sum: 1fa80470db306ffef7c5f7b8ea0090ff
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7-all-dev
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php7.3-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php7.4-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.0-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.1-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.2-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.3-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~20.04_all.deb
+Size: 2882
+SHA256: 2b668168b007bc3b4ed61f416bd7342020bb784a0b1a7b8d062baff74eeea85a
+SHA1: fbc9b994b6802fdc756820574453238c6049fc20
+MD5sum: 5737ecef04da3901bf9c370b536dd9eb
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php-sqlsrv
 Version: 5.12.0+ubuntu~20.04
 Architecture: all
@@ -161,6 +214,118 @@ Description: sqlsrv module for PHP
  This is empty package that depends on all PHP versions.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php7.2-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-common, phpapi-20170718, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38460
+SHA256: f05e3d9c13649189c4cea91ab5041023faec55139560c75d8922e5219470c14f
+SHA1: eadb8b24a24b7c80b627cc9357ccf5323abf7373
+MD5sum: b1d94eaf63bd9ede0f6c7f6e21539109
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.3-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.3-common, phpapi-20180731, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38510
+SHA256: 3bd3c34de4ce62e62c1d9e8ccaf7ff17ab68f4a7edf83d8d93f6b69f986df5e7
+SHA1: 27e976140b283e437ec7ed5fe6b8390f270da5db
+MD5sum: d28f0cbdb33309828486ea609088144e
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.4-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.4-common, phpapi-20190902, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38448
+SHA256: 1adfe590106758749b5971faf844ef21bcbc549eae1f9c692b5f94696ae9527a
+SHA1: e931a093cf8181008a9766fc746378d98d64533d
+MD5sum: 22412e6e4585d97d5abfd9c1378d42f9
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.0-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.0-common, phpapi-20200930, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38066
+SHA256: 8594230165e1130a67c36ea439ee76e8de85ceff52b825422f60d4ab94ae595f
+SHA1: d0bdc60c2a6cec69bd361e99601055b3d3e48893
+MD5sum: 34faecf36c59aed43992675fbbb6d5d6
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.1-pdo-sqlsrv
 Source: php-pdo-sqlsrv
 Version: 5.12.0+ubuntu~20.04
@@ -182,6 +347,34 @@ SHA256: 8fbf4312be3d6d546168d35beeb489d8256768afdeae76bd05867c8f6f841664
 SHA1: 128468def8746ec82487047a693bb2956859920c
 MD5sum: f19d6ab582979b06159364ed43967fef
 Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38124
+SHA256: 7bf782298bff86c8eeec23d0b1ed2e8dc9b864d1a129066b4d3e7ebb341c3b28
+SHA1: 92d1e67ae3b87e13f06ea338fd238f653f3584f2
+MD5sum: 079c08791479f30708e835dbfbd64b28
+Description: runkit7 module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
@@ -245,6 +438,34 @@ Description: pdo_sqlsrv module for PHP
  for web development and can be embedded into HTML.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.2-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38536
+SHA256: ba3b16c92a62e91d05ac8f4148b527f3b592cdc23d23400a22e4b07a536fb13e
+SHA1: f9e474d1cb782e51143192024ac6ef7ff48295fd
+MD5sum: 0043ddef463c1a8691745a14b1ee3a1a
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.2-sqlsrv
 Source: php-sqlsrv
 Version: 5.12.0+ubuntu~20.04
@@ -294,6 +515,34 @@ SHA256: 78e843c45e2ac62025d7a6105dcfdaaca354f7373013be6056d81158cb993ae7
 SHA1: 47bb40b9f4725930aee9be133ded26b7fd914be6
 MD5sum: 492153c44df74cc53c3e3926ad8e03c0
 Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~20.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a6+ubuntu~20.04_amd64.deb
+Size: 38566
+SHA256: 5f07b7cb16cf5bac7d4f1504aad785b227efd9493007fa6568849cf203d7f55d
+SHA1: 51ee880fb7721521567306ffd99e1846095c5ce4
+MD5sum: 1faf10c749d8f8223162cdc562989390
+Description: runkit7 module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
