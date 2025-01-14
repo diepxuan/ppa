@@ -51,3 +51,56 @@ Description: pdo_sqlsrv module for PHP
  This is empty package that depends on all PHP versions.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php-sqlsrv
+Version: 5.12.0+debian~12
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+debian~12_all.deb
+Size: 3836
+SHA256: 48d10eea35b08249883400fe5bb7b856a37cfa15ce7295b80cd4a62255e786ab
+SHA1: d125254b9f236e6b9ef0b52def65993436ce9e72
+MD5sum: 3bf50e54568ca0d033be0944d5521f3a
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-sqlsrv-all-dev
+Source: php-sqlsrv
+Version: 5.12.0+debian~12
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-sqlsrv (>= 5.12.0+debian~12~), php8.3-sqlsrv (>= 5.12.0+debian~12~), php8.2-sqlsrv (>= 5.12.0+debian~12~), php8.1-sqlsrv (>= 5.12.0+debian~12~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+debian~12_all.deb
+Size: 3874
+SHA256: 6d4139bef30444c86113cf2a52e41bb20d050b4e0457c9352d70d5e432d1fd63
+SHA1: c5338a566b92b36f7bba913d4682ab171776ef7c
+MD5sum: 663ba986fe85441737ecb6a87599cc0b
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
