@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: plucky
-Date: Tue, 14 Jan 2025 06:55:22 UTC
+Date: Tue, 14 Jan 2025 07:09:51 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 25.04 (Plucky)
@@ -12,8 +12,8 @@ MD5Sum:
  974fa882f300c80c31f990bd6bb104b7 6790 main/binary-amd64/Packages
  75a65f64646832fa09a0849ff1f660cb 1620 main/binary-amd64/Packages.gz
  911773b03639340d5e7eb6224b913ba9 104 main/binary-amd64/Release
- e1669bc6400bea97dcdf38945784239c 4509 main/binary-arm64/Packages
- 522d609cc1dbedcec27f097d790f4cb7 1265 main/binary-arm64/Packages.gz
+ 32c1358bbb82e135635a8d9c1d8d0807 4504 main/binary-arm64/Packages
+ 0b0689cf0bca2c9f1c41c7e0e85930ea 1255 main/binary-arm64/Packages.gz
  cfb08f0b342d099e11d529477a4c5a83 104 main/binary-arm64/Release
  735f035ec8f330eac1cfdb412dabc428 3864 main/binary-i386/Packages
  b3081c27f4e526ab84b78464a368b8ab 993 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  a812bb49d81891add76e5b2e5607e50a5f20a55d 6790 main/binary-amd64/Packages
  01fa35945658ff10715a1e2a2a3dad9d3a3398f7 1620 main/binary-amd64/Packages.gz
  ee4cedfdf1f74f343b7ecaa607746926e4bff70b 104 main/binary-amd64/Release
- 8219734441fac3a5b54ef8af6139a7518202ce7d 4509 main/binary-arm64/Packages
- f8cd3522100b2de56574f0db10d98c413517c069 1265 main/binary-arm64/Packages.gz
+ b5df41c95d136c74cc72d0cd90b2dfaae4a58df3 4504 main/binary-arm64/Packages
+ cbebe4aef1693beae6d2bac8f0d891d03444c6dc 1255 main/binary-arm64/Packages.gz
  bf2d6c1fa93f6e19b1279690a135be6f1fd446f4 104 main/binary-arm64/Release
  336cf7e9354c10b236b4b1c719d1bfe7a04241c1 3864 main/binary-i386/Packages
  5d274bce6fb39d854fc5c6f6540fdb83947d447f 993 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  744110e86a06356a0d046709330dc64c0dbff98ffccdf541e0c29b56022ec8a6 6790 main/binary-amd64/Packages
  d1e7b8035dc9aa6f01cc7aeba1796c9210c764a4573ac07cce1e23ddc0c58b5b 1620 main/binary-amd64/Packages.gz
  e82423acaf63e86f0c1173c3cb57e2b16ef74686c8e2a99735fd05514418940b 104 main/binary-amd64/Release
- f6fcd2af45d29532633dc034f68f19e88edbffa25002b943ccca70c9bbd14b9f 4509 main/binary-arm64/Packages
- d277206bcde2e89c64e2c96bc6e2ebcc8cb4c8d6e11e0ba7493a2be61af1996a 1265 main/binary-arm64/Packages.gz
+ 2319ebec2693ac2b6d974492933bd0821d5f8a92a0fae1476747ffcf2966db49 4504 main/binary-arm64/Packages
+ 55ff52f2f4379d68201db5bef598c11afb894c18a7a88b3280c039bd6ad72b61 1255 main/binary-arm64/Packages.gz
  6c0cc381584fb2c1fab4724c97cb2c27aabb3ce414de8a3815f53e2914a0d632 104 main/binary-arm64/Release
  bbe6a25e2c07f2827d080d75b3ea44d96173b54267243f0a4532c84339ac2bab 3864 main/binary-i386/Packages
  5acddaf7e7d3bd86b86b132e5e4c020b90c68c3a28e8d19c342c902b14d1e446 993 main/binary-i386/Packages.gz
  6a584d1679e7f460044401d1a0a8450ed81a3e5620892342dfd46c9c39b46767 103 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeGCloACgkQfg7JF6UH
-S9MUtQv+Iv3mgxQaLEUBPCO1/zhn7Fu2ZiarlzNyDP3a9SNGNDNn8WraSPz2OT14
-oMRr+1ra63Or6bRsRQ/Gdlu34r2URx4YYRPUl0suZsjOzClcWb0YEjIFK47iyfyy
-NixKO4ON0mtl1Fm5zShv1wLvGgYrGtMSepid1a3us7id4ptq1xF+AC6gvOkhKEgG
-3gwVawHAZQFiVeLHsEd4Q1JGr5wxOOAabHmuQg0ExAeVXcrzkLYZMkDmylumBNT8
-xE2W4TAu/77rZSyMubNRzNDm7ouXxWvdPMoPiQRoA8OtZ1vj/x5pgimVnaWf7cPr
-6tXITItqHywipiFZwL+AxxEOzzyBgV6UkFcE/+BqPKM/FYgA7s3c1uTO3X1EE083
-RK0tPwlN9W8m9aEFV9EG/HNy6kPrbY6GSasjoxodHy7GlCOd7H72mzdL6pDBGF/i
-ex/DNgxXpkc/OinxumMhRVKlkID3NhqU8LERfp9N730/hyzxPHUzp5qBAnfs8FKc
-Ct2vefj6
-=Y8Qf
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeGDb8ACgkQfg7JF6UH
+S9MrfgwAoTIQ9J34x81prWHJBLSYw+YAm4DLQDOPFmG3zKALMVP655FUluXtlhQc
+VHT35BZXymb/FEFGZ2u4UYwxaLhu8j7/4qnZYHHC5gyi+Vr91tGAsrrfu6CTrkNa
+s4gOGW/YdC9KVD4kN8fqqd3bdSeuZkNmJxe2axZEysb0x4mG/4Sav9lBZNNthxa1
+ZOvTPSTYXh0+7NWVnnQ5K4QS2Y+OQ0cNdweAqzzmwZroZOMLi/GJrbxsJ1vc2Gi4
+ADw5/PfaNjFerh4szQQMLQiYZoyX+TZDhksFw5DCmeMjfNjiZSVRks0dtZMy66NS
+5/PeQKX6mXjAqrbUYXcSjgB/YZ73ztbXpUW7WMFx1dzsaRFlO1sXMbZvXLxYYmI1
+YQSsA5DXIkCJl6IQWRjjxe6rsJENGOSPVdHix9zeD1zGWTi+6nxpkyMOsgJOpxe+
+rPh86GNpBJrSLxg71ZlIC2klkeDQaCRFWIeTVpFGq6NRkzZP9bx+JxBaV5JfxIDB
+Jk6XFNGm
+=EaoI
 -----END PGP SIGNATURE-----
