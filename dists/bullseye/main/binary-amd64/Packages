@@ -16,3 +16,244 @@ Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
+Package: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+debian~11_all.deb
+Size: 3862
+SHA256: fd38b1c96e1eb9d846455c8203b0b224de5d07bae586d6b01fbdedaa873086dc
+SHA1: 1fce9c612e2865ef67ab6a77226b43ae43dc2a99
+MD5sum: 81c00af1d83ae7ce018ff0839315e23a
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-pdo-sqlsrv-all-dev
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv (>= 5.12.0+debian~11~), php8.3-pdo-sqlsrv (>= 5.12.0+debian~11~), php8.2-pdo-sqlsrv (>= 5.12.0+debian~11~), php8.1-pdo-sqlsrv (>= 5.12.0+debian~11~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+debian~11_all.deb
+Size: 3900
+SHA256: 7d7ddea0609db76c218b0ff18242501ac5060396b3301b6cc70c7b065d8f4549
+SHA1: 92c070f560fbc85da7f1bd6fd3ea64c30c1f6f02
+MD5sum: 2a97098274c15d6b98acff4c60d6565e
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 365
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.1-pdo-sqlsrv_5.12.0+debian~11_amd64.deb
+Size: 138594
+SHA256: 7281a5dcf557bf77630e4aff45b101061aa24cb8726088e251584804cd184431
+SHA1: 7cbbb17a1d47a9736d68e1f126a6727e7d92d573
+MD5sum: 500d0014e34eaeb52f5a20900582060d
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-pdo-sqlsrv-dbgsym
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 829
+Depends: php8.1-pdo-sqlsrv (= 5.12.0+debian~11)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-pdo-sqlsrv/php8.1-pdo-sqlsrv-dbgsym_5.12.0+debian~11_amd64.deb
+Size: 778882
+SHA256: a29ba456dca9b10b286294ea03ad2abf5b30e041addce7009bb2067ecc48c891
+SHA1: ee53d1c9fcc63634958a34223d194eb9550a521f
+MD5sum: 4306cfbafc2c4ba3ebd4ff8c6eea8196
+Description: debug symbols for php8.1-pdo-sqlsrv
+Build-Ids: 4176a47b6e05cd254793c462b09a7f99d107d202
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 365
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.2-pdo-sqlsrv_5.12.0+debian~11_amd64.deb
+Size: 138998
+SHA256: fb32a7c651204e6c40146b2324644ea9bce43fc7b65184a68d4521e8be3b8312
+SHA1: aeff6f44f919bfc3b6fa4770e4473cc496bbb215
+MD5sum: 2fee395245bff88a930af30bfe884e0a
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-pdo-sqlsrv-dbgsym
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 835
+Depends: php8.2-pdo-sqlsrv (= 5.12.0+debian~11)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-pdo-sqlsrv/php8.2-pdo-sqlsrv-dbgsym_5.12.0+debian~11_amd64.deb
+Size: 785394
+SHA256: 91e0c595caffa59bfe1ef962bcf4e1a5be99181cbdbd5bfee1a3a452b22355c6
+SHA1: d48e898041de1c45ebc49f18e192d616ae816e9a
+MD5sum: 1de2e2d37d3cfa0fda7cde8c5599ba56
+Description: debug symbols for php8.2-pdo-sqlsrv
+Build-Ids: bafe2ccaf80e0cab994c5bf9863530d84170706c
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 365
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.12.0+debian~11_amd64.deb
+Size: 139000
+SHA256: 20208a9c0af858da1e05a5a347db97162b2c5c9e8dad991b8fcdb4f1fca1713f
+SHA1: 7c0ef60fd0d945d09d6075e8b1b69ff769e01c2c
+MD5sum: cf88f96f13afe54555ba66d466f9e235
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-pdo-sqlsrv-dbgsym
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 835
+Depends: php8.3-pdo-sqlsrv (= 5.12.0+debian~11)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv-dbgsym_5.12.0+debian~11_amd64.deb
+Size: 785420
+SHA256: 93172c1570b33ee5966c18c6e8bc5964d79fc153a53d34f1d90eb4cb291a9007
+SHA1: 57017761b6bf65324da56361f6f6ceda19547eb5
+MD5sum: dd01ce4edf1456778743cb9ca46247f6
+Description: debug symbols for php8.3-pdo-sqlsrv
+Build-Ids: bd0b3d8b000962a171aa1a39e7a186d25adcc44c
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 365
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+debian~11~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv_5.12.0+debian~11_amd64.deb
+Size: 139020
+SHA256: 82dfc4eab40ded7042e17bca70dc4805717fd26f0635bd91066269383f07ae3e
+SHA1: 5260f158c5cdd8023bbf8f14467e72922331bf58
+MD5sum: 8c6ac25b82ba140542ce7a87d05e24fa
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-pdo-sqlsrv-dbgsym
+Source: php-pdo-sqlsrv
+Version: 5.12.0+debian~11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 836
+Depends: php8.4-pdo-sqlsrv (= 5.12.0+debian~11)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv-dbgsym_5.12.0+debian~11_amd64.deb
+Size: 786462
+SHA256: 690e3ca503da3239b824f85acf3292a815c01309941df3d108161aa223ce3cdb
+SHA1: 44958811d3a8ee0d009e8b4222b1fa0192cc279d
+MD5sum: dd8e7665c86ccf74f2988dfe3a060195
+Description: debug symbols for php8.4-pdo-sqlsrv
+Build-Ids: 9a862f3d6a3cf9a648e3bd648e4a9013193d5bb5
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
