@@ -273,6 +273,6 @@ EOF
 #     dput caothu91ppa $package || true
 
 while read -r package; do
-    dput caothu91ppa $pwd_dir/$package || true
+    dput caothu91ppa $dists_dir/$package || true
 done < <(ls $dists_dir | grep -E '.*(_source.changes)$')
 end_group

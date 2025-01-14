@@ -1,3 +1,9 @@
+ductn (4.5.4+ubuntu~24.04) noble; urgency=medium
+
+  * Fix build script to use correct directory for package uploads
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Tue, 14 Jan 2025 11:23:56 +0700
+
 ductn (4.5.3+ubuntu~24.04) noble; urgency=medium
 
   * [ISSUES] Unmet build dependencies: debhelper-compat (= 12)
