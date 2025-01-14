@@ -149,6 +149,7 @@ $SUDO apt update || true
 # shellcheck disable=SC2086
 $SUDO apt install -y debhelper-compat dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl
 $SUDO apt install -y unixodbc-dev php-pear
+$SUDO apt install -y dh-php php-all-dev
 $SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
 
 # shellcheck disable=SC2086
@@ -284,6 +285,6 @@ EOF
 #     [[ -f $package ]] &&
 #     dput caothu91ppa $package || true
 while read -r package; do
-    dput caothu91ppa $pwd_dir/$package || true
+    dput caothu91ppa $dists_dir/$package || true
 done < <(ls $dists_dir | grep -E '.*(_source.changes)$')
 end_group
