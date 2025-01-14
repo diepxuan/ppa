@@ -4,7 +4,7 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: buster
-Date: Tue, 14 Jan 2025 08:56:39 UTC
+Date: Tue, 14 Jan 2025 09:01:22 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 10 (Buster)
@@ -12,8 +12,8 @@ MD5Sum:
  1c6b945ea79702acb92e46807ffd4b9c 2348 main/binary-amd64/Packages
  0fbafed44a9bd9779106e5061b168114 958 main/binary-amd64/Packages.gz
  3b0e5097998bf734b2430c336665cd74 101 main/binary-amd64/Release
- 9d63537e81f0c6ffe019970d5a6a3fb5 2348 main/binary-arm64/Packages
- 4e25387d98aef76bef3238dd76142c25 956 main/binary-arm64/Packages.gz
+ 516bc79f1e8037140d5d8d6f61654915 2348 main/binary-arm64/Packages
+ beaebcc54ec0c4c8acbebe777f25dc87 956 main/binary-arm64/Packages.gz
  76ad2ce856145d08147fa11829c6ae6e 101 main/binary-arm64/Release
  016e10c9e5aeabd458bfb20a15604e3d 1716 main/binary-i386/Packages
  3b25e37b244c7942b78503e352550b9e 701 main/binary-i386/Packages.gz
@@ -22,8 +22,8 @@ SHA1:
  5a24ddf288d178560167d55f98862aa161ea1bbb 2348 main/binary-amd64/Packages
  62348c5ca506ff363347ad0b659e3e7cdeb7007f 958 main/binary-amd64/Packages.gz
  e05c77b3ea583788a71a52d71a65802161d46c12 101 main/binary-amd64/Release
- cd1810777614f541f989fe8f4dbdbad804a3d57a 2348 main/binary-arm64/Packages
- bf97879b9b6f11a6c4cbcdd1560c6dc88a79a6c6 956 main/binary-arm64/Packages.gz
+ 80d9f80fcc958b30df70e5b521f5ee72ba97058e 2348 main/binary-arm64/Packages
+ c3b363f8b8e2c5ff7470cd0925729d0c5a0ea606 956 main/binary-arm64/Packages.gz
  20de16779999b0addc3f39ee81b98c726e9bf9a5 101 main/binary-arm64/Release
  21b67ea8b75d4ecdb75c2b4167ffe5d09f5494d1 1716 main/binary-i386/Packages
  f484648abb7ef5ddc5f38f92847354cb1c4dbe53 701 main/binary-i386/Packages.gz
@@ -32,23 +32,23 @@ SHA256:
  a132517717289d7b1870a2f0ac5bf988572ac3d62aa26d003f9636a418cc8ee7 2348 main/binary-amd64/Packages
  3a6fd6ef0f775b97390143f3bd142aa03a24ae97045d6fa083c7859da4f2e4a5 958 main/binary-amd64/Packages.gz
  9d6eaa668afd37bcd019d58588695c1632cbe0bb245b3b154bf0074d6c826caa 101 main/binary-amd64/Release
- 3a2450e06c943e19592320535291e7eaf6910bf86e798c97fec01ee7bb7e9f3c 2348 main/binary-arm64/Packages
- c113c4ca3ffe570bcf2b35ba433d43c1620897d63f8f16fbc89d6ea5ae560f53 956 main/binary-arm64/Packages.gz
+ 9eada386ac40971fdea63cadfd668adb3491f9a0136c65e3dfae2db927e3d386 2348 main/binary-arm64/Packages
+ 26c393a09e7ffe89a0abf1793655908710bc0209719c02c2c52ded5b2f9b34c3 956 main/binary-arm64/Packages.gz
  e3508e550f6df2b99c262e4be864941b83286c7d4c485dd9d4bbc536ae9401a0 101 main/binary-arm64/Release
  95232abf65a91be6e3414176b4425666e5f2bb86bc8f48ec8fe2c11f9f395317 1716 main/binary-i386/Packages
  31d5e551e9976a7adfea708209f21235e05f3b470f84c65b34bd3d377cd8ea03 701 main/binary-i386/Packages.gz
  70a8e63e4356c0399982ea66e04c498f1e5345e1b4939112b15095d952c3f1de 100 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeGJscACgkQfg7JF6UH
-S9P4CQv8DVNS7mEwdpPuHwxLUOozkLtVefhy/nvmz3jd/YBTMDClC3TfUJ95JY2f
-XcFcwxrP/BGT3qkn9CBOoyQJ6elSivdiyb5yv61MgmITiD/qBVnqICTA2EZVelgO
-q7UzTyU9ovuOrO0xMoyH6yS+pUuSGRPJSQxNb8sOpjdMq8vXbDxCqTY3x3j2wETA
-jhvTv/40fCFF/n7lIgXVn/9jvRd5oCWwdRTa6LSi9eVUFiKhUHVBcw76nBL9Ta6t
-NNXLU5FQkulvdGWRtiibLBYmcri81kKl2hMzH3ujpEVnB6vPNy7Lt4EF1YCAD1RY
-1B4omjBrZsecS5TWTLO7jjjka8sZwXTUNVOpSpz5IS/1QiZf4FSyirn6fSPRGpLA
-2XvY9JT/Tr1ntQVBYi8GtyI3IvzqdhJqudcZ2l+RdDvjeg1xal0MTSYbGSZlxOp3
-uq8BHOmXceisR1ERiF1nJOw9HZuTlmqZg2b+a5Q9dzCI2Kd+2Ni/VZ9yaA8pEqN6
-nPJrXBO+
-=Wdhg
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmeGJ+IACgkQfg7JF6UH
+S9P/VQv/VamIcEeORXlX7EgkGkiZpaH8PRRo/B/xdqMpFeKQTk08EVuHu+H0UocG
+pkNwWi+8OGA+zVxNRK5iubJpbXEd0rW4hmnHIgz+QNpOtn9o73rjlZv1/zXjH3I9
+LU8i6PlDEb8hAIgixvD6IjbuekfqZJiApJCfaGUjjlXUUY/UGGNB0SIsFHbXJYO+
+6Xx4EN0hIKCLWMeZffOoTm2rcHrqaBeL3tGHWDBx54DnwLX2tb59psceeC6eEH90
+yLKSJLhQ1EmfHAYt851tQX/5P5MomWSvTFlP4b8HXEFXDRvqHuxYPSwOU5zl7R8N
+TcUpDHq0hl+NK9c7PwZVSJT2U72wv5PvpEIizYUOoap/HfZrrl7MfWeD+6i4u8zU
+wUzsQ8JXClZdpqOwaRoHIjln9RBOY09Qj8y+lNkgO9Q074TlQyU1JOUgHhmIHsqa
+eXfX6FUsr5nWaNNu3nFf+dMomoK50r3ZmNqgpEwiZFx2s9uVEJ/jY+yy1ELZwxbF
+AMb6m8xV
+=Tddo
 -----END PGP SIGNATURE-----
