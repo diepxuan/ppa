@@ -1,17 +1,17 @@
 Package: ductn
-Version: 4.3.8+ubuntuplucky
+Version: 4.5.7+ubuntu~plucky
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 219
+Installed-Size: 220
 Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils
-Homepage: https://diepxuan.github.io/ppa/
+Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/ductn/ductn_4.3.8+ubuntuplucky_amd64.deb
-Size: 45996
-SHA256: e4d6e06128ec7dd9cc3372582dcf3732735ca5a8bdb13975d7ae3a5d5f7af16d
-SHA1: 2e9eff9d53e65863007a3b7df194bdca93e740ce
-MD5sum: 4e6c5232d0683031f06218ea60594acd
+Filename: pool/main/d/ductn/ductn_4.5.7+ubuntu~plucky_amd64.deb
+Size: 46984
+SHA256: 237be2898b7a09280599e1640d70f6409f9af2c5341118663ec81ccbf2311620
+SHA1: 6a7d78bacceaaf0ac43ee955a07e63685833ba6e
+MD5sum: e69f29d0b359f151eb6c516e79d8dfa7
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
