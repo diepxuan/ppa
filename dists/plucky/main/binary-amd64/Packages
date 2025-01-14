@@ -16,6 +16,59 @@ Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
+Package: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~plucky
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-pdo-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~plucky_all.deb
+Size: 3866
+SHA256: 3170c338fa6ecc0a18952215cb1beff4ddec18979360763d96caa7a1c6ceea9d
+SHA1: 5e09c1379b039857f5f05243087e1b934e27dbfc
+MD5sum: cbe73f602c2a4f2406a18cbbae888981
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-pdo-sqlsrv-all-dev
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~plucky
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-pdo-sqlsrv (>= 5.12.0+ubuntu~plucky~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+ubuntu~plucky_all.deb
+Size: 3894
+SHA256: 6fae0e165cef5e1331156d66f65c4a723331fec8d970f6771c2b810fb7f42589
+SHA1: bf7348cac8de003d6e9a97164d9a8a85692b4fb3
+MD5sum: 36ae5ad1c9d2eec377503d1149ad3ff6
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php-sqlsrv
 Version: 5.12.0+ubuntu~plucky
 Architecture: all
@@ -67,6 +120,34 @@ Description: sqlsrv module for PHP
  for web development and can be embedded into HTML.
  .
  This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~plucky
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 321
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~plucky~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~plucky~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.12.0+ubuntu~plucky_amd64.deb
+Size: 128526
+SHA256: 77a982c71f10d90e218ab85ff0bc18f8531767f6c8d3d21af4fb649f6da85bea
+SHA1: 397b4b2305961b808feb48d993f85080ea9775a9
+MD5sum: 98a38122257421404ed0761ee47910ad
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-sqlsrv
