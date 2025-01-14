@@ -34,14 +34,25 @@ env() {
     export $param="$value"
     echo $param: $value
 }
-
-SUDO=sudo
-command -v sudo &>/dev/null || SUDO=''
+# SUDO=sudo
+# command -v sudo &>/dev/null || SUDO=''
+run_as_sudo() {
+    _SUDO=sudo
+    command -v sudo &>/dev/null || _SUDO=''
+    echo "Running as sudo: $*"
+    if [[ $EUID -ne 0 ]]; then
+        $_SUDO $@
+    else
+        $@
+    fi
+}
+SUDO=${SUDO:-'run_as_sudo'}
 
 start_group "Dynamically set environment variable"
 # directory
 env source_dir $(dirname $(realpath "$BASH_SOURCE"))
 env debian_dir $(realpath $source_dir/debian)
+env build_dir $(realpath $source_dir/build)
 env pwd_dir $(realpath $(dirname $source_dir))
 env dists_dir $(realpath $pwd_dir/dists)
 env ppa_dir $(realpath $pwd_dir/ppa)
@@ -66,7 +77,7 @@ env rules $(realpath $debian_dir/rules)
 env timelog "$(Lang=C date -R)"
 
 # plugin
-env repository $repository
+env repository ${repository:-diepxuan/$MODULE}
 env owner $(echo $repository | cut -d '/' -f1)
 env project $(echo $repository | cut -d '/' -f2)
 env module $(echo $project | sed 's/^php-//g')
@@ -115,35 +126,57 @@ EOF
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
 
 $SUDO apt update
-$SUDO apt-get install -y dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl software-properties-common debhelper-compat
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
+$SUDO apt-get -y install lsb-release ca-certificates curl
 
-# shellcheck disable=SC2086
-cat $controlin | tee $control
-$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir"
+[[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] && {
+    [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] && {
+        curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+            $SUDO tee /etc/apt/trusted.gpg.d/microsoft.asc >/dev/null ||
+            echo "Failed to download Microsoft key to /etc/apt/trusted.gpg.d/microsoft.asc"
+    }
 
-[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
-    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
-    $SUDO tee /etc/apt/trusted.gpg.d/microsoft.asc
-[[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] &&
-    curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
-    $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+    [[ -f /etc/apt/trusted.gpg.d/microsoft.asc ]] && {
+        cat /etc/apt/trusted.gpg.d/microsoft.asc |
+            $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg ||
+            echo "Failed to dearmor key from /etc/apt/trusted.gpg.d/microsoft.asc"
+    } || {
+        curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+            $SUDO gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg ||
+            echo "Failed to download and dearmor Microsoft key to /usr/share/keyrings/microsoft-prod.gpg"
+    }
+}
 
 [[ ! -f /etc/apt/sources.list.d/prod.list ]] &&
     ! grep -q 'https://packages.microsoft.com' /etc/apt/sources.list /etc/apt/sources.list.d/* &&
-    curl -fsSL https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/prod.list |
+    echo https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list &&
+    curl -fsSL https://packages.microsoft.com/config/$DISTRIB/$RELEASE/prod.list |
     $SUDO tee /etc/apt/sources.list.d/prod.list >/dev/null
 
 # add repository for install missing depends
-$SUDO apt install software-properties-common
-$SUDO add-apt-repository ppa:ondrej/php -y
+if [[ $DISTRIB == "ubuntu" ]]; then
+    $SUDO apt install software-properties-common
+    $SUDO add-apt-repository ppa:ondrej/php -y
+elif [[ $DISTRIB == "debian" ]]; then
+    ${SUDO} curl -sSLo /tmp/debsuryorg-archive-keyring.deb https://packages.sury.org/debsuryorg-archive-keyring.deb
+    ${SUDO} dpkg -i /tmp/debsuryorg-archive-keyring.deb
+    echo "deb [signed-by=/usr/share/keyrings/deb.sury.org-php.gpg] https://packages.sury.org/php/ $CODENAME main" |
+        $SUDO tee /etc/apt/sources.list.d/php.list >/dev/null
+fi
 
-# $SUDO apt update
+$SUDO apt update || true
 # In theory, explicitly installing dpkg-dev would not be necessary. `apt-get
 # build-dep` will *always* install build-essential which depends on dpkg-dev.
 # But let’s be explicit here.
 # shellcheck disable=SC2086
-$SUDO apt install $INPUT_APT_OPTS -- dpkg-dev unixodbc-dev libdpkg-perl dput devscripts $INPUT_EXTRA_BUILD_DEPS
+$SUDO apt install -y debhelper-compat dpkg-dev libdpkg-perl dput tree devscripts libdistro-info-perl
+$SUDO apt install -y unixodbc-dev php-pear
+$SUDO apt install -y dh-php php-all-dev
+$SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
+
+# shellcheck disable=SC2086
+cat $controlin | tee $control
+$SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
 end_group
 
 start_group "GPG/SSH Configuration"
@@ -175,13 +208,15 @@ end_group
 
 _project=$(echo $project | sed 's|_|-|g')
 
-start_group "update control"
+start_group update control file
+[[ -f $(realpath $debian_dir/$module.control.in) ]] &&
+    cat $(realpath $debian_dir/$module.control.in) | tee $controlin
 sed -i -e "s|_PROJECT_|$_project|g" $controlin
 sed -i -e "s|_MODULE_|$module|g" $controlin
 cat $controlin | tee $control
 end_group
 
-start_group "create php config files"
+start_group create build files
 cat | tee "$debian_dir/$module.ini" <<-EOF
 ; configuration for pecl $module module
 ; priority=20
@@ -192,10 +227,13 @@ mod debian/$module.ini
 EOF
 [[ -f "$debian_dir/php-$module.rules" ]] && cat "$debian_dir/php-$module.rules" >>"$rules"
 [[ -f "$debian_dir/extend.$module.ini" ]] && cat "$debian_dir/extend.$module.ini" >>"$debian_dir/$module.ini"
+[[ -f "$build_dir/$module.config.m4" ]] &&
+    cat "$build_dir/$module.config.m4" |
+    tee -a "$source_dir/${package_dist%.tgz}/config.m4"
 end_group
 
 start_group Update Package Configuration in Changelog
-release_tag=$(echo $package_dist | sed 's|.tgz||g' | cut -d '-' -f2)
+release_tag=$(echo ${package_dist%.tgz} | cut -d '-' -f2)
 # release_tag="$release_tag+$DISTRIB~$RELEASE"
 # old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
 # old_release_tag=$(cat $changelog | head -n 1 | awk '{print $2}' | sed 's|[()]||g')
@@ -235,13 +273,11 @@ gpg --list-secret-keys --keyid-format=long
 end_group
 
 start_group Building package binary
+dpkg-parsechangelog
 # shellcheck disable=SC2086
-dpkg-buildpackage --force-sign
-end_group
-
-start_group Building package source
+dpkg-buildpackage --force-sign || dpkg-buildpackage --force-sign -d
 # shellcheck disable=SC2086
-dpkg-buildpackage --force-sign -S
+dpkg-buildpackage --force-sign -S || dpkg-buildpackage --force-sign -S -d
 end_group
 
 start_group Move build artifacts
@@ -276,6 +312,6 @@ EOF
 #     [[ -f $package ]] &&
 #     dput caothu91ppa $package || true
 while read -r package; do
-    dput caothu91ppa $pwd_dir/$package || true
+    dput caothu91ppa $dists_dir/$package || true
 done < <(ls $dists_dir | grep -E '.*(_source.changes)$')
 end_group

@@ -16,6 +16,7 @@ Homepage: https://pecl.php.net/package/_MODULE_
 Package: _PROJECT_
 Architecture: all
 Pre-Depends: php-common (>= 2:69~)
+X-PHP-Versions: 7.2 7.3 7.4 8.0 8.1 8.2 8.3
 Depends: ${misc:Depends},
          ${pecl:Depends},
          ${php:Depends},
