@@ -1,18 +1,57 @@
 Package: ductn
-Version: 4.5.8+debian~12
+Source: diepxuan
+Version: 4.5.9+debian~12
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 220
+Installed-Size: 218
 Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/ductn/ductn_4.5.8+debian~12_amd64.deb
-Size: 46188
-SHA256: a52ca0a1625f1cb60ba07faec99252c5bc014acb4114defd5dbc7b0135b7477a
-SHA1: b78af2c821332cb1451bf75804a3673c29bfb506
-MD5sum: c4ebeecbfee937f229f23207f5c80ee6
+Filename: pool/main/d/diepxuan/ductn_4.5.9+debian~12_amd64.deb
+Size: 46116
+SHA256: ba5b867f3832d45c6f6d0411faa93dacfbaffba2989b1a5218275cb291767c7c
+SHA1: 60bb5dd659d8774bd25516a7960d0653663a4d8c
+MD5sum: 906b9988b5e685ab5620a067ebf15a07
 Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: lar
+Source: diepxuan
+Version: 4.5.9+debian~12
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/lar_4.5.9+debian~12_amd64.deb
+Size: 2664
+SHA256: f5e0bad8f8b080a7b18f37eed8d92070da4c98d6e64f0ac8015161ed0b1700b9
+SHA1: 8429a52a701b30fc108673448d2bd59ea68bfbc0
+MD5sum: 97ae6c0fa7b7fe23f0e2638885f668a7
+Description: Laravel support package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: m2
+Source: diepxuan
+Version: 4.5.9+debian~12
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/m2_4.5.9+debian~12_amd64.deb
+Size: 2668
+SHA256: dd649443b30b8a5399adcb61f23b0d6ae06f8d05f9b16aa938e8843d329de482
+SHA1: d956e511cc9129f20b8d5c12969783e23f0e1e1e
+MD5sum: 08a64d84559f482ed2398654b8aa65e3
+Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
