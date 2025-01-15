@@ -37,12 +37,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: Generate matrix data
         id: packages
-        working-directory: src/diepxuan
         shell: bash
         run: |
           # pkgs=$(ls -l src/diepxuan/ | grep '^d' | awk '{print $NF}' | while read dir; do echo $dir; done)
           pkgs=$(
-            ls -l ./ |
+            ls -l src/diepxuan/ |
               grep '^d' |
               awk '{print $NF}' |
               while read dir; do
