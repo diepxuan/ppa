@@ -1,6 +1,6 @@
 Package: ductn
 Source: diepxuan
-Version: 4.6.0+debian~10
+Version: 4.6.1+debian~10
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 223
@@ -8,18 +8,18 @@ Depends: net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-htt
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn_4.6.0+debian~10_amd64.deb
-Size: 46532
-SHA256: 0316cc7245d6f53399425ec282f9a5c15d6304ca337b3232cf3cf515de039a04
-SHA1: 80deb2e7bde84ab1b8b034c6b1d95985505d76a6
-MD5sum: aebcc578ed35ba3f46c92debec3c491c
+Filename: pool/main/d/diepxuan/ductn_4.6.1+debian~10_amd64.deb
+Size: 46556
+SHA256: 4e0a9f076b5b07293f0fde186817b1425ea8d6b4e0af55b4b29815fe5e250a49
+SHA1: bb6314e3568885aa4d04f15c4e5867d1e1e83f37
+MD5sum: 04cda2a44c758d68d11e477e8b76a495
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: lar
 Source: diepxuan
-Version: 4.6.0+debian~10
+Version: 4.6.1+debian~10
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
@@ -27,18 +27,18 @@ Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_4.6.0+debian~10_amd64.deb
-Size: 2728
-SHA256: 092016edd5703ec353b4fc4caf721f34371d58b0760ea9ffe68b83f272dcad5c
-SHA1: 4f8068efb709e46c73d36f7df062ed05259f930c
-MD5sum: 5c2f1f786a499b72614c70a76c70dbdf
+Filename: pool/main/d/diepxuan/lar_4.6.1+debian~10_amd64.deb
+Size: 2772
+SHA256: ccd23dca9a002dd5cbe2b7145999737c60287360767256cf7ca2b35f6e067191
+SHA1: 675f5ffbfbb29956387ca6b398e30cb6cbf4608d
+MD5sum: eb68f8a6b558f66502293ce5dbe5691c
 Description: Laravel support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: m2
 Source: diepxuan
-Version: 4.6.0+debian~10
+Version: 4.6.1+debian~10
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
@@ -46,11 +46,11 @@ Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_4.6.0+debian~10_amd64.deb
-Size: 2728
-SHA256: a14ef44a95948a40f392ab25a094a3d5bc14e893dfdd21c2fda573f030784360
-SHA1: 9d9faaf11e79b842bf0d249d9a871a2906ce202c
-MD5sum: 5e64d6fc75db1a8eddc52469a366c6fb
+Filename: pool/main/d/diepxuan/m2_4.6.1+debian~10_amd64.deb
+Size: 2772
+SHA256: 15e0e712e57135d28ba8442998d8b85d7696343f2eb6282e755ab4263b1856cb
+SHA1: f66d1c7004f4604be1b3a3623f5b29e2c63344c5
+MD5sum: a0d4dcff101227db4a55998f95c62fd3
 Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
