@@ -50,7 +50,7 @@ jobs:
       # max-parallel: 1
       fail-fast: false
       matrix:
-        os: [debian-10, debian-11, debian-12, ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04, ubuntu-25.04]  # Các phiên bản OS để build
+        os: [debian-10, debian-11, debian-12, ubuntu-18.04, ubuntu-20.04, ubuntu-22.04, ubuntu-23.10, ubuntu-24.04, ubuntu-25.04]  # Các phiên bản OS để build
         architecture: [amd64]
         # architecture: [amd64, arm64]
         include:
@@ -63,6 +63,9 @@ jobs:
           - os: ubuntu-22.04
             base_image: ubuntu:22.04
             codename: jammy
+          - os: ubuntu-23.10
+            base_image: ubuntu:23.10
+            codename: mantic
           - os: ubuntu-24.04
             base_image: ubuntu:24.04
             codename: noble
