@@ -8,12 +8,12 @@ User=ductn
 
 # Kill root process
 KillMode=process
+KillSignal=SIGTERM
 
 # Wait up to 30 minutes for service to start/stop
 TimeoutSec=1min
 
 # Remove process, file, thread limits
-#
 LimitNPROC=infinity
 LimitNOFILE=infinity
 TasksMax=infinity
@@ -25,7 +25,7 @@ Restart=on-failure
 StartLimitInterval=60
 StartLimitBurst=10
 
-RestartSec=5s
+RestartSec=10s
 # Type=notify
 # SyslogIdentifier=Diskutilization
 

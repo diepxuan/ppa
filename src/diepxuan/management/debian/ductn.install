@@ -1,7 +1,5 @@
-# usr/local/bin/ductn usr/local/bin
-# usr/local/bin/lar usr/local/bin
-# usr/local/bin/m2 usr/local/bin
 ductn usr/bin
 var/lib/* var/lib/ductn
 etc/sysctl.d/99-ductn.conf etc/sysctl.d/99-ductn.conf
 ductn-prompt etc/bash_completion.d
+ductnd.service usr/lib/systemd/system
