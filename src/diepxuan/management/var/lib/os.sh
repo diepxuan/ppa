@@ -3,7 +3,7 @@
 
 d_os:CODENAME() {
     [[ "$1" == "--help" ]] &&
-        echo "Get os codename" &&
+        echo "Get OS codename" &&
         return
     [[ "$OSTYPE" == "darwin"* ]] &&
         CODENAME=$(sw_vers -productVersion | awk -F '.' '{print $1"."$2}')
@@ -13,7 +13,45 @@ d_os:CODENAME() {
     CODENAME=${CODENAME:-$VERSION_CODENAME}
     CODENAME=${CODENAME:-$UBUNTU_CODENAME}
     CODENAME=${CODENAME:-"unknown"}
+
     echo "$CODENAME"
+}
+
+d_os:RELEASE() {
+    [[ "$1" == "--help" ]] &&
+        echo "Get OS RELEASE" &&
+        return
+    [[ "$OSTYPE" == "darwin"* ]] &&
+        RELEASE=$(sw_vers -buildVersion)
+    RELEASE=${RELEASE:-$(echo $DISTRIB_DESCRIPTION | awk '{print $2}')}
+    RELEASE=${RELEASE:-$(echo $VERSION | awk '{print $1}')}
+    RELEASE=${RELEASE:-$(echo $PRETTY_NAME | awk '{print $2}')}
+    RELEASE=${RELEASE:-${DISTRIB_RELEASE}}
+    RELEASE=${RELEASE:-${VERSION_ID}}
+    # RELEASE=$(echo "$RELEASE" | awk -F. '{print $1"."$2}')
+    RELEASE=$(echo "$RELEASE" | cut -d. -f1-2)
+    RELEASE=$(echo "$RELEASE" | tr '[:upper:]' '[:lower:]')
+    RELEASE=${RELEASE//[[:space:]]/}
+    RELEASE=${RELEASE%.}
+
+    echo "$RELEASE"
+}
+
+d_os:DISTRIB() {
+    [[ "$1" == "--help" ]] &&
+        echo "Get OS DISTRIB" &&
+        return
+    [[ "$OSTYPE" == "darwin"* ]] &&
+        DISTRIB=$(sw_vers -ProductName)
+    DISTRIB=${DISTRIB:-$DISTRIB_ID}
+    DISTRIB=${DISTRIB:-$ID}
+    DISTRIB=$(echo "$DISTRIB" | tr '[:upper:]' '[:lower:]')
+
+    echo "$DISTRIB"
+}
+
+d_os:TYPE() {
+    uname -s
 }
 
 d_os:list() {

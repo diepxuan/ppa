@@ -47,7 +47,12 @@ d_ip:local() {
 }
 
 --localAll() {
-    ip a | grep 'state UP' -A2 | grep inet | awk '{print $2}' | cut -f1 -d'/'
+    os=$(d_os:TYPE)
+    if [[ "$os" == "Darwin" ]]; then # macOS
+        ifconfig | grep "inet " | awk '{print $2}' | grep -v 127.0.0.1
+    elif [[ "$os" == "Linux" ]]; then # Linux
+        ip a | grep 'state UP' -A2 | grep inet | awk '{print $2}' | cut -f1 -d'/'
+    fi
 }
 
 --ip:gateway() {

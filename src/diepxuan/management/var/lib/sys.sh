@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 #!/bin/bash
 
-SUDO="sudo"
-if [ "$(id -u)" -eq 0 ]; then
-    SUDO=""
-fi
+run_as_sudo() {
+    _SUDO=sudo
+    command -v sudo &>/dev/null || _SUDO=''
+    if [[ $USER_ID -ne 0 ]]; then
+        $_SUDO $@
+    else
+        $@
+    fi
+}
 
 --sys:init() {
     $SUDO timedatectl set-timezone Asia/Ho_Chi_Minh

@@ -101,3 +101,11 @@ EOF
     [[ -n $1 ]] && user=$1
     [[ -n $(groups $user | grep -e 'sudo\|root') ]]
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

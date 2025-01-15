@@ -1,6 +1,20 @@
 #!/usr/bin/env bash
 #!/bin/bash
 
+d_vm:info() {
+    [[ "$1" == "--help" ]] &&
+        echo "Display VM Information" &&
+        return
+    cat <<EOF
+VM Information:
+    Hostname:   $(d_host:fullname)
+    IP Address: $(d_ip:local)
+    DISTRIB:    $(d_os:DISTRIB)
+    OS:         $(d_os:CODENAME)
+    RELEASE:    $(d_os:RELEASE)
+EOF
+}
+
 --pve:vm() {
     --sys:apt:install qemu-guest-agent
 }
@@ -51,3 +65,11 @@ _vm:command() {
         $vm_cmd
     done < <(echo $@ | jq -r '.vm.commands[]')
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi
