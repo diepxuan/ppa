@@ -83,6 +83,7 @@ _vm:sync:ip_address() {
             # echo $response_body
         fi
     done
+
 }
 
 _vm:command() {
