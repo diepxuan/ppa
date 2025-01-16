@@ -58,14 +58,25 @@ net.ipv4.ip_forward=1"
     sed -i "/bash\/.bash_aliases/d" ~/.bash_aliases
 }
 
---selfupdate() {
+d_selfupdate() {
+    [[ "$1" == "--help" ]] &&
+        echo "Update script latest version" &&
+        return
     --sys:upgrade
-    ductn sys:init
+    # ductn sys:init
+}
+
+d_self-update() {
+    [[ "$1" == "--help" ]] &&
+        echo "Update script latest version" &&
+        return
+    --sys:upgrade
+    # ductn sys:init
 }
 
 --sys:upgrade() {
-    sudo apt update
-    sudo apt install --only-upgrade ductn -y --purge --auto-remove
+    $SUDO apt update
+    $SUDO apt install --only-upgrade ductn -y --purge --auto-remove
     # ductn sys:init
     # ductn sys:clean
     # ductn sys:service:re-install
