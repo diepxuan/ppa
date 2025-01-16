@@ -39,7 +39,7 @@ jobs:
         id: packages
         shell: bash
         run: |
-          git fetch --no-tags --prune --no-recurse-submodules --depth=10 origin
+          git fetch --no-tags --prune --no-recurse-submodules --depth=10
           # pkgs=$(ls -l src/diepxuan/ | grep '^d' | awk '{print $NF}' | while read dir; do echo $dir; done)
           pkgs=$(
             ls -l src/diepxuan/ |
