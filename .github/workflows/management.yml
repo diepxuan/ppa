@@ -35,4 +35,4 @@ jobs:
       contents: write
     uses: diepxuan/ppa/.github/workflows/build.yml@main
     with:
-      module: management
+      module: "management"
