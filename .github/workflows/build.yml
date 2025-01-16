@@ -39,6 +39,15 @@ on:
         description: "Release notes"
         default: ${{ github.event.release.body }}
         type: string
+    secrets:
+      GPG_KEY:
+        required: true
+      GPG_KEY_ID:
+        required: true
+      GIT_COMMITTER_EMAIL:
+        required: true
+      SSH_ID_RSA:
+        required: true
 
 # concurrency:
 #   group: ${{ github.head_ref || github.ref_name }}
