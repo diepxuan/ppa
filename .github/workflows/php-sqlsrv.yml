@@ -1,5 +1,5 @@
 # Runs tests and verifies that the package can be built.
-name: management Build
+name: php-sqlsrv Build
 
 # Controls when the action will run.
 on:
@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/diepxuan/management"
+      - "src/diepxuan/php-sqlsrv"
   #   paths-ignore:
   #     - "**.md"
   #     - "**.yml"
@@ -15,7 +15,7 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - "src/diepxuan/management"
+      - "src/diepxuan/php-sqlsrv"
   #   paths-ignore:
   #     - "**.md"
   #     - "**.yml"
@@ -35,7 +35,7 @@ jobs:
       contents: write
     uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
     with:
-      module: "management"
+      module: "php-sqlsrv"
     secrets:
       GPG_KEY: ${{ secrets.GPG_KEY }}
       GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
