@@ -61,21 +61,7 @@ jobs:
         id: packages
         shell: bash
         run: |
-<<<<<<< HEAD
           pkgs=$(ls -l src/diepxuan/ | grep '^d' | awk '{print $NF}' | while read dir; do echo $dir; done)
-=======
-          git fetch --no-tags --prune --no-recurse-submodules --depth=10
-          # pkgs=$(ls -l src/diepxuan/ | grep '^d' | awk '{print $NF}' | while read dir; do echo $dir; done)
-          pkgs=$(
-            ls -l src/diepxuan/ |
-              grep '^d' |
-              awk '{print $NF}' |
-              while read dir; do
-                git diff --name-only HEAD~1 HEAD | grep -q "^$dir" &&
-                  echo $dir
-              done
-          )
->>>>>>> 99c4f90ae2f12676102fe8e828b8be1d3a3f02c0
           json=$(printf '%s\n' "${pkgs}" | jq -R . | jq -s -c .)
           echo "packages=$json" >> "$GITHUB_OUTPUT"
       # - name: Generate matrix data
