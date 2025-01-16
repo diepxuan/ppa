@@ -21,43 +21,68 @@ EOF
 
 # CSRF_TOKEN=
 
-_vm:send() {
-    local pri_host=$(--ip:localAll)
-    local pub_host=$(--ip:wan)
-    local version=$(--version)
-    local wgkey=$(--vpn:wireguard:keygen)
-    local gateway=$(--ip:gateway && --ip:subnet)
-
-    local vm_info=$(
-        cat <<EOF
-{
-    "pri_host":"$pri_host",
-    "pub_host":"$pub_host",
-    "gateway":"$gateway",
-    "version":"$version",
-    "wg_key":"$wgkey"
-}
-EOF
-    )
-
-    _vm:send_ $vm_info
-    # --logger $vm_info
+d_vm:sync() {
+    [[ "$1" == "--help" ]] &&
+        echo "Sync VM Information" &&
+        return
+    _vm:sync:ip_address
 }
 
-_vm:send_() {
-    local vm_info='{}'
-    [[ -n $* ]] && vm_info=$*
-    local vm_id=$(--host:fullname)
+_vm:sync:ip_address() {
+    _tolen=3ccbb8eb47507c42a3dfd2a70fe8e617509f8a9e4af713164e0088c715d24c83
+    _api=https://dns.diepxuan.io.vn/api
+    _domain=diepxuan.corp
+    _hostName=$(d_host:name)
+    _fullName=$(d_host:fullname)
+    _url_get="$_api/zones/records/get?token=$_tolen&domain=$_fullName&zone=$_domain&listZone=true"
+    _url_add="$_api/zones/records/add?token=$_tolen&domain=$_fullName&zone=$_domain&type=A&ipAddress="
+    _url_del="$_api/zones/records/delete?token=$_tolen&domain=$_fullName&zone=$_domain&type=A&ipAddress="
 
-    local CSRF_TOKEN=$(curl -o - $BASE_URL/vm 2>/dev/null)
+    response=$(curl -s -w "%{http_code}" -o >(cat) $_url_get)
+    http_status=${response: -3}
+    response_body="${response:0:${#response}-3}"
+    status=$(echo $response_body | jq -r '.status')
+    body=$(echo $response_body | jq -r '.response')
 
-    local vm_commands=$(
-        curl -s -X PATCH $BASE_URL/vm/$vm_id \
-            -H "Content-Type: application/json" \
-            -H "X-CSRF-TOKEN: $CSRF_TOKEN" \
-            --data "$vm_info"
-    )
-    _vm:command "$vm_commands"
+    # echo "HTTP Status Code: $http_status"
+    # echo "Status: $status"
+    # echo "Response Body: $body"
+    [[ "$http_status" == "200" ]] && {
+        [[ "$status" == "ok" ]] &&
+            old_ips=$(echo $body | jq -r '.records[] | select(.type == "A") | .rData.ipAddress')
+    }
+
+    old_ips=${old_ips[*]:-}
+    new_ips=${new_ips:-$(d_ip:local)}
+
+    # echo "Old ips: $old_ips"
+    # echo "New ips: $new_ips"
+
+    # Loại bỏ các IP trong old_ips không có trong new_ips
+    for old_ip in $old_ips; do
+        if [[ ! $new_ips =~ $old_ip ]]; then
+            # echo "Removing IP: $old_ip"
+            response=$(curl -s -w "%{http_code}" -o >(cat) ${_url_del}${old_ip})
+            http_status=${response: -3}
+            response_body="${response:0:${#response}-3}"
+            status=$(echo $response_body | jq -r '.status')
+            body=$(echo $response_body | jq -r '.response')
+            # echo $response_body
+        fi
+    done
+
+    # Thêm các IP trong new_ips không có trong old_ips
+    for new_ip in $new_ips; do
+        if [[ ! $old_ips =~ $new_ip ]]; then
+            # echo "Adding IP: $new_ip"
+            response=$(curl -s -w "%{http_code}" -o >(cat) ${_url_add}${new_ip})
+            http_status=${response: -3}
+            response_body="${response:0:${#response}-3}"
+            status=$(echo $response_body | jq -r '.status')
+            body=$(echo $response_body | jq -r '.response')
+            # echo $response_body
+        fi
+    done
 }
 
 _vm:command() {

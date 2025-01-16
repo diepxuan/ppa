@@ -42,14 +42,29 @@ d_ip:local() {
     [[ "$1" == "--help" ]] &&
         echo "Get local ip addresses" &&
         return
-    ips=$(--localAll)
-    echo ${ips[0]}
+    ips=$(d_ip:valid $(--ipAll))
+    echo ${ips[*]}
 }
 
---localAll() {
+d_ip:valid() {
+    [[ "$1" == "--help" ]] &&
+        echo "Validate ip addresses" &&
+        return
+    _IP="$@"
+    # Lọc các IP thuộc subnet 10.10.0.0/21
+    valid_ips=$(
+        echo "$_IP" |
+            tr ' ' '\n' |
+            awk -F. '$1 == 10 && $2 == 10 && $3 >= 0 && $3 <= 7 { print $0 }'
+    )
+    echo $valid_ips
+}
+
+--ipAll() {
     os=$(d_os:TYPE)
     if [[ "$os" == "Darwin" ]]; then # macOS
-        ifconfig | grep "inet " | awk '{print $2}' | grep -v 127.0.0.1
+        ifconfig | grep "inet " | awk '{print $2}'
+        # | grep -v 127.0.0.1
     elif [[ "$os" == "Linux" ]]; then # Linux
         ip a | grep 'state UP' -A2 | grep inet | awk '{print $2}' | cut -f1 -d'/'
     fi

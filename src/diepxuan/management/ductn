@@ -24,3 +24,4 @@ d_commands() {
 [[ (! -x "$_GLOBAL_EXEC$1") && (! $(type -t "$_GLOBAL_EXEC$1") == function) ]] && echo "'$1' is not a ductn command." && exit 1
 
 "$_GLOBAL_EXEC$@"
+exit 0

@@ -13,6 +13,13 @@
             # --cron:cronjob:hour
         fi
 
+        # execute every 10mins
+        if [[ $second == 0 ]] && [[ $(($minute % 10)) == 0 ]]; then
+            :
+            # --cron:cronjob:hour
+            # d_vm:sync
+        fi
+
         # execute every 5mins at 0 second
         if [[ $second == 0 ]] && [[ $(($minute % 5)) == 0 ]]; then
             :
@@ -23,12 +30,21 @@
         if [[ $second == 1 ]]; then
             :
             # --cron:cronjob:min
+            # d_vm:sync
+        fi
+
+        # execute every 10 seconds
+        if [[ $(($second % 10)) == 0 ]]; then
+            :
+            # _cron:cronjob:5seconds
+            d_vm:sync
         fi
 
         # execute every 5 seconds
         if [[ $(expr $(date +%S) % 5) == 0 ]]; then
             :
             # _cron:cronjob:5seconds
+            d_vm:sync
         fi
     done
 
