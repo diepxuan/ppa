@@ -47,7 +47,8 @@ if ! command -v gpg &>/dev/null; then
     fi
 fi
 
-curl -fsSL "$KEY_URL" | $SUDO gpg --dearmor -o /usr/share/keyrings/diepxuan.gpg
+[[ ! -f /usr/share/keyrings/diepxuan.gpg ]] &&
+    curl -fsSL "$KEY_URL" | $SUDO gpg --dearmor -o /usr/share/keyrings/diepxuan.gpg
 
 # Thêm repository vào sources.list.d
 # echo "deb [signed-by=/usr/share/keyrings/ppa.gpg] $REPO_URL $UBUNTU_VERSION main" | $SUDO tee /etc/apt/sources.list.d/ppa.list
