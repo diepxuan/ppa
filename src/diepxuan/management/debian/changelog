@@ -1,3 +1,10 @@
+diepxuan (4.6.6+ubuntu~24.04) noble; urgency=medium
+
+  * Comment out User directive in ductnd.service for improved
+    flexibility
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Fri, 17 Jan 2025 22:31:43 +0700
+
 diepxuan (4.6.5+ubuntu~24.04) noble; urgency=medium
 
   * Refactor update functions in sys.sh for clarity and consistency
