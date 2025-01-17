@@ -1,3 +1,10 @@
+diepxuan (4.6.7+ubuntu~24.04) noble; urgency=medium
+
+  * Enhance IP synchronization in vm.sh by adding HTTP status checks for
+    curl responses
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Fri, 17 Jan 2025 22:51:01 +0700
+
 diepxuan (4.6.6+ubuntu~24.04) noble; urgency=medium
 
   * Comment out User directive in ductnd.service for improved

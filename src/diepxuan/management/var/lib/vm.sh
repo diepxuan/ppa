@@ -64,10 +64,12 @@ _vm:sync:ip_address() {
             # echo "Removing IP: $old_ip"
             response=$(curl -s -w "%{http_code}" -o >(cat) ${_url_del}${old_ip})
             http_status=${response: -3}
-            response_body="${response:0:${#response}-3}"
-            status=$(echo $response_body | jq -r '.status')
-            body=$(echo $response_body | jq -r '.response')
+            if [[ $http_status == 200 ]]; then
+                response_body="${response:0:${#response}-3}"
+                status=$(echo $response_body | jq -r '.status' 2>/dev/null)
+                body=$(echo $response_body | jq -r '.response' 2>/dev/null)
             # echo $response_body
+            fi
         fi
     done
 
@@ -77,10 +79,12 @@ _vm:sync:ip_address() {
             # echo "Adding IP: $new_ip"
             response=$(curl -s -w "%{http_code}" -o >(cat) ${_url_add}${new_ip})
             http_status=${response: -3}
-            response_body="${response:0:${#response}-3}"
-            status=$(echo $response_body | jq -r '.status')
-            body=$(echo $response_body | jq -r '.response')
-            # echo $response_body
+            if [[ $http_status == 200 ]]; then
+                response_body="${response:0:${#response}-3}"
+                status=$(echo $response_body | jq -r '.status' 2>/dev/null)
+                body=$(echo $response_body | jq -r '.response' 2>/dev/null)
+                # echo $response_body
+            fi
         fi
     done
 
