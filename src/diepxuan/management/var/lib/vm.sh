@@ -25,7 +25,9 @@ d_vm:sync() {
     [[ "$1" == "--help" ]] &&
         echo "Sync VM Information" &&
         return
+    d_vm_sync_doing=true
     _vm:sync:ip_address
+    d_vm_sync_doing=false
 }
 
 _vm:sync:ip_address() {

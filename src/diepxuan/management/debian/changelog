@@ -1,3 +1,10 @@
+diepxuan (4.6.8+ubuntu~24.04) noble; urgency=medium
+
+  * Implement periodic VM synchronization in service.sh and update sync
+    status handling in vm.sh
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Fri, 14 Feb 2025 23:52:58 +0700
+
 diepxuan (4.6.7+ubuntu~24.04) noble; urgency=medium
 
   * Enhance IP synchronization in vm.sh by adding HTTP status checks for

@@ -2,6 +2,19 @@
 #!/bin/bash
 
 --sys:service:main() {
+    d_vm_sync_doing=false
+    while true; do
+        # Thực hiện công việc định kỳ mỗi 10 giây
+        if (($(date +%S) % 10 == 0)) && ! $d_vm_sync_doing; then
+            d_vm_sync_doing=true
+            d_vm:sync &
+        fi
+
+        sleep 1
+    done
+
+    return 0
+
     while true; do
         sleep 1
         local second=$(date +%S)
@@ -32,6 +45,13 @@
             # --cron:cronjob:min
             # d_vm:sync
         fi
+
+        # Thực hiện công việc định kỳ mỗi 10 giây
+        # ((second % 10 == 0)) && d_vm:sync
+        (($(date +%S) % 10 == 0)) && d_vm:sync
+
+        # Thực hiện công việc định kỳ mỗi 5 giây
+        # (($(date +%S) % 5 == 0)) && d_vm:sync
 
         # execute every 10 seconds
         if [[ $(($second % 10)) == 0 ]]; then
