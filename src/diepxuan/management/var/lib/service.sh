@@ -5,7 +5,7 @@
     d_vm_sync_doing=false
     while true; do
         # Thực hiện công việc định kỳ mỗi 10 giây
-        if (($(date +%S) % 10 == 0)) && ! $d_vm_sync_doing; then
+        if (($((10#$(date +%S))) % 10 == 0)) && ! $d_vm_sync_doing; then
             d_vm_sync_doing=true
             d_vm:sync &
         fi
