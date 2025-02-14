@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#!/bin/bash
+
+[ ! -x "$(command -v ductn)" ] && echo "Missing ductn package" && exit 1
+
+ductn alias:ll "$@"
