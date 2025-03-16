@@ -1,0 +1,48 @@
+# Runs tests and verifies that the package can be built.
+name: GPG setup
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# concurrency:
+#   group: ${{ github.head_ref || github.ref_name }}
+#   cancel-in-progress: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  gpg-setup:
+    runs-on: ${{matrix.operating-system}}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system: [ubuntu-latest]
+        # operating-system: [ubuntu-22.04]
+        # operating-system: [ubuntu-22.04, ubuntu-20.04, ubuntu-latest, ubuntu-18.04]
+        # operating-system: [self-hosted]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # Create GPG key if not exists
+      #     gpg --full-generate-key
+      # List to select GPG key
+      #     gpg --list-secret-keys --keyid-format=long
+      #     Example: rsa3072/7E0EC917A5074BD3 2023-03-13 [SC] [expires: 2025-03-12]
+      # Generate key as base64
+      #     gpg --export-secret-keys 3AA5C34371567BD2 | base64
+      - name: Setup GPG
+        uses: diepxuan/.github/.github/actions/gpg-setup@main
+        with:
+          gpg_key: ${{ secrets.GPG_KEY }}
+          gpg_key_id: ${{ secrets.GPG_KEY_ID }}
+          committer_email: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          committer_name: ${{ github.repository_owner }}
