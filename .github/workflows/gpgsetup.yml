@@ -55,6 +55,7 @@ jobs:
           save
           EOF
           gpg --list-secret-keys --keyid-format=long
+          gpg --export "$GPG_KEY_ID" > key.gpg
         env:
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
