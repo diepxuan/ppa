@@ -59,3 +59,13 @@ jobs:
         env:
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      - name: Push changes to GitHub
+        run: |
+          git add key.gpg
+          git commit -m "${GIT_COMMITTER_MESSAGE:-'Auto-commit extend GPG expire'}" || true
+          if ! git push; then
+            git stash
+            git pull --rebase
+            git stash pop
+            git push || true
+          fi
