@@ -53,11 +53,10 @@ jobs:
           key 1
           expire
           0
-          save
-          EOF
-          gpg --batch --command-fd 0 --edit-key "$GPG_KEY_ID" <<EOF
           expire
           0
+          trust
+          5
           save
           EOF
           gpg --list-secret-keys --keyid-format=long
