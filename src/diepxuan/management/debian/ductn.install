@@ -1,5 +1,6 @@
 ductn usr/bin
 var/lib/* var/lib/ductn
+var/lib/lxc/hooks/default-hook.sh var/lib/lxc/hooks/default-hook.sh
 etc/sysctl.d/99-ductn.conf etc/sysctl.d/99-ductn.conf
 etc/cron.daily/ductn etc/cron.daily/ductn
 ductn-prompt etc/bash_completion.d

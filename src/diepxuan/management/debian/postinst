@@ -24,6 +24,20 @@ configure)
     systemctl daemon-reload
     systemctl enable ductnd.service >/dev/null 2>&1 || true
     systemctl restart ductnd.service >/dev/null 2>&1 || true
+
+    CONFIG_FILE="/etc/lxc/default.conf"
+    HOOK_LINE="lxc.hook.create = /var/lib/lxc/hooks/default-hook.sh"
+
+    # Kiểm tra file có tồn tại không
+    if [[ -f "$CONFIG_FILE" ]]; then
+        # Kiểm tra xem dòng hook đã có trong file chưa
+        if grep -Fxq "$HOOK_LINE" "$CONFIG_FILE"; then
+            echo "✔ Hook đã tồn tại trong $CONFIG_FILE"
+        else
+            echo "$HOOK_LINE" | sudo tee -a "$CONFIG_FILE" >/dev/null
+            echo "✔ Đã thêm hook vào $CONFIG_FILE"
+        fi
+    fi
     ;;
 
 abort-upgrade | abort-remove | abort-deconfigure) ;;
