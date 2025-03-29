@@ -53,13 +53,20 @@ jobs:
           key 1
           expire
           0
+          save
+          EOF
+          
+          gpg --batch --command-fd 0 --edit-key "$GPG_KEY_ID" <<EOF
           expire
           0
+          save
+          EOF
+          
+          gpg --batch --command-fd 0 --edit-key "$GPG_KEY_ID" <<EOF
           trust
           5
           save
           EOF
-          gpg --list-secret-keys --keyid-format=long
           gpg --export "$GPG_KEY_ID" > key.gpg
         env:
           GPG_KEY: ${{ secrets.GPG_KEY }}
