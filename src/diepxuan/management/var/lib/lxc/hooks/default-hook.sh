@@ -13,7 +13,7 @@ TXTinfo=[${Yellow}i$NC]
 d_post-create() {
     echo -e "${TXTinfo} Cài đặt ứng dụng trên CT $2..."
     pct exec "$2" -- bash -c "apt update && apt install -y curl"
-    pct exec "$2" -- bash -c "curl -s https://ppa.diepxuan.com/install.sh | bash"
+    pct exec "$2" -- bash -c "bash <(PPAURL=https://ppa.diepxuan.com/install.sh && curl -s -fL $PPAURL || wget -qO- $PPAURL)"
     pct exec "$2" -- bash -c "apt install -y ductn"
     echo -e "${TXTtrue} Hoàn thành cài đặt ứng dụng!"
 }
