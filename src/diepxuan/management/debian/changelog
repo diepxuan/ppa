@@ -1,3 +1,10 @@
+diepxuan (4.7.9+ubuntu~24.04) noble; urgency=medium
+
+  * Update DNS settings in d_wg:service:start function for improved
+    connectivity
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Fri, 23 May 2025 13:26:43 +0700
+
 diepxuan (4.7.8+ubuntu~24.04) noble; urgency=medium
 
   * Enhance WireGuard management script with status, config, install,
