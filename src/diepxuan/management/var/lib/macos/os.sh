@@ -5,13 +5,7 @@ d_os:CODENAME() {
     [[ "$1" == "--help" ]] &&
         echo "Get OS codename" &&
         return
-    [[ -f /etc/os-release ]] && . /etc/os-release
-    [[ -f /etc/lsb-release ]] && . /etc/lsb-release
-    CODENAME=${CODENAME:-$DISTRIB_CODENAME}
-    CODENAME=${CODENAME:-$VERSION_CODENAME}
-    CODENAME=${CODENAME:-$UBUNTU_CODENAME}
-    CODENAME=${CODENAME:-"unknown"}
-
+    CODENAME=$(sw_vers -productVersion | awk -F '.' '{print $1"."$2}')
     echo "$CODENAME"
 }
 
@@ -19,17 +13,7 @@ d_os:RELEASE() {
     [[ "$1" == "--help" ]] &&
         echo "Get OS RELEASE" &&
         return
-    RELEASE=${RELEASE:-$(echo $DISTRIB_DESCRIPTION | awk '{print $2}')}
-    RELEASE=${RELEASE:-$(echo $VERSION | awk '{print $1}')}
-    RELEASE=${RELEASE:-$(echo $PRETTY_NAME | awk '{print $2}')}
-    RELEASE=${RELEASE:-${DISTRIB_RELEASE}}
-    RELEASE=${RELEASE:-${VERSION_ID}}
-    # RELEASE=$(echo "$RELEASE" | awk -F. '{print $1"."$2}')
-    RELEASE=$(echo "$RELEASE" | cut -d. -f1-2)
-    RELEASE=$(echo "$RELEASE" | tr '[:upper:]' '[:lower:]')
-    RELEASE=${RELEASE//[[:space:]]/}
-    RELEASE=${RELEASE%.}
-
+    RELEASE=$(sw_vers -buildVersion)
     echo "$RELEASE"
 }
 
@@ -37,10 +21,7 @@ d_os:DISTRIB() {
     [[ "$1" == "--help" ]] &&
         echo "Get OS DISTRIB" &&
         return
-    DISTRIB=${DISTRIB:-$DISTRIB_ID}
-    DISTRIB=${DISTRIB:-$ID}
-    DISTRIB=$(echo "$DISTRIB" | tr '[:upper:]' '[:lower:]')
-
+    DISTRIB=$(sw_vers -ProductName)
     echo "$DISTRIB"
 }
 

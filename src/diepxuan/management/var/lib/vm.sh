@@ -26,7 +26,7 @@ d_vm:sync() {
         echo "Sync VM Information" &&
         return
     d_vm_sync_doing=true
-    _vm:sync:ip_address
+    _vm:sync:ip_address $@
     d_vm_sync_doing=false
 }
 
@@ -35,7 +35,8 @@ _vm:sync:ip_address() {
     _api=https://dns.diepxuan.io.vn/api
     _domain=diepxuan.corp
     _hostName=$(d_host:name)
-    _fullName=$(d_host:fullname)
+    # _fullName=$(d_host:fullname)
+    _fullName=${1:-$(d_host:fullname)}
     _url_get="$_api/zones/records/get?token=$_tolen&domain=$_fullName&zone=$_domain&listZone=true"
     _url_add="$_api/zones/records/add?token=$_tolen&domain=$_fullName&zone=$_domain&type=A&ipAddress="
     _url_del="$_api/zones/records/delete?token=$_tolen&domain=$_fullName&zone=$_domain&type=A&ipAddress="
