@@ -1,3 +1,9 @@
+diepxuan (4.8.0+ubuntu~24.04) noble; urgency=medium
+
+  * Add DNS configuration in d_wg:service:start function
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Fri, 30 May 2025 08:42:11 +0700
+
 diepxuan (4.7.9+ubuntu~24.04) noble; urgency=medium
 
   * Update DNS settings in d_wg:service:start function for improved

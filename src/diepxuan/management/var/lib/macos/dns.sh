@@ -13,13 +13,16 @@ d_dns:status() {
 }
 
 d_dns:set() {
+    [[ "$1" == "--help" ]] &&
+        echo "Set DNS name server" &&
+        return
     # services=$(networksetup -listallnetworkservices | tail -n +2)
 
     DNS=$@
     DNS=${DNS:-"8.8.8.8, 1.1.1.1"}
 
     while IFS= read -r service; do
-        networksetup -setdnsservers $service $DNS
+        $SUDO networksetup -setdnsservers $service $DNS
     done <<<$(networksetup -listallnetworkservices | tail -n +2)
 }
 
