@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 #!/bin/bash
 
-_DUCTN_COMMANDS+=("sys:apt:fix")
---sys:apt:fix() {
-    --apt:fix
+d_sys:apt:fix() {
+    d_apt:fix $@
 }
 
-_DUCTN_COMMANDS+=("sys:apt:check")
---sys:apt:check() {
+d_sys:apt:check() {
+    [[ "$1" == "--help" ]] &&
+        echo "Apt check if package is installed" &&
+        return
+
     dpkg -s $1 2>/dev/null | grep 'install ok installed' >/dev/null 2>&1
     if [ $? != 0 ]; then
         echo 0
@@ -28,33 +30,40 @@ _DUCTN_COMMANDS+=("sys:apt:check")
 
 }
 
-_DUCTN_COMMANDS+=("sys:apt:install")
 --sys:apt:install() {
-    if [[ "$(--sys:apt:check $*)" -eq 0 ]]; then
-        sudo apt install $* -y --purge --auto-remove
+    if [[ "$(d_sys:apt:check $*)" -eq 0 ]]; then
+        $SUDO apt install $* -y --purge --auto-remove
     fi
 }
 
-_DUCTN_COMMANDS+=("sys:apt:remove")
 --sys:apt:remove() {
-    sudo apt remove $* -y --purge --auto-remove
+    $SUDO apt remove $* -y --purge --auto-remove
 }
 
-_DUCTN_COMMANDS+=("sys:apt:uninstall")
 --sys:apt:uninstall() {
     --sys:apt:remove $*
 }
 
---apt:fix() {
-    #!/bin/bash
+d_apt:fix() {
+    [[ "$1" == "--help" ]] &&
+        echo "Apt fix lock files" &&
+        return
 
-    sudo killall apt-get
-    sudo killall apt
+    $SUDO killall apt-get
+    $SUDO killall apt
 
-    sudo rm /var/lib/apt/lists/lock
-    sudo rm /var/cache/apt/archives/lock
-    sudo rm /var/lib/dpkg/lock
-    sudo rm /var/lib/dpkg/lock-frontend
+    $SUDO rm /var/lib/apt/lists/lock
+    $SUDO rm /var/cache/apt/archives/lock
+    $SUDO rm /var/lib/dpkg/lock
+    $SUDO rm /var/lib/dpkg/lock-frontend
 
-    sudo dpkg --configure -a
+    $SUDO dpkg --configure -a
 }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi

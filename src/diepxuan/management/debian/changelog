@@ -1,3 +1,10 @@
+diepxuan (4.8.1+ubuntu~24.04) noble; urgency=medium
+
+  * Refactor apt functions to use consistent naming and improve command
+    handling
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Sat, 31 May 2025 07:45:42 +0700
+
 diepxuan (4.8.0+ubuntu~24.04) noble; urgency=medium
 
   * Add DNS configuration in d_wg:service:start function
