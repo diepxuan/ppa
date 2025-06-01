@@ -2,6 +2,9 @@
 #!/bin/bash
 
 d_git:configure() {
+    [[ "$1" == "--help" ]] &&
+        echo "Git configuration helper" &&
+        return
     # global gitignore
     git config --global core.excludesfile ~/.gitignore
 
@@ -52,18 +55,31 @@ d_git:configure() {
 }
 
 d_git:detrack() {
+    [[ "$1" == "--help" ]] &&
+        echo "Git detrack helper" &&
+        return
     git update-index --no-assume-unchanged $1
 }
 
 d_git:untrack() {
+    [[ "$1" == "--help" ]] &&
+        echo "Git untrack helper" &&
+        return
     git update-index --assume-unchanged $1
 }
 
 d_git:viewuntrack() {
+    [[ "$1" == "--help" ]] &&
+        echo "Git view untrack helper" &&
+        return
     git ls-files -v | grep "^[[:lower:]]"
 }
 
 d_git:tag:cleanup() {
+    [[ "$1" == "--help" ]] &&
+        echo "Git tag cleanup helper" &&
+        return
+
     number=${1:-'5'}
     git tag | xargs -L 1 | awk "NR > $number" | xargs git push --delete origin
     git fetch --prune origin +refs/tags/*:refs/tags/*
@@ -192,3 +208,11 @@ EOF
 #         chmod +x .git/hooks/*
 #     fi
 # }
+
+--isenabled() {
+    echo '1'
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    "$@"
+fi
