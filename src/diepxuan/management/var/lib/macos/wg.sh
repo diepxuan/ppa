@@ -51,7 +51,7 @@ d_wg:service:start() {
     # d_dns:set
     sudo launchctl bootstrap system /Library/LaunchDaemons/com.wireguard.wg0.plist # 10.13+
     sudo launchctl enable system/com.wireguard.wg0
-    # d_dns:set 10.10.1.1 10.10.2.1 10.10.3.1 10.10.4.1
+    # d_dns:set 10.10.1.1 10.10.2.1 10.10.3.1 10.10.4.2
 }
 d_wg:service:stop() {
     [[ "$1" == "--help" ]] &&
@@ -80,12 +80,23 @@ d_wg:hotfix() {
     cat <<EOF | $SUDO tee /opt/homebrew/bin/wg-quick-bash5 >/dev/null
 #!/opt/homebrew/bin/bash
 
+(
+    while true; do
+        /opt/homebrew/bin/ductn dns:set 10.10.1.1 10.10.2.1 10.10.3.1 10.10.4.2
+        sleep 5
+    done
+) &
+
+# Ensure the script uses the correct version of bash
 source /opt/homebrew/bin/wg-quick
 EOF
     $SUDO chmod +x /opt/homebrew/bin/wg-quick-bash5
 }
 
-nd_wg:fix() {
+d_wg:fix() {
+    [[ "$1" == "--help" ]] &&
+        echo "Fix network services names" &&
+        return
     #WG_QUICK_USERSPACE_INTERFACE="Wi-Fi"
     #export WG_QUICK_USERSPACE_INTERFACE="Wi-Fi"
 
