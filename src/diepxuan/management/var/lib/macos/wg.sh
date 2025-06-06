@@ -48,10 +48,10 @@ d_wg:service:start() {
         return
 
     # sudo launchctl load -w /Library/LaunchDaemons/com.wireguard.wg0.plist
-    d_dns:set
+    # d_dns:set
     sudo launchctl bootstrap system /Library/LaunchDaemons/com.wireguard.wg0.plist # 10.13+
     sudo launchctl enable system/com.wireguard.wg0
-    d_dns:set 10.10.1.1 10.10.2.1 10.10.3.1 10.10.4.1
+    # d_dns:set 10.10.1.1 10.10.2.1 10.10.3.1 10.10.4.1
 }
 d_wg:service:stop() {
     [[ "$1" == "--help" ]] &&

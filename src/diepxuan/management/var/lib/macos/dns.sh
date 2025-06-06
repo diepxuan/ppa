@@ -19,11 +19,25 @@ d_dns:set() {
     # services=$(networksetup -listallnetworkservices | tail -n +2)
 
     DNS=$@
-    DNS=${DNS:-"8.8.8.8, 1.1.1.1"}
+    # Kiểm tra từng IP DNS, chỉ giữ lại IP sống
+    VALID_DNS=""
+    for ip in $DNS; do
+        if ping -c 1 -W 1 "$ip" &>/dev/null; then
+            VALID_DNS+="$ip "
+        else
+            echo "⚠️ DNS $ip unreachable, skipping..."
+        fi
+    done
+    # Nếu không IP nào sống, đặt là "Empty"
+    VALID_DNS=${VALID_DNS:-"Empty"}
+    DNS=${DNS:-"Empty"}
 
     while IFS= read -r service; do
-        $SUDO networksetup -setdnsservers $service $DNS
-    done <<<$(networksetup -listallnetworkservices | tail -n +2)
+        $SUDO networksetup -setdnsservers $service $VALID_DNS || {
+            echo "Failed to set DNS for $service"
+            continue
+        }
+    done < <(networksetup -listallnetworkservices | tail -n +2)
 }
 
 --isenabled() {

@@ -1,3 +1,10 @@
+diepxuan (4.8.3+ubuntu~24.04) noble; urgency=medium
+
+  * Refactor DNS handling in wg.sh to improve clarity and prevent
+    automatic DNS setting
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Fri, 06 Jun 2025 10:01:55 +0700
+
 diepxuan (4.8.2+ubuntu~24.04) noble; urgency=medium
 
   * Add help messages to git helper functions for improved usability
