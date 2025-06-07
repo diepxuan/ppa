@@ -4,13 +4,13 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: buster
-Date: Fri, 06 Jun 2025 17:05:03 UTC
+Date: Sat, 07 Jun 2025 01:17:04 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 10 (Buster)
 MD5Sum:
- 6387e34fcf5a5f4a07781a434a6357e0 5120 main/binary-amd64/Packages
- d321ace97bd2451362c9ce27fa141546 1599 main/binary-amd64/Packages.gz
+ e9aa99a9fe0597353fad057cb44ba116 5120 main/binary-amd64/Packages
+ e2c81a76f1debfbbc555c358b9034006 1598 main/binary-amd64/Packages.gz
  3b0e5097998bf734b2430c336665cd74 101 main/binary-amd64/Release
  d7915a70b3c370ff3616d62ed71f9d03 3231 main/binary-arm64/Packages
  e541e0b62f8eb2bace0f9d471dcc2606 1117 main/binary-arm64/Packages.gz
@@ -19,8 +19,8 @@ MD5Sum:
  0cfda86bd070b110605825655f22067e 862 main/binary-i386/Packages.gz
  9af8d5be98e64d854b2a7bbd96b08539 100 main/binary-i386/Release
 SHA1:
- 953d52f8a0759aef7fdd207a325cdfb995664ee3 5120 main/binary-amd64/Packages
- 8557900414cbb610f1d22d64bc0b25b3b867a7d6 1599 main/binary-amd64/Packages.gz
+ bb83427a17cb7e65796c44c54ed030d877275676 5120 main/binary-amd64/Packages
+ 65e790703f8e47a39fd8842d7aa54cf1ac49734a 1598 main/binary-amd64/Packages.gz
  e05c77b3ea583788a71a52d71a65802161d46c12 101 main/binary-amd64/Release
  f2afbee094416069965c3a445f637d9d4fa4a2b7 3231 main/binary-arm64/Packages
  2eb4d87c9aa0b180bda05ede3cce5651095b70b0 1117 main/binary-arm64/Packages.gz
@@ -29,8 +29,8 @@ SHA1:
  c6ebe2f1d1331059b3f943c6b54042a11865fffe 862 main/binary-i386/Packages.gz
  b60726b996195beac73b78989712921d618cc539 100 main/binary-i386/Release
 SHA256:
- cfad804df14b04b7d15b05462bae4c98c0941a1d02799bad2c6972d825b2be77 5120 main/binary-amd64/Packages
- bbd81a0c8b3644f5ae9f92fcaee97e76ae7685e47034235f52d18cfecc6bd5d5 1599 main/binary-amd64/Packages.gz
+ d54f1f426c1fbafaed7820625a620796bf74a98cec397b76802a4fd39d0103a6 5120 main/binary-amd64/Packages
+ 57b5b3a83e225fa41f48c08d35b794974c5033b11c9e7e6ce30a2c3b7028e8c8 1598 main/binary-amd64/Packages.gz
  9d6eaa668afd37bcd019d58588695c1632cbe0bb245b3b154bf0074d6c826caa 101 main/binary-amd64/Release
  07a76d8f09751cca71c5071bf7559cbb1881ab4face917b4b312d116270cc7e8 3231 main/binary-arm64/Packages
  1c9d6d225a0f661d16d5ca158cb814f80313f2a8d18d8cba67d43914297b53c4 1117 main/binary-arm64/Packages.gz
@@ -40,15 +40,15 @@ SHA256:
  70a8e63e4356c0399982ea66e04c498f1e5345e1b4939112b15095d952c3f1de 100 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmhDH78ACgkQfg7JF6UH
-S9Osswv+LnnasSTaubofWW4Puv4S0wriJGqvUS1VpVmi9+2iGkPznvKkAKrQH/oK
-xgzTkd6YeW3w9pFqdmtejkxGMaQa0rU1ntM0xZcoQ72tBjxVKBCiUxJSh55g4LLK
-JuydqtyfQoEi67XDhOLwMhR3uYT6DATcf+/1zOnFk49yr/m9o0/wKgVLgfEEQPQO
-ExZ4W6p7ymPcRAUdoswOdWYuIfaHgclHu7DRWuKZf7NLKLp7SrcH9rYZkl6J+hxL
-AAtE6OgfOiJijnKJNs8qWh+p0Zk3Kcmpd9ccFb09xwMR1/rkE1a3Htoc9/KeFM1d
-aPEfWr6xK8rJdZ233qLf1VErrnLb6KbqieJ3dD/TlxX7xsf4oM8n914J1P0JOErp
-ixF9d1mYnHdmP08nFFKPyueQq1LdzjMHboxrBlRhJ5+vld4lT3QxBnNkeS7PPUeC
-gyDjdBaHfkOv6hup2v2Nr1MUid3/TSAAiY1On1qU4iqXzPqJ0Rb1w9SFWeFATdoU
-ZULt5hkW
-=/SwT
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmhDkxAACgkQfg7JF6UH
+S9PIhgv+MwiIvNSBjz/uavmeskMs2Qx9er5KJ++N8ZV8e3rTlS8N/UL3CcgzsfiN
+3YbgAUdSmrL68Ygm3FBFi62n7RxNjJ4sRSUMOo1qNs0nm/VSgdPe94JJL8tvT9c9
+Ns+NxtSpAP04xyl1mSkXQcA+FIH9RJbmXxTeoL46CRxEdwr/OGzuJLihZaAszhi5
+peT3UPMDaLiqYm0n9uqQoiZ4qYlEqLCQlhNYZPDqkmy7jUOsvisp2xWvBBRkn9Og
+gnxHs0yv8V0LLHnlswdpnOZpSAMO+gF4MaiUrLr8x5cghNMTUwMKNHLoCk56uaHX
+LpB6KjZFxpfkaCVMPLWd7/Nq+Q7BzqDcTQjhKJxH8r00nWcOqkAirgym4InofM41
+DIsIuzEHFEgSjPtwKD8VnInULXLBobFgWDh6DPcJw5+Kfc5yhJLo7YTcJvJJbzaZ
+M2xtAIXg7QY+aJeALAm4HO9mHRucPqHlCTBpwI6FBjL33sRcxhv/HhCIbiWoQsNR
+AlXacZNc
+=fnoS
 -----END PGP SIGNATURE-----
