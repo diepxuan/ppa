@@ -12,6 +12,13 @@ d_wg:status() {
     fi
 }
 
+d_wg:log() {
+    [[ "$1" == "--help" ]] &&
+        echo "Get WireGuard log" &&
+        return
+    $SUDO tail -f /Library/Logs/com.wireguard.wg0.*.log
+}
+
 d_wg:config() {
     [[ "$1" == "--help" ]] &&
         echo "Get WireGuard configuration" &&
