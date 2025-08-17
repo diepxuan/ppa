@@ -1,3 +1,9 @@
+diepxuan (4.8.7+ubuntu~24.04) noble; urgency=medium
+
+  * Add clean function to dns.sh for flushing DNS cache
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Sun, 17 Aug 2025 20:51:53 +0700
+
 diepxuan (4.8.6+ubuntu~24.04) noble; urgency=medium
 
   * Add log function to wg.sh for retrieving WireGuard logs

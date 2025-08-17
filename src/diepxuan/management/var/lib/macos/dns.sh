@@ -40,6 +40,15 @@ d_dns:set() {
     done < <(networksetup -listallnetworkservices | tail -n +2)
 }
 
+d_dns:clean() {
+    [[ "$1" == "--help" ]] &&
+        echo "Clean DNS name server" &&
+        return
+
+    $SUDO dscacheutil -flushcache
+    $SUDO killall -HUP mDNSResponder
+}
+
 --isenabled() {
     echo '1'
 }
