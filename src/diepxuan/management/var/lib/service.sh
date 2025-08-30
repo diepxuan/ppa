@@ -10,6 +10,11 @@
             d_vm:sync &
         fi
 
+        if (($((10#$(date +%S))) % 5 == 0)) && ! $d_route_checkAndUp; then
+            d_route_checkAndUp=true
+            d_route:checkAndUp &
+        fi
+
         sleep 1
     done
 
