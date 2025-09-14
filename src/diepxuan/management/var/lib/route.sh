@@ -61,11 +61,53 @@ d_route:checkAndUp() {
 
     if [[ "$state" != "up" ]]; then
         $SUDO ip link set dev "$nic" up
-        sleep 1
-        state=$(cat /sys/class/net/"$nic"/operstate 2>/dev/null)
+        # sleep 1
+        # state=$(cat /sys/class/net/"$nic"/operstate 2>/dev/null)
+    fi
+
+    if ! ping -c1 -W2 8.8.8.8 >/dev/null 2>&1; then
+        d_route:reload "$nic"
     fi
 }
 
+d_route:reload() {
+    [[ "$1" == "--help" ]] &&
+        echo "Reload lại cấu hình mạng (tương đương 'ip link set dev <nic> down' và 'ip link set dev <nic> up')" &&
+        return
+
+    local nic
+    nic=${1:-$(d_route:default)}
+
+    if [[ -z "$nic" ]];  then
+        return 1
+    fi
+
+    if command -v ifreload >/dev/null 2>&1; then
+        $SUDO ifreload "$nic"
+        return 0
+    fi
+
+    if command -v ifdown >/dev/null 2>&1 && command -v ifup >/dev/null 2>&1; then
+        $SUDO ifdown "$nic" >/dev/null 2>&1
+        $SUDO ifup "$nic" >/dev/null 2>&1
+        return 0
+    fi
+
+    # if systemctl list-unit-files | grep -q systemd-networkd; then
+    #     $SUDO systemctl restart systemd-networkd
+    #     return 0
+    # fi
+
+    # if systemctl list-unit-files | grep -q NetworkManager; then
+    #     $SUDO systemctl restart NetworkManager
+    #     return 0
+    # fi
+
+    $SUDO ip link set dev "$nic" down >/dev/null 2>&1
+    $SUDO ip link set dev "$nic" up >/dev/null 2>&1
+    return 0
+
+}
 
 --isenabled() {
     echo '1'
