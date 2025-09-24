@@ -12,8 +12,8 @@ d_alias:ll() {
         # command ll "$@"
         eval "ll $@"
     else
-        # Nếu không có alias, sử dụng lệnh ls -la
-        ls -la "$@"
+        # Nếu không có alias, sử dụng lệnh ls -lah
+        ls -lah "$@"
     fi
 }
 

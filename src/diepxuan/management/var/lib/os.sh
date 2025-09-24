@@ -19,6 +19,8 @@ d_os:RELEASE() {
     [[ "$1" == "--help" ]] &&
         echo "Get OS RELEASE" &&
         return
+    [[ -f /etc/os-release ]] && . /etc/os-release
+    [[ -f /etc/lsb-release ]] && . /etc/lsb-release
     RELEASE=${RELEASE:-$(echo $DISTRIB_DESCRIPTION | awk '{print $2}')}
     RELEASE=${RELEASE:-$(echo $VERSION | awk '{print $1}')}
     RELEASE=${RELEASE:-$(echo $PRETTY_NAME | awk '{print $2}')}
@@ -37,6 +39,8 @@ d_os:DISTRIB() {
     [[ "$1" == "--help" ]] &&
         echo "Get OS DISTRIB" &&
         return
+    [[ -f /etc/os-release ]] && . /etc/os-release
+    [[ -f /etc/lsb-release ]] && . /etc/lsb-release
     DISTRIB=${DISTRIB:-$DISTRIB_ID}
     DISTRIB=${DISTRIB:-$ID}
     DISTRIB=$(echo "$DISTRIB" | tr '[:upper:]' '[:lower:]')

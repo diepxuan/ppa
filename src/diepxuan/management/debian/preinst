@@ -18,6 +18,15 @@ set -e
 case "$1" in
 install | upgrade)
     systemctl stop ductnd.service >/dev/null 2>&1 || true
+
+    dirs_to_remove=(
+        "/etc/sysctl.d/99-ductn.conf"
+        "/etc/cron.daily/ductn"
+    )
+
+    for dir in "${dirs_to_remove[@]}"; do
+        [[ -d "$dir" ]] && rm -rf "$dir"
+    done
     ;;
 
 abort-upgrade) ;;

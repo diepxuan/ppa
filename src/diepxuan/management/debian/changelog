@@ -1,3 +1,11 @@
+diepxuan (4.9.0+ubuntu~24.04) noble; urgency=medium
+
+  * Fix d_os:RELEASE and d_os:DISTRIB functions to ensure OS release and
+    distribution information is sourced correctly from os-release and
+    lsb-release files.
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Wed, 24 Sep 2025 22:57:30 +0700
+
 diepxuan (4.8.9+ubuntu~24.04) noble; urgency=medium
 
   * Enhance network configuration reload functionality in route.sh
