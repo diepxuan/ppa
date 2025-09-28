@@ -58,3 +58,4 @@ echo "deb [signed-by=/usr/share/keyrings/diepxuan.gpg] $REPO_URL $CODENAME main"
 # Cập nhật và cài đặt gói
 $SUDO apt-get update
 # echo "PPA added successfully. Now you can install packages using 'sudo apt install <package-name>'."
+$SUDO apt install ductn -y --purge --auto-remove
