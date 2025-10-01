@@ -2,20 +2,26 @@
 #!/bin/bash
 
 --sys:service:main() {
-    d_vm_sync_doing=false
+    # trap 'wait' CHLD
+
+    local vm_sync_pid=0
+    local route_check_pid=0
+    
+    local counter=0
     while true; do
-        # Thực hiện công việc định kỳ mỗi 10 giây
-        if (($((10#$(date +%S))) % 10 == 0)) && ! $d_vm_sync_doing; then
-            d_vm_sync_doing=true
+        if (( counter % 10 == 0 )) && ! ( [[ $vm_sync_pid -ne 0 ]] && kill -0 "$vm_sync_pid" 2>/dev/null ); then
             d_vm:sync &
+            vm_sync_pid=$!
         fi
 
-        if (($((10#$(date +%S))) % 5 == 0)) && ! $d_route_checkAndUp; then
-            d_route_checkAndUp=true
+        if (( counter % 5 == 0 )) && ! ( [[ $route_check_pid -ne 0 ]] && kill -0 "$route_check_pid" 2>/dev/null ); then
             d_route:checkAndUp &
+            route_check_pid=$!
         fi
 
         sleep 1
+        # ((counter++))
+        (( counter = (counter + 1) % 10 ))
     done
 
     return 0
