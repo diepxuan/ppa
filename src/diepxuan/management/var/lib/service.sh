@@ -6,7 +6,16 @@
 
     local vm_sync_pid=0
     local route_check_pid=0
-    
+
+    local SECOND=1
+    local MINUTE=SECOND*60
+    local HOUR=MINUTE*60
+    local HALF_DAY=HOUR*12
+    local DAY=HOUR*24
+    local WEEK=DAY*7
+    local MONTH=DAY*30
+    local YEAR=DAY*365
+
     local counter=0
     while true; do
         if (( counter % 10 == 0 )) && ! ( [[ $vm_sync_pid -ne 0 ]] && kill -0 "$vm_sync_pid" 2>/dev/null ); then
@@ -19,9 +28,13 @@
             route_check_pid=$!
         fi
 
+        if (( counter % HALF_DAY == 0 )); then
+            d_update &
+        fi
+
         sleep 1
         # ((counter++))
-        (( counter = (counter + 1) % 10 ))
+        (( counter = (counter + 1) % WEEK ))
     done
 
     return 0

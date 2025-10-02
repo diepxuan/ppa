@@ -58,7 +58,7 @@ net.ipv4.ip_forward=1"
     sed -i "/bash\/.bash_aliases/d" ~/.bash_aliases
 }
 
-d_selfupdate() {
+d_update() {
     [[ "$1" == "--help" ]] &&
         echo "Update script latest version" &&
         return
@@ -66,7 +66,15 @@ d_selfupdate() {
     # ductn sys:init
 }
 
-d_self-update() {
+__selfupdate() {
+    [[ "$1" == "--help" ]] &&
+        echo "Update script latest version" &&
+        return
+    --sys:upgrade
+    # ductn sys:init
+}
+
+__self-update() {
     [[ "$1" == "--help" ]] &&
         echo "Update script latest version" &&
         return
