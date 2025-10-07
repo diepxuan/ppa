@@ -130,6 +130,7 @@ printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selection
 $SUDO apt update
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 $SUDO apt-get -y install lsb-release ca-certificates curl
+$SUDO apt-get install -y python3 python3-pip
 
 # [[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] && {
 #     [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] && {
@@ -241,8 +242,9 @@ end_group
 # sed -i -e "0,/<$email>  .*/ s/<$email>  .*/<$email>  $BUILDPACKAGE_EPOCH/g" $changelog
 
 start_group Update Package Configuration in Changelog
+python3 -m venv venv
+source venv/bin/activate
 pip install --upgrade pip
-# python3 -m venv venv
 pip install -r requirements.txt
 release_tag=$(python3 $source_dir/ductn.py version:newrelease)
 
