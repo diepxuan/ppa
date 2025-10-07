@@ -1,5 +1,5 @@
 import sys
-import distro
+import distro  # pyright: ignore[reportMissingImports]
 import logging
 
 # --- Thiết lập Logging ---
@@ -17,8 +17,8 @@ from . import registry
 from .registry import COMMANDS
 from .registry import register_command
 
-from rich.console import Console
-from rich.table import Table
+from rich.console import Console  # pyright: ignore[reportMissingImports]
+from rich.table import Table  # pyright: ignore[reportMissingImports]
 
 from . import host
 from . import addr
