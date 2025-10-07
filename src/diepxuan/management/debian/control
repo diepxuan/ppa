@@ -1,7 +1,7 @@
 Source: diepxuan
 Priority: optional
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Build-Depends: debhelper-compat (= 12)
+Build-Depends: debhelper-compat (= 12), dh-python, python3-venv, python3-pip
 Section: devel
 Standards-Version: 3.0.1ppa1-1
 Homepage: https://ppa.diepxuan.com
@@ -10,7 +10,7 @@ Homepage: https://ppa.diepxuan.com
 
 Package: ductn
 Architecture: any
-Depends: ${misc:Depends},
+Depends: ${misc:Depends}, ${python3:Depends}
   ductn-ll,
   net-tools, jq, curl, bash-completion, openssl, unzip,
   apt-transport-https, sudo, dnsutils, lsof

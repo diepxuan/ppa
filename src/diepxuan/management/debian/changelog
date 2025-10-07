@@ -1,3 +1,11 @@
+diepxuan (2025-10-07) noble; urgency=medium
+
+  * 23:39:19 ductn ductnd: Lỗi: Chức năng này yêu cầu quyền root (sudo)
+    để chạy.+ubuntu~24.04 Refactor logging statements to remove
+    redundant file=sys.stderr arguments for improved readability
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Tue, 07 Oct 2025 23:39:20 +0700
+
 diepxuan (4.9.2+ubuntu~24.04) noble; urgency=medium
 
   * Enhance service.sh to include time-based updates and improve sys.sh

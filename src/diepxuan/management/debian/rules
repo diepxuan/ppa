@@ -3,6 +3,8 @@
 # output every command that modifies files on the build system.
 #export DH_VERBOSE = 1
 
+# Sử dụng debhelper compat level 13
+export DH_VERBOSE = 1
 
 # see FEATURE AREAS in dpkg-buildflags(1)
 #export DEB_BUILD_MAINT_OPTIONS = hardening=+all
@@ -14,15 +16,53 @@
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 
-%:
-	dh $@
+# %:
+# 	dh $@
 
-# override_dh_install:
-# 	dh_install
+# # override_dh_install:
+# # 	dh_install
+%:
+	dh $@ --with python3
+
+override_dh_auto_build:
+	# 1. Tạo một môi trường ảo sạch sẽ
+	python3 -m venv venv
+
+	# 2. Kích hoạt và cài đặt các dependencies
+	# Chú ý: Dùng `.` thay cho `source` trong Makefile
+	# Cài cả pyinstaller và các thư viện từ requirements.txt
+	. venv/bin/activate && \
+	pip install --upgrade pip && \
+	pip install pyinstaller && \
+	pip install -r requirements.txt
+
+	# 3. Chạy PyInstaller để build file thực thi
+	# File thực thi sẽ nằm trong thư mục `dist/`
+	. venv/bin/activate && \
+	pyinstaller --onefile --name "ductn" ductn.py
+
+override_dh_install:
+	# Tạo thư mục đích nếu chưa tồn tại
+	mkdir -p debian/ductn/usr/bin
+
+	# Sao chép file thực thi từ thư mục dist vào thư mục đích
+	# `dist/ductn` là output của PyInstaller
+	# `debian/ductn/usr/bin/` là nơi dpkg-buildpackage sẽ tìm file để đóng gói
+	cp dist/ductn debian/ductn/usr/bin/
+
+	# Gọi dh_install để xử lý các bước còn lại
+	dh_install
+
+# Target này dọn dẹp các file tạm được tạo ra trong quá trình build
+override_dh_auto_clean:
+	# Xóa các thư mục của PyInstaller và venv
+	rm -rf build/ dist/ venv/ *.spec
+	# Chạy target clean mặc định của debhelper
+	dh_auto_clean
 
 # dh_make generated override targets
 # This is example for Cmake (See https://bugs.debian.org/641051 )
-#override_dh_auto_configure:
+# override_dh_auto_configure:
 #	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
 # Add support for the bash completion feature.

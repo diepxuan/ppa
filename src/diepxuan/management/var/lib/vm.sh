@@ -32,7 +32,7 @@ d_vm:sync() {
 
 _vm:sync:ip_address() {
     _tolen=3ccbb8eb47507c42a3dfd2a70fe8e617509f8a9e4af713164e0088c715d24c83
-    _api=https://dns.diepxuan.io.vn/api
+    _api=https://dns.diepxuan.corp:53443/api
     _domain=diepxuan.corp
     _hostName=$(d_host:name)
     # _fullName=$(d_host:fullname)
