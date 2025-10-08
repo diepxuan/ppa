@@ -8,7 +8,7 @@ import time
 from . import register_command
 from .vm import _vm_sync
 from .route import _route_monitor
-from .system import _sys_update
+from .system import _is_root, _sys_update
 
 # --- Biến toàn cục để xử lý tín hiệu ---
 shutdown_flag = False
@@ -24,6 +24,8 @@ def signal_handler(signum, frame):
 
 @register_command
 def d_service():
+    if _is_root() is False:
+        return
     logging.info("Bắt đầu service.")
 
     # Đăng ký các hàm xử lý tín hiệu

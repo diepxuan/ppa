@@ -3,7 +3,8 @@ import re
 import subprocess
 import time
 
-from utils.registry import register_command
+from . import register_command
+from . import _is_root
 
 
 PING_HOST = "8.8.8.8"
@@ -17,6 +18,9 @@ def _route_default() -> str:
     Ưu tiên 2: Tìm interface có gateway được cấu hình trong `ip route show table all`.
     Ưu tiên 3: Lấy interface đầu tiên không phải 'lo' có trạng thái UP và có IP.
     """
+
+    if _is_root() is False:
+        return ""
 
     # --- Ưu tiên 1: Tìm default route đang hoạt động ---
     try:
@@ -111,6 +115,8 @@ def d_route_default():
 
 def _is_interface_up(interface: str) -> bool:
     """Kiểm tra xem interface có đang ở trạng thái UP hay không."""
+    if _is_root() is False:
+        return False
     result = subprocess.run(
         ["ip", "addr", "show", interface],
         capture_output=True,
@@ -140,6 +146,8 @@ def _has_internet_connection(host: str) -> bool:
 
 def _interface_down(interface: str):
     """Down interface."""
+    if _is_root() is False:
+        return ""
     # logging.warning(f"Không có kết nối Internet. Đang khởi động lại interface '{interface}'...")
     result = subprocess.run(
         ["ip", "link", "set", interface, "down"],
@@ -151,6 +159,8 @@ def _interface_down(interface: str):
 
 def _interface_up(interface: str):
     """Up interface."""
+    if _is_root() is False:
+        return ""
     # logging.warning(f"Không có kết nối Internet. Đang khởi động lại interface '{interface}'...")
     result = subprocess.run(
         ["ip", "link", "set", interface, "up"],

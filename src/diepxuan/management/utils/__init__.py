@@ -16,6 +16,7 @@ logging.basicConfig(
 from . import registry
 from .registry import COMMANDS
 from .registry import register_command
+from .system import _is_root
 
 from rich.console import Console  # pyright: ignore[reportMissingImports]
 from rich.table import Table  # pyright: ignore[reportMissingImports]

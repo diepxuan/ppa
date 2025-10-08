@@ -5,7 +5,9 @@ import subprocess
 import requests
 import socket
 from urllib import request
+
 from .registry import register_command
+from . import _is_root
 from . import host
 
 
@@ -35,10 +37,12 @@ def _ip_locals():
     return ips if ips else []
 
 
-def _ip_local(interface: str = None) -> str | None:
+def _ip_local(interface: str = None) -> str:
     """
     Lấy địa chỉ IP của một interface cụ thể, hoặc IP chính của máy.
     """
+    if _is_root() is False:
+        return ""
     if not interface:
         s = None
         try:
@@ -69,7 +73,7 @@ def _ip_local(interface: str = None) -> str | None:
             return result.stdout.strip()
         except (subprocess.CalledProcessError, FileNotFoundError):
             # logging.warning(f"Không thể lấy IP cho interface '{interface}'.")
-            return None
+            return ""
 
 
 @register_command
