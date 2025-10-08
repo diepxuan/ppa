@@ -1,7 +1,7 @@
 # ductn usr/bin
 # var/lib/* var/lib/ductn
-# var/lib/lxc/hooks/default-hook.sh var/lib/lxc/hooks
-# etc/sysctl.d/99-ductn.conf etc/sysctl.d
-# etc/cron.daily/ductn etc/cron.daily
-# ductn-prompt etc/bash_completion.d
-# ductnd.service usr/lib/systemd/system
+ductn/var/lib/lxc/hooks/default-hook.sh var/lib/lxc/hooks
+ductn/etc/sysctl.d/99-ductn.conf etc/sysctl.d
+ductn/etc/cron.daily/ductn etc/cron.daily
+ductn/etc/bash_completion.d/ductn-prompt etc/bash_completion.d
+ductn/usr/lib/systemd/system/ductnd.service usr/lib/systemd/system
