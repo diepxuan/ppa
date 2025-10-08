@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-import logging
 import subprocess
-import requests
 import socket
 from urllib import request
 
