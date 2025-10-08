@@ -21,10 +21,11 @@ from .system import _is_root
 from rich.console import Console  # pyright: ignore[reportMissingImports]
 from rich.table import Table  # pyright: ignore[reportMissingImports]
 
-from . import host
-from . import addr
-from . import vm
+from . import alias
 from . import about
+from . import vm
+from . import addr
+from . import host
 from . import route
 from . import service
 from . import system
