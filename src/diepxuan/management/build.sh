@@ -242,9 +242,9 @@ end_group
 # sed -i -e "0,/<$email>  .*/ s/<$email>  .*/<$email>  $BUILDPACKAGE_EPOCH/g" $changelog
 
 start_group Update Package Configuration in Changelog
+$SUDO pip install --upgrade pip || true
 python3 -m venv venv
 source venv/bin/activate
-pip install --upgrade pip
 pip install -r requirements.txt
 release_tag=$(python3 $source_dir/ductn.py version:newrelease)
 
