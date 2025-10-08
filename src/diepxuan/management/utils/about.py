@@ -5,6 +5,7 @@ import ductn
 from ductn import SRC_DIR
 from .registry import COMMANDS, register_command
 
+from . import PACKAGE_NAME, SERVICE_NAME
 from . import Console
 from . import Table
 
@@ -45,11 +46,10 @@ def _version():
         # `capture_output=True` để lấy stdout, `text=True` để output là string
         # `check=True` sẽ gây ra exception nếu lệnh thất bại
         result = subprocess.run(
-            ["apt", "show", ductn.__name__],
+            ["apt", "show", PACKAGE_NAME],
             capture_output=True,
             text=True,
-            check=False,
-            stderr=subprocess.DEVNULL,
+            check=True,
         )
 
         if result.returncode == 0:
