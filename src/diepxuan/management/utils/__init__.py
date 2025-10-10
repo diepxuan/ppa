@@ -22,7 +22,7 @@ from .system import _is_root
 from rich.console import Console  # pyright: ignore[reportMissingImports]
 from rich.table import Table  # pyright: ignore[reportMissingImports]
 
-from . import commands
+from . import command
 from . import alias
 from . import about
 from . import vm

@@ -36,16 +36,7 @@ def main():
         argcomplete.autocomplete(parser)
 
     args = parser.parse_args()
-    func = args.func
-
-    if func:
-        import inspect
-
-        sig = inspect.signature(func)
-        if len(sig.parameters) == 0:
-            func()
-        else:
-            func(args)
+    command.command_run(args.func, args)
 
 
 if __name__ == "__main__":
