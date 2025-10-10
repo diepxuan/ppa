@@ -53,7 +53,7 @@ def d_service():
                 processes["vm_sync_thread"] = thread
 
             if (
-                counter % 12 * 60 * 60 == 0 and "sys_update_thread" not in processes
+                counter % (12 * 60 * 60) == 0 and "sys_update_thread" not in processes
             ):  # 12 giờ chạy một lần
                 thread = threading.Thread(target=_sys_update, name="sys_update_thread")
                 thread.daemon = True
@@ -82,7 +82,7 @@ def d_service():
 
             # Ngủ 1 giây (hoặc có thể ngủ lâu hơn nếu không có gì làm)
             time.sleep(1)
-            counter = (counter + 1) % (1 * 24 * 60 * 60)  # Reset mỗi ngày
+            counter = (counter + 1) % (2 * 24 * 60 * 60)  # Reset mỗi 2 ngày
     except KeyboardInterrupt:
         logging.info("Nhận được tín hiệu thoát. Đang thoát dịch vụ...")
     except Exception as e:
