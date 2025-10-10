@@ -31,9 +31,10 @@ def main():
     if sys.argv[0].endswith(("ductn", "ductn.py", "ductn.sh")):
         try:
             import argcomplete
-        except ImportError:
-            argcomplete = None
-        argcomplete.autocomplete(parser)
+
+            argcomplete.autocomplete(parser)
+        except:
+            pass  # nếu không có argcomplete vẫn chạy bình thường
 
     args = parser.parse_args()
     command.command_run(args.func, args)
