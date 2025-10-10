@@ -2,7 +2,7 @@ import os
 import re
 import subprocess
 import ductn
-from ductn import SRC_DIR
+
 from .registry import COMMANDS, register_command
 
 from . import PACKAGE_NAME, SERVICE_NAME
@@ -40,7 +40,6 @@ def d_help():
 
 
 def _version():
-
     try:
         # Chạy lệnh `apt show <package_name>`
         # `capture_output=True` để lấy stdout, `text=True` để output là string
@@ -69,6 +68,9 @@ def _version():
         # Bắt các lỗi khác có thể xảy ra
         pass
 
+    import ductn  # import tại đây để tránh circular import khi utils load
+
+    SRC_DIR = os.path.dirname(os.path.realpath(ductn.__file__))
     changelog_path = os.path.join(SRC_DIR, "debian", "changelog")
 
     if os.path.exists(changelog_path):
@@ -122,7 +124,7 @@ def _version():
 
 
 @register_command
-def d_version():
+def d_version(args):
     """Show package version"""
 
     print(_version())

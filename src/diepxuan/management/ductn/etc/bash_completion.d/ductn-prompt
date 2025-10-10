@@ -1,0 +1,33 @@
+#!/bin/bash
+# Installation:
+#  Append to ~/.bash_completion
+# open new or restart existing shell session
+
+_ductn_completions() {
+    local cur script coms opts com
+    COMPREPLY=()
+    _get_comp_words_by_ref -n : cur words
+
+    for word in ${words[@]:1}; do
+        [[ $word != -* ]] && com=$word
+        [[ $word != -* ]] && break
+    done
+
+    if [[ $cur == $com ]]; then
+
+        readarray -d ' ' -t coms <<<$(${COMP_WORDS[0]} commands)
+
+        separator=" "
+        coms="$(printf "${separator}%s" "${coms[@]}")"
+        coms="${coms:${#separator}}"
+
+        COMPREPLY=($(compgen -W "${coms}" -- ${cur}))
+        __ltrim_colon_completions "$cur"
+
+        return 0
+    fi
+}
+
+complete -F _ductn_completions ductn
+complete -F _ductn_completions ductn.sh
+complete -F _ductn_completions ductn.py

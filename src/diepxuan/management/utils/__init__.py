@@ -3,7 +3,8 @@ import distro  # pyright: ignore[reportMissingImports]
 import logging
 
 # --- Thiết lập Logging ---
-from ductn import PACKAGE_NAME, SERVICE_NAME
+PACKAGE_NAME = "ductn"
+SERVICE_NAME = "ductnd"
 
 # Ghi log ra stdout/stderr, systemd sẽ tự động bắt và chuyển vào journald
 logging.basicConfig(
@@ -21,6 +22,7 @@ from .system import _is_root
 from rich.console import Console  # pyright: ignore[reportMissingImports]
 from rich.table import Table  # pyright: ignore[reportMissingImports]
 
+from . import commands
 from . import alias
 from . import about
 from . import vm

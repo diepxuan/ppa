@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import argparse
 import sys
 import os
 import platform
@@ -8,60 +9,43 @@ import importlib.util
 
 from utils import *
 
-# from utils.registry import COMMANDS
-
-# 1. Biến toàn cục và xác định đường dẫn
-GLOBAL_EXEC_PREFIX = "d_"
-PACKAGE_NAME = "ductn"
-SERVICE_NAME = "ductnd"
-SRC_DIR = os.path.dirname(os.path.realpath(__file__))
-
 
 def main():
-    args = sys.argv[1:]
 
-    if not args:
-        COMMANDS["help"]()
-        sys.exit(0)
+    parser = argparse.ArgumentParser(
+        prog="ductn",
+        # description="DiepXuan Corp",
+    )
+    subparsers = parser.add_subparsers(dest="command", required=True)
 
-    command_name = args[0]
-    command_args = args[1:]
+    # Tự động sinh subcommand từ COMMANDS
+    for cmd_name, func in COMMANDS.items():
+        doc = func.__doc__
+        description = doc.strip().split("\n")[0] if doc else ""
+        sub = subparsers.add_parser(cmd_name, help=description or "No description")
+        # if "start" in cmd_name or "stop" in cmd_name:
+        #     sub.add_argument("name", help="Tên VM")
+        sub.set_defaults(func=func)
 
-    if command_name in COMMANDS:
-        command_function = COMMANDS[command_name]
-
+    # Kích hoạt autocomplete nếu chạy CLI trực tiếp
+    if sys.argv[0].endswith(("ductn", "ductn.py", "ductn.sh")):
         try:
-            # Thực thi hàm với các tham số còn lại
-            # Dấu * sẽ "giải nén" (unpack) list `command_args`
-            # thành các tham số riêng lẻ cho hàm.
-            # Ví dụ: nếu command_args là ['vm1'], nó sẽ gọi command_function('vm1')
-            command_function(*command_args)
+            import argcomplete
+        except ImportError:
+            argcomplete = None
+        argcomplete.autocomplete(parser)
 
-            # Thoát với mã thành công
-            sys.exit(0)
+    args = parser.parse_args()
+    func = args.func
 
-        except TypeError as e:
-            # Bắt lỗi nếu số lượng tham số không khớp
-            print(f"Lỗi: Sai số lượng tham số cho lệnh '{command_name}'.")
-            # In ra thông tin hàm để người dùng biết cách dùng (nâng cao)
-            import inspect
+    if func:
+        import inspect
 
-            print(
-                f"Cách dùng: {command_name} {' '.join(inspect.signature(command_function).parameters)}"
-            )
-            sys.exit(1)
-
-        except Exception as e:
-            # Bắt các lỗi khác có thể xảy ra trong quá trình thực thi
-            print(f"Lỗi khi thực thi lệnh '{command_name}': {e}", file=sys.stderr)
-            sys.exit(1)
-
-    else:
-        # --- Trường hợp 4: Lệnh không tồn tại ---
-        # Nếu không tìm thấy lệnh, báo lỗi và hiển thị help
-        print(f"Lỗi: Lệnh '{command_name}' không hợp lệ.")
-        COMMANDS["help"]()  # Gọi hàm help
-        sys.exit(0)  # Thoát với mã lỗi 0
+        sig = inspect.signature(func)
+        if len(sig.parameters) == 0:
+            func()
+        else:
+            func(args)
 
 
 if __name__ == "__main__":
