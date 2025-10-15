@@ -4,15 +4,16 @@ import sys
 
 from . import register_command
 
+
 @register_command
-def d_alias_ll(*args):
+def d_alias_ll(args):
     """
     Alias script ll. Displays directory contents in long format (like ls -la).
     """
     try:
         # subprocess.run sẽ thực thi lệnh và chờ nó hoàn thành.
         # Chúng ta không cần `capture_output` vì muốn in trực tiếp ra terminal.
-        subprocess.run(['ls', '-lah'], check=True)
+        subprocess.run(["ls", "-lah"] + args, check=True)
     except FileNotFoundError:
         # Xảy ra nếu `ls` cũng không tồn tại (rất hiếm)
         # print(f"Lỗi: Không tìm thấy lệnh '{command_to_use[0]}'.", file=sys.stderr)

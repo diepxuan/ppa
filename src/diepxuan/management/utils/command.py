@@ -22,6 +22,7 @@ def d_commands():
 # Chạy lệnh với args nếu cần
 # -------------------------------
 def command_run(func, args=None):
+    """Tự động truyền args nếu hàm có tham số."""
     import inspect
 
     sig = inspect.signature(func)

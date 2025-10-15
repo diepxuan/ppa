@@ -32,3 +32,4 @@ from . import route
 from . import service
 from . import system
 from . import system_info
+from . import file
