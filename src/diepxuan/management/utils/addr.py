@@ -56,7 +56,8 @@ def _ip_local(interface: str = None) -> str:
             return ip_address
         except Exception:
             # Nếu có lỗi (ví dụ: không có kết nối mạng), trả về IP loopback
-            return "127.0.0.1"
+            # return "127.0.0.1"
+            pass
         finally:
             # Luôn luôn đóng socket sau khi dùng xong
             if s:
@@ -71,7 +72,8 @@ def _ip_local(interface: str = None) -> str:
             return result.stdout.strip()
         except (subprocess.CalledProcessError, FileNotFoundError):
             # logging.warning(f"Không thể lấy IP cho interface '{interface}'.")
-            return ""
+            # return ""
+            pass
 
 
 @register_command
