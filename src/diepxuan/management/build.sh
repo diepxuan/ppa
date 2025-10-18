@@ -123,6 +123,37 @@ Acquire::Languages "none";
 quiet "yes";
 EOF
 
+SOURCES="/etc/apt/sources.list"
+BACKUP="${SOURCES}.bak"
+APT_CONF="/etc/apt/apt.conf.d/99archive"
+
+# Kiểm tra xem là Debian Buster
+# if grep -q "buster" /etc/os-release; then
+if [[ "$CODENAME" == "buster" ]]; then
+    # echo "🛠 Debian Buster detected"
+
+    # Backup sources.list
+    if [ ! -f "$BACKUP" ]; then
+        $SUDO cp "$SOURCES" "$BACKUP"
+        # echo "✅ Backup created: $BACKUP"
+    fi
+
+    # Replace deb.debian.org -> archive.debian.org
+    $SUDO sed -i \
+        -e 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' \
+        -e 's|http://deb.debian.org/debian-security|http://archive.debian.org/debian-security|g' \
+        -e 's|buster-updates|buster/updates|g' \
+        "$SOURCES"
+    # echo "✅ sources.list updated to archive.debian.org"
+
+    # Disable Check-Valid-Until
+    echo 'Acquire::Check-Valid-Until "0";' | $SUDO tee "$APT_CONF" >/dev/null
+    # echo "✅ Created $APT_CONF"
+
+    # Update package lists
+    # $SUDO apt-get update
+fi
+
 # debconf has priority “required” and is indirectly depended on by some
 # essential packages. It is reasonably safe to blindly assume it is installed.
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
@@ -177,6 +208,7 @@ $SUDO apt install -y libdistro-info-perl
 $SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
 
 # shellcheck disable=SC2086
+$SUDO apt install -y python3-venv
 $SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
 $SUDO apt-get build-dep -y -- "$source_dir" || true
 end_group
