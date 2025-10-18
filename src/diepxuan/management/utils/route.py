@@ -22,6 +22,11 @@ def _route_default() -> str:
     if _is_root() is False:
         return ""
 
+    from .env_detect import detect_environment
+
+    if detect_environment() == "lxc":
+        return "eth0"
+
     # --- Ưu tiên 1: Tìm default route đang hoạt động ---
     try:
         cmd = ["ip", "route", "show", "default"]
@@ -172,7 +177,9 @@ def _interface_up(interface: str):
 
 def _interface_reload(interface: str):
     """Khởi động lại (down rồi up) một interface mạng."""
-    # logging.warning(f"Không có kết nối Internet. Đang khởi động lại interface '{interface}'...")
+    logging.warning(
+        f"Không có kết nối Internet. Đang khởi động lại interface '{interface}'..."
+    )
     _interface_down(interface)
     _interface_up(interface)
 
