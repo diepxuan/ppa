@@ -59,7 +59,9 @@ def _vm_sync():
 
     old_ips = set()
     try:
-        get_params = params | {"listZone": "true"}
+        # get_params = params | {"listZone": "true"}
+        get_params = params.copy()
+        get_params.update({"listZone": "true"})
         response = requests.get(
             url_get, params=get_params, timeout=10, verify=True
         )  # verify=False nếu dùng cert tự ký
