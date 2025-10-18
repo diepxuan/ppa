@@ -98,10 +98,17 @@ def _vm_sync():
     if ips_to_remove:
         # print(f"\nCác IP cần xóa: {list(ips_to_remove)}")
         for ip in ips_to_remove:
-            del_params = params | {
-                "type": "A",
-                "ipAddress": ip,
-            }
+            # del_params = params | {
+            #     "type": "A",
+            #     "ipAddress": ip,
+            # }
+            del_params = params.copy()
+            del_params.update(
+                {
+                    "type": "A",
+                    "ipAddress": ip,
+                }
+            )
             try:
                 res = requests.delete(
                     url_del, params=del_params, timeout=5, verify=True
@@ -116,10 +123,17 @@ def _vm_sync():
     if ips_to_add:
         # print(f"\nCác IP cần thêm: {list(ips_to_add)}")
         for ip in ips_to_add:
-            add_params = params | {
-                "type": "A",
-                "ipAddress": ip,
-            }
+            # add_params = params | {
+            #     "type": "A",
+            #     "ipAddress": ip,
+            # }
+            add_params = params.copy()
+            add_params.update(
+                {
+                    "type": "A",
+                    "ipAddress": ip,
+                }
+            )
             try:
                 res = requests.post(url_add, params=add_params, timeout=5, verify=True)
                 res.raise_for_status()
