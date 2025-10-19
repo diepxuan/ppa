@@ -142,8 +142,6 @@ if [[ "$CODENAME" == "buster" ]]; then
     $SUDO sed -i \
         -e 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' \
         -e 's|http://deb.debian.org/debian-security|http://archive.debian.org/debian-security|g' \
-        -e '|buster-updates|d' \
-        -e '/buster\/updates$/d' \
         "$SOURCES"
     # echo "✅ sources.list updated to archive.debian.org"
 
