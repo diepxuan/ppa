@@ -142,11 +142,15 @@ if [[ "$CODENAME" == "buster" ]]; then
     $SUDO sed -i \
         -e 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' \
         -e 's|http://deb.debian.org/debian-security|http://archive.debian.org/debian-security|g' \
-        -e 's|buster-updates|buster/updates|g' \
-        -e '/buster-updates/d' \
+        -e '|buster-updates|d' \
         -e '/buster\/updates$/d' \
         "$SOURCES"
     # echo "✅ sources.list updated to archive.debian.org"
+
+    # Remove buster-updates
+    $SUDO sed -i '/buster\/updates/d' "$SOURCES"
+    $SUDO sed -i '/buster-updates/d' "$SOURCES"
+
 
     # Disable Check-Valid-Until
     echo 'Acquire::Check-Valid-Until "0";' | $SUDO tee "$APT_CONF" >/dev/null
@@ -160,10 +164,11 @@ fi
 # essential packages. It is reasonably safe to blindly assume it is installed.
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
 
-$SUDO apt update
+$SUDO apt update || true
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 $SUDO apt-get -y install lsb-release ca-certificates curl
-$SUDO apt-get install -y python3 python3-pip
+$SUDO apt-get install -y python3 python3-pip python3-venv
+$SUDO apt-get install -y debhelper dh-python python3-all python3-setuptools
 
 # [[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] && {
 #     [[ ! -f /etc/apt/trusted.gpg.d/microsoft.asc ]] && {
@@ -210,7 +215,6 @@ $SUDO apt install -y libdistro-info-perl
 $SUDO apt install $INPUT_APT_OPTS -- $INPUT_EXTRA_BUILD_DEPS
 
 # shellcheck disable=SC2086
-$SUDO apt install -y python3-venv
 $SUDO apt build-dep $INPUT_APT_OPTS -- "$source_dir" || true
 $SUDO apt-get build-dep -y -- "$source_dir" || true
 end_group
