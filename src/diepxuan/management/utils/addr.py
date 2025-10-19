@@ -82,6 +82,12 @@ def d_ip_local():
     print(_ip_local())
 
 
+@register_command
+def d_ip_locals():
+    """In toan bo địa chỉ IP nội bộ (Local IP)"""
+    print(_ip_locals())
+
+
 def _ip_wan():
     """
     Lấy địa chỉ IP WAN (Public IP) bằng cách gọi một dịch vụ API bên ngoài.

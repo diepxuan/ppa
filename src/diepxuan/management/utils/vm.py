@@ -95,6 +95,7 @@ def _vm_sync():
     # print(f"Các IP cục bộ hiện tại: {list(new_ips)}")
 
     ips_to_remove = old_ips - new_ips
+    # print(f"ips_to_remove: {list(ips_to_remove)}")
     if ips_to_remove:
         # print(f"\nCác IP cần xóa: {list(ips_to_remove)}")
         for ip in ips_to_remove:
@@ -109,10 +110,9 @@ def _vm_sync():
                     "ipAddress": ip,
                 }
             )
+            # print(del_params)
             try:
-                res = requests.delete(
-                    url_del, params=del_params, timeout=5, verify=True
-                )
+                res = requests.get(url_del, params=del_params, timeout=5, verify=True)
                 res.raise_for_status()
                 # print(f"  - Đã xóa thành công IP: {ip}")
             except requests.exceptions.RequestException as e:
