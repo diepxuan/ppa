@@ -24,7 +24,7 @@ def main():
         # description="DiepXuan Corp",
     )
 
-    subparsers = parser.add_subparsers(dest="command", required=False)
+    subparsers = parser.add_subparsers(dest="command")
     # parser.add_argument(
     #     "extra_args", nargs=argparse.REMAINDER, help="Extra arguments for the command"
     # )
