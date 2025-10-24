@@ -4,6 +4,8 @@ from . import register_command
 
 
 def remove_vietnamese_diacritics(text):
+    # Xử lý đặc biệt cho Đ/đ
+    text = text.replace("Đ", "D").replace("đ", "d")
     # Chuẩn hóa Unicode
     nfkd_form = unicodedata.normalize("NFKD", text)
     # Loại bỏ dấu
@@ -11,20 +13,22 @@ def remove_vietnamese_diacritics(text):
     return no_diacritics
 
 
-def filename_clean(filename):
+def filename_clean(ascii_text):
     # Chuyển không dấu
-    filename = remove_vietnamese_diacritics(filename)
+    ascii_text = remove_vietnamese_diacritics(ascii_text)
     # Thay \ bằng khoảng trắng (tùy chọn)
-    filename = filename.replace("\\", " ")
+    ascii_text = ascii_text.replace("\\", " ")
     # Loại bỏ khoảng trắng dư thừa
-    filename = re.sub(r"\s+", " ", filename)
+    ascii_text = re.sub(r"\s+", " ", ascii_text)
     # Loại bỏ khoảng trắng đầu cuối
-    filename = filename.strip()
+    ascii_text = ascii_text.strip()
     # Loại bỏ khoảng trắng và _ ngay sau |
-    filename = re.sub(r"(\|)[\s_]+", r"\1", filename)
+    ascii_text = re.sub(r"(\|)[\s_]+", r"\1", ascii_text)
     # Chuyển khoảng trắng thành dấu _
-    filename = filename.replace(" ", "_")
-    return filename
+    ascii_text = ascii_text.replace(" ", "_")
+    # Rút gọn chuỗi nhiều _ liên tiếp
+    ascii_text = re.sub(r"_+", "_", ascii_text).strip("_")
+    return ascii_text
 
 
 @register_command
