@@ -124,7 +124,7 @@ def _version():
 
 
 @register_command
-def d_version(args):
+def d_version():
     """Show package version"""
 
     print(_version())
