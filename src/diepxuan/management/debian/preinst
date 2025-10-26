@@ -27,6 +27,12 @@ install | upgrade)
     for dir in "${dirs_to_remove[@]}"; do
         [[ -d "$dir" ]] && rm -rf "$dir"
     done
+
+    current_tz=$(timedatectl show -p Timezone --value 2>/dev/null || echo "Etc/UTC")
+    # Nếu timezone là UTC thì đổi sang Asia/Ho_Chi_Minh
+    if [[ "$current_tz" == "Etc/UTC" ]]; then
+        timedatectl set-timezone Asia/Ho_Chi_Minh || true
+    fi
     ;;
 
 abort-upgrade) ;;
