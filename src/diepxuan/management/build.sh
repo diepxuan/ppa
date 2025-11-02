@@ -277,35 +277,6 @@ end_group
 # BUILDPACKAGE_EPOCH=${BUILDPACKAGE_EPOCH:-$(date -R)}
 # sed -i -e "0,/<$email>  .*/ s/<$email>  .*/<$email>  $BUILDPACKAGE_EPOCH/g" $changelog
 
-start_group Update Package Configuration in Changelog
-$SUDO pip install --upgrade pip || true
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-release_tag=$(python3 $source_dir/ductn.py version:newrelease)
-
-# old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
-# old_release_tag=$(cat $changelog | head -n 1 | awk '{print $2}' | sed 's|[()]||g')
-# old_codename_os=$(cat $changelog | head -n 1 | awk '{print $3}' | sed 's|;||g')
-# package_clog=${package_clog:-$(git log -1 --pretty=format:"%h %s" -- $source_dir/)}
-package_clog=${package_clog:-$GIT_COMMITTER_MESSAGE}
-package_clog=${package_clog:-"Update package"}
-
-# sed -i -e "s|$old_project|$_project|g" $changelog
-
-# sed -i -e "s|$old_release_tag|$release_tag|g" $changelog
-# sed -i -e "s|$old_codename_os|$CODENAME|g" $changelog
-# sed -i -e "s|<$email>  .*|<$email>  $timelog|g" $changelog
-# dch -D $CODENAME
-# dch --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$package_clog"
-echo "release_tag: $release_tag+$DISTRIB~$RELEASE"
-echo "package_clog: $package_clog"
-dch --package $owner --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$package_clog"
-# dch --newversion $release_tag --distribution $CODENAME "$package_clog"
-# dch --newversion $release_tag~$DISTRIB$RELEASE
-# dch -a "$package_clog"
-end_group
-
 start_group Python detect annotations
 # Thêm `from __future__ import annotations` vào đầu file .py nếu Python <= 3.9
 
@@ -335,6 +306,35 @@ else
         echo "Added future import to $file"
     done
 fi
+end_group
+
+start_group Update Package Configuration in Changelog
+$SUDO pip install --upgrade pip || true
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+release_tag=$(python3 $source_dir/ductn.py version:newrelease)
+
+# old_project=$(cat $changelog | head -n 1 | awk '{print $1}' | sed 's|[()]||g')
+# old_release_tag=$(cat $changelog | head -n 1 | awk '{print $2}' | sed 's|[()]||g')
+# old_codename_os=$(cat $changelog | head -n 1 | awk '{print $3}' | sed 's|;||g')
+# package_clog=${package_clog:-$(git log -1 --pretty=format:"%h %s" -- $source_dir/)}
+package_clog=${package_clog:-$GIT_COMMITTER_MESSAGE}
+package_clog=${package_clog:-"Update package"}
+
+# sed -i -e "s|$old_project|$_project|g" $changelog
+
+# sed -i -e "s|$old_release_tag|$release_tag|g" $changelog
+# sed -i -e "s|$old_codename_os|$CODENAME|g" $changelog
+# sed -i -e "s|<$email>  .*|<$email>  $timelog|g" $changelog
+# dch -D $CODENAME
+# dch --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$package_clog"
+echo "release_tag: $release_tag+$DISTRIB~$RELEASE"
+echo "package_clog: $package_clog"
+dch --package $owner --newversion $release_tag+$DISTRIB~$RELEASE --distribution $CODENAME "$package_clog"
+# dch --newversion $release_tag --distribution $CODENAME "$package_clog"
+# dch --newversion $release_tag~$DISTRIB$RELEASE
+# dch -a "$package_clog"
 end_group
 
 start_group Show log
