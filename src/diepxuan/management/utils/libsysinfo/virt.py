@@ -1,7 +1,8 @@
 import subprocess
+from typing import Optional
 
 
-def check_vm() -> str | None:
+def check_vm() -> Optional[str]:
     detected_vm = subprocess.run(
         ["systemd-detect-virt", "-v"], capture_output=True, text=True
     ).stdout.strip()
@@ -10,7 +11,7 @@ def check_vm() -> str | None:
     return None
 
 
-def check_container() -> str | None:
+def check_container() -> Optional[str]:
     detected_ct = subprocess.run(
         ["systemd-detect-virt", "-c"], capture_output=True, text=True
     ).stdout.strip()

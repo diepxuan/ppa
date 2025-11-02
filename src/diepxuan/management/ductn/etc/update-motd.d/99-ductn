@@ -1,5 +1,15 @@
 #!/bin/sh
 
+# Kiểm tra xem TurnKey MOTD đã tồn tại chưa
+if [ -d /etc/update-motd.d ]; then
+    # Kiểm tra có script nào có tên hoặc chứa 'turnkey'
+    if ls /etc/update-motd.d 2>/dev/null | grep -iq 'turnkey'; then
+        exit 0
+    fi
+
+    grep -iq 'turnkey-sysinfo' /etc/update-motd.d/* 2>/dev/null && exit 0
+fi
+
 # Kiểm tra xem lệnh ductn có tồn tại hay không
 if command -v ductn >/dev/null 2>&1; then
     # Thực thi sys:info, bỏ qua lỗi (vẫn tiếp tục hiển thị MOTD)
