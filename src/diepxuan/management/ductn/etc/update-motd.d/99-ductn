@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Kiểm tra xem lệnh ductn có tồn tại hay không
+if command -v ductn >/dev/null 2>&1; then
+    # Thực thi sys:info, bỏ qua lỗi (vẫn tiếp tục hiển thị MOTD)
+    ductn sys:info 2>/dev/null || true
+else
+    echo "[ductn] not installed"
+fi

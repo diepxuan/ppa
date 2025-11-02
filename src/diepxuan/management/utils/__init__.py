@@ -31,6 +31,7 @@ from . import host
 from . import route
 from . import service
 from . import system
+from . import system_os
 from . import system_info
 from . import file
 from . import env_detect

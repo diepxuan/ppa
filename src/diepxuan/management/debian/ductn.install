@@ -4,4 +4,5 @@ ductn/var/lib/lxc/hooks/default-hook.sh var/lib/lxc/hooks
 ductn/etc/sysctl.d/99-ductn.conf etc/sysctl.d
 ductn/etc/cron.daily/ductn etc/cron.daily
 ductn/etc/bash_completion.d/ductn-prompt etc/bash_completion.d
+ductn/etc/update-motd.d/99-ductn etc/update-motd.d
 ductn/usr/lib/systemd/system/ductnd.service usr/lib/systemd/system

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-from . import system_info
+from . import system_os
 from . import addr
 from . import host
 from . import Console
@@ -29,10 +29,10 @@ def d_vm_info():
     )
     table.add_row("Hostname", host._host_fullname())
     table.add_row("IP Address", addr._ip_local())
-    table.add_row("DISTRIB", system_info._os_distro())
-    table.add_row("OS", system_info._os_codename())
-    table.add_row("RELEASE", system_info._os_release())
-    table.add_row("ARCHITECTURE", system_info._os_architecture())
+    table.add_row("DISTRIB", system_os._os_distro())
+    table.add_row("OS", system_os._os_codename())
+    table.add_row("RELEASE", system_os._os_release())
+    table.add_row("ARCHITECTURE", system_os._os_architecture())
 
     # In bảng ra console
     console.print(table)

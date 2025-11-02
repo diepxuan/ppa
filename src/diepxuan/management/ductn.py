@@ -21,7 +21,7 @@ def main():
 
     parser = argparse.ArgumentParser(
         prog="ductn",
-        # description="DiepXuan Corp",
+        description="DiepXuan Corp",
     )
 
     subparsers = parser.add_subparsers(dest="command")
