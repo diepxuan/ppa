@@ -1,12 +1,11 @@
 import os
 
-# from collections.abc import Iterator
-from typing import Iterator, Dict, Union, Optional
+from collections.abc import Iterator
 
 
 def _get_mounts(
     mounts_file: str = "/proc/mounts",
-) -> Iterator[Dict[str, Union[str, int]]]:
+) -> Iterator[dict[str, str | int]]:
     """
     Given a mounts file (e.g., /proc/mounts), generate dicts with the following
     keys:
@@ -42,7 +41,7 @@ def _get_mounts(
 
 def _get_filesystem_for_path(
     path: str, mounts_file: str = "/proc/mounts"
-) -> Optional[Dict[str, Union[str, int]]]:
+) -> dict[str, str | int] | None:
     candidate = None
 
     path = os.path.realpath(path)
@@ -70,7 +69,7 @@ def _format_megabytes(megabytes: int) -> str:
         return f"{megabytes}MB"
 
 
-def _format_used(info: Optional[Dict[str, Union[str, int]]]) -> Optional[str]:
+def _format_used(info: dict[str, str | int] | None) -> str | None:
     if not info:
         return None
     # info["total-space"] is an int
@@ -79,5 +78,5 @@ def _format_used(info: Optional[Dict[str, Union[str, int]]]) -> Optional[str]:
     return f"{used / float(total) * 100:.1f}% of {_format_megabytes(total)}"
 
 
-def usage(path: str) -> Optional[str]:
+def usage(path: str) -> str | None:
     return _format_used(_get_filesystem_for_path(path))

@@ -6,6 +6,12 @@ import logging
 PACKAGE_NAME = "ductn"
 SERVICE_NAME = "ductnd"
 
+# Nếu chạy bằng Python < 3.11, chèn future import vào compile hook
+if sys.version_info < (3, 10):
+    import builtins
+
+    builtins.__annotations__ = True
+
 # Ghi log ra stdout/stderr, systemd sẽ tự động bắt và chuyển vào journald
 logging.basicConfig(
     level=logging.INFO,
