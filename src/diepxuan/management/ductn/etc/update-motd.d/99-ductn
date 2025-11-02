@@ -1,14 +1,24 @@
 #!/bin/sh
 
-# Kiểm tra xem TurnKey MOTD đã tồn tại chưa
-if [ -d /etc/update-motd.d ]; then
+MOTD_DIR="/etc/update-motd.d"
+CURRENT_SCRIPT="$0"
+
+if [ -d $MOTD_DIR ]; then
     # Kiểm tra có script nào có tên hoặc chứa 'turnkey'
-    if ls /etc/update-motd.d 2>/dev/null | grep -iq 'turnkey'; then
+    if ls $MOTD_DIR 2>/dev/null | grep -iq 'turnkey'; then
         exit 0
     fi
 
-    grep -iq 'turnkey-sysinfo' /etc/update-motd.d/* 2>/dev/null && exit 0
+    # grep -iq 'turnkey-sysinfo' /etc/update-motd.d/* 2>/dev/null && exit 0
 fi
+
+# Kiểm tra xem TurnKey MOTD đã tồn tại chưa
+for f in "$MOTD_DIR"/*; do
+    [ "$f" = "$CURRENT_SCRIPT" ] && continue
+    if grep -iq 'turnkey-sysinfo' "$f" 2>/dev/null; then
+        exit 0
+    fi
+done
 
 # Kiểm tra xem lệnh ductn có tồn tại hay không
 if command -v ductn >/dev/null 2>&1; then
