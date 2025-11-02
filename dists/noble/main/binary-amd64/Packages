@@ -1,6 +1,6 @@
 Package: ductn
 Source: diepxuan
-Version: 5.2.0+ubuntu~24.04
+Version: 5.2.1+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 13779
@@ -8,29 +8,29 @@ Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-tra
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn_5.2.0+ubuntu~24.04_amd64.deb
-Size: 13900852
-SHA256: 4e43bbd3fe71de1fae5eb1588d05439bb7babea97d2490a433df3b3a0efa5d2b
-SHA1: 68b070f9ddc6260720e4883c217adb326676f0ba
-MD5sum: 4e38451f1bab1fb5e21ac426c993830f
+Filename: pool/main/d/diepxuan/ductn_5.2.1+ubuntu~24.04_amd64.deb
+Size: 13901204
+SHA256: 12db229814f59b9a0a4cdd40ae88a45d34274a4f705c2defafbd4136ba53d558
+SHA1: 8f3a6d175002b5285634070af25638be0335d9c2
+MD5sum: 366b8d53cd9761c258f44e62d29cc157
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: ductn-ll
 Source: diepxuan
-Version: 5.2.0+ubuntu~24.04
+Version: 5.2.1+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 13
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn-ll_5.2.0+ubuntu~24.04_amd64.deb
-Size: 4970
-SHA256: 8013e9b8bb521cbac4c6ea08cb13645ce1d074a79f196d490682e8e6cc28c96a
-SHA1: a01e7230280a970d772e585427ba6998f13f2d51
-MD5sum: 779093cff3fd815b75406bc19cf73718
+Filename: pool/main/d/diepxuan/ductn-ll_5.2.1+ubuntu~24.04_amd64.deb
+Size: 4992
+SHA256: d3551f2a9469c9d021addce54bf61b92ae5dfc60043be5d60b626de20c968982
+SHA1: 65d6d628417c7502ddc70cd07e650f207c056260
+MD5sum: 92d0439e3c2a458b95290573bb1ae76b
 Description: A package to provide the 'll' command (like ls -l).
   This package provides the 'll' command, which behaves like 'ls -l'.
   If the user already has an alias for 'll', it will use that instead.
@@ -39,7 +39,7 @@ Description: A package to provide the 'll' command (like ls -l).
 
 Package: lar
 Source: diepxuan
-Version: 5.2.0+ubuntu~24.04
+Version: 5.2.1+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 13
@@ -47,18 +47,18 @@ Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.2.0+ubuntu~24.04_amd64.deb
-Size: 4950
-SHA256: 870017670b4ae2e41509d3b5a513ca06ddbdd1fad65d494ef5cc51a62edb528d
-SHA1: ce056b4a60a6a1a4edd4cbf97cb79c384b9263af
-MD5sum: 9d36ff6f84d509b810a3a2911a3974de
+Filename: pool/main/d/diepxuan/lar_5.2.1+ubuntu~24.04_amd64.deb
+Size: 4970
+SHA256: d7a74fa372ad62fd8b42608471ee27277c6c371b55fe6d6a1ac80ad9614df3ab
+SHA1: b493300ca284207cbcef47c2e51b4d31ec5ac64b
+MD5sum: be594b70365abbbdadaa2e26a722446c
 Description: Laravel support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: m2
 Source: diepxuan
-Version: 5.2.0+ubuntu~24.04
+Version: 5.2.1+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 13
@@ -66,11 +66,11 @@ Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.2.0+ubuntu~24.04_amd64.deb
-Size: 4944
-SHA256: ede776b3674666acbe2e100a87439c9320d5a882f35fd3427dea1276198ac908
-SHA1: aed8b5805a47517e4a5e4c00b00d8cabc8e2baa0
-MD5sum: de7c297d26ed28b0b2b1d02503905506
+Filename: pool/main/d/diepxuan/m2_5.2.1+ubuntu~24.04_amd64.deb
+Size: 4964
+SHA256: 338a33381dd524d8b5d10a6629f6642dad08269336ec9304eb98f7b326f5bebe
+SHA1: a10950148a3256d1d0955022e59210b76e4ff7c1
+MD5sum: 44446e535f25c6da402657a531453734
 Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
