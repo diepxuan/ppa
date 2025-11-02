@@ -306,6 +306,37 @@ dch --package $owner --newversion $release_tag+$DISTRIB~$RELEASE --distribution 
 # dch -a "$package_clog"
 end_group
 
+start_group Python detect annotations
+# Thêm `from __future__ import annotations` vào đầu file .py nếu Python <= 3.9
+
+# Kiểm tra phiên bản Python
+PYTHON_VERSION=$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')
+PYTHON_MAJOR=$(echo "$PYTHON_VERSION" | cut -d. -f1)
+PYTHON_MINOR=$(echo "$PYTHON_VERSION" | cut -d. -f2)
+
+if [ "$PYTHON_MAJOR" -gt 3 ] && [ "$PYTHON_MINOR" -ge 10 ]; then
+    echo "Python >= 3.10, không cần thêm __future__ import."
+else
+    # Chuỗi future import
+    FUTURE_LINE="from __future__ import annotations"
+
+    # Thư mục project (chỉnh lại nếu cần)
+    PROJECT_DIR="$source_dir"
+
+    # Duyệt tất cả file .py
+    find "$PROJECT_DIR" -type f -name "*.py" | while read -r file; do
+        # Kiểm tra xem file đã có future import chưa (chỉ kiểm tra 5 dòng đầu)
+        if head -n 10 "$file" | grep -qF "$FUTURE_LINE"; then
+            continue
+        fi
+
+        # Thêm dòng future vào đầu file
+        sed -i "1i $FUTURE_LINE" "$file"
+        echo "Added future import to $file"
+    done
+fi
+end_group
+
 start_group Show log
 echo $control
 cat $control || true
