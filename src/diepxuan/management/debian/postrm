@@ -21,13 +21,13 @@ purge)
         # Kiểm tra xem dòng hook có trong file không
         if grep -Fxq "$HOOK_LINE" "$CONFIG_FILE"; then
             sudo sed -i "\|$HOOK_LINE|d" "$CONFIG_FILE"
-            echo "✔ Đã gỡ bỏ hook khỏi $CONFIG_FILE"
+            echo "[ductn] ✔ Đã gỡ bỏ hook khỏi $CONFIG_FILE"
         fi
     fi
     ;;
 upgrade | failed-upgrade | abort-install | abort-upgrade | disappear) ;;
 *)
-    echo "postrm called with unknown argument: $1" >&2
+    echo "[ductn] postrm called with unknown argument: $1" >&2
     exit 1
     ;;
 esac

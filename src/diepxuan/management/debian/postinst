@@ -32,18 +32,25 @@ configure)
     if [[ -f "$CONFIG_FILE" ]]; then
         # Kiểm tra xem dòng hook đã có trong file chưa
         if grep -Fxq "$HOOK_LINE" "$CONFIG_FILE"; then
-            echo "✔ Hook đã tồn tại trong $CONFIG_FILE"
+            echo "[ductn] ✔ Hook đã tồn tại trong $CONFIG_FILE"
         else
             echo "$HOOK_LINE" | sudo tee -a "$CONFIG_FILE" >/dev/null
-            echo "✔ Đã thêm hook vào $CONFIG_FILE"
+            echo "[ductn] ✔ Đã thêm hook vào $CONFIG_FILE"
         fi
+    fi
+
+    MOTD_FILE="/etc/update-motd.d/99-ductn"
+
+    if [[ -f "$MOTD_FILE" ]]; then
+        chmod +x "$MOTD_FILE"
+        echo "[ductn] ✔ MOTD script permissions set."
     fi
     ;;
 
 abort-upgrade | abort-remove | abort-deconfigure) ;;
 
 *)
-    echo "postinst called with unknown argument \`$1'" >&2
+    echo "[ductn] postinst called with unknown argument \`$1'" >&2
     exit 1
     ;;
 esac

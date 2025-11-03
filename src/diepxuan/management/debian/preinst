@@ -38,7 +38,7 @@ install | upgrade)
 abort-upgrade) ;;
 
 *)
-    echo "preinst called with unknown argument \`$1'" >&2
+    echo "[ductn] preinst called with unknown argument \`$1'" >&2
     exit 1
     ;;
 esac
