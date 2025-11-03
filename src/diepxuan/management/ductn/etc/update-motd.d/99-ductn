@@ -6,6 +6,7 @@ CURRENT_SCRIPT="$0"
 if [ -d $MOTD_DIR ]; then
     # Kiểm tra có script nào có tên hoặc chứa 'turnkey'
     if ls $MOTD_DIR 2>/dev/null | grep -iq 'turnkey'; then
+        # echo 'script nào có tên hoặc chứa "turnkey"'
         exit 0
     fi
 
@@ -14,8 +15,13 @@ fi
 
 # Kiểm tra xem TurnKey MOTD đã tồn tại chưa
 for f in "$MOTD_DIR"/*; do
-    [ "$f" = "$CURRENT_SCRIPT" ] && continue
+    # echo $f
+    [ "$f" = "$CURRENT_SCRIPT" ] && continue # Bỏ qua chính file này
+    case "$f" in
+        *99-ductn) continue ;;  # Bỏ qua chính file này
+    esac
     if grep -iq 'turnkey-sysinfo' "$f" 2>/dev/null; then
+        # echo 'script chứa "turnkey"'
         exit 0
     fi
 done
