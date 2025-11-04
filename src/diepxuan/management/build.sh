@@ -113,16 +113,7 @@ end_group
 
 cd $source_dir
 
-start_group Install Build Source Dependencies
-APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
-
-cat | $SUDO tee "$APT_CONF_FILE" <<-EOF
-APT::Get::Assume-Yes "yes";
-APT::Install-Recommends "no";
-Acquire::Languages "none";
-quiet "yes";
-EOF
-
+start_group Fix apt sources
 SOURCES="/etc/apt/sources.list"
 BACKUP="${SOURCES}.bak"
 APT_CONF="/etc/apt/apt.conf.d/99archive"
@@ -165,6 +156,20 @@ if [[ "$RELEASE" == "20.10" ]]; then
     # sed -i 's/debhelper-compat (= 12)/debhelper-compat (= 11)/' debian/control || true
 fi
 
+cat $SOURCES
+end_group
+
+
+start_group Install Build Source Dependencies
+APT_CONF_FILE=/etc/apt/apt.conf.d/50build-deb-action
+
+cat | $SUDO tee "$APT_CONF_FILE" <<-EOF
+APT::Get::Assume-Yes "yes";
+APT::Install-Recommends "no";
+Acquire::Languages "none";
+quiet "yes";
+EOF
+
 # debconf has priority “required” and is indirectly depended on by some
 # essential packages. It is reasonably safe to blindly assume it is installed.
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
@@ -172,7 +177,7 @@ printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selection
 $SUDO apt update || true
 $SUDO apt-get install -y build-essential debhelper fakeroot gnupg reprepro wget curl git sudo vim locales lsb-release
 $SUDO apt-get -y install lsb-release ca-certificates curl
-$SUDO apt-get install -y python3 python3-pip python3-venv
+$SUDO apt-get install -y python3 python3-pip python3-venv gcc python3-dev
 $SUDO apt-get install -y debhelper dh-python python3-all python3-setuptools
 
 # [[ ! -f /usr/share/keyrings/microsoft-prod.gpg ]] && {
