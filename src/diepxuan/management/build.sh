@@ -156,7 +156,9 @@ if [[ "$RELEASE" == "20.10" ]]; then
     # sed -i 's/debhelper-compat (= 12)/debhelper-compat (= 11)/' debian/control || true
 fi
 
-cat $SOURCES
+ls -lah /etc/apt/
+ls -lah /etc/apt/sources.list.d/
+cat $SOURCES || true
 end_group
 
 
