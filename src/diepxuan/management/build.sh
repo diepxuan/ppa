@@ -114,8 +114,8 @@ end_group
 cd $source_dir
 
 start_group Fix apt sources
-SOURCES="/etc/apt/sources.list"
-BACKUP="${SOURCES}.bak"
+# SOURCES="/etc/apt/sources.list"
+# BACKUP="${SOURCES}.bak"
 APT_CONF="/etc/apt/apt.conf.d/99archive"
 
 # Kiểm tra xem là Debian Buster
@@ -124,21 +124,25 @@ if [[ "$CODENAME" == "buster" ]]; then
     # echo "🛠 Debian Buster detected"
 
     # Backup sources.list
-    if [ ! -f "$BACKUP" ]; then
-        $SUDO cp "$SOURCES" "$BACKUP"
-        # echo "✅ Backup created: $BACKUP"
-    fi
+    # if [ ! -f "$BACKUP" ]; then
+    #     $SUDO cp /etc/apt/sources.list "$BACKUP"
+    #     # echo "✅ Backup created: $BACKUP"
+    # fi
+    TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+    mkdir -p /etc/apt/backup
+    cp -a /etc/apt/sources.list /etc/apt/backup/sources.list.$TIMESTAMP 2>/dev/null || true
+    cp -a /etc/apt/sources.list.d /etc/apt/backup/sources.list.d.$TIMESTAMP 2>/dev/null || true
 
     # Replace deb.debian.org -> archive.debian.org
     $SUDO sed -i \
         -e 's|http://deb.debian.org/debian|http://archive.debian.org/debian|g' \
         -e 's|http://deb.debian.org/debian-security|http://archive.debian.org/debian-security|g' \
-        "$SOURCES"
+        /etc/apt/sources.list
     # echo "✅ sources.list updated to archive.debian.org"
 
     # Remove buster-updates
-    $SUDO sed -i '/buster\/updates/d' "$SOURCES"
-    $SUDO sed -i '/buster-updates/d' "$SOURCES"
+    $SUDO sed -i '/buster\/updates/d' /etc/apt/sources.list
+    $SUDO sed -i '/buster-updates/d' /etc/apt/sources.list
 
 
     # Disable Check-Valid-Until
@@ -151,14 +155,49 @@ fi
 
 # --- Adjust for Ubuntu 24.10 ---
 if [[ "$RELEASE" == "20.10" ]]; then
-    sudo sed -i 's|archive.ubuntu.com/ubuntu|old-releases.ubuntu.com/ubuntu|g' $SOURCES
-    sudo sed -i 's|security.ubuntu.com/ubuntu|old-releases.ubuntu.com/ubuntu|g' $SOURCES
+    sudo sed -i 's|archive.ubuntu.com/ubuntu|old-releases.ubuntu.com/ubuntu|g' /etc/apt/sources.list
+    sudo sed -i 's|security.ubuntu.com/ubuntu|old-releases.ubuntu.com/ubuntu|g' /etc/apt/sources.list
     # sed -i 's/debhelper-compat (= 12)/debhelper-compat (= 11)/' debian/control || true
+fi
+
+# Check if archive.ubuntu.com still accessible
+if ! curl -fsI "http://archive.ubuntu.com/ubuntu/dists/$CODENAME/Release" >/dev/null 2>&1; then
+    echo "⚠️ Repo $CODENAME không còn tồn tại trên archive.ubuntu.com"
+    echo "➡️  Sẽ chuyển sang old-releases.ubuntu.com"
+
+    # Backup sources.list và các file repo
+    TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+    mkdir -p /etc/apt/backup
+    cp -a /etc/apt/sources.list /etc/apt/backup/sources.list.$TIMESTAMP 2>/dev/null || true
+    cp -a /etc/apt/sources.list.d /etc/apt/backup/sources.list.d.$TIMESTAMP 2>/dev/null || true
+
+    # Xử lý định dạng cũ (.list)
+    if grep -Rq "archive.ubuntu.com" /etc/apt/sources.list /etc/apt/sources.list.d 2>/dev/null; then
+        echo "🛠  Cập nhật file .list cũ..."
+        sed -i 's|http://archive.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' /etc/apt/sources.list 2>/dev/null || true
+        sed -i 's|http://security.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' /etc/apt/sources.list 2>/dev/null || true
+        sed -i 's|http://archive.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' /etc/apt/sources.list.d/*.list 2>/dev/null || true
+        sed -i 's|http://security.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' /etc/apt/sources.list.d/*.list 2>/dev/null || true
+    fi
+
+    # Xử lý định dạng mới (.sources, deb822)
+    if ls /etc/apt/sources.list.d/*.sources >/dev/null 2>&1; then
+        echo "🛠  Cập nhật file .sources (deb822 format)..."
+        for src in /etc/apt/sources.list.d/*.sources; do
+            sed -i 's|http://archive.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' "$src"
+            sed -i 's|http://security.ubuntu.com/ubuntu|http://old-releases.ubuntu.com/ubuntu|g' "$src"
+        done
+    fi
+
+    echo "✅ Repo sources đã được cập nhật."
+else
+    echo "✅ Repo $CODENAME vẫn còn hoạt động, không cần thay đổi."
 fi
 
 ls -lah /etc/apt/
 ls -lah /etc/apt/sources.list.d/
-cat $SOURCES || true
+cat /etc/apt/sources.list || true
+cat /etc/apt/sources.list.d/ubuntu.sources || true
 end_group
 
 
