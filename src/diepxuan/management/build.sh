@@ -299,9 +299,9 @@ PYTHON_VERSION=$(python3 -c 'import sys; print(f"{sys.version_info.major}.{sys.v
 PYTHON_MAJOR=$(echo "$PYTHON_VERSION" | cut -d. -f1)
 PYTHON_MINOR=$(echo "$PYTHON_VERSION" | cut -d. -f2)
 
-if [ "$PYTHON_MAJOR" -gt 3 ] && [ "$PYTHON_MINOR" -ge 10 ]; then
-    echo "Python >= 3.10, không cần thêm __future__ import."
-else
+echo "[INFO] Detected Python version: $PYTHON_MAJOR.$PYTHON_MINOR"
+
+if [ "$PYTHON_MAJOR" -eq 3 ] && [ "$PYTHON_MINOR" -ge 7 ] && [ "$PYTHON_MINOR" -le 9 ]; then
     # Chuỗi future import
     FUTURE_LINE="from __future__ import annotations"
 
@@ -323,9 +323,10 @@ fi
 end_group
 
 start_group Update Package Configuration in Changelog
-$SUDO pip install --upgrade pip || true
 python3 -m venv venv
 source venv/bin/activate
+pip install --upgrade pip || true
+pip install --upgrade setuptools wheel
 pip install -r requirements.txt
 release_tag=$(python3 $source_dir/ductn.py version:newrelease)
 
