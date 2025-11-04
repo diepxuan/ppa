@@ -158,6 +158,13 @@ if [[ "$CODENAME" == "buster" ]]; then
     # $SUDO apt-get update
 fi
 
+# --- Adjust for Ubuntu 24.10 ---
+if [[ "$RELEASE" == "20.10" ]]; then
+    sudo sed -i 's|archive.ubuntu.com/ubuntu|old-releases.ubuntu.com/ubuntu|g' $SOURCES
+    sudo sed -i 's|security.ubuntu.com/ubuntu|old-releases.ubuntu.com/ubuntu|g' $SOURCES
+    # sed -i 's/debhelper-compat (= 12)/debhelper-compat (= 11)/' debian/control || true
+fi
+
 # debconf has priority “required” and is indirectly depended on by some
 # essential packages. It is reasonably safe to blindly assume it is installed.
 printf "man-db man-db/auto-update boolean false\n" | $SUDO debconf-set-selections
