@@ -8,6 +8,8 @@ from .registry import register_command
 from .libsysinfo import disk
 from .libsysinfo.memstats import MemoryStats
 
+from . import system_os
+
 from datetime import datetime
 import time
 import socket
@@ -92,9 +94,11 @@ def d_sys_info():
         rows.append(("", nic))
 
     welcome = socket.gethostname().capitalize()
+    operating_system = f"  OS:           {system_os._os_distro().capitalize()} {system_os._os_release()}"
     print(f"System information for {welcome}")
     print(f"  {get_time_date()}")
     print()
+    print(operating_system)
     max_col = max([len(row[0]) for row in rows])
     tpl = "  {:<{col}}   {}"
     for row in rows:

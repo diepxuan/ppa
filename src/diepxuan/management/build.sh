@@ -160,8 +160,23 @@ if [[ "$RELEASE" == "20.10" ]]; then
     # sed -i 's/debhelper-compat (= 12)/debhelper-compat (= 11)/' debian/control || true
 fi
 
+# Ensure curl or wget exists
+if command -v curl >/dev/null 2>&1; then
+    FETCH="curl -fs -o /dev/null -w %{http_code}"
+elif command -v wget >/dev/null 2>&1; then
+    FETCH="wget --spider --server-response --quiet --output-document=-"
+else
+    echo "⚙️ Installing curl..."
+    apt-get update -qq >/dev/null 2>&1
+    apt-get install -y curl >/dev/null 2>&1
+    FETCH="curl -fs -o /dev/null -w %{http_code}"
+fi
+# Check repository availability
+HTTP_CODE=$($FETCH "http://archive.ubuntu.com/ubuntu/dists/$CODENAME/Release" 2>/dev/null | tail -n1 | grep -oE '[0-9]{3}' | head -n1)
+
 # Check if archive.ubuntu.com still accessible
-if ! curl -fsI "http://archive.ubuntu.com/ubuntu/dists/$CODENAME/Release" >/dev/null 2>&1; then
+# if ! curl -fsI "http://archive.ubuntu.com/ubuntu/dists/$CODENAME/Release" >/dev/null 2>&1; then
+if [ "$HTTP_CODE" != "200" ]; then
     echo "⚠️ Repo $CODENAME không còn tồn tại trên archive.ubuntu.com"
     echo "➡️  Sẽ chuyển sang old-releases.ubuntu.com"
 
