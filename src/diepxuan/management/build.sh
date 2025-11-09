@@ -373,7 +373,30 @@ if [ "$PYTHON_MAJOR" -eq 3 ] && [ "$PYTHON_MINOR" -ge 7 ] && [ "$PYTHON_MINOR" -
         sed -i "1i $FUTURE_LINE" "$file"
         echo "Added future import to $file"
     done
+elif [ "$PYTHON_MAJOR" -eq 3 ] && [ "$PYTHON_MINOR" -le 6 ]; then
+    echo "⚠️ Python <= 3.6, cần sửa type hints và không dùng | trong type hint"
+    find "$source_dir" -type f -name "*.py" | while read f; do
+        text=$(cat "$f")
+        orig_text="$text"
+        # a | b -> Union[a, b]
+        text=$(echo "$text" | sed -E 's/([a-zA-Z0-9_]+)\s*\|\s*([a-zA-Z0-9_]+)/Union[\1, \2]/g')
+        # list[...] -> List[...]
+        text=$(echo "$text" | sed -E 's/list\[(.*)\]/List[\1]/g')
+        # dict[...] -> Dict[...]
+        text=$(echo "$text" | sed -E 's/dict\[(.*),(.*)\]/Dict[\1, \2]/g')
+
+        if [ "$text" != "$orig_text" ]; then
+            # Thêm import nếu file changed
+            if ! grep -q "from typing import" <<< "$text"; then
+                text="from typing import List, Dict, Union"$'\n'"$text"
+            fi
+            echo "$text" > "$f"
+        fi
+    done
+
+    echo "✅ Type hints fixed"
 fi
+
 end_group
 
 start_group Update Package Configuration in Changelog
