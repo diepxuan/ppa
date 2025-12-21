@@ -132,6 +132,8 @@ def _vm_sync():
                 {
                     "type": "A",
                     "ipAddress": ip,
+                    "ptr": "true",
+                    "createPtrZone": "true",
                 }
             )
             try:
