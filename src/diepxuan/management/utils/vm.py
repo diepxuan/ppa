@@ -47,6 +47,12 @@ def _vm_sync():
     API_BASE = "https://dns.diepxuan.corp:53443/api"
     API_BASE = "https://dns.diepxuan.io.vn/api"
 
+    headers = {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+    }
+
     params = {
         "token": TOKEN,
         "domain": host._host_fullname(),
@@ -63,7 +69,7 @@ def _vm_sync():
         get_params = params.copy()
         get_params.update({"listZone": "true"})
         response = requests.get(
-            url_get, params=get_params, timeout=10, verify=True
+            url_get, params=get_params, headers=headers, timeout=10, verify=True
         )  # verify=False nếu dùng cert tự ký
 
         # print(f"Yêu cầu GET: {response.url}")  # In URL yêu cầu để kiểm tra
@@ -112,7 +118,9 @@ def _vm_sync():
             )
             # print(del_params)
             try:
-                res = requests.get(url_del, params=del_params, timeout=5, verify=True)
+                res = requests.get(
+                    url_del, params=del_params, headers=headers, timeout=5, verify=True
+                )
                 res.raise_for_status()
                 # print(f"  - Đã xóa thành công IP: {ip}")
             except requests.exceptions.RequestException as e:
@@ -137,7 +145,9 @@ def _vm_sync():
                 }
             )
             try:
-                res = requests.post(url_add, params=add_params, timeout=5, verify=True)
+                res = requests.post(
+                    url_add, params=add_params, headers=headers, timeout=5, verify=True
+                )
                 res.raise_for_status()
                 # print(f"  - Đã thêm thành công IP: {ip}")
             except requests.exceptions.RequestException as e:

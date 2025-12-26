@@ -12,17 +12,46 @@ from . import host
 def _ip_locals():
     """Lấy danh sách tất cả các địa chỉ IP non-loopback của máy."""
     ips = []
+
+    # Phương pháp 1: Dùng netifaces (chính xác nhất)
     try:
-        # Lấy tất cả các địa chỉ liên kết với hostname
-        # getaddrinfo trả về các tuple phức tạp, ta chỉ cần IP
-        addr_info = socket.getaddrinfo(host._host_name(), None)
-        for item in addr_info:
-            ip = item[4][0]
-            if ip not in ips and not ip.startswith("127."):
-                ips.append(ip)
-    except socket.gaierror:
-        # Nếu không phân giải được hostname, thử cách khác
+        import netifaces
+
+        for interface in netifaces.interfaces():
+            try:
+                addrs = netifaces.ifaddresses(interface)
+                # Lấy địa chỉ IPv4
+                if netifaces.AF_INET in addrs:
+                    for addr_info in addrs[netifaces.AF_INET]:
+                        ip = addr_info["addr"]
+                        if ip != "127.0.0.1" and not ip.startswith("127."):
+                            if ip not in ips:
+                                ips.append(ip)
+            except ValueError:
+                continue
+    except ImportError:
+        # netifaces không có sẵn, dùng phương pháp khác
         pass
+
+    if not ips:
+        try:
+            # Lấy tất cả các địa chỉ liên kết với hostname
+            # getaddrinfo trả về các tuple phức tạp, ta chỉ cần IP
+            addr_info = socket.getaddrinfo(
+                host._host_name(),
+                None,
+                family=socket.AF_INET,  # Chỉ IPv4
+                type=socket.SOCK_STREAM,
+            )
+            # print(host._host_name())
+            # print(addr_info)
+            for item in addr_info:
+                ip = item[4][0]
+                if ip not in ips and not ip.startswith("127."):
+                    ips.append(ip)
+        except socket.gaierror:
+            # Nếu không phân giải được hostname, thử cách khác
+            pass
     # Dự phòng nếu cách trên thất bại (ví dụ hostname không đúng)
     if not ips:
         try:
