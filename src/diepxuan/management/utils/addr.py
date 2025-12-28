@@ -2,11 +2,59 @@
 
 import subprocess
 import socket
+import ipaddress
+import re
 from urllib import request
 
 from .registry import register_command
 from . import _is_root
 from . import host
+
+
+def is_docker_ip(ip: str) -> bool:
+    """Kiểm tra nhanh IP có phải Docker không."""
+    if not ip or not isinstance(ip, str):
+        return False
+
+    # Docker IP patterns
+    patterns = [
+        r"^172\.(1[7-9]|2[0-9]|3[0-1])\..*",  # 172.17.0.0/12
+        r"^192\.168\.(64|65)\..*",  # Docker Desktop
+        # r"^10\.0\..*",  # Docker swarm
+        r"^10\.255\..*",  # Docker swarm
+        r"^127\.0\.0\.11$",  # Docker internal DNS
+        r"^172\.1[0-6]\..*",  # Sometimes Docker uses these too
+    ]
+
+    # Kiểm tra regex patterns
+    for pattern in patterns:
+        if re.match(pattern, ip):
+            return True
+
+    # Kiểm tra bằng ipaddress module (chính xác hơn)
+    try:
+        ip_obj = ipaddress.ip_address(ip)
+
+        # Check subnet ranges
+        docker_subnets = [
+            ipaddress.ip_network("172.17.0.0/16"),
+            ipaddress.ip_network("172.18.0.0/16"),
+            ipaddress.ip_network("172.19.0.0/16"),
+            ipaddress.ip_network("172.20.0.0/14"),  # Covers 172.20-172.23
+            ipaddress.ip_network("192.168.64.0/24"),
+            ipaddress.ip_network("192.168.65.0/24"),
+            # ipaddress.ip_network("10.0.0.0/24"),
+            ipaddress.ip_network("10.255.0.0/16"),
+        ]
+
+        for subnet in docker_subnets:
+            if ip_obj in subnet:
+                return True
+
+    except ValueError:
+        pass
+
+    return False
 
 
 def can_reach_internet(ip: str) -> bool:
@@ -101,9 +149,9 @@ def _ip_locals():
         except Exception:
             pass  # Bỏ qua nếu không có mạng
 
-    ips = [
-        ip for ip in ips if can_reach_internet(ip)
-    ]  # Chỉ giữ IP có thể kết nối internet
+    # Chỉ giữ IP có thể kết nối internet
+    ips = [ip for ip in ips if can_reach_internet(ip)]
+    ips = [ip for ip in ips if not is_docker_ip(ip)]
 
     return ips if ips else []
 
