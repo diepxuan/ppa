@@ -9,6 +9,46 @@ from . import _is_root
 from . import host
 
 
+def can_reach_internet(ip: str) -> bool:
+    """Kiểm tra IP có thể ra internet không."""
+    test_services = [
+        ("8.8.8.8", 53),  # Google DNS (UDP)
+        ("1.1.1.1", 80),  # Cloudflare HTTP
+        ("api.ipify.org", 80),  # Public IP service
+    ]
+
+    for host, port in test_services:
+        try:
+            # Bind socket đến IP cụ thể
+            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            sock.settimeout(2)
+            sock.bind((ip, 0))
+
+            if port == 53:
+                # DNS query test
+                sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                sock.bind((ip, 0))
+                sock.sendto(
+                    b"\x00\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07example\x03com\x00\x00\x01\x00\x01",
+                    (host, port),
+                )
+                sock.settimeout(1)
+                sock.recvfrom(1024)
+            else:
+                # TCP connection test
+                sock.connect((host, port))
+                sock.send(b"GET / HTTP/1.0\r\n\r\n")
+
+            sock.close()
+            return True
+
+        except (socket.timeout, socket.error, OSError):
+            continue
+
+    return False
+
+
 def _ip_locals():
     """Lấy danh sách tất cả các địa chỉ IP non-loopback của máy."""
     ips = []
@@ -60,6 +100,10 @@ def _ip_locals():
                 ips.append(s.getsockname()[0])
         except Exception:
             pass  # Bỏ qua nếu không có mạng
+
+    ips = [
+        ip for ip in ips if can_reach_internet(ip)
+    ]  # Chỉ giữ IP có thể kết nối internet
 
     return ips if ips else []
 
