@@ -12,14 +12,18 @@ from .system import _is_root
 from .about import _version
 
 from .registry import register_command
-from . import distro
-from . import service
+from . import LOGDIR
+from . import SERVICE_NAME
 
-SYSTEMD_SERVICE = "ductnd"
+SYSTEMD_SERVICE = SERVICE_NAME
 SYSTEMD_UNIT_PATH = f"/etc/systemd/system/{SYSTEMD_SERVICE}.service"
 
-LAUNCHD_LABEL = "com.diepxuan.ductnd"
+LAUNCHD_LABEL = f"com.diepxuan.{SERVICE_NAME}"
 LAUNCHD_PLIST_PATH = f"/Library/LaunchDaemons/{LAUNCHD_LABEL}.plist"
+
+
+def _ductnd_log_file():
+    return f"{LOGDIR}/{SYSTEMD_SERVICE}.log"
 
 
 def _call_init_action(action, init=None):
@@ -60,39 +64,45 @@ def d_service_install():
         ductn_bin = os.path.realpath(sys.argv[0])
 
     plist = {
-        "Label": LAUNCHD_PLIST_PATH,
+        "Label": LAUNCHD_LABEL,
         "ProgramArguments": [
-            python_bin,
+            # python_bin,
             ductn_bin,
             "service",  # tương ứng register_command d_service
         ],
         "RunAtLoad": True,
         "KeepAlive": True,
-        "StandardOutPath": "/var/log/{SYSTEMD_SERVICE}.log",
-        "StandardErrorPath": "/var/log/{SYSTEMD_SERVICE}.err",
+        "StandardOutPath": f"{LOGDIR}/{SYSTEMD_SERVICE}.log",
+        "StandardErrorPath": f"{LOGDIR}/{SYSTEMD_SERVICE}.err",
         "ProcessType": "Background",
     }
 
-    logging.info("Tạo LaunchDaemon plist...")
+    logging.info(f"Tạo LaunchDaemon plist {LAUNCHD_PLIST_PATH}")
 
     with open(LAUNCHD_PLIST_PATH, "wb") as f:
         plistlib.dump(plist, f)
 
     os.chmod(LAUNCHD_PLIST_PATH, 0o644)
 
-    logging.info("Reload launchd service")
+    logging.info(f"Reload {SYSTEMD_SERVICE} launchd service")
 
     subprocess.run(
         ["launchctl", "bootout", "system", f"system/{LAUNCHD_LABEL}"],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
     )
+    subprocess.run(
+        ["launchctl", "bootout", "system", LAUNCHD_PLIST_PATH],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
 
+    logging.info(f"Bootstrap {SYSTEMD_SERVICE} {LAUNCHD_PLIST_PATH}")
     subprocess.check_call(["launchctl", "bootstrap", "system", LAUNCHD_PLIST_PATH])
     subprocess.check_call(["launchctl", "enable", f"system/{LAUNCHD_LABEL}"])
     subprocess.check_call(["launchctl", "kickstart", "-k", f"system/{LAUNCHD_LABEL}"])
 
-    logging.info("{SYSTEMD_SERVICE} service đã được cài đặt & khởi động")
+    logging.info(f"{SYSTEMD_SERVICE} service đã được cài đặt & khởi động")
 
 
 def _get_init_system():
@@ -207,9 +217,28 @@ def d_service_restart():
 
 @register_command
 def d_service_status():
-    init = _get_init_system()
+    if not _is_root():
+        logging.error("Cần quyền root")
+        return
 
     try:
         _call_init_action("status")
     except Exception as e:
         logging.error(str(e))
+
+
+@register_command
+def d_service_watch():
+    log_file = _ductnd_log_file()
+
+    if not os.path.exists(log_file):
+        logging.error(f"Log file not found: {log_file}")
+        return
+
+    logging.info(f"Watching ductnd log: {log_file}")
+    logging.info("Press Ctrl+C to stop")
+
+    try:
+        subprocess.call(["tail", "-f", log_file])
+    except KeyboardInterrupt:
+        pass

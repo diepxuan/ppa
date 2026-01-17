@@ -31,18 +31,30 @@ def d_service():
         name="vm_sync",
         interval=10,
         target=_vm_sync,
+        init="systemd",
     )
 
     scheduler.register(
         name="sys_update",
         interval=12 * 60 * 60,
         target=_sys_update,
+        init="systemd",
     )
 
     scheduler.register(
         name="route_monitor",
         interval=5,
         target=_route_monitor,
+        init="systemd",
+    )
+
+    from .dns import macos_dns_watch
+
+    scheduler.register(
+        name="macos_dns_watch",
+        interval=10,  # 10s là hợp lý
+        target=macos_dns_watch,
+        init="launchd",
     )
 
     # ---- Chạy scheduler ----

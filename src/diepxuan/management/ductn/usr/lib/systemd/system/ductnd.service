@@ -4,30 +4,27 @@ After=network-online.target network.target
 
 [Service]
 ExecStart=/usr/bin/ductn service
-# User=ductn
 
-# Kill root process
+# --- Logging ---
+StandardOutput=append:/var/log/ductnd/ductnd.log
+StandardError=append:/var/log/ductnd/ductnd.log
+
+# --- Process control ---
 KillMode=process
 KillSignal=SIGTERM
+TimeoutStopSec=1min
 
-# Wait up to 30 minutes for service to start/stop
-TimeoutSec=1min
+# --- Restart policy ---
+Restart=on-failure
+RestartSec=10s
+StartLimitIntervalSec=60
+StartLimitBurst=10
 
-# Remove process, file, thread limits
+# --- Limits ---
 LimitNPROC=infinity
 LimitNOFILE=infinity
 TasksMax=infinity
 UMask=007
-# Restart on non-successful exits.
-Restart=on-failure
-
-# Don't restart if we've restarted more than 10 times in 1 minute.
-StartLimitInterval=60
-StartLimitBurst=10
-
-RestartSec=10s
-# Type=notify
-# SyslogIdentifier=Diskutilization
 
 [Install]
 WantedBy=multi-user.target

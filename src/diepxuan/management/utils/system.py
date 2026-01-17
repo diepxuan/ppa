@@ -131,6 +131,6 @@ def d_update():
 def _is_root() -> bool:
     """Kiểm tra xem script có đang chạy với quyền root không."""
     if os.geteuid() != 0:
-        logging.error("Lỗi: Chức năng này yêu cầu quyền root (sudo) để chạy.")
+        # logging.error("Lỗi: Chức năng này yêu cầu quyền root (sudo) để chạy.")
         return False
     return True

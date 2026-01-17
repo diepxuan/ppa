@@ -1,7 +1,15 @@
 import platform
+import sys
+import os
 
 from .registry import register_command
 from . import distro
+
+# LINUX = ["linux", "debian", "ubuntu"]
+# MACOS = ["darwin"]
+
+# LAUNCHD = ["darwin"]
+# SYSTEMD = ["debian", "ubuntu"]
 
 
 def _os_codename():
@@ -52,3 +60,12 @@ def d_os_architecture():
 def d_os_type():
     """Get OS type"""
     print(platform.system())
+
+
+def _init_system():
+    """Get OS Init System"""
+    if sys.platform == "darwin":
+        return "launchd"
+    if os.path.exists("/bin/systemctl") or os.path.exists("/usr/bin/systemctl"):
+        return "systemd"
+    return "unknown"
