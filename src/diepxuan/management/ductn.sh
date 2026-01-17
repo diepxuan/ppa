@@ -5,13 +5,13 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 VENV_DIR="$SCRIPT_DIR/venv"
 VENV_ACTIVATE="$VENV_DIR/bin/activate"
 
+cd "$SCRIPT_DIR"
+
 # Nếu uv có sẵn thì dùng uv
 if command -v uv >/dev/null 2>&1; then
     [[ -f "$SCRIPT_DIR/ductn.py" ]] && uv run "$SCRIPT_DIR/ductn.py" "$@"
     exit 0
 fi
-
-cd "$SCRIPT_DIR"
 
 # [[ ! -f "$VENV_ACTIVATE" ]] && python3 -m venv venv && pip install -r "$SCRIPT_DIR/requirements.txt"
 # Nếu venv chưa tồn tại, tạo venv và cài requirements
