@@ -2,6 +2,9 @@ import sys
 import distro  # pyright: ignore[reportMissingImports]
 import logging
 
+# Encoding Windows
+sys.stdout.reconfigure(encoding="utf-8")
+
 # --- Thiết lập Logging ---
 PACKAGE_NAME = "ductn"
 SERVICE_NAME = "ductnd"
@@ -39,5 +42,6 @@ from . import service
 from . import system
 from . import system_os
 from . import system_info
+from . import system_service
 from . import file
 from . import env_detect

@@ -24,6 +24,10 @@ def main():
         description="DiepXuan Corp",
     )
 
+    parser.add_argument(
+        "-v", "--version", action="store_true", help="Show version and exit"
+    )
+
     subparsers = parser.add_subparsers(dest="command")
     # parser.add_argument(
     #     "extra_args", nargs=argparse.REMAINDER, help="Extra arguments for the command"
@@ -65,16 +69,31 @@ def main():
         argcomplete.autocomplete(parser)
 
     # Nếu không có subcommand → hiển thị help
-    args = parser.parse_args()
-    # print(args)
+    args, unknown = parser.parse_known_args()
+
+    if args.version:
+        print(about._version())
+        sys.exit(0)
+
     if not args.command:
         parser.print_help()
-        return
+        sys.exit(1)
 
     func = getattr(args, "func", None)
     if not func:
         parser.print_help()
         return
+
+    # args = parser.parse_args()
+    # print(args)
+    # if not args.command:
+    #     parser.print_help()
+    #     return
+
+    # func = getattr(args, "func", None)
+    # if not func:
+    #     parser.print_help()
+    #     return
 
     # # Chuẩn hóa extra_args
     extra_args = getattr(args, "extra_args", [])

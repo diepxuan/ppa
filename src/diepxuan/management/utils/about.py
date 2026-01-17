@@ -14,7 +14,7 @@ from . import Table
 def d_help():
     """Show help information"""
     console = Console()
-    console.print(f"\n[bold cyan]Cách sử dụng:[/bold cyan] ductn <lệnh> [tham số]\n")
+    console.print(f"\n[bold cyan]Cách sử dụng:[/bold cyan] ductn <lệnh> [tham số]")
     table = Table(
         # title="\n[bold yellow]Các lệnh có sẵn[/bold yellow]",
         show_header=False,  # <-- TẮT tiêu đề cột
@@ -34,6 +34,11 @@ def d_help():
         description = doc.strip().split("\n")[0] if doc else ""
 
         table.add_row(f"[green]{command_name}[/green]", description)
+
+    table.add_row()
+    table.add_row(f"\n[bold cyan]Optional arguments")
+    table.add_row(f"[green]-h, --help[/green]", "Show this help message and exit")
+    table.add_row(f"[green]-v, --version[/green]", "Show version and exit")
 
     # In bảng ra console
     console.print(table)
