@@ -80,17 +80,16 @@ from .interface import get_active_service
 def macos_dns_watch():
     if not _is_root():
         return
-    logging.info("macos_dns_watch")
+    # logging.info("macos_dns_watch")
     service = get_active_service()
     if not service:
         logging.warning("No active network service found")
         return
 
-    if dns_is_already_set(service):
-        logging.info("DNS already set to 10.0.0.103 → skip")
-        return
-
     if ping_ok() and dns_ok():
+        if dns_is_already_set(service):
+            logging.info("DNS already set to 10.0.0.103 → skip")
+            return
         logging.info(f"DNS OK → switch {service} to 10.0.0.103")
         set_dns(service=service)
     else:
