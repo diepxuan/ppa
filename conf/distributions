@@ -25,6 +25,15 @@ Components: main
 Description: Debian 12 (Bookworm)
 SignWith: yes
 
+# Debian 13 (Trixie)
+Origin: DiepXuan
+Label: DiepXuan
+Codename: trixie
+Architectures: amd64 arm64 i386
+Components: main
+Description: Debian 12 (Trixie)
+SignWith: yes
+
 # Ubuntu 18.04 (Bionic)
 Origin: DiepXuan
 Label: DiepXuan
