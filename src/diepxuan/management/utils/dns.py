@@ -30,11 +30,7 @@ def dns_ok():
     )
 
 
-def clear_dns(service):
-    subprocess.check_call(["networksetup", "-setdnsservers", service, "Empty"])
-
-
-def set_dns(service, dns=DNS_SERVER):
+def dns_set(service, dns=DNS_SERVER):
     subprocess.run(
         ["networksetup", "-setdnsservers", service, dns],
         stdout=subprocess.DEVNULL,
@@ -42,7 +38,7 @@ def set_dns(service, dns=DNS_SERVER):
     )
 
 
-def reset_dns(service):
+def dns_reset(service):
     subprocess.run(
         ["networksetup", "-setdnsservers", service, "empty"],
         stdout=subprocess.DEVNULL,
@@ -53,10 +49,25 @@ def reset_dns(service):
 @register_command
 def d_dns_reset():
     """Trả về DNS Mac Dinh."""
-    reset_dns(get_active_service())
+    dns_reset(get_active_service())
 
 
-def get_dns(service):
+@register_command
+def d_dns_clean():
+    """Clean DNS."""
+    subprocess.run(
+        ["dscacheutil", "-flushcache"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+    subprocess.run(
+        ["killall", "-HUP", "mDNSResponder"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
+
+
+def dns_get(service):
     out = subprocess.check_output(
         ["networksetup", "-getdnsservers", service],
         text=True,
@@ -69,7 +80,7 @@ def get_dns(service):
 
 
 def dns_is_already_set(service, dns_ip=DNS_SERVER):
-    dns = get_dns(service)
+    dns = dns_get(service)
     return dns_ip in dns
 
 
@@ -91,7 +102,8 @@ def macos_dns_watch():
             logging.info("DNS already set to 10.0.0.103 → skip")
             return
         logging.info(f"DNS OK → switch {service} to 10.0.0.103")
-        set_dns(service=service)
-    else:
-        logging.warning(f"DNS FAIL → reset {service} to default")
-        clear_dns(service)
+        dns_set(service=service)
+        return
+
+    logging.warning(f"DNS FAIL → reset {service} to default")
+    dns_reset(service)

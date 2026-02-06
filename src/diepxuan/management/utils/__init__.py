@@ -62,6 +62,7 @@ from . import interface
 from . import vm
 from . import addr
 from . import host
+from . import dns
 from . import route
 from . import service
 from . import system
