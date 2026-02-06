@@ -4,13 +4,13 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bookworm
-Date: Mon, 19 Jan 2026 03:27:08 UTC
+Date: Fri, 06 Feb 2026 22:58:29 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 12 (Bookworm)
 MD5Sum:
- cb6cd75409f20949bce345f30c50dc4e 35339 main/binary-amd64/Packages
- db1bc173c41b21456645cb6988dee83f 6192 main/binary-amd64/Packages.gz
+ 8c3e2438d29ae7a4869beb3a95dd8164 35339 main/binary-amd64/Packages
+ 55ec879f8ab88915ad16653462b629cb 6188 main/binary-amd64/Packages.gz
  3372616b55fd40c53bb28aa5db5f722c 103 main/binary-amd64/Release
  bea8947cd16fdf8a14be03aa89e4550a 21384 main/binary-arm64/Packages
  6759dce371830dca7f550fad965844ce 3836 main/binary-arm64/Packages.gz
@@ -19,8 +19,8 @@ MD5Sum:
  af3d819e928c1476b0e2deecc905bf46 1324 main/binary-i386/Packages.gz
  44a17ffec19f0941655c1da244513d08 102 main/binary-i386/Release
 SHA1:
- c64b7319c2738b0b92c63bac1abddfb21e72e9e9 35339 main/binary-amd64/Packages
- e74b207c2eb423347cfc8d8549fbd00cd1648281 6192 main/binary-amd64/Packages.gz
+ cdcc9563a323811923f34438daaff5ca939ce3d8 35339 main/binary-amd64/Packages
+ 825d1891170658807c12a646dd7b3271a25ade1a 6188 main/binary-amd64/Packages.gz
  e27528aa94b18fb9299115e5917c778c5f12083e 103 main/binary-amd64/Release
  873cade1d6d077afb3203ef8451af608aa231a54 21384 main/binary-arm64/Packages
  13504c35b1626cc81f9c72be75e82d404cc0d430 3836 main/binary-arm64/Packages.gz
@@ -29,8 +29,8 @@ SHA1:
  e619e5e874a27d5a9846462ab0eec240d9c6451b 1324 main/binary-i386/Packages.gz
  e1cfb00e5a4030eb00bf3b027c2f86abf6618601 102 main/binary-i386/Release
 SHA256:
- b68b51692d59b423366b8403aa0da5987f2594296799779ec8abff52d7a623ec 35339 main/binary-amd64/Packages
- 9b3de57db994f6592e89045bde195d21c6e32b2c52ca4e76a76c780867139317 6192 main/binary-amd64/Packages.gz
+ 671f5bbf42181641ad796e5d39ec2ebee47b194c1b8b20f245dda10ca07b17d2 35339 main/binary-amd64/Packages
+ bc79aa7399d64646c4680fe6b44ad5b0d1054525565ab25728d7cf4fb33c2357 6188 main/binary-amd64/Packages.gz
  be01e1a4561e9f2e0f7bd2c46dd9cdf9c8686b548fb582bec25b6c820a0b05d0 103 main/binary-amd64/Release
  05b4ff6af482ea31dccb3055282f1e48539198f231131d09409eb217b4e4a2d1 21384 main/binary-arm64/Packages
  94fd679d17d0e818f7a1e1bd0a6e28afe8554107a3794e4123301d597d3bf6bd 3836 main/binary-arm64/Packages.gz
@@ -40,15 +40,15 @@ SHA256:
  6ec2bf044f3075d6e5fea8c7517c8c9b88d3fc7a1fbfb7dfbdbec0ba7c1f081e 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmltpIwACgkQfg7JF6UH
-S9O2fQv/arPH+2wD9jRGo5tU9IBE57mRMlIagOU7c6I8nl+00ZH7IthKYKslFa7S
-qOfMg04sTWxUw7AC/HaspCTUl7TXtwdDMxIE8QTUMbDekGvJMqvCn4n3KrSuvQP8
-fomKEQ/JDqys1iWAO5H69/ruVUMPdA2l8U1Avmy10jWoLRt2khXrciVpMzQ6C9FG
-WhxoS0YXCkttKvs8oJyd69ZbTIpd00nY2LqhZYgz/At0+oj6qZt0T1ZdGichhEvD
-KhMwv3bCBVq6UMxiLRX97qImyUADi68SAo27qkT+tJIdlhDS62yAvHvPGbRwFKXi
-4NsPw24uqlW3T35e+oQrfB7UBEb31Vnqhojqh0PjioUpuA6S++hbrx+VC0HbFqGp
-fTt4AH17eT3hj2ZSKrtqu9XjVaZi3rTlINeoOsXDRPQLGf3EIOWfkM3n8FLaTMPs
-ZRfTC0/CF7APqABuu/TKN6xq1L1EeCi/MrWLrT7XWW150SkimFQAoHa+6zxMvm1P
-5RdZ+JKp
-=Yncv
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmmGchUACgkQfg7JF6UH
+S9PYWAv8Cf9Ip9RB2tDK5llHN1JdWMHPco1aPqIhh0CNKReEBLHNFsAFCFIkyzJh
+rVzXtiAY7Fsmh3w6+ivczJkDwC55lUTAgyuqh/TkmFPbqdTAjP91JtFpzB5nhpCk
+k97xwbSHUL8MlrpRu4vL+7hesTinhC8lg2NHhs/3eUTs1sbpH2dTc3hon7HQ0Aoe
+0N+ESLeUoImgnxMZ6Se12hsFk5WQTPALFCPjQMITNxJRtX3BrIUilSmCG+DknMDP
+RCuLfN2uLF/XtURsYK5yGyqQJDiaM10qzgfa8WAJewXXjSdS+dTsVFng9wnbNOus
+2eyZC9tGBuqlw44Qu3W2PQscTRvhx41wuARA5Fxzo+O7RB5dsNFB277LHzt+ct8Q
++MtdmaxTmkomcVkH+RDW9wSXUKz22E2i63eUCb7lduQBTKhBG/QUH9c77zSghMFi
+jw/aQGIvjIkG4u3S0rEuhOCGVQMRmvM7pA3anjCEDr9Y6YZAV7i1Ks8hprdV2Ra+
+FVfD5swe
+=Ua39
 -----END PGP SIGNATURE-----
