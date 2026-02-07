@@ -4,13 +4,13 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: trixie
-Date: Fri, 06 Feb 2026 23:01:24 UTC
+Date: Sat, 07 Feb 2026 03:41:27 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 12 (Trixie)
 MD5Sum:
- 43390f992b4b22c57203833945d3c4f0 2526 main/binary-amd64/Packages
- cfa115f27dcdddc275165e1046d68b94 941 main/binary-amd64/Packages.gz
+ 002a5972d1396c97adbb3c9a3a78822f 2526 main/binary-amd64/Packages
+ 3c884e22dcc11068b2d6d2ebbeee5abe 942 main/binary-amd64/Packages.gz
  fa5b60f431c84ddf35fd64e2551e9ef7 101 main/binary-amd64/Release
  d41d8cd98f00b204e9800998ecf8427e 0 main/binary-arm64/Packages
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-arm64/Packages.gz
@@ -19,8 +19,8 @@ MD5Sum:
  7029066c27ac6f5ef18d660d5741979a 20 main/binary-i386/Packages.gz
  64f40c17072fd088517e2ef32e2a9a99 100 main/binary-i386/Release
 SHA1:
- 16e4cecf1126c1c27d5c7f5faf0ea9d47cdb8c0f 2526 main/binary-amd64/Packages
- 04261b007dd0d29d26ea92760b43d3d057935d6a 941 main/binary-amd64/Packages.gz
+ 3ad791c1c03c5509dd90bcf3cab79f75900cd036 2526 main/binary-amd64/Packages
+ 3b4159f6dab2e2f5690a0de6837106f28aa55720 942 main/binary-amd64/Packages.gz
  0e5cba5716f73021d498f46804735431ebadbc2b 101 main/binary-amd64/Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709 0 main/binary-arm64/Packages
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-arm64/Packages.gz
@@ -29,8 +29,8 @@ SHA1:
  46c6643f07aa7f6bfe7118de926b86defc5087c4 20 main/binary-i386/Packages.gz
  4809c857d0ab7e4de1123b90473786f07a0eaea3 100 main/binary-i386/Release
 SHA256:
- 22562fb924acfae6ba03124a45bc8bef0e0183125f9ccdb0c0a1dfaa6be8b42f 2526 main/binary-amd64/Packages
- 295667b2b44036e8ef3021f1c2dd7df2ab2ad14d9e4320ce847cdc524ffce601 941 main/binary-amd64/Packages.gz
+ 30ae5dada78e4e0e9e445899759d9c177858a265cd2a2bb6929e8b736070ba1d 2526 main/binary-amd64/Packages
+ c9dc4b47acf0cc9917016afc534f70bf94b76760b1f7755a3df0c044cb225e54 942 main/binary-amd64/Packages.gz
  2e675255981f5ab267778bed22ef43d2e013817d1d41302c2c954cbbe6e19a5b 101 main/binary-amd64/Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 0 main/binary-arm64/Packages
  59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2 20 main/binary-arm64/Packages.gz
@@ -40,15 +40,15 @@ SHA256:
  435643a53c76657f0a38586d6ca637b4075d2db015a98a0e7aea1e645fb5b41a 100 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmmGcsQACgkQfg7JF6UH
-S9M0hQwAiQHLj9pK6DjydsPB+f/GXqW4V7B1K6OP4L0Ehpsw8ir3Df+c9H+Rwr48
-1TAIKb7bq221AGsuWNChdrz+401suoCfEy6uvbBNqDU01NcKaQs8SgWyJ68fEbM7
-lOcH6I1oF+ctyuIeMzRq2rSHg/HpA5L6/x1S/3xX2rhyNbpuTX/dIjlHd+A01mWl
-tnZ7b2xZbz7vnpK9nV5Q9X+wgDJUg5MeeZzM371uj5EBR7EKN5gOXp76VJpVU0Um
-+Od4exn228q3Vq0IQvGoq2K6TjABtO7zLpLYYY2hf/5Mo6QsFtoL0Te9+43oo/gn
-pyS5/jCxThh0BiabAW7aaEXYCIx07Vyimi5gbokNV/3ZWe0eRRrOLdOv+8bWdhVP
-Y0NDDx+R5HERzcG0kdXX01dejClxFx5zU3FZjyV1VTgb5XlH035EqV3+cGeeftJI
-zmKeVT1JPovM73rxGy0pGyPLoMOllp3nBX/0KHFrg2GtQZs3+seTG1KhU4ZNocsP
-2HW/ptx5
-=DT+l
+iQGyBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmmGtGcACgkQfg7JF6UH
+S9MYMAv45zdb9RaKEaKQQJr2c2ISMgxURKwDHIqOVzCu0ve7V24hHZy2pDMrKS53
+fjweSGQKaEvcaBvDnq5Zkd+W0HeKwSX9ifjdzbFFifHnNfJ4DNXz/5cJ1hdxS40u
+g+s5bAP6nrcHpFLzgsco7TxzX1z3wmmWoFCCoJBbUok9C4bsmtoHbmuuxfdJvd9O
+8Q8vnsXW4OaQ9rBN6KvwIFsUkoQXs8tsknIn4UZCN+MI+aqf4Q+N9YfC6KOFjANp
+hlS2McJ7WXrgdSOkOa/eBUb5yUbmGaH3IeCQ+1bagN+18UQoFWyJZ3oirPTN2I9Q
+Jjj5MktF6mwa98OQ4Pl/1pfNr0IXkbEyJ9V1w8f+Fqp9Z0/xwzi834JjahcRAItT
+ZHjb0t2Ob25AOmOBeL25lDp2n3p3F6WMeMe+5Ohk64BSz3c0sBrkUVifTn1D+JXj
+sRQumdgrxUXh4QZ33+7TgZD+htD3i2OEYFmzzKZpYd/PNk854qbf0Wel/aCkZdQy
+C1dI9Pw=
+=sxov
 -----END PGP SIGNATURE-----
