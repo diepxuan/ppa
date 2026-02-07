@@ -57,11 +57,11 @@ def d_service():
         init="launchd",
     )
 
-    scheduler.register(
-        name="d_vm_info",
-        interval=5,
-        target=_vm_info,
-    )
+    # scheduler.register(
+    #     name="d_vm_info",
+    #     interval=1,
+    #     target=_vm_info,
+    # )
 
     # ---- Chạy scheduler ----
     try:

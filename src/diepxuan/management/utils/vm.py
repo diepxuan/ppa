@@ -6,8 +6,15 @@ from . import addr
 from . import host
 from . import Console
 from . import Table
+from . import system_metrics
 from .registry import register_command
+import logging
 import requests
+import psutil
+
+TOKEN = "3ccbb8eb47507c42a3dfd2a70fe8e617509f8a9e4af713164e0088c715d24c83"
+API_BASE = "https://dns.diepxuan.corp:53443/api"
+API_BASE = "https://dns.diepxuan.io.vn/api"
 
 
 def _vm_info():
@@ -16,7 +23,7 @@ def _vm_info():
     table = Table(
         # title="\n[bold yellow]Các lệnh có sẵn[/bold yellow]",
         show_header=False,  # <-- TẮT tiêu đề cột
-        box=None,  # <-- TẮT tất cả các đường viền
+        # box=None,  # <-- TẮT tất cả các đường viền
         padding=(
             0,
             2,
@@ -30,6 +37,11 @@ def _vm_info():
     table.add_row("OS", system_os._os_codename())
     table.add_row("RELEASE", system_os._os_release())
     table.add_row("ARCHITECTURE", system_os._os_architecture())
+    table.add_row("")
+    mem = system_metrics.memory_usage()
+    memKB = mem / 1024
+    memMB = mem / 1024
+    table.add_row("memory_usage", f"{memKB:.2f} MB")
 
     # In bảng ra console
     console.print(table)
@@ -47,10 +59,6 @@ def _vm_sync():
     Đồng bộ các bản ghi DNS type 'A' cho hostname với các IP cục bộ hiện tại.
     """
     # 1. Thiết lập các biến
-    TOKEN = "3ccbb8eb47507c42a3dfd2a70fe8e617509f8a9e4af713164e0088c715d24c83"
-    API_BASE = "https://dns.diepxuan.corp:53443/api"
-    API_BASE = "https://dns.diepxuan.io.vn/api"
-
     headers = {
         "Cache-Control": "no-cache, no-store, must-revalidate",
         "Pragma": "no-cache",
@@ -60,102 +68,66 @@ def _vm_sync():
     params = {
         "token": TOKEN,
         "domain": host._host_fullname(),
-        # "domain": host._host_name(),
         "zone": host._host_domain(),
     }
     url_get = f"{API_BASE}/zones/records/get"
     url_add = f"{API_BASE}/zones/records/add"
     url_del = f"{API_BASE}/zones/records/delete"
 
-    old_ips = set()
-    try:
-        # get_params = params | {"listZone": "true"}
-        get_params = params.copy()
-        get_params.update({"listZone": "true"})
-        response = requests.get(
-            url_get, params=get_params, headers=headers, timeout=10, verify=True
-        )  # verify=False nếu dùng cert tự ký
+    with requests.Session() as requestsSession:
+        requestsSession.headers.update(headers)
 
-        # print(f"Yêu cầu GET: {response.url}")  # In URL yêu cầu để kiểm tra
-        response.raise_for_status()  # Gây ra lỗi nếu HTTP status không phải 2xx
-
-        data = response.json()
-        # print(f"Dữ liệu nhận được: {data}")  # In dữ liệu thô để kiểm tra
-        if data.get("status") == "ok":
-            records = data.get("response", {}).get("records", [])
-            # Lọc và lấy ra các IP của bản ghi loại 'A'
-            for record in records:
-                if (
-                    record.get("type") == "A"
-                    and record.get("name") == host._host_fullname()
-                ):
-                    old_ips.add(record.get("rData", {}).get("ipAddress"))
-            # print(f"Đã tìm thấy các IP cũ: {list(old_ips) or 'Không có'}")
-    except requests.exceptions.RequestException as e:
-        # print(f"Lỗi: Không thể lấy danh sách DNS cũ. {e}", file=sys.stderr)
-        return  # Thoát nếu không lấy được dữ liệu ban đầu
-
-    # print(old_ips)
-
-    new_ips = set(addr._ip_locals())
-    # print(new_ips)
-    if not new_ips:
-        # print("Lỗi: Không tìm thấy IP cục bộ nào trên máy.", file=sys.stderr)
-        return
-    # print(f"Các IP cục bộ hiện tại: {list(new_ips)}")
-
-    ips_to_remove = old_ips - new_ips
-    # print(f"ips_to_remove: {list(ips_to_remove)}")
-    if ips_to_remove:
-        # print(f"\nCác IP cần xóa: {list(ips_to_remove)}")
-        for ip in ips_to_remove:
-            # del_params = params | {
-            #     "type": "A",
-            #     "ipAddress": ip,
-            # }
-            del_params = params.copy()
-            del_params.update(
-                {
-                    "type": "A",
-                    "ipAddress": ip,
-                }
+        try:
+            res = requestsSession.get(
+                url_get,
+                params={**params, "listZone": "true"},
+                timeout=10,
+                verify=True,  # verify=False nếu dùng cert tự ký
             )
-            # print(del_params)
+            res.raise_for_status()
+            data = res.json()
+        except Exception as e:
+            logging.warning(f"DNS fetch failed: {e}")
+            return
+
+        old_ips = {
+            rec["rData"]["ipAddress"]
+            for rec in data.get("response", {}).get("records", [])
+            if rec.get("type") == "A" and rec.get("name") == host._host_fullname()
+        }
+
+        new_ips = set(addr._ip_locals())
+        if not new_ips:
+            return
+
+        for ip in old_ips - new_ips:
             try:
-                res = requests.get(
-                    url_del, params=del_params, headers=headers, timeout=5, verify=True
+                requestsSession.get(
+                    url_del,
+                    params={**params, "type": "A", "ipAddress": ip},
+                    headers=headers,
+                    timeout=5,
+                    verify=True,
                 )
-                res.raise_for_status()
-                # print(f"  - Đã xóa thành công IP: {ip}")
-            except requests.exceptions.RequestException as e:
-                # print(f"  - Lỗi khi xóa IP {ip}: {e}", file=sys.stderr)
+            except Exception:
                 pass
 
-    ips_to_add = new_ips - old_ips
-    if ips_to_add:
-        # print(f"\nCác IP cần thêm: {list(ips_to_add)}")
-        for ip in ips_to_add:
-            # add_params = params | {
-            #     "type": "A",
-            #     "ipAddress": ip,
-            # }
-            add_params = params.copy()
-            add_params.update(
-                {
-                    "type": "A",
-                    "ipAddress": ip,
-                    "ptr": "true",
-                    "createPtrZone": "true",
-                }
-            )
+        for ip in new_ips - old_ips:
             try:
-                res = requests.post(
-                    url_add, params=add_params, headers=headers, timeout=5, verify=True
+                requestsSession.post(
+                    url_add,
+                    params={
+                        **params,
+                        "type": "A",
+                        "ipAddress": ip,
+                        "ptr": "true",
+                        "createPtrZone": "true",
+                    },
+                    headers=headers,
+                    timeout=5,
+                    verify=True,
                 )
-                res.raise_for_status()
-                # print(f"  - Đã thêm thành công IP: {ip}")
-            except requests.exceptions.RequestException as e:
-                # print(f"  - Lỗi khi thêm IP {ip}: {e}", file=sys.stderr)
+            except Exception:
                 pass
 
 
