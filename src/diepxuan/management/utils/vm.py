@@ -10,11 +10,8 @@ from .registry import register_command
 import requests
 
 
-@register_command
-def d_vm_info():
+def _vm_info():
     """Display VM Information"""
-
-    print("VM Information:")
     console = Console()
     table = Table(
         # title="\n[bold yellow]Các lệnh có sẵn[/bold yellow]",
@@ -36,6 +33,13 @@ def d_vm_info():
 
     # In bảng ra console
     console.print(table)
+
+
+@register_command
+def d_vm_info():
+    """Display VM Information"""
+
+    _vm_info()
 
 
 def _vm_sync():

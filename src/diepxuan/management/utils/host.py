@@ -5,15 +5,50 @@ import logging
 import socket
 import sys
 from .registry import register_command
+from .init_action import call_init_action, register_init_action
+import subprocess
+
+DEFAULT_DOMAIN = "diepxuan.corp"
+
+
+@register_init_action
+def _launchd_host_name():
+    try:
+        name = socket.gethostname().split(".", 1)[0]
+        if not name:
+            try:
+                name = (
+                    subprocess.check_output(
+                        ["scutil", "--get", "ComputerName"],
+                        text=True,
+                    )
+                    .decode()
+                    .strip()
+                )
+            except Exception:
+                pass
+
+        if not name:
+            name = "unknown-host"
+
+        return name
+    except Exception as e:
+        logging.error(f"Không thể lấy hostname: {e}")
+        return "unknown-host"
+
+
+@register_init_action
+def _systemd_host_name():
+    try:
+        return socket.gethostname().split(".", 1)[0]
+    except Exception as e:
+        logging.error(f"Không thể lấy hostname: {e}")
+        return "unknown-host"
 
 
 def _host_name():
     """Trả về tên hostname ngắn của máy."""
-    try:
-        return socket.gethostname()
-    except Exception as e:
-        logging.error(f"Không thể lấy hostname: {e}")
-        return "unknown-host"
+    return call_init_action("host_name")
 
 
 @register_command
@@ -29,22 +64,19 @@ def _host_domain():
     """
     try:
         fullname = socket.getfqdn()
-        hostname = socket.gethostname()
+        if ":" or "ip6.arpa" in fullname:  # IPv6
+            fullname = DEFAULT_DOMAIN
 
+        hostname = socket.gethostname()
         # Kiểm tra xem FQDN có chứa hostname không
         if fullname.startswith(hostname + ".") and len(fullname) > len(hostname):
             # Lấy phần còn lại sau hostname và dấu chấm
             return fullname[len(hostname) + 1 :]
 
-        # Một cách khác để thử nếu ở trên thất bại
-        parts = fullname.split(".", 1)
-        if len(parts) > 1:
-            return parts[1]
-
-        return ""  # Trả về rỗng nếu không có domain
+        return DEFAULT_DOMAIN  # Trả về DEFAULT nếu không có domain
     except Exception as e:
         # print(f"Không thể lấy domain name: {e}")
-        return "diepxuan.corp"
+        return DEFAULT_DOMAIN
 
 
 @register_command
@@ -53,14 +85,22 @@ def d_host_domain():
     print(_host_domain())
 
 
-def _host_fullname():
-    """Trả về tên hostname đầy đủ (FQDN) của máy."""
+@register_init_action
+def _launchd_host_fullname():
+    return _host_name() + "." + _host_domain()
+
+
+@register_init_action
+def _systemd_host_fullname():
     try:
-        # getfqdn() sẽ cố gắng phân giải để có tên đầy đủ nhất
         return socket.getfqdn()
     except Exception as e:
-        # print(f"Không thể lấy FQDN: {e}")
-        return _host_name() + "." + _host_domain()  # Trả về hostname ngắn nếu thất bại
+        return _host_name() + "." + _host_domain()
+
+
+def _host_fullname():
+    """Trả về tên hostname đầy đủ (FQDN) của máy."""
+    return call_init_action("host_fullname")
 
 
 @register_command
