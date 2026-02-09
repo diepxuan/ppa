@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-[[ "$OSTYPE" == "darwin"* ]] &&
-    CODENAME=$(sw_vers -productVersion | awk -F '.' '{print $1"."$2}')
+[[ "$OSTYPE" == "darwin*" ]] &&
+    CODENAME=$(sw_vers -productVersion | awk -F '.' '{print $1":"$2}')
 [[ -f /etc/os-release ]] && . /etc/os-release
 [[ -f /etc/lsb-release ]] && . /etc/lsb-release
 CODENAME=${CODENAME:-$DISTRIB_CODENAME}
@@ -47,8 +47,18 @@ if ! command -v gpg &>/dev/null; then
     fi
 fi
 
+# Kiểm tra curl hoặc wget có sẵn
+if command -v curl &>/dev/null; then
+    DOWNLOAD_CMD="curl -fsSL"
+elif command -v wget &>/dev/null; then
+    DOWNLOAD_CMD="wget -qO-"
+else
+    echo "Error: Neither curl nor wget is available. Please install one of them."
+    exit 1
+fi
+
 [[ ! -f /usr/share/keyrings/diepxuan.gpg ]] &&
-    curl -fsSL "$KEY_URL" | $SUDO gpg --dearmor -o /usr/share/keyrings/diepxuan.gpg
+    $DOWNLOAD_CMD "$KEY_URL" | $SUDO gpg --dearmor -o /usr/share/keyrings/diepxuan.gpg
 
 # Thêm repository vào sources.list.d
 # echo "deb [signed-by=/usr/share/keyrings/ppa.gpg] $REPO_URL $UBUNTU_VERSION main" | $SUDO tee /etc/apt/sources.list.d/ppa.list
