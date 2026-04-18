@@ -48,12 +48,13 @@ def d_service():
         init="systemd",
     )
 
-    from .dns import macos_dns_watch
+    # DNS watch - macOS only (Linux systemd-resolved handles DNS automatically)
+    from .dns import d_dns_watch
 
     scheduler.register(
-        name="macos_dns_watch",
-        interval=10,  # 10s là hợp lý
-        target=macos_dns_watch,
+        name="dns_watch",
+        interval=10,
+        target=d_dns_watch,
         init="launchd",
     )
 
