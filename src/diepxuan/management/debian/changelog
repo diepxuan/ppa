@@ -1,3 +1,10 @@
+diepxuan (5.5.1+ubuntu~24.04) noble; urgency=medium
+
+  * Merge pull request #11 from diepxuan/feature/move-etc-to-deprecated
+    refactor: move src/etc/ to deprecated/src/etc/
+
+ -- Tran Ngoc Duc <ductn@diepxuan.com>  Sat, 18 Apr 2026 23:03:19 +0700
+
 diepxuan (5.5.0+ubuntu~24.04) noble; urgency=medium
 
   * Merge pull request #10 from diepxuan/feature/dns-search-domain-corp
