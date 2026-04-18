@@ -21,6 +21,7 @@ SYSTEM = platform.system()  # "Linux" or "Darwin"
 DNS_SERVER = "10.0.0.103"
 TEST_DOMAIN = "google.com"
 STATIC_DNS_SERVERS = ["1.1.1.1", "8.8.8.8"]
+SEARCH_DOMAIN = "diepxuan.corp"
 
 
 def _run_cmd(cmd: List[str], check: bool = False) -> int:
@@ -185,7 +186,7 @@ def _linux_dns_disable() -> None:
     resolv_content = f"""# Managed by ductn (dns:disable)
 nameserver {STATIC_DNS_SERVERS[0]}
 nameserver {STATIC_DNS_SERVERS[1]}
-search diepxuan.com
+search {SEARCH_DOMAIN}
 """
     try:
         with open("/etc/resolv.conf", "w") as f:
