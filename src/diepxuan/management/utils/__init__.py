@@ -72,3 +72,4 @@ from . import system_service
 from . import file
 from . import env_detect
 from . import system_metrics
+from . import apt
