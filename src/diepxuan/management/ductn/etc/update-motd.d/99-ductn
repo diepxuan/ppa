@@ -1,0 +1,35 @@
+#!/bin/sh
+
+MOTD_DIR="/etc/update-motd.d"
+CURRENT_SCRIPT="$0"
+
+if [ -d $MOTD_DIR ]; then
+    # Kiểm tra có script nào có tên hoặc chứa 'turnkey'
+    if ls $MOTD_DIR 2>/dev/null | grep -iq 'turnkey'; then
+        # echo 'script nào có tên hoặc chứa "turnkey"'
+        exit 0
+    fi
+
+    # grep -iq 'turnkey-sysinfo' /etc/update-motd.d/* 2>/dev/null && exit 0
+fi
+
+# Kiểm tra xem TurnKey MOTD đã tồn tại chưa
+for f in "$MOTD_DIR"/*; do
+    # echo $f
+    [ "$f" = "$CURRENT_SCRIPT" ] && continue # Bỏ qua chính file này
+    case "$f" in
+        *99-ductn) continue ;;  # Bỏ qua chính file này
+    esac
+    if grep -iq 'turnkey-sysinfo' "$f" 2>/dev/null; then
+        # echo 'script chứa "turnkey"'
+        exit 0
+    fi
+done
+
+# Kiểm tra xem lệnh ductn có tồn tại hay không
+if command -v ductn >/dev/null 2>&1; then
+    # Thực thi sys:info, bỏ qua lỗi (vẫn tiếp tục hiển thị MOTD)
+    ductn sys:info 2>/dev/null || true
+else
+    echo "[ductn] not installed"
+fi

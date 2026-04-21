@@ -1,0 +1,656 @@
+Package: ductn
+Source: diepxuan
+Version: 5.5.2+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 13777
+Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/ductn_5.5.2+ubuntu~24.04_amd64.deb
+Size: 13900870
+SHA256: 7a2930d87bb3fbd1be6025469ac9d647fdb137529524b97a541cb9b471bd85d6
+SHA1: 0c37d11bbc0d861847185fa853148cd2f1d95ed2
+MD5sum: 33f9659b347c222a8ccf2e1a828d6b76
+Description: DiepXuan super package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: ductn-ll
+Source: diepxuan
+Version: 5.5.2+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 14
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/ductn-ll_5.5.2+ubuntu~24.04_amd64.deb
+Size: 6042
+SHA256: 32f491c4c4b2f14c6be81c7f9ca45db53b6b880e151091537cab11eab198433a
+SHA1: 3350526041450a6c04a8956ce2e977d46d7bddc2
+MD5sum: 89c30aca33e93b8419fe6c9109b525e5
+Description: A package to provide the 'll' command (like ls -l).
+  This package provides the 'll' command, which behaves like 'ls -l'.
+  If the user already has an alias for 'll', it will use that instead.
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: lar
+Source: diepxuan
+Version: 5.5.2+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 14
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/lar_5.5.2+ubuntu~24.04_amd64.deb
+Size: 6022
+SHA256: 26bb30d81f7f5b5bed5a5c5984341af8e72190572fa6e28f043cfd892cd04479
+SHA1: 861a8a3b8c6d848d8446ab8bbb088b47a5f6f0d1
+MD5sum: c2c079df9ad5c992be8b99c12787ff35
+Description: Laravel support package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: m2
+Source: diepxuan
+Version: 5.5.2+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 14
+Depends: ductn
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/m2_5.5.2+ubuntu~24.04_amd64.deb
+Size: 6016
+SHA256: 3bf7623b315bbd0ad5164bb7279d12c3a85717e1210680360352458b392e04ab
+SHA1: 81fd4fb4b7d495f84e6274723313c469f23106fe
+MD5sum: 6f38469f06c5af184077c16d24b63acc
+Description: Magento 2 support package
+  Private package for DiepXuan Co.,Ltd
+  Building by Tran Ngoc Duc
+
+Package: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~24.04_all.deb
+Size: 3858
+SHA256: 068223a267efc2f61eea4c2c030c0039558c5f3ac335be63b99e3475e4365da9
+SHA1: 3c28f3e41665b2cffc2e8f5d3d59b65224da254d
+MD5sum: 42ae2cfaf3ae119c1bbaa5329f8370a6
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-pdo-sqlsrv-all-dev
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.2-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.1-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+ubuntu~24.04_all.deb
+Size: 3896
+SHA256: 7a8bfc3777e97e090bb0da8de0d496d120322cf8251f92accba4190a16d58b8f
+SHA1: 913d080d7d42d4ebc09babae83f9f2e846c414a8
+MD5sum: 5fee4af1a97877068f4ae4fe0e5f288c
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-runkit7
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~24.04_all.deb
+Size: 2824
+SHA256: fce2fe25178c1fd6a5792a8c82aa3e173ecbceabd3250c46a4bf9107e2859699
+SHA1: 6deeca53c3b225bbc17010e1b0049511746c76ce
+MD5sum: 057d039b5ee9cc734ed19d3d2adf3dde
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7-all-dev
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php7.3-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php7.4-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.0-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.1-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.2-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.3-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~24.04_all.deb
+Size: 2868
+SHA256: 8560a01d87adaf338f2aedee9253ef4804d52046a9409997424b039cdb331db2
+SHA1: 5af2c35f7b8f8ce4ec23234337967aff8e4ecfbc
+MD5sum: 56217f0b4414bc5062c11148f73cf5b9
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+ubuntu~24.04_all.deb
+Size: 3858
+SHA256: 90782756af7ffeb407eb69b81b842eb09d6358c5591e24bedcc0028982e09d89
+SHA1: d1b49683e0343910a899b858c37225cfeab11080
+MD5sum: 62536e8726cdc7d048f2668619a7b5f7
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-sqlsrv-all-dev
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.3-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.2-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.1-sqlsrv (>= 5.12.0+ubuntu~24.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+ubuntu~24.04_all.deb
+Size: 3890
+SHA256: 9189ee1241a6227225aaa690e03fd05980ad8a692fac05039951b708c4e31218
+SHA1: fd127eaab55c937af682522afc06440c50cdba17
+MD5sum: f02b2b52ed672b99a0adea966c370c1a
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.2-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-common, phpapi-20170718, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38308
+SHA256: f914ff7799ec042c88dfd171fd7e73d5b6c699a809694a0ec7e4d5d0f34e87c3
+SHA1: 5fe66ee5e7e2bfe2dd21feb1669c8c1759432a91
+MD5sum: f8a34d6eb1afeb8da932d142945ccd9c
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.3-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.3-common, phpapi-20180731, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38402
+SHA256: ac88f1a4c96cfe3387ee1463ad4932ceadab9c7581a7252f534b5ed6a18431e6
+SHA1: 1046b9448e1e203e088a66c4c7cfc4c420313071
+MD5sum: 316a191b79d84efb3395e39ec892bb4e
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.4-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.4-common, phpapi-20190902, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38470
+SHA256: f0466b408881085bd488f115a56f30984f83e6ffb13546bf651dc6209ad1fce0
+SHA1: 2bab956b31272110dd7596c19efb17ae3f7d50de
+MD5sum: 0e78d519277338a5dd40275d13fa7d7d
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.0-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.0-common, phpapi-20200930, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38200
+SHA256: a3fedaa90d5b8d82433029fe9999a932afa9a051b40145a68d16de038f58e1eb
+SHA1: 88808e4fa375fb58f55f67584a266df615f22d56
+MD5sum: 77569d74a530c8b584e50a1836d61f90
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 321
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.1-pdo-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 128068
+SHA256: ce763acc6cdecd75e3c467fec220f0fb88c611ce5969ae8f9fc1981e04978faf
+SHA1: 3309c3b241047e90f7ce3c21fabfdb5c491cf788
+MD5sum: ecfee2d7e76d0d022beafdc9ed63ec5d
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38222
+SHA256: d98e9cbbf7ba6e8a46cdccfd348c6367c3259e715effbb3cc763aab8cd8d8506
+SHA1: 7c58ee86825e401fb7e3049224770c54d44a2c25
+MD5sum: 4f6fc61f18e3d14a778471608de3dac7
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 330
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.1-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 130532
+SHA256: 08d2e77bf8b22d50ef390ca98e20308d21b7cfebbb146bc88bdfc399bacc99f4
+SHA1: 0753f30a2c099bbbe233d90c0d0644d973e06c55
+MD5sum: 9c8ce0dcd6072b36357448169667e476
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 321
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.2-pdo-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 128304
+SHA256: 972a23d69e43e1fea873403787e9f667ef10ff229b6af0e24800f053c69dd928
+SHA1: c4f41f21a5a1dc3231343438c8d6d9d30dde3c2e
+MD5sum: eacdcb48319ce985cdb6d043cfbdfced
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38600
+SHA256: 729808bb7e9ca8c2e21685d337dcea96d9531d569173d79de05765c30b9449fa
+SHA1: 580a551dbd7dcb5ba597f85da825a29b30705def
+MD5sum: 2c53e8a3d7602eb4d7ea404e69e1b9ac
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 330
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.2-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 130948
+SHA256: 8ee841b6c6a26acde91c660b31baf25aec421ffe46a85686f35bd91759e78e39
+SHA1: 5e27b50c27067b1d2886a0750f966ebaa0ddcb10
+MD5sum: 3a2278add3bbfe3ad3336b01f38131d9
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 321
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 128306
+SHA256: 1cd5e424e4f25cf5ecb746b6ef337f2389ecab9be0b4fe223e948a38371745f4
+SHA1: 7fdf21da1fe739c4f4a61c221c2f363422388626
+MD5sum: 4140e88a723368c0cd27d85db2c6bba7
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-runkit7
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 104
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~24.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a6+ubuntu~24.04_amd64.deb
+Size: 38598
+SHA256: c6e750d608a44f48b40a16c1112fbad4e20944c95076a17f129dff48ad299d51
+SHA1: d9861f7fe0987ae201717a4bc9fa1d387d390563
+MD5sum: 6d9bfdb6fcb73533b0bc9e2bf9cd5abb
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 330
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 130966
+SHA256: ba2c2a962162f0509b3ed953a0a861b451498f62ade3a4f95ca85ba1491aa51a
+SHA1: ca42787570cd77b0da5107aebe75736ead1cfdfc
+MD5sum: c67266e97bb36741b27c17b395042a33
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 321
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 128246
+SHA256: ff3f99f5b6af00dd7e353f4df768541f09dd47885dd18b7a19c9fc7d6a17871a
+SHA1: 1a39c5477ce74844e8c9a1d0083897d6c5786733
+MD5sum: f92e4e9a6261852db48d6678305d0add
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-sqlsrv
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 334
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Replaces: php-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
+Size: 131176
+SHA256: c4c6342d2f3dc638e66fbb57afe9ef9738d6e20e5705f3ef42d3742c097ff179
+SHA1: b6907cb9f2d22c8454e9e26dc95e21c9bb7fd967
+MD5sum: ff27dada1091b3ff697304454a00f9a0
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+

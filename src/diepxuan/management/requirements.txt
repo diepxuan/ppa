@@ -1,0 +1,10 @@
+distro
+requests
+rich
+argcomplete
+psutil
+netifaces
+ipaddress
+
+urllib3<2; sys_platform == "darwin"
+requests<2.28; sys_platform == "darwin"

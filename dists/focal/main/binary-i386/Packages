@@ -1,0 +1,159 @@
+Package: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~20.04_all.deb
+Size: 3858
+SHA256: 90fe0982a810d06f666e9805882c5bffc1364358b583084bffd03a3826c82fe6
+SHA1: 0f567e4b9de0df71e92d5604fc9b0463432590ea
+MD5sum: 42449629709a1011fbf57a6c176a9f3f
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-pdo-sqlsrv-all-dev
+Source: php-pdo-sqlsrv
+Version: 5.12.0+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.3-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.2-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.1-pdo-sqlsrv (>= 5.12.0+ubuntu~20.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+ubuntu~20.04_all.deb
+Size: 3894
+SHA256: c5265739abbbd51dbf03ff9eb2a34775fef0c9ee9070d1d1b373debf080d758c
+SHA1: 7735ef2a3576171f49bc845897da4a78e76fb35f
+MD5sum: 539bb734b604bcef09469eb0d49d98c5
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-runkit7
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~20.04_all.deb
+Size: 2834
+SHA256: 09f321bf95ff8160b7e67b6232256625c5a6fa23f9e7622797a5af9171600e37
+SHA1: 0d738ab3f181fbbdd7cfe1e82e8eed85fc38bf3c
+MD5sum: 1fa80470db306ffef7c5f7b8ea0090ff
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7-all-dev
+Source: php-runkit7
+Version: 4.0.0a6+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php7.3-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php7.4-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.0-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.1-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.2-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php8.3-runkit7 (>= 4.0.0a6+ubuntu~20.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~20.04_all.deb
+Size: 2882
+SHA256: 2b668168b007bc3b4ed61f416bd7342020bb784a0b1a7b8d062baff74eeea85a
+SHA1: fbc9b994b6802fdc756820574453238c6049fc20
+MD5sum: 5737ecef04da3901bf9c370b536dd9eb
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-sqlsrv
+Version: 5.12.0+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+ubuntu~20.04_all.deb
+Size: 3838
+SHA256: 4afa7a03d10acab30c9e7e1c39c932e5aaedd3895f8d2a9fabd89053bb4e13ea
+SHA1: cee0c13ac40ec13f7cc6633a7ac9a6269dac5c6b
+MD5sum: abfe0f4a32880af00ec922b4a2ccfc43
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-sqlsrv-all-dev
+Source: php-sqlsrv
+Version: 5.12.0+ubuntu~20.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.3-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.2-sqlsrv (>= 5.12.0+ubuntu~20.04~), php8.1-sqlsrv (>= 5.12.0+ubuntu~20.04~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+ubuntu~20.04_all.deb
+Size: 3876
+SHA256: f1b26b1b6f5b741a952826946b8ecf5909a15534d753c6906a36ecb331e23237
+SHA1: 4c59fdfe95080739bc0fb106121071b111d0d6ea
+MD5sum: 532258b9663e5edd6b4fba894957d47c
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
