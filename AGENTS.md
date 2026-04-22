@@ -340,6 +340,104 @@ Thêm package php-sqlsrv cho Ubuntu 24.04.
 - Delete branch (nếu không cần giữ)
 - Pull `main` về local
 
+### An Toàn Git - Bài Học (2026-04-23)
+
+**KHÔNG được lặp lại các sai lầm sau:**
+
+#### 1. Không Discard Local Changes Nếu Không Biết Nó Là Gì
+
+**Sai lầm:** Chạy `git checkout <file>` hoặc `git checkout .` để discard local changes mà không kiểm tra.
+
+**Giải pháp đúng:**
+```bash
+# Luôn kiểm tra trước
+git status          # Xem có gì thay đổi
+git diff            # Xem chi tiết thay đổi
+git diff --cached   # Xem staged changes
+
+# Nếu muốn save changes
+git stash           # Lưu changes, không mất
+git stash pop       # Lấy lại sau
+
+# Nếu muốn discard (SAU KHI ĐÃ KIỂM TRA)
+git checkout <file> # Chỉ khi chắc chắn không cần
+```
+
+#### 2. Không Force Push Main Branch
+
+**Sai lầm:** `git push origin main --force` → xóa commits của người khác.
+
+**Giải pháp đúng:**
+```bash
+# Luôn push bình thường
+git push origin main
+
+# Nếu có conflict → pull và resolve
+git pull origin main
+git push origin main
+
+# Chỉ force push feature branches (không phải main)
+git push origin feat/branch --force
+```
+
+#### 3. Luôn Commit Trước Khi Làm Gì Đó
+
+**Quy tắc:** Commit nhỏ, thường xuyên.
+
+```bash
+# Mỗi lần sửa → commit
+git add .
+git commit -m "chore: mô tả thay đổi"
+
+# Không để local changes tồn tại lâu
+# Local changes = risk of losing
+```
+
+#### 4. Dùng Reflog Để Recover Commit Bị Mất
+
+**Khi commit bị "xóa" (không còn ở HEAD):**
+```bash
+# Xem lịch sử HEAD movements
+git reflog -10
+
+# Tìm commit hash
+git reset --hard <commit-hash>
+
+# Hoặc checkout để xem
+git checkout <commit-hash>
+```
+
+**Reflog giữ commits:**
+- Mặc định: 30 ngày (unreachable commits)
+- Có thể configure: `gc.reflogExpire`
+- Commit không mất ngay → có thời gian recover
+
+#### 5. Trước Khi Force Push
+
+**Checklist:**
+- [ ] Đã kiểm tra `git log` để xem commits sẽ bị mất
+- [ ] Đã tạo backup branch nếu cần
+- [ ] Đã hỏi người dùng nếu force push main
+- [ ] Chỉ force push feature branches, không phải main
+
+#### 6. Tạo PR Để Review
+
+**Khi có thay đổi quan trọng:**
+```bash
+# Tạo branch từ baseline
+git branch review-base <baseline-commit>
+
+# Tạo PR branch
+git branch feat/changes <current-commit>
+
+# Tạo PR
+git push origin review-base
+git push origin feat/changes
+gh pr create --base review-base --head feat/changes
+```
+
+**Không reset main để tạo PR** → làm mất commits.
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
