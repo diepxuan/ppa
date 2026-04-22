@@ -81,6 +81,9 @@
 - ❌ Force push vào branch cũ
 - ❌ Force push main branch
 - ❌ Push vào PR đã merge
+- ❌ Revert commit trên main
+- ❌ Reset main về commit cũ
+- ❌ Chỉnh sửa lịch sử main branch
 
 ### 4.3 Commit Convention
 
@@ -186,6 +189,31 @@ gh pr create --base review-base --head feat/changes
 ```
 
 **Không reset main để tạo PR** → làm mất commits.
+
+<<<<<<< HEAD
+### 5.7 Không Revert/Reset Main Branch
+
+**Cấm tuyệt đối:**
+```bash
+# KHÔNG làm những lệnh này trên main
+git revert <commit>      # Không revert commit trên main
+git reset --hard <hash>  # Không reset main về commit cũ
+git push --force main    # Không force push main
+```
+
+**Nếu cần undo commit trên main:**
+```bash
+# Tạo commit mới để undo (không revert)
+git checkout -b fix/undo-<description>
+# Sửa code
+git commit -m "fix: undo <description>"
+git push origin fix/undo-<description>
+# Tạo PR để review
+```
+
+**Lý do:**
+- Revert/reset main → mất commits của người khác
+- Tạo commit mới → giữ lịch sử, có thể review
 
 ---
 
@@ -294,7 +322,19 @@ gh pr create --base review-base --head feat/changes
 
 ---
 
-## 12. Kỷ Luật
+<<<<<<< HEAD
+## 12. Giao Tiếp
+
+| Rule | Mô tả |
+|------|-------|
+| Ngôn ngữ | Tiếng Việt có dấu |
+| Emoji | Không sử dụng emoji |
+| Phong cách | Ngắn gọn, trực tiếp |
+| Từ đệm | Không dùng "Great question!", "I'd be happy to help!" |
+
+---
+
+## 13. Kỷ Luật
 
 | Rule | Mô tả |
 |------|-------|
