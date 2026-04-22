@@ -1,15 +1,19 @@
-# USER.md - About Your Human
+# USER.md - Thông Tin Người Dùng
 
-- **Name:** Tran Ngoc Duc
-- **What to call them:** Duc
-- **Pronouns:** he/him
-- **Timezone:** Asia/Ho_Chi_Minh (Vietnam)
+- **Tên:** Tran Ngoc Duc
+- **Cách gọi:** Đức
+- **Múi giờ:** Asia/Ho_Chi_Minh (Việt Nam)
 - **Email:** ductn@diepxuan.com
 
-## Context
+## Bối cảnh
 
-- Maintains DiepXuan PPA (ppa.diepxuan.com)
-- Builds packages for Debian (10-13) and Ubuntu (18.04-25.04)
-- Key packages: ductn, lar (Laravel), m2 (Magento 2), php-runkit7, php-sqlsrv, php-pdo_sqlsrv
-- Uses GPG signing for packages
-- Company: DiepXuan Co., Ltd
+- Quản trị DiepXuan PPA (ppa.diepxuan.com)
+- Xây dựng packages cho Debian (10-13) và Ubuntu (18.04-25.04)
+- Các packages chính: ductn, lar (Laravel), m2 (Magento 2), php-runkit7, php-sqlsrv, php-pdo_sqlsrv
+- Sử dụng GPG signing cho packages
+- Công ty: DiepXuan Co., Ltd
+
+## Tùy chọn giao tiếp
+
+- Ngôn ngữ: Tiếng Việt
+- Không dùng emoji trong giao tiếp

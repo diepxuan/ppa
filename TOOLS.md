@@ -1,13 +1,13 @@
-# TOOLS.md - Local Notes
+# TOOLS.md - Ghi Chú Cục Bộ
 
-## PPA Infrastructure
+## Hạ tầng PPA
 
 - **Repository:** /root/.openclaw/workspace/projects/ppa
 - **Public URL:** https://ppa.diepxuan.com
 - **GPG Key:** /root/.openclaw/workspace/projects/ppa/Release.gpg, /root/.openclaw/workspace/projects/ppa/key.gpg
 - **Database:** /root/.openclaw/workspace/projects/ppa/db/
 
-## Supported Distributions
+## Distributions Hỗ Trợ
 
 ### Debian
 - buster (10)
@@ -26,18 +26,18 @@
 ## Packages
 
 - **ductn** - DiepXuan super package
-- **ductn-ll** - ls -l alias package
-- **lar** - Laravel support package
-- **m2** - Magento 2 support package
+- **ductn-ll** - Package cung cấp lệnh 'll' (alias ls -l)
+- **lar** - Package hỗ trợ Laravel
+- **m2** - Package hỗ trợ Magento 2
 - **php-runkit7** - PHP runkit7 extension
-- **php-sqlsrv** - SQL Server driver for PHP
-- **php-pdo_sqlsrv** - PDO SQL Server driver for PHP
+- **php-sqlsrv** - SQL Server driver cho PHP
+- **php-pdo_sqlsrv** - PDO SQL Server driver cho PHP
 
 ## Build Tools
 
 - reprepro 5.3.0
 - dpkg-dev, debhelper
-- dput (for Launchpad uploads)
+- dput (dùng để upload lên Launchpad)
 - GPG signing enabled
 
 ## SSH/Remote
