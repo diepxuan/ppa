@@ -15,5 +15,7 @@
 
 ## Tùy chọn giao tiếp
 
-- Ngôn ngữ: Tiếng Việt
+- Ngôn ngữ: Tiếng Việt có dấu (bắt buộc)
+- Không dùng tiếng Việt không dấu
+- Không xen kẽ tiếng Anh trừ thuật ngữ kỹ thuật
 - Không dùng emoji trong giao tiếp
