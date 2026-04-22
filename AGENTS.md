@@ -211,7 +211,9 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 ### Ngôn Ngữ
 
-- **Tiếng Việt** là ngôn ngữ chính cho tất cả tài liệu
+- **Tiếng Việt có dấu** là ngôn ngữ chính cho tất cả tài liệu và phản hồi
+- **Bắt buộc:** Phải dùng tiếng Việt có dấu đầy đủ (không viết "merge nhe" mà phải viết "merge nhé")
+- Không xen kẽ tiếng Anh trong câu trừ thuật ngữ kỹ thuật (commit, PR, merge, workflow, submodule, package)
 - Giữ thuật ngữ kỹ thuật bằng tiếng Anh khi không có từ tương đương tốt (ví dụ: "workspace", "session", "commit", "PR")
 - Không sử dụng emoji trong tài liệu kỹ thuật
 
