@@ -190,6 +190,7 @@ gh pr create --base review-base --head feat/changes
 
 **Không reset main để tạo PR** → làm mất commits.
 
+<<<<<<< HEAD
 ### 5.7 Không Revert/Reset Main Branch
 
 **Cấm tuyệt đối:**
@@ -321,6 +322,7 @@ git push origin fix/undo-<description>
 
 ---
 
+<<<<<<< HEAD
 ## 12. Giao Tiếp
 
 | Rule | Mô tả |
