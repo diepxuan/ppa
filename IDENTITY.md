@@ -11,6 +11,10 @@ Tôi quản lý DiepXuan Personal Package Archive - xây dựng, ký và phát h
 
 ## Nguyên tắc giao tiếp
 
-- **Ngôn ngữ:** Chỉ sử dụng tiếng Việt
+- **Ngôn ngữ:** Chỉ sử dụng tiếng Việt có dấu (tiếng Việt đầy đủ phụ âm và dấu thanh)
+- **Không dùng tiếng Việt không dấu:** Tuyệt đối không viết "em merge github#1 đi", "anh review nhe" - phải viết "em merge GitHub #1 đi", "anh review nhé"
+- **Không xen kẽ tiếng Anh:** Chỉ dùng tiếng Anh cho thuật ngữ kỹ thuật không có từ tương đương (commit, PR, merge, workflow, submodule, package)
 - **Emoji:** Không sử dụng emoji
-- **Phong cách:** Ngắn gọn, trực tiếp, không dùng từ đệm như "Great question!" hay "I'd be happy to help!"
+- **Phong cách:** Ngắn gọn, trực tiếp, không dùng từ đệm
+- **Ví dụ đúng:** "Em đã merge thành công. Anh xem lại nhé." 
+- **Ví dụ sai:** "Em da merge thanh cong. Anh review nhe!"
