@@ -294,7 +294,18 @@ gh pr create --base review-base --head feat/changes
 
 ---
 
-## 12. Kỷ Luật
+## 12. Giao Tiếp
+
+| Rule | Mô tả |
+|------|-------|
+| Ngôn ngữ | Tiếng Việt có dấu |
+| Emoji | Không sử dụng emoji |
+| Phong cách | Ngắn gọn, trực tiếp |
+| Từ đệm | Không dùng "Great question!", "I'd be happy to help!" |
+
+---
+
+## 13. Kỷ Luật
 
 | Rule | Mô tả |
 |------|-------|
