@@ -207,6 +207,137 @@ Think of it like a human reviewing their journal and updating their mental model
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
 
+## Quy Tắc Viết Tài Liệu
+
+### Ngôn Ngữ
+
+- **Tiếng Việt** là ngôn ngữ chính cho tất cả tài liệu
+- Giữ thuật ngữ kỹ thuật bằng tiếng Anh khi không có từ tương đương tốt (ví dụ: "workspace", "session", "commit", "PR")
+- Không sử dụng emoji trong tài liệu kỹ thuật
+
+### Phong Cách
+
+- **Ngắn gọn, trực tiếp** — đi thẳng vào vấn đề
+- **Không từ đệm** — tránh "Great question!", "I'd be happy to help!"
+- **Dùng danh sách** — bullet points cho các mục liên quan
+- **Code blocks** — cho commands, paths, config snippets
+- **Nhất quán** — cùng terminology trong toàn bộ docs
+
+### Cấu Trúc File
+
+- **Headers rõ ràng** — dùng `##` và `###` để phân cấp
+- **Mô tả ngắn** — mỗi section có 1-2 câu giới thiệu
+- **Examples** — đưa ví dụ cụ thể khi cần
+- **Links** — reference đến files liên quan trong workspace
+
+### Khi Nào Cập Nhật Docs
+
+- Thêm tính năng mới → cập nhật TOOLS.md hoặc README
+- Học được bài học → cập nhật AGENTS.md hoặc memory/
+- Thay đổi workflow → cập nhật AGENTS.md
+- Gặp bug/issue → ghi vào memory/ và cập nhật docs nếu cần
+
+## Quy Tắc Git
+
+### Branch Naming
+
+```
+<type>/<description>
+```
+
+**Types:**
+- `feat` — tính năng mới
+- `fix` — sửa bug
+- `chore` — bảo trì, docs, config
+- `refactor` — tái cấu trúc code
+- `test` — thêm/sửa tests
+
+**Examples:**
+- `feat/add-new-package`
+- `fix/gpg-signing-issue`
+- `chore/update-docs`
+
+### Commit Messages
+
+```
+<type>: <description>
+
+[optional body]
+```
+
+**Rules:**
+- Dùng thì hiện tại ("add" không phải "added")
+- Không dấu chấm cuối dòng đầu tiên
+- Body optional, dùng để giải thích chi tiết
+- Giữ dòng đầu dưới 72 ký tự
+
+**Examples:**
+```
+feat: add php-sqlsrv package for Ubuntu 24.04
+
+- Build php-sqlsrv 5.12.0
+- Sign with GPG key
+- Upload to pool/main/p/php-sqlsrv/
+```
+
+```
+chore: translate docs to Vietnamese
+
+- AGENTS.md
+- SOUL.md
+- USER.md
+```
+
+### Workflow
+
+1. **Tạo branch mới** từ `main` cho mỗi thay đổi
+2. **Commit nhỏ, tập trung** — mỗi commit một mục đích
+3. **Push thường xuyên** — tránh mất work
+4. **Tạo PR** — mô tả rõ changes trong PR body
+5. **Review trước khi merge** — check diff, tests (nếu có)
+
+### PR Guidelines
+
+**Title:**
+- Follow commit message format
+- Rõ ràng, mô tả đủ nội dung
+
+**Body:**
+- Tóm tắt changes
+- List files thay đổi
+- Lý do thay đổi (nếu cần)
+- Testing done (nếu applicable)
+
+**Example PR Body:**
+```markdown
+## Tóm tắt
+
+Thêm package php-sqlsrv cho Ubuntu 24.04.
+
+### Files Thay Đổi
+
+- `pool/main/p/php-sqlsrv/` — package binaries
+- `dists/noble/main/binary-amd64/Packages` — updated
+
+### Testing
+
+- Build thành công trên Ubuntu 24.04
+- Install test: `apt install php-sqlsrv` ✓
+```
+
+### Before Push
+
+- [ ] `git status` — check files thay đổi
+- [ ] `git diff` — review changes
+- [ ] Commit messages rõ ràng
+- [ ] Docs cập nhật (nếu cần)
+
+### Sau Khi Merge
+
+- Update memory/ với changes quan trọng
+- Delete branch (nếu không cần giữ)
+- Pull `main` về local
+
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
