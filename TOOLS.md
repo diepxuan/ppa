@@ -10,12 +10,14 @@
 ## Distributions Hỗ Trợ
 
 ### Debian
+
 - buster (10)
 - bullseye (11)
 - bookworm (12)
 - trixie (13)
 
 ### Ubuntu
+
 - bionic (18.04)
 - focal (20.04)
 - jammy (22.04)
@@ -44,3 +46,28 @@
 
 - Launchpad PPA: caothu91ppa
 - Config: ~/.dput.cf
+
+## Xử Lý Lỗi Tool/Command
+
+**Quy tắc:**
+
+Khi thực hiện tool, cmd, exec, .v.v. nếu gặp lỗi hoặc loop:
+
+1. **Dừng lại** - không gọi lại lặp lại
+2. **Báo cáo Sếp** - mô tả lỗi, nguyên nhân nếu biết
+3. **Đề xuất phương án:**
+    - Cách sửa lỗi (nếu biết)
+    - Phương án đi vòng / bỏ qua
+    - Phương án thay thế
+
+**Ví dụ lỗi:**
+
+- `cat /usr/share/dh-php/pkg-pecl.mk` không tồn tại → dừng lại, không gọi lại 50 lần
+- `gh pr diff` lỗi format → dừng lại, kiểm tra cú pháp
+- `git push` fail → dừng lại, kiểm tra branch, remote
+
+**Khi nào retry:**
+
+- Chỉ retry khi đã xác định nguyên nhân và có cách sửa
+- Tối đa 1 lần retry sau khi đã sửa
+- Nếu vẫn lỗi → dừng lại → báo cáo Sếp
