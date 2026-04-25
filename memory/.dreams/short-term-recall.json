@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-24T01:46:53.937Z",
+  "entries": {
+    "memory:memory/2026-04-22.md:1:48": {
+      "key": "memory:memory/2026-04-22.md:1:48",
+      "path": "memory/2026-04-22.md",
+      "startLine": 1,
+      "endLine": 48,
+      "source": "memory",
+      "snippet": "# 2026-04-22 - Nhật ký Phiên ## Thiết lập Ban đầu - Điền IDENTITY.md với thông tin PPA Bot - Điền USER.md với thông tin Tran Ngoc Duc (ductn@diepxuan.com) - Điền TOOLS.md với chi tiết hạ tầng PPA - Tạo thư mục memory/ ## Tùy chọn Giao tiếp - Ngôn ngữ: Chỉ tiếng Việt có dấu - Emoji: Không sử dụng ## Trạng thái PPA - Repository chứa packages cho Debian 10-13 và Ubuntu 18.04-25.04 - Packages chính: ductn (5.5.2), lar, m2, php-runkit7 (4.0.0a6), php-sqlsrv, php-pdo_sqlsrv - GPG signing đã cấu hình - reprepro 5.3.0 sẵn sàng - Launchpad PPA: caothu91ppa ## PR #2 - Thêm tài liệu và quy tắc - Branch: feat/add-identity-and-docs - Files: IDENTITY.md, USER.md, TOOLS.md, HEARTBEAT.md, AGENTS.md,",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4734193122819781,
+      "maxScore": 0.4734193122819781,
+      "firstRecalledAt": "2026-04-24T01:46:53.937Z",
+      "lastRecalledAt": "2026-04-24T01:46:53.937Z",
+      "queryHashes": [
+        "280500ac604b"
+      ],
+      "recallDays": [
+        "2026-04-24"
+      ],
+      "conceptTags": [
+        "identity.md",
+        "user.md",
+        "diepxuan.com",
+        "tools.md",
+        "10-13",
+        "18.04-25.04",
+        "5.5.2",
+        "php-runkit7"
+      ]
+    }
+  }
+}
