@@ -223,18 +223,43 @@ DiepXuan PPA cung cấp các packages cho Debian và Ubuntu, bao gồm:
 **Mô tả:** Setup GPG key cho build process
 **Vai trò:** Workflow này được sử dụng bởi workflow chung
 
-## Quy trình Build
+## Quy trình Build Chi tiết
 
-### 1. Trigger Workflow
+### Tổng quan
+
+Quy trình build của DiepXuan PPA sử dụng GitHub Actions để tự động build, test và publish packages. Quy trình này được chia thành 3 giai đoạn chính:
+
+1. **Build & Test** - Build package và chạy test
+2. **Publish** - Publish package lên PPA
+3. **Repository Update** - Cập nhật repository và sync submodules
+
+### Giai đoạn 1: Build & Test
+
+#### 1.1 Trigger Workflow
 
 Workflow được trigger khi:
 - Push code vào branch main
 - Tạo pull request vào branch main
 - Manual trigger từ Actions tab
 
-### 2. Build Package
+#### 1.2 Package GitHub Actions Build Test
 
-Workflow chung `debian-package-ppa.yml` thực hiện:
+**Workflow:** `.github/workflows/<package>.yml`
+
+**Ví dụ:** `.github/workflows/management.yml`
+
+**Trigger:**
+- Lắng nghe thay đổi trong `src/diepxuan/management/**`
+- Push vào branch main
+- Pull request vào branch main
+- Manual trigger
+
+**Jobs:**
+- `module-build`: Build package management
+
+**Workflow gọi:** `src/github/.github/workflows/debian-package-ppa.yml`
+
+**Steps:**
 1. Checkout repository
 2. Setup GPG key
 3. Setup SSH key
@@ -242,23 +267,217 @@ Workflow chung `debian-package-ppa.yml` thực hiện:
 5. Download source từ PECL/GitHub
 6. Build package Debian
 7. Test installation
-8. Publish lên Launchpad PPA
+8. Nếu build thành công → gọi đến `src/github/.github/workflows/debian-package-publish.yml`
 
-### 3. Publish Package
+### Giai đoạn 2: Publish
 
-Package được publish lên:
-- **Launchpad PPA:** caothu91ppa
-- **DiepXuan PPA:** https://ppa.diepxuan.com
+#### 2.1 Debian Package Publish Workflow
 
-### 4. Sync Repositories
+**Workflow:** `src/github/.github/workflows/debian-package-publish.yml`
 
-Sync hai chiều giữa php-ext và các repo con:
-- **php-ext update → push sang php-runkit7, php-sqlsrv, php-pdo_sqlsrv**
-- **php-runkit7/php-sqlsrv/php-pdo_sqlsrv update → merge về php-ext**
+**Nhiệm vụ:**
+- Truy cập vào PPA repository
+- Pull source code mới nhất của các submodule
+- Publish packages lên PPA
 
-## Cài đặt Packages
+**Steps:**
+1. Checkout PPA repository
+2. Update submodules
+3. Pull source code mới nhất
+4. Publish packages lên PPA
+5. Update repository index
 
-### Thêm PPA
+### Giai đoạn 3: Repository Update
+
+#### 3.1 Debian Package PPA Workflow
+
+**Workflow:** `src/github/.github/workflows/debian-package-ppa.yml`
+
+**Nhiệm vụ:**
+- Gọi Docker để build trên nhiều loại OS
+- Build multi architecture
+- Dùng reprepro thêm vào APT repository
+- Client có thể dùng apt cài đặt
+
+**Steps:**
+1. Setup Docker environment
+2. Build packages trên nhiều OS:
+   - Debian: 10 (Buster), 11 (Bullseye), 12 (Bookworm), 13 (Trixie)
+   - Ubuntu: 18.04 (Bionic), 20.04 (Focal), 22.04 (Jammy), 24.04 (Noble), 24.10 (Oracular), 25.04 (Plucky)
+3. Build multi architecture:
+   - amd64 (x86_64)
+   - arm64 (aarch64)
+4. Dùng reprepro thêm vào APT repository
+5. Update repository index
+6. Sign packages với GPG key
+7. Publish lên PPA server
+
+### Quy trình Build Chi tiết
+
+#### Bước 1: Trigger
+
+```yaml
+# .github/workflows/management.yml
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/diepxuan/management/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/diepxuan/management/**"
+  workflow_dispatch:
+```
+
+#### Bước 2: Build & Test
+
+```yaml
+jobs:
+  module-build:
+    permissions:
+      contents: write
+    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
+    with:
+      module: "management"
+    secrets:
+      GPG_KEY: ${{ secrets.GPG_KEY }}
+      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
+```
+
+#### Bước 3: Publish
+
+```yaml
+# src/github/.github/workflows/debian-package-publish.yml
+jobs:
+  package-publish:
+    needs: module-build
+    steps:
+      - name: Checkout PPA repository
+        uses: actions/checkout@v4
+        with:
+          repository: diepxuan/ppa
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update submodules
+        run: |
+          git submodule update --init --recursive --remote
+      
+      - name: Pull latest source
+        run: |
+          git pull origin main
+          git submodule update --remote
+      
+      - name: Publish packages
+        run: |
+          # Publish logic
+```
+
+#### Bước 4: Multi-OS Build
+
+```yaml
+# src/github/.github/workflows/debian-package-ppa.yml
+jobs:
+  build:
+    strategy:
+      matrix:
+        os:
+          - debian:buster
+          - debian:bullseye
+          - debian:bookworm
+          - debian:trixie
+          - ubuntu:bionic
+          - ubuntu:focal
+          - ubuntu:jammy
+          - ubuntu:noble
+          - ubuntu:oracular
+          - ubuntu:plucky
+        arch:
+          - amd64
+          - arm64
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build package
+        run: |
+          docker run --rm -v $PWD:/build \
+            --platform linux/${{ matrix.arch }} \
+            ${{ matrix.os }} \
+            bash -c "cd /build && dpkg-buildpackage -us -uc"
+```
+
+#### Bước 5: Add to APT Repository
+
+```yaml
+# src/github/.github/workflows/debian-package-ppa.yml
+jobs:
+  publish:
+    needs: build
+    steps:
+      - name: Add to APT repository
+        run: |
+          # Dùng reprepro để thêm package vào repository
+          reprepro --basedir /var/www/ppa \
+            --outdir /var/www/ppa \
+            includedeb ${{ matrix.os }} \
+            ${{ matrix.package }}.deb
+      
+      - name: Update repository index
+        run: |
+          # Update repository index
+          reprepro --basedir /var/www/ppa \
+            processincoming default
+      
+      - name: Sign packages
+        run: |
+          # Sign packages với GPG key
+          dpkg-sig --sign builder \
+            --keyring /var/www/ppa/keyring.gpg \
+            ${{ matrix.package }}.changes
+```
+
+### Quy trình Build cho từng Package
+
+#### php-runkit7
+
+1. **Trigger:** `.github/workflows/php-runkit7.yml`
+2. **Build:** `src/github/.github/workflows/debian-package-ppa.yml`
+3. **Publish:** `src/github/.github/workflows/debian-package-publish.yml`
+4. **Multi-OS Build:** Debian 10-13, Ubuntu 18.04-25.04
+5. **Multi-Arch:** amd64, arm64
+6. **Add to APT:** reprepro
+
+#### php-sqlsrv
+
+1. **Trigger:** `.github/workflows/php-sqlsrv.yml`
+2. **Build:** `src/github/.github/workflows/debian-package-ppa.yml`
+3. **Publish:** `src/github/.github/workflows/debian-package-publish.yml`
+4. **Multi-OS Build:** Debian 10-13, Ubuntu 18.04-25.04
+5. **Multi-Arch:** amd64, arm64
+6. **Add to APT:** reprepro
+
+#### php-pdo_sqlsrv
+
+1. **Trigger:** `.github/workflows/php-pdo_sqlsrv.yml`
+2. **Build:** `src/github/.github/workflows/debian-package-ppa.yml`
+3. **Publish:** `src/github/.github/workflows/debian-package-publish.yml`
+4. **Multi-OS Build:** Debian 10-13, Ubuntu 18.04-25.04
+5. **Multi-Arch:** amd64, arm64
+6. **Add to APT:** reprepro
+
+#### management
+
+1. **Trigger:** `.github/workflows/management.yml`
+2. **Build:** `src/github/.github/workflows/debian-package-ppa.yml`
+3. **Publish:** `src/github/.github/workflows/debian-package-publish.yml`
+4. **Multi-OS Build:** Debian 10-13, Ubuntu 18.04-25.04
+5. **Multi-Arch:** amd64, arm64
+6. **Add to APT:** reprepro
+
+### Cài đặt Packages từ PPA
+
+#### Thêm PPA
 
 ```bash
 # Thêm DiepXuan PPA
@@ -274,7 +493,7 @@ sudo gpg --dearmor -o /usr/share/keyrings/diepxuan.gpg
 sudo apt update
 ```
 
-### Cài đặt Packages
+#### Cài đặt Packages
 
 ```bash
 # Cài đặt diepxuan-repositories
@@ -286,6 +505,20 @@ sudo apt install php-sqlsrv php-pdo-sqlsrv php-runkit7
 # Cài đặt management tools
 sudo apt install management
 ```
+
+### Sync Repositories
+
+#### Sync hai chiều giữa php-ext và các repo con
+
+**php-ext update → push sang php-runkit7, php-sqlsrv, php-pdo_sqlsrv:**
+- Khi php-ext được update
+- Push code sang các repo con
+- Trigger build cho từng repo con
+
+**php-runkit7/php-sqlsrv/php-pdo_sqlsrv update → merge về php-ext:**
+- Khi repo con được update
+- Merge code về php-ext
+- Update build system chung
 
 ## Submodules
 
@@ -301,32 +534,6 @@ sudo apt install management
 | php-sqlsrv | src/diepxuan/php-sqlsrv | https://github.com/diepxuan/php-sqlsrv.git | PHP sqlsrv package |
 | php-pdo_sqlsrv | src/diepxuan/php-pdo_sqlsrv | https://github.com/diepxuan/php-pdo_sqlsrv.git | PHP pdo_sqlsrv package |
 | php-ext | src/php-ext | https://github.com/diepxuan/php-ext.git | PHP extensions repo gốc |
-
-## Build System
-
-### Build Script
-
-**File:** `src/diepxuan/build.sh`
-**Mô tả:** Script build chung cho tất cả packages
-**Environment variables:**
-- `repository` - Xác định module (e.g., `diepxuan/php-sqlsrv`)
-- `GPG_KEY` - GPG key để ký package
-- `GPG_KEY_ID` - GPG key ID
-
-### Build Process
-
-```bash
-cd src/
-bash build.sh
-```
-
-**Steps:**
-1. Cài đặt build dependencies
-2. Setup GPG key
-3. Download source từ PECL/GitHub
-4. Build package Debian
-5. Test installation
-6. Publish lên Launchpad PPA
 
 ## Distributions Hỗ trợ
 
