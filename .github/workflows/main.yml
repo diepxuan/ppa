@@ -1,0 +1,101 @@
+# Main PPA build workflow
+# Triggers on PPA updates to build all packages
+name: PPA Build (Main)
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - ".github/workflows/main.yml"
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**.md"
+      - "docs/**"
+      - ".github/workflows/main.yml"
+  workflow_dispatch:
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.detect.outputs.packages }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Detect changed submodules
+        id: detect
+        run: |
+          # Get list of all submodules
+          SUBMODULES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||')
+          
+          # For manual trigger, build all
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "packages=$SUBMODULES" >> $GITHUB_OUTPUT
+            echo "All packages will be built (manual trigger)"
+            exit 0
+          fi
+
+          # Get base ref
+          BASE_REF="${{ github.base_ref }}"
+          if [[ -z "$BASE_REF" ]]; then
+            BASE_REF="main"
+          fi
+
+          # Get changed files
+          CHANGES=$(git diff --name-only origin/$BASE_REF...HEAD 2>/dev/null || git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
+
+          echo "Changes detected: $CHANGES"
+
+          # Find which submodules have changes
+          CHANGED_PACKAGES=""
+          for submodule in $SUBMODULES; do
+            if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
+              echo "Package '$submodule' has changes"
+              if [[ -z "$CHANGED_PACKAGES" ]]; then
+                CHANGED_PACKAGES="$submodule"
+              else
+                CHANGED_PACKAGES="$CHANGED_PACKAGES,$submodule"
+              fi
+            fi
+          done
+
+          if [[ -z "$CHANGED_PACKAGES" ]]; then
+            echo "No package changes detected"
+            echo "packages=" >> $GITHUB_OUTPUT
+          else
+            echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+            echo "Will build: $CHANGED_PACKAGES"
+          fi
+
+  build:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.packages != ''
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJson(needs.detect-changes.outputs.packages) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Build package
+        uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
+        with:
+          module: ${{ matrix.package }}
+        secrets:
+          GPG_KEY: ${{ secrets.GPG_KEY }}
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
