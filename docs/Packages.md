@@ -225,6 +225,8 @@ DiepXuan PPA cung cấp các packages cho Debian và Ubuntu, bao gồm:
 
 ## Quy trình Build Chi tiết
 
+> **Xem chi tiết:** [Package-Build-Process.md](./Package-Build-Process.md)
+
 ### Tổng quan
 
 Quy trình build của DiepXuan PPA sử dụng GitHub Actions để tự động build, test và publish packages. Quy trình này được chia thành 3 giai đoạn chính:
