@@ -21,115 +21,81 @@ jobs:
   detect-changes:
     runs-on: ubuntu-latest
     outputs:
-      management: ${{ steps.detect.outputs.management }}
-      php_sqlsrv: ${{ steps.detect.outputs.php_sqlsrv }}
-      php_pdo_sqlsrv: ${{ steps.detect.outputs.php_pdo_sqlsrv }}
-      php_runkit7: ${{ steps.detect.outputs.php_runkit7 }}
+      packages: ${{ steps.detect.outputs.packages }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          submodules: true
 
-      - name: Detect changes
+      - name: Detect changed submodules
         id: detect
         run: |
+          # Get list of all submodules
+          SUBMODULES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||')
+          
           # For manual trigger, build all
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "management=true" >> $GITHUB_OUTPUT
-            echo "php_sqlsrv=true" >> $GITHUB_OUTPUT
-            echo "php_pdo_sqlsrv=true" >> $GITHUB_OUTPUT
-            echo "php_runkit7=true" >> $GITHUB_OUTPUT
+            echo "packages=$SUBMODULES" >> $GITHUB_OUTPUT
+            echo "All packages will be built (manual trigger)"
             exit 0
           fi
 
-          # Get changed files compared to main branch
+          # Get base ref
           BASE_REF="${{ github.base_ref }}"
           if [[ -z "$BASE_REF" ]]; then
             BASE_REF="main"
           fi
 
+          # Get changed files
           CHANGES=$(git diff --name-only origin/$BASE_REF...HEAD 2>/dev/null || git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
 
           echo "Changes detected: $CHANGES"
 
-          # Check each package
-          if echo "$CHANGES" | grep -q "^src/diepxuan/management/"; then
-            echo "management=true" >> $GITHUB_OUTPUT
+          # Find which submodules have changes
+          CHANGED_PACKAGES=""
+          for submodule in $SUBMODULES; do
+            if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
+              echo "Package '$submodule' has changes"
+              if [[ -z "$CHANGED_PACKAGES" ]]; then
+                CHANGED_PACKAGES="$submodule"
+              else
+                CHANGED_PACKAGES="$CHANGED_PACKAGES,$submodule"
+              fi
+            fi
+          done
+
+          if [[ -z "$CHANGED_PACKAGES" ]]; then
+            echo "No package changes detected"
+            echo "packages=" >> $GITHUB_OUTPUT
           else
-            echo "management=false" >> $GITHUB_OUTPUT
+            echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+            echo "Will build: $CHANGED_PACKAGES"
           fi
 
-          if echo "$CHANGES" | grep -q "^src/diepxuan/php-sqlsrv/"; then
-            echo "php_sqlsrv=true" >> $GITHUB_OUTPUT
-          else
-            echo "php_sqlsrv=false" >> $GITHUB_OUTPUT
-          fi
-
-          if echo "$CHANGES" | grep -q "^src/diepxuan/php-pdo_sqlsrv/"; then
-            echo "php_pdo_sqlsrv=true" >> $GITHUB_OUTPUT
-          else
-            echo "php_pdo_sqlsrv=false" >> $GITHUB_OUTPUT
-          fi
-
-          if echo "$CHANGES" | grep -q "^src/diepxuan/php-runkit7/"; then
-            echo "php_runkit7=true" >> $GITHUB_OUTPUT
-          else
-            echo "php_runkit7=false" >> $GITHUB_OUTPUT
-          fi
-
-  management:
+  build:
     needs: detect-changes
-    if: needs.detect-changes.outputs.management == 'true'
+    if: needs.detect-changes.outputs.packages != ''
     permissions:
       contents: write
-    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
-    with:
-      module: "management"
-    secrets:
-      GPG_KEY: ${{ secrets.GPG_KEY }}
-      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package: ${{ fromJson(needs.detect-changes.outputs.packages) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
 
-  php-sqlsrv:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.php_sqlsrv == 'true'
-    permissions:
-      contents: write
-    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
-    with:
-      module: "php-sqlsrv"
-    secrets:
-      GPG_KEY: ${{ secrets.GPG_KEY }}
-      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
-
-  php-pdo_sqlsrv:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.php_pdo_sqlsrv == 'true'
-    permissions:
-      contents: write
-    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
-    with:
-      module: "php-pdo_sqlsrv"
-    secrets:
-      GPG_KEY: ${{ secrets.GPG_KEY }}
-      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
-
-  php-runkit7:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.php_runkit7 == 'true'
-    permissions:
-      contents: write
-    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
-    with:
-      module: "php-runkit7"
-    secrets:
-      GPG_KEY: ${{ secrets.GPG_KEY }}
-      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
+      - name: Build package
+        uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
+        with:
+          module: ${{ matrix.package }}
+        secrets:
+          GPG_KEY: ${{ secrets.GPG_KEY }}
+          GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
