@@ -148,21 +148,21 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: php8.5-runkit7
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~22.04_all.deb
-Size: 2824
-SHA256: 5c26876ef43757703fc8e08a4506bc643612b4de02686848c219bfbe9a5390c0
-SHA1: 004b782d19104fd2f466a9a884167e4e5ebf21d1
-MD5sum: 8eb193bd346c4a575395c84f8341f248
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+ubuntu~22.04_all.deb
+Size: 3368
+SHA256: ea85717b15ea69c114ea694b08d2d129e41ce2fa94ec461d427027294315648b
+SHA1: aea94967381a29e0e78f9b2ad80aff9c8c08be5d
+MD5sum: da791d85a8850c5514f2ce78d24ea1d9
 Description: runkit7 module for PHP
  .
  .
@@ -175,21 +175,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php7.2-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php7.3-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php7.4-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php8.0-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php8.1-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php8.2-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php8.3-runkit7 (>= 4.0.0a6+ubuntu~22.04~), php-all-dev
+Depends: php7.2-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php7.3-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php7.4-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php8.0-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php8.1-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php8.2-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php8.3-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php8.4-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php8.5-runkit7 (>= 4.0.0a7+ubuntu~22.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~22.04_all.deb
-Size: 2878
-SHA256: 1a39f7f814efec6f5b3c9b52fcdc4bb9485781256d90e5108dfccdcf0bc3db05
-SHA1: 9ddaa5e9dfba61fc5c61a51607a7ce99356069ee
-MD5sum: 3c4c40f734ab870632eccc8963df7002
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+ubuntu~22.04_all.deb
+Size: 3428
+SHA256: 06bce843ddb398a863559f4b25e68673356b0cf969bdb43426f0ab2cfee123e0
+SHA1: d9e7afe034adfa74e87155c9416436387eedb24a
+MD5sum: 5e48e49997fe71d714b9a0108a52b1de
 Description: runkit7 module for PHP
  .
  .
@@ -255,24 +255,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.2-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php7.2-common, phpapi-20170718, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 38462
-SHA256: 65ccb839c36a4f0c6c9fce39ed7078650daf9363a15b2e7a76a5014871b36b54
-SHA1: 71e900d13bf2a8281640a7ebb58247977acbe811
-MD5sum: 290b6eab9feec389ec1e441316407dcf
+Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 38994
+SHA256: db3557f209a1ca97f7025234668b7b2334fc96a1cbb6b6ebd13902274b645e04
+SHA1: daaf68df1b8c95bc433080d05a25792cd9a05813
+MD5sum: dd7c2033881f95a5013a34f917758c20
 Description: runkit7 module for PHP
  .
  .
@@ -283,24 +283,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.3-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php7.3-common, phpapi-20180731, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 38406
-SHA256: e7026bf1fd29b4c1febbdb4b842d8292264040eb48cb00f2d8fe5ed71c795f3d
-SHA1: f2ee166bc5eb4a70fc538f28803dbbf5ed28f003
-MD5sum: 335760af1cac32b7900a0c9445c1b5d8
+Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 38930
+SHA256: 6fed3ace075075abffab4eb45ed480e083c7c6e7089d8294436cb64a0ae27ca3
+SHA1: a8f9448c7747dc0d8ba97c96cf11a3c3b812a466
+MD5sum: c5d8874c9bd55f0b4e0bee4ac23ed734
 Description: runkit7 module for PHP
  .
  .
@@ -311,24 +311,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.4-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php7.4-common, phpapi-20190902, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 38398
-SHA256: 74624c2ef2b81b0c24be864ad2c49dec395bd6f4837dd16a829c75dfcd64cf40
-SHA1: a0792e052f4e0020fdb67f96cf27816d20125c74
-MD5sum: 7e2cb2dd994274d9f1477ec0932e0a33
+Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 38922
+SHA256: 2cc801780aa7e1c7946b9d43c22b1a8ff596313cf7a9e49d71aff47764ab774d
+SHA1: 9d1589b0de1fbf91f1ecbd8c3e979da7dcb89c3a
+MD5sum: 7b0618140e1fdcd8871ba1f4b2af8f42
 Description: runkit7 module for PHP
  .
  .
@@ -339,24 +339,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.0-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.0-common, phpapi-20200930, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 37994
-SHA256: 38c9bcb4b306ad35b80cacebaace006399eb6383b2e316ccb06bc81fb5175044
-SHA1: ca77bafa7d8cbda6956b730eea612e7a7462ecda
-MD5sum: 6201663e507abd3b149d3231b623d73b
+Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 38514
+SHA256: e9391d0e9d6c55f9e9392679c047064d9d6cb4d1c884b1263bda0fbbeda7e5ec
+SHA1: 3c1b944f8724d91dd9f4e91531f08961b05fe70d
+MD5sum: 40195a54b7c813cdf1243d2f2b113d4b
 Description: runkit7 module for PHP
  .
  .
@@ -395,24 +395,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.1-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 38048
-SHA256: 5b510299b4f79aa7ea83e84ccaf0057780a839293668ba8845aabc08c1a6ba04
-SHA1: 0d6773848736c6dadf666179649dbdb0e1e8c0ed
-MD5sum: 9c6627e104cedef806fb7b00fc2ae570
+Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 38578
+SHA256: dbd1a5b7129ab565a98a34ce01abf54660b196e4375ef15eecdb351a4a3ae8fc
+SHA1: 048783164c043800ed12e33dca477e2374b53e7b
+MD5sum: 6b63ab0733129900362faa276fc868bd
 Description: runkit7 module for PHP
  .
  .
@@ -479,24 +479,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.2-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 38678
-SHA256: 9af4e87b1fa814d8baebff9035277710686498e804704e3b5076554e31a0ac42
-SHA1: 3d08a8e1f745215d58ac8f7c28238033d36a4941
-MD5sum: a33c2cd89a87c360225ec74c9ef29e6c
+Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 39198
+SHA256: 68a8b6cc0eebcbec1475f5b7fa6388f6995c4c4f86a479c28bc24c1d20306539
+SHA1: 0eaeca5a1d6dffd676a07e13afea396b0bd56edf
+MD5sum: 966c9ff351a48db87cec4851e50334f6
 Description: runkit7 module for PHP
  .
  .
@@ -563,24 +563,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~22.04
+Version: 4.0.0a7+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 108
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
-Replaces: php-runkit7 (<< 4.0.0a6+ubuntu~22.04~)
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a6+ubuntu~22.04_amd64.deb
-Size: 38690
-SHA256: 9632f8b3888ffcf667cc0834a3902e2fac699220371a5ef2ecdf3cd6db938797
-SHA1: 5b715ba0b77952707ad9c37f35370c8afb720f2d
-MD5sum: 97f219b1b11149a9f1fa86dd41599d17
+Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 39220
+SHA256: f0fc04d60bff61ed0f032c375a920705316e527c932f32971379c5b15e64a0a9
+SHA1: 8ac635896dd88e7efd150aa6b10051aa672cc654
+MD5sum: 17509952a924f680d56ed02fa2a5c0d4
 Description: runkit7 module for PHP
  .
  .
@@ -645,6 +645,34 @@ Description: pdo_sqlsrv module for PHP
  for web development and can be embedded into HTML.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.4-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+ubuntu~22.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.4-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 39370
+SHA256: 0d1fde9160814877aeee3d3d376ae0920217a302178fb4ff42afd6e5fff4d6e6
+SHA1: 753db4465e201a51e5b41ee6c1bceb811fa8a7c0
+MD5sum: ed490c6817e51b8536133b8b85608cbe
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.4-sqlsrv
 Source: php-sqlsrv
 Version: 5.13.0+ubuntu~22.04
@@ -694,6 +722,34 @@ SHA256: c0d1276bf8269a88f60dcbe2ceaeedcf8d6719a9049a70ccfee793b969837eb6
 SHA1: 654a94d161d982b48065fae297c90789bf687ab8
 MD5sum: 6bdeb1488366fb714066f67801018ec2
 Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+ubuntu~22.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 108
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Replaces: php-runkit7 (<< 4.0.0a7+ubuntu~22.04~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.5-runkit7_4.0.0a7+ubuntu~22.04_amd64.deb
+Size: 39372
+SHA256: 76db48426a1939947c0d495feca39a54e8f9e960b8f8dba86a0aff4cfe9f8e45
+SHA1: da1d6ed497bc9bb006e19b5b83cd9111a864d6a1
+MD5sum: 1eeb40aa47f76c6d1275fede2ec92c0f
+Description: runkit7 module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
