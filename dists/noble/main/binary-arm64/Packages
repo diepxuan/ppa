@@ -70,21 +70,21 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+ubuntu~24.04
+Version: 4.0.0a7+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: php8.5-runkit7
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~24.04_all.deb
-Size: 2824
-SHA256: fce2fe25178c1fd6a5792a8c82aa3e173ecbceabd3250c46a4bf9107e2859699
-SHA1: 6deeca53c3b225bbc17010e1b0049511746c76ce
-MD5sum: 057d039b5ee9cc734ed19d3d2adf3dde
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+ubuntu~24.04_all.deb
+Size: 3374
+SHA256: 352cc30695c8ed34d5520ec9490cf716dd4b1490ce2fb757f53dd4d18df50443
+SHA1: 1441b34aa7f729153196b81fd1ef52c1dd46ea23
+MD5sum: 2ebdd5b7b03d145dbb9d441eefbf36d2
 Description: runkit7 module for PHP
  .
  .
@@ -97,21 +97,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~24.04
+Version: 4.0.0a7+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php7.2-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php7.3-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php7.4-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.0-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.1-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.2-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.3-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php-all-dev
+Depends: php7.2-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php7.3-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php7.4-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.0-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.1-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.2-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.3-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.4-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.5-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~24.04_all.deb
-Size: 2868
-SHA256: 8560a01d87adaf338f2aedee9253ef4804d52046a9409997424b039cdb331db2
-SHA1: 5af2c35f7b8f8ce4ec23234337967aff8e4ecfbc
-MD5sum: 56217f0b4414bc5062c11148f73cf5b9
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+ubuntu~24.04_all.deb
+Size: 3430
+SHA256: fdb1aa1b816a028982227c2251f885d4055f96729ea542def2facfbb9896c64b
+SHA1: d91132c3a4d648318445275de91b1bee17e43fc4
+MD5sum: a270bd63416eff3f62cded665b481f15
 Description: runkit7 module for PHP
  .
  .
