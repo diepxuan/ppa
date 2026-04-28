@@ -142,21 +142,21 @@ Description: runkit7 module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv
-Version: 5.12.0+ubuntu~plucky
+Version: 5.13.0+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.3-sqlsrv
+Depends: php8.4-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+ubuntu~plucky_all.deb
-Size: 3838
-SHA256: c5f0c95868ab1c7b2d1e418a79419aff21093be5e46b7f7c4ade73e3243266ac
-SHA1: 7d318a75a1d7e7d788b2203171a1028ec2de1860
-MD5sum: 999176837e3df6dc5101865cb5125b64
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.0+ubuntu~25.04_all.deb
+Size: 4164
+SHA256: 3c75c89a653aa6248daef4ec8053364d2b2883916f38769e1b6ce908f1145500
+SHA1: 3988c4ce6133df13e6671bdc28cf61a70f2906ed
+MD5sum: e592d18a8cff9aac3c512cdf723c9846
 Description: sqlsrv module for PHP
  .
  .
@@ -169,21 +169,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.12.0+ubuntu~plucky
+Version: 5.13.0+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.3-sqlsrv (>= 5.12.0+ubuntu~plucky~), php-all-dev
+Depends: php8.4-sqlsrv (>= 5.13.0+ubuntu~25.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+ubuntu~plucky_all.deb
-Size: 3870
-SHA256: 317c2bd78c28621dcdf2c7bd718bf14c590ca5dfcccf69598bae6b58581b7e0e
-SHA1: 1a301ad5f625bcb6dc45c1986f2655dfa6cfa8db
-MD5sum: d3176dd626830e1213c625bc330ef312
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.0+ubuntu~25.04_all.deb
+Size: 4190
+SHA256: 88397541d0aa47eff04f20d682ba923364f45806066c5db369730053095990c6
+SHA1: e4039eb0eccddd2b03902ec55206fdb56598b560
+MD5sum: a32d2fd006f5403bc0219adc8eca3d39
 Description: sqlsrv module for PHP
  .
  .
