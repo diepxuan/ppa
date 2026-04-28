@@ -71,21 +71,21 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+ubuntu~plucky
+Version: 4.0.0a7+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.3-runkit7
+Depends: php8.4-runkit7
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~plucky_all.deb
-Size: 2842
-SHA256: de407dd00d6886aeec817b4e81a78133160931ac5bf235d7bf39a727998c3b2f
-SHA1: fd36450d32c7e4eb30cd52a20f66bfc8e1fb225c
-MD5sum: 2e027b3c57a14c179037699854e4cb12
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+ubuntu~25.04_all.deb
+Size: 3372
+SHA256: a467f5908adc370bc2217eb2dc4a3a584af76fe3d39ab79d3213db5e7e385a9f
+SHA1: ef54baafd1379a5f70ec75a0269a5a5e8d5fcef5
+MD5sum: 10e7e019a10edc9a9f53a11a3fd0f7e5
 Description: runkit7 module for PHP
  .
  .
@@ -98,21 +98,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~plucky
+Version: 4.0.0a7+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.3-runkit7 (>= 4.0.0a6+ubuntu~plucky~), php-all-dev
+Depends: php8.4-runkit7 (>= 4.0.0a7+ubuntu~25.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~plucky_all.deb
-Size: 2866
-SHA256: 75f79205c91cf32f34804a157787e3eb485bdc84b565bcb9ac96b161706320a1
-SHA1: 246cb056166d00522f0c8fcb028615b8d3881e1c
-MD5sum: 5bd6463c245b265c0878291c86c41723
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+ubuntu~25.04_all.deb
+Size: 3400
+SHA256: dbe855d6b31894ea722d1a47aa901b3275619c3b817e29f631e655621ce90c70
+SHA1: 4a8afcff97418b77eddb60524434e6f4214d8e8e
+MD5sum: f01eee8f6c2d4a4a3298f6f175aa87a2
 Description: runkit7 module for PHP
  .
  .
