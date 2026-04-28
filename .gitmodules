@@ -19,6 +19,6 @@
 [submodule "src/php-ext"]
 	path = src/php-ext
 	url = https://github.com/diepxuan/php-ext.git
-[submodule "src/diepxuan/package-repositories"]
-	path = src/diepxuan/package-repositories
-	url = git@github.com:diepxuan/package-repositories.git
+[submodule "src/diepxuan/diepxuan-archive-keyring"]
+	path = src/diepxuan/diepxuan-archive-keyring
+	url = https://github.com/diepxuan/diepxuan-archive-keyring.git
