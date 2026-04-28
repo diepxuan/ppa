@@ -36,8 +36,8 @@ jobs:
       - name: Detect changed submodules
         id: detect
         run: |
-          # Get list of all submodules
-          SUBMODULES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||')
+          # Get list of all submodules (as JSON array)
+          SUBMODULES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||' | jq -R -s -c 'split("\n") | map(select(length > 0))')
 
           # For manual trigger, build all
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
@@ -57,22 +57,22 @@ jobs:
 
           echo "Changes detected: $CHANGES"
 
-          # Find which submodules have changes
-          CHANGED_PACKAGES=""
-          for submodule in $SUBMODULES; do
-            if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
-              echo "Package '$submodule' has changes"
-              if [[ -z "$CHANGED_PACKAGES" ]]; then
-                CHANGED_PACKAGES="$submodule"
-              else
-                CHANGED_PACKAGES="$CHANGED_PACKAGES,$submodule"
+          # Find which submodules have changes (as JSON array)
+          CHANGED_PACKAGES="$SUBMODULES"
+          if [[ -n "$CHANGES" ]]; then
+            CHANGED_JSON="[]"
+            for submodule in $(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||'); do
+              if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
+                echo "Package '$submodule' has changes"
+                CHANGED_JSON=$(echo "$CHANGED_JSON" | jq -c ". + [\"$submodule\"]")
               fi
-            fi
-          done
+            done
+            CHANGED_PACKAGES="$CHANGED_JSON"
+          fi
 
-          if [[ -z "$CHANGED_PACKAGES" ]]; then
+          if [[ "$CHANGED_PACKAGES" == "[]" ]]; then
             echo "No package changes detected"
-            echo "packages=" >> $GITHUB_OUTPUT
+            echo "packages=[]" >> $GITHUB_OUTPUT
           else
             echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
             echo "Will build: $CHANGED_PACKAGES"
