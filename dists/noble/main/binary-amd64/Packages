@@ -76,21 +76,21 @@ Description: Magento 2 support package
   Building by Tran Ngoc Duc
 
 Package: php-pdo-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv
+Depends: php8.5-pdo-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~24.04_all.deb
-Size: 3858
-SHA256: 068223a267efc2f61eea4c2c030c0039558c5f3ac335be63b99e3475e4365da9
-SHA1: 3c28f3e41665b2cffc2e8f5d3d59b65224da254d
-MD5sum: 42ae2cfaf3ae119c1bbaa5329f8370a6
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+ubuntu~24.04_all.deb
+Size: 4172
+SHA256: 0718b9aa24b315563df3d3a800973af5b743c4a176dce6bb6f76dc6ac4ee172d
+SHA1: 948051aab00c3782eaeb99c7a26d37a00bd5d89d
+MD5sum: 4ac7b5d8dc54ac5cf6303d1c2cdfc55a
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -103,21 +103,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.2-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.1-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php-all-dev
+Depends: php8.5-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.4-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+ubuntu~24.04_all.deb
-Size: 3896
-SHA256: 7a8bfc3777e97e090bb0da8de0d496d120322cf8251f92accba4190a16d58b8f
-SHA1: 913d080d7d42d4ebc09babae83f9f2e846c414a8
-MD5sum: 5fee4af1a97877068f4ae4fe0e5f288c
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+ubuntu~24.04_all.deb
+Size: 4208
+SHA256: 766f3add49bd4fbfbd686940dbd6349ddf1a90d73ad48f54e474f6f51ac85743
+SHA1: f12411dfd0307e9e4f84b4abd14ac32d341939a5
+MD5sum: a937450044d878d64ca53cf4a99ea927
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -516,24 +516,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-pdo-sqlsrv
 Source: php-pdo-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 321
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
-Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Breaks: php-pdo-sqlsrv (<< 5.13.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.13.0+ubuntu~24.04~)
 Provides: php-pdo-sqlsrv
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
-Size: 128306
-SHA256: 1cd5e424e4f25cf5ecb746b6ef337f2389ecab9be0b4fe223e948a38371745f4
-SHA1: 7fdf21da1fe739c4f4a61c221c2f363422388626
-MD5sum: 4140e88a723368c0cd27d85db2c6bba7
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.13.0+ubuntu~24.04_amd64.deb
+Size: 128796
+SHA256: bd59911c461b0f3acdd261cf251d27e5642efb5a4b4c6da3bbdef52d9dd484b6
+SHA1: ba9132cddb4ffc10a78452334cb3e95a0f695230
+MD5sum: ee168687b4aa0e87c409c19c67e030ae
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -600,24 +600,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-pdo-sqlsrv
 Source: php-pdo-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 321
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
-Replaces: php-pdo-sqlsrv (<< 5.12.0+ubuntu~24.04~)
+Breaks: php-pdo-sqlsrv (<< 5.13.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.13.0+ubuntu~24.04~)
 Provides: php-pdo-sqlsrv
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv_5.12.0+ubuntu~24.04_amd64.deb
-Size: 128246
-SHA256: ff3f99f5b6af00dd7e353f4df768541f09dd47885dd18b7a19c9fc7d6a17871a
-SHA1: 1a39c5477ce74844e8c9a1d0083897d6c5786733
-MD5sum: f92e4e9a6261852db48d6678305d0add
+Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv_5.13.0+ubuntu~24.04_amd64.deb
+Size: 128770
+SHA256: 203811ffeead23002bb0c002e1509eb00ef87d5322860339ae4ec140564a937e
+SHA1: bcab050ec5a4ce502f815cafbc45df50543b052a
+MD5sum: f73661d86c2b00107b3f6fdda77e19d7
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -647,6 +647,34 @@ SHA256: e9d153b319492eaf1360f54f50a189ead0043a55216fb195c8f1ad44b4baf83f
 SHA1: 4df85302694c77c4415587b069f76870d5f6792f
 MD5sum: c3d426bcc5fe9d13e3f1445b97f8452a
 Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-pdo-sqlsrv
+Source: php-pdo-sqlsrv
+Version: 5.13.0+ubuntu~24.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 321
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.38), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-pdo-sqlsrv (<< 5.13.0+ubuntu~24.04~)
+Replaces: php-pdo-sqlsrv (<< 5.13.0+ubuntu~24.04~)
+Provides: php-pdo-sqlsrv
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php8.5-pdo-sqlsrv_5.13.0+ubuntu~24.04_amd64.deb
+Size: 129148
+SHA256: 0b8779409fc4ff2b0ace566c9d9e79787ce434a21502c029c4664e35108fb041
+SHA1: 3a204c6921a86862ca7cd5fc338767847e73dc6d
+MD5sum: 471f9701fd40141e756ad02a40980421
+Description: pdo_sqlsrv module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
