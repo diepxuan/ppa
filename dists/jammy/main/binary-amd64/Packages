@@ -201,21 +201,21 @@ Description: runkit7 module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv
-Version: 5.12.0+ubuntu~22.04
+Version: 5.13.0+ubuntu~22.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv
+Depends: php8.5-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+ubuntu~22.04_all.deb
-Size: 3842
-SHA256: c765bc716ad0de16f62556bd4bfe204b8e34ed8814f4758f4bc37646b0f9c37f
-SHA1: 87008d0188460b5ca54f97723d7f4f3a0588c07e
-MD5sum: 0a05d6c7b8aa78c48fc6a68a8f95e54a
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.0+ubuntu~22.04_all.deb
+Size: 4166
+SHA256: aeb3515a4fcc8a41f73aa730272baadbc889ec079888b506e03066e86e50a316
+SHA1: ef3122764c7b3393ebe0b3b4db5580b86e7d6933
+MD5sum: 28ec558fee7a30a36e2871c131b42a83
 Description: sqlsrv module for PHP
  .
  .
@@ -228,21 +228,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.12.0+ubuntu~22.04
+Version: 5.13.0+ubuntu~22.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv (>= 5.12.0+ubuntu~22.04~), php8.3-sqlsrv (>= 5.12.0+ubuntu~22.04~), php8.2-sqlsrv (>= 5.12.0+ubuntu~22.04~), php8.1-sqlsrv (>= 5.12.0+ubuntu~22.04~), php-all-dev
+Depends: php8.5-sqlsrv (>= 5.13.0+ubuntu~22.04~), php8.4-sqlsrv (>= 5.13.0+ubuntu~22.04~), php8.3-sqlsrv (>= 5.13.0+ubuntu~22.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+ubuntu~22.04_all.deb
-Size: 3878
-SHA256: b8f3c0d26bdef7a3b29b91da0816614e4e4354d2451b571754e32151d083f06f
-SHA1: 19ca22c1316b0a3b9971f5b2fd6acbd81ac874d6
-MD5sum: 35d306b120b8d1e1116b1580296ec506
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.0+ubuntu~22.04_all.deb
+Size: 4206
+SHA256: e93d2f66cfb0e4ad46f8bf954acda6b66111cf2259512dab07d34d433abb0344
+SHA1: 38b2d3c9e5c4bfe260c171ef1dc4537687c877a0
+MD5sum: c788f1e7c61892feb119d35fd0c12dbb
 Description: sqlsrv module for PHP
  .
  .
@@ -591,24 +591,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-sqlsrv
 Source: php-sqlsrv
-Version: 5.12.0+ubuntu~22.04
+Version: 5.13.0+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 330
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
-Replaces: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Breaks: php-sqlsrv (<< 5.13.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.13.0+ubuntu~22.04~)
 Provides: php-sqlsrv
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.12.0+ubuntu~22.04_amd64.deb
-Size: 129768
-SHA256: ed6604d1010db31090d89218ddc7a54321255f231e7ef5046fa21188c6a0f965
-SHA1: 1429d2290abf4eed164674328f45819715402ff2
-MD5sum: 5f1b6ae8a7812f3215db6e13f2dfd478
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.13.0+ubuntu~22.04_amd64.deb
+Size: 130134
+SHA256: 07b10149aef8bd4c415aead9ad4887a4cd1abf2905b3b9949158b3ea831a7fdb
+SHA1: 6ddf29694e6040fd001a949e2e26ee0143c7313a
+MD5sum: 57a4917170a176f19428d65bf198e170
 Description: sqlsrv module for PHP
  .
  .
@@ -647,24 +647,52 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-sqlsrv
 Source: php-sqlsrv
-Version: 5.12.0+ubuntu~22.04
+Version: 5.13.0+ubuntu~22.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 330
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
-Replaces: php-sqlsrv (<< 5.12.0+ubuntu~22.04~)
+Breaks: php-sqlsrv (<< 5.13.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.13.0+ubuntu~22.04~)
 Provides: php-sqlsrv
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.12.0+ubuntu~22.04_amd64.deb
-Size: 129784
-SHA256: 29bf1bbf1359555ab4cb8c97dd0021c67f2479358a2897bac2c53e4ef0be4500
-SHA1: 172f31ba0621e796c207d31a94a13758604b9a28
-MD5sum: 3bc4a1cff0a1656eb961b64ae820f492
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.13.0+ubuntu~22.04_amd64.deb
+Size: 130170
+SHA256: 7bed6776973ec23becadcee2d978fcd203692c8324215fc0270f06b9ed49d0cb
+SHA1: 7110d14604186e8115308110ac4228158f62bb1c
+MD5sum: dd40dc28895bc5324243cc93d8e5ea84
+Description: sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-sqlsrv
+Source: php-sqlsrv
+Version: 5.13.0+ubuntu~22.04
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 330
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.14), libgcc-s1 (>= 3.3.1), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 11)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-sqlsrv (<< 5.13.0+ubuntu~22.04~)
+Replaces: php-sqlsrv (<< 5.13.0+ubuntu~22.04~)
+Provides: php-sqlsrv
+Homepage: https://pecl.php.net/package/sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-sqlsrv/php8.5-sqlsrv_5.13.0+ubuntu~22.04_amd64.deb
+Size: 130168
+SHA256: 5aa7c2a3ebca8b73dcd3975bf70af61024d9d77553058dab6ab845fa2e8109b1
+SHA1: aa46339de5b28834780900d41bddbb99138a669e
+MD5sum: 24a59be0f90701b17c0ad3201e23f6f6
 Description: sqlsrv module for PHP
  .
  .
