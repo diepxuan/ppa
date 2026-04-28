@@ -36,21 +36,21 @@ Description: DiepXuan super package
   Building by Tran Ngoc Duc
 
 Package: php-pdo-sqlsrv
-Version: 5.12.0+debian~11
+Version: 5.13.0+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv
+Depends: php8.5-pdo-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+debian~11_all.deb
-Size: 3862
-SHA256: fd38b1c96e1eb9d846455c8203b0b224de5d07bae586d6b01fbdedaa873086dc
-SHA1: 1fce9c612e2865ef67ab6a77226b43ae43dc2a99
-MD5sum: 81c00af1d83ae7ce018ff0839315e23a
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+debian~11_all.deb
+Size: 4176
+SHA256: 8e3b5100fa11e69727eeaef0c3c522e132b23ac09d992a2cb301b0c34914bbe4
+SHA1: ea94f8ffd3af0f19bc0764e694ac966b282aad3f
+MD5sum: 8a873d4b2890b44b4a6bf0f290f6e80e
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -63,21 +63,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.12.0+debian~11
+Version: 5.13.0+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv (>= 5.12.0+debian~11~), php8.3-pdo-sqlsrv (>= 5.12.0+debian~11~), php8.2-pdo-sqlsrv (>= 5.12.0+debian~11~), php8.1-pdo-sqlsrv (>= 5.12.0+debian~11~), php-all-dev
+Depends: php8.5-pdo-sqlsrv (>= 5.13.0+debian~11~), php8.4-pdo-sqlsrv (>= 5.13.0+debian~11~), php8.3-pdo-sqlsrv (>= 5.13.0+debian~11~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+debian~11_all.deb
-Size: 3900
-SHA256: 7d7ddea0609db76c218b0ff18242501ac5060396b3301b6cc70c7b065d8f4549
-SHA1: 92c070f560fbc85da7f1bd6fd3ea64c30c1f6f02
-MD5sum: 2a97098274c15d6b98acff4c60d6565e
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+debian~11_all.deb
+Size: 4216
+SHA256: 235f50273a92c0d38f13287387c1e01582f239ecf7384e86a8be375df933da3e
+SHA1: bb9449dfd551805a872c2150882754d059b5b54c
+MD5sum: c0ac9c303839cba4b885984d49a6a9d1
 Description: pdo_sqlsrv module for PHP
  .
  .
