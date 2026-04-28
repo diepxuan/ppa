@@ -129,29 +129,28 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+ubuntu~20.04
+Version: 4.0.0a7+ubuntu~20.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 11
+Installed-Size: 614
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: phpapi-20190902
 Recommends: ghostscript, ttf-dejavu-core
+Provides: php7.4-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~20.04_all.deb
-Size: 2834
-SHA256: 09f321bf95ff8160b7e67b6232256625c5a6fa23f9e7622797a5af9171600e37
-SHA1: 0d738ab3f181fbbdd7cfe1e82e8eed85fc38bf3c
-MD5sum: 1fa80470db306ffef7c5f7b8ea0090ff
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+ubuntu~20.04_all.deb
+Size: 241932
+SHA256: 5067c3d2bdf3b68ee18b9ea8e2a0d4f50373e2379bf982cbeba34b0a0cd156e1
+SHA1: c6fa324ffb8e7b0b05adc0492b1400aad972836d
+MD5sum: 24fceb1df745491b64fe9fbe67b5c553
 Description: runkit7 module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
  open source general-purpose scripting language that is especially suited
  for web development and can be embedded into HTML.
- .
- This is empty package that depends on default PHP version.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
