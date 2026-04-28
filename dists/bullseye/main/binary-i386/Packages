@@ -1,3 +1,22 @@
+Package: diepxuan-repositories
+Version: 1.0.2+debian~11
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: curl, gnupg, lsb-release, apt-transport-https, dpkg
+Homepage: https://github.com/diepxuan/package-repositories
+Priority: optional
+Section: misc
+Filename: pool/main/d/diepxuan-repositories/diepxuan-repositories_1.0.2+debian~11_all.deb
+Size: 3052
+SHA256: 1a312dd666e1968ed584b9836dae7c5788c8268f1df01df591ee47f6acb9f72d
+SHA1: 794831b8b1f94e2de32527dd9a3af333d2eacd95
+MD5sum: 2813c98e1294b47419435af7fdf2fbc1
+Description: DiepXuan Microsoft APT repository setup
+  This package adds Microsoft APT repository and GPG key to the system.
+  It enables installation of msodbcsql18, unixodbc-dev and other
+  Microsoft packages for PHP SQL Server extensions.
+
 Package: php-pdo-sqlsrv
 Version: 5.12.0+debian~11
 Architecture: all
