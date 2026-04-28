@@ -1,3 +1,22 @@
+Package: diepxuan-repositories
+Version: 1.0.2+ubuntu~22.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Depends: curl, gnupg, lsb-release, apt-transport-https, dpkg
+Homepage: https://github.com/diepxuan/package-repositories
+Priority: optional
+Section: misc
+Filename: pool/main/d/diepxuan-repositories/diepxuan-repositories_1.0.2+ubuntu~22.04_all.deb
+Size: 2970
+SHA256: b0f91612b9269f65eec5ef483bfe0f30dd431ba43b20e2de368f2c3f2dfe2f7d
+SHA1: 4fed9bf828a95b1c5accd2a284bc27009903b07b
+MD5sum: c2b646adcd15e83b18015fcd3a10fd78
+Description: DiepXuan Microsoft APT repository setup
+  This package adds Microsoft APT repository and GPG key to the system.
+  It enables installation of msodbcsql18, unixodbc-dev and other
+  Microsoft packages for PHP SQL Server extensions.
+
 Package: ductn
 Version: 4.5.7+ubuntu~22.04
 Architecture: arm64
