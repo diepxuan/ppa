@@ -4,6 +4,7 @@ Label: DiepXuan
 Codename: buster
 Architectures: amd64 arm64 i386
 Components: main
+Update: buster-microsoft
 Description: Debian 10 (Buster)
 SignWith: yes
 
@@ -13,6 +14,7 @@ Label: DiepXuan
 Codename: bullseye
 Architectures: amd64 arm64 i386
 Components: main
+Update: bullseye-microsoft
 Description: Debian 11 (Bullseye)
 SignWith: yes
 
@@ -22,6 +24,7 @@ Label: DiepXuan
 Codename: bookworm
 Architectures: amd64 arm64 i386
 Components: main
+Update: bookworm-microsoft
 Description: Debian 12 (Bookworm)
 SignWith: yes
 
@@ -31,7 +34,8 @@ Label: DiepXuan
 Codename: trixie
 Architectures: amd64 arm64 i386
 Components: main
-Description: Debian 12 (Trixie)
+Update: trixie-microsoft
+Description: Debian 13 (Trixie)
 SignWith: yes
 
 # Ubuntu 18.04 (Bionic)
@@ -40,6 +44,7 @@ Label: DiepXuan
 Codename: bionic
 Architectures: amd64 arm64 i386
 Components: main
+Update: bionic-microsoft
 Description: Ubuntu 18.04 (Bionic)
 SignWith: yes
 
@@ -49,6 +54,7 @@ Label: DiepXuan
 Codename: focal
 Architectures: amd64 arm64 i386
 Components: main
+Update: focal-microsoft
 Description: Ubuntu 20.04 (Focal)
 SignWith: yes
 
@@ -58,6 +64,7 @@ Label: DiepXuan
 Codename: jammy
 Architectures: amd64 arm64 i386
 Components: main
+Update: jammy-microsoft
 Description: Ubuntu 22.04 (Jammy)
 SignWith: yes
 
@@ -67,6 +74,7 @@ Label: DiepXuan
 Codename: noble
 Architectures: amd64 arm64 i386
 Components: main
+Update: noble-microsoft
 Description: Ubuntu 24.04 (Noble)
 SignWith: yes
 
@@ -76,6 +84,7 @@ Label: DiepXuan
 Codename: oracular
 Architectures: amd64 arm64 i386
 Components: main
+Update: oracular-microsoft
 Description: Ubuntu 24.10 (Oracular)
 SignWith: yes
 
@@ -85,5 +94,6 @@ Label: DiepXuan
 Codename: plucky
 Architectures: amd64 arm64 i386
 Components: main
+Update: plucky-microsoft
 Description: Ubuntu 25.04 (Plucky)
 SignWith: yes
