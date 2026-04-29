@@ -1,36 +1,36 @@
 Package: ductn
 Source: diepxuan
-Version: 5.5.2+ubuntu~20.04
+Version: 5.5.2+ubuntu~24.04+ubuntu~20.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 8785
+Installed-Size: 8765
 Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn_5.5.2+ubuntu~20.04_amd64.deb
-Size: 8819164
-SHA256: d33b091d8aa4fdf51d7eac7a2f56c89d13c1722e737bf76c07cf85e72076d15e
-SHA1: b535bb81d82dec63e9b76d2cbf362604ed278cf6
-MD5sum: e03b562a196802beb217262cc76f08ed
+Filename: pool/main/d/diepxuan/ductn_5.5.2+ubuntu~24.04+ubuntu~20.04_amd64.deb
+Size: 8799152
+SHA256: 5fc1634a446e5fadfffbdf8dbb82933f35f59442417b782250e8f7260a7bcb98
+SHA1: 08e0e4548f4228a5d541ca95cb6d55242feb81c0
+MD5sum: fc0e15ef39f6d79c7489e8c8270ac5a3
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: ductn-ll
 Source: diepxuan
-Version: 5.5.2+ubuntu~20.04
+Version: 5.5.2+ubuntu~24.04+ubuntu~20.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 14
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn-ll_5.5.2+ubuntu~20.04_amd64.deb
-Size: 6268
-SHA256: 4531991ae3143b0b88e81313ddbd9294aa464264cda5598821c6c82d6307d838
-SHA1: 44167a718c2e514fec6283069a41046ea6f05c96
-MD5sum: aaca8d790f5201075dffadb3d480edd3
+Filename: pool/main/d/diepxuan/ductn-ll_5.5.2+ubuntu~24.04+ubuntu~20.04_amd64.deb
+Size: 6384
+SHA256: f123deee692ed9290c622f959d16fc561017bc8116512091bb41744a9cdb7c7d
+SHA1: fde48760cc8fb14c2bc4ddfb7e8de7723e6399c1
+MD5sum: 524190871c9f8034676d8ab755ac6d81
 Description: A package to provide the 'll' command (like ls -l).
   This package provides the 'll' command, which behaves like 'ls -l'.
   If the user already has an alias for 'll', it will use that instead.
@@ -39,7 +39,7 @@ Description: A package to provide the 'll' command (like ls -l).
 
 Package: lar
 Source: diepxuan
-Version: 5.5.2+ubuntu~20.04
+Version: 5.5.2+ubuntu~24.04+ubuntu~20.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 14
@@ -47,18 +47,18 @@ Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.5.2+ubuntu~20.04_amd64.deb
-Size: 6240
-SHA256: 1c3394eeee10aa19cf61391da401d67696c649fc45fa13b5336bba0af8da6885
-SHA1: eaeff611c3e050fe812ebbab6d3babd0fd273df5
-MD5sum: 3721264ffe3b9450dbd2337d7e264236
+Filename: pool/main/d/diepxuan/lar_5.5.2+ubuntu~24.04+ubuntu~20.04_amd64.deb
+Size: 6352
+SHA256: 7af7a867be9c0ed66f670237a7cf34e4f9c6df7e84f9eb08b7d78822345e4111
+SHA1: 9145c12ac291787e9d77d29b55c010e0e3946c25
+MD5sum: 4ba91b6dff0ea8a45bd8a97607d3693f
 Description: Laravel support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: m2
 Source: diepxuan
-Version: 5.5.2+ubuntu~20.04
+Version: 5.5.2+ubuntu~24.04+ubuntu~20.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 14
@@ -66,11 +66,11 @@ Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.5.2+ubuntu~20.04_amd64.deb
-Size: 6240
-SHA256: c713b898698ef3cf57fa486f5393ee4f5d17ea4a27f45bd2e29e299159498825
-SHA1: 52eb9975baeac671114d28bf1cc8607e693f21b7
-MD5sum: c8b35a2b5ed701cdd174c5ebd908b58a
+Filename: pool/main/d/diepxuan/m2_5.5.2+ubuntu~24.04+ubuntu~20.04_amd64.deb
+Size: 6348
+SHA256: 4c578eb2e7b7456b691c9acfc1040170f0c4bb332590ee5a80dcbbbd68d79ff3
+SHA1: 72b1be5ab0c366ea446eebb62a79007a1432a8b6
+MD5sum: 54e714fbe04c1772e30be268b71c41e2
 Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
@@ -129,29 +129,28 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+ubuntu~20.04
+Version: 4.0.0a7+ubuntu~20.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 11
+Installed-Size: 614
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: phpapi-20190902
 Recommends: ghostscript, ttf-dejavu-core
+Provides: php7.4-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~20.04_all.deb
-Size: 2834
-SHA256: 09f321bf95ff8160b7e67b6232256625c5a6fa23f9e7622797a5af9171600e37
-SHA1: 0d738ab3f181fbbdd7cfe1e82e8eed85fc38bf3c
-MD5sum: 1fa80470db306ffef7c5f7b8ea0090ff
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+ubuntu~20.04_all.deb
+Size: 241932
+SHA256: 5067c3d2bdf3b68ee18b9ea8e2a0d4f50373e2379bf982cbeba34b0a0cd156e1
+SHA1: c6fa324ffb8e7b0b05adc0492b1400aad972836d
+MD5sum: 24fceb1df745491b64fe9fbe67b5c553
 Description: runkit7 module for PHP
  .
  .
  PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
  open source general-purpose scripting language that is especially suited
  for web development and can be embedded into HTML.
- .
- This is empty package that depends on default PHP version.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev

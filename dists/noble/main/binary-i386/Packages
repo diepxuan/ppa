@@ -1,19 +1,19 @@
 Package: php-pdo-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv
+Depends: php8.5-pdo-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.12.0+ubuntu~24.04_all.deb
-Size: 3858
-SHA256: 068223a267efc2f61eea4c2c030c0039558c5f3ac335be63b99e3475e4365da9
-SHA1: 3c28f3e41665b2cffc2e8f5d3d59b65224da254d
-MD5sum: 42ae2cfaf3ae119c1bbaa5329f8370a6
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+ubuntu~24.04_all.deb
+Size: 4172
+SHA256: 0718b9aa24b315563df3d3a800973af5b743c4a176dce6bb6f76dc6ac4ee172d
+SHA1: 948051aab00c3782eaeb99c7a26d37a00bd5d89d
+MD5sum: 4ac7b5d8dc54ac5cf6303d1c2cdfc55a
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -26,21 +26,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.2-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.1-pdo-sqlsrv (>= 5.12.0+ubuntu~24.04~), php-all-dev
+Depends: php8.5-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.4-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.12.0+ubuntu~24.04_all.deb
-Size: 3896
-SHA256: 7a8bfc3777e97e090bb0da8de0d496d120322cf8251f92accba4190a16d58b8f
-SHA1: 913d080d7d42d4ebc09babae83f9f2e846c414a8
-MD5sum: 5fee4af1a97877068f4ae4fe0e5f288c
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+ubuntu~24.04_all.deb
+Size: 4208
+SHA256: 766f3add49bd4fbfbd686940dbd6349ddf1a90d73ad48f54e474f6f51ac85743
+SHA1: f12411dfd0307e9e4f84b4abd14ac32d341939a5
+MD5sum: a937450044d878d64ca53cf4a99ea927
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -52,21 +52,21 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+ubuntu~24.04
+Version: 4.0.0a7+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: php8.5-runkit7
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+ubuntu~24.04_all.deb
-Size: 2824
-SHA256: fce2fe25178c1fd6a5792a8c82aa3e173ecbceabd3250c46a4bf9107e2859699
-SHA1: 6deeca53c3b225bbc17010e1b0049511746c76ce
-MD5sum: 057d039b5ee9cc734ed19d3d2adf3dde
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+ubuntu~24.04_all.deb
+Size: 3374
+SHA256: 352cc30695c8ed34d5520ec9490cf716dd4b1490ce2fb757f53dd4d18df50443
+SHA1: 1441b34aa7f729153196b81fd1ef52c1dd46ea23
+MD5sum: 2ebdd5b7b03d145dbb9d441eefbf36d2
 Description: runkit7 module for PHP
  .
  .
@@ -79,21 +79,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
 Source: php-runkit7
-Version: 4.0.0a6+ubuntu~24.04
+Version: 4.0.0a7+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php7.2-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php7.3-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php7.4-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.0-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.1-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.2-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php8.3-runkit7 (>= 4.0.0a6+ubuntu~24.04~), php-all-dev
+Depends: php7.2-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php7.3-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php7.4-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.0-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.1-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.2-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.3-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.4-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php8.5-runkit7 (>= 4.0.0a7+ubuntu~24.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+ubuntu~24.04_all.deb
-Size: 2868
-SHA256: 8560a01d87adaf338f2aedee9253ef4804d52046a9409997424b039cdb331db2
-SHA1: 5af2c35f7b8f8ce4ec23234337967aff8e4ecfbc
-MD5sum: 56217f0b4414bc5062c11148f73cf5b9
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+ubuntu~24.04_all.deb
+Size: 3430
+SHA256: fdb1aa1b816a028982227c2251f885d4055f96729ea542def2facfbb9896c64b
+SHA1: d91132c3a4d648318445275de91b1bee17e43fc4
+MD5sum: a270bd63416eff3f62cded665b481f15
 Description: runkit7 module for PHP
  .
  .
@@ -105,21 +105,21 @@ Description: runkit7 module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv
+Depends: php8.5-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+ubuntu~24.04_all.deb
-Size: 3858
-SHA256: 90782756af7ffeb407eb69b81b842eb09d6358c5591e24bedcc0028982e09d89
-SHA1: d1b49683e0343910a899b858c37225cfeab11080
-MD5sum: 62536e8726cdc7d048f2668619a7b5f7
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.0+ubuntu~24.04_all.deb
+Size: 4160
+SHA256: d3ff515e821f91e7f9df338bf820ec6e33b303fc6ba373012df6be18580ba36b
+SHA1: e5d5d80f322d1baee16de7ae7d1715220b695ec5
+MD5sum: 22870ecd199e46b1d71224501afbd0c1
 Description: sqlsrv module for PHP
  .
  .
@@ -132,21 +132,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.12.0+ubuntu~24.04
+Version: 5.13.0+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.3-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.2-sqlsrv (>= 5.12.0+ubuntu~24.04~), php8.1-sqlsrv (>= 5.12.0+ubuntu~24.04~), php-all-dev
+Depends: php8.5-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.4-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.3-sqlsrv (>= 5.13.0+ubuntu~24.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+ubuntu~24.04_all.deb
-Size: 3890
-SHA256: 9189ee1241a6227225aaa690e03fd05980ad8a692fac05039951b708c4e31218
-SHA1: fd127eaab55c937af682522afc06440c50cdba17
-MD5sum: f02b2b52ed672b99a0adea966c370c1a
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.0+ubuntu~24.04_all.deb
+Size: 4194
+SHA256: 5dc5c63e881de00d61028992c74f08f3498a58cc90281b35f3824638a976c7b5
+SHA1: 88abad3415666409d464111e1d2ee89002a7edaa
+MD5sum: 3d7ad4dd965c490e83374936ebc4f3f3
 Description: sqlsrv module for PHP
  .
  .
