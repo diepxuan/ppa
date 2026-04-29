@@ -3,70 +3,70 @@
 
 # Debian 10 (Buster)
 Name: buster-microsoft
-Method: http
-Suite: debian/10
+Method: http://packages.microsoft.com/debian buster main
+Suite: buster
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Debian 11 (Bullseye)
 Name: bullseye-microsoft
-Method: http
-Suite: debian/11
+Method: http://packages.microsoft.com/debian bullseye main
+Suite: bullseye
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Debian 12 (Bookworm)
 Name: bookworm-microsoft
-Method: http
-Suite: debian/12
+Method: http://packages.microsoft.com/debian bookworm main
+Suite: bookworm
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Debian 13 (Trixie)
 Name: trixie-microsoft
-Method: http
-Suite: debian/13
+Method: http://packages.microsoft.com/debian trixie main
+Suite: trixie
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 18.04 (Bionic)
 Name: bionic-microsoft
-Method: http
-Suite: ubuntu/18.04
+Method: http://packages.microsoft.com/ubuntu bionic main
+Suite: bionic
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 20.04 (Focal)
 Name: focal-microsoft
-Method: http
-Suite: ubuntu/20.04
+Method: http://packages.microsoft.com/ubuntu focal main
+Suite: focal
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 22.04 (Jammy)
 Name: jammy-microsoft
-Method: http
-Suite: ubuntu/22.04
+Method: http://packages.microsoft.com/ubuntu jammy main
+Suite: jammy
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 24.04 (Noble)
 Name: noble-microsoft
-Method: http
-Suite: ubuntu/24.04
+Method: http://packages.microsoft.com/ubuntu noble main
+Suite: noble
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 24.10 (Oracular)
 Name: oracular-microsoft
-Method: http
-Suite: ubuntu/24.10
+Method: http://packages.microsoft.com/ubuntu oracular main
+Suite: oracular
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 25.04 (Plucky)
 Name: plucky-microsoft
-Method: http
-Suite: ubuntu/25.04
+Method: http://packages.microsoft.com/ubuntu plucky main
+Suite: plucky
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
