@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-24T01:46:53.937Z",
+  "updatedAt": "2026-04-29T01:24:09.013Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:48": {
       "key": "memory:memory/2026-04-22.md:1:48",
@@ -9,18 +9,20 @@
       "endLine": 48,
       "source": "memory",
       "snippet": "# 2026-04-22 - Nhật ký Phiên ## Thiết lập Ban đầu - Điền IDENTITY.md với thông tin PPA Bot - Điền USER.md với thông tin Tran Ngoc Duc (ductn@diepxuan.com) - Điền TOOLS.md với chi tiết hạ tầng PPA - Tạo thư mục memory/ ## Tùy chọn Giao tiếp - Ngôn ngữ: Chỉ tiếng Việt có dấu - Emoji: Không sử dụng ## Trạng thái PPA - Repository chứa packages cho Debian 10-13 và Ubuntu 18.04-25.04 - Packages chính: ductn (5.5.2), lar, m2, php-runkit7 (4.0.0a6), php-sqlsrv, php-pdo_sqlsrv - GPG signing đã cấu hình - reprepro 5.3.0 sẵn sàng - Launchpad PPA: caothu91ppa ## PR #2 - Thêm tài liệu và quy tắc - Branch: feat/add-identity-and-docs - Files: IDENTITY.md, USER.md, TOOLS.md, HEARTBEAT.md, AGENTS.md,",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.4734193122819781,
+      "totalScore": 0.9431259906724809,
       "maxScore": 0.4734193122819781,
       "firstRecalledAt": "2026-04-24T01:46:53.937Z",
-      "lastRecalledAt": "2026-04-24T01:46:53.937Z",
+      "lastRecalledAt": "2026-04-29T01:24:09.013Z",
       "queryHashes": [
-        "280500ac604b"
+        "280500ac604b",
+        "c5a3e84afa4a"
       ],
       "recallDays": [
-        "2026-04-24"
+        "2026-04-24",
+        "2026-04-29"
       ],
       "conceptTags": [
         "identity.md",
@@ -31,6 +33,37 @@
         "18.04-25.04",
         "5.5.2",
         "php-runkit7"
+      ]
+    },
+    "memory:memory/2026-04-22.md:40:82": {
+      "key": "memory:memory/2026-04-22.md:40:82",
+      "path": "memory/2026-04-22.md",
+      "startLine": 40,
+      "endLine": 82,
+      "source": "memory",
+      "snippet": "- Files: IDENTITY.md, SOUL.md, USER.md, AGENTS.md, memory/2026-04-22-submodule-update.md - URL: https://github.com/diepxuan/ppa/pull/5 ### Thay đổi - **IDENTITY.md** - Thêm quy tắc chi tiết về tiếng Việt có dấu, ví dụ đúng/sai - **SOUL.md** - Thêm mục \"Ngôn Ngữ Giao Tiếp\" bắt buộc - **USER.md** - Cập nhật tùy chọn giao tiếp thành \"bắt buộc\" - **AGENTS.md** - Cập nhật quy tắc viết tài liệu - **memory/2026-04-22-submodule-update.md** - Commit file memory chưa lưu ### Lý do Bot đang trả lời xen kẽ tiếng Việt không dấu và tiếng Anh. Cần quy tắc rõ ràng để đảm bảo nhất quán. ## Quy Tắc Mới (v5) **Viết tài liệu:** - Tiếng Việt có dấu là chính, giữ thuật ngữ kỹ thuật tiếng Anh - Không emoji t",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4546417891979217,
+      "maxScore": 0.4546417891979217,
+      "firstRecalledAt": "2026-04-29T01:24:09.013Z",
+      "lastRecalledAt": "2026-04-29T01:24:09.013Z",
+      "queryHashes": [
+        "c5a3e84afa4a"
+      ],
+      "recallDays": [
+        "2026-04-29"
+      ],
+      "conceptTags": [
+        "identity.md",
+        "soul.md",
+        "user.md",
+        "agents.md",
+        "github.com/diepxuan/ppa/pull/5",
+        "đúng/sai",
+        "submodule",
+        "update.md"
       ]
     }
   }
