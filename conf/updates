@@ -1,72 +1,81 @@
 # Pull msodbcsql18 and unixodbc-dev from Microsoft repository
 # This replaces the need for Extra dependencies in Launchpad PPA
-
 # Debian 10 (Buster)
 Name: buster-microsoft
-Method: http://packages.microsoft.com/debian buster main
+Method: http://packages.microsoft.com/debian
 Suite: buster
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Debian 11 (Bullseye)
 Name: bullseye-microsoft
-Method: http://packages.microsoft.com/debian bullseye main
+Method: http://packages.microsoft.com/debian
 Suite: bullseye
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Debian 12 (Bookworm)
 Name: bookworm-microsoft
-Method: http://packages.microsoft.com/debian bookworm main
+Method: http://packages.microsoft.com/debian
 Suite: bookworm
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Debian 13 (Trixie)
 Name: trixie-microsoft
-Method: http://packages.microsoft.com/debian trixie main
+Method: http://packages.microsoft.com/debian
 Suite: trixie
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 18.04 (Bionic)
 Name: bionic-microsoft
-Method: http://packages.microsoft.com/ubuntu bionic main
+Method: http://packages.microsoft.com/ubuntu
 Suite: bionic
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 20.04 (Focal)
 Name: focal-microsoft
-Method: http://packages.microsoft.com/ubuntu focal main
+Method: http://packages.microsoft.com/ubuntu
 Suite: focal
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 22.04 (Jammy)
 Name: jammy-microsoft
-Method: http://packages.microsoft.com/ubuntu jammy main
+Method: http://packages.microsoft.com/ubuntu
 Suite: jammy
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 24.04 (Noble)
 Name: noble-microsoft
-Method: http://packages.microsoft.com/ubuntu noble main
+Method: http://packages.microsoft.com/ubuntu
 Suite: noble
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 24.10 (Oracular)
 Name: oracular-microsoft
-Method: http://packages.microsoft.com/ubuntu oracular main
+Method: http://packages.microsoft.com/ubuntu
 Suite: oracular
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
 
 # Ubuntu 25.04 (Plucky)
 Name: plucky-microsoft
-Method: http://packages.microsoft.com/ubuntu plucky main
+Method: http://packages.microsoft.com/ubuntu
 Suite: plucky
+Components: main
 VerifyRelease: MicrosoftGPGKey
 GetTimeout: 100000
