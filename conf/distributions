@@ -2,7 +2,7 @@
 Origin: DiepXuan
 Label: DiepXuan
 Codename: buster
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: buster-microsoft
 Description: Debian 10 (Buster)
@@ -12,7 +12,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bullseye
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: bullseye-microsoft
 Description: Debian 11 (Bullseye)
@@ -22,7 +22,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bookworm
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: bookworm-microsoft
 Description: Debian 12 (Bookworm)
@@ -42,7 +42,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bionic
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: bionic-microsoft
 Description: Ubuntu 18.04 (Bionic)
@@ -52,7 +52,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: focal
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: focal-microsoft
 Description: Ubuntu 20.04 (Focal)
@@ -62,7 +62,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: jammy
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: jammy-microsoft
 Description: Ubuntu 22.04 (Jammy)
@@ -72,7 +72,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: noble
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: noble-microsoft
 Description: Ubuntu 24.04 (Noble)
@@ -82,7 +82,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: oracular
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: oracular-microsoft
 Description: Ubuntu 24.10 (Oracular)
@@ -92,7 +92,7 @@ SignWith: yes
 Origin: DiepXuan
 Label: DiepXuan
 Codename: plucky
-Architectures: amd64 arm64
+Architectures: amd64 arm64 i386
 Components: main
 Update: plucky-microsoft
 Description: Ubuntu 25.04 (Plucky)
