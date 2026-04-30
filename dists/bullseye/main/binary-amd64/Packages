@@ -154,7 +154,7 @@ Replaces: odbcinst1, odbcinst1debian1 (<< 2.3.7), unixodbc (<< 2.3.7)
 Filename: pool/main/u/unixodbc/odbcinst_2.3.11-3_amd64.deb
 
 Package: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -164,11 +164,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+debian~11_all.deb
-Size: 4176
-SHA256: 8e3b5100fa11e69727eeaef0c3c522e132b23ac09d992a2cb301b0c34914bbe4
-SHA1: ea94f8ffd3af0f19bc0764e694ac966b282aad3f
-MD5sum: 8a873d4b2890b44b4a6bf0f290f6e80e
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.1+debian~11_all.deb
+Size: 4050
+SHA256: b4bb79732f4298a158b4688a0cd3a8983d54d34d34085777a4029c461dc1eca0
+SHA1: 979066435ed3b9a66e639ccf669a0e1a06af34fc
+MD5sum: e1c198e686bff38b3269fb4c532cca17
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -181,21 +181,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.5-pdo-sqlsrv (>= 5.13.0+debian~11~), php8.4-pdo-sqlsrv (>= 5.13.0+debian~11~), php8.3-pdo-sqlsrv (>= 5.13.0+debian~11~), php-all-dev
+Depends: php8.5-pdo-sqlsrv (>= 5.13.1+debian~11~), php8.4-pdo-sqlsrv (>= 5.13.1+debian~11~), php8.3-pdo-sqlsrv (>= 5.13.1+debian~11~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+debian~11_all.deb
-Size: 4216
-SHA256: 235f50273a92c0d38f13287387c1e01582f239ecf7384e86a8be375df933da3e
-SHA1: bb9449dfd551805a872c2150882754d059b5b54c
-MD5sum: c0ac9c303839cba4b885984d49a6a9d1
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.1+debian~11_all.deb
+Size: 4088
+SHA256: e86f0eaa20044f74942828a6be412f4d10cb0f0fef847d9d69f2f4220dd2491a
+SHA1: 7b89c87b23bb246ff4869304b602040a2c1ce2e4
+MD5sum: 2b253670b5ba2ab8e723f79d4e212e7c
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -784,24 +784,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-pdo-sqlsrv
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 365
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.25), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-pdo-sqlsrv (<< 5.13.0+debian~11~)
-Replaces: php-pdo-sqlsrv (<< 5.13.0+debian~11~)
+Breaks: php-pdo-sqlsrv (<< 5.13.1+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.13.1+debian~11~)
 Provides: php-pdo-sqlsrv
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.13.0+debian~11_amd64.deb
-Size: 139504
-SHA256: a516630796d9e3f7cb14ff209807d6a2deda861617de75daa6b3930a6e13a94d
-SHA1: eef6c88f81ac9751cba103aea967559d2f69b2c1
-MD5sum: e045b3d97e84d1dcd9eca90dc37ede79
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv_5.13.1+debian~11_amd64.deb
+Size: 140502
+SHA256: f02366c3d4c19adbb9eb50cf3430e21c6af5c83a2ac6393ac962f75533f7e915
+SHA1: 9be61276db2825ff564f2daffbac7121c1195da0
+MD5sum: beba23cc97933f7d1e172bcfcfb819fa
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -812,21 +812,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-pdo-sqlsrv-dbgsym
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 835
-Depends: php8.3-pdo-sqlsrv (= 5.13.0+debian~11)
+Installed-Size: 840
+Depends: php8.3-pdo-sqlsrv (= 5.13.1+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv-dbgsym_5.13.0+debian~11_amd64.deb
-Size: 786240
-SHA256: c93e2ca6308ad1512213f257ea67afc31d5497ca879debe6616168f457ec4b74
-SHA1: 00225bef2aac5c49972926b9dfa545039d06781d
-MD5sum: 80c5fba53cc7e3d838a3ca227447e2fc
+Filename: pool/main/p/php-pdo-sqlsrv/php8.3-pdo-sqlsrv-dbgsym_5.13.1+debian~11_amd64.deb
+Size: 789860
+SHA256: 42fd59f1f476c60a7ff4841b313995527af77230da4348067506840f043c4782
+SHA1: 0945209b5f0385a7e6bdc2a1388b38855db805b9
+MD5sum: dd267fac47630acf368ceb6971937d65
 Description: debug symbols for php8.3-pdo-sqlsrv
-Build-Ids: 3372da17bc39f15180fc63801bd9289bd814dc28
+Build-Ids: 95505cf53c59fc7562d1ef9c157b753122bfc30c
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-runkit7
@@ -925,24 +925,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-pdo-sqlsrv
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 365
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.25), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-pdo-sqlsrv (<< 5.13.0+debian~11~)
-Replaces: php-pdo-sqlsrv (<< 5.13.0+debian~11~)
+Breaks: php-pdo-sqlsrv (<< 5.13.1+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.13.1+debian~11~)
 Provides: php-pdo-sqlsrv
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv_5.13.0+debian~11_amd64.deb
-Size: 139498
-SHA256: 1bbf70684bb59cf7bce2309dd701a450db0b1e6c01e1b1713958d713944c05c8
-SHA1: c363d5ada2acff9dd3bc349e7aa2e1eb7343ab62
-MD5sum: e8f82f09a22d8b38ed7f267f55566224
+Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv_5.13.1+debian~11_amd64.deb
+Size: 140504
+SHA256: 213edacb3d91400d3240c01b5c2913cfe0c86a9c522b944fbf3299dc615087af
+SHA1: 7f654b1900056083cf75ca220fb61a69a1c79676
+MD5sum: 26f91273b658e1c71d8aa9ee9f9450d3
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -953,21 +953,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-pdo-sqlsrv-dbgsym
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 836
-Depends: php8.4-pdo-sqlsrv (= 5.13.0+debian~11)
+Installed-Size: 841
+Depends: php8.4-pdo-sqlsrv (= 5.13.1+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv-dbgsym_5.13.0+debian~11_amd64.deb
-Size: 787228
-SHA256: b80c69e6439383193b9a7635bef1944f7d188b9c0a788ef4468c4e59aa0ab296
-SHA1: 93628f16925ba297971c76d8b0617c6a4e1d8533
-MD5sum: f5b066ca02c9ffd253e3168800cb05ed
+Filename: pool/main/p/php-pdo-sqlsrv/php8.4-pdo-sqlsrv-dbgsym_5.13.1+debian~11_amd64.deb
+Size: 790662
+SHA256: 9ba014a5da156940f6f9b960a8937d5e70c4d33940c22c1ee6cdd29168996b10
+SHA1: 88529031aa62f37ee20a538861280af6904581d2
+MD5sum: 2ed00ceb8a6a42d911173718676d538b
 Description: debug symbols for php8.4-pdo-sqlsrv
-Build-Ids: 82da89ae78ea11fad6baa2d1cae99bbca9c5a001
+Build-Ids: 81edb7c0c55d9047b06d91d6a054db1bf8774f4f
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-sqlsrv
@@ -1019,24 +1019,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.5-pdo-sqlsrv
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 365
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.14), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
+Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.25), libgcc-s1 (>= 3.0), libstdc++6 (>= 5.2)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-pdo-sqlsrv (<< 5.13.0+debian~11~)
-Replaces: php-pdo-sqlsrv (<< 5.13.0+debian~11~)
+Breaks: php-pdo-sqlsrv (<< 5.13.1+debian~11~)
+Replaces: php-pdo-sqlsrv (<< 5.13.1+debian~11~)
 Provides: php-pdo-sqlsrv
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php8.5-pdo-sqlsrv_5.13.0+debian~11_amd64.deb
-Size: 139644
-SHA256: 3872892a41b85b156522638996e1d235b00b4b232e9dae002c1ea1ee1c0d4141
-SHA1: fdd042a1758a8688c74f1502d4ceb9148f5131cd
-MD5sum: f02164a8c370a9c7e4ec904b55e51609
+Filename: pool/main/p/php-pdo-sqlsrv/php8.5-pdo-sqlsrv_5.13.1+debian~11_amd64.deb
+Size: 140620
+SHA256: ef6070c0e0d1a7b9ab36aa73e1d65486c376206699c6ed5c2ee4f360fbd725e4
+SHA1: e4bcc228bf727e1ee1873995531fbca10d8f5ca6
+MD5sum: ee5fda34a2a48ae8b66776c386834c10
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -1047,21 +1047,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.5-pdo-sqlsrv-dbgsym
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 836
-Depends: php8.5-pdo-sqlsrv (= 5.13.0+debian~11)
+Installed-Size: 841
+Depends: php8.5-pdo-sqlsrv (= 5.13.1+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-pdo-sqlsrv/php8.5-pdo-sqlsrv-dbgsym_5.13.0+debian~11_amd64.deb
-Size: 787156
-SHA256: 796742a5d68c15c615d2d910cdadb8222f4f0a6cc16e1605854d1f2f1e4365f9
-SHA1: be4da2c40d6a25cff6d2fbd6218b7a0b82a0ae31
-MD5sum: 925a468000f6f61ad40dde7cc8e75172
+Filename: pool/main/p/php-pdo-sqlsrv/php8.5-pdo-sqlsrv-dbgsym_5.13.1+debian~11_amd64.deb
+Size: 790688
+SHA256: d32bf82be55fd6735015bc954b6887fe7ad3d3c1a0e7c3f1d205e3a8e1fd397b
+SHA1: 5441e9d8856d0cf5091de9efe9e2acc827c479f1
+MD5sum: 2b541acb7d4005189799f265547f6c94
 Description: debug symbols for php8.5-pdo-sqlsrv
-Build-Ids: cf1db4ccd79ecb48637f4d87de1091da2f4b142f
+Build-Ids: f4841b40f23b5617aef629f2bf743683597ed6ac
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: unixodbc

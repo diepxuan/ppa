@@ -55,7 +55,7 @@ Description: DiepXuan super package
   Building by Tran Ngoc Duc
 
 Package: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -65,11 +65,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+debian~11_all.deb
-Size: 4176
-SHA256: 8e3b5100fa11e69727eeaef0c3c522e132b23ac09d992a2cb301b0c34914bbe4
-SHA1: ea94f8ffd3af0f19bc0764e694ac966b282aad3f
-MD5sum: 8a873d4b2890b44b4a6bf0f290f6e80e
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.1+debian~11_all.deb
+Size: 4050
+SHA256: b4bb79732f4298a158b4688a0cd3a8983d54d34d34085777a4029c461dc1eca0
+SHA1: 979066435ed3b9a66e639ccf669a0e1a06af34fc
+MD5sum: e1c198e686bff38b3269fb4c532cca17
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -82,21 +82,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.13.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.5-pdo-sqlsrv (>= 5.13.0+debian~11~), php8.4-pdo-sqlsrv (>= 5.13.0+debian~11~), php8.3-pdo-sqlsrv (>= 5.13.0+debian~11~), php-all-dev
+Depends: php8.5-pdo-sqlsrv (>= 5.13.1+debian~11~), php8.4-pdo-sqlsrv (>= 5.13.1+debian~11~), php8.3-pdo-sqlsrv (>= 5.13.1+debian~11~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+debian~11_all.deb
-Size: 4216
-SHA256: 235f50273a92c0d38f13287387c1e01582f239ecf7384e86a8be375df933da3e
-SHA1: bb9449dfd551805a872c2150882754d059b5b54c
-MD5sum: c0ac9c303839cba4b885984d49a6a9d1
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.1+debian~11_all.deb
+Size: 4088
+SHA256: e86f0eaa20044f74942828a6be412f4d10cb0f0fef847d9d69f2f4220dd2491a
+SHA1: 7b89c87b23bb246ff4869304b602040a2c1ce2e4
+MD5sum: 2b253670b5ba2ab8e723f79d4e212e7c
 Description: pdo_sqlsrv module for PHP
  .
  .
