@@ -23,13 +23,14 @@ Components: main
 VerifyRelease: EB3E94ADBE1229CF
 
 # Debian 13 (Trixie)
-# Microsoft chua co public key cho trixie (key ID: EE4D7792F748182B, chua public tren key server)
+# Microsoft doi key sang EE4D7792F748182B (Microsoft Corporation - General GPG Signer)
+# Key nay co san trong he thong (da duoc import truoc do)
 # https://github.com/microsoft/linux-package-repositories/issues/305
-# Name: trixie-microsoft
-# Method: https://packages.microsoft.com/debian/13/prod
-# Suite: trixie
-# Components: main
-# VerifyRelease: blindtrust
+Name: trixie-microsoft
+Method: https://packages.microsoft.com/debian/13/prod
+Suite: trixie
+Components: main
+VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
 
 # Ubuntu 18.04 (Bionic)
 Name: bionic-microsoft
