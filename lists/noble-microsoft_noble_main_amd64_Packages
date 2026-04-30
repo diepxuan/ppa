@@ -9810,37 +9810,6 @@ SHA256: 8b54f344c5da404c6173a2c77359a7fc47c7e9e12be19cce2bc79e2664f47a7d
 Size: 17893816
 Filename: pool/main/k/kubelet/kubelet_1.34.0-ubuntu24.04u3_amd64.deb
 
-Package: kubelet
-Version: 1.34.1-ubuntu24.04u3
-Architecture: amd64
-Section: -
-Installed-Size: 98289
-Maintainer: Azure Container Upstream
-Description: Node agent for Kubernetes clusters
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes
-Depends: libc6 (>= 2.34), libssl3
-SHA256: a22540b544bff8e863c321e67e2f80ca704dd16f9ce12dd9d140123213368418
-Size: 17899532
-Filename: pool/main/k/kubelet/kubelet_1.34.1-ubuntu24.04u3_amd64.deb
-
-Package: moby-buildx
-Version: 0.29.0-ubuntu24.04u1
-Architecture: amd64
-Section: admin
-Priority: optional
-Installed-Size: 96374
-Maintainer: Microsoft <support@microsoft.com>
-Description: A Docker CLI plugin for extended build capabilities with BuildKit
-Homepage: https://github.com/docker/buildx
-Conflicts: docker-buildx-plugin, docker-ce, docker-ee
-Depends: libc6 (>= 2.34)
-Recommends: moby-cli
-Replaces: docker-buildx-plugin
-SHA256: 79f82a34c5a31d098a83fe4314c0e05f2f4db9e5114544bb0cc09a11958e7a66
-Size: 42874156
-Filename: pool/main/m/moby-buildx/moby-buildx_0.29.0-ubuntu24.04u1_amd64.deb
-
 Package: moby-runc
 Version: 1.3.1-ubuntu24.04u1
 Architecture: amd64
@@ -9889,17 +9858,6 @@ SHA256: 9f7757c6aba3778117e623bfa775e6dbeebed891c593101f5f4c793f5346cddb
 Size: 21160760
 Filename: pool/main/m/moby-compose/moby-compose_2.40.0-ubuntu24.04u1_amd64.deb
 
-Package: azcmagent
-Version: 1.57.03197.640
-Architecture: amd64
-Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
-Description: Azure Connected Machine Agent
-Depends: curl, systemd, passwd
-Package-Type: deb
-SHA256: 5ea20a50096008ca700601c74dcf2dc6cacb827ec1622b52011b80fac09ef913
-Size: 100438386
-Filename: pool/main/a/azcmagent/azcmagent_1.57.03197.640_amd64.deb
-
 Package: moby-runc
 Version: 1.3.2-ubuntu24.04u1
 Architecture: amd64
@@ -9930,46 +9888,6 @@ License: unknown
 SHA256: 5f88e539fad24ed263d8776963460392586e033280153e546c62f4c64523e891
 Size: 23027378
 Filename: pool/main/a/azcopy/azcopy_10.31.0~preview.1_amd64.deb
-
-Package: aznfs
-Version: 0.3.35
-Architecture: amd64
-Priority: required
-Origin: Microsoft
-Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
-Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
-Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
-Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
-SHA256: 62d545588b94fdc42c201195c31c83028e874ea1cf68dcc8fe52480e79821296
-Size: 29326018
-Filename: pool/main/a/aznfs/aznfs_0.3.35_amd64.deb
-
-Package: kubectl
-Version: 1.30.100-ubuntu24.04u3
-Architecture: amd64
-Section: -
-Installed-Size: 155061
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/aks-lts/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: a6a7407ac8153278f007f36f6f35f236401e89d9a7a2185c65cbb0ebff53bdef
-Size: 32250518
-Filename: pool/main/k/kubectl/kubectl_1.30.100-ubuntu24.04u3_amd64.deb
-
-Package: azure-acr-credential-provider
-Version: 1.33.3-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 41746
-Maintainer: Azure Container Upstream
-Description: The acr credential provider is responsible for providing ACR credentials for kubelet
-Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
-Depends: libc6 (>= 2.34), libssl3
-SHA256: c9bfe906a750d4031a9be0d6f6ae3d8f64dc58a58c54da6b618f95cfeddfa3e4
-Size: 9272434
-Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.33.3-ubuntu24.04u1_amd64.deb
 
 Package: kubeadm
 Version: 1.31.13-ubuntu24.04u2
@@ -10015,6 +9933,115 @@ Replaces: kubernetes-kubeadm (<< 1.33.5)
 SHA256: 6f65a65edfbdbc41fe0289127c664313b9ae42ade55e3db2ad5d335b621b4c56
 Size: 20231432
 Filename: pool/main/k/kubeadm/kubeadm_1.33.5-ubuntu24.04u2_amd64.deb
+
+Package: jcd
+Version: 1.0.1
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals jcd (Jump Change Directory)
+ jcd (Jump Change Directory) is a Sysinternals Rust-based command-line tool that provides enhanced directory
+ navigation with substring matching and smart selection. It's like the cd command, but with superpowers!
+License: MIT
+SHA256: a40c324321bb21d0c6abc9cba7c3d024b4844c814c8bc835decd636e82061af9
+Size: 732618
+Filename: pool/main/j/jcd/jcd_1.0.1_amd64.deb
+
+Package: procdump
+Version: 3.5.0
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals process dump utility
+ ProcDump is a command-line utility whose primary purpose is monitoring an application
+ for various resources and generating crash dumps during a spike that an administrator
+ or developer can use to determine the cause of the issue. ProcDump also serves as a
+ general process dump utility that you can embed in other scripts.
+Depends: zlib1g, gdb (>= 7.6.1)
+License: MIT
+SHA256: 616b8b9904d0520c75bae7e2363a4e3f839fd9f6f455c785e1c898bbcffb9f42
+Size: 1353166
+Filename: pool/main/p/procdump/procdump_3.5.0_amd64.deb
+
+Package: kubelet
+Version: 1.34.1-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 98289
+Maintainer: Azure Container Upstream
+Description: Node agent for Kubernetes clusters
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes
+Depends: libc6 (>= 2.34), libssl3
+SHA256: a22540b544bff8e863c321e67e2f80ca704dd16f9ce12dd9d140123213368418
+Size: 17899532
+Filename: pool/main/k/kubelet/kubelet_1.34.1-ubuntu24.04u3_amd64.deb
+
+Package: moby-buildx
+Version: 0.29.0-ubuntu24.04u1
+Architecture: amd64
+Section: admin
+Priority: optional
+Installed-Size: 96374
+Maintainer: Microsoft <support@microsoft.com>
+Description: A Docker CLI plugin for extended build capabilities with BuildKit
+Homepage: https://github.com/docker/buildx
+Conflicts: docker-buildx-plugin, docker-ce, docker-ee
+Depends: libc6 (>= 2.34)
+Recommends: moby-cli
+Replaces: docker-buildx-plugin
+SHA256: 79f82a34c5a31d098a83fe4314c0e05f2f4db9e5114544bb0cc09a11958e7a66
+Size: 42874156
+Filename: pool/main/m/moby-buildx/moby-buildx_0.29.0-ubuntu24.04u1_amd64.deb
+
+Package: azcmagent
+Version: 1.57.03197.640
+Architecture: amd64
+Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
+Description: Azure Connected Machine Agent
+Depends: curl, systemd, passwd
+Package-Type: deb
+SHA256: 5ea20a50096008ca700601c74dcf2dc6cacb827ec1622b52011b80fac09ef913
+Size: 100438386
+Filename: pool/main/a/azcmagent/azcmagent_1.57.03197.640_amd64.deb
+
+Package: aznfs
+Version: 0.3.35
+Architecture: amd64
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: 62d545588b94fdc42c201195c31c83028e874ea1cf68dcc8fe52480e79821296
+Size: 29326018
+Filename: pool/main/a/aznfs/aznfs_0.3.35_amd64.deb
+
+Package: kubectl
+Version: 1.30.100-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 155061
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/aks-lts/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: a6a7407ac8153278f007f36f6f35f236401e89d9a7a2185c65cbb0ebff53bdef
+Size: 32250518
+Filename: pool/main/k/kubectl/kubectl_1.30.100-ubuntu24.04u3_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.33.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 41746
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: c9bfe906a750d4031a9be0d6f6ae3d8f64dc58a58c54da6b618f95cfeddfa3e4
+Size: 9272434
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.33.3-ubuntu24.04u1_amd64.deb
 
 Package: kubeadm
 Version: 1.34.0-ubuntu24.04u3
@@ -10086,33 +10113,6 @@ Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-eng
 SHA256: 3cdb4531d6613e6a22f15029cfe995ad416d83abd2d83bdbbd9581a557f3734a
 Size: 19402012
 Filename: pool/main/m/moby-cli/moby-cli_28.4.0-ubuntu24.04u1_amd64.deb
-
-Package: jcd
-Version: 1.0.1
-Architecture: amd64
-Maintainer: Sysinternals <syssite@microsoft.com>
-Description: Sysinternals jcd (Jump Change Directory)
- jcd (Jump Change Directory) is a Sysinternals Rust-based command-line tool that provides enhanced directory
- navigation with substring matching and smart selection. It's like the cd command, but with superpowers!
-License: MIT
-SHA256: a40c324321bb21d0c6abc9cba7c3d024b4844c814c8bc835decd636e82061af9
-Size: 732618
-Filename: pool/main/j/jcd/jcd_1.0.1_amd64.deb
-
-Package: procdump
-Version: 3.5.0
-Architecture: amd64
-Maintainer: Sysinternals <syssite@microsoft.com>
-Description: Sysinternals process dump utility
- ProcDump is a command-line utility whose primary purpose is monitoring an application
- for various resources and generating crash dumps during a spike that an administrator
- or developer can use to determine the cause of the issue. ProcDump also serves as a
- general process dump utility that you can embed in other scripts.
-Depends: zlib1g, gdb (>= 7.6.1)
-License: MIT
-SHA256: 616b8b9904d0520c75bae7e2363a4e3f839fd9f6f455c785e1c898bbcffb9f42
-Size: 1353166
-Filename: pool/main/p/procdump/procdump_3.5.0_amd64.deb
 
 Package: powershell-preview
 Version: 7.6.0-preview.5-1.deb
@@ -14794,6 +14794,32 @@ Size: 9128374
 Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.31.8-ubuntu24.04u1_amd64.deb
 
 Package: azure-acr-credential-provider
+Version: 1.31.9-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40090
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: fa0177500017e4d50a95bd509e5165c8a64fbe772e6d7372cf6b1c5681777cae
+Size: 9131548
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.31.9-ubuntu24.04u1_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.32.0-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40554
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 56c475ac694db154924ce034ef9f403699f97764c674fb7eb364954eae81925b
+Size: 9186308
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.0-ubuntu24.04u1_amd64.deb
+
+Package: azure-acr-credential-provider
 Version: 1.32.10-ubuntu24.04u1
 Architecture: amd64
 Section: -
@@ -14833,111 +14859,6 @@ Size: 9300744
 Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.2-ubuntu24.04u1_amd64.deb
 
 Package: azure-acr-credential-provider
-Version: 1.32.7-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 40782
-Maintainer: Azure Container Upstream
-Description: The acr credential provider is responsible for providing ACR credentials for kubelet
-Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 9e82592ddab5897202d684a06950e3eaa51cb63b085a860ea8ad5f0f7938be52
-Size: 9270600
-Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.7-ubuntu24.04u1_amd64.deb
-
-Package: azure-acr-credential-provider
-Version: 1.32.8-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 40782
-Maintainer: Azure Container Upstream
-Description: The acr credential provider is responsible for providing ACR credentials for kubelet
-Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 93fd04a0718ea01d1ad3889f0e7747a4e2ca83158f1985f5fb2c0eb79577e302
-Size: 9270646
-Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.8-ubuntu24.04u1_amd64.deb
-
-Package: azfilesauth
-Version: 1.0-9
-Architecture: amd64
-Section: utils
-Priority: optional
-Installed-Size: 165
-Maintainer: Ritvik Budhiraja <rbudhiraja@microsoft.com>
-Description: Authentication utility for Azure Files with Kerberos
- A utility to handle Kerberos-based authentication for Azure Files, including a shared library and a Python manager script.
-Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.3.1), libkrb5-3 (>= 1.6.dfsg.2), libstdc++6 (>= 13.1), python3 (>= 3.6), python3-requests
-SHA256: 06b15599a67c1c79be23be1931ab66c9d53021204a9c943c630798477b765a0b
-Size: 38092
-Filename: pool/main/a/azfilesauth/azfilesauth_1.0-9_amd64.deb
-
-Package: azure-acr-credential-provider
-Version: 1.32.14-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 40878
-Maintainer: Azure Container Upstream
-Description: The acr credential provider is responsible for providing ACR credentials for kubelet
-Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 6038e85c0c17bb40c1660bd22ec37382d6dbe7c591abf6cfe46397872522196e
-Size: 9279500
-Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.14-ubuntu24.04u1_amd64.deb
-
-Package: dcgm-exporter
-Version: 4.8.1-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 55899
-Maintainer: Azure Container Upstream
-Description: Exports Nvidia GPU Metrics to Prometheus
-Homepage: https://github.com/NVIDIA/dcgm-exporter
-Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.2-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.2-1), libcap2-bin
-SHA256: 3d018eae5956a022155bf19d16e4f3359c8f0083201e84674d7a70a08aab7009
-Size: 11857608
-Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.1-ubuntu24.04u2_amd64.deb
-
-Package: ig
-Version: 0.48.0-ubuntu24.04u5
-Architecture: amd64
-Section: -
-Installed-Size: 184980
-Maintainer: Azure Container Upstream
-Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
-Homepage: https://www.inspektor-gadget.io
-Depends: libc6 (>= 2.38), libssl3
-SHA256: 27cf853fcde80dc4d056bc71a69d436ebb418e299195939aa616fe22a8569c1f
-Size: 45383734
-Filename: pool/main/i/ig/ig_0.48.0-ubuntu24.04u5_amd64.deb
-
-Package: azure-acr-credential-provider
-Version: 1.31.9-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 40090
-Maintainer: Azure Container Upstream
-Description: The acr credential provider is responsible for providing ACR credentials for kubelet
-Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
-Depends: libc6 (>= 2.34), libssl3
-SHA256: fa0177500017e4d50a95bd509e5165c8a64fbe772e6d7372cf6b1c5681777cae
-Size: 9131548
-Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.31.9-ubuntu24.04u1_amd64.deb
-
-Package: azure-acr-credential-provider
-Version: 1.32.0-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 40554
-Maintainer: Azure Container Upstream
-Description: The acr credential provider is responsible for providing ACR credentials for kubelet
-Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 56c475ac694db154924ce034ef9f403699f97764c674fb7eb364954eae81925b
-Size: 9186308
-Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.0-ubuntu24.04u1_amd64.deb
-
-Package: azure-acr-credential-provider
 Version: 1.32.4-ubuntu24.04u1
 Architecture: amd64
 Section: -
@@ -14975,6 +14896,32 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: dfe9780ba4e10509cf8f7bc9e350b2bd2e640d23454b7a9e63b102ccd886e443
 Size: 9270344
 Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.6-ubuntu24.04u1_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.32.7-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40782
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 9e82592ddab5897202d684a06950e3eaa51cb63b085a860ea8ad5f0f7938be52
+Size: 9270600
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.7-ubuntu24.04u1_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.32.8-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40782
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 93fd04a0718ea01d1ad3889f0e7747a4e2ca83158f1985f5fb2c0eb79577e302
+Size: 9270646
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.8-ubuntu24.04u1_amd64.deb
 
 Package: azure-acr-credential-provider
 Version: 1.32.9-ubuntu24.04u1
@@ -15028,6 +14975,33 @@ SHA256: 62e53b2d671da388047b32ae4f8d4246830a655e309e0717fa45a6c6c578509f
 Size: 3290910
 Filename: pool/main/s/sysmonforlinux/sysmonforlinux_1.5.1_amd64.deb
 
+Package: azfilesauth
+Version: 1.0-9
+Architecture: amd64
+Section: utils
+Priority: optional
+Installed-Size: 165
+Maintainer: Ritvik Budhiraja <rbudhiraja@microsoft.com>
+Description: Authentication utility for Azure Files with Kerberos
+ A utility to handle Kerberos-based authentication for Azure Files, including a shared library and a Python manager script.
+Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libgcc-s1 (>= 3.3.1), libkrb5-3 (>= 1.6.dfsg.2), libstdc++6 (>= 13.1), python3 (>= 3.6), python3-requests
+SHA256: 06b15599a67c1c79be23be1931ab66c9d53021204a9c943c630798477b765a0b
+Size: 38092
+Filename: pool/main/a/azfilesauth/azfilesauth_1.0-9_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.32.14-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40878
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6038e85c0c17bb40c1660bd22ec37382d6dbe7c591abf6cfe46397872522196e
+Size: 9279500
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.14-ubuntu24.04u1_amd64.deb
+
 Package: azure-acr-credential-provider
 Version: 1.33.9-ubuntu24.04u1
 Architecture: amd64
@@ -15066,6 +15040,32 @@ Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.4.1-1), datacente
 SHA256: 1942a036199014dddc5720325f4e61a06e22c2766fa0fb2c0bf7de8e7bfa4554
 Size: 11707162
 Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.6.0-ubuntu24.04u7_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.8.1-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 55899
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.2-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.2-1), libcap2-bin
+SHA256: 3d018eae5956a022155bf19d16e4f3359c8f0083201e84674d7a70a08aab7009
+Size: 11857608
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.1-ubuntu24.04u2_amd64.deb
+
+Package: ig
+Version: 0.48.0-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 184980
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 27cf853fcde80dc4d056bc71a69d436ebb418e299195939aa616fe22a8569c1f
+Size: 45383734
+Filename: pool/main/i/ig/ig_0.48.0-ubuntu24.04u5_amd64.deb
 
 Package: ig
 Version: 0.48.1-ubuntu24.04u5
@@ -20064,4 +20064,17 @@ License: unknown
 SHA256: 95840ef4f59d9ddf3c25e04773f9494a05c5741cbcff004ed9a67c0efe3c99ba
 Size: 22195878
 Filename: pool/main/b/blobfuse2-preview/blobfuse2-preview_2.5.4~preview.2_amd64.deb
+
+Package: mssql-tools
+Version: 17.11.1.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL Tools Team <mssql-tools@microsoft.com>
+Description: Tools for Microsoft(R) SQL Server(R)
+ This package provides tools for Microsoft(R) SQL Server(R).
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), msodbcsql17 (>= 17.3.0.0)
+SHA256: 8944c928aff5e6965988291446f7e4d18f3cf4d09faff99432259d1613800891
+Size: 228990
+Filename: pool/main/m/mssql-tools/mssql-tools_17.11.1.1-1_amd64.deb
 
