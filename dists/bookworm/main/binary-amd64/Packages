@@ -75,6 +75,23 @@ Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
+Package: msodbcsql18
+Version: 18.6.2.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL ODBC Team <mssql-odbc@microsoft.com>
+Size: 798098
+SHA256: 73438bb02bc26fb3d1c3d8cac36b3c26cb11629dbd0a3784990fc3235331b334
+SHA1: b20bb671dd22aa7d3d2ae1426c9b71654fcff1f9
+MD5sum: 0444bf2a46e8873a7d80b1b8c17567eb
+Description: ODBC Driver for Microsoft(R) SQL Server(R)
+ This package provides an ODBC driver that can connect to Microsoft(R)
+ SQL Server(R).
+Conflicts: libodbc1-utf16, odbcinst-utf16, odbcinst1debian2-utf16, unixodbc-utf16
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1), odbcinst
+Filename: pool/main/m/msodbcsql18/msodbcsql18_18.6.2.1-1_amd64.deb
+
 Package: php-pdo-sqlsrv
 Version: 5.12.0+debian~12
 Architecture: all

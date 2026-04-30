@@ -1,3 +1,22 @@
+Package: diepxuan-archive-keyring
+Version: 1.0.3+debian~11
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 21
+Depends: curl, gnupg, lsb-release, apt-transport-https, dpkg
+Homepage: https://github.com/diepxuan/diepxuan-archive-keyring
+Priority: optional
+Section: misc
+Filename: pool/main/d/diepxuan-archive-keyring/diepxuan-archive-keyring_1.0.3+debian~11_all.deb
+Size: 5288
+SHA256: 0ec9178c705417962b8c350f3537d762c023731c3d939ec8e8b108fb483fe2c9
+SHA1: 9e5015696d9a8a43f4d4a9b7ba57e29d41d9b083
+MD5sum: 2ebe86c22e773fc82012c63f34b4c177
+Description: DiepXuan Microsoft APT repository setup
+  This package adds Microsoft APT repository and GPG key to the system.
+  It enables installation of msodbcsql18, unixodbc-dev and other
+  Microsoft packages for PHP SQL Server extensions.
+
 Package: diepxuan-repositories
 Version: 1.0.2+debian~11
 Architecture: all
@@ -93,6 +112,46 @@ MD5sum: 24b35635de44c3f99ff9add210778002
 Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
+
+Package: msodbcsql18
+Version: 18.6.2.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL ODBC Team <mssql-odbc@microsoft.com>
+Size: 798098
+SHA256: 73438bb02bc26fb3d1c3d8cac36b3c26cb11629dbd0a3784990fc3235331b334
+SHA1: b20bb671dd22aa7d3d2ae1426c9b71654fcff1f9
+MD5sum: 0444bf2a46e8873a7d80b1b8c17567eb
+Description: ODBC Driver for Microsoft(R) SQL Server(R)
+ This package provides an ODBC driver that can connect to Microsoft(R)
+ SQL Server(R).
+Conflicts: libodbc1-utf16, odbcinst-utf16, odbcinst1debian2-utf16, unixodbc-utf16
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1), odbcinst
+Filename: pool/main/m/msodbcsql18/msodbcsql18_18.6.2.1-1_amd64.deb
+
+Package: odbcinst
+Source: unixodbc
+Version: 2.3.11-3
+Architecture: amd64
+Section: libs
+Priority: optional
+Installed-Size: 73
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Size: 13230
+SHA256: 6919b172d7ac41385e0d50fc8e9bdaceb6ffea758752ba03f604179707cb9fd6
+SHA1: 29a61540ed5a5e70623af0e13500e16d9099187f
+MD5sum: c4a808c99aec09c84d46b6620922b061
+Description: Helper program for accessing odbc ini files
+ This package contains the odbcinst helper tool, which allows ODBC driver
+ packages to install their own driver settings.
+Homepage: http://www.unixodbc.org/
+Multi-Arch: foreign
+Conflicts: odbcinst1
+Depends: libc6 (>= 2.4), odbcinst1debian2 (>= 2.3.11-3)
+Replaces: odbcinst1, odbcinst1debian1 (<< 2.3.7), unixodbc (<< 2.3.7)
+Filename: pool/main/u/unixodbc/odbcinst_2.3.11-3_amd64.deb
 
 Package: php-pdo-sqlsrv
 Version: 5.13.0+debian~11
@@ -1004,4 +1063,53 @@ MD5sum: 925a468000f6f61ad40dde7cc8e75172
 Description: debug symbols for php8.5-pdo-sqlsrv
 Build-Ids: cf1db4ccd79ecb48637f4d87de1091da2f4b142f
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: unixodbc
+Version: 2.3.11-3
+Architecture: amd64
+Section: database
+Priority: optional
+Installed-Size: 111
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Size: 24316
+SHA256: e3f9e0f89837de4c77f10f06d0640ea25c0705426ad7c39386e4d617d7260a87
+SHA1: 7478841b9aedd5bc03713cfd564ed2233b43994e
+MD5sum: 395e65a734faf5adeb5ce9793bc92f3f
+Description: Basic ODBC tools
+ UnixODBC is an implementation of the Open Database Connectivity standard,
+ a database abstraction layer that allows applications to be used with
+ many different relational databases by way of a single library.
+ .
+ This package contains isql, a command-line tool that allows SQL commands
+ to be entered interactively.
+Homepage: http://www.unixodbc.org/
+Multi-Arch: foreign
+Conflicts: unixodbc-bin (<< 2.3.7)
+Depends: libc6 (>= 2.14), odbcinst1debian2 (>= 2.3.11-3), libodbc1 (>= 2.3.11-3)
+Filename: pool/main/u/unixodbc/unixodbc_2.3.11-3_amd64.deb
+
+Package: unixodbc-dev
+Source: unixodbc
+Version: 2.3.11-3
+Architecture: amd64
+Section: devel
+Priority: extra
+Installed-Size: 1698
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Size: 42250
+SHA256: 80c04e939a599f656ff8837bff444e4759ec050362700a20e85db755cb1d78f4
+SHA1: 5cd1c194a1c5bbe0e970de26bc1a8048c3d01df5
+MD5sum: 417aa185eb156763dc838e73fd2d0dfa
+Description: ODBC libraries for UNIX (development files)
+ This package contains the development files (headers and libraries) for
+ unixODBC, an implementation of the Open DataBase Connectivity interface
+ for Unix systems.  You should not need to install this package unless
+ you intend to develop C language applications which use ODBC, or to
+ compile ODBC-using applications from source.
+Homepage: http://www.unixodbc.org/
+Conflicts: libiodbc2-dev, remembrance-agent (<< 2.11-4)
+Depends: unixodbc (= 2.3.11-3), odbcinst1debian2 (= 2.3.11-3), libltdl3-dev
+Filename: pool/main/u/unixodbc/unixodbc-dev_2.3.11-3_amd64.deb
 

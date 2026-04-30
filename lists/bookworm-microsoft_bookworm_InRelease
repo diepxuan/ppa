@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: microsoft-debian-bookworm-prod bookworm
+Label: microsoft-debian-bookworm-prod bookworm
+Suite: bookworm
+Codename: bookworm
+Date: Wed, 29 Apr 2026 22:31:01 +0000
+Architectures: amd64 arm64 armhf all
+Components: main
+Acquire-By-Hash: yes
+SHA256:
+ dbbe19445e4535e1baa74b6125dae74e26ab1452cdb3e25ddec259b3be68ce14          1307868 main/binary-amd64/Packages
+ f4ea57abe12320b33c5b01242abf00020563913f6c715b69bf8a3943fd3a079c           177449 main/binary-amd64/Packages.gz
+ 59f5a0fca15dbdffc28ddc889bbc2f5833c4ee6470c6fe173aabf89ff7998b44           505158 main/binary-arm64/Packages
+ 128e7367ccd4b42c07230866a47d77f2b587e58c80d7b06f283ca3cff7e0ed58            75106 main/binary-arm64/Packages.gz
+ 46bd3453bdeb9d200eab374f9658e36aca38ab69f71e6fe167dc675991813ff1           179251 main/binary-armhf/Packages
+ 91be34b08233c52764884bf85fb85bcc439174a9d33c05cb92f9b282209a1639            18106 main/binary-armhf/Packages.gz
+ bec357da43639d66f73275c9522b9eb81028a5dcdd8d1b0481553488640fb918             1057 main/binary-all/Packages
+ 7b4f1d4c3eff927377701457c0426c0b6e63a434f0d92221b62d80cd28598b53              573 main/binary-all/Packages.gz
+ e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/source/Sources
+ 73bf12f5879d66d6aee153829e20feac7f34fab0aed9414f99c0ebec59250ece               28 main/source/Sources.gz
+SHA512:
+ d01d5d2b8f13209345ae40e83fc80ee6f18cc6986830f3d34dab99a922b90d5dd92f8d37fef9afea3983c646901d840e4aa9f756717920b335f6c42f3a2f85ab          1307868 main/binary-amd64/Packages
+ c5d5596331c9288b415ccd9fb48fe0c2c4417ab3a71ac389cde2e8dbd9c304990b41b2fb22ad6ca985bbb9f90078ae3bd6a4518d04a0105dcc38fc3c33b68cb7           177449 main/binary-amd64/Packages.gz
+ a83e50c9f47732b47ad2a6af506f2798e95209d9027ef148c5f320327c29164e2622d60cfef189b56976ab64d1269676ce079210e0c2ed5d12a316cc18d3d93c           505158 main/binary-arm64/Packages
+ 0f0dd56839fb5cc030eb88eae91cbb2c47233559822b14bb8df53026fae4285e45d69748549c4b055849434b8b4f3e50db3e61ad8d25c200fa15eaf2d7e85946            75106 main/binary-arm64/Packages.gz
+ a520a20481b6829ae7f10c4602904bdd08843112e2ddc252a6139618cdbf69badf6653c02e220d8e7a9150070f90f517e6fb233c18f21a7800296a2922fe33fd           179251 main/binary-armhf/Packages
+ 51e7af7aeb8ce58e69a2346267a72859fbeae6a5e39b641cc511fd9bdc5a86dc98d43bd923abe33871b5f01ee69c0f9ef710fa18d311a90c6117c0e17f08586e            18106 main/binary-armhf/Packages.gz
+ 1d65db7311bab0feafb4524181e3a01b4c0be60e657a75ef2f53c355541a3f80eb95bc64c8832e518ed3be0d37b2de24a2f2e9496d860cf90a37cad61bd2714e             1057 main/binary-all/Packages
+ 0aa6e55f321e70ba0a0c7d33edd24c5991068a1fec4e443f2ee221834040cdba33a40cd8d11ceb8d572d77e53244c45ebec1b93756014e9c1b049d762176c946              573 main/binary-all/Packages.gz
+ cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 main/source/Sources
+ 0dde501a362d77c169620ce75e4948a4fe42f2d6a1d146c8fe12f432e0f5ae03cc397b1ac6bff2f557040eca1bbecb1f0c62689b45f03eb618cfc30e94eb9546               28 main/source/Sources.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: BSN Pgp v1.0.0.0
+
+iQEcBAEBCAAGBQJp8obtAAoJEOs+lK2+EinPuyQH/2bAqzVeoxYqf/K3Wpol5lYw
+/f1JY9d588NSvf7h5W0u7kzq3QUs6+Hb24h/mEfOa8ncUO1Ifdaxo4SIfIKxHv5C
+JxiWJR8kcOeKk/FGJWEq/enA+ZpJ5yp51REyzQ3N6o/J9qahjGQYN0Ddzq0CrsJ+
+HKCtOFK+LDJ0sV7taNCtKpkVJLEO+8QbvkjQzXjkuL14kXvNk4aBtM9dD7Q8qESf
+8RsrdLwK6UdYlwSr7yIwh2ewed/SLwGL/CzLt/xQZi0vgQpiUkt22Gh6flvqf8VF
+zEYbe1FK9O2D5gkTBjWS1CKACvL8GSw12Qtc7SPmqthhnie+QbRx8lWcbMMIuPU=
+-----END PGP SIGNATURE-----
