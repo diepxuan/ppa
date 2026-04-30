@@ -1,3 +1,22 @@
+Package: diepxuan-archive-keyring
+Version: 1.0.3+debian~12
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 21
+Depends: curl, gnupg, lsb-release, apt-transport-https, dpkg
+Homepage: https://github.com/diepxuan/diepxuan-archive-keyring
+Priority: optional
+Section: misc
+Filename: pool/main/d/diepxuan-archive-keyring/diepxuan-archive-keyring_1.0.3+debian~12_all.deb
+Size: 5288
+SHA256: 41776171b72827d97f155d7df2a01cabf57df6c6dee75109a101dc10b96ad430
+SHA1: ca933c2b8b041a4db3392f7cad38082b1fcec9d6
+MD5sum: 4b35222d318a071ec49dc722e04106cb
+Description: DiepXuan Microsoft APT repository setup
+  This package adds Microsoft APT repository and GPG key to the system.
+  It enables installation of msodbcsql18, unixodbc-dev and other
+  Microsoft packages for PHP SQL Server extensions.
+
 Package: ductn
 Version: 4.5.7+debian~12
 Architecture: arm64
