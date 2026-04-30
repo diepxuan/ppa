@@ -4,9 +4,9 @@ Label: DiepXuan
 Codename: buster
 Architectures: amd64 arm64 i386
 Components: main
-Update: buster-microsoft
+#Update: buster-microsoft
 Description: Debian 10 (Buster)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Debian 11 (Bullseye)
 Origin: DiepXuan
@@ -16,7 +16,7 @@ Architectures: amd64 arm64 i386
 Components: main
 Update: bullseye-microsoft
 Description: Debian 11 (Bullseye)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Debian 12 (Bookworm)
 Origin: DiepXuan
@@ -26,7 +26,7 @@ Architectures: amd64 arm64 i386
 Components: main
 Update: bookworm-microsoft
 Description: Debian 12 (Bookworm)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Debian 13 (Trixie)
 Origin: DiepXuan
@@ -34,9 +34,9 @@ Label: DiepXuan
 Codename: trixie
 Architectures: amd64 arm64 i386
 Components: main
-Update: trixie-microsoft
+#Update: trixie-microsoft
 Description: Debian 13 (Trixie)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Ubuntu 18.04 (Bionic)
 Origin: DiepXuan
@@ -44,9 +44,9 @@ Label: DiepXuan
 Codename: bionic
 Architectures: amd64 arm64 i386
 Components: main
-Update: bionic-microsoft
+#Update: bionic-microsoft
 Description: Ubuntu 18.04 (Bionic)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Ubuntu 20.04 (Focal)
 Origin: DiepXuan
@@ -54,9 +54,9 @@ Label: DiepXuan
 Codename: focal
 Architectures: amd64 arm64 i386
 Components: main
-Update: focal-microsoft
+#Update: focal-microsoft
 Description: Ubuntu 20.04 (Focal)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Ubuntu 22.04 (Jammy)
 Origin: DiepXuan
@@ -64,9 +64,9 @@ Label: DiepXuan
 Codename: jammy
 Architectures: amd64 arm64 i386
 Components: main
-Update: jammy-microsoft
+#Update: jammy-microsoft
 Description: Ubuntu 22.04 (Jammy)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Ubuntu 24.04 (Noble)
 Origin: DiepXuan
@@ -76,7 +76,7 @@ Architectures: amd64 arm64 i386
 Components: main
 Update: noble-microsoft
 Description: Ubuntu 24.04 (Noble)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Ubuntu 24.10 (Oracular)
 Origin: DiepXuan
@@ -86,7 +86,7 @@ Architectures: amd64 arm64 i386
 Components: main
 Update: oracular-microsoft
 Description: Ubuntu 24.10 (Oracular)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3
 
 # Ubuntu 25.04 (Plucky)
 Origin: DiepXuan
@@ -96,4 +96,4 @@ Architectures: amd64 arm64 i386
 Components: main
 Update: plucky-microsoft
 Description: Ubuntu 25.04 (Plucky)
-SignWith: yes
+SignWith: 7E0EC917A5074BD3

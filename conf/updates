@@ -1,26 +1,34 @@
 # Pull msodbcsql18 and unixodbc-dev from Microsoft repository
 # This replaces the need for Extra dependencies in Launchpad PPA
+# deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/prod bionic main
+# deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/ubuntu/18.04/multiarch/prod bionic main
 
 # Debian 10 (Buster)
 Name: buster-microsoft
 Method: https://packages.microsoft.com/debian/10/prod
 Suite: buster
+Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
+FilterList: install updates-ms
 
 # Debian 11 (Bullseye)
 Name: bullseye-microsoft
 Method: https://packages.microsoft.com/debian/11/prod
 Suite: bullseye
+Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
+FilterList: install updates-ms
 
 # Debian 12 (Bookworm)
 Name: bookworm-microsoft
 Method: https://packages.microsoft.com/debian/12/prod
 Suite: bookworm
+Architectures: amd64
 Components: main
-VerifyRelease: EB3E94ADBE1229CF
+VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
+FilterList: install updates-ms
 
 # Debian 13 (Trixie)
 # Microsoft doi key sang EE4D7792F748182B (Microsoft Corporation - General GPG Signer)
@@ -29,47 +37,62 @@ VerifyRelease: EB3E94ADBE1229CF
 Name: trixie-microsoft
 Method: https://packages.microsoft.com/debian/13/prod
 Suite: trixie
+Architectures: amd64
 Components: main
-VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
+#VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
+VerifyRelease: blindtrust
+FilterList: install updates-ms
 
 # Ubuntu 18.04 (Bionic)
 Name: bionic-microsoft
 Method: https://packages.microsoft.com/ubuntu/18.04/prod
 Suite: bionic
+Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
+FilterList: install updates-ms
 
 # Ubuntu 20.04 (Focal)
 Name: focal-microsoft
 Method: https://packages.microsoft.com/ubuntu/20.04/prod
 Suite: focal
+Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
+FilterList: install updates-ms
 
 # Ubuntu 22.04 (Jammy)
 Name: jammy-microsoft
 Method: https://packages.microsoft.com/ubuntu/22.04/prod
 Suite: jammy
+Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
+FilterList: install updates-ms
 
 # Ubuntu 24.04 (Noble)
 Name: noble-microsoft
 Method: https://packages.microsoft.com/ubuntu/24.04/prod
 Suite: noble
+Architectures: amd64
 Components: main
-VerifyRelease: EB3E94ADBE1229CF
+VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
+FilterList: install updates-ms
 
 # Ubuntu 24.10 (Oracular)
 Name: oracular-microsoft
 Method: https://packages.microsoft.com/ubuntu/24.10/prod
 Suite: oracular
+Architectures: amd64
 Components: main
-VerifyRelease: EB3E94ADBE1229CF
+VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
+FilterList: install updates-ms
 
 # Ubuntu 25.04 (Plucky)
 Name: plucky-microsoft
 Method: https://packages.microsoft.com/ubuntu/25.04/prod
 Suite: plucky
+Architectures: amd64
 Components: main
-VerifyRelease: EB3E94ADBE1229CF
+VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
+FilterList: install updates-ms
