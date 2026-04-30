@@ -143,7 +143,7 @@ Description: runkit7 module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv
-Version: 5.13.0+ubuntu~25.04
+Version: 5.13.1+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -153,11 +153,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.0+ubuntu~25.04_all.deb
-Size: 4164
-SHA256: 3c75c89a653aa6248daef4ec8053364d2b2883916f38769e1b6ce908f1145500
-SHA1: 3988c4ce6133df13e6671bdc28cf61a70f2906ed
-MD5sum: e592d18a8cff9aac3c512cdf723c9846
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.1+ubuntu~25.04_all.deb
+Size: 4044
+SHA256: 0c52516eb4a0ab47f46d1377784e28c42882daa9dcf8e4fe7bc338ac4dcb3893
+SHA1: 8c016dfa2c8ab5bcb6b096436d479491d6919832
+MD5sum: b193cfe6bd6fb6a545065ce2202f7031
 Description: sqlsrv module for PHP
  .
  .
@@ -170,21 +170,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.13.0+ubuntu~25.04
+Version: 5.13.1+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv (>= 5.13.0+ubuntu~25.04~), php-all-dev
+Depends: php8.4-sqlsrv (>= 5.13.1+ubuntu~25.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.0+ubuntu~25.04_all.deb
-Size: 4190
-SHA256: 88397541d0aa47eff04f20d682ba923364f45806066c5db369730053095990c6
-SHA1: e4039eb0eccddd2b03902ec55206fdb56598b560
-MD5sum: a32d2fd006f5403bc0219adc8eca3d39
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.1+ubuntu~25.04_all.deb
+Size: 4068
+SHA256: 069e2ad6a74f46a8bce814e2cf8ad49c80e9eb252d3d9e11f69661083d0170c7
+SHA1: c87de0b2e3335ea0faf8a2d30196a5d3c91b454d
+MD5sum: 388e9ce9c50bb1e0218bb0ff97793c11
 Description: sqlsrv module for PHP
  .
  .
