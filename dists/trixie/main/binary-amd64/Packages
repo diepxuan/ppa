@@ -114,7 +114,7 @@ Description: Magento 2 support package
   Building by Tran Ngoc Duc
 
 Package: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -124,11 +124,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.0+debian~13_all.deb
-Size: 4154
-SHA256: 2f1456b3d83dc7c377f61a5a352dadc5c118f5920e6b03b2a894075a2a3d9927
-SHA1: 2083e46931bfee5bc4721999e431c56e515cd146
-MD5sum: a625ba552b85e6f22beeb669cb1b00d7
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.1+debian~13_all.deb
+Size: 4040
+SHA256: 606b393918ce47920ecd62d5a2cb718449214edcf0dbb03edbe8058ed0d1a90f
+SHA1: 1a673d04a9d2c47fee6cb9c8228a67a1d69f4b3c
+MD5sum: 54d372a0daf490e7adbc646425882666
 Description: sqlsrv module for PHP
  .
  .
@@ -141,21 +141,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.5-sqlsrv (>= 5.13.0+debian~13~), php8.4-sqlsrv (>= 5.13.0+debian~13~), php8.3-sqlsrv (>= 5.13.0+debian~13~), php-all-dev
+Depends: php8.5-sqlsrv (>= 5.13.1+debian~13~), php8.4-sqlsrv (>= 5.13.1+debian~13~), php8.3-sqlsrv (>= 5.13.1+debian~13~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.0+debian~13_all.deb
-Size: 4194
-SHA256: 3c8447d8cd52e7175cdb758dd81cfd4107ac096ef9099df3dded3d704e8b0a42
-SHA1: f4f4dd09d534069c636c89e22a048f39a0d2823d
-MD5sum: 15ab350603de941d08931e89f22f5243
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.1+debian~13_all.deb
+Size: 4082
+SHA256: f97830a9ec52b3f860ef7a1127d72f22d66f45027c636c8335f31b8e5575712c
+SHA1: 9f9c542f0f6e24073effa1d27da54f4b417c1690
+MD5sum: 3f4b1388fb9a48ee863671764ea9312f
 Description: sqlsrv module for PHP
  .
  .
@@ -168,24 +168,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-sqlsrv
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 365
+Installed-Size: 370
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-sqlsrv (<< 5.13.0+debian~13~)
-Replaces: php-sqlsrv (<< 5.13.0+debian~13~)
+Breaks: php-sqlsrv (<< 5.13.1+debian~13~)
+Replaces: php-sqlsrv (<< 5.13.1+debian~13~)
 Provides: php-sqlsrv
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.13.0+debian~13_amd64.deb
-Size: 141956
-SHA256: 339c7ee0d1bf32695e1c5697fa18c580102752260f7c55a1163a07e5a397b398
-SHA1: f0160b1e40a78468f8df5aefaaea028b2e0eb4d5
-MD5sum: 6eff109d5083745ceb4b332c0d4149b1
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv_5.13.1+debian~13_amd64.deb
+Size: 143208
+SHA256: 4d8bcd3536d086ebf67726daf86e266111cf42d56729940fc09a17b39c9794f9
+SHA1: 34cf823aec665bb0c998d16b345538ce1cdb8767
+MD5sum: 5eaaa4e0bd29d9f16c80efea40592b35
 Description: sqlsrv module for PHP
  .
  .
@@ -196,43 +196,43 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-sqlsrv-dbgsym
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 850
-Depends: php8.3-sqlsrv (= 5.13.0+debian~13)
+Installed-Size: 855
+Depends: php8.3-sqlsrv (= 5.13.1+debian~13)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv-dbgsym_5.13.0+debian~13_amd64.deb
-Size: 803854
-SHA256: 516e9a605f15e16aaaf020c3dbca4c1d6a84e6f55268e19ccfa57e1aeccf4455
-SHA1: 629f3e80e83e0157bbdcf6e7b4692a33285e4d1f
-MD5sum: f09ceb3a976033f810109e65d3b91984
+Filename: pool/main/p/php-sqlsrv/php8.3-sqlsrv-dbgsym_5.13.1+debian~13_amd64.deb
+Size: 808890
+SHA256: 723d3f56b80c14f23353cbf1768c99d751cf0306fdbd76468c54d216782adad2
+SHA1: 03355e350323ef9e8cbcab5c4ba15e1d1dcdb790
+MD5sum: e993490eb38f653d98798c63ab618ca5
 Description: debug symbols for php8.3-sqlsrv
-Build-Ids: 5991b59afe3eab13f32e5c2c60fbdbde10bb88a5
+Build-Ids: fa8509c2a44eaaa8696ada1a9eecb5d5d980cf7d
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-sqlsrv
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 366
+Installed-Size: 370
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-sqlsrv (<< 5.13.0+debian~13~)
-Replaces: php-sqlsrv (<< 5.13.0+debian~13~)
+Breaks: php-sqlsrv (<< 5.13.1+debian~13~)
+Replaces: php-sqlsrv (<< 5.13.1+debian~13~)
 Provides: php-sqlsrv
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.13.0+debian~13_amd64.deb
-Size: 142020
-SHA256: d1eb47c93360365da3f275530786e198769945d0feb8e3e9ec39d7d6e74e498d
-SHA1: bcdce129a903c1154fcc99a21a968c9b4e78d6c1
-MD5sum: 3cd6b444ee0d08a82fa30485da04cce2
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv_5.13.1+debian~13_amd64.deb
+Size: 143290
+SHA256: d51b5e718e4148e8f5e24694efd545a0bab46692237a72ba5d0797f227538c55
+SHA1: 921de2ea101ce4fefaa40e0b4ebbaf12339634e7
+MD5sum: 117f993333ce696d2fb6788f923a9742
 Description: sqlsrv module for PHP
  .
  .
@@ -243,43 +243,43 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.4-sqlsrv-dbgsym
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 866
-Depends: php8.4-sqlsrv (= 5.13.0+debian~13)
+Installed-Size: 873
+Depends: php8.4-sqlsrv (= 5.13.1+debian~13)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv-dbgsym_5.13.0+debian~13_amd64.deb
-Size: 820594
-SHA256: c56159a1deadc0fc2285ffbbae9d313a5e9142660dd39d2342d21336aa7ab8f1
-SHA1: 35eb0eff0ab144c2e88c8d9d72b1fd64b421d617
-MD5sum: 2e2bc11c6e5a4ad96c29116e69f35549
+Filename: pool/main/p/php-sqlsrv/php8.4-sqlsrv-dbgsym_5.13.1+debian~13_amd64.deb
+Size: 827158
+SHA256: 19b37f943f350f256ca673e19b015654cfc0afaf033e2fc608a5fb21c8ab1bdd
+SHA1: c18235c0d61e9cacc53475821c8349b88d10561e
+MD5sum: fd5aa84ad8c8d72a55ec0475ce666b4a
 Description: debug symbols for php8.4-sqlsrv
-Build-Ids: 2e6aa5a3398cb4cfb13790a489313fea93e9325b
+Build-Ids: e7d077c059e172407d88072f843dec3ba8e72c59
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.5-sqlsrv
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 366
+Installed-Size: 370
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.38), libgcc-s1 (>= 3.0), libodbc2 (>= 2.3.1), libodbcinst2 (>= 2.3.1), libstdc++6 (>= 13.1)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-sqlsrv (<< 5.13.0+debian~13~)
-Replaces: php-sqlsrv (<< 5.13.0+debian~13~)
+Breaks: php-sqlsrv (<< 5.13.1+debian~13~)
+Replaces: php-sqlsrv (<< 5.13.1+debian~13~)
 Provides: php-sqlsrv
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php8.5-sqlsrv_5.13.0+debian~13_amd64.deb
-Size: 142026
-SHA256: 5263162ba64e8bcd6cb6c49e64b2bdf947ddfd99653370924e29524ce14dc461
-SHA1: 57a0e8d6901ebdee3de9afc5eb8c777455a05d08
-MD5sum: b841566aa5b03c05ec9f049d6568d1d4
+Filename: pool/main/p/php-sqlsrv/php8.5-sqlsrv_5.13.1+debian~13_amd64.deb
+Size: 143298
+SHA256: 7cb9a1959b21685c61c254ce40b913f418ecd4d3c74c3e97d0d9d166d71c36b4
+SHA1: 6a5ac036a002c7113ee9552f875e5d0a309455fa
+MD5sum: bfc3bab9831bc3b504c8afcacc0d5600
 Description: sqlsrv module for PHP
  .
  .
@@ -290,20 +290,20 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.5-sqlsrv-dbgsym
 Source: php-sqlsrv
-Version: 5.13.0+debian~13
+Version: 5.13.1+debian~13
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 867
-Depends: php8.5-sqlsrv (= 5.13.0+debian~13)
+Installed-Size: 873
+Depends: php8.5-sqlsrv (= 5.13.1+debian~13)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-sqlsrv/php8.5-sqlsrv-dbgsym_5.13.0+debian~13_amd64.deb
-Size: 821460
-SHA256: 63830063de3d92e6541e9e79bf5d490e428b3adae7c9bed9474ee39b62b61c81
-SHA1: 1ccc6fd04e389314119b2b9a46037c112790e23b
-MD5sum: b2f4079478bde567b6a243da1dbbce93
+Filename: pool/main/p/php-sqlsrv/php8.5-sqlsrv-dbgsym_5.13.1+debian~13_amd64.deb
+Size: 827504
+SHA256: 24f09d260e2a5127c5396253bcb0f9632a82fe9e55319815d93820b2753fd33c
+SHA1: 86ecbd60d4b875675d7565e71f41ad7d53a987f3
+MD5sum: a69fbeac01273420134712d9af7addcb
 Description: debug symbols for php8.5-sqlsrv
-Build-Ids: f5629e79967352fd00eb13dc50762d98aab51f1d
+Build-Ids: f904e839bbbcb688ec89e99b883d87e0d3e9243e
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
