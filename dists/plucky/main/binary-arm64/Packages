@@ -55,7 +55,7 @@ Description: DiepXuan super package
   Building by Tran Ngoc Duc
 
 Package: php-pdo-sqlsrv
-Version: 5.13.0+ubuntu~25.04
+Version: 5.13.1+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -65,11 +65,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+ubuntu~25.04_all.deb
-Size: 4180
-SHA256: 11ee18622c257955b5580e2115c55e742baf21145fef97a85bf3abf63e5cfdef
-SHA1: 97dc2c7c48dbc129c5405ec21a554e8194e3dd7f
-MD5sum: 41d0ac314821831d79db70c8ee0a7016
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.1+ubuntu~25.04_all.deb
+Size: 4054
+SHA256: 10c7627d554dbc32aa98799cd86679e1cce75dfe4352c0ca05618a975f24568e
+SHA1: 82bcc7e0b7c0c9c2c0c1c951959b4ad05ebbc359
+MD5sum: 7c4b9e9f58df63b3c932d232f9ecbca1
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -82,21 +82,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.13.0+ubuntu~25.04
+Version: 5.13.1+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-pdo-sqlsrv (>= 5.13.0+ubuntu~25.04~), php-all-dev
+Depends: php8.4-pdo-sqlsrv (>= 5.13.1+ubuntu~25.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+ubuntu~25.04_all.deb
-Size: 4208
-SHA256: 0eb588a57219a87bbdc88d477f67eecff4368d68cf690efdd68b1cdb7370c115
-SHA1: b117a4b35919f0718f0d7eddf5eecb4c66d27738
-MD5sum: f6d9fa1ffa3b4968992d3a4c19f05cea
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.1+ubuntu~25.04_all.deb
+Size: 4084
+SHA256: 8095537010b0746a51e58fa9f3409496d5ec0377eb00bbd6e9cd1a10a8cd8b4c
+SHA1: 5f138aee97a37c2fa1c6ef77324e219358b383a2
+MD5sum: f4c5cb76e4f7f4c99419c41dad30d841
 Description: pdo_sqlsrv module for PHP
  .
  .
