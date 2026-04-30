@@ -10,7 +10,7 @@ Suite: buster
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Debian 11 (Bullseye)
 Name: bullseye-microsoft
@@ -19,7 +19,7 @@ Suite: bullseye
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Debian 12 (Bookworm)
 Name: bookworm-microsoft
@@ -28,7 +28,7 @@ Suite: bookworm
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Debian 13 (Trixie)
 # Microsoft doi key sang EE4D7792F748182B (Microsoft Corporation - General GPG Signer)
@@ -41,7 +41,7 @@ Architectures: amd64
 Components: main
 #VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
 VerifyRelease: blindtrust
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Ubuntu 18.04 (Bionic)
 Name: bionic-microsoft
@@ -50,7 +50,7 @@ Suite: bionic
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Ubuntu 20.04 (Focal)
 Name: focal-microsoft
@@ -59,7 +59,7 @@ Suite: focal
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Ubuntu 22.04 (Jammy)
 Name: jammy-microsoft
@@ -68,7 +68,7 @@ Suite: jammy
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Ubuntu 24.04 (Noble)
 Name: noble-microsoft
@@ -77,7 +77,7 @@ Suite: noble
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Ubuntu 24.10 (Oracular)
 Name: oracular-microsoft
@@ -86,7 +86,7 @@ Suite: oracular
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
-FilterList: install updates-ms
+FilterList: deinstall updates-ms
 
 # Ubuntu 25.04 (Plucky)
 Name: plucky-microsoft
@@ -95,4 +95,4 @@ Suite: plucky
 Architectures: amd64
 Components: main
 VerifyRelease: EB3E94ADBE1229CF|EE4D7792F748182B
-FilterList: install updates-ms
+FilterList: deinstall updates-ms

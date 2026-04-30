@@ -4,7 +4,7 @@ Label: DiepXuan
 Codename: buster
 Architectures: amd64 arm64 i386
 Components: main
-#Update: buster-microsoft
+Update: buster-microsoft
 Description: Debian 10 (Buster)
 SignWith: 7E0EC917A5074BD3
 
@@ -44,7 +44,7 @@ Label: DiepXuan
 Codename: bionic
 Architectures: amd64 arm64 i386
 Components: main
-#Update: bionic-microsoft
+Update: bionic-microsoft
 Description: Ubuntu 18.04 (Bionic)
 SignWith: 7E0EC917A5074BD3
 
@@ -54,7 +54,7 @@ Label: DiepXuan
 Codename: focal
 Architectures: amd64 arm64 i386
 Components: main
-#Update: focal-microsoft
+Update: focal-microsoft
 Description: Ubuntu 20.04 (Focal)
 SignWith: 7E0EC917A5074BD3
 
@@ -64,7 +64,7 @@ Label: DiepXuan
 Codename: jammy
 Architectures: amd64 arm64 i386
 Components: main
-#Update: jammy-microsoft
+Update: jammy-microsoft
 Description: Ubuntu 22.04 (Jammy)
 SignWith: 7E0EC917A5074BD3
 
