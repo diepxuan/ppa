@@ -36,6 +36,59 @@ Description: DiepXuan Microsoft APT repository setup
   It enables installation of msodbcsql18, unixodbc-dev and other
   Microsoft packages for PHP SQL Server extensions.
 
+Package: php-pdo-sqlsrv
+Version: 5.13.1+debian~13
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-pdo-sqlsrv
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.1+debian~13_all.deb
+Size: 4050
+SHA256: d9611a489ad6443252c54f6afb74198aaa88cd09e0b9846a90f566d669621f55
+SHA1: 211f4e919c10b59de5e7cd5387a230a2ffc15d8e
+MD5sum: c4b5c960a98ce833c0c636f88dcf3b9a
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-pdo-sqlsrv-all-dev
+Source: php-pdo-sqlsrv
+Version: 5.13.1+debian~13
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 12
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-pdo-sqlsrv (>= 5.13.1+debian~13~), php8.4-pdo-sqlsrv (>= 5.13.1+debian~13~), php8.3-pdo-sqlsrv (>= 5.13.1+debian~13~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/pdo_sqlsrv
+Priority: optional
+Section: php
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.1+debian~13_all.deb
+Size: 4086
+SHA256: 8877ccd3a39aa2bf8c658ba26cb307dfe18681de96af936b7a39b5e7a6164dde
+SHA1: c0409ce5f29d20e43e95c9508c5184e1fcf6616a
+MD5sum: b59bc19f9a2a5be0887cdf5806dae11b
+Description: pdo_sqlsrv module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php-sqlsrv
 Version: 5.13.1+debian~13
 Architecture: all
