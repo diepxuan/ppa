@@ -18,7 +18,7 @@ Description: DiepXuan Microsoft APT repository setup
   Microsoft packages for PHP SQL Server extensions.
 
 Package: php-pdo-sqlsrv
-Version: 5.13.0+ubuntu~24.04
+Version: 5.13.1+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -28,11 +28,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+ubuntu~24.04_all.deb
-Size: 4172
-SHA256: 0718b9aa24b315563df3d3a800973af5b743c4a176dce6bb6f76dc6ac4ee172d
-SHA1: 948051aab00c3782eaeb99c7a26d37a00bd5d89d
-MD5sum: 4ac7b5d8dc54ac5cf6303d1c2cdfc55a
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.1+ubuntu~24.04_all.deb
+Size: 4046
+SHA256: ae4a5f4c53a029b76f3cd76bf2ebe3c56009507b7d6f3d25b9a856b9e3cdaee8
+SHA1: bf44da4ecf857dcc838a343ca3c0967fc166c103
+MD5sum: f77c2626c54f476c1278c1ff606e5ac3
 Description: pdo_sqlsrv module for PHP
  .
  .
@@ -45,21 +45,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-pdo-sqlsrv-all-dev
 Source: php-pdo-sqlsrv
-Version: 5.13.0+ubuntu~24.04
+Version: 5.13.1+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.5-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.4-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.13.0+ubuntu~24.04~), php-all-dev
+Depends: php8.5-pdo-sqlsrv (>= 5.13.1+ubuntu~24.04~), php8.4-pdo-sqlsrv (>= 5.13.1+ubuntu~24.04~), php8.3-pdo-sqlsrv (>= 5.13.1+ubuntu~24.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.0+ubuntu~24.04_all.deb
-Size: 4208
-SHA256: 766f3add49bd4fbfbd686940dbd6349ddf1a90d73ad48f54e474f6f51ac85743
-SHA1: f12411dfd0307e9e4f84b4abd14ac32d341939a5
-MD5sum: a937450044d878d64ca53cf4a99ea927
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv-all-dev_5.13.1+ubuntu~24.04_all.deb
+Size: 4082
+SHA256: 8cb20512746c7978c7ee4ba26e77305332b58f94a4962f65be56e5f3cc822902
+SHA1: d4e7ee877f0aef5825d5849af3570acb33b8dfb2
+MD5sum: d65a43be7db8af489bbcc7a937f43aea
 Description: pdo_sqlsrv module for PHP
  .
  .
