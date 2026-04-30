@@ -166,6 +166,59 @@ Description: pdo_sqlsrv module for PHP
  This is empty package that depends on all PHP versions.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-runkit7
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+debian~13_all.deb
+Size: 3368
+SHA256: f6e3133c845c72b3b30296ced42a8f8a8f08659721cca8cff33c7df9940281ae
+SHA1: 3e82c34778709ab3fe1246ea56a61efec844b0f6
+MD5sum: 60e836d1c41717de2ce9c7ca587abfcf
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on default PHP version.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php-runkit7-all-dev
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 11
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-runkit7 (>= 4.0.0a7+debian~13~), php7.3-runkit7 (>= 4.0.0a7+debian~13~), php7.4-runkit7 (>= 4.0.0a7+debian~13~), php8.0-runkit7 (>= 4.0.0a7+debian~13~), php8.1-runkit7 (>= 4.0.0a7+debian~13~), php8.2-runkit7 (>= 4.0.0a7+debian~13~), php8.3-runkit7 (>= 4.0.0a7+debian~13~), php8.4-runkit7 (>= 4.0.0a7+debian~13~), php8.5-runkit7 (>= 4.0.0a7+debian~13~), php-all-dev
+Recommends: ghostscript, ttf-dejavu-core
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+debian~13_all.deb
+Size: 3424
+SHA256: e59f9953f661c26a24a3c205e6f9c06b9d831ba84fed0d76dc8a2ab470cc590b
+SHA1: 5d06c8f066952a239f836e15fbafac7a9640b165
+MD5sum: 6630e2b74928d7902c3afd9bb7b50d2a
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+ .
+ This is empty package that depends on all PHP versions.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php-sqlsrv
 Version: 5.13.1+debian~13
 Architecture: all
@@ -219,6 +272,288 @@ Description: sqlsrv module for PHP
  This is empty package that depends on all PHP versions.
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php7.2-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.2-common, phpapi-20170718, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39582
+SHA256: bac89149045dc4ba961c1d274468d0cc9602174942be2b6e78fb018131429f83
+SHA1: 1b1c2144b412d40e4b587d8bfa344e531adab5a7
+MD5sum: d3fc75693a4d22da0a5470f4744c7b52
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.2-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 130
+Depends: php7.2-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php7.2-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 111338
+SHA256: 15dcbe8fd261e37e9aa1374e6f624caa9c89227ed44ba7fc8ee3d70eb6dab09a
+SHA1: 50714f4c88750dee829790c6238779e0385fbf56
+MD5sum: 81308d87d87e3d6fbfbfd42972d11899
+Description: debug symbols for php7.2-runkit7
+Build-Ids: 92a852a7eeafaf335e22f9d4f19f63eabcdfaeca
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.3-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.3-common, phpapi-20180731, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39626
+SHA256: 29e6417a50a18dc95c6956889d424672a325897d3900a752e7a1e7d138b14943
+SHA1: 412c63987197fa227b51a85f5a6b540e3cb7630f
+MD5sum: f73f0bea4d71a833cee3436416befeb0
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.3-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 135
+Depends: php7.3-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php7.3-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 117068
+SHA256: f70e3afb6f5ad37db43d83d7441d3ad814b2b95081db1c258150f0bed76fa416
+SHA1: 05c1c4b21e859601e8e13821b033ef3e6dbcc040
+MD5sum: f707000b36c0dfe6ac8aac114ae2c2d7
+Description: debug symbols for php7.3-runkit7
+Build-Ids: 9628476c73559781a438864bd46015059f1ddeb9
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.4-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php7.4-common, phpapi-20190902, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39658
+SHA256: e913dc2d8314dc98846c3adb6da6c52c997d5b6f2c42b52cfd02a721de9ac131
+SHA1: a8450e378d98e0aacf30d3a28bf7bc7f9cda4729
+MD5sum: 5268bd99a397e0246b13d03f37bd19f6
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php7.4-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 136
+Depends: php7.4-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php7.4-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 118104
+SHA256: 05efd69bb586752bf5b1310cf088f5ea8389d3b5964bbaba98655d8c0f6f805d
+SHA1: d2ad49554e54b2742f364e68c41cb6a9d387dc3b
+MD5sum: c3e478ea3e6908cec2f8ea37f266f09b
+Description: debug symbols for php7.4-runkit7
+Build-Ids: e4ad42e0c1a2cf025ca6416fad6898fdfdc99ba3
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.0-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.0-common, phpapi-20200930, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39326
+SHA256: b93b574243e87e751a22363b060a2d0e04a8bf486fa39e680ae70edb3325c4d7
+SHA1: 47e11d6b74396ff1abad9e1a6c33cc9fc2f1d42d
+MD5sum: ef6127247a6168f59aee141cac1cd989
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.0-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 139
+Depends: php8.0-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.0-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 120240
+SHA256: fbdfe14f237919aed462da8cdf411852242e38e5b15cf0dff283017d532a1659
+SHA1: e09d5dfef84d22c4991c66c8f43547737c942d87
+MD5sum: 8515c0dc6cd2681f6161255ddca9ca83
+Description: debug symbols for php8.0-runkit7
+Build-Ids: b58886ece125414ba67ced3514dac1c8bb02539a
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39346
+SHA256: 07f40f5a05c5da9067aa99f52ce327fd3408a3891a0238a67f029466f57e6b36
+SHA1: 2beda6c27128221b7e92095d91292d56a9a8a9a5
+MD5sum: 717f7648a084f57649aac62c2eb9d6c6
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.1-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 140
+Depends: php8.1-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.1-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 121390
+SHA256: f2857186e93a5d9855085f07e56e6fea8a12a275d901f744f413d34b76528ef9
+SHA1: b25b41dee0dd2a7fb7de80f4e0af1f4520a8bb6a
+MD5sum: 50858eab443db839cf73ebdb3deba988
+Description: debug symbols for php8.1-runkit7
+Build-Ids: 0871698de54e9e54354c429376615e2002f7bf04
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39820
+SHA256: 9b421033f12bd617788b18a2f49e2f82d97d92ee56f69966378e2ca75313fec6
+SHA1: 0ae312e4badd4ab53184b7d117a6d07ffb0c12c7
+MD5sum: 06360d8407a12ce55571054f7fa00d39
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.2-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 145
+Depends: php8.2-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.2-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 126630
+SHA256: 9f1708086e3bc332e0b653f2810f1603c09637d654f659e9a7233ec075bad87a
+SHA1: cee372ae50dea717b8bf46c6baa16a20772e6c26
+MD5sum: 5563909a0bdfdf522ef4d05c0f651313
+Description: debug symbols for php8.2-runkit7
+Build-Ids: e7d9425fdc2692fd690e95e262dfa549772e92a0
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.3-pdo-sqlsrv
 Source: php-pdo-sqlsrv
 Version: 5.13.1+debian~13
@@ -264,6 +599,53 @@ SHA1: 0ba351729ac2229c5363ca7101e14e02b903db66
 MD5sum: f06f6d22231e26888e6fa19d5729c249
 Description: debug symbols for php8.3-pdo-sqlsrv
 Build-Ids: e29bfb9929ec9c21a33d02ce70c62f013a2f7348
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39766
+SHA256: 414fc9958f4f9500b7cead9a56b34504be4c32fe35f3a82dde8142e8b27b5097
+SHA1: 703d3be707d252c01965e2fb7b4533efb4aa242a
+MD5sum: 7a2ff1e0f611f3b5f4873afa241bc85e
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.3-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 145
+Depends: php8.3-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.3-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 126840
+SHA256: 2c6040f07647b8c5c5544345e325e679ec4776a79039bea2169d27beee71e911
+SHA1: 10f92405d78a1d977cb2c4bd28b8ff628162191e
+MD5sum: 7489c3dd90d1c3adb674c3961c1711ec
+Description: debug symbols for php8.3-runkit7
+Build-Ids: ab189b1dc33df3003d950ccaaaae1242eec41a04
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-sqlsrv
@@ -360,6 +742,53 @@ Description: debug symbols for php8.4-pdo-sqlsrv
 Build-Ids: 2ccf972771af2ba1857db6e15d31234f9a6a6b8b
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.4-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.4-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39986
+SHA256: ad7d7c0195237b1a0bdadafa19cea5bf5bd12262321f4ee3b7f97cb2597c9415
+SHA1: 22728947a0eb69ff91a63910099614ec83d462dd
+MD5sum: 6c79176c5af19b5ed9349e85c2f0566b
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 146
+Depends: php8.4-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.4-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 127960
+SHA256: 1acd050b679cc9f91b3ec0da235dbe1471ce6582ee47aae26479c92ea814627a
+SHA1: 065dff0ce18480b93fa19fb16cc3448f53167096
+MD5sum: bfdb240435a7426b65bfa84fcece88fd
+Description: debug symbols for php8.4-runkit7
+Build-Ids: 91dab26daf800dcc377c961e1f7afc1d9fc6e6dd
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.4-sqlsrv
 Source: php-sqlsrv
 Version: 5.13.1+debian~13
@@ -452,6 +881,53 @@ SHA1: bd56ae2f7c149e234f0d5daaf0e172c705f692de
 MD5sum: ab1f1db22f3c81f1ca96c5efdd1d030a
 Description: debug symbols for php8.5-pdo-sqlsrv
 Build-Ids: 8d921a2fcc07dde35bf2bfa06c71d0dacb6438f6
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~13~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~13~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.5-runkit7_4.0.0a7+debian~13_amd64.deb
+Size: 39984
+SHA256: f09fc7e37cd07de702ce670bdefe478f6e4288159c32df8b8632f1d30e3dc3da
+SHA1: 3214e2148c072970ec2248a260326675c5d4205a
+MD5sum: ad28ab28f0532cf32a00e6cff6cd9f3b
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~13
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 147
+Depends: php8.5-runkit7 (= 4.0.0a7+debian~13)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.5-runkit7-dbgsym_4.0.0a7+debian~13_amd64.deb
+Size: 128468
+SHA256: 316bbda1d1a0929a983d017f99881b115a8a863b583a24158fffaef07fe6524d
+SHA1: 93be8a91757473fe8cffcce4c11b996ff592585b
+MD5sum: bf25a57e1f299a8b85e1d1017f8dfed8
+Description: debug symbols for php8.5-runkit7
+Build-Ids: cecc2d9685b2d7a94c06b455bbf0ae97ae53f21f
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.5-sqlsrv
