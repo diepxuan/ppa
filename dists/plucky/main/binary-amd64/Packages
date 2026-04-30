@@ -1,3 +1,22 @@
+Package: diepxuan-archive-keyring
+Version: 1.0.3+ubuntu~25.04
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 21
+Depends: curl, gnupg, lsb-release, apt-transport-https, dpkg
+Homepage: https://github.com/diepxuan/diepxuan-archive-keyring
+Priority: optional
+Section: misc
+Filename: pool/main/d/diepxuan-archive-keyring/diepxuan-archive-keyring_1.0.3+ubuntu~25.04_all.deb
+Size: 5244
+SHA256: 42719e88e487acf555fa77d6cc86eb1cd5739b0f462989ae20fb54b6ef671b44
+SHA1: 10f72504342ce2ac5e2770358e36fee610d8c4cc
+MD5sum: 11d3eebb182bb28acaa18358e3705ed5
+Description: DiepXuan Microsoft APT repository setup
+  This package adds Microsoft APT repository and GPG key to the system.
+  It enables installation of msodbcsql18, unixodbc-dev and other
+  Microsoft packages for PHP SQL Server extensions.
+
 Package: diepxuan-repositories
 Version: 1.0.2+ubuntu~25.04
 Architecture: all
