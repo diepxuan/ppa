@@ -1,37 +1,37 @@
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bookworm
-Date: Thu, 30 Apr 2026 17:41:44 UTC
+Date: Fri, 01 May 2026 11:11:48 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 12 (Bookworm)
 MD5Sum:
- 4d3891cdf324ae7fd3e5bb4de8acda75 42274 main/binary-amd64/Packages
- 21ea1e639e87265dacc687edc0851617 7669 main/binary-amd64/Packages.gz
+ 3a0ea1782e84d73024f44e2c2ced93ef 44080 main/binary-amd64/Packages
+ 55cbe0d802a92549263858994c84615e 7922 main/binary-amd64/Packages.gz
  3372616b55fd40c53bb28aa5db5f722c 103 main/binary-amd64/Release
- 013c63d83c2eb0750d383a58d1331578 22237 main/binary-arm64/Packages
- 837a445d4aeb21336e1605d8dd574ea8 4165 main/binary-arm64/Packages.gz
+ 518ac3ce812c6b759d6ccf2d3882596c 22195 main/binary-arm64/Packages
+ 6f12f89ab75d256b128be7cff365bdf4 4149 main/binary-arm64/Packages.gz
  50879736cab1e86009f95a8b568fc04a 103 main/binary-arm64/Release
- cb8afac16de77f2da93bb717352c0a26 7061 main/binary-i386/Packages
- a96b1941810bce33af1f6268c0d541be 1675 main/binary-i386/Packages.gz
+ 6bec9d6d25c3cb41ed43c7de4885495a 7019 main/binary-i386/Packages
+ e3734037db47c3f1771e1947d31c4da8 1650 main/binary-i386/Packages.gz
  44a17ffec19f0941655c1da244513d08 102 main/binary-i386/Release
 SHA1:
- 110be9e382e19d8b397afc34a3700ecaa3fe02e1 42274 main/binary-amd64/Packages
- 5ab8ecfb24691ee7a3058cc93c81f4cc91d55864 7669 main/binary-amd64/Packages.gz
+ ab076053bfde02f546b1a2687a67b8b2de64ed2f 44080 main/binary-amd64/Packages
+ 7d52a80b5b683e1bfb5695640538b1f106c8991b 7922 main/binary-amd64/Packages.gz
  e27528aa94b18fb9299115e5917c778c5f12083e 103 main/binary-amd64/Release
- ddd969a99e1086e685ee49c7bce3e3e1d0044cad 22237 main/binary-arm64/Packages
- 0119d4698096eeffc53fff2f49c4d27dde4f8562 4165 main/binary-arm64/Packages.gz
+ 74bf414d300cb562bc7bf0aadb0bacc645c52f34 22195 main/binary-arm64/Packages
+ 0f98ba98a4c8cc0ef4f9801b1c79eacf6b94650f 4149 main/binary-arm64/Packages.gz
  651c0b9d51bf09bb18820bdb273e1201bed1c026 103 main/binary-arm64/Release
- 1151e98ad19edb290ff34e017d2af57934bb79db 7061 main/binary-i386/Packages
- 6972f53b89a606d673b1aedb102c5cbf0406b762 1675 main/binary-i386/Packages.gz
+ 82ac06795118b945a81225fa4f3d079fb24f38e8 7019 main/binary-i386/Packages
+ 95c7985e7c6e9da8acdb24f90dbf66a05fb9dfdb 1650 main/binary-i386/Packages.gz
  e1cfb00e5a4030eb00bf3b027c2f86abf6618601 102 main/binary-i386/Release
 SHA256:
- 11f3d2c7227124581a9f66e5be85aadaa8639150a735c66dc3241d34b42b0768 42274 main/binary-amd64/Packages
- 46543d6868951bea4e4510b0792d2f45d1f11eec7af427d8bf794e978c02d372 7669 main/binary-amd64/Packages.gz
+ ca056ff24ae5ebaf4f458d09cd13f7155ed1c9093ae8620f262357b7599b5935 44080 main/binary-amd64/Packages
+ 07e913294bcb97585bef72fa95046556aa86a0384611d75d755eca9fcf0b6fe7 7922 main/binary-amd64/Packages.gz
  be01e1a4561e9f2e0f7bd2c46dd9cdf9c8686b548fb582bec25b6c820a0b05d0 103 main/binary-amd64/Release
- 30cd85e8001010e76d61f41ab19838de967652dc596165fab1301bbeada56856 22237 main/binary-arm64/Packages
- 74d950e15d065b9bf23051dbb0d71fc93eb1d3b8aefa30849bf060b95de0be14 4165 main/binary-arm64/Packages.gz
+ d4c3a0ad8b9f9d408d6e7a63ed1ad0ee1afa4f5e1216c0d878d1c3d8bcee7d5e 22195 main/binary-arm64/Packages
+ 6cce200a133e53f13172e2fa2e4badc502eff77e88e0c8b6af74f7d3624bc4a8 4149 main/binary-arm64/Packages.gz
  1daf647509b49a016a1ec4adb4127dbcceecac391702424d20bf7d6de8de0a79 103 main/binary-arm64/Release
- 7194c3a5a0cf75e1a199d7fc06a3a02373c12cf530f102c45195602927bbd5fe 7061 main/binary-i386/Packages
- 22b9860175283bd0ee1149b839b062e7eb6451cb6e59263564df00d38dff3fd9 1675 main/binary-i386/Packages.gz
+ 157d7252447b814d05b2825f279ae2bd75c7191c88d35b72551123a45fd716f9 7019 main/binary-i386/Packages
+ 1a026e1510ea784a947ccb0a4ab11080c91592b2e6176560caec7c197c1b2a41 1650 main/binary-i386/Packages.gz
  6ec2bf044f3075d6e5fea8c7517c8c9b88d3fc7a1fbfb7dfbdbec0ba7c1f081e 102 main/binary-i386/Release
