@@ -90,21 +90,21 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: php8.5-runkit7
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+debian~11_all.deb
-Size: 2832
-SHA256: 14225141899283f10f06782319951f771750e54717f801ee9e7df63cbaca9c3e
-SHA1: 4c3743e6b108c43ac72a40d63f4a0a46e70100bc
-MD5sum: 45b379c09dc38b45ebe1aa61ac3e4f16
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+debian~11_all.deb
+Size: 3374
+SHA256: 859b8b673cbd8c77562c28f3edfca77b85a80488e67a0203e1d54930827dcd4e
+SHA1: c2693da262db2cfa480be3cd0d17e68d84c5226a
+MD5sum: a105c03abc56d6e396d5db5d72369d78
 Description: runkit7 module for PHP
  .
  .
@@ -117,21 +117,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php7.2-runkit7 (>= 4.0.0a6+debian~11~), php7.3-runkit7 (>= 4.0.0a6+debian~11~), php7.4-runkit7 (>= 4.0.0a6+debian~11~), php8.0-runkit7 (>= 4.0.0a6+debian~11~), php8.1-runkit7 (>= 4.0.0a6+debian~11~), php8.2-runkit7 (>= 4.0.0a6+debian~11~), php8.3-runkit7 (>= 4.0.0a6+debian~11~), php-all-dev
+Depends: php7.2-runkit7 (>= 4.0.0a7+debian~11~), php7.3-runkit7 (>= 4.0.0a7+debian~11~), php7.4-runkit7 (>= 4.0.0a7+debian~11~), php8.0-runkit7 (>= 4.0.0a7+debian~11~), php8.1-runkit7 (>= 4.0.0a7+debian~11~), php8.2-runkit7 (>= 4.0.0a7+debian~11~), php8.3-runkit7 (>= 4.0.0a7+debian~11~), php8.4-runkit7 (>= 4.0.0a7+debian~11~), php8.5-runkit7 (>= 4.0.0a7+debian~11~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+debian~11_all.deb
-Size: 2884
-SHA256: 22aa3b058bd00c206f286361b23fdfb2cd23625a4610fee6470d2935db60d160
-SHA1: 122c433c12188e596f3009a39e3bc944f753dc9b
-MD5sum: 8fb5a63d2990715a352ed6f4487f25d6
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+debian~11_all.deb
+Size: 3432
+SHA256: 67d57ea63fea8a52036f504fb4cbb74487bb4eebb29c0aa56b444b242d04377f
+SHA1: 70ab7afeab87bc04a8be87b8c21c834f6b004a2c
+MD5sum: 5bbc1120f53ed1fc93bb49b0ecc63fdc
 Description: runkit7 module for PHP
  .
  .

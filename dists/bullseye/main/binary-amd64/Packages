@@ -207,21 +207,21 @@ Description: pdo_sqlsrv module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-runkit7
+Depends: php8.5-runkit7
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a6+debian~11_all.deb
-Size: 2832
-SHA256: 14225141899283f10f06782319951f771750e54717f801ee9e7df63cbaca9c3e
-SHA1: 4c3743e6b108c43ac72a40d63f4a0a46e70100bc
-MD5sum: 45b379c09dc38b45ebe1aa61ac3e4f16
+Filename: pool/main/p/php-runkit7/php-runkit7_4.0.0a7+debian~11_all.deb
+Size: 3374
+SHA256: 859b8b673cbd8c77562c28f3edfca77b85a80488e67a0203e1d54930827dcd4e
+SHA1: c2693da262db2cfa480be3cd0d17e68d84c5226a
+MD5sum: a105c03abc56d6e396d5db5d72369d78
 Description: runkit7 module for PHP
  .
  .
@@ -234,21 +234,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-runkit7-all-dev
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 11
 Pre-Depends: php-common (>= 2:69~)
-Depends: php7.2-runkit7 (>= 4.0.0a6+debian~11~), php7.3-runkit7 (>= 4.0.0a6+debian~11~), php7.4-runkit7 (>= 4.0.0a6+debian~11~), php8.0-runkit7 (>= 4.0.0a6+debian~11~), php8.1-runkit7 (>= 4.0.0a6+debian~11~), php8.2-runkit7 (>= 4.0.0a6+debian~11~), php8.3-runkit7 (>= 4.0.0a6+debian~11~), php-all-dev
+Depends: php7.2-runkit7 (>= 4.0.0a7+debian~11~), php7.3-runkit7 (>= 4.0.0a7+debian~11~), php7.4-runkit7 (>= 4.0.0a7+debian~11~), php8.0-runkit7 (>= 4.0.0a7+debian~11~), php8.1-runkit7 (>= 4.0.0a7+debian~11~), php8.2-runkit7 (>= 4.0.0a7+debian~11~), php8.3-runkit7 (>= 4.0.0a7+debian~11~), php8.4-runkit7 (>= 4.0.0a7+debian~11~), php8.5-runkit7 (>= 4.0.0a7+debian~11~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a6+debian~11_all.deb
-Size: 2884
-SHA256: 22aa3b058bd00c206f286361b23fdfb2cd23625a4610fee6470d2935db60d160
-SHA1: 122c433c12188e596f3009a39e3bc944f753dc9b
-MD5sum: 8fb5a63d2990715a352ed6f4487f25d6
+Filename: pool/main/p/php-runkit7/php-runkit7-all-dev_4.0.0a7+debian~11_all.deb
+Size: 3432
+SHA256: 67d57ea63fea8a52036f504fb4cbb74487bb4eebb29c0aa56b444b242d04377f
+SHA1: 70ab7afeab87bc04a8be87b8c21c834f6b004a2c
+MD5sum: 5bbc1120f53ed1fc93bb49b0ecc63fdc
 Description: runkit7 module for PHP
  .
  .
@@ -314,24 +314,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.2-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php7.2-common, phpapi-20170718, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 38928
-SHA256: 3c85abdafe796ce0d5f94fc0224018911658292e55226f1da487016b055deec5
-SHA1: df303f5f8605651fa2a6b97b37a01a54bd899577
-MD5sum: d2fe5cf0b1b08c232543b622ebb41fa9
+Filename: pool/main/p/php-runkit7/php7.2-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39458
+SHA256: 57284fdd1b98e632738b6fdbd6da3f7d3f331537e971731c172860faf0fcf61a
+SHA1: 1c031a5f2b579eb0053fadc093bb730223101ada
+MD5sum: 25863e54d23e972f21c7f8b904a19776
 Description: runkit7 module for PHP
  .
  .
@@ -342,43 +342,43 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.2-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 129
-Depends: php7.2-runkit7 (= 4.0.0a6+debian~11)
+Depends: php7.2-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php7.2-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 110058
-SHA256: a539875426598916f87f502e34337e1ad7d4d96474a4548dddaaa8830f544e6a
-SHA1: d047792425e85826e0b39eba04539aba193df82c
-MD5sum: 2bd3cb0eca1f752a055bb0082bbf466a
+Filename: pool/main/p/php-runkit7/php7.2-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 110068
+SHA256: 648081731797a1600f513168206add7ef419d017c3145bcd4c6b886c473392e2
+SHA1: 5f36775ca5deaef29c8da455b93be86bef70c63e
+MD5sum: 596a6f1f16acad1fe7025ce61c838a54
 Description: debug symbols for php7.2-runkit7
-Build-Ids: aae8de5a77de2294282e0018e6a64e1b01731ff2
+Build-Ids: 2ca485daa6da0eb9bfb3a5c4c52ec3cb5e445a7f
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.3-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php7.3-common, phpapi-20180731, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 38882
-SHA256: 70ddf53a16f51960fb7ac11231ae1446eef28309011d3b46ce558a3abcf9b9fc
-SHA1: 7c0cd8fa7a247b616cd9a2df637a32898a920a8a
-MD5sum: 9992b58159503ab5fa46f51c96884633
+Filename: pool/main/p/php-runkit7/php7.3-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39410
+SHA256: 19185be7d31a8ee8c02570892440a116efde96a5c818fbb397bc3ed5ddf0cac4
+SHA1: dbacfdec7d53fc2bed07f43f49cd5cc13b57d70b
+MD5sum: 6c51f40129fc810b90e876075789548a
 Description: runkit7 module for PHP
  .
  .
@@ -389,43 +389,43 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.3-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 134
-Depends: php7.3-runkit7 (= 4.0.0a6+debian~11)
+Depends: php7.3-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php7.3-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 115862
-SHA256: e02f47845843e307a574118c71a46dca39ec13ebfad8fb247522e77bee17b4ef
-SHA1: ab177cf7f640191b26bf0068abebe163ee3e39d5
-MD5sum: caf711e16447e984bd3c39df9b85ba61
+Filename: pool/main/p/php-runkit7/php7.3-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 115878
+SHA256: 50f730c37f2ac5d8a378b5425f544504fe824a64a470f67c7e41deff002ab5ab
+SHA1: 4821aea1757c0b14f99bf158839927034765d924
+MD5sum: 831f2460f1bf0d4cd004a18c21c08c25
 Description: debug symbols for php7.3-runkit7
-Build-Ids: 0de9e02c4f9fbe87977e1e07a75497bf728dee6a
+Build-Ids: 4f75f55c433a639dbc2e23f1accea6aa85a5d5ce
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.4-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php7.4-common, phpapi-20190902, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 38834
-SHA256: 856c77c8a7a97fb334a7cb0891c450e23e85cc333ec122b36d15ee9d1769e416
-SHA1: a6769f8e0237f970306d537cc5028a6cf7d2ce5c
-MD5sum: 3fb6d0e1af1b2307d3823b211fb8756b
+Filename: pool/main/p/php-runkit7/php7.4-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39364
+SHA256: c9a5b3068cbddf297c148608ec6c8fb00ecf5fedd29e9d3bfd51838e4106eef3
+SHA1: 911c4afb7015cb0dd6e90eb41c936f6d748dd389
+MD5sum: 85f219286249b49204c962cdff32f487
 Description: runkit7 module for PHP
  .
  .
@@ -436,43 +436,43 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php7.4-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 135
-Depends: php7.4-runkit7 (= 4.0.0a6+debian~11)
+Depends: php7.4-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php7.4-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 116962
-SHA256: dc07704291b532c9e68a49fd6459adca2a281cc19f1771d0284f39607ae988f7
-SHA1: 96384705b623bfadb7c3b8bfb8c6df17db5c052f
-MD5sum: a2454c0d322ea563ce693a42078782fc
+Filename: pool/main/p/php-runkit7/php7.4-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 116982
+SHA256: 1e935ad5cc5d94e587e300385f7dcd64dfcd396465d0020ceeba469260eabcbe
+SHA1: fb27a4966c9021f0216b6aa71ce792c5e0ea2f7f
+MD5sum: b879fda616b0a7d9fefbd45fa6c6c298
 Description: debug symbols for php7.4-runkit7
-Build-Ids: 3408fd695e0f490faaead7f7a0b8456a0e15fba5
+Build-Ids: a62c060379db2bb1851bc1fa8ddc65b8dc7dc9c5
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.0-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.0-common, phpapi-20200930, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 38430
-SHA256: 88802f5ec2e636365dd2f5eaa11a9f7e10c70198fec994c3d3956eadd086fce0
-SHA1: 24acf5ce03ecabe3ba65b0d0a29b9698bddf80f8
-MD5sum: fd36aa8d3067fc11a36e10bf71d9a632
+Filename: pool/main/p/php-runkit7/php8.0-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 38964
+SHA256: ff82905c7865b494ad5c0f791e6897dde7caeedf80c6d3eaf8e9c77324981bae
+SHA1: 14d2f455e26caaac8a3563102e6d5cd9bc14a98a
+MD5sum: 8d0f224295d5387ad793341fe2cf7399
 Description: runkit7 module for PHP
  .
  .
@@ -483,21 +483,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.0-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 134
-Depends: php8.0-runkit7 (= 4.0.0a6+debian~11)
+Installed-Size: 135
+Depends: php8.0-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php8.0-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 116062
-SHA256: a251d73bca70b693ce9dacbb17344843da2b8a5c2dc4af35e01d95d68f74b0c3
-SHA1: 970766d891367bbb166042105adf1dfa4f1e2f94
-MD5sum: 60086f0823d1b159ba44e914046a0020
+Filename: pool/main/p/php-runkit7/php8.0-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 116138
+SHA256: 767ca2c3470915c13d29594b43a898f25a67aa72efd3fb1d2aa35158d3f8aa87
+SHA1: 308ca74dd92ec2d76b0974d55769a2cd850c94bf
+MD5sum: ca0f77940bfcc471ed2e72d75415a749
 Description: debug symbols for php8.0-runkit7
-Build-Ids: ba9ed639de94d28a15eaec431677ae0b010071eb
+Build-Ids: c58127172d19398b6bce97a9ad328d1a1db2424e
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.1-pdo-sqlsrv
@@ -549,24 +549,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.1-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.1-common, phpapi-20210902, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 38512
-SHA256: c9ed9f8c3ad240c069bb719e2a5994ba6ddd07c262c51f2637cc41b66670691d
-SHA1: abf5a227307d569d86dea9603fb03268566e390f
-MD5sum: 8374a5bb993d6aa36aaf1d3a806924d2
+Filename: pool/main/p/php-runkit7/php8.1-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39042
+SHA256: bc1d432ac26b680d4b1189ba1e371049001cbea496e279c6043589b7a367d25b
+SHA1: 72084cf86e7c2e09fb6f1de25c5ebdd38125ba53
+MD5sum: 5fa7b10afb297abff814a5ccb1736950
 Description: runkit7 module for PHP
  .
  .
@@ -577,21 +577,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.1-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 135
-Depends: php8.1-runkit7 (= 4.0.0a6+debian~11)
+Depends: php8.1-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php8.1-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 117166
-SHA256: 73c12ad3d2479b908dfc878f6aada7db48d575b029db8749e4325877943ed0d8
-SHA1: 3d689091c8c6fa7ef4f1644c8eb954124fee2188
-MD5sum: e3245866aec8bb76d15ec573361c9d9e
+Filename: pool/main/p/php-runkit7/php8.1-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 117198
+SHA256: b1e39f044570ce1fd1b6ac7b47e5283859aa000aa6dc58e9ee6ac8ea77424210
+SHA1: 1ad1e6b515ea664255c02a87e5e4fea0145d1c70
+MD5sum: 64eed1e9827115ecd684d5f4f055d079
 Description: debug symbols for php8.1-runkit7
-Build-Ids: 31d824fdfe167e939febc294052aa0bd1a813ed4
+Build-Ids: 69e70e389551a8d456571a409980d3af70da03b8
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.1-sqlsrv
@@ -690,24 +690,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.2-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.2-common, phpapi-20220829, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 39052
-SHA256: 10fb71fe436bb0d1514b230fee6506a3287bb5076d43459555e9807a58f16310
-SHA1: 3793ae815446f90f2e2a1a6e65f826516c6b48d2
-MD5sum: 2317ff5b5db9a7f86353e97263a3dd5a
+Filename: pool/main/p/php-runkit7/php8.2-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39580
+SHA256: 264805fe30e71469608f37825d0d471132671fdd19a1092ab0564b102d2f21bd
+SHA1: 3f066d2bd3fe73ee3ac45f1401dc545400f8eb44
+MD5sum: 0c7d58f39c03e85d91ddff093d655c40
 Description: runkit7 module for PHP
  .
  .
@@ -718,21 +718,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.2-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 141
-Depends: php8.2-runkit7 (= 4.0.0a6+debian~11)
+Depends: php8.2-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php8.2-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 121652
-SHA256: ff7dfbb1e6d75541a5da6bb1df8e77b9c9b602d3c1c66b70f1ebc49540cd97b3
-SHA1: 742092a8e90b7cbb456657421068e92cd68ba65c
-MD5sum: cd13e6b5e3a5a9d0cf4da7ed6dc9b8c3
+Filename: pool/main/p/php-runkit7/php8.2-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 121644
+SHA256: 73566aee1c04831983777ccccf8b80180496a3b5afce2d275ecd738fd4025b12
+SHA1: 93e2395441efd48fcb0d5092ff46cd907da17680
+MD5sum: 649f5a1807567d8ec078c8e9c11a0442
 Description: debug symbols for php8.2-runkit7
-Build-Ids: 0cc5748550503cd68c2d1b7d29e32fc63ed08895
+Build-Ids: 7fa3bc23f3dc562ca5a79111ae5095d4d33c798a
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.2-sqlsrv
@@ -831,24 +831,24 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-runkit7
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 112
 Pre-Depends: php-common (>= 2:69~)
 Depends: php8.3-common, phpapi-20230831, libc6 (>= 2.14)
 Recommends: ghostscript, ttf-dejavu-core
-Breaks: php-runkit7 (<< 4.0.0a6+debian~11~)
-Replaces: php-runkit7 (<< 4.0.0a6+debian~11~)
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
 Provides: php-runkit7
 Homepage: https://pecl.php.net/package/runkit7
 Priority: optional
 Section: php
-Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a6+debian~11_amd64.deb
-Size: 39052
-SHA256: 33c6f9c300270c025b9b691fd4ba474a523e509e0a18f435d1e7a76b3aff6134
-SHA1: 6fce5ff655e6ccc604b39d9bad7be2af4c1f1b48
-MD5sum: b949953dd6912dbad6bf6145e0a38c4a
+Filename: pool/main/p/php-runkit7/php8.3-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39580
+SHA256: 98b4e9ab52e336381a68d11e9ee0dbb14ac02416afab1e4066fcd40dd71eb962
+SHA1: 0e4b54d8ac722c609de71463ef8460e6c94620cc
+MD5sum: d46aa5a89c21d62f2934bd721f947895
 Description: runkit7 module for PHP
  .
  .
@@ -859,21 +859,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-runkit7-dbgsym
 Source: php-runkit7
-Version: 4.0.0a6+debian~11
+Version: 4.0.0a7+debian~11
 Auto-Built-Package: debug-symbols
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 141
-Depends: php8.3-runkit7 (= 4.0.0a6+debian~11)
+Depends: php8.3-runkit7 (= 4.0.0a7+debian~11)
 Priority: optional
 Section: debug
-Filename: pool/main/p/php-runkit7/php8.3-runkit7-dbgsym_4.0.0a6+debian~11_amd64.deb
-Size: 121982
-SHA256: 7a17ca07387e4a5d0b30391ae99a90d2f009790b19f463d5eebbecae74ab75ec
-SHA1: 6766e836def2351d618746b6a8b2248692c7a204
-MD5sum: c871e2888dddbb1db1f74806a3e65b55
+Filename: pool/main/p/php-runkit7/php8.3-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 122020
+SHA256: 4b7452fc76270785c865fd51c09f1107e7cee145111edb6a606adb831d5fc0df
+SHA1: fb95ca859e478c64af6667aabeb535f4c76cea67
+MD5sum: faae6c9a3b4488c448284e682e9e6684
 Description: debug symbols for php8.3-runkit7
-Build-Ids: 9d9ec99d999b41ff2a31200a7fe2a6322c97b0f7
+Build-Ids: a137c4e2d981883e898746f82b95fc738053151e
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php8.3-sqlsrv
@@ -970,6 +970,53 @@ Description: debug symbols for php8.4-pdo-sqlsrv
 Build-Ids: 81edb7c0c55d9047b06d91d6a054db1bf8774f4f
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
+Package: php8.4-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~11
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.4-common, phpapi-20240924, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.4-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39724
+SHA256: 08ba9f12bee068fb73d27de413a572234f46e530fdb29a811bb10c34532b6993
+SHA1: 6f3364e9c5e4956b88050b8ac274c3c5104ce436
+MD5sum: b9083b987a8a650b8e19731eaf0d632b
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.4-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 142
+Depends: php8.4-runkit7 (= 4.0.0a7+debian~11)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.4-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 123164
+SHA256: 01a2e091aca8302cd8eadf5b0a6fb102ed743b2d3a41a2c94ebbdaac34e7570f
+SHA1: e4cf7330da23d22dba8de32457860823283bb50c
+MD5sum: f3cba66d2524a6762979538ae86fb415
+Description: debug symbols for php8.4-runkit7
+Build-Ids: 4c3c4f38396b1334bbe41a41659496c43ee51a5d
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
 Package: php8.4-sqlsrv
 Source: php-sqlsrv
 Version: 5.12.0+debian~11
@@ -1062,6 +1109,53 @@ SHA1: 5441e9d8856d0cf5091de9efe9e2acc827c479f1
 MD5sum: 2b541acb7d4005189799f265547f6c94
 Description: debug symbols for php8.5-pdo-sqlsrv
 Build-Ids: f4841b40f23b5617aef629f2bf743683597ed6ac
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-runkit7
+Source: php-runkit7
+Version: 4.0.0a7+debian~11
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 112
+Pre-Depends: php-common (>= 2:69~)
+Depends: php8.5-common, phpapi-20250925, libc6 (>= 2.14)
+Recommends: ghostscript, ttf-dejavu-core
+Breaks: php-runkit7 (<< 4.0.0a7+debian~11~)
+Replaces: php-runkit7 (<< 4.0.0a7+debian~11~)
+Provides: php-runkit7
+Homepage: https://pecl.php.net/package/runkit7
+Priority: optional
+Section: php
+Filename: pool/main/p/php-runkit7/php8.5-runkit7_4.0.0a7+debian~11_amd64.deb
+Size: 39724
+SHA256: f129624cafcfa93e5fa87aa7b3ededea6b54f72e9b19e12f3974c1e76a845088
+SHA1: ddf75cb6e8f148fce19da77bfcbc751432235c99
+MD5sum: e656e3c0ae17f05ef60f6f84ee358456
+Description: runkit7 module for PHP
+ .
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+
+Package: php8.5-runkit7-dbgsym
+Source: php-runkit7
+Version: 4.0.0a7+debian~11
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 142
+Depends: php8.5-runkit7 (= 4.0.0a7+debian~11)
+Priority: optional
+Section: debug
+Filename: pool/main/p/php-runkit7/php8.5-runkit7-dbgsym_4.0.0a7+debian~11_amd64.deb
+Size: 123492
+SHA256: 3c4f76b94b8458d263c8618a8f8ab1bba8dd1330371b3971855b26d8ec552b6d
+SHA1: 238cdf8e86d80c5b7bf2843143a1ff0e4f44073d
+MD5sum: ac39918b603f62d37f9f2c76d71f6ddb
+Description: debug symbols for php8.5-runkit7
+Build-Ids: 865b9d5b876980ff2c24fc61dbbe3917e221ea10
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: unixodbc
