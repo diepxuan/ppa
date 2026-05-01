@@ -161,21 +161,21 @@ Description: runkit7 module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv
-Version: 5.12.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv
+Depends: php8.5-sqlsrv
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.12.0+debian~11_all.deb
-Size: 3844
-SHA256: df6e373780abc4b95adc8a42fc3af6e960f2c286744d30402a69fe959d282d9e
-SHA1: dda076785368b1a537876b4e7cc73bc99541b67b
-MD5sum: ae0d5e7c09ca8a0b5efe039503fc67d0
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.1+debian~11_all.deb
+Size: 4044
+SHA256: 50b158450011694b97e799737570ee11ceec92c5998bff5b68d4fadea05a0684
+SHA1: f9af2707231985624261c64d84c9a055efcd69a0
+MD5sum: 22b5366d7c23fee3bcd9109400c75887
 Description: sqlsrv module for PHP
  .
  .
@@ -188,21 +188,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.12.0+debian~11
+Version: 5.13.1+debian~11
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.4-sqlsrv (>= 5.12.0+debian~11~), php8.3-sqlsrv (>= 5.12.0+debian~11~), php8.2-sqlsrv (>= 5.12.0+debian~11~), php8.1-sqlsrv (>= 5.12.0+debian~11~), php-all-dev
+Depends: php8.5-sqlsrv (>= 5.13.1+debian~11~), php8.4-sqlsrv (>= 5.13.1+debian~11~), php8.3-sqlsrv (>= 5.13.1+debian~11~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.12.0+debian~11_all.deb
-Size: 3882
-SHA256: 242222f4ca2bba4deb137f4de1e747cd23c58f70f57a908294c3aadcecf23268
-SHA1: 5db933213044e61587f927539c37ef854ce7d3a2
-MD5sum: 2b0ec959d1a13d23b32a970573893396
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.1+debian~11_all.deb
+Size: 4086
+SHA256: 3b3b813cf4d0ab7619a679b99a05ad25cca443087c59d7fddd2685a9d70098e4
+SHA1: 4ffdc815d4db3c664392468299645632f61f1f12
+MD5sum: a1225fa7f731a3f5102f1da3da2e4410
 Description: sqlsrv module for PHP
  .
  .
