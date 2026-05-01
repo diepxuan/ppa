@@ -37,7 +37,7 @@ Description: DiepXuan Microsoft APT repository setup
   Microsoft packages for PHP SQL Server extensions.
 
 Package: php-pdo-sqlsrv
-Version: 5.13.0+ubuntu~18.04
+Version: 5.13.1+ubuntu~18.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 22
@@ -47,11 +47,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/pdo_sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.0+ubuntu~18.04_all.deb
-Size: 5046
-SHA256: bd6209cb5c1c74d7d6efbce12ad766ee21ec755c63e07b65759cad00403773a0
-SHA1: aacb3667401e9daf238d3e1145cc8a2cd54118c1
-MD5sum: 438d8adf4de136de88c793843edeb6c2
+Filename: pool/main/p/php-pdo-sqlsrv/php-pdo-sqlsrv_5.13.1+ubuntu~18.04_all.deb
+Size: 4914
+SHA256: 0b5074f5321b2bec636f680b5a354cbdd9412fbf992961937965ce4693265a17
+SHA1: 46621ff2b47f5f5a56d15707173cf0111d16e926
+MD5sum: 2b6c1d4dcc06548f2819a5c876064d82
 Description: pdo_sqlsrv module for PHP
  .
  .
