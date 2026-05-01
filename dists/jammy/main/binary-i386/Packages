@@ -143,7 +143,7 @@ Description: runkit7 module for PHP
 Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv
-Version: 5.13.0+ubuntu~22.04
+Version: 5.13.1+ubuntu~22.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
@@ -153,11 +153,11 @@ Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.0+ubuntu~22.04_all.deb
-Size: 4166
-SHA256: aeb3515a4fcc8a41f73aa730272baadbc889ec079888b506e03066e86e50a316
-SHA1: ef3122764c7b3393ebe0b3b4db5580b86e7d6933
-MD5sum: 28ec558fee7a30a36e2871c131b42a83
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv_5.13.1+ubuntu~22.04_all.deb
+Size: 4048
+SHA256: 97a3d4deced90d40832f5f067197dc9bc80a4bfb07f8fd4d551a4ce3afa95882
+SHA1: b039826f486fa2b3a4b940ec01e5cefbb70394f9
+MD5sum: eadeabd89227b57aa828d8ac146918a5
 Description: sqlsrv module for PHP
  .
  .
@@ -170,21 +170,21 @@ Original-Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 
 Package: php-sqlsrv-all-dev
 Source: php-sqlsrv
-Version: 5.13.0+ubuntu~22.04
+Version: 5.13.1+ubuntu~22.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 12
 Pre-Depends: php-common (>= 2:69~)
-Depends: php8.5-sqlsrv (>= 5.13.0+ubuntu~22.04~), php8.4-sqlsrv (>= 5.13.0+ubuntu~22.04~), php8.3-sqlsrv (>= 5.13.0+ubuntu~22.04~), php-all-dev
+Depends: php8.5-sqlsrv (>= 5.13.1+ubuntu~22.04~), php8.4-sqlsrv (>= 5.13.1+ubuntu~22.04~), php8.3-sqlsrv (>= 5.13.1+ubuntu~22.04~), php-all-dev
 Recommends: ghostscript, ttf-dejavu-core
 Homepage: https://pecl.php.net/package/sqlsrv
 Priority: optional
 Section: php
-Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.0+ubuntu~22.04_all.deb
-Size: 4206
-SHA256: e93d2f66cfb0e4ad46f8bf954acda6b66111cf2259512dab07d34d433abb0344
-SHA1: 38b2d3c9e5c4bfe260c171ef1dc4537687c877a0
-MD5sum: c788f1e7c61892feb119d35fd0c12dbb
+Filename: pool/main/p/php-sqlsrv/php-sqlsrv-all-dev_5.13.1+ubuntu~22.04_all.deb
+Size: 4082
+SHA256: 3e6b6af76d84a825e2a686714971afabc5c118a797e0fe95bf173c4979ff8196
+SHA1: 7977181eae5fbdb12019163a98f8a4a46b2f1a89
+MD5sum: 3c90d57353ee08a94cd51c788080a53b
 Description: sqlsrv module for PHP
  .
  .
