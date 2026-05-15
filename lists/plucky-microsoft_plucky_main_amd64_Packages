@@ -614,3 +614,20 @@ SHA256: 1a570f20fb646cfccdb78e33268e30c887fb0c9d1893e621488a10dd7344bb38
 Size: 3757794
 Filename: pool/main/m/microsoft-identity-diagnostics/microsoft-identity-diagnostics_3.0.2-noble_amd64.deb
 
+Package: libmsquic
+Version: 2.5.8
+Architecture: amd64
+Section: default
+Priority: optional
+Maintainer: Microsoft QUIC Team <quicdev@microsoft.com>
+Description: Microsoft implementation of the IETF QUIC protocol
+Homepage: https://github.com/microsoft/msquic
+Conflicts: libmsquic-debug
+Depends: libssl3t64, libnuma1, libxdp1, libnl-route-3-200
+Provides: libmsquic
+Vendor: Microsoft
+License: MIT
+SHA256: 6924004076ba8a9498976df1eae5a527841d47fffddc04c701b9f8fa77390628
+Size: 2898550
+Filename: pool/main/libm/libmsquic/libmsquic_2.5.8_amd64.deb
+

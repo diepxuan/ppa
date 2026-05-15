@@ -10151,123 +10151,6 @@ SHA256: 3fce1a04e341eada3fd644a5dc07e804a4b4f56374e7e4e4cea9ccdcd23dec31
 Size: 2803090
 Filename: pool/main/d/dotnet-targeting-pack-8.0/dotnet-targeting-pack-8.0_8.0.11-1_amd64.deb
 
-Package: dotnet-hostfxr-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 428
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host FX Resolver - 6.0.36
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libgcc1, libstdc++6, dotnet-host (>= 6.0.36), libc6
-SHA256: 917704b2c113a021918bb743f257f73e2f85a012576379b152df9de471cf05f7
-Size: 143534
-Filename: pool/main/d/dotnet-hostfxr-6.0/dotnet-hostfxr-6.0_6.0.36-1_amd64.deb
-
-Package: aspnetcore-targeting-pack-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: devel
-Priority: standard
-Installed-Size: 11750
-Maintainer: Microsoft <nugetaspnet@microsoft.com>
-Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
-Homepage: https://asp.net
-Depends: dotnet-targeting-pack-6.0 (>= 6.0.36)
-SHA256: 32c9cbd3438060f0f1ebd40eb2368846ff77021e3b64f589ac8117da0b379dff
-Size: 1315482
-Filename: pool/main/a/aspnetcore-targeting-pack-6.0/aspnetcore-targeting-pack-6.0_6.0.36-1_amd64.deb
-
-Package: aspnetcore-runtime-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: devel
-Priority: standard
-Installed-Size: 19920
-Maintainer: Microsoft <nugetaspnet@microsoft.com>
-Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
-Homepage: https://asp.net
-Depends: dotnet-runtime-6.0 (>= 6.0.36)
-SHA256: 8982edd781b9001c076725642b64b9851dd81260c474e2beb16e4d39943e3eae
-Size: 6628330
-Filename: pool/main/a/aspnetcore-runtime-6.0/aspnetcore-runtime-6.0_6.0.36-1_amd64.deb
-
-Package: dotnet-host
-Version: 6.0.36-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 234
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host - 6.0.36
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Conflicts: dotnet, dotnet-nightly
-Depends: libgcc1, libstdc++6, libc6
-SHA256: e7b22c93e0f5168847974707636688a813705b81f618960e1605e8ebc0cd8d96
-Size: 55726
-Filename: pool/main/d/dotnet-host/dotnet-host_6.0.36-1_amd64.deb
-
-Package: dotnet-runtime-deps-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 9
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: dotnet-runtime-deps-debian 6.0.36
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libgcc1, libicu | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52, libc6, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, zlib1g, libstdc++6, libgssapi-krb5-2
-SHA256: 97fdd719343462af1f3451373fe5b40f5248ffee1878c0ebf0d8ddc79ea554ff
-Size: 2894
-Filename: pool/main/d/dotnet-runtime-deps-6.0/dotnet-runtime-deps-6.0_6.0.36-1_amd64.deb
-
-Package: dotnet-runtime-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 68489
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Runtime 6.0.36
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: dotnet-hostfxr-6.0 (>= 6.0.36), dotnet-runtime-deps-6.0 (>= 6.0.36)
-SHA256: c18b94e433cf50ce14663f8f635e08c76096c7eb5a32d1c632a99b021e55c324
-Size: 22340386
-Filename: pool/main/d/dotnet-runtime-6.0/dotnet-runtime-6.0_6.0.36-1_amd64.deb
-
-Package: dotnet-apphost-pack-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 11038
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Host 6.0.36
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-SHA256: b9bd4473bcb8682bbeb16ed4800ffb4d94f4d42907676e6b84cf030dfae7dac3
-Size: 3512866
-Filename: pool/main/d/dotnet-apphost-pack-6.0/dotnet-apphost-pack-6.0_6.0.36-1_amd64.deb
-
-Package: dotnet-targeting-pack-6.0
-Version: 6.0.36-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 27376
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Ref 6.0.36
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-SHA256: 908db2cdb4cee2fef7dd2ddf09e4e67e83c1b43486c28df9fbc254348b9e4b73
-Size: 2120598
-Filename: pool/main/d/dotnet-targeting-pack-6.0/dotnet-targeting-pack-6.0_6.0.36-1_amd64.deb
-
 Package: dotnet-sdk-6.0
 Version: 6.0.136-1
 Architecture: amd64
@@ -10401,6 +10284,167 @@ SHA256: 900220d0fb45fe3342b1a02cf8ad5d23b29834e82ea94c4243e5cfdfdb04a442
 Size: 23049926
 Filename: pool/main/d/dotnet-runtime-8.0/dotnet-runtime-8.0_8.0.11-1_amd64.deb
 
+Package: azcmagent
+Version: 1.55.03132.539
+Architecture: amd64
+Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
+Description: Azure Connected Machine Agent
+Depends: curl, systemd, passwd
+Package-Type: deb
+SHA256: a46983f3382a9277f353acecd16ddb26a75a0fbbba3fe922651c39f64f20a93c
+Size: 84695058
+Filename: pool/main/a/azcmagent/azcmagent_1.55.03132.539_amd64.deb
+
+Package: moby-buildx
+Version: 0.19.1-debian12u1
+Architecture: amd64
+Section: admin
+Priority: optional
+Installed-Size: 81950
+Maintainer: Microsoft <support@microsoft.com>
+Description: A Docker CLI plugin for extended build capabilities with BuildKit
+Homepage: https://github.com/docker/buildx
+Conflicts: docker-buildx-plugin, docker-ce, docker-ee
+Depends: libc6 (>= 2.34)
+Recommends: moby-cli
+Replaces: docker-buildx-plugin
+SHA256: a3b7c24f69cb9fb34f4a30daa40aefc9d76af26830abab678c7d79954a670428
+Size: 37167218
+Filename: pool/main/m/moby-buildx/moby-buildx_0.19.1-debian12u1_amd64.deb
+
+Package: blobfuse2
+Version: 2.4.0
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 33581
+Maintainer: Blobfuse v-Team <blobfusevteam@microsoft.com>
+Description: An user-space filesystem for interacting with Azure Storage
+Homepage: https://github.com/Azure/azure-storage-fuse
+Depends: fuse3
+Vendor: none
+License: unknown
+SHA256: eb4369a5de13d82b4800d32a136c27a2bfa083450b8aa47b44d2388c80e2cc1c
+Size: 16999802
+Filename: pool/main/b/blobfuse2/blobfuse2_2.4.0_amd64.deb
+
+Package: dotnet-hostfxr-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 428
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 6.0.36
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libgcc1, libstdc++6, dotnet-host (>= 6.0.36), libc6
+SHA256: 917704b2c113a021918bb743f257f73e2f85a012576379b152df9de471cf05f7
+Size: 143534
+Filename: pool/main/d/dotnet-hostfxr-6.0/dotnet-hostfxr-6.0_6.0.36-1_amd64.deb
+
+Package: aspnetcore-targeting-pack-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 11750
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-targeting-pack-6.0 (>= 6.0.36)
+SHA256: 32c9cbd3438060f0f1ebd40eb2368846ff77021e3b64f589ac8117da0b379dff
+Size: 1315482
+Filename: pool/main/a/aspnetcore-targeting-pack-6.0/aspnetcore-targeting-pack-6.0_6.0.36-1_amd64.deb
+
+Package: aspnetcore-runtime-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 19920
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-runtime-6.0 (>= 6.0.36)
+SHA256: 8982edd781b9001c076725642b64b9851dd81260c474e2beb16e4d39943e3eae
+Size: 6628330
+Filename: pool/main/a/aspnetcore-runtime-6.0/aspnetcore-runtime-6.0_6.0.36-1_amd64.deb
+
+Package: dotnet-host
+Version: 6.0.36-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 234
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host - 6.0.36
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Conflicts: dotnet, dotnet-nightly
+Depends: libgcc1, libstdc++6, libc6
+SHA256: e7b22c93e0f5168847974707636688a813705b81f618960e1605e8ebc0cd8d96
+Size: 55726
+Filename: pool/main/d/dotnet-host/dotnet-host_6.0.36-1_amd64.deb
+
+Package: dotnet-runtime-deps-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 9
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: dotnet-runtime-deps-debian 6.0.36
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libgcc1, libicu | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52, libc6, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, zlib1g, libstdc++6, libgssapi-krb5-2
+SHA256: 97fdd719343462af1f3451373fe5b40f5248ffee1878c0ebf0d8ddc79ea554ff
+Size: 2894
+Filename: pool/main/d/dotnet-runtime-deps-6.0/dotnet-runtime-deps-6.0_6.0.36-1_amd64.deb
+
+Package: dotnet-runtime-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 68489
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Runtime 6.0.36
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-hostfxr-6.0 (>= 6.0.36), dotnet-runtime-deps-6.0 (>= 6.0.36)
+SHA256: c18b94e433cf50ce14663f8f635e08c76096c7eb5a32d1c632a99b021e55c324
+Size: 22340386
+Filename: pool/main/d/dotnet-runtime-6.0/dotnet-runtime-6.0_6.0.36-1_amd64.deb
+
+Package: dotnet-apphost-pack-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 11038
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Host 6.0.36
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: b9bd4473bcb8682bbeb16ed4800ffb4d94f4d42907676e6b84cf030dfae7dac3
+Size: 3512866
+Filename: pool/main/d/dotnet-apphost-pack-6.0/dotnet-apphost-pack-6.0_6.0.36-1_amd64.deb
+
+Package: dotnet-targeting-pack-6.0
+Version: 6.0.36-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 27376
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Ref 6.0.36
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: 908db2cdb4cee2fef7dd2ddf09e4e67e83c1b43486c28df9fbc254348b9e4b73
+Size: 2120598
+Filename: pool/main/d/dotnet-targeting-pack-6.0/dotnet-targeting-pack-6.0_6.0.36-1_amd64.deb
+
 Package: dotnet-sdk-8.0
 Version: 8.0.404-1
 Architecture: amd64
@@ -10509,17 +10553,6 @@ SHA256: 6d5cf2bf0dee63e5c7ae87df57cfae05ccfc9549a1afcfdfadd4b2d2b7548d67
 Size: 270779102
 Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.0.6610-1_amd64.deb
 
-Package: azcmagent
-Version: 1.55.03132.539
-Architecture: amd64
-Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
-Description: Azure Connected Machine Agent
-Depends: curl, systemd, passwd
-Package-Type: deb
-SHA256: a46983f3382a9277f353acecd16ddb26a75a0fbbba3fe922651c39f64f20a93c
-Size: 84695058
-Filename: pool/main/a/azcmagent/azcmagent_1.55.03132.539_amd64.deb
-
 Package: moby-buildx
 Version: 0.19.0-debian12u1
 Architecture: amd64
@@ -10537,23 +10570,6 @@ SHA256: 3d1bc05a025535d40743d8d62ccc90cae0c9ec7cb6e0f118da73b4a3ac2697f8
 Size: 37216256
 Filename: pool/main/m/moby-buildx/moby-buildx_0.19.0-debian12u1_amd64.deb
 
-Package: moby-buildx
-Version: 0.19.1-debian12u1
-Architecture: amd64
-Section: admin
-Priority: optional
-Installed-Size: 81950
-Maintainer: Microsoft <support@microsoft.com>
-Description: A Docker CLI plugin for extended build capabilities with BuildKit
-Homepage: https://github.com/docker/buildx
-Conflicts: docker-buildx-plugin, docker-ce, docker-ee
-Depends: libc6 (>= 2.34)
-Recommends: moby-cli
-Replaces: docker-buildx-plugin
-SHA256: a3b7c24f69cb9fb34f4a30daa40aefc9d76af26830abab678c7d79954a670428
-Size: 37167218
-Filename: pool/main/m/moby-buildx/moby-buildx_0.19.1-debian12u1_amd64.deb
-
 Package: moby-compose
 Version: 2.31.0-debian12u1
 Architecture: amd64
@@ -10568,22 +10584,6 @@ Depends: libc6 (>= 2.34), moby-cli
 SHA256: 0dc3ef14e35fbb0d64f73734562086aed5712533e6d112b2e0a30afcecbe264f
 Size: 19073804
 Filename: pool/main/m/moby-compose/moby-compose_2.31.0-debian12u1_amd64.deb
-
-Package: blobfuse2
-Version: 2.4.0
-Architecture: amd64
-Section: default
-Priority: optional
-Installed-Size: 33581
-Maintainer: Blobfuse v-Team <blobfusevteam@microsoft.com>
-Description: An user-space filesystem for interacting with Azure Storage
-Homepage: https://github.com/Azure/azure-storage-fuse
-Depends: fuse3
-Vendor: none
-License: unknown
-SHA256: eb4369a5de13d82b4800d32a136c27a2bfa083450b8aa47b44d2388c80e2cc1c
-Size: 16999802
-Filename: pool/main/b/blobfuse2/blobfuse2_2.4.0_amd64.deb
 
 Package: libmsquic
 Version: 2.3.8
@@ -14695,138 +14695,6 @@ Size: 27643600
 Filename: pool/main/m/moby-engine/moby-engine_28.2.2-debian12u1_amd64.deb
 
 Package: moby-cli
-Version: 28.3.0-debian12u1
-Architecture: amd64
-Section: admin
-Priority: optional
-Installed-Size: 43248
-Maintainer: Microsoft <support@microsoft.com>
-Description: Docker container platform (client package)
- Docker is a platform for developers and sysadmins to develop, ship, and run
- applications. Docker lets you quickly assemble applications from components and
- eliminates the friction that can come when shipping code. Docker lets you get
- your code tested and deployed into production as fast as possible.
- .
- This package provides the "docker" client binary (and supporting files).
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.34)
-Recommends: ca-certificates, git, moby-buildx, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: b83568ad21ec8462c8497d858a431d565409a2b96468a8e7482909099e57bf11
-Size: 18966678
-Filename: pool/main/m/moby-cli/moby-cli_28.3.0-debian12u1_amd64.deb
-
-Package: moby-compose
-Version: 2.38.1-debian12u1
-Architecture: amd64
-Section: admin
-Priority: optional
-Installed-Size: 73477
-Maintainer: Microsoft <support@microsoft.com>
-Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI.
-Homepage: https://github.com/docker/compose-cli
-Conflicts: docker-ce, docker-ce-cli, docker-ee, docker-ee-cli
-Depends: libc6 (>= 2.34), moby-cli
-SHA256: 4fbff1337720bdde91f8d11c99e90f103be266cfd7b4cc7666449e7993ab63a0
-Size: 20809530
-Filename: pool/main/m/moby-compose/moby-compose_2.38.1-debian12u1_amd64.deb
-
-Package: msft-golang
-Version: 1.23.10-debian12u2
-Architecture: amd64
-Section: -
-Installed-Size: 229507
-Maintainer: Azure Container Upstream
-Description: The Microsoft build of the Go toolset
-Homepage: https://github.com/microsoft/go
-Conflicts: golang
-Recommends: g++, gcc, libc6-dev, pkg-config
-Provides: golang (= 1.23.10)
-SHA256: fc9199e96f6c56f9fd444e0434033bb83f69e6bf74049a8130c9754c601e9c4d
-Size: 45553774
-Filename: pool/main/m/msft-golang/msft-golang_1.23.10-debian12u2_amd64.deb
-
-Package: moby-cli
-Version: 28.3.1-debian12u1
-Architecture: amd64
-Section: admin
-Priority: optional
-Installed-Size: 43248
-Maintainer: Microsoft <support@microsoft.com>
-Description: Docker container platform (client package)
- Docker is a platform for developers and sysadmins to develop, ship, and run
- applications. Docker lets you quickly assemble applications from components and
- eliminates the friction that can come when shipping code. Docker lets you get
- your code tested and deployed into production as fast as possible.
- .
- This package provides the "docker" client binary (and supporting files).
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.34)
-Recommends: ca-certificates, git, moby-buildx, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: f25e0e1ea60441e6197eb1f1f81db6d405f92b7dfad646fe31c79a564b580b22
-Size: 18966794
-Filename: pool/main/m/moby-cli/moby-cli_28.3.1-debian12u1_amd64.deb
-
-Package: azcmagent
-Version: 1.54.03104.480
-Architecture: amd64
-Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
-Description: Azure Connected Machine Agent
-Depends: curl, systemd, passwd
-Package-Type: deb
-SHA256: 53b484bfe2592bc88f0458606cdbd51028cb23e13dc670f0ab93c14916253bb2
-Size: 84611034
-Filename: pool/main/a/azcmagent/azcmagent_1.54.03104.480_amd64.deb
-
-Package: dotnet-hostfxr-8.0
-Version: 8.0.18-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 295
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host FX Resolver - 8.0.18
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.18)
-SHA256: b8aed8e38412402edb8e4580a82ffa5f1e0264745e993898af06cd322eec05aa
-Size: 107846
-Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.18-1_amd64.deb
-
-Package: dotnet-host
-Version: 8.0.18-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 174
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host - 8.0.18
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Conflicts: dotnet, dotnet-nightly
-Depends: libc6, libgcc1, libstdc++6
-SHA256: be5093fdcdc70e3d6481592ee3403330e929e96c3bd2df5d32211b079c5e8893
-Size: 37674
-Filename: pool/main/d/dotnet-host/dotnet-host_8.0.18-1_amd64.deb
-
-Package: dotnet-apphost-pack-8.0
-Version: 8.0.18-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 11065
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Host 8.0.18
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-SHA256: 5ef23806da8e42807ba8c8f85851094c0e5aa99a2bf75d98d44a13f80a91822d
-Size: 3522146
-Filename: pool/main/d/dotnet-apphost-pack-8.0/dotnet-apphost-pack-8.0_8.0.18-1_amd64.deb
-
-Package: moby-cli
 Version: 28.2.2-debian12u1
 Architecture: amd64
 Section: admin
@@ -14867,6 +14735,29 @@ SHA256: 9c2aabfcc499e1857cf0fe984f936274681f114da954877aebe2d36f46ee7af3
 Size: 27970100
 Filename: pool/main/m/moby-engine/moby-engine_28.3.0-debian12u1_amd64.deb
 
+Package: moby-cli
+Version: 28.3.0-debian12u1
+Architecture: amd64
+Section: admin
+Priority: optional
+Installed-Size: 43248
+Maintainer: Microsoft <support@microsoft.com>
+Description: Docker container platform (client package)
+ Docker is a platform for developers and sysadmins to develop, ship, and run
+ applications. Docker lets you quickly assemble applications from components and
+ eliminates the friction that can come when shipping code. Docker lets you get
+ your code tested and deployed into production as fast as possible.
+ .
+ This package provides the "docker" client binary (and supporting files).
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: ca-certificates, git, moby-buildx, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: b83568ad21ec8462c8497d858a431d565409a2b96468a8e7482909099e57bf11
+Size: 18966678
+Filename: pool/main/m/moby-cli/moby-cli_28.3.0-debian12u1_amd64.deb
+
 Package: mdatp
 Version: 101.25042.0003
 Architecture: amd64
@@ -14883,6 +14774,21 @@ SHA256: e0117653a2a814d0d827d55360115bf60bd8c5860082053bac9a516f46abc213
 Size: 156506256
 Filename: pool/main/m/mdatp/mdatp_101.25042.0003_amd64.deb
 
+Package: moby-compose
+Version: 2.38.1-debian12u1
+Architecture: amd64
+Section: admin
+Priority: optional
+Installed-Size: 73477
+Maintainer: Microsoft <support@microsoft.com>
+Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI.
+Homepage: https://github.com/docker/compose-cli
+Conflicts: docker-ce, docker-ce-cli, docker-ee, docker-ee-cli
+Depends: libc6 (>= 2.34), moby-cli
+SHA256: 4fbff1337720bdde91f8d11c99e90f103be266cfd7b4cc7666449e7993ab63a0
+Size: 20809530
+Filename: pool/main/m/moby-compose/moby-compose_2.38.1-debian12u1_amd64.deb
+
 Package: msft-golang
 Version: 1.22.12-debian12u4
 Architecture: amd64
@@ -14897,6 +14803,44 @@ Provides: golang (= 1.22.12)
 SHA256: d529a58990bc17f7a041409874dbe09b9035440ded1afe4c59fa74bdf8117bf4
 Size: 43323110
 Filename: pool/main/m/msft-golang/msft-golang_1.22.12-debian12u4_amd64.deb
+
+Package: msft-golang
+Version: 1.23.10-debian12u2
+Architecture: amd64
+Section: -
+Installed-Size: 229507
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.23.10)
+SHA256: fc9199e96f6c56f9fd444e0434033bb83f69e6bf74049a8130c9754c601e9c4d
+Size: 45553774
+Filename: pool/main/m/msft-golang/msft-golang_1.23.10-debian12u2_amd64.deb
+
+Package: moby-cli
+Version: 28.3.1-debian12u1
+Architecture: amd64
+Section: admin
+Priority: optional
+Installed-Size: 43248
+Maintainer: Microsoft <support@microsoft.com>
+Description: Docker container platform (client package)
+ Docker is a platform for developers and sysadmins to develop, ship, and run
+ applications. Docker lets you quickly assemble applications from components and
+ eliminates the friction that can come when shipping code. Docker lets you get
+ your code tested and deployed into production as fast as possible.
+ .
+ This package provides the "docker" client binary (and supporting files).
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: ca-certificates, git, moby-buildx, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: f25e0e1ea60441e6197eb1f1f81db6d405f92b7dfad646fe31c79a564b580b22
+Size: 18966794
+Filename: pool/main/m/moby-cli/moby-cli_28.3.1-debian12u1_amd64.deb
 
 Package: moby-engine
 Version: 28.3.1-debian12u1
@@ -14954,6 +14898,17 @@ SHA256: 000c2a0db043c7a445b38b543993fb1c1ceba0c4f1b491fc72e39756f81bfd4b
 Size: 3299722
 Filename: pool/main/s/sysmonforlinux/sysmonforlinux_1.4.0_amd64.deb
 
+Package: azcmagent
+Version: 1.54.03104.480
+Architecture: amd64
+Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
+Description: Azure Connected Machine Agent
+Depends: curl, systemd, passwd
+Package-Type: deb
+SHA256: 53b484bfe2592bc88f0458606cdbd51028cb23e13dc670f0ab93c14916253bb2
+Size: 84611034
+Filename: pool/main/a/azcmagent/azcmagent_1.54.03104.480_amd64.deb
+
 Package: azcopy
 Version: 10.30.0~preview.2
 Architecture: amd64
@@ -14968,6 +14923,51 @@ License: unknown
 SHA256: b4b551eb14cefd7d5e9086badbcb90bd266da001e862763678b33b2942129a64
 Size: 22847014
 Filename: pool/main/a/azcopy/azcopy_10.30.0~preview.2_amd64.deb
+
+Package: dotnet-hostfxr-8.0
+Version: 8.0.18-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 295
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 8.0.18
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.18)
+SHA256: b8aed8e38412402edb8e4580a82ffa5f1e0264745e993898af06cd322eec05aa
+Size: 107846
+Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.18-1_amd64.deb
+
+Package: dotnet-host
+Version: 8.0.18-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 174
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host - 8.0.18
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Conflicts: dotnet, dotnet-nightly
+Depends: libc6, libgcc1, libstdc++6
+SHA256: be5093fdcdc70e3d6481592ee3403330e929e96c3bd2df5d32211b079c5e8893
+Size: 37674
+Filename: pool/main/d/dotnet-host/dotnet-host_8.0.18-1_amd64.deb
+
+Package: dotnet-apphost-pack-8.0
+Version: 8.0.18-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 11065
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Host 8.0.18
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: 5ef23806da8e42807ba8c8f85851094c0e5aa99a2bf75d98d44a13f80a91822d
+Size: 3522146
+Filename: pool/main/d/dotnet-apphost-pack-8.0/dotnet-apphost-pack-8.0_8.0.18-1_amd64.deb
 
 Package: dotnet-runtime-deps-8.0
 Version: 8.0.18-1
@@ -17561,6 +17561,108 @@ SHA256: d3b8cc419255011235befe6bd1203e5bd2a1bc23ecfad4eab11ae08087fdb80a
 Size: 95774590
 Filename: pool/main/d/dotnet-sdk-9.0/dotnet-sdk-9.0_9.0.111-1_amd64.deb
 
+Package: dotnet-hostfxr-8.0
+Version: 8.0.21-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 295
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 8.0.21
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.21)
+SHA256: d6cd3ed79457130bd0c4e48d0df64cc9a80577a4e61c92ae752efb6be471dbdf
+Size: 108002
+Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.21-1_amd64.deb
+
+Package: dotnet-runtime-8.0
+Version: 8.0.21-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 70252
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Runtime 8.0.21
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-hostfxr-8.0 (>= 8.0.21), dotnet-runtime-deps-8.0 (>= 8.0.21)
+SHA256: e8b6aa5e3b09b3c612e02c5b965db978d3f72200e9843e417befcbefbf964750
+Size: 23068142
+Filename: pool/main/d/dotnet-runtime-8.0/dotnet-runtime-8.0_8.0.21-1_amd64.deb
+
+Package: dotnet-targeting-pack-8.0
+Version: 8.0.21-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 36086
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Ref 8.0.21
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: c5eaecded58c86ec1d4152dd2dd901115e739c420dfc4fe733d3aa517e4c274b
+Size: 2802214
+Filename: pool/main/d/dotnet-targeting-pack-8.0/dotnet-targeting-pack-8.0_8.0.21-1_amd64.deb
+
+Package: dotnet-runtime-deps-8.0
+Version: 8.0.21-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 9
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: dotnet-runtime-deps-debian 8.0.21
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, libicu | libicu78 | libicu77 | libicu76 | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52
+SHA256: 3767a2a3abf9b29559a043632042b3ddc16161f3a3f23d9307504f1a2934eeaa
+Size: 2898
+Filename: pool/main/d/dotnet-runtime-deps-8.0/dotnet-runtime-deps-8.0_8.0.21-1_amd64.deb
+
+Package: aspnetcore-runtime-8.0
+Version: 8.0.21-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 23640
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-runtime-8.0 (>= 8.0.21)
+SHA256: 7c1d21f85380ec92a4e996b9a29e032b5f629f950466185383a522a69f577b41
+Size: 7719562
+Filename: pool/main/a/aspnetcore-runtime-8.0/aspnetcore-runtime-8.0_8.0.21-1_amd64.deb
+
+Package: aspnetcore-targeting-pack-8.0
+Version: 8.0.21-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 15901
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-targeting-pack-8.0 (>= 8.0.21)
+SHA256: aaef7a784a785c6240392d17a83f4edeefbb504d356d6fb755491c70962a89a3
+Size: 1935478
+Filename: pool/main/a/aspnetcore-targeting-pack-8.0/aspnetcore-targeting-pack-8.0_8.0.21-1_amd64.deb
+
+Package: dotnet-sdk-8.0
+Version: 8.0.121-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 387535
+Maintainer: Microsoft <dotnetcore@microsoft.com>
+Description: Microsoft .NET SDK 8.0.121
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-8.0 (>= 8.0.21), dotnet-targeting-pack-8.0 (>= 8.0.21), dotnet-apphost-pack-8.0 (>= 8.0.21), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-8.0 (>= 8.0.21), aspnetcore-targeting-pack-8.0 (>= 8.0.21)
+SHA256: 4cac92763712ea5b770a3a4d0fd8bfe7dd6bbbbc2a3c720073b0db4a526dea6b
+Size: 101864418
+Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.121-1_amd64.deb
+
 Package: dotnet-apphost-pack-8.0
 Version: 8.0.21-1
 Architecture: amd64
@@ -17833,108 +17935,6 @@ Depends: libc6 (>= 2.34), moby-cli
 SHA256: e5b56e379eb82a4f2a34b5ea94d22835c5c48cb46458c5685cc886d5e120ba39
 Size: 21271258
 Filename: pool/main/m/moby-compose/moby-compose_2.40.2-debian12u1_amd64.deb
-
-Package: dotnet-hostfxr-8.0
-Version: 8.0.21-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 295
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host FX Resolver - 8.0.21
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.21)
-SHA256: d6cd3ed79457130bd0c4e48d0df64cc9a80577a4e61c92ae752efb6be471dbdf
-Size: 108002
-Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.21-1_amd64.deb
-
-Package: dotnet-runtime-8.0
-Version: 8.0.21-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 70252
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Runtime 8.0.21
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: dotnet-hostfxr-8.0 (>= 8.0.21), dotnet-runtime-deps-8.0 (>= 8.0.21)
-SHA256: e8b6aa5e3b09b3c612e02c5b965db978d3f72200e9843e417befcbefbf964750
-Size: 23068142
-Filename: pool/main/d/dotnet-runtime-8.0/dotnet-runtime-8.0_8.0.21-1_amd64.deb
-
-Package: dotnet-targeting-pack-8.0
-Version: 8.0.21-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 36086
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Ref 8.0.21
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-SHA256: c5eaecded58c86ec1d4152dd2dd901115e739c420dfc4fe733d3aa517e4c274b
-Size: 2802214
-Filename: pool/main/d/dotnet-targeting-pack-8.0/dotnet-targeting-pack-8.0_8.0.21-1_amd64.deb
-
-Package: dotnet-runtime-deps-8.0
-Version: 8.0.21-1
-Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 9
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: dotnet-runtime-deps-debian 8.0.21
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, libicu | libicu78 | libicu77 | libicu76 | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52
-SHA256: 3767a2a3abf9b29559a043632042b3ddc16161f3a3f23d9307504f1a2934eeaa
-Size: 2898
-Filename: pool/main/d/dotnet-runtime-deps-8.0/dotnet-runtime-deps-8.0_8.0.21-1_amd64.deb
-
-Package: aspnetcore-runtime-8.0
-Version: 8.0.21-1
-Architecture: amd64
-Section: devel
-Priority: standard
-Installed-Size: 23640
-Maintainer: Microsoft <nugetaspnet@microsoft.com>
-Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
-Homepage: https://asp.net
-Depends: dotnet-runtime-8.0 (>= 8.0.21)
-SHA256: 7c1d21f85380ec92a4e996b9a29e032b5f629f950466185383a522a69f577b41
-Size: 7719562
-Filename: pool/main/a/aspnetcore-runtime-8.0/aspnetcore-runtime-8.0_8.0.21-1_amd64.deb
-
-Package: aspnetcore-targeting-pack-8.0
-Version: 8.0.21-1
-Architecture: amd64
-Section: devel
-Priority: standard
-Installed-Size: 15901
-Maintainer: Microsoft <nugetaspnet@microsoft.com>
-Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
-Homepage: https://asp.net
-Depends: dotnet-targeting-pack-8.0 (>= 8.0.21)
-SHA256: aaef7a784a785c6240392d17a83f4edeefbb504d356d6fb755491c70962a89a3
-Size: 1935478
-Filename: pool/main/a/aspnetcore-targeting-pack-8.0/aspnetcore-targeting-pack-8.0_8.0.21-1_amd64.deb
-
-Package: dotnet-sdk-8.0
-Version: 8.0.121-1
-Architecture: amd64
-Section: devel
-Priority: standard
-Installed-Size: 387535
-Maintainer: Microsoft <dotnetcore@microsoft.com>
-Description: Microsoft .NET SDK 8.0.121
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: dotnet-runtime-8.0 (>= 8.0.21), dotnet-targeting-pack-8.0 (>= 8.0.21), dotnet-apphost-pack-8.0 (>= 8.0.21), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-8.0 (>= 8.0.21), aspnetcore-targeting-pack-8.0 (>= 8.0.21)
-SHA256: 4cac92763712ea5b770a3a4d0fd8bfe7dd6bbbbc2a3c720073b0db4a526dea6b
-Size: 101864418
-Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.121-1_amd64.deb
 
 Package: msopenjdk-11
 Version: 11.0.29-1
@@ -18755,6 +18755,21 @@ SHA256: 91703eb9ba166f63cb250a330912ff349cc16189c49164e3deec7d565d3dc535
 Size: 19705742
 Filename: pool/main/m/moby-buildx/moby-buildx-dbgsym_0.30.1-debian12u1_amd64.deb
 
+Package: moby-buildx
+Version: 0.30.1-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 70459
+Maintainer: Azure Container Upstream
+Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
+Homepage: https://github.com/docker/buildx
+Conflicts: docker-buildx-plugin, docker-ce, docker-ee
+Depends: libc6 (>= 2.34), libssl3
+Recommends: moby-cli
+SHA256: 664cd536e4e2d03f631c9f46ec5a257ec79b14523463667818123c836a1d87a6
+Size: 15595742
+Filename: pool/main/m/moby-buildx/moby-buildx_0.30.1-debian12u1_amd64.deb
+
 Package: jaz
 Version: 0.0.0~preview+20251126.1
 Architecture: amd64
@@ -18923,21 +18938,6 @@ Provides: golang (= 1.25.5)
 SHA256: 0c88df099d97cd25b5f69ff0bd8a1fbb0fbf4d3f4cae4923db1b71c0906c0a03
 Size: 49185694
 Filename: pool/main/m/msft-golang/msft-golang_1.25.5-debian12u1_amd64.deb
-
-Package: moby-buildx
-Version: 0.30.1-debian12u1
-Architecture: amd64
-Section: -
-Installed-Size: 70459
-Maintainer: Azure Container Upstream
-Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
-Homepage: https://github.com/docker/buildx
-Conflicts: docker-buildx-plugin, docker-ce, docker-ee
-Depends: libc6 (>= 2.34), libssl3
-Recommends: moby-cli
-SHA256: 664cd536e4e2d03f631c9f46ec5a257ec79b14523463667818123c836a1d87a6
-Size: 15595742
-Filename: pool/main/m/moby-buildx/moby-buildx_0.30.1-debian12u1_amd64.deb
 
 Package: mdatp
 Version: 101.25092.0002
@@ -19623,6 +19623,22 @@ Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.
 SHA256: 561fdc7166eb1b30718f2c7311dfe0973d9c5e91099dae903f0daab15f14ec56
 Size: 20496642
 Filename: pool/main/m/moby-containerd/moby-containerd_2.2.1-debian12u1_amd64.deb
+
+Package: moby-cli
+Version: 29.1.4-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 30692
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: e6a61e0969ed6735093998e07aa9d1756ee9e8e1f2f7a28e50f425b2a40cdd9f
+Size: 7497954
+Filename: pool/main/m/moby-cli/moby-cli_29.1.4-debian12u1_amd64.deb
 
 Package: moby-cli-dbgsym
 Source: moby-cli
@@ -20888,21 +20904,65 @@ SHA256: 0224088d28813c854a646a1f47139a1d9cda22525234b8097985ba8fc0abd26f
 Size: 102646086
 Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.418-1_amd64.deb
 
-Package: moby-cli
-Version: 29.1.4-debian12u1
+Package: dotnet-runtime-8.0
+Version: 8.0.24-1
 Architecture: amd64
-Section: -
-Installed-Size: 30692
-Maintainer: Azure Container Upstream
-Description: The docker client binary used for connecting to Docker
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.34)
-Recommends: moby-engine
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: e6a61e0969ed6735093998e07aa9d1756ee9e8e1f2f7a28e50f425b2a40cdd9f
-Size: 7497954
-Filename: pool/main/m/moby-cli/moby-cli_29.1.4-debian12u1_amd64.deb
+Section: libs
+Priority: standard
+Installed-Size: 70249
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Runtime 8.0.24
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-hostfxr-8.0 (>= 8.0.24), dotnet-runtime-deps-8.0 (>= 8.0.24)
+SHA256: f9b3a7f23abddd63e129aa21f0e13e7b1d3f2f2dc94fb34b29ae500004ddcb17
+Size: 23065082
+Filename: pool/main/d/dotnet-runtime-8.0/dotnet-runtime-8.0_8.0.24-1_amd64.deb
+
+Package: dotnet-hostfxr-8.0
+Version: 8.0.24-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 295
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 8.0.24
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.24)
+SHA256: 9650a7a557e8c90d29ddbd72a11e1fb1ce0e039e07827320b8d67850789468a2
+Size: 107902
+Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.24-1_amd64.deb
+
+Package: dotnet-sdk-8.0
+Version: 8.0.124-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 387877
+Maintainer: Microsoft <dotnetcore@microsoft.com>
+Description: Microsoft .NET SDK 8.0.124
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-8.0 (>= 8.0.24), dotnet-targeting-pack-8.0 (>= 8.0.24), dotnet-apphost-pack-8.0 (>= 8.0.24), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-8.0 (>= 8.0.24), aspnetcore-targeting-pack-8.0 (>= 8.0.24)
+SHA256: 1fe12c979b52476476b51882dfea32e45f060863b99655257f060a19b2fb8cab
+Size: 102015086
+Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.124-1_amd64.deb
+
+Package: dotnet-hostfxr-10.0
+Version: 10.0.3
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 320
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 10.0.3
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 10.0.3)
+SHA256: 4dff4b4e082fdeeee465f479af7e7737b4066a6c26db9ddf01bc7eba49ff18c3
+Size: 150656
+Filename: pool/main/d/dotnet-hostfxr-10.0/dotnet-hostfxr-10.0_10.0.3_amd64.deb
 
 Package: dotnet-apphost-pack-10.0
 Version: 10.0.3
@@ -23097,65 +23157,66 @@ SHA256: 98e1a86cbb7cb35d4b3ade4574445b6d8cdf98bc4df0f44adc6231661f4523ae
 Size: 11944686
 Filename: pool/main/k/kubelogin/kubelogin_0.2.15-debian12u2_amd64.deb
 
-Package: dotnet-runtime-8.0
-Version: 8.0.24-1
+Package: kubelogin
+Version: 0.2.16-debian12u2
 Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 70249
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft.NETCore.App.Runtime 8.0.24
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: dotnet-hostfxr-8.0 (>= 8.0.24), dotnet-runtime-deps-8.0 (>= 8.0.24)
-SHA256: f9b3a7f23abddd63e129aa21f0e13e7b1d3f2f2dc94fb34b29ae500004ddcb17
-Size: 23065082
-Filename: pool/main/d/dotnet-runtime-8.0/dotnet-runtime-8.0_8.0.24-1_amd64.deb
+Section: -
+Installed-Size: 49693
+Maintainer: Azure Container Upstream
+Description: This is a client-go credential (exec) plugin implementing azure authentication. This plugin provides features that are not available in kubectl. It is supported on kubectl v1.11+
+Homepage: https://github.com/Azure/kubelogin
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 0fd73e90b4c71eef1fb9b28b74296f55376f9e2c636cca24232e4c53f6eafb78
+Size: 11945358
+Filename: pool/main/k/kubelogin/kubelogin_0.2.16-debian12u2_amd64.deb
 
-Package: dotnet-hostfxr-8.0
-Version: 8.0.24-1
+Package: kubelogin-dbgsym
+Source: kubelogin
+Version: 0.2.10-debian12u6
 Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 295
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host FX Resolver - 8.0.24
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.24)
-SHA256: 9650a7a557e8c90d29ddbd72a11e1fb1ce0e039e07827320b8d67850789468a2
-Size: 107902
-Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.24-1_amd64.deb
+Section: debug
+Priority: optional
+Installed-Size: 20305
+Maintainer: Azure Container Upstream
+Description: debug symbols for kubelogin
+Depends: kubelogin (= 0.2.10-debian12u6)
+Build-Ids: a8a59c6be1938f91f5802db886863224a2305621
+Auto-Built-Package: debug-symbols
+SHA256: 07ab4bc89158986312cad2a7361abcd743ba0d4633bc14e8e495c62c19b41767
+Size: 12634970
+Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.10-debian12u6_amd64.deb
 
-Package: dotnet-sdk-8.0
-Version: 8.0.124-1
+Package: kubelogin-dbgsym
+Source: kubelogin
+Version: 0.2.13-debian12u4
 Architecture: amd64
-Section: devel
-Priority: standard
-Installed-Size: 387877
-Maintainer: Microsoft <dotnetcore@microsoft.com>
-Description: Microsoft .NET SDK 8.0.124
- .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: dotnet-runtime-8.0 (>= 8.0.24), dotnet-targeting-pack-8.0 (>= 8.0.24), dotnet-apphost-pack-8.0 (>= 8.0.24), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-8.0 (>= 8.0.24), aspnetcore-targeting-pack-8.0 (>= 8.0.24)
-SHA256: 1fe12c979b52476476b51882dfea32e45f060863b99655257f060a19b2fb8cab
-Size: 102015086
-Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.124-1_amd64.deb
+Section: debug
+Priority: optional
+Installed-Size: 20347
+Maintainer: Azure Container Upstream
+Description: debug symbols for kubelogin
+Depends: kubelogin (= 0.2.13-debian12u4)
+Build-Ids: a707e3b9460b3cd111943509160339ef83ed193f
+Auto-Built-Package: debug-symbols
+SHA256: 7c4a4cd65d4972b6b262722436b4c908cb077b5b71cd73be47c5849061d7cd2b
+Size: 12685102
+Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.13-debian12u4_amd64.deb
 
-Package: dotnet-hostfxr-10.0
-Version: 10.0.3
+Package: kubelogin-dbgsym
+Source: kubelogin
+Version: 0.2.12-debian12u5
 Architecture: amd64
-Section: libs
-Priority: standard
-Installed-Size: 320
-Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
-Description: Microsoft .NET Host FX Resolver - 10.0.3
-   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
-Homepage: https://github.com/dotnet/core
-Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 10.0.3)
-SHA256: 4dff4b4e082fdeeee465f479af7e7737b4066a6c26db9ddf01bc7eba49ff18c3
-Size: 150656
-Filename: pool/main/d/dotnet-hostfxr-10.0/dotnet-hostfxr-10.0_10.0.3_amd64.deb
+Section: debug
+Priority: optional
+Installed-Size: 20346
+Maintainer: Azure Container Upstream
+Description: debug symbols for kubelogin
+Depends: kubelogin (= 0.2.12-debian12u5)
+Build-Ids: 4789a445ed0f00c2dd998934e2c38e7bb0d5f6c2
+Auto-Built-Package: debug-symbols
+SHA256: 628b180050ee2f24341dd64a15bea71d2ea9a85776211b90ca119837e8f270fb
+Size: 12663202
+Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.12-debian12u5_amd64.deb
 
 Package: kubelogin-dbgsym
 Source: kubelogin
@@ -23883,67 +23944,6 @@ SHA256: ccbffe8a664e48338e8bcf192c8df048d236bcff6a519354ba61a5bc7f847037
 Size: 7749550
 Filename: pool/main/m/moby-cli/moby-cli_29.4.1-debian12u1_amd64.deb
 
-Package: kubelogin
-Version: 0.2.16-debian12u2
-Architecture: amd64
-Section: -
-Installed-Size: 49693
-Maintainer: Azure Container Upstream
-Description: This is a client-go credential (exec) plugin implementing azure authentication. This plugin provides features that are not available in kubectl. It is supported on kubectl v1.11+
-Homepage: https://github.com/Azure/kubelogin
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 0fd73e90b4c71eef1fb9b28b74296f55376f9e2c636cca24232e4c53f6eafb78
-Size: 11945358
-Filename: pool/main/k/kubelogin/kubelogin_0.2.16-debian12u2_amd64.deb
-
-Package: kubelogin-dbgsym
-Source: kubelogin
-Version: 0.2.10-debian12u6
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 20305
-Maintainer: Azure Container Upstream
-Description: debug symbols for kubelogin
-Depends: kubelogin (= 0.2.10-debian12u6)
-Build-Ids: a8a59c6be1938f91f5802db886863224a2305621
-Auto-Built-Package: debug-symbols
-SHA256: 07ab4bc89158986312cad2a7361abcd743ba0d4633bc14e8e495c62c19b41767
-Size: 12634970
-Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.10-debian12u6_amd64.deb
-
-Package: kubelogin-dbgsym
-Source: kubelogin
-Version: 0.2.13-debian12u4
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 20347
-Maintainer: Azure Container Upstream
-Description: debug symbols for kubelogin
-Depends: kubelogin (= 0.2.13-debian12u4)
-Build-Ids: a707e3b9460b3cd111943509160339ef83ed193f
-Auto-Built-Package: debug-symbols
-SHA256: 7c4a4cd65d4972b6b262722436b4c908cb077b5b71cd73be47c5849061d7cd2b
-Size: 12685102
-Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.13-debian12u4_amd64.deb
-
-Package: kubelogin-dbgsym
-Source: kubelogin
-Version: 0.2.12-debian12u5
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 20346
-Maintainer: Azure Container Upstream
-Description: debug symbols for kubelogin
-Depends: kubelogin (= 0.2.12-debian12u5)
-Build-Ids: 4789a445ed0f00c2dd998934e2c38e7bb0d5f6c2
-Auto-Built-Package: debug-symbols
-SHA256: 628b180050ee2f24341dd64a15bea71d2ea9a85776211b90ca119837e8f270fb
-Size: 12663202
-Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.12-debian12u5_amd64.deb
-
 Package: moby-cli-dbgsym
 Source: moby-cli
 Version: 29.4.1-debian12u1
@@ -24485,4 +24485,836 @@ Auto-Built-Package: debug-symbols
 SHA256: d65a41ec9646b29f8cccfb033346ae60bd544add9110ba88e0304a274fd27297
 Size: 3383430
 Filename: pool/main/m/moby-runc/moby-runc-dbgsym_1.4.1-debian12u2_amd64.deb
+
+Package: moby-cli
+Version: 29.4.2-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 31776
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 4cef02669d49d9d08107d3f1b874d2da10d537c0433d61af33d85e7fa931ae94
+Size: 7746618
+Filename: pool/main/m/moby-cli/moby-cli_29.4.2-debian12u1_amd64.deb
+
+Package: moby-cli-dbgsym
+Source: moby-cli
+Version: 29.4.2-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 12445
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-cli
+Depends: moby-cli (= 29.4.2-debian12u1)
+Build-Ids: e40cbd98de0830eb8bfe116f703c4d663e6f3ed5
+Auto-Built-Package: debug-symbols
+SHA256: 4a50c73764a223f3f0311fb9944c7e2e158fcedb5be5e4c1942bceac3c3679aa
+Size: 9354778
+Filename: pool/main/m/moby-cli/moby-cli-dbgsym_29.4.2-debian12u1_amd64.deb
+
+Package: moby-containerd
+Version: 2.3.0-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 77218
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.34), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: 3f706199353cee7969b826259643df57b9f08927dd85f120728d5564b3324b71
+Size: 19925398
+Filename: pool/main/m/moby-containerd/moby-containerd_2.3.0-debian12u1_amd64.deb
+
+Package: moby-engine
+Version: 29.4.2-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 92972
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34), libnftables1 (>= 1.0.2), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 03a9bdde089a79d3558c3c1df23ee4a94fa3e878adc46b74e7bea52a137daafb
+Size: 21450678
+Filename: pool/main/m/moby-engine/moby-engine_29.4.2-debian12u1_amd64.deb
+
+Package: moby-engine-dbgsym
+Source: moby-engine
+Version: 29.4.2-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 11565
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-engine
+Depends: moby-engine (= 29.4.2-debian12u1)
+Build-Ids: 46010f0d9431e62560609b938ae62ae4545eaf45 54e3f08ba6975ded76f10b64d6ec312bd90e96e7
+Auto-Built-Package: debug-symbols
+SHA256: 6a5088d590d759be69810ff553fa74f151ca23b1142c0e4e958027de7c015865
+Size: 1144170
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.4.2-debian12u1_amd64.deb
+
+Package: moby-runc
+Version: 1.4.2-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 9801
+Maintainer: Azure Container Upstream
+Description: CLI tool for spawning and running containers according to the OCI specification
+Homepage: https://github.com/opencontainers/runc
+Conflicts: runc, runc-io
+Depends: libc6 (>= 2.34), libseccomp2 (>= 2.5.0)
+Provides: runc (= 1.4.2)
+Replaces: runc (<= 1.4.2), runc-io (<= 1.4.2)
+SHA256: 0cf305effab3a7315fa9f36598063d72030fe225e7651dbf8571a7b9bdeee190
+Size: 2964074
+Filename: pool/main/m/moby-runc/moby-runc_1.4.2-debian12u1_amd64.deb
+
+Package: moby-runc-dbgsym
+Source: moby-runc
+Version: 1.4.2-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 4324
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-runc
+Depends: moby-runc (= 1.4.2-debian12u1)
+Build-Ids: 30c28d0fe862733fbdc80e92bd3c4064acaa55e7
+Auto-Built-Package: debug-symbols
+SHA256: 2f8745750c5930e2437b35b9b67174be2fc62b70598f5d281764db4395179105
+Size: 3383294
+Filename: pool/main/m/moby-runc/moby-runc-dbgsym_1.4.2-debian12u1_amd64.deb
+
+Package: jcd
+Version: 1.0.2
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals jcd (Jump Change Directory)
+ jcd (Jump Change Directory) is a Sysinternals Rust-based command-line tool that provides enhanced directory
+ navigation with substring matching and smart selection. It's like the cd command, but with superpowers!
+License: MIT
+SHA256: d49b918680d71d7e266f153e04f6b326c00f3d1de87e5ee5eb07ebccf62bbcd1
+Size: 732122
+Filename: pool/main/j/jcd/jcd_1.0.2_amd64.deb
+
+Package: sysmonforlinux
+Version: 1.5.2
+Architecture: amd64
+Installed-Size: 58934
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: A system monitor based on eBPF, ported from Windows, that outputs events to Syslog
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), libssl-dev, sysinternalsebpf (>= 1.6.0)
+SHA256: 5de200adb6cc3a03b772394f0019119817048db6c7bbd235d6f776e459c4cf9f
+Size: 4233730
+Filename: pool/main/s/sysmonforlinux/sysmonforlinux_1.5.2_amd64.deb
+
+Package: sysinternalsebpf
+Version: 1.6.0
+Architecture: amd64
+Installed-Size: 22072
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: A shared library and code library for making eBPF programs.
+ SysinternalsEBPF is a shared library that provides control over
+ eBPF programs, and an eBPF code library that eBPF programs can include to
+ interact with the library.
+Depends: libc6 (>= 2.26), libelf1 (>= 0.131), libglib2.0-0 (>= 2.12.0), libjson-glib-1.0-0 (>= 0.13.2), zlib1g (>= 1:1.2.3.3)
+SHA256: 19279a69fee81e23929ecccd89f5608bc5005b0427ccb28246b994e57cfc311a
+Size: 807630
+Filename: pool/main/s/sysinternalsebpf/sysinternalsebpf_1.6.0_amd64.deb
+
+Package: procmon
+Version: 2.2.1
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals process monitor utility
+ Process Monitor (Procmon) is part of the Sysinternals suite of tools.  Procmon provides a convenient and efficient way for Linux developers to trace the syscall
+ activity on the system.
+Depends: sysinternalsebpf (>= 1.6.0), libelf1 (>= 0.0)
+License: MIT
+SHA256: e21937d3765946c8e6757f1676f77b04222f2b034f231e42f7f4a43aebab3cc4
+Size: 2684610
+Filename: pool/main/p/procmon/procmon_2.2.1_amd64.deb
+
+Package: procdump
+Version: 3.5.1
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals process dump utility
+ ProcDump is a command-line utility whose primary purpose is monitoring an application
+ for various resources and generating crash dumps during a spike that an administrator
+ or developer can use to determine the cause of the issue. ProcDump also serves as a
+ general process dump utility that you can embed in other scripts.
+Depends: zlib1g, gdb (>= 7.6.1)
+License: MIT
+SHA256: 93ab1ee3e405cd132ff36851e527fcb954ac65b2e1d0333040dae35be9eb6098
+Size: 1453814
+Filename: pool/main/p/procdump/procdump_3.5.1_amd64.deb
+
+Package: moby-cli
+Version: 29.4.3-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 31776
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 49b25525ea7afd76dea414e0d4f2f5cb3137494c5b78192ccc2dc0d190c74dd9
+Size: 7749514
+Filename: pool/main/m/moby-cli/moby-cli_29.4.3-debian12u1_amd64.deb
+
+Package: moby-cli-dbgsym
+Source: moby-cli
+Version: 29.4.3-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 12445
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-cli
+Depends: moby-cli (= 29.4.3-debian12u1)
+Build-Ids: e8e424e6a7eefdb2faf4c29fb86c97a669f77314
+Auto-Built-Package: debug-symbols
+SHA256: d39bdd2630f6c54b5bfc38883054cb2f2889b4f3c3b71124dab9ace2a78477fb
+Size: 9354622
+Filename: pool/main/m/moby-cli/moby-cli-dbgsym_29.4.3-debian12u1_amd64.deb
+
+Package: moby-engine
+Version: 29.4.3-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 92972
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34), libnftables1 (>= 1.0.2), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 77d5c124f68fcfd844b1abf22cf101264012eea309565878accc8a00d576eeba
+Size: 21474202
+Filename: pool/main/m/moby-engine/moby-engine_29.4.3-debian12u1_amd64.deb
+
+Package: moby-engine-dbgsym
+Source: moby-engine
+Version: 29.4.3-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 11565
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-engine
+Depends: moby-engine (= 29.4.3-debian12u1)
+Build-Ids: be813ae6fe6e6aa6958d161982ea764459e2f3e3 ffa4e8fc4e1e13b14d7a91328eef6625b0e06fcd
+Auto-Built-Package: debug-symbols
+SHA256: ff112d6f870975da41de2903f13b5036ebeafe0fcb2b0a5a37243cb21d023ce2
+Size: 1150582
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.4.3-debian12u1_amd64.deb
+
+Package: libmsquic
+Version: 2.5.8
+Architecture: amd64
+Section: default
+Priority: optional
+Maintainer: Microsoft QUIC Team <quicdev@microsoft.com>
+Description: Microsoft implementation of the IETF QUIC protocol
+Homepage: https://github.com/microsoft/msquic
+Conflicts: libmsquic-debug
+Depends: libssl3, libnuma1
+Provides: libmsquic
+Vendor: Microsoft
+License: MIT
+SHA256: 9f437763e74fa9f77e39ef649bd68c1b083eb759e0e9324acde685f98aadf7fd
+Size: 2759866
+Filename: pool/main/libm/libmsquic/libmsquic_2.5.8_amd64.deb
+
+Package: msft-golang
+Version: 1.25.10-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 228368
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.25.10)
+SHA256: 4715ae8f4d6c454f9fbf208c094d73f0fbd4759cee555d872d3d278d8a361c34
+Size: 49466686
+Filename: pool/main/m/msft-golang/msft-golang_1.25.10-debian12u1_amd64.deb
+
+Package: msft-golang
+Version: 1.26.3-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 258383
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.26.3)
+SHA256: 9378295cec15538b8030daa79efff1a2022ab5648a6935461949083d4c682be3
+Size: 56782946
+Filename: pool/main/m/msft-golang/msft-golang_1.26.3-debian12u1_amd64.deb
+
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.25.10-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 7681
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.25.10-debian12u1)
+Build-Ids: 0bb4d0556f24424b5dd255a63f0e4fa39e427e2a 129c379613ee4465b7284d00ef9e5e8f3acb5024 2f1fa21136de675b6ff8954493e25be7003268cb 368024cc8b8a70780405cf1a837c116eb25462d1 5ca95da3d072e48607aba4e1cf447db450e523ea 63bf9abfc5780470e06bdfa953ac342bb56aa319 79927447f95902c8463850c3e55dca578b505daa df2ae1769ec4a2f8b50999ebf42f1c15603516e9 ee5df09d4f171e81a51cd0ab28553c2022557f96
+Auto-Built-Package: debug-symbols
+SHA256: 7ebe01e8a8f20a54aee98b0ee80d10ff1af7188d76fabc41a2fb7071c7335842
+Size: 697986
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.25.10-debian12u1_amd64.deb
+
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.26.3-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 9372
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.26.3-debian12u1)
+Build-Ids: 0d33e5dc10c3991965c2cd929857509bf09ecf26 20894eed231a62407f6a2776cde3f4bb97e99694 539cd2d43aa30a095948bf69a0d724db708ad399 565916c601eb6c8ecf80630d8d70e27ccd39bfae 5e6c41d9e044b6b415e65ccefb440debb59c2ed0 64e65a37da06621e394b0e793af766c9a53f8106 78f891e7387a2dbb968502688d5e991887b93398 b0dd32285562b6f86cb1ed9ce6e6e87fa1966849 cbb4cdff7dd849ef258495506050ebbe080cd073 f3b6d043da24ef424a872edc17c6e3ffdedcb813
+Auto-Built-Package: debug-symbols
+SHA256: 30ccfab91fbebc0fcd0aa5c516115ced3eb522b0ec6e93c6d3e342e4320ca894
+Size: 813378
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.3-debian12u1_amd64.deb
+
+Package: jaz
+Version: 0.0.0~preview+20260511.1
+Architecture: amd64
+Section: default
+Priority: extra
+Installed-Size: 10177
+Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
+Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
+Homepage: https://learn.microsoft.com/java/jaz/overview
+License: EULA
+SHA256: 7bb197a4219a431ef5eb78b6031fd9add9c12b27e35c2a4672f3e9980e3fd31c
+Size: 4174732
+Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260511.1_amd64.deb
+
+Package: dotnet-hostfxr-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 295
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 8.0.27
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 8.0.27)
+SHA256: 180fe261fd9ceeb3ae5dcd93c9442deed73667f386c907e012d009dd9eb016a5
+Size: 107910
+Filename: pool/main/d/dotnet-hostfxr-8.0/dotnet-hostfxr-8.0_8.0.27-1_amd64.deb
+
+Package: dotnet-apphost-pack-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 11066
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Host 8.0.27
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: 705956cdef5ba478799609b176ea3d5597b320c49356fa1545f5e25d2cb7c5e2
+Size: 3522638
+Filename: pool/main/d/dotnet-apphost-pack-8.0/dotnet-apphost-pack-8.0_8.0.27-1_amd64.deb
+
+Package: dotnet-targeting-pack-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 36086
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Ref 8.0.27
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: 94c217d4a0b62954a2aa60fe76f0b7730a604dee76ee1a92e431db515730b58e
+Size: 2802190
+Filename: pool/main/d/dotnet-targeting-pack-8.0/dotnet-targeting-pack-8.0_8.0.27-1_amd64.deb
+
+Package: aspnetcore-runtime-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 23656
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-runtime-8.0 (>= 8.0.27)
+SHA256: d10783bdb1e26ca895098917ef79a6f19dac2c3a410a0a57091baab477ecd5a1
+Size: 7725282
+Filename: pool/main/a/aspnetcore-runtime-8.0/aspnetcore-runtime-8.0_8.0.27-1_amd64.deb
+
+Package: dotnet-runtime-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 70254
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Runtime 8.0.27
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-hostfxr-8.0 (>= 8.0.27), dotnet-runtime-deps-8.0 (>= 8.0.27)
+SHA256: 102addd2950d2df7f5bcab1919dbec0647b7a186d7004d1cfd4352e474f3284e
+Size: 23053554
+Filename: pool/main/d/dotnet-runtime-8.0/dotnet-runtime-8.0_8.0.27-1_amd64.deb
+
+Package: dotnet-runtime-deps-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 9
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: dotnet-runtime-deps-debian 8.0.27
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, libicu | libicu78 | libicu77 | libicu76 | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52
+SHA256: 5e9f7f49cb25f1eb4648aeb0ec85a7a472d79d519ab2d68a91d5c46b329cab20
+Size: 2898
+Filename: pool/main/d/dotnet-runtime-deps-8.0/dotnet-runtime-deps-8.0_8.0.27-1_amd64.deb
+
+Package: aspnetcore-targeting-pack-8.0
+Version: 8.0.27-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 15871
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-targeting-pack-8.0 (>= 8.0.27)
+SHA256: 703748333a4bb718b8732b597645284d47b985475eea26de1aae471cb0cac37a
+Size: 1929726
+Filename: pool/main/a/aspnetcore-targeting-pack-8.0/aspnetcore-targeting-pack-8.0_8.0.27-1_amd64.deb
+
+Package: dotnet-host
+Version: 8.0.27-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 174
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host - 8.0.27
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Conflicts: dotnet, dotnet-nightly
+Depends: libc6, libgcc1, libstdc++6
+SHA256: 9d0188586000c91a15daa1f41afabcb211d482adc8350a2b19caeff21a62a9fc
+Size: 37754
+Filename: pool/main/d/dotnet-host/dotnet-host_8.0.27-1_amd64.deb
+
+Package: dotnet-sdk-8.0
+Version: 8.0.127-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 387954
+Maintainer: Microsoft <dotnetcore@microsoft.com>
+Description: Microsoft .NET SDK 8.0.127
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-8.0 (>= 8.0.27), dotnet-targeting-pack-8.0 (>= 8.0.27), dotnet-apphost-pack-8.0 (>= 8.0.27), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-8.0 (>= 8.0.27), aspnetcore-targeting-pack-8.0 (>= 8.0.27)
+SHA256: 93f073f3d2dd89b11daf9b5bc06591bac4c0eb6e5e03533b7b350d6a9afee799
+Size: 102104922
+Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.127-1_amd64.deb
+
+Package: dotnet-sdk-8.0
+Version: 8.0.421-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 399242
+Maintainer: Microsoft <dotnetcore@microsoft.com>
+Description: Microsoft .NET SDK 8.0.421
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-8.0 (>= 8.0.27), dotnet-targeting-pack-8.0 (>= 8.0.27), dotnet-apphost-pack-8.0 (>= 8.0.27), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-8.0 (>= 8.0.27), aspnetcore-targeting-pack-8.0 (>= 8.0.27)
+SHA256: 94cb6d79b0e2302ba5c9e8ac5937a733bed5491d9ff036c6c7fc187eb053833b
+Size: 102155686
+Filename: pool/main/d/dotnet-sdk-8.0/dotnet-sdk-8.0_8.0.421-1_amd64.deb
+
+Package: dotnet-hostfxr-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 297
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 9.0.16
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 9.0.16)
+SHA256: cf185d90af21bcb74baca665cdae1a3964bbedaa2bba0125691cf0173d61d844
+Size: 109930
+Filename: pool/main/d/dotnet-hostfxr-9.0/dotnet-hostfxr-9.0_9.0.16-1_amd64.deb
+
+Package: dotnet-host
+Version: 9.0.16-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 159
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host - 9.0.16
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Conflicts: dotnet, dotnet-nightly
+Depends: libc6, libgcc1, libstdc++6
+SHA256: 6afc217a93bba20f9ab4a07cc00185815228d8beb2dd203278cc392fa2cd3822
+Size: 36706
+Filename: pool/main/d/dotnet-host/dotnet-host_9.0.16-1_amd64.deb
+
+Package: dotnet-runtime-deps-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 9
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: dotnet-runtime-deps-debian 9.0.16
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libssl1.0.0 | libssl1.0.2 | libssl1.1 | libssl3, libicu | libicu78 | libicu77 | libicu76 | libicu74 | libicu72 | libicu71 | libicu70 | libicu69 | libicu68 | libicu67 | libicu66 | libicu65 | libicu63 | libicu60 | libicu57 | libicu55 | libicu52
+SHA256: f220b86aff5ad5cda5bf5f0009c13ffc2bf78a3c42cc8dfbf71b694fecbb5631
+Size: 2898
+Filename: pool/main/d/dotnet-runtime-deps-9.0/dotnet-runtime-deps-9.0_9.0.16-1_amd64.deb
+
+Package: aspnetcore-runtime-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 24203
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-runtime-9.0 (>= 9.0.16)
+SHA256: da7891b5d8883e525c8e0dc346034099a424651a628a63821dd12fd5daf312f4
+Size: 7869918
+Filename: pool/main/a/aspnetcore-runtime-9.0/aspnetcore-runtime-9.0_9.0.16-1_amd64.deb
+
+Package: dotnet-apphost-pack-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 11911
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Host 9.0.16
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: 09dfd2f8e209094dbe691b9c090513d94fa8cbf3d6a51fc94bfa21bd978e84de
+Size: 3760438
+Filename: pool/main/d/dotnet-apphost-pack-9.0/dotnet-apphost-pack-9.0_9.0.16-1_amd64.deb
+
+Package: aspnetcore-targeting-pack-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 16526
+Maintainer: Microsoft <nugetaspnet@microsoft.com>
+Description: Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/aspnetcore). We happily accept issues and PRs.
+Homepage: https://asp.net
+Depends: dotnet-targeting-pack-9.0 (>= 9.0.16)
+SHA256: 76e8cb4173839b6f95cdf4b0fa7fa426507e97b4d97b1c7bc70b553605842925
+Size: 2010646
+Filename: pool/main/a/aspnetcore-targeting-pack-9.0/aspnetcore-targeting-pack-9.0_9.0.16-1_amd64.deb
+
+Package: dotnet-targeting-pack-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 38231
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Ref 9.0.16
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: c568124b53a407058a13b2fa41ddeb478b6b0f555e5a55675870ff61ef4f4973
+Size: 2903478
+Filename: pool/main/d/dotnet-targeting-pack-9.0/dotnet-targeting-pack-9.0_9.0.16-1_amd64.deb
+
+Package: dotnet-sdk-9.0
+Version: 9.0.117-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 370787
+Maintainer: Microsoft <dotnetcore@microsoft.com>
+Description: Microsoft .NET SDK 9.0.117
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-9.0 (>= 9.0.16), dotnet-targeting-pack-9.0 (>= 9.0.16), dotnet-apphost-pack-9.0 (>= 9.0.16), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-9.0 (>= 9.0.16), aspnetcore-targeting-pack-9.0 (>= 9.0.16)
+SHA256: f47b04495861c5fc39c246c5dbcc8fb103e0be9421fc15723e4e630bf10a7a33
+Size: 96005522
+Filename: pool/main/d/dotnet-sdk-9.0/dotnet-sdk-9.0_9.0.117-1_amd64.deb
+
+Package: dotnet-sdk-9.0
+Version: 9.0.314-1
+Architecture: amd64
+Section: devel
+Priority: standard
+Installed-Size: 388951
+Maintainer: Microsoft <dotnetcore@microsoft.com>
+Description: Microsoft .NET SDK 9.0.314
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-9.0 (>= 9.0.16), dotnet-targeting-pack-9.0 (>= 9.0.16), dotnet-apphost-pack-9.0 (>= 9.0.16), netstandard-targeting-pack-2.1 (>= 2.1.0), aspnetcore-runtime-9.0 (>= 9.0.16), aspnetcore-targeting-pack-9.0 (>= 9.0.16)
+SHA256: 97272b2cf7207522b0539b2ebeee0689dc1cf0b6ebcdd2b5207209ac37de1ee3
+Size: 99560946
+Filename: pool/main/d/dotnet-sdk-9.0/dotnet-sdk-9.0_9.0.314-1_amd64.deb
+
+Package: dotnet-runtime-9.0
+Version: 9.0.16-1
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 75789
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Runtime 9.0.16
+ .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-hostfxr-9.0 (>= 9.0.16), dotnet-runtime-deps-9.0 (>= 9.0.16)
+SHA256: 33329cf769cf2009ca6941faeb02bd00da8cfff710f06bb1c3b5ab7b359ef65a
+Size: 24814622
+Filename: pool/main/d/dotnet-runtime-9.0/dotnet-runtime-9.0_9.0.16-1_amd64.deb
+
+Package: dotnet-hostfxr-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 320
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host FX Resolver - 10.0.8
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libstdc++6, dotnet-host (>= 10.0.8)
+SHA256: b9f554471ab81f7e868034430da860185aab30bd97bdb3c47f66ca641a2f36bd
+Size: 150850
+Filename: pool/main/d/dotnet-hostfxr-10.0/dotnet-hostfxr-10.0_10.0.8_amd64.deb
+
+Package: dotnet-host
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 148
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET Host - 10.0.8
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Conflicts: dotnet, dotnet-nightly
+Depends: libc6, libgcc1, libstdc++6
+SHA256: bfcd3a48480fc7b9ecb8df7edb223fcd311febbe5ed02f45b3ad9a1a98790de1
+Size: 44262
+Filename: pool/main/d/dotnet-host/dotnet-host_10.0.8_amd64.deb
+
+Package: aspnetcore-targeting-pack-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 49319
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: ASP.NET Core Targeting Pack
+   Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/dotnet). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-targeting-pack-10.0 (>= 10.0.8)
+SHA256: 7c7eb2189abee29e263559a4c86b3c8cd8b897af97962ddf106f8fe6e1b4c7f8
+Size: 6828302
+Filename: pool/main/a/aspnetcore-targeting-pack-10.0/aspnetcore-targeting-pack-10.0_10.0.8_amd64.deb
+
+Package: dotnet-runtime-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 80281
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Runtime.CoreCLR 10.0.8
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-hostfxr-10.0 (>= 10.0.8), dotnet-runtime-deps-10.0 (>= 10.0.8)
+SHA256: aa7e5fd3f9b263c8fe1a8b9726bda2755a6b423d4ba44160612f58f5a3c85ce4
+Size: 36440426
+Filename: pool/main/d/dotnet-runtime-10.0/dotnet-runtime-10.0_10.0.8_amd64.deb
+
+Package: dotnet-runtime-deps-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 1
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: dotnet-runtime-deps-debian 10.0.8
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, libssl3, libicu78 | libicu77 | libicu76 | libicu72
+SHA256: 4965292aa8e3f8f9149314ca60d8f2819c8070112b5015b5b16fb68579c6b989
+Size: 2832
+Filename: pool/main/d/dotnet-runtime-deps-10.0/dotnet-runtime-deps-10.0_10.0.8_amd64.deb
+
+Package: dotnet-sdk-10.0
+Version: 10.0.108
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 410746
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET SDK 10.0.108
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-10.0 (>= 10.0.8), dotnet-targeting-pack-10.0 (>= 10.0.8), dotnet-apphost-pack-10.0 (>= 10.0.8), aspnetcore-runtime-10.0 (>= 10.0.8), aspnetcore-targeting-pack-10.0 (>= 10.0.8)
+SHA256: cff6688b8b8ed6d093955ff89ca9866bfdc86a6be18d23c639e989d7d901a2ab
+Size: 171375780
+Filename: pool/main/d/dotnet-sdk-10.0/dotnet-sdk-10.0_10.0.108_amd64.deb
+
+Package: aspnetcore-runtime-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 26376
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.AspNetCore.App.Runtime 10.0.8
+   Shared Framework for hosting of Microsoft ASP.NET Core applications. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/dotnet). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-10.0 (>= 10.0.8)
+SHA256: 82aa5857da075590cc989a6223be5e1e30df4f188232a4592c9a269e2ad6780c
+Size: 12766874
+Filename: pool/main/a/aspnetcore-runtime-10.0/aspnetcore-runtime-10.0_10.0.8_amd64.deb
+
+Package: dotnet-apphost-pack-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 12994
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Host 10.0.8
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: b2cd33834476fed310bef89634fc9297565276b5a8025e56dbd59d3bcd15a5c8
+Size: 5356412
+Filename: pool/main/d/dotnet-apphost-pack-10.0/dotnet-apphost-pack-10.0_10.0.8_amd64.deb
+
+Package: dotnet-targeting-pack-10.0
+Version: 10.0.8
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 42482
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft.NETCore.App.Ref 10.0.8
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+SHA256: 3362e15df67e5fb9dc5d539f017e8c1c297d2345693c46f6bd49095ac41ccddc
+Size: 6640702
+Filename: pool/main/d/dotnet-targeting-pack-10.0/dotnet-targeting-pack-10.0_10.0.8_amd64.deb
+
+Package: dotnet-sdk-10.0
+Version: 10.0.204
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 415954
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET SDK 10.0.204
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-10.0 (>= 10.0.8), dotnet-targeting-pack-10.0 (>= 10.0.8), dotnet-apphost-pack-10.0 (>= 10.0.8), aspnetcore-runtime-10.0 (>= 10.0.8), aspnetcore-targeting-pack-10.0 (>= 10.0.8)
+SHA256: 5649753862fe7e2dc10f6193cb00b437497c32c8392b930324e654f9b531b738
+Size: 173367128
+Filename: pool/main/d/dotnet-sdk-10.0/dotnet-sdk-10.0_10.0.204_amd64.deb
+
+Package: dotnet-sdk-10.0
+Version: 10.0.300
+Architecture: amd64
+Section: libs
+Priority: standard
+Installed-Size: 401217
+Maintainer: .NET Team <dotnetpackages@dotnetfoundation.org>
+Description: Microsoft .NET SDK 10.0.300
+   .NET is a development platform that you can use to build command-line applications, microservices and modern websites. It is open source, cross-platform and is supported by Microsoft. We hope you enjoy using it! If you do, please consider joining the active community of developers that are contributing to the project on GitHub (https://github.com/dotnet/core). We happily accept issues and PRs.
+Homepage: https://github.com/dotnet/core
+Depends: dotnet-runtime-10.0 (>= 10.0.8), dotnet-targeting-pack-10.0 (>= 10.0.8), dotnet-apphost-pack-10.0 (>= 10.0.8), aspnetcore-runtime-10.0 (>= 10.0.8), aspnetcore-targeting-pack-10.0 (>= 10.0.8)
+SHA256: a29afdbd81f462d44e2722b2271d093b4ab8b51960448d7803954c6de0d7e70b
+Size: 167525912
+Filename: pool/main/d/dotnet-sdk-10.0/dotnet-sdk-10.0_10.0.300_amd64.deb
+
+Package: jaz
+Version: 0.0.0~preview+20260512.1
+Architecture: amd64
+Section: default
+Priority: extra
+Installed-Size: 10177
+Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
+Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
+Homepage: https://learn.microsoft.com/java/jaz/overview
+License: EULA
+SHA256: 15bf99eb1852b33898abb9ddac096d66a395518aa9405fd2491dd76f0865786e
+Size: 4174738
+Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260512.1_amd64.deb
+
+Package: azcmagent
+Version: 1.64.03414.1079
+Architecture: amd64
+Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
+Description: Arc enabled servers instance metadata service
+Depends: curl, systemd, passwd
+Package-Type: deb
+SHA256: 2c0449bb1ee5924cf43fe896902361f8900f8fa33552f1f402756041dd498902
+Size: 84807610
+Filename: pool/main/a/azcmagent/azcmagent_1.64.03414.1079_amd64.deb
+
+Package: azcopy
+Version: 10.32.4
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 58001
+Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
+Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
+Homepage: https://github.com/Azure/azure-storage-azcopy
+Vendor: none
+License: unknown
+SHA256: a7912de37ddbeb7d7c87a43de514d1d1a3bd632da9d898179e4c4b9f8c023f9b
+Size: 24074066
+Filename: pool/main/a/azcopy/azcopy_10.32.4_amd64.deb
 

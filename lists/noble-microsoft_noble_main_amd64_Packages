@@ -15576,6 +15576,19 @@ SHA256: 6684c7ed9ca9434e7e563c2afe6afbf370441542950a65a6b0a7a31c307e1b1f
 Size: 229349312
 Filename: pool/main/m/mdatp/mdatp_101.26012.0007_amd64.deb
 
+Package: azurelustre-csi
+Version: 0.4.0-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 64753
+Maintainer: Azure Container Upstream
+Description: This driver allows Kubernetes to access Azure Lustre file system.
+Homepage: https://github.com/kubernetes-sigs/azurelustre-csi-driver
+Depends: libc6 (>= 2.34), ca-certificates, curl, gpg, iproute2, kmod, libssl3
+SHA256: 770a3846f35fa4e27870b70c1cf455d84e358842e12164b56305d1720e121e3c
+Size: 13188268
+Filename: pool/main/a/azurelustre-csi/azurelustre-csi_0.4.0-ubuntu24.04u2_amd64.deb
+
 Package: k8s-device-plugin
 Version: 0.17.3-ubuntu24.04u11
 Architecture: amd64
@@ -15616,159 +15629,6 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 3dfc52af99f12aa5f83aaef84e32c4982e004bdb01f61744d61a645b347c8d40
 Size: 31892700
 Filename: pool/main/k/kubectl/kubectl_1.28.101-ubuntu24.04u9_amd64.deb
-
-Package: kubectl
-Version: 1.32.2-ubuntu24.04u6
-Architecture: amd64
-Section: -
-Installed-Size: 174586
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 496612b8e88a0bcb7be9c6f1fe77af6568830f466765c8defdce5131fad8215e
-Size: 34423226
-Filename: pool/main/k/kubectl/kubectl_1.32.2-ubuntu24.04u6_amd64.deb
-
-Package: kubectl
-Version: 1.32.3-ubuntu24.04u6
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 8b1a70037da88ec5a917e5aa0a5e8b84ff25ca97f4a0092626658f343cd3666f
-Size: 35356330
-Filename: pool/main/k/kubectl/kubectl_1.32.3-ubuntu24.04u6_amd64.deb
-
-Package: kubectl
-Version: 1.32.4-ubuntu24.04u6
-Architecture: amd64
-Section: -
-Installed-Size: 174586
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 6f03bf5d735541a78a02e439221fbcc76ab69f2c192d45506d128cea4944b41d
-Size: 34424138
-Filename: pool/main/k/kubectl/kubectl_1.32.4-ubuntu24.04u6_amd64.deb
-
-Package: kubectl
-Version: 1.33.0-ubuntu24.04u7
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 2fba0a90784c0bd915ba16de9428ace2379b124309472c1eaa4c588576155e4a
-Size: 35357494
-Filename: pool/main/k/kubectl/kubectl_1.33.0-ubuntu24.04u7_amd64.deb
-
-Package: kubectl
-Version: 1.33.1-ubuntu24.04u6
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 5b3276877a86898d2d668a142e5872b0f7d9a1d44fb7c94dc8a14f63c7c7fc9b
-Size: 35351410
-Filename: pool/main/k/kubectl/kubectl_1.33.1-ubuntu24.04u6_amd64.deb
-
-Package: kubectl
-Version: 1.33.2-ubuntu24.04u6
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 95f66267cd10dc66b25986719ae6e6398695319e6e273972b5167d3be089bad8
-Size: 35353160
-Filename: pool/main/k/kubectl/kubectl_1.33.2-ubuntu24.04u6_amd64.deb
-
-Package: node-problem-detector-kubernetes
-Version: 0.8.20-ubuntu24.04u16
-Architecture: amd64
-Section: -
-Installed-Size: 74751
-Maintainer: Azure Container Upstream
-Description: Node problem detector.
-Homepage: https://github.com/kubernetes/node-problem-detector
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 5d21ab69ffd5fe4e39140b1e277fced95314075b03caa570967a748953e0bf55
-Size: 18408738
-Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.20-ubuntu24.04u16_amd64.deb
-
-Package: node-problem-detector-kubernetes
-Version: 0.8.21-ubuntu24.04u11
-Architecture: amd64
-Section: -
-Installed-Size: 74761
-Maintainer: Azure Container Upstream
-Description: Node problem detector.
-Homepage: https://github.com/kubernetes/node-problem-detector
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 58f307b5b9a418c1e1b293405b841c75dffd74ae73413dc024dbd9da9ded8028
-Size: 18411066
-Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.21-ubuntu24.04u11_amd64.deb
-
-Package: powershell
-Version: 7.6.0-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 193369
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: 2d2e57d80f72247620070a664ca3405c4897093461d6eccd71e328f0d3e2c6f8
-Size: 56378398
-Filename: pool/main/p/powershell/powershell_7.6.0-1.deb_amd64.deb
-
-Package: azcopy
-Version: 10.32.2
-Architecture: amd64
-Section: default
-Priority: optional
-Installed-Size: 56915
-Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
-Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
-Homepage: https://github.com/Azure/azure-storage-azcopy
-Vendor: none
-License: unknown
-SHA256: 55835a58effc1b8ea78ea04482c142439918255731397d04c12b5f534e3ecc13
-Size: 23484458
-Filename: pool/main/a/azcopy/azcopy_10.32.2_amd64.deb
-
-Package: azurelustre-csi
-Version: 0.4.0-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 64753
-Maintainer: Azure Container Upstream
-Description: This driver allows Kubernetes to access Azure Lustre file system.
-Homepage: https://github.com/kubernetes-sigs/azurelustre-csi-driver
-Depends: libc6 (>= 2.34), ca-certificates, curl, gpg, iproute2, kmod, libssl3
-SHA256: 770a3846f35fa4e27870b70c1cf455d84e358842e12164b56305d1720e121e3c
-Size: 13188268
-Filename: pool/main/a/azurelustre-csi/azurelustre-csi_0.4.0-ubuntu24.04u2_amd64.deb
 
 Package: kubectl
 Version: 1.29.100-ubuntu24.04u6
@@ -15827,6 +15687,48 @@ Size: 34413080
 Filename: pool/main/k/kubectl/kubectl_1.32.10-ubuntu24.04u3_amd64.deb
 
 Package: kubectl
+Version: 1.32.2-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 174586
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 496612b8e88a0bcb7be9c6f1fe77af6568830f466765c8defdce5131fad8215e
+Size: 34423226
+Filename: pool/main/k/kubectl/kubectl_1.32.2-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.32.3-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 8b1a70037da88ec5a917e5aa0a5e8b84ff25ca97f4a0092626658f343cd3666f
+Size: 35356330
+Filename: pool/main/k/kubectl/kubectl_1.32.3-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.32.4-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 174586
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6f03bf5d735541a78a02e439221fbcc76ab69f2c192d45506d128cea4944b41d
+Size: 34424138
+Filename: pool/main/k/kubectl/kubectl_1.32.4-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
 Version: 1.32.6-ubuntu24.04u5
 Architecture: amd64
 Section: -
@@ -15867,6 +15769,48 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 4d5deadb4913e2f1c1d3387c4166d8d6c98bf0e6aa73173769a76d83213f64e4
 Size: 34424082
 Filename: pool/main/k/kubectl/kubectl_1.32.8-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.33.0-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 2fba0a90784c0bd915ba16de9428ace2379b124309472c1eaa4c588576155e4a
+Size: 35357494
+Filename: pool/main/k/kubectl/kubectl_1.33.0-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.33.1-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 5b3276877a86898d2d668a142e5872b0f7d9a1d44fb7c94dc8a14f63c7c7fc9b
+Size: 35351410
+Filename: pool/main/k/kubectl/kubectl_1.33.1-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.33.2-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 95f66267cd10dc66b25986719ae6e6398695319e6e273972b5167d3be089bad8
+Size: 35353160
+Filename: pool/main/k/kubectl/kubectl_1.33.2-ubuntu24.04u6_amd64.deb
 
 Package: kubectl
 Version: 1.33.6-ubuntu24.04u3
@@ -15953,6 +15897,32 @@ Size: 35442134
 Filename: pool/main/k/kubectl/kubectl_1.34.3-ubuntu24.04u3_amd64.deb
 
 Package: node-problem-detector-kubernetes
+Version: 0.8.20-ubuntu24.04u16
+Architecture: amd64
+Section: -
+Installed-Size: 74751
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 5d21ab69ffd5fe4e39140b1e277fced95314075b03caa570967a748953e0bf55
+Size: 18408738
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.20-ubuntu24.04u16_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.21-ubuntu24.04u11
+Architecture: amd64
+Section: -
+Installed-Size: 74761
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 58f307b5b9a418c1e1b293405b841c75dffd74ae73413dc024dbd9da9ded8028
+Size: 18411066
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.21-ubuntu24.04u11_amd64.deb
+
+Package: node-problem-detector-kubernetes
 Version: 0.8.22-ubuntu24.04u6
 Architecture: amd64
 Section: -
@@ -15964,6 +15934,36 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 6c972f6ecb2ddfc4b664f4bb7717490dbf726877afc54765a7b95a017c8ea5eb
 Size: 18442712
 Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.22-ubuntu24.04u6_amd64.deb
+
+Package: powershell
+Version: 7.6.0-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 193369
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: 2d2e57d80f72247620070a664ca3405c4897093461d6eccd71e328f0d3e2c6f8
+Size: 56378398
+Filename: pool/main/p/powershell/powershell_7.6.0-1.deb_amd64.deb
+
+Package: azcopy
+Version: 10.32.2
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 56915
+Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
+Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
+Homepage: https://github.com/Azure/azure-storage-azcopy
+Vendor: none
+License: unknown
+SHA256: 55835a58effc1b8ea78ea04482c142439918255731397d04c12b5f534e3ecc13
+Size: 23484458
+Filename: pool/main/a/azcopy/azcopy_10.32.2_amd64.deb
 
 Package: dcgm-exporter
 Version: 4.7.1-ubuntu24.04u6
@@ -16072,48 +16072,6 @@ SHA256: f90a5370d5464ddcd3fc3ea8d6750f82690308218aa8e7b4b6af17aac616d05d
 Size: 34423002
 Filename: pool/main/k/kubectl/kubectl_1.32.9-ubuntu24.04u7_amd64.deb
 
-Package: kubectl
-Version: 1.33.3-ubuntu24.04u6
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 0c7f1a76d6f3188d541ab6c09644cca73b57b9c765d67ff72be3a48de09bc250
-Size: 35353240
-Filename: pool/main/k/kubectl/kubectl_1.33.3-ubuntu24.04u6_amd64.deb
-
-Package: kubectl
-Version: 1.33.5-ubuntu24.04u7
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 53f2a7c456d78f23a1e989efa58ffd702a6ed999976ff1ffd0ad5fd367e72b75
-Size: 35354182
-Filename: pool/main/k/kubectl/kubectl_1.33.5-ubuntu24.04u7_amd64.deb
-
-Package: kubectl
-Version: 1.35.1-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 176030
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: f56cf9a8071b138802b7b1831114c553c3dde6a07178f283a5bd9e3463598252
-Size: 34422320
-Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u2_amd64.deb
-
 Package: kubectl-gadget
 Version: 0.45.0-ubuntu24.04u8
 Architecture: amd64
@@ -16179,6 +16137,128 @@ SHA256: f87ced350364353f1bd2caeaca6ae12016d0f424c379c899617b07f8594250e5
 Size: 21444092
 Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.50.1-ubuntu24.04u1_amd64.deb
 
+Package: dcgm-exporter
+Version: 4.8.0-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 56015
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.1-1), libcap2-bin
+SHA256: 752c0f69ef393f0f6639ab34d712274d69fecf354e4ed2ff628713044727d7c2
+Size: 11883028
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.0-ubuntu24.04u4_amd64.deb
+
+Package: ig
+Version: 0.50.0-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 186447
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: d19a2f53c1349991b2bc876aec6f6f04001281d591f68313ec1ae0b7a74dcc3f
+Size: 45780700
+Filename: pool/main/i/ig/ig_0.50.0-ubuntu24.04u2_amd64.deb
+
+Package: ig
+Version: 0.50.1-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 186455
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 8c3b568ab32fd7ba79f092c49b58c122ef0b6afd05946614805568e890d04fdc
+Size: 45766000
+Filename: pool/main/i/ig/ig_0.50.1-ubuntu24.04u2_amd64.deb
+
+Package: kubectl
+Version: 1.33.4-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6c5ddf42c223a6cc9d7ea0240b6bd84fe79ad2228556d5e5166951fdc072e146
+Size: 35351186
+Filename: pool/main/k/kubectl/kubectl_1.33.4-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.33.8-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: ee6aab01f2b871e223c44866570955e680b030456b020998db5ffca217ee6649
+Size: 35352294
+Filename: pool/main/k/kubectl/kubectl_1.33.8-ubuntu24.04u2_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.0-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 16740
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 49f27cdddc39039a9b86581f20a48fd200220cae868eb90d6fa0d044fe13e399
+Size: 5327334
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.0-ubuntu24.04u1_amd64.deb
+
+Package: kubectl
+Version: 1.33.3-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 0c7f1a76d6f3188d541ab6c09644cca73b57b9c765d67ff72be3a48de09bc250
+Size: 35353240
+Filename: pool/main/k/kubectl/kubectl_1.33.3-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.33.5-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 181169
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 53f2a7c456d78f23a1e989efa58ffd702a6ed999976ff1ffd0ad5fd367e72b75
+Size: 35354182
+Filename: pool/main/k/kubectl/kubectl_1.33.5-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.35.1-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 176030
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: f56cf9a8071b138802b7b1831114c553c3dde6a07178f283a5bd9e3463598252
+Size: 34422320
+Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u2_amd64.deb
+
 Package: kubelogin
 Version: 0.2.16-ubuntu24.04u1
 Architecture: amd64
@@ -16241,19 +16321,6 @@ Size: 30178406
 Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.19.0-ubuntu24.04u1_amd64.deb
 
 Package: dcgm-exporter
-Version: 4.8.0-ubuntu24.04u4
-Architecture: amd64
-Section: -
-Installed-Size: 56015
-Maintainer: Azure Container Upstream
-Description: Exports Nvidia GPU Metrics to Prometheus
-Homepage: https://github.com/NVIDIA/dcgm-exporter
-Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.1-1), libcap2-bin
-SHA256: 752c0f69ef393f0f6639ab34d712274d69fecf354e4ed2ff628713044727d7c2
-Size: 11883028
-Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.0-ubuntu24.04u4_amd64.deb
-
-Package: dcgm-exporter
 Version: 4.8.1-ubuntu24.04u3
 Architecture: amd64
 Section: -
@@ -16291,60 +16358,6 @@ Depends: libc6 (>= 2.38), libssl3
 SHA256: 0fd4435cdbb861037616f3ec57a43c357f61eec6478b24d0dc6dfcb1a005a90e
 Size: 45743196
 Filename: pool/main/i/ig/ig_0.49.1-ubuntu24.04u3_amd64.deb
-
-Package: ig
-Version: 0.50.0-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 186447
-Maintainer: Azure Container Upstream
-Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
-Homepage: https://www.inspektor-gadget.io
-Depends: libc6 (>= 2.38), libssl3
-SHA256: d19a2f53c1349991b2bc876aec6f6f04001281d591f68313ec1ae0b7a74dcc3f
-Size: 45780700
-Filename: pool/main/i/ig/ig_0.50.0-ubuntu24.04u2_amd64.deb
-
-Package: ig
-Version: 0.50.1-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 186455
-Maintainer: Azure Container Upstream
-Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
-Homepage: https://www.inspektor-gadget.io
-Depends: libc6 (>= 2.38), libssl3
-SHA256: 8c3b568ab32fd7ba79f092c49b58c122ef0b6afd05946614805568e890d04fdc
-Size: 45766000
-Filename: pool/main/i/ig/ig_0.50.1-ubuntu24.04u2_amd64.deb
-
-Package: kubectl
-Version: 1.33.4-ubuntu24.04u7
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 6c5ddf42c223a6cc9d7ea0240b6bd84fe79ad2228556d5e5166951fdc072e146
-Size: 35351186
-Filename: pool/main/k/kubectl/kubectl_1.33.4-ubuntu24.04u7_amd64.deb
-
-Package: kubectl
-Version: 1.33.8-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 181169
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: ee6aab01f2b871e223c44866570955e680b030456b020998db5ffca217ee6649
-Size: 35352294
-Filename: pool/main/k/kubectl/kubectl_1.33.8-ubuntu24.04u2_amd64.deb
 
 Package: kubectl
 Version: 1.34.4-ubuntu24.04u2
@@ -16428,19 +16441,6 @@ Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.
 SHA256: 158946a90727c383f6ae7b1b22274d3df71ee09f73af9e052775f6e2ca117ec0
 Size: 23548804
 Filename: pool/main/m/moby-containerd/moby-containerd_2.2.2-ubuntu24.04u1_amd64.deb
-
-Package: node-exporter-kubernetes
-Version: 1.10.0-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 16740
-Maintainer: Azure Container Upstream
-Description: Node exporter.
-Homepage: https://github.com/prometheus/node_exporter
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 49f27cdddc39039a9b86581f20a48fd200220cae868eb90d6fa0d044fe13e399
-Size: 5327334
-Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.0-ubuntu24.04u1_amd64.deb
 
 Package: node-exporter-kubernetes
 Version: 1.10.1-ubuntu24.04u1
@@ -16562,22 +16562,6 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 9c759e5d5ec1cbeb8d8f46301901ab344c3b4d612b7bc93b944c383ae1eae7a5
 Size: 5354512
 Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.0-ubuntu24.04u2_amd64.deb
-
-Package: moby-cli
-Version: 29.3.1-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 31524
-Maintainer: Azure Container Upstream
-Description: The docker client binary used for connecting to Docker
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.34)
-Recommends: moby-engine
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: 90e9674b923d2a88baa328299dec7728fed035f36a8e3366e9bd132f40d1873c
-Size: 8495744
-Filename: pool/main/m/moby-cli/moby-cli_29.3.1-ubuntu24.04u1_amd64.deb
 
 Package: node-exporter-kubernetes
 Version: 1.10.1-ubuntu24.04u2
@@ -16730,6 +16714,19 @@ SHA256: 25c9b4043b9691034fc9578f24afb882ce36af4077676f495707a32846ade58f
 Size: 229403870
 Filename: pool/main/m/mdatp/mdatp_101.26021.0002_amd64.deb
 
+Package: dcgm-exporter
+Version: 4.8.1-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 56024
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.2-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.2-1), libcap2-bin
+SHA256: e689a38a15b599ab3b2ab5015a53f5c94c73ca271eb5ba11d5027f973a8d911f
+Size: 11888812
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.1-ubuntu24.04u7_amd64.deb
+
 Package: azure-acr-credential-provider
 Version: 1.32.15-ubuntu24.04u1
 Architecture: amd64
@@ -16781,6 +16778,22 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 7d94c3f8176560eeec4fc84695d1849653b4fbae6a561bcf0cf9f2fbe07c748c
 Size: 9292684
 Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.35.2-ubuntu24.04u1_amd64.deb
+
+Package: moby-cli
+Version: 29.3.1-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 31524
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 90e9674b923d2a88baa328299dec7728fed035f36a8e3366e9bd132f40d1873c
+Size: 8495744
+Filename: pool/main/m/moby-cli/moby-cli_29.3.1-ubuntu24.04u1_amd64.deb
 
 Package: moby-engine
 Version: 29.3.1-ubuntu24.04u1
@@ -17277,21 +17290,6 @@ SHA256: 6ee2d681b46415eaa2d21482817fc33b344276382d02b52a59c80051655ca615
 Size: 31894174
 Filename: pool/main/k/kubectl/kubectl_1.28.101-ubuntu24.04u10_amd64.deb
 
-Package: azcopy
-Version: 10.32.3
-Architecture: amd64
-Section: default
-Priority: optional
-Installed-Size: 56925
-Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
-Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
-Homepage: https://github.com/Azure/azure-storage-azcopy
-Vendor: none
-License: unknown
-SHA256: fab3836155cfe2fd250448f875a35dc593c91cd148d4276d39f242ce10ca861c
-Size: 23488232
-Filename: pool/main/a/azcopy/azcopy_10.32.3_amd64.deb
-
 Package: msft-golang
 Version: 1.25.9-ubuntu24.04u1
 Architecture: amd64
@@ -17435,6 +17433,21 @@ License: EULA
 SHA256: aa829a78e9e8d46d8501b97a69da65527a1712874da99b9ee2f7365cacbd636d
 Size: 4151480
 Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260408.1_amd64.deb
+
+Package: azcopy
+Version: 10.32.3
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 56925
+Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
+Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
+Homepage: https://github.com/Azure/azure-storage-azcopy
+Vendor: none
+License: unknown
+SHA256: fab3836155cfe2fd250448f875a35dc593c91cd148d4276d39f242ce10ca861c
+Size: 23488232
+Filename: pool/main/a/azcopy/azcopy_10.32.3_amd64.deb
 
 Package: dcgm-exporter
 Version: 4.7.1-ubuntu24.04u9
@@ -18118,21 +18131,6 @@ SHA256: 54448eb9fb28f09e95dc418b910960e5a500fed73679273f4f5fcecdc09645a2
 Size: 22591138
 Filename: pool/main/m/moby-containerd/moby-containerd_2.1.7-ubuntu24.04u1_amd64.deb
 
-Package: kubeadm
-Version: 1.35.2-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 108424
-Maintainer: Azure Container Upstream
-Description: Command-line utility for administering a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Depends: libc6 (>= 2.34), libssl3
-Provides: kubernetes-kubeadm (= 1.35.2)
-Replaces: kubernetes-kubeadm (<< 1.35.2)
-SHA256: d66a34b45ca824cc65fdbb85ffd86f1e2c86a1024ae952e1c4712b69afd88dc7
-Size: 19766360
-Filename: pool/main/k/kubeadm/kubeadm_1.35.2-ubuntu24.04u1_amd64.deb
-
 Package: moby-containerd
 Version: 2.2.3-ubuntu24.04u1
 Architecture: amd64
@@ -18294,6 +18292,50 @@ Replaces: kubernetes-kubeadm (<< 1.34.6)
 SHA256: cb3789f7d361ef97a6ff63312207fcda4b3a665a55ec2af5f83283e4120959f1
 Size: 20207826
 Filename: pool/main/k/kubeadm/kubeadm_1.34.6-ubuntu24.04u1_amd64.deb
+
+Package: kubeadm
+Version: 1.35.2-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 108424
+Maintainer: Azure Container Upstream
+Description: Command-line utility for administering a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Depends: libc6 (>= 2.34), libssl3
+Provides: kubernetes-kubeadm (= 1.35.2)
+Replaces: kubernetes-kubeadm (<< 1.35.2)
+SHA256: d66a34b45ca824cc65fdbb85ffd86f1e2c86a1024ae952e1c4712b69afd88dc7
+Size: 19766360
+Filename: pool/main/k/kubeadm/kubeadm_1.35.2-ubuntu24.04u1_amd64.deb
+
+Package: kubeadm
+Version: 1.35.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 108424
+Maintainer: Azure Container Upstream
+Description: Command-line utility for administering a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Depends: libc6 (>= 2.34), libssl3
+Provides: kubernetes-kubeadm (= 1.35.3)
+Replaces: kubernetes-kubeadm (<< 1.35.3)
+SHA256: c7e8407a81d1b822179385401c95bdb46a56d569f7d7df36137e81e0d3b18e34
+Size: 19755158
+Filename: pool/main/k/kubeadm/kubeadm_1.35.3-ubuntu24.04u1_amd64.deb
+
+Package: kubectl
+Version: 1.33.10-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 181177
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 5b5b4eb8c998ff84bafca9122e01910ad93de6a25c27ccf8f446329d6295dc79
+Size: 35331238
+Filename: pool/main/k/kubectl/kubectl_1.33.10-ubuntu24.04u1_amd64.deb
 
 Package: kubectl
 Version: 1.33.9-ubuntu24.04u1
@@ -18478,35 +18520,6 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 0d9a4e710106720a1874699f1e3a13fb6f961e4972ef294907c613d2656a32d2
 Size: 34484308
 Filename: pool/main/k/kubectl/kubectl_1.35.4-ubuntu24.04u1_amd64.deb
-
-Package: kubeadm
-Version: 1.35.3-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 108424
-Maintainer: Azure Container Upstream
-Description: Command-line utility for administering a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Depends: libc6 (>= 2.34), libssl3
-Provides: kubernetes-kubeadm (= 1.35.3)
-Replaces: kubernetes-kubeadm (<< 1.35.3)
-SHA256: c7e8407a81d1b822179385401c95bdb46a56d569f7d7df36137e81e0d3b18e34
-Size: 19755158
-Filename: pool/main/k/kubeadm/kubeadm_1.35.3-ubuntu24.04u1_amd64.deb
-
-Package: kubectl
-Version: 1.33.10-ubuntu24.04u1
-Architecture: amd64
-Section: -
-Installed-Size: 181177
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 5b5b4eb8c998ff84bafca9122e01910ad93de6a25c27ccf8f446329d6295dc79
-Size: 35331238
-Filename: pool/main/k/kubectl/kubectl_1.33.10-ubuntu24.04u1_amd64.deb
 
 Package: kubelet
 Version: 1.33.11-ubuntu24.04u1
@@ -18693,22 +18706,6 @@ SHA256: 2292687e2db21a9bfe0d68cb55e03bc9616087b5b00bfe1d5b2b913605ad4ce9
 Size: 35352686
 Filename: pool/main/k/kubectl/kubectl_1.33.0-ubuntu24.04u10_amd64.deb
 
-Package: moby-containerd
-Version: 1.7.30-ubuntu24.04u4
-Architecture: amd64
-Section: -
-Installed-Size: 121546
-Maintainer: Azure Container Upstream
-Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
-Homepage: https://github.com/containerd/containerd
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-Depends: libc6 (>= 2.34), moby-runc (>= 1.1.0)
-Recommends: ca-certificates, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-SHA256: 5865fabf8f841db867ed541e59772c80d678eda6259956cd81d82b19c602eb8b
-Size: 35064466
-Filename: pool/main/m/moby-containerd/moby-containerd_1.7.30-ubuntu24.04u4_amd64.deb
-
 Package: kubectl
 Version: 1.33.2-ubuntu24.04u9
 Architecture: amd64
@@ -18882,20 +18879,6 @@ SHA256: 211054ee7c2dbdbd691734a6e151230c197f6ff4389342d5c90934ad08fe10e4
 Size: 34883590
 Filename: pool/main/k/kubectl/kubectl_1.36.0-ubuntu24.04u1_amd64.deb
 
-Package: kubectl
-Version: 1.35.1-ubuntu24.04u3
-Architecture: amd64
-Section: -
-Installed-Size: 176046
-Maintainer: Azure Container Upstream
-Description: Command-line utility for interacting with a Kubernetes cluster
-Homepage: https://github.com/kubernetes/kubernetes
-Conflicts: kubernetes, kubernetes-client
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 1c234744d0443f04dcd4fea3efb79b20b2a9b3f8c6dc50d63ce6b5929abb6ee5
-Size: 34463044
-Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u3_amd64.deb
-
 Package: kubelet
 Version: 1.36.0-ubuntu24.04u1
 Architecture: amd64
@@ -18909,6 +18892,22 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 6d4286800be28e9f5e1763600e58488c8d4771f2e4b0b850f18814debaaf5ed3
 Size: 18244082
 Filename: pool/main/k/kubelet/kubelet_1.36.0-ubuntu24.04u1_amd64.deb
+
+Package: moby-containerd
+Version: 1.7.30-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 121546
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.34), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: 5865fabf8f841db867ed541e59772c80d678eda6259956cd81d82b19c602eb8b
+Size: 35064466
+Filename: pool/main/m/moby-containerd/moby-containerd_1.7.30-ubuntu24.04u4_amd64.deb
 
 Package: powershell
 Version: 7.5.6-1.deb
@@ -19067,6 +19066,20 @@ Depends: libc6 (>= 2.34), libssl3
 SHA256: 46669a9210b08ed0b11865f82c21df54f27f6c8023937dd80243d95280148978
 Size: 45090394
 Filename: pool/main/i/ig/ig_0.51.1-ubuntu24.04u1_amd64.deb
+
+Package: kubectl
+Version: 1.35.1-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 176046
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 1c234744d0443f04dcd4fea3efb79b20b2a9b3f8c6dc50d63ce6b5929abb6ee5
+Size: 34463044
+Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u3_amd64.deb
 
 Package: kubectl-gadget
 Version: 0.45.0-ubuntu24.04u9
@@ -19568,19 +19581,6 @@ Size: 34431512
 Filename: pool/main/k/kubectl/kubectl_1.35.3-ubuntu24.04u2_amd64.deb
 
 Package: kubectl-gadget
-Version: 0.51.1-ubuntu24.04u2
-Architecture: amd64
-Section: -
-Installed-Size: 85921
-Maintainer: Azure Container Upstream
-Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
-Homepage: https://www.inspektor-gadget.io
-Depends: libc6 (>= 2.34), libssl3
-SHA256: 6daf2288418132c4e17f2f8bce4e78a87ab16bcc0fff65eadcd898232fa77a58
-Size: 21066576
-Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.1-ubuntu24.04u2_amd64.deb
-
-Package: kubectl-gadget
 Version: 0.45.0-ubuntu24.04u10
 Architecture: amd64
 Section: -
@@ -19748,6 +19748,50 @@ Depends: libc6 (>= 2.38), libssl3
 SHA256: f351f315ab4b8c4e72f565e8f0ffc999af21947b628129806bac934f74506d56
 Size: 21460384
 Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.50.1-ubuntu24.04u3_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.1-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 85921
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6daf2288418132c4e17f2f8bce4e78a87ab16bcc0fff65eadcd898232fa77a58
+Size: 21066576
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.1-ubuntu24.04u2_amd64.deb
+
+Package: nvidia-device-plugin
+Version: 0.19.1-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 124342
+Maintainer: Azure Container Upstream
+Description: NVIDIA device plugin for Kubernetes
+Homepage: https://github.com/NVIDIA/k8s-device-plugin
+Conflicts: k8s-device-plugin
+Depends: libc6 (>= 2.34), openssl
+Provides: k8s-device-plugin (= 0.19.1)
+Replaces: k8s-device-plugin (<< 0.17.4)
+SHA256: ed30158d994887de56855fbf2e46a223e9afeff82377ec1f3a3d71c8613e24da
+Size: 30162270
+Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.19.1-ubuntu24.04u1_amd64.deb
+
+Package: msodbcsql17
+Version: 17.11.1.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL ODBC Team <mssql-odbc@microsoft.com>
+Description: ODBC Driver for Microsoft(R) SQL Server(R)
+ This package provides an ODBC driver that can connect to Microsoft(R)
+ SQL Server(R).
+Conflicts: libodbc1-utf16, odbcinst-utf16, odbcinst1debian2-utf16, unixodbc-utf16
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1), odbcinst
+SHA256: 11cbdc0bc3f67eb9c1932f98dd1eab19d487efa772a53c3b2e73c192147da5c0
+Size: 776046
+Filename: pool/main/m/msodbcsql17/msodbcsql17_17.11.1.1-1_amd64.deb
 
 Package: ig
 Version: 0.45.0-ubuntu24.04u13
@@ -20232,11 +20276,1724 @@ SHA256: e204e6e820dbd9e508cc783f096652b561c2752e1393d5aea3ec0316fb66c14a
 Size: 18268860
 Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.22-ubuntu24.04u9_amd64.deb
 
-Package: nvidia-device-plugin
-Version: 0.19.1-ubuntu24.04u1
+Package: ig
+Version: 0.45.0-ubuntu24.04u14
 Architecture: amd64
 Section: -
-Installed-Size: 124342
+Installed-Size: 189752
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: c886c52518076063fd89f61b3d4090367480ef90f950e12fa9733857cb686b7b
+Size: 46137568
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u14_amd64.deb
+
+Package: ig
+Version: 0.45.0-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 189752
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 6f420fbaca8eac100dbbf983bbc368f4a80b40372540ad6499d06012c64288c6
+Size: 46098236
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u15_amd64.deb
+
+Package: ig
+Version: 0.45.0-ubuntu24.04u16
+Architecture: amd64
+Section: -
+Installed-Size: 189752
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: ae34b8e15e56efcbad4c32b950f9ce94ef970d765c011f446b8c6b798c0a4db8
+Size: 46137954
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u16_amd64.deb
+
+Package: ig
+Version: 0.48.0-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 6b81e8d83a8cf529e1a1ad52bcd9122ac64749fbda5546fa17a944a686db3d16
+Size: 45479886
+Filename: pool/main/i/ig/ig_0.48.0-ubuntu24.04u12_amd64.deb
+
+Package: ig
+Version: 0.48.0-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 75b4d2290a981f86ccf7c8d3b48a109afe79443066ba9c6bc502c723fa3333e8
+Size: 45461654
+Filename: pool/main/i/ig/ig_0.48.0-ubuntu24.04u13_amd64.deb
+
+Package: ig
+Version: 0.48.0-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 30d7c211e575c478307bf613c608f5157d94f7c875d287afc877afcb14361b2a
+Size: 45461916
+Filename: pool/main/i/ig/ig_0.48.0-ubuntu24.04u14_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 49fe3139cef3f4e95757f7caa63021198a18d17dd4a447a36a8020fc4549f046
+Size: 45214538
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u13_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: d3390a72fb5287e4b49b170565a0fa713f5f8c115572b39ea0b6b932e8765886
+Size: 45474292
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u14_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: d5003319cb2b898b82ec1ad3669340dbc440eeec63030151fb18f9791fef6eb8
+Size: 45214200
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u15_amd64.deb
+
+Package: ig
+Version: 0.49.0-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 186445
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 8e5fad12cbab18ba3d364d4f4cf5663ef8472f491e47741dbe1bf61d2314bbc8
+Size: 45770266
+Filename: pool/main/i/ig/ig_0.49.0-ubuntu24.04u12_amd64.deb
+
+Package: ig
+Version: 0.49.0-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 186445
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: de2e0be6f5a35ce206f2dd091a59561a3ec6f85ff0c7758e50c0e055e74bd04e
+Size: 45755612
+Filename: pool/main/i/ig/ig_0.49.0-ubuntu24.04u13_amd64.deb
+
+Package: ig
+Version: 0.49.0-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 186445
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: ba36cfa71a403db50f0cff687bb58acc92159115c21cb2e7b189309705f4f664
+Size: 45770122
+Filename: pool/main/i/ig/ig_0.49.0-ubuntu24.04u14_amd64.deb
+
+Package: ig
+Version: 0.52.0-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 192033
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 1cfa41e82551326c8270f5af4bb3707920ba8edee2eb76d30b29be1ee23176b4
+Size: 46435250
+Filename: pool/main/i/ig/ig_0.52.0-ubuntu24.04u1_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 89685
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: d8b6e909109929a36de7ccb4e95bacafe010b4eb849cbb7df81172eec57fbe08
+Size: 21829786
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u14_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 89685
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: c03146462c258b16eddc3c4cfb82371a7978f241cfd197955c8276030da25587
+Size: 21826474
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u15_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u16
+Architecture: amd64
+Section: -
+Installed-Size: 89685
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 33311d9ed5e287ffc1016ed5b78d97e9347939e984185a6c279045c07e517a94
+Size: 21816984
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u16_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.0-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 5de386352049b9d10212144a43b3aca370f3b0816238e11f0db4de12cf874863
+Size: 21419614
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.0-ubuntu24.04u12_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.0-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: a39daabb3c2d0eef243703542db3b8658e1cd57a42cc23be04f3403c96fb18cb
+Size: 21423992
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.0-ubuntu24.04u13_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.0-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 09f0646b1ddc35e154a26b5a4eded5fcfba4fab735375f22c4c71dfd6d67e5fe
+Size: 21423814
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.0-ubuntu24.04u14_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 5d69aaaaca9f40a52a06a6a76ad6cecac9b5fab3c105666f65454c46c2a2dde2
+Size: 21152976
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u13_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 4389577122dac3d292c0fe24200ec2f60744ce5f70a96da8a143432fc649b468
+Size: 21376668
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u14_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 05982f97231ca9646435b013465a3c84089f1c68e2683d5981999524de715ae1
+Size: 21429782
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u15_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.49.0-ubuntu24.04u11
+Architecture: amd64
+Section: -
+Installed-Size: 87152
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: a9f8cbf0b88e048a14359fd74adf324734feba5df71fae073554de3bfe05e551
+Size: 21442980
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.49.0-ubuntu24.04u11_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.49.0-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 87152
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 15eca38144831546c573e80fa228d24b2146a4949332b24cf312ed088e3b7fa4
+Size: 21434624
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.49.0-ubuntu24.04u12_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.49.0-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 87152
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: d2811d155e0810eb0958a5defc3e0be29cf68f671aaaac1a5b4b9b3226ccdf76
+Size: 21435488
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.49.0-ubuntu24.04u13_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.52.0-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 86034
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: fb293a4374384faad02fc5e39509958e995ef06b7ea21dd577d7e7d58e98e289
+Size: 21108006
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.52.0-ubuntu24.04u1_amd64.deb
+
+Package: moby-cli
+Version: 29.4.2-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 31780
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 691f743bcd09771709f9cefcd75dc0aa76fbba63cbaf1a56e584228b06963b72
+Size: 8551920
+Filename: pool/main/m/moby-cli/moby-cli_29.4.2-ubuntu24.04u1_amd64.deb
+
+Package: moby-containerd
+Version: 2.3.0-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 77229
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.34), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: 3cfcea5010aa9708f1834b06bd9501ee60e162bb05303d7455b93a761902265d
+Size: 21862746
+Filename: pool/main/m/moby-containerd/moby-containerd_2.3.0-ubuntu24.04u1_amd64.deb
+
+Package: moby-engine
+Version: 29.4.2-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 92972
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34), libnftables1 (>= 1.0.2), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: b6f5fcd7c6b8453f970380ebeb9037a77ec61ff8cc592613322b18190494bedf
+Size: 23716128
+Filename: pool/main/m/moby-engine/moby-engine_29.4.2-ubuntu24.04u1_amd64.deb
+
+Package: moby-runc
+Version: 1.4.2-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 9801
+Maintainer: Azure Container Upstream
+Description: CLI tool for spawning and running containers according to the OCI specification
+Homepage: https://github.com/opencontainers/runc
+Conflicts: runc, runc-io
+Depends: libc6 (>= 2.38), libseccomp2 (>= 2.5.0)
+Provides: runc (= 1.4.2)
+Replaces: runc (<= 1.4.2), runc-io (<= 1.4.2)
+SHA256: 7e5e7db0c5c8c43b0d0159b175d5acb34f9f218ddd3a7b3fd138913604887b79
+Size: 3229990
+Filename: pool/main/m/moby-runc/moby-runc_1.4.2-ubuntu24.04u1_amd64.deb
+
+Package: intune-portal
+Version: 1.2604.13-noble
+Architecture: amd64
+Section: utils
+Priority: optional
+Installed-Size: 28102
+Maintainer: Microsoft
+Description: Microsoft Intune
+ Microsoft Intune helps organizations manage access to corporate apps, data, and
+ resources. Microsoft Intune is the app that lets you, as an employee of your
+ company, securely access those resources.
+ .
+ Before you can use this app, make sure your IT admin has set up your work
+ account. Your company must also have a subscription to Microsoft Intune.
+ .
+ Microsoft Intune helps simplify the tasks you need to do for work:
+ .
+ - Enroll your device to access corporate resources, including Office, email,
+ and OneDrive for Business.
+ - Sign in to corporate resources with company-issued certificates.
+ - View and manage your enrolled devices – and wipe them if they get lost or
+ stolen.
+ - Get help directly from your IT department through available contact
+ information.
+ .
+ A note about Intune: every organization has different access requirements, and
+ will use Intune in ways that they determine will best manage their information.
+ Some functionality might be unavailable in certain countries. If you have
+ questions about how this app is being used within your organization, your
+ company’s IT administrator should have those answers for you. Microsoft, your
+ network provider, and your device’s manufacturer do not know how Intune will
+ be used by your organization.
+Depends: gnome-keyring (>= 3.36), libatk1.0-0t64 (>= 1.12.4), libc6 (>= 2.34), libc6 (>= 2.39), libcurl4t64 (>= 7.16.2), libdbus-1-3 (>= 1.9.14), libglib2.0-0t64 (>= 2.70.0), libgtk-3-0t64 (>= 3.13.7), libgtk-3-0t64 (>= 3.21.4), libjavascriptcoregtk-4.1-0, libp11-kit0 (>= 0.25.0), libpam-pwquality (>= 1.4.0-2), libpam0g (>= 0.99.7.1), libpango-1.0-0 (>= 1.14.0), libsecret-1-0 (>= 0.7), libsoup-3.0-0 (>= 2.4.0), libsqlite3-0 (>= 3.7.14), libssl3t64 (>= 3.0.0), libstdc++6 (>= 12), libsystemd0, libuuid1 (>= 2.16), libwebkit2gtk-4.1-0 (>= 2.39.90), libx11-6, microsoft-identity-broker (>= 3.0.1), zlib1g (>= 1:1.2.0)
+Recommends: microsoft-edge-stable (>= 102)
+SHA256: 90cbe24378d5e5eb78b56ac107172f0615ac0e0de4232020457bb6c48a65aef3
+Size: 7039246
+Filename: pool/main/i/intune-portal/intune-portal_1.2604.13-noble_amd64.deb
+
+Package: jcd
+Version: 1.0.2
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals jcd (Jump Change Directory)
+ jcd (Jump Change Directory) is a Sysinternals Rust-based command-line tool that provides enhanced directory
+ navigation with substring matching and smart selection. It's like the cd command, but with superpowers!
+License: MIT
+SHA256: d49b918680d71d7e266f153e04f6b326c00f3d1de87e5ee5eb07ebccf62bbcd1
+Size: 732122
+Filename: pool/main/j/jcd/jcd_1.0.2_amd64.deb
+
+Package: ig
+Version: 0.45.0-ubuntu24.04u17
+Architecture: amd64
+Section: -
+Installed-Size: 189752
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: e6b29035d408ae3535a02f61c30ef4327496471d7880961a90cccf111e9f6c82
+Size: 46137548
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u17_amd64.deb
+
+Package: ig
+Version: 0.48.0-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: d7be403bf85fa991faa76f2564258bd1a7072e1500117f5d34fe5a6ff43a63a1
+Size: 45459338
+Filename: pool/main/i/ig/ig_0.48.0-ubuntu24.04u15_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u16
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 94038e0483f7fcf77d7838f16257fe67d6fdeb5e6389eb2749f6fcb835ed4b38
+Size: 45476076
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u16_amd64.deb
+
+Package: ig
+Version: 0.49.0-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 186445
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: b8d9b9bd606c657a26141f879d507e48a1d66c47687a39010252f1c2732582dd
+Size: 45725832
+Filename: pool/main/i/ig/ig_0.49.0-ubuntu24.04u15_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u17
+Architecture: amd64
+Section: -
+Installed-Size: 89685
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 41ffeff31f7a408401c765c9fb71ad7ea7182299c5c934f62f183b4263eed2fe
+Size: 21556490
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u17_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.0-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: c792301d5e0bedd59ca0f449495ea245ae030bf76eef7b1d0259ec3fc152fe42
+Size: 21439768
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.0-ubuntu24.04u15_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u16
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 1ca14b88fc4f101fafb9387e758a9a686cd0ca4c735a19c07d185ff635473a35
+Size: 21421660
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u16_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.49.0-ubuntu24.04u14
+Architecture: amd64
+Section: -
+Installed-Size: 87152
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 84bc522149597d01e52d2162bf93449f4d484ec6991da718f5168197711664db
+Size: 21396760
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.49.0-ubuntu24.04u14_amd64.deb
+
+Package: containerd-accelerated-container-image
+Version: 1.4.1-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 61507
+Maintainer: Azure Container Upstream
+Description: Containerd snapshotter for overlaybd image format
+Homepage: https://github.com/containerd/accelerated-container-image
+Depends: libc6 (>= 2.34), libssl3
+SHA256: d3a51f1686c56e3c80c8f7be1f88a4b4ed507cb3b922654f5bb278baaeda0f91
+Size: 19422470
+Filename: pool/main/c/containerd-accelerated-container-image/containerd-accelerated-container-image_1.4.1-ubuntu24.04u1_amd64.deb
+
+Package: containerd-accelerated-container-image
+Version: 1.4.2-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 61503
+Maintainer: Azure Container Upstream
+Description: Containerd snapshotter for overlaybd image format
+Homepage: https://github.com/containerd/accelerated-container-image
+Depends: libc6 (>= 2.34), libssl3
+SHA256: d18ad13174245a103181345b2149a321a690b74122645761215d941cfe70d685
+Size: 19423990
+Filename: pool/main/c/containerd-accelerated-container-image/containerd-accelerated-container-image_1.4.2-ubuntu24.04u1_amd64.deb
+
+Package: containerd-accelerated-container-image
+Version: 1.4.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 63066
+Maintainer: Azure Container Upstream
+Description: Containerd snapshotter for overlaybd image format
+Homepage: https://github.com/containerd/accelerated-container-image
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 819f7154e681e30c98db864213346f375218867d43bf1f4d76f0e595d8b4958b
+Size: 19833402
+Filename: pool/main/c/containerd-accelerated-container-image/containerd-accelerated-container-image_1.4.3-ubuntu24.04u1_amd64.deb
+
+Package: containerd-overlaybd
+Version: 1.0.16-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 27581
+Maintainer: Azure Container Upstream
+Description: Block-level image format for containers based on TCMU
+Homepage: https://github.com/containerd/overlaybd
+Depends: libaio1t64 (>= 0.3.93), libc6 (>= 2.38), libcurl4t64 (>= 7.16.3), libext2fs2t64 (>= 1.43), libnl-3-200 (>= 3.2.27), libnl-genl-3-200 (>= 3.2.21), libssl3t64 (>= 3.0.0), zlib1g (>= 1:1.2.2.4), libext2fs2, libssl3, libzstd1
+SHA256: fabbe7c12bb521e6c422756781ddb4cc7211c745dbfe1fa2e9ec1c458d594e57
+Size: 3524974
+Filename: pool/main/c/containerd-overlaybd/containerd-overlaybd_1.0.16-ubuntu24.04u1_amd64.deb
+
+Package: aznfs
+Version: 0.3.40
+Architecture: amd64
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: cd84b4be895efab009322b32fbc7ee11dd4c0334cf8db3d608147c23b0edb0f9
+Size: 9423280
+Filename: pool/main/a/aznfs/aznfs_0.3.40_amd64.deb
+
+Package: sysmonforlinux
+Version: 1.5.2
+Architecture: amd64
+Installed-Size: 58934
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: A system monitor based on eBPF, ported from Windows, that outputs events to Syslog
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), libssl-dev, sysinternalsebpf (>= 1.6.0)
+SHA256: 5de200adb6cc3a03b772394f0019119817048db6c7bbd235d6f776e459c4cf9f
+Size: 4233730
+Filename: pool/main/s/sysmonforlinux/sysmonforlinux_1.5.2_amd64.deb
+
+Package: sysinternalsebpf
+Version: 1.6.0
+Architecture: amd64
+Installed-Size: 22072
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: A shared library and code library for making eBPF programs.
+ SysinternalsEBPF is a shared library that provides control over
+ eBPF programs, and an eBPF code library that eBPF programs can include to
+ interact with the library.
+Depends: libc6 (>= 2.26), libelf1 (>= 0.131), libglib2.0-0 (>= 2.12.0), libjson-glib-1.0-0 (>= 0.13.2), zlib1g (>= 1:1.2.3.3)
+SHA256: 19279a69fee81e23929ecccd89f5608bc5005b0427ccb28246b994e57cfc311a
+Size: 807630
+Filename: pool/main/s/sysinternalsebpf/sysinternalsebpf_1.6.0_amd64.deb
+
+Package: procdump
+Version: 3.5.1
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals process dump utility
+ ProcDump is a command-line utility whose primary purpose is monitoring an application
+ for various resources and generating crash dumps during a spike that an administrator
+ or developer can use to determine the cause of the issue. ProcDump also serves as a
+ general process dump utility that you can embed in other scripts.
+Depends: zlib1g, gdb (>= 7.6.1)
+License: MIT
+SHA256: 27129af53ebcd0ffc9d018cc0864e54ef44b0c7b7c2ca779d0e5a8bf6ff5c639
+Size: 1454850
+Filename: pool/main/p/procdump/procdump_3.5.1_amd64.deb
+
+Package: procmon
+Version: 2.2.1
+Architecture: amd64
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: Sysinternals process monitor utility
+ Process Monitor (Procmon) is part of the Sysinternals suite of tools.  Procmon provides a convenient and efficient way for Linux developers to trace the syscall
+ activity on the system.
+Depends: sysinternalsebpf (>= 1.6.0), libelf1 (>= 0.0)
+License: MIT
+SHA256: e21937d3765946c8e6757f1676f77b04222f2b034f231e42f7f4a43aebab3cc4
+Size: 2684610
+Filename: pool/main/p/procmon/procmon_2.2.1_amd64.deb
+
+Package: aznfs
+Version: 0.3.41
+Architecture: amd64
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: 0e9334454377c01b1f7e911801b132e49cf1ef94e52113231991031ebac1842e
+Size: 29342286
+Filename: pool/main/a/aznfs/aznfs_0.3.41_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.8.0-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 56024
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.1-1), libcap2-bin
+SHA256: 2f1343a7cc9fbf3fa8481a6e8571004f38ae43a901e462c6afd9e24773f5ca11
+Size: 11885246
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.0-ubuntu24.04u8_amd64.deb
+
+Package: ig
+Version: 0.50.0-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 186574
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: c6e1e9bd5244058375682a51a6f4da7b61ae0f7a8ed649601e94f47d86de7c62
+Size: 45810580
+Filename: pool/main/i/ig/ig_0.50.0-ubuntu24.04u5_amd64.deb
+
+Package: ig
+Version: 0.50.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 186574
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 0e5ffd6dda63a32cf64816e5af7ae74ec4290075a870d74daeb31a349b36850a
+Size: 45775692
+Filename: pool/main/i/ig/ig_0.50.0-ubuntu24.04u6_amd64.deb
+
+Package: ig
+Version: 0.50.1-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 186574
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 05090d1ed7a4d16232db683e008c21b472c03d2fb53a132601dfe37c7da67aa1
+Size: 45830432
+Filename: pool/main/i/ig/ig_0.50.1-ubuntu24.04u5_amd64.deb
+
+Package: ig
+Version: 0.50.1-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 186574
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: b60f6034376679ae4f3641fc914b2ccaeff54d8e3963344eb0a08fb7816b48e9
+Size: 45828266
+Filename: pool/main/i/ig/ig_0.50.1-ubuntu24.04u6_amd64.deb
+
+Package: ig
+Version: 0.51.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 184178
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 215b6dbaf401aa2c3e1f45fe746b3b5a45bbc63544816d7326bee44cf00ce67d
+Size: 45100830
+Filename: pool/main/i/ig/ig_0.51.0-ubuntu24.04u6_amd64.deb
+
+Package: ig
+Version: 0.51.0-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 184178
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 09fb7da7c8ccec154d8d6499a4f61dee5337aa30466fab77f4b21e4862b893ed
+Size: 44852938
+Filename: pool/main/i/ig/ig_0.51.0-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.35.0-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 5b9017797edf5966b7246179444261701031f9075045f7bb740cf38000b59102
+Size: 34515964
+Filename: pool/main/k/kubectl/kubectl_1.35.0-ubuntu24.04u5_amd64.deb
+
+Package: kubectl
+Version: 1.35.1-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 7d24b4a81181cc487dc725ac95ce9015099e9fbce5144ba6e763de81e8d81093
+Size: 34483366
+Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u4_amd64.deb
+
+Package: kubectl
+Version: 1.35.2-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 3f3c3680c46742324643c4959568748262bee2a54649e87df021c04f328f90aa
+Size: 34483474
+Filename: pool/main/k/kubectl/kubectl_1.35.2-ubuntu24.04u3_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.50.0-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 87208
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 107d32a8d4036f5530bf9a9c6f198794ca252d889190ba4626fd43311bf8e4cd
+Size: 21458616
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.50.0-ubuntu24.04u5_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.50.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 87208
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 1186d8e59ab85e1be6c9a56db9711abf0173f6edea4d9f8878556e43256aef2a
+Size: 21457602
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.50.0-ubuntu24.04u6_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.50.1-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 87208
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 8accf5458a42e4bcbe06aa146ca2c52bab00c13f10ccf6684d4ffce8102b21d6
+Size: 21456754
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.50.1-ubuntu24.04u5_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.50.1-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 87208
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 8cb59e06acb171d0ab2c7ccf4b216cd9419e05e42395a2f018c7a98d00f56468
+Size: 21459256
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.50.1-ubuntu24.04u6_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 85910
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 0c4d92c7994635f9c4a71362615849b2518786831312dfabc27b0fbada94e990
+Size: 21066396
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.0-ubuntu24.04u6_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.0-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 85910
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6063611446ef3548252d06046a409e387a21f1bea4579fd847a2e4ce8ca199d8
+Size: 21065206
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.0-ubuntu24.04u7_amd64.deb
+
+Package: moby-cli
+Version: 29.4.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 31780
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 041a5fa7a03ab2e22fc7d1a044515f09780f0f7b75b6ac0cc218f96119e5d6cf
+Size: 8550890
+Filename: pool/main/m/moby-cli/moby-cli_29.4.3-ubuntu24.04u1_amd64.deb
+
+Package: moby-engine
+Version: 29.4.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 92972
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.34), libnftables1 (>= 1.0.2), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: ed573bde27d80830b25518d74e5a38611449a53bb9878092ee7ac967e9c15f70
+Size: 23790880
+Filename: pool/main/m/moby-engine/moby-engine_29.4.3-ubuntu24.04u1_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.6.0-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 55565
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.4.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.4.1-1), libcap2-bin
+SHA256: fe055bc02f4a7a3ea01d4bd7b3da48ee5e27c35dfba15c2f8dc3acd0af99aed2
+Size: 11735456
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.6.0-ubuntu24.04u12_amd64.deb
+
+Package: aznfs
+Version: 0.3.42
+Architecture: amd64
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: f73089b59de3532417c6677aad03c708496683b524162be1a799f6226420b520
+Size: 9423266
+Filename: pool/main/a/aznfs/aznfs_0.3.42_amd64.deb
+
+Package: azurelustre-csi
+Version: 0.4.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 64753
+Maintainer: Azure Container Upstream
+Description: This driver allows Kubernetes to access Azure Lustre file system.
+Homepage: https://github.com/kubernetes-sigs/azurelustre-csi-driver
+Depends: libc6 (>= 2.34), ca-certificates, curl, gpg, iproute2, kmod, libssl3
+SHA256: 4e4765e2cdf4b3976125516de188bfab2e6a95da5ea5c8268c26e969f7efb648
+Size: 13187314
+Filename: pool/main/a/azurelustre-csi/azurelustre-csi_0.4.0-ubuntu24.04u6_amd64.deb
+
+Package: libmsquic
+Version: 2.5.8
+Architecture: amd64
+Section: default
+Priority: optional
+Maintainer: Microsoft QUIC Team <quicdev@microsoft.com>
+Description: Microsoft implementation of the IETF QUIC protocol
+Homepage: https://github.com/microsoft/msquic
+Conflicts: libmsquic-debug
+Depends: libssl3t64, libnuma1, libxdp1, libnl-route-3-200
+Provides: libmsquic
+Vendor: Microsoft
+License: MIT
+SHA256: 6924004076ba8a9498976df1eae5a527841d47fffddc04c701b9f8fa77390628
+Size: 2898550
+Filename: pool/main/libm/libmsquic/libmsquic_2.5.8_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u17
+Architecture: amd64
+Section: -
+Installed-Size: 185224
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 1a0b9e16abb639ac71c10b233370a5f1bfc46cffa86652f69b2fb947289d8194
+Size: 45474606
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u17_amd64.deb
+
+Package: ig
+Version: 0.51.0-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 184178
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: e056ba255ca7cce43099316e40482fd215f8c4469ce2e2c334ef0880444df993
+Size: 44852696
+Filename: pool/main/i/ig/ig_0.51.0-ubuntu24.04u8_amd64.deb
+
+Package: ig
+Version: 0.51.1-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 184209
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: b235e9b32161b43955f6b7dfba3167057f0feb83b395b83fe5ed95da9aa5e268
+Size: 44843880
+Filename: pool/main/i/ig/ig_0.51.1-ubuntu24.04u4_amd64.deb
+
+Package: ig
+Version: 0.52.0-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 192033
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: a804d58174ae30998f8e83e9bff9a2f5668d0dd177859a46b4733f602315abbb
+Size: 46433384
+Filename: pool/main/i/ig/ig_0.52.0-ubuntu24.04u2_amd64.deb
+
+Package: kubectl
+Version: 1.33.0-ubuntu24.04u11
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: cc024bce75850201831c3a37bfa960505bae4f1ce14c90e68ea143f036c9279e
+Size: 35350494
+Filename: pool/main/k/kubectl/kubectl_1.33.0-ubuntu24.04u11_amd64.deb
+
+Package: kubectl
+Version: 1.33.11-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 181965
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 17f464d668b1e17bbeb28a5144d813cd38853c4500e59376ae21480ca6b19732
+Size: 35521664
+Filename: pool/main/k/kubectl/kubectl_1.33.11-ubuntu24.04u2_amd64.deb
+
+Package: kubectl
+Version: 1.33.2-ubuntu24.04u10
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: c80f41e57bee5a36721e6daee1f09f141c6174dde4696ad62ebc79424df2e6ad
+Size: 35346516
+Filename: pool/main/k/kubectl/kubectl_1.33.2-ubuntu24.04u10_amd64.deb
+
+Package: kubectl
+Version: 1.34.2-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 181387
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: f4cf3e71286041249b3cf935a41528f38056ed9967a1bbe0993c2098170e8d07
+Size: 35469510
+Filename: pool/main/k/kubectl/kubectl_1.34.2-ubuntu24.04u5_amd64.deb
+
+Package: kubectl
+Version: 1.34.3-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 181387
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 36400526993f94fc963ac35dff4c86fbc7beb18fa737edf39d69b01974348ab0
+Size: 35469090
+Filename: pool/main/k/kubectl/kubectl_1.34.3-ubuntu24.04u5_amd64.deb
+
+Package: kubectl
+Version: 1.34.7-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 181543
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 29e44d2fc04c1712c05e74e69b381172c4caabea5cc0e0142fef112eb244dbaf
+Size: 35506236
+Filename: pool/main/k/kubectl/kubectl_1.34.7-ubuntu24.04u2_amd64.deb
+
+Package: kubectl
+Version: 1.35.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 547f56419de3bb2bc1365a9ffb2da6be154e814cd1d182144c6c800ac129fc13
+Size: 34515830
+Filename: pool/main/k/kubectl/kubectl_1.35.0-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.35.1-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 48b0b319bc4c08015af362e7babd37d71fe43bac68adee40e9edc5b2fa3d80e1
+Size: 34483626
+Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u5_amd64.deb
+
+Package: kubectl
+Version: 1.35.2-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: bb6b240529c04cc61c69518ead11777dedaee128cfd45f3d683e275295bf1f2d
+Size: 34483896
+Filename: pool/main/k/kubectl/kubectl_1.35.2-ubuntu24.04u4_amd64.deb
+
+Package: kubectl
+Version: 1.35.4-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 176202
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 3b20897ea56eb38fca41f98e8dd6a362c02ee1cb231ce01866cff21d260158be
+Size: 34484604
+Filename: pool/main/k/kubectl/kubectl_1.35.4-ubuntu24.04u2_amd64.deb
+
+Package: kubectl
+Version: 1.36.0-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 178407
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 4582b3e9078abfc3520084741c1306ad8db3895d1364f2790f0537095f6e1599
+Size: 34883828
+Filename: pool/main/k/kubectl/kubectl_1.36.0-ubuntu24.04u3_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u17
+Architecture: amd64
+Section: -
+Installed-Size: 87123
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 7068bc1da8bd7956be612cf2810836b823e53eea32157f79c919e87f97f30289
+Size: 21422060
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u17_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.0-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 85910
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 64f9a9db28bc1b581e4bc1d7d4cd17d9821967d3a6b93e30b47ad98e7c50fb39
+Size: 21023928
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.0-ubuntu24.04u8_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.1-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 85921
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 2a543aa65913ec668059ec4f8fb09b7dcb7ec6fc25f0a76b142f209077bd8e94
+Size: 21069094
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.1-ubuntu24.04u4_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.52.0-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 86034
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: bc303454f63b0197ec250f78eb84817159352db5ab610b8aea4bc6bd8ae61b53
+Size: 21108064
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.52.0-ubuntu24.04u2_amd64.deb
+
+Package: kubernetes-coredns
+Version: 1.13.2-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 76329
+Maintainer: Azure Container Upstream
+Description: CoreDNS is a DNS server/forwarder, that chains plugins. Each plugin performs a (DNS) function.
+Homepage: https://github.com/coredns/coredns
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 53ad2c5f24049cbc0e7c7a1ef4e528050b4f68227f5eb2b90a41e0fd443fff00
+Size: 16976558
+Filename: pool/main/k/kubernetes-coredns/kubernetes-coredns_1.13.2-ubuntu24.04u8_amd64.deb
+
+Package: msft-golang
+Version: 1.25.10-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 228368
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.25.10)
+SHA256: 5ae57b412a7f7ea73171cb63493f6d9c1b20a068204f4d6b3481722bda36ff66
+Size: 51985628
+Filename: pool/main/m/msft-golang/msft-golang_1.25.10-ubuntu24.04u1_amd64.deb
+
+Package: msft-golang
+Version: 1.26.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 258383
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.26.3)
+SHA256: 6ca06905ead59df08138f1bb858779711bfb9350c22f3a960eb8973391c2a8eb
+Size: 60002610
+Filename: pool/main/m/msft-golang/msft-golang_1.26.3-ubuntu24.04u1_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.0-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 16829
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 04c42266619b81808472ac2f96e6796d5046423e168c19981578797b13d225b0
+Size: 5355456
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.0-ubuntu24.04u5_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.2-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 16833
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 2400bbcd9d59cf17882b198b7b68e07ba2a4839740b2b466575a7625f1aa2b17
+Size: 5352664
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.2-ubuntu24.04u5_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.11.0-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 16993
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 11a160ccb4a4161290ff02357ba8eff5af9c8c7ad9f62d551523dd8b07970382
+Size: 5402926
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.11.0-ubuntu24.04u2_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.11.1-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 16993
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: b418ec5477a1d4c5ace4fcb14d83b50b3d82e678353c6b33699d829568d7a921
+Size: 5398818
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.11.1-ubuntu24.04u2_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.9.1-ubuntu24.04u15
+Architecture: amd64
+Section: -
+Installed-Size: 16871
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 1526dc69d1c436ac9608b1a7bdeb170d9f97ff534438cec5b5f17887f4a464af
+Size: 5390792
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.9.1-ubuntu24.04u15_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.23-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 72618
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 305a80ed006371ee7858a8474a66d391fd6646731be14b8c99653811cd4f25d7
+Size: 18268776
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.23-ubuntu24.04u1_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.24-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 72618
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 2d69f1deb82f93fe1d91952227e1e15246e6842cc3bfa474d1ae7c65e11edd0b
+Size: 18268720
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.24-ubuntu24.04u1_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.25-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 72614
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: f0036989fe48ac442162d9a04ed58e2828307a579db48e145a06258c34f4ef4f
+Size: 18275614
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.25-ubuntu24.04u1_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.25-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 72675
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 24589b05437bbc40d69d51407dbcbeb08fa11e2242d2a62597982aaab8054e0f
+Size: 18286386
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.25-ubuntu24.04u2_amd64.deb
+
+Package: jaz
+Version: 0.0.0~preview+20260511.1
+Architecture: amd64
+Section: default
+Priority: extra
+Installed-Size: 10177
+Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
+Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
+Homepage: https://learn.microsoft.com/java/jaz/overview
+License: EULA
+SHA256: 7bb197a4219a431ef5eb78b6031fd9add9c12b27e35c2a4672f3e9980e3fd31c
+Size: 4174732
+Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260511.1_amd64.deb
+
+Package: aznfs
+Version: 0.3.43
+Architecture: amd64
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: 1aa86ca51f3e51961da3710465190405ce61479734a676563378269c31c35bc3
+Size: 9423220
+Filename: pool/main/a/aznfs/aznfs_0.3.43_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.8.1-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 56064
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.2-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.2-1), libcap2-bin
+SHA256: d6343f2241494e4aba58ead19547a49cc91846158d7e229029a2e6d01a47c588
+Size: 11893420
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.1-ubuntu24.04u8_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.6.0-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 55601
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.4.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.4.1-1), libcap2-bin
+SHA256: 59e9acefee1e2ebeac2707f7e7bd473c0b2177969d91d3ef2618014d444422c4
+Size: 11740194
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.6.0-ubuntu24.04u13_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.7.1-ubuntu24.04u11
+Architecture: amd64
+Section: -
+Installed-Size: 55587
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.4.2-1), datacenter-gpu-manager-4-proprietary (= 1:4.4.2-1), libcap2-bin
+SHA256: c10c1a36c973320102f9d0acf6c2c6f2714b063e88facab2e59792d7b339640a
+Size: 11746970
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.7.1-ubuntu24.04u11_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.8.0-ubuntu24.04u9
+Architecture: amd64
+Section: -
+Installed-Size: 56024
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.1-1), libcap2-bin
+SHA256: ae312b65e8212b24e2422d80d5cc19aa40c3f65ce9bfa71e883a9ced78a4e978
+Size: 11885090
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.0-ubuntu24.04u9_amd64.deb
+
+Package: ig
+Version: 0.45.0-ubuntu24.04u18
+Architecture: amd64
+Section: -
+Installed-Size: 189752
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: cbc4252c0704cf1932451de7b43acb009e0f216e596a5e1be9e7a529f98b0a35
+Size: 46099166
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u18_amd64.deb
+
+Package: ig
+Version: 0.45.0-ubuntu24.04u19
+Architecture: amd64
+Section: -
+Installed-Size: 189864
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: b0e9ff077a288f9fe1ec8231082fe65923be9c473e0070ce8c463ca553cfd6a9
+Size: 46132394
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u19_amd64.deb
+
+Package: kubectl
+Version: 1.30.100-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 156693
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/aks-lts/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: fd777943f6f62b4496ec3509438d6adedd34f51d6b5bdee9c7407a2b3b272a12
+Size: 32630748
+Filename: pool/main/k/kubectl/kubectl_1.30.100-ubuntu24.04u8_amd64.deb
+
+Package: kubectl
+Version: 1.31.100-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 172721
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/aks-lts/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 54446b9d46e7e9aa7a4e5742f71d2b8e6b874fd8dad678557583b016c237f0cb
+Size: 34366846
+Filename: pool/main/k/kubectl/kubectl_1.31.100-ubuntu24.04u5_amd64.deb
+
+Package: kubectl
+Version: 1.34.3-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 181391
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 60d174bc530a3273c043622fd14712b06e1847d24e4e63d7a8a0d2889c798099
+Size: 35479266
+Filename: pool/main/k/kubectl/kubectl_1.34.3-ubuntu24.04u6_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u18
+Architecture: amd64
+Section: -
+Installed-Size: 89685
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: c21a28e1f955349069962db633ab783f67b7d98ed8425b9dff7f0ce1cbb6b1ef
+Size: 21843728
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u18_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u19
+Architecture: amd64
+Section: -
+Installed-Size: 89745
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: a767ee2f41a279ab4bf670db16f69b1b73bef7dde711896b7d4f73ddbad4bb0b
+Size: 21568260
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u19_amd64.deb
+
+Package: kubernetes-coredns
+Version: 1.13.2-ubuntu24.04u9
+Architecture: amd64
+Section: -
+Installed-Size: 76381
+Maintainer: Azure Container Upstream
+Description: CoreDNS is a DNS server/forwarder, that chains plugins. Each plugin performs a (DNS) function.
+Homepage: https://github.com/coredns/coredns
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 9ef2b4770a36f30176513604f2a91c5af1d4a546c716a3297888c1d3f24d03f5
+Size: 16988278
+Filename: pool/main/k/kubernetes-coredns/kubernetes-coredns_1.13.2-ubuntu24.04u9_amd64.deb
+
+Package: kubernetes-coredns
+Version: 1.14.3-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 75257
+Maintainer: Azure Container Upstream
+Description: CoreDNS is a DNS server/forwarder, that chains plugins. Each plugin performs a (DNS) function.
+Homepage: https://github.com/coredns/coredns
+Depends: libc6 (>= 2.34), libssl3
+SHA256: beb8b741931d751be36950f2bd40bf0df3c2ca94167ac6dd6fdf67648d8bcb9a
+Size: 17701504
+Filename: pool/main/k/kubernetes-coredns/kubernetes-coredns_1.14.3-ubuntu24.04u1_amd64.deb
+
+Package: kubernetes-coredns
+Version: 1.14.3-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 75257
+Maintainer: Azure Container Upstream
+Description: CoreDNS is a DNS server/forwarder, that chains plugins. Each plugin performs a (DNS) function.
+Homepage: https://github.com/coredns/coredns
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 9a198c2f9fae165dbf0aca01fc50146408f8145ab8e5ecc508c11238b1c1c012
+Size: 17701492
+Filename: pool/main/k/kubernetes-coredns/kubernetes-coredns_1.14.3-ubuntu24.04u2_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.0-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 16845
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: f390d1ffee03ba1e269a9b618544ad205917c69c1998d5f3e5f64360be2b6f10
+Size: 5360032
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.0-ubuntu24.04u6_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.1-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 16833
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: aff88b98243219f12781dd8e3df3b747f9719086a7989e3f2bc36c9e8bdf3935
+Size: 5352602
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.1-ubuntu24.04u5_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.2-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 16849
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: c9a0e3b6eb9f4fd0b20732fce9289893656cc10016ed372d9e1b47b79f57cb1c
+Size: 5358498
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.2-ubuntu24.04u6_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.11.1-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 17013
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 063e8bd27dd1018f98db56cefb231f2551dff1b3e014712167d97d15fc48614c
+Size: 5408674
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.11.1-ubuntu24.04u3_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.9.1-ubuntu24.04u16
+Architecture: amd64
+Section: -
+Installed-Size: 16887
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: b8cd21d18958b4a7e29f384c4fc4e99be890ac6f0e17d4f415a219fceff1e41c
+Size: 5396744
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.9.1-ubuntu24.04u16_amd64.deb
+
+Package: nvidia-device-plugin
+Version: 0.17.4-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 124811
+Maintainer: Azure Container Upstream
+Description: NVIDIA device plugin for Kubernetes
+Homepage: https://github.com/NVIDIA/k8s-device-plugin
+Conflicts: k8s-device-plugin
+Depends: libc6 (>= 2.34), openssl
+Provides: k8s-device-plugin (= 0.17.4)
+Replaces: k8s-device-plugin (<< 0.17.4)
+SHA256: 074b1581c89959edb8acced2995e6cb5dd6a2d9dd9ef3bda151ab600c0b40714
+Size: 30396618
+Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.17.4-ubuntu24.04u12_amd64.deb
+
+Package: nvidia-device-plugin
+Version: 0.19.0-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 124734
+Maintainer: Azure Container Upstream
+Description: NVIDIA device plugin for Kubernetes
+Homepage: https://github.com/NVIDIA/k8s-device-plugin
+Conflicts: k8s-device-plugin
+Depends: libc6 (>= 2.34), openssl
+Provides: k8s-device-plugin (= 0.19.0)
+Replaces: k8s-device-plugin (<< 0.17.4)
+SHA256: 713103b74f9ee5f7fa93c65a80faf39f939e868e6b58b0ff987bfd1c36909469
+Size: 30196902
+Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.19.0-ubuntu24.04u3_amd64.deb
+
+Package: nvidia-device-plugin
+Version: 0.19.1-ubuntu24.04u2
+Architecture: amd64
+Section: -
+Installed-Size: 124442
 Maintainer: Azure Container Upstream
 Description: NVIDIA device plugin for Kubernetes
 Homepage: https://github.com/NVIDIA/k8s-device-plugin
@@ -20244,22 +22001,739 @@ Conflicts: k8s-device-plugin
 Depends: libc6 (>= 2.34), openssl
 Provides: k8s-device-plugin (= 0.19.1)
 Replaces: k8s-device-plugin (<< 0.17.4)
-SHA256: ed30158d994887de56855fbf2e46a223e9afeff82377ec1f3a3d71c8613e24da
-Size: 30162270
-Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.19.1-ubuntu24.04u1_amd64.deb
+SHA256: 1e9559baf545ecca247d1dd8303fcbba626bfe18457d616f0b4313928736783d
+Size: 30182012
+Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.19.1-ubuntu24.04u2_amd64.deb
 
-Package: msodbcsql17
-Version: 17.11.1.1-1
+Package: aznfs
+Version: 3.0.16
 Architecture: amd64
-Section: database
-Installed-Size: 0
-Maintainer: Microsoft SQL ODBC Team <mssql-odbc@microsoft.com>
-Description: ODBC Driver for Microsoft(R) SQL Server(R)
- This package provides an ODBC driver that can connect to Microsoft(R)
- SQL Server(R).
-Conflicts: libodbc1-utf16, odbcinst-utf16, odbcinst1debian2-utf16, unixodbc-utf16
-Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1), odbcinst
-SHA256: 11cbdc0bc3f67eb9c1932f98dd1eab19d487efa772a53c3b2e73c192147da5c0
-Size: 776046
-Filename: pool/main/m/msodbcsql17/msodbcsql17_17.11.1.1-1_amd64.deb
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: fd4872d9a7b4c22acc9a4cf1e8d7f93a2f53c0f11a588c08e33d5464e8e41493
+Size: 9402066
+Filename: pool/main/a/aznfs/aznfs_3.0.16_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.32.17-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40909
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 7a3eb92812483df9cd1d4635f4e24d778d44ea750749091a68016f3bc3200487
+Size: 9261412
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.32.17-ubuntu24.04u1_amd64.deb
+
+Package: ig
+Version: 0.52.0-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 192149
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6b6c4ae302afeee028293bb8eee6df661b2d9ddb9f6342aad264dfe73f940650
+Size: 46498712
+Filename: pool/main/i/ig/ig_0.52.0-ubuntu24.04u3_amd64.deb
+
+Package: kubectl
+Version: 1.28.101-ubuntu24.04u11
+Architecture: amd64
+Section: -
+Installed-Size: 152265
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/aks-lts/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 544fbf824b48c41a3ec6704b6c0ffcb778b6e807e98b527b8a8159af4ed36b13
+Size: 31900604
+Filename: pool/main/k/kubectl/kubectl_1.28.101-ubuntu24.04u11_amd64.deb
+
+Package: blobfuse2-preview
+Version: 2.5.4~preview.3
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 37370
+Maintainer: Blobfuse v-Team <blobfusevteam@microsoft.com>
+Description: An user-space filesystem for interacting with Azure Storage
+Homepage: https://github.com/Azure/azure-storage-fuse
+Depends: fuse3
+Vendor: none
+License: unknown
+SHA256: 634b7f1aa7524b567f5e03bf2470f77f8903edeaeeff5a7894bc6691757e3b9c
+Size: 18462016
+Filename: pool/main/b/blobfuse2-preview/blobfuse2-preview_2.5.4~preview.3_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.33.12-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 40536
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: dd1dc083b3977276ee35807c9f9a24229201e9d5551b6fe0765b795e8b731db2
+Size: 9185044
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.33.12-ubuntu24.04u1_amd64.deb
+
+Package: jaz
+Version: 0.0.0~preview+20260512.1
+Architecture: amd64
+Section: default
+Priority: extra
+Installed-Size: 10177
+Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
+Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
+Homepage: https://learn.microsoft.com/java/jaz/overview
+License: EULA
+SHA256: 15bf99eb1852b33898abb9ddac096d66a395518aa9405fd2491dd76f0865786e
+Size: 4174738
+Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260512.1_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.34.9-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 41018
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 382faff5b459b74e3fea0c30cff2b9b160dab8d228084447e3e3c4974bb20349
+Size: 9302558
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.34.9-ubuntu24.04u1_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.35.4-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 41025
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: d734d1a15a9c496a4958c594f74e2d3f2d5901eec6207eedda565a52945963d7
+Size: 9309994
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.35.4-ubuntu24.04u1_amd64.deb
+
+Package: azure-acr-credential-provider
+Version: 1.36.0-ubuntu24.04u1
+Architecture: amd64
+Section: -
+Installed-Size: 27665
+Maintainer: Azure Container Upstream
+Description: The acr credential provider is responsible for providing ACR credentials for kubelet
+Homepage: https://github.com/kubernetes-sigs/cloud-provider-azure
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 937a47c25b0cb176fc16996780daff58b900ed9aca1541c4c214f0dbf162a66c
+Size: 6731638
+Filename: pool/main/a/azure-acr-credential-provider/azure-acr-credential-provider_1.36.0-ubuntu24.04u1_amd64.deb
+
+Package: kubectl
+Version: 1.33.7-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: a1342667265af9048cb551fd1f3ba7591b6c15149430c20b9c0e12dbf0705630
+Size: 35359440
+Filename: pool/main/k/kubectl/kubectl_1.33.7-ubuntu24.04u7_amd64.deb
+
+Package: dcgm-exporter
+Version: 4.8.0-ubuntu24.04u10
+Architecture: amd64
+Section: -
+Installed-Size: 56064
+Maintainer: Azure Container Upstream
+Description: Exports Nvidia GPU Metrics to Prometheus
+Homepage: https://github.com/NVIDIA/dcgm-exporter
+Depends: libc6 (>= 2.34), datacenter-gpu-manager-4-core (= 1:4.5.1-1), datacenter-gpu-manager-4-proprietary (= 1:4.5.1-1), libcap2-bin
+SHA256: b378e76be40a7dc87408611afa87c0287b1de2fdf50d8b1e83f1a47dd4ff1ad3
+Size: 11891912
+Filename: pool/main/d/dcgm-exporter/dcgm-exporter_4.8.0-ubuntu24.04u10_amd64.deb
+
+Package: ig
+Version: 0.45.0-ubuntu24.04u20
+Architecture: amd64
+Section: -
+Installed-Size: 189864
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 5bb02cfdd5268bcc172b6ba7476c8f4723c0711eb8c7159d4a22a55c299f31bd
+Size: 46129466
+Filename: pool/main/i/ig/ig_0.45.0-ubuntu24.04u20_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u18
+Architecture: amd64
+Section: -
+Installed-Size: 185406
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 8dd622deadfbe3ef8f824d2483e89b6baf22f630a52a9449f98387b0abbf7dce
+Size: 45465610
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u18_amd64.deb
+
+Package: ig
+Version: 0.48.1-ubuntu24.04u19
+Architecture: amd64
+Section: -
+Installed-Size: 185406
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: dfc8ad3c9a5a5f3929f1f41a115b32ec71a2f1572421722bb542157ea15142db
+Size: 45474284
+Filename: pool/main/i/ig/ig_0.48.1-ubuntu24.04u19_amd64.deb
+
+Package: ig
+Version: 0.51.0-ubuntu24.04u9
+Architecture: amd64
+Section: -
+Installed-Size: 184286
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 46317a5009206f0be9e95c53ae63995ecec9668c97d975d6072d408ffbbcfb79
+Size: 45119270
+Filename: pool/main/i/ig/ig_0.51.0-ubuntu24.04u9_amd64.deb
+
+Package: ig
+Version: 0.51.1-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 184325
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 7d37e98a32c97ed1aa9b97771f720a5959fbfcdc0c900ec848c36662e8c91ae7
+Size: 45101810
+Filename: pool/main/i/ig/ig_0.51.1-ubuntu24.04u5_amd64.deb
+
+Package: ig
+Version: 0.52.0-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 192149
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: d2c2f70f3406ba6fbfc066d2e4f1e73de7cfa3bebc936139b8601f657562b63c
+Size: 46497874
+Filename: pool/main/i/ig/ig_0.52.0-ubuntu24.04u4_amd64.deb
+
+Package: k8s-device-plugin
+Version: 0.17.3-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 124750
+Maintainer: Azure Container Upstream
+Description: NVIDIA device plugin for Kubernetes
+Homepage: https://github.com/NVIDIA/k8s-device-plugin
+Depends: libc6 (>= 2.34), openssl
+SHA256: ec9dd870237449623b5dd5e98a0cbbc2701c4e634d7b9528d7418968f62f9d6a
+Size: 30393606
+Filename: pool/main/k/k8s-device-plugin/k8s-device-plugin_0.17.3-ubuntu24.04u13_amd64.deb
+
+Package: kubectl
+Version: 1.27.103-ubuntu24.04u9
+Architecture: amd64
+Section: -
+Installed-Size: 149002
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/aks-lts/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: b7195006897bbaaff534d6ed50e9e26344203e2bae290b568b614fb178f017c7
+Size: 31197474
+Filename: pool/main/k/kubectl/kubectl_1.27.103-ubuntu24.04u9_amd64.deb
+
+Package: kubectl
+Version: 1.29.100-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 153068
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/aks-lts/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 24bca45787b82ae9d17195878a630a0432f2708f5da522a2a20453918d77e097
+Size: 32157478
+Filename: pool/main/k/kubectl/kubectl_1.29.100-ubuntu24.04u8_amd64.deb
+
+Package: kubectl
+Version: 1.33.0-ubuntu24.04u12
+Architecture: amd64
+Section: -
+Installed-Size: 181189
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: dc80444d52436fe60b9f44876ca47b3c38a2dce8a16da25c885fd3d0b49a1174
+Size: 35341580
+Filename: pool/main/k/kubectl/kubectl_1.33.0-ubuntu24.04u12_amd64.deb
+
+Package: kubectl
+Version: 1.33.10-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 181197
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: e9cc8e4bb4b10d312e6123892ac8436357bb4ce4a70ec628441619c9ff36976b
+Size: 35353940
+Filename: pool/main/k/kubectl/kubectl_1.33.10-ubuntu24.04u3_amd64.deb
+
+Package: kubectl
+Version: 1.33.3-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 27060813757c5115c498625ace7b73e8a983499e0a4e1d4ce1f038029fac1d58
+Size: 35357828
+Filename: pool/main/k/kubectl/kubectl_1.33.3-ubuntu24.04u8_amd64.deb
+
+Package: kubectl
+Version: 1.33.5-ubuntu24.04u9
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 9ac9b2317c2be871fb87a3e6b97e607e8429ce568e28ddda1c7411cfb6ec1c72
+Size: 35361272
+Filename: pool/main/k/kubectl/kubectl_1.33.5-ubuntu24.04u9_amd64.deb
+
+Package: kubectl
+Version: 1.33.8-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: bda5b8607cb72151fad9c9f9002fb26e0eb1a32cb3731f3163a5e41b15573d4a
+Size: 35360194
+Filename: pool/main/k/kubectl/kubectl_1.33.8-ubuntu24.04u4_amd64.deb
+
+Package: kubectl
+Version: 1.33.9-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 035bd2f395b0ce43a9d60ed21c836e5cd5271781583c236cd3b81c4d76ca0f4d
+Size: 35359694
+Filename: pool/main/k/kubectl/kubectl_1.33.9-ubuntu24.04u3_amd64.deb
+
+Package: kubectl
+Version: 1.33.6-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 181181
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: f5eb6b739874570868044e85d6b3ddf8140082ad44d16ab499635ee5749a9f5b
+Size: 35359618
+Filename: pool/main/k/kubectl/kubectl_1.33.6-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.34.0-ubuntu24.04u11
+Architecture: amd64
+Section: -
+Installed-Size: 181395
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 280b56a5dd7bada6f6becfd559fd5d709cc26c600256f78e16928ff00d33295e
+Size: 35471702
+Filename: pool/main/k/kubectl/kubectl_1.34.0-ubuntu24.04u11_amd64.deb
+
+Package: kubectl
+Version: 1.34.1-ubuntu24.04u10
+Architecture: amd64
+Section: -
+Installed-Size: 181395
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 3ecfbde398ee3822e816c9f6cf2f72d49245c7b94094ef0a29a07b67bea30e54
+Size: 35480720
+Filename: pool/main/k/kubectl/kubectl_1.34.1-ubuntu24.04u10_amd64.deb
+
+Package: kubectl
+Version: 1.34.2-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 181391
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: c12abc4ff800ba379be938af4662a5a10dced4252514a12afee6d1746cdd1a72
+Size: 35482628
+Filename: pool/main/k/kubectl/kubectl_1.34.2-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.34.4-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 181391
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: e2f8fb0d988512379455abf80cd63ad666fbcbcf0ff4d665b05e7e9c29babc06
+Size: 35471904
+Filename: pool/main/k/kubectl/kubectl_1.34.4-ubuntu24.04u4_amd64.deb
+
+Package: kubectl
+Version: 1.34.5-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 181391
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 47f29a163d8f897fb4d4f2dc36ab0088242bc9ea1824b2d060b619fa162c5261
+Size: 35471998
+Filename: pool/main/k/kubectl/kubectl_1.34.5-ubuntu24.04u3_amd64.deb
+
+Package: kubectl
+Version: 1.35.0-ubuntu24.04u7
+Architecture: amd64
+Section: -
+Installed-Size: 176214
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: e8511a953e42c2c8c146a733b39a061d9d9f86bac743af2144659619f8535973
+Size: 34520330
+Filename: pool/main/k/kubectl/kubectl_1.35.0-ubuntu24.04u7_amd64.deb
+
+Package: kubectl
+Version: 1.35.1-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 176214
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 6a5eac3872897c583098c8ce1f371c2081a6563e9d34d14080b0b67deed9b077
+Size: 34520478
+Filename: pool/main/k/kubectl/kubectl_1.35.1-ubuntu24.04u6_amd64.deb
+
+Package: kubectl
+Version: 1.35.2-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 176214
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 7ae0cf017124442fd7657e652c2c0b7ad4ae75cb6107a246cd176e67930d0ed2
+Size: 34487314
+Filename: pool/main/k/kubectl/kubectl_1.35.2-ubuntu24.04u5_amd64.deb
+
+Package: kubectl
+Version: 1.35.4-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 176214
+Maintainer: Azure Container Upstream
+Description: Command-line utility for interacting with a Kubernetes cluster
+Homepage: https://github.com/kubernetes/kubernetes
+Conflicts: kubernetes, kubernetes-client
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 40b4889cab3cd598dae6c00330408f246cfbc215349e2adb71622b023aee2767
+Size: 34490728
+Filename: pool/main/k/kubectl/kubectl_1.35.4-ubuntu24.04u3_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.45.0-ubuntu24.04u20
+Architecture: amd64
+Section: -
+Installed-Size: 89745
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: f0ada21c5b023a9109a468c9cac128924201bb83f7d97967db78997ef96a0bfa
+Size: 21821010
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.45.0-ubuntu24.04u20_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u18
+Architecture: amd64
+Section: -
+Installed-Size: 87216
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: f91f6cb6287fe2a2a930e2f398941932b8089d286fbac9c533fed6fd9bbe036f
+Size: 21453236
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u18_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.48.1-ubuntu24.04u19
+Architecture: amd64
+Section: -
+Installed-Size: 87216
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.38), libssl3
+SHA256: 5d16317379f2ad90932ef1391ef15b220766f3aaa92b1091c2e5c1885bc599a8
+Size: 21408698
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.48.1-ubuntu24.04u19_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.0-ubuntu24.04u9
+Architecture: amd64
+Section: -
+Installed-Size: 85962
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 5764c5114e9434438d5cff73cbb30058d9017f043e650fa273f6b29582aeadde
+Size: 21070738
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.0-ubuntu24.04u9_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.51.1-ubuntu24.04u5
+Architecture: amd64
+Section: -
+Installed-Size: 85973
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 354e3dc46d0e5c461d09a88de3d1209e80c3122b3c0efc741d28fbc3344e9264
+Size: 21084912
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.51.1-ubuntu24.04u5_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.52.0-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 86086
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 870d2ab2ddd1d56e1e9b3a04b1fe6170629ac5af974acf1d2b0204b8c6762d7a
+Size: 21123458
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.52.0-ubuntu24.04u3_amd64.deb
+
+Package: kubectl-gadget
+Version: 0.52.0-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 86086
+Maintainer: Azure Container Upstream
+Description: Inspektor Gadget is a set of tools and framework for data collection and system inspection on Kubernetes clusters and Linux hosts using eBPF.
+Homepage: https://www.inspektor-gadget.io
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 02a486fbf5143f5d8ffd8b1b9e0a6bc6c3cabca8fe34b121ba0683a065b063f4
+Size: 21123932
+Filename: pool/main/k/kubectl-gadget/kubectl-gadget_0.52.0-ubuntu24.04u4_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.10.1-ubuntu24.04u6
+Architecture: amd64
+Section: -
+Installed-Size: 16849
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: b82083e884bee48a0c2d24f524870fb02eaa6082804b872b9d0d79646779d584
+Size: 5358640
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.10.1-ubuntu24.04u6_amd64.deb
+
+Package: node-exporter-kubernetes
+Version: 1.11.0-ubuntu24.04u3
+Architecture: amd64
+Section: -
+Installed-Size: 17013
+Maintainer: Azure Container Upstream
+Description: Node exporter.
+Homepage: https://github.com/prometheus/node_exporter
+Depends: libc6 (>= 2.34), libssl3
+SHA256: b5d8d238c6818e876a83a1c96bc86d9723b1451b914ca16f9480e0c0ac26197e
+Size: 5408742
+Filename: pool/main/n/node-exporter-kubernetes/node-exporter-kubernetes_1.11.0-ubuntu24.04u3_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.20-ubuntu24.04u18
+Architecture: amd64
+Section: -
+Installed-Size: 74812
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 77d011b8cec19afa7527482ae1cbc5ee5a5ad96aec4b7851e9d90e134280440d
+Size: 18421978
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.20-ubuntu24.04u18_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.21-ubuntu24.04u13
+Architecture: amd64
+Section: -
+Installed-Size: 74821
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 3dfdd8e62abc78cbab67a59ef2ecafff75ce6b8f476157e52b78498d76529953
+Size: 18430234
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.21-ubuntu24.04u13_amd64.deb
+
+Package: node-problem-detector-kubernetes
+Version: 0.8.22-ubuntu24.04u10
+Architecture: amd64
+Section: -
+Installed-Size: 72674
+Maintainer: Azure Container Upstream
+Description: Node problem detector.
+Homepage: https://github.com/kubernetes/node-problem-detector
+Depends: libc6 (>= 2.34), libssl3
+SHA256: 91905bb0d27231f3622f198d839c8d046df67b6e84f501b5f008209600b2de4d
+Size: 18297550
+Filename: pool/main/n/node-problem-detector-kubernetes/node-problem-detector-kubernetes_0.8.22-ubuntu24.04u10_amd64.deb
+
+Package: nvidia-device-plugin
+Version: 0.18.1-ubuntu24.04u8
+Architecture: amd64
+Section: -
+Installed-Size: 128227
+Maintainer: Azure Container Upstream
+Description: NVIDIA device plugin for Kubernetes
+Homepage: https://github.com/NVIDIA/k8s-device-plugin
+Conflicts: k8s-device-plugin
+Depends: libc6 (>= 2.34), openssl
+Provides: k8s-device-plugin (= 0.18.1)
+Replaces: k8s-device-plugin (<< 0.17.4)
+SHA256: e7689812d4d4556ff614f87a3b0651e9db6c6da769ea8167774649b538086675
+Size: 31030826
+Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.18.1-ubuntu24.04u8_amd64.deb
+
+Package: nvidia-device-plugin
+Version: 0.18.2-ubuntu24.04u4
+Architecture: amd64
+Section: -
+Installed-Size: 128235
+Maintainer: Azure Container Upstream
+Description: NVIDIA device plugin for Kubernetes
+Homepage: https://github.com/NVIDIA/k8s-device-plugin
+Conflicts: k8s-device-plugin
+Depends: libc6 (>= 2.34), openssl
+Provides: k8s-device-plugin (= 0.18.2)
+Replaces: k8s-device-plugin (<< 0.17.4)
+SHA256: 19e7c03d2d445113a1b4e8efdc6fb003152563a1a2c466592ad484214d1ac8ce
+Size: 31032624
+Filename: pool/main/n/nvidia-device-plugin/nvidia-device-plugin_0.18.2-ubuntu24.04u4_amd64.deb
+
+Package: azcmagent
+Version: 1.64.03414.1079
+Architecture: amd64
+Maintainer: Azure Connected Machine Agent <hybridrpft@microsoft.com>
+Description: Arc enabled servers instance metadata service
+Depends: curl, systemd, passwd
+Package-Type: deb
+SHA256: 2c0449bb1ee5924cf43fe896902361f8900f8fa33552f1f402756041dd498902
+Size: 84807610
+Filename: pool/main/a/azcmagent/azcmagent_1.64.03414.1079_amd64.deb
+
+Package: azcopy
+Version: 10.32.4
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 58001
+Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
+Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
+Homepage: https://github.com/Azure/azure-storage-azcopy
+Vendor: none
+License: unknown
+SHA256: a7912de37ddbeb7d7c87a43de514d1d1a3bd632da9d898179e4c4b9f8c023f9b
+Size: 24074066
+Filename: pool/main/a/azcopy/azcopy_10.32.4_amd64.deb
+
+Package: aznfs
+Version: 0.3.45
+Architecture: amd64
+Priority: required
+Origin: Microsoft
+Maintainer: Azure Storage XNFS Team <aznfs@microsoft.com>
+Description: Mount helper program for Azure Blob NFS mounts, providing a secure communication channel for Azure File NFS mounts, and supporting the Turbo NFS client
+Homepage: https://github.com/Azure/AZNFS-mount/blob/main/README.md
+Depends: bash, procps, conntrack, iptables, bind9-host, iproute2, util-linux, nfs-common, netcat, sysvinit-utils, whiptail, stunnel4, net-tools, libasan6
+SHA256: 795375a23a402e8ae2d6761561f63892893c296bb529b130bba3a12906887328
+Size: 29342838
+Filename: pool/main/a/aznfs/aznfs_0.3.45_amd64.deb
 
