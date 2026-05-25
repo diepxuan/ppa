@@ -631,3 +631,31 @@ SHA256: 6924004076ba8a9498976df1eae5a527841d47fffddc04c701b9f8fa77390628
 Size: 2898550
 Filename: pool/main/libm/libmsquic/libmsquic_2.5.8_amd64.deb
 
+Package: aadsshlogin
+Version: 1.0.034210009
+Architecture: amd64
+Section: utils
+Priority: optional
+Maintainer: Yancho Yanev <yyanev@microsoft.com>
+Description: AAD NSS, PAM and certhandler extensions
+ This package installs NSS, PAM and certhandler extensions to allow SSH login for AAD users.
+Conflicts: aadlogin
+Depends: libc6 (>= 2.38), libcurl4t64 (>= 7.16.2), libpam0g (>= 0.99.7.1), libselinux1 (>= 3.1~), libsemanage2 (>= 2.0.32), libssl3t64 (>= 3.0.0), libuuid1 (>= 2.16), passwd, openssh-server (>=6.9)
+Pre-Depends: grep, sed
+SHA256: 46c5e925a8d62c06561fff689510641e770ca5c4eccdceb712e66a949f7c7a10
+Size: 150084
+Filename: pool/main/a/aadsshlogin/aadsshlogin_1.0.034210009_amd64.deb
+
+Package: aadsshlogin-selinux
+Version: 1.0.034210009
+Architecture: amd64
+Section: utils
+Priority: optional
+Maintainer: Yancho Yanev <yyanev@microsoft.com>
+Description: Selinux configuration for AAD NSS and PAM extensions.
+Conflicts: aadlogin-selinux
+Depends: policycoreutils (>=3.5-2), selinux-utils, selinux-policy-default
+SHA256: 696e77795e122c824dce8b6a89cf3d3b570519b2bb98840b1b865d75f1f60f0c
+Size: 2220
+Filename: pool/main/a/aadsshlogin-selinux/aadsshlogin-selinux_1.0.034210009_amd64.deb
+
