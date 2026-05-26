@@ -19,37 +19,37 @@ Description: DiepXuan Microsoft APT repository setup
 
 Package: ductn
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~24.04
+Version: 5.6.0+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 13763
-Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof
+Installed-Size: 13845
+Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof, tmux
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn_5.5.2+ubuntu~24.04+ubuntu~24.04_amd64.deb
-Size: 13885928
-SHA256: 33e2252384a1b98cefa316ae4b398f812013fe21b5d43b148e27ccfd2e086164
-SHA1: 36874b4c29210ee4131b1aa0d9937125e09d9b5a
-MD5sum: f4c26b5939ba1bbafbf892fb3009f417
+Filename: pool/main/d/diepxuan/ductn_5.6.0+ubuntu~24.04_amd64.deb
+Size: 13960416
+SHA256: 23482bcdcae324cb8ba34777ac5f0df252b048ea1e73ea82dade3af3d41c6f3e
+SHA1: 2252febed7e376ea9328ea6cd6ff04c4f5b55b5b
+MD5sum: 169f88c6e047443d0e77ebd09b764249
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: ductn-ll
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~24.04
+Version: 5.6.0+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 14
+Installed-Size: 15
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn-ll_5.5.2+ubuntu~24.04+ubuntu~24.04_amd64.deb
-Size: 6162
-SHA256: ea0e3618958d854f31a93f7169b5d183d126624eba1911edad0bf1d939d85c49
-SHA1: 1ee8cd9811e9dcc77370baacf5000524cf3e2529
-MD5sum: 6ac1c6c8b40c4b16ebd17490370e3692
+Filename: pool/main/d/diepxuan/ductn-ll_5.6.0+ubuntu~24.04_amd64.deb
+Size: 6436
+SHA256: 619383238cababb4f5c382968669f2ee27a7f6ed60831428a4560aa6a54a20ba
+SHA1: f1919b0b8cdcfd6b64b6b01b4975af7ff7f87fb2
+MD5sum: 561ab8e1dfbea10805570f5208626c52
 Description: A package to provide the 'll' command (like ls -l).
   This package provides the 'll' command, which behaves like 'ls -l'.
   If the user already has an alias for 'll', it will use that instead.
@@ -58,38 +58,38 @@ Description: A package to provide the 'll' command (like ls -l).
 
 Package: lar
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~24.04
+Version: 5.6.0+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 14
+Installed-Size: 15
 Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.5.2+ubuntu~24.04+ubuntu~24.04_amd64.deb
-Size: 6144
-SHA256: 33baa455d67ae152394db8fa13974ec91186b4bf4987e5ac089355df7fdca5a8
-SHA1: 69db41b481ae0dec32bdefde727a0c733ec01688
-MD5sum: 269d56b20bb8ab824b43aa5854dc30e6
+Filename: pool/main/d/diepxuan/lar_5.6.0+ubuntu~24.04_amd64.deb
+Size: 6422
+SHA256: cf9a69eaa6e1b1ab2748565550771b0486f6cbf109f582d89cc979c8cbd89a66
+SHA1: 8804e8c46ce40e2e96ab8255e3170419a9c8d017
+MD5sum: 70988ccab8d4e41acb9a5d79ab240add
 Description: Laravel support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: m2
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~24.04
+Version: 5.6.0+ubuntu~24.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 14
+Installed-Size: 15
 Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.5.2+ubuntu~24.04+ubuntu~24.04_amd64.deb
-Size: 6138
-SHA256: 9b603c9af54534428addd439f88f44f8afe26083b1e1a78754e30666b6939d63
-SHA1: 21e0b8325e83bf1f128f2485ca72427c62f3c529
-MD5sum: fb81d711fb908c3be02b1d72a44e5929
+Filename: pool/main/d/diepxuan/m2_5.6.0+ubuntu~24.04_amd64.deb
+Size: 6416
+SHA256: 5a11c1bc34f266d00f7432251dec8c60ee1cda879d9eb4f1e3eb7d31d6f2a569
+SHA1: b8861be7689d1ae228292b3e7d75ce1985ba4066
+MD5sum: e9d57bcd1c31c3da5aa202fac1d2b1cc
 Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
