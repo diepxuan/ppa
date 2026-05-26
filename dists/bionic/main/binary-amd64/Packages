@@ -38,37 +38,37 @@ Description: DiepXuan Microsoft APT repository setup
 
 Package: ductn
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~18.04
+Version: 5.6.0+ubuntu~18.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 8840
-Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof
+Installed-Size: 8881
+Depends: ductn-ll, net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof, tmux
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn_5.5.2+ubuntu~24.04+ubuntu~18.04_amd64.deb
-Size: 8853780
-SHA256: 49aa2fac770e1fac384642821586ca3a40273cd6f46e25217f8a52aa3ca089a2
-SHA1: 0ea3b287d0e9a5484a3a39c79973460ace69a783
-MD5sum: ac5f9b665019a7de0168e75bfec70d4c
+Filename: pool/main/d/diepxuan/ductn_5.6.0+ubuntu~18.04_amd64.deb
+Size: 8885080
+SHA256: 1eb439a61d08e90b9b527241af1117abcad03e92bb3a17b05be502706d66bd4b
+SHA1: 72597c3361708a2ce7019cbef2f7780ab3505d2c
+MD5sum: 8670fa34bb5dc3a65fb54d1a9e0a9efe
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: ductn-ll
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~18.04
+Version: 5.6.0+ubuntu~18.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 14
+Installed-Size: 15
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn-ll_5.5.2+ubuntu~24.04+ubuntu~18.04_amd64.deb
-Size: 6384
-SHA256: 650b646176bd23898d3d158ce0dabc9f4cfcc57902aca6fce41e976f0db1c233
-SHA1: dff73a9dba626ad4e64339a1a595067610c7ab36
-MD5sum: 1685e1f79141debc939888912e07a06d
+Filename: pool/main/d/diepxuan/ductn-ll_5.6.0+ubuntu~18.04_amd64.deb
+Size: 6668
+SHA256: b2c11d72b38263a54bc359b240019cbce231a884863e355264289c40b62b65e2
+SHA1: c11b00c9542a43a7a858d338b03455f19b61381f
+MD5sum: 81b1a7bcd48af3fc8083f945c01cd656
 Description: A package to provide the 'll' command (like ls -l).
   This package provides the 'll' command, which behaves like 'ls -l'.
   If the user already has an alias for 'll', it will use that instead.
@@ -77,38 +77,38 @@ Description: A package to provide the 'll' command (like ls -l).
 
 Package: lar
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~18.04
+Version: 5.6.0+ubuntu~18.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 14
+Installed-Size: 15
 Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.5.2+ubuntu~24.04+ubuntu~18.04_amd64.deb
-Size: 6344
-SHA256: f8774d63b8393946a8e9116f75b5530503ccf00f8a140252479ee2c3b8966b84
-SHA1: 3ae23ba4383d32220ed38f1dec1a491f74b8207f
-MD5sum: 3585bb96954df791882b7b03d015d661
+Filename: pool/main/d/diepxuan/lar_5.6.0+ubuntu~18.04_amd64.deb
+Size: 6640
+SHA256: 31fdddbddd266edfca0a28a277a384a0e230cae321f4c44322807a1d64fbf7c9
+SHA1: e848f184179be0d293ced9fe50e486734d920e05
+MD5sum: 1ddbaaa1b0db184ee9c3e6f8843de257
 Description: Laravel support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
 Package: m2
 Source: diepxuan
-Version: 5.5.2+ubuntu~24.04+ubuntu~18.04
+Version: 5.6.0+ubuntu~18.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 14
+Installed-Size: 15
 Depends: ductn
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.5.2+ubuntu~24.04+ubuntu~18.04_amd64.deb
-Size: 6352
-SHA256: 53ba4734611e1f09bc620b7717533064b53907ffbdbd2206c00c7114d61804c2
-SHA1: 7be33235dbf8cbe9144d0f0237354b141ab4221b
-MD5sum: 56d0834ca588c35632a31e6ade7d5d39
+Filename: pool/main/d/diepxuan/m2_5.6.0+ubuntu~18.04_amd64.deb
+Size: 6640
+SHA256: ce1b23e784904e9f2fd30af7a6fd81dc3d4e3303d807ce5baa0a8f74a38ff876
+SHA1: db2552f894c65a3f31b3b12f71034cb3f36a519f
+MD5sum: 7ef088628b9aa3a17aaa443c25a211c7
 Description: Magento 2 support package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
