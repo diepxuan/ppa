@@ -1,34 +1,14 @@
 # DiepXuan PPA
 
-DiepXuan PPA là repository APT dùng để phát hành các package Debian/Ubuntu của DiepXuan.
+DiepXuan PPA là repository APT chính thức để phát hành các package Debian/Ubuntu của DiepXuan.
 
-Public repository:
+Repository public:
 
 ```text
 https://ppa.diepxuan.com
 ```
 
-## Package hiện có
-
-Repository này phục vụ các package nội bộ/extension như:
-
-- `ductn`
-- `management`
-- `diepxuan-archive-keyring`
-- `php-sqlsrv`
-- `php-pdo_sqlsrv`
-- `php-runkit7`
-
-Danh sách package thực tế phụ thuộc vào distro codename đang dùng.
-
-## Hệ điều hành hỗ trợ
-
-Repository được cấu hình theo codename Debian/Ubuntu, ví dụ:
-
-- Debian: `buster`, `bullseye`, `bookworm`, `trixie`
-- Ubuntu: `bionic`, `focal`, `jammy`, `noble`, `oracular`, `plucky`
-
-Script `install.sh` tự đọc codename từ `/etc/os-release` hoặc `/etc/lsb-release`.
+Mục tiêu của repo này là cung cấp một cách cài đặt ổn định, dễ kiểm tra và an toàn cho các package nội bộ, package hạ tầng và PHP extension cần dùng trong hệ sinh thái DiepXuan.
 
 ## Cài đặt nhanh
 
@@ -44,70 +24,77 @@ Hoặc dùng `wget`:
 wget -qO- https://ppa.diepxuan.com/install.sh | bash
 ```
 
-Chỉ cấu hình repository, không cài `ductn`:
+Nếu chỉ muốn thêm repository mà chưa cài package:
 
 ```bash
 curl -fsSL https://ppa.diepxuan.com/install.sh | bash -s -- --repository-only
 ```
 
-Sau đó có thể cài package thủ công:
+Sau đó cài package khi cần:
 
 ```bash
 sudo apt install ductn
 ```
 
-## GPG signing key
+## Package tiêu biểu
 
-APT repository được ký bằng key:
+Một số package được phát hành qua PPA này:
+
+- `ductn`
+- `management`
+- `diepxuan-archive-keyring`
+- `php-sqlsrv`
+- `php-pdo_sqlsrv`
+- `php-runkit7`
+
+Danh sách package khả dụng có thể khác nhau theo distro và codename.
+
+## Hệ điều hành hỗ trợ
+
+Repository được tổ chức theo Debian/Ubuntu codename.
+
+Ví dụ các codename đang được dùng:
+
+| Hệ điều hành | Codename |
+| --- | --- |
+| Debian 10 | `buster` |
+| Debian 11 | `bullseye` |
+| Debian 12 | `bookworm` |
+| Debian 13 | `trixie` |
+| Ubuntu 18.04 | `bionic` |
+| Ubuntu 20.04 | `focal` |
+| Ubuntu 22.04 | `jammy` |
+| Ubuntu 24.04 | `noble` |
+| Ubuntu 24.10 | `oracular` |
+| Ubuntu 25.04 | `plucky` |
+
+`install.sh` tự phát hiện codename từ `/etc/os-release` hoặc `/etc/lsb-release`.
+
+## Bảo mật repository
+
+APT repository được ký bằng GPG key sau:
 
 ```text
 Key ID:      7E0EC917A5074BD3
 Fingerprint: C8BD 5D6C 638E 8A11 9389 2926 7E0E C917 A507 4BD3
 ```
 
-Key public được tải từ:
+Installer sẽ:
 
-```text
-https://ppa.diepxuan.com/key.gpg
-```
+1. Tải public key từ `https://ppa.diepxuan.com/key.gpg`.
+2. Kiểm tra fingerprint của key tải về.
+3. Cài hoặc refresh keyring tại `/usr/share/keyrings/diepxuan.gpg`.
+4. Ghi APT source vào `/etc/apt/sources.list.d/diepxuan.list`.
+5. Chạy `apt-get update`.
 
-Keyring local được lưu tại:
+Điểm quan trọng: installer không chỉ kiểm tra file keyring có tồn tại hay không. Installer kiểm tra fingerprint thực tế để tránh lỗi key cũ hoặc sai key.
 
-```text
-/usr/share/keyrings/diepxuan.gpg
-```
+## Kiểm tra nhanh
 
-APT source được lưu tại:
-
-```text
-/etc/apt/sources.list.d/diepxuan.list
-```
-
-Dòng repository có dạng:
-
-```text
-deb [signed-by=/usr/share/keyrings/diepxuan.gpg] https://ppa.diepxuan.com <codename> main
-```
-
-Ví dụ với Debian 12 Bookworm:
-
-```text
-deb [signed-by=/usr/share/keyrings/diepxuan.gpg] https://ppa.diepxuan.com bookworm main
-```
-
-## Kiểm tra key thủ công
-
-Tải key và xem fingerprint:
+Kiểm tra key public:
 
 ```bash
 curl -fsSL https://ppa.diepxuan.com/key.gpg | gpg --show-keys --with-fingerprint --keyid-format long
-```
-
-Kết quả hợp lệ phải có:
-
-```text
-7E0EC917A5074BD3
-C8BD 5D6C 638E 8A11 9389 2926 7E0E C917 A507 4BD3
 ```
 
 Kiểm tra keyring đã cài trên máy:
@@ -116,62 +103,34 @@ Kiểm tra keyring đã cài trên máy:
 gpg --show-keys --with-fingerprint --keyid-format long /usr/share/keyrings/diepxuan.gpg
 ```
 
-Nếu fingerprint không đúng, chạy lại installer. Script sẽ tự refresh keyring sai hoặc cũ.
+Kiểm tra source list:
 
-## Hành vi của `install.sh`
+```bash
+cat /etc/apt/sources.list.d/diepxuan.list
+```
 
-`install.sh` thực hiện các bước:
+Ví dụ với Debian 12 Bookworm:
 
-1. Parse option `--repository-only` nếu có.
-2. Xác định distro codename.
-3. Cài `gnupg` bằng `apt-get` nếu hệ Debian/Ubuntu chưa có `gpg`.
-4. Tải public key từ `https://ppa.diepxuan.com/key.gpg`.
-5. Kiểm tra fingerprint key tải về phải đúng:
+```text
+deb [signed-by=/usr/share/keyrings/diepxuan.gpg] https://ppa.diepxuan.com bookworm main
+```
 
-   ```text
-   C8BD5D6C638E8A11938929267E0EC917A5074BD3
-   ```
+## Xử lý lỗi phổ biến
 
-6. Convert key sang keyring dạng dearmor.
-7. Kiểm tra keyring đang có tại `/usr/share/keyrings/diepxuan.gpg`.
-8. Nếu keyring thiếu, sai, hoặc cũ thì cài lại keyring mới.
-9. Ghi lại APT source vào `/etc/apt/sources.list.d/diepxuan.list`.
-10. Chạy `apt-get update`.
-11. Cài `ductn`, trừ khi dùng `--repository-only`.
-
-Điểm quan trọng: script không chỉ kiểm tra file keyring có tồn tại hay không. Script kiểm tra fingerprint thực tế để tránh lỗi:
+Nếu gặp lỗi:
 
 ```text
 NO_PUBKEY 7E0EC917A5074BD3
 ```
 
-## Sửa lỗi thường gặp
-
-### Lỗi `NO_PUBKEY 7E0EC917A5074BD3`
-
-Lỗi mẫu:
-
-```text
-W: An error occurred during the signature verification.
-GPG error: https://ppa.diepxuan.com bookworm InRelease:
-The following signatures couldn't be verified because the public key is not available:
-NO_PUBKEY 7E0EC917A5074BD3
-```
-
-Nguyên nhân thường gặp:
-
-- Máy có keyring cũ ở `/usr/share/keyrings/diepxuan.gpg`.
-- Keyring tồn tại nhưng không chứa fingerprint đúng.
-- File source list trỏ tới keyring khác.
-
-Cách xử lý khuyến nghị:
+Chạy lại installer ở chế độ chỉ cấu hình repository:
 
 ```bash
 curl -fsSL https://ppa.diepxuan.com/install.sh | bash -s -- --repository-only
 sudo apt-get update
 ```
 
-Nếu muốn reset thủ công:
+Nếu máy đang có keyring cũ, có thể reset thủ công:
 
 ```bash
 sudo rm -f /usr/share/keyrings/diepxuan.gpg
@@ -179,27 +138,18 @@ curl -fsSL https://ppa.diepxuan.com/install.sh | bash -s -- --repository-only
 sudo apt-get update
 ```
 
-### Kiểm tra source list
+Xem hướng dẫn chi tiết tại:
 
-```bash
-cat /etc/apt/sources.list.d/diepxuan.list
-```
+- `docs/INSTALL.md`
+- `docs/TROUBLESHOOTING.md`
 
-Kỳ vọng với Bookworm:
+## Tài liệu dành cho maintainer
 
-```text
-deb [signed-by=/usr/share/keyrings/diepxuan.gpg] https://ppa.diepxuan.com bookworm main
-```
+- `docs/INSTALL.md`: hướng dẫn cài đặt và kiểm tra repository.
+- `docs/TROUBLESHOOTING.md`: xử lý lỗi APT/GPG thường gặp.
+- `docs/MAINTAINER.md`: quy trình kiểm tra script và tài liệu trước khi phát hành.
 
-### Kiểm tra repository update
-
-```bash
-sudo apt-get update
-```
-
-Nếu không còn lỗi `NO_PUBKEY`, repository đã được cấu hình đúng.
-
-## Phát triển trong repo
+## Phát triển
 
 Kiểm tra syntax script:
 
@@ -219,4 +169,4 @@ Kỳ vọng:
 C8BD5D6C638E8A11938929267E0EC917A5074BD3
 ```
 
-Không push hoặc tạo PR trực tiếp nếu chưa được Sếp cho phép.
+Mọi thay đổi nên đi qua branch riêng, commit rõ ràng và PR để review trước khi merge.
