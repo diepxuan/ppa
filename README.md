@@ -124,19 +124,20 @@ Nếu fingerprint không đúng, chạy lại installer. Script sẽ tự refres
 
 1. Parse option `--repository-only` nếu có.
 2. Xác định distro codename.
-3. Tải public key từ `https://ppa.diepxuan.com/key.gpg`.
-4. Kiểm tra fingerprint key tải về phải đúng:
+3. Cài `gnupg` bằng `apt-get` nếu hệ Debian/Ubuntu chưa có `gpg`.
+4. Tải public key từ `https://ppa.diepxuan.com/key.gpg`.
+5. Kiểm tra fingerprint key tải về phải đúng:
 
    ```text
    C8BD5D6C638E8A11938929267E0EC917A5074BD3
    ```
 
-5. Convert key sang keyring dạng dearmor.
-6. Kiểm tra keyring đang có tại `/usr/share/keyrings/diepxuan.gpg`.
-7. Nếu keyring thiếu, sai, hoặc cũ thì cài lại keyring mới.
-8. Ghi lại APT source vào `/etc/apt/sources.list.d/diepxuan.list`.
-9. Chạy `apt-get update`.
-10. Cài `ductn`, trừ khi dùng `--repository-only`.
+6. Convert key sang keyring dạng dearmor.
+7. Kiểm tra keyring đang có tại `/usr/share/keyrings/diepxuan.gpg`.
+8. Nếu keyring thiếu, sai, hoặc cũ thì cài lại keyring mới.
+9. Ghi lại APT source vào `/etc/apt/sources.list.d/diepxuan.list`.
+10. Chạy `apt-get update`.
+11. Cài `ductn`, trừ khi dùng `--repository-only`.
 
 Điểm quan trọng: script không chỉ kiểm tra file keyring có tồn tại hay không. Script kiểm tra fingerprint thực tế để tránh lỗi:
 

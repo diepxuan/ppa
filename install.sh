@@ -39,10 +39,20 @@ run_as_sudo() {
     exit 1
 }
 
-require_command() {
-    local command_name="$1"
-    if ! command -v "$command_name" >/dev/null 2>&1; then
-        echo "Error: required command not found: $command_name" >&2
+ensure_gnupg() {
+    if command -v gpg >/dev/null 2>&1; then
+        return
+    fi
+
+    if [[ -f /etc/debian_version ]]; then
+        echo "Installing required dependency: gnupg"
+        run_as_sudo apt-get update
+        run_as_sudo apt-get install -y gnupg
+    fi
+
+    if ! command -v gpg >/dev/null 2>&1; then
+        echo "Error: required command not found: gpg" >&2
+        echo "Install gnupg and run this installer again." >&2
         exit 1
     fi
 }
@@ -155,8 +165,7 @@ SOURCES_LIST_PATH=${SOURCES_LIST_PATH:-"/etc/apt/sources.list.d/diepxuan.list"}
 EXPECTED_KEY_FINGERPRINT=${EXPECTED_KEY_FINGERPRINT:-"C8BD5D6C638E8A11938929267E0EC917A5074BD3"}
 CODENAME=${CODENAME:-$(detect_codename)}
 
-require_command gpg
-require_command gpgconf
+ensure_gnupg
 
 install_or_refresh_keyring
 
