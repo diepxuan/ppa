@@ -29952,6 +29952,124 @@ SHA256: 0ae4531a5c1a9826d73454e4753a75570486b98cdeebad2fa9be470a9f0655a5
 Size: 3988964
 Filename: pool/main/j/jaz/jaz_0.0.0~preview+20251114.2_amd64.deb
 
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.24.11-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 9068
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.24.11-debian11u1)
+Build-Ids: 00d0b7270c97c297fb6ecc8b36e223f249094bd7 2c5f69b96b222988b7e951d94ab0c72085c87918 311110afe49160bbbf5a44097059c242c2ae0434 3154f2bce054b1c51bf171683327f573309be624 36d84e2c9852f7f108a126ea1a0f9bb73034a5f8 396a904f9ae6c3c3bced3268ec91c7b3cd87c930 446636d891bb6261a771ebc1d05b8c29e811568b 5ae3f345bd5541513705e53eb3625652e67edb1b 5cadc0bd1bcae196ae7791dcb1fe4980ed5d2c3e 75b0377ee620a4a61b1f6bd1ddc265bc171c5b74 88591fd2e04a2e328305485b613e622d5213ed98 89fd3875dad2baed34a503275507ed1139346e3e 8e20f7b8dddc5aea35346e617d8ac6dc52efea5f 935a63bebfe21ee5d127413627ce05adcc4e3233 9e9263d15294b1e304a613081a0626f109eebffa ac5d13a207b525c72c8b8327a126b885fa8601a8 c4fe69a4a951c14a2e6aebdc1d9ffde3a3f941c2 d6abcbb067cbc930db4a001410dd1d98ebc4cc0c eae9d1be460e68f32c78f951aed8aff8b7ac1055 f722e65b1226fb645207eda4a3d167c42531e85b fd1d72eb34b0cdef96bba01afc0766e8a13e3297 ff931784ee45e0c54aefdcdea8fe82d6f830ff42
+Auto-Built-Package: debug-symbols
+SHA256: 4b9b375150c6efc02e3d0c858fefb74727f0533fe7f6683d33784f801f4964e6
+Size: 854898
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.24.11-debian11u1_amd64.deb
+
+Package: msft-golang
+Version: 1.25.5-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 228072
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.25.5)
+SHA256: a7cc8d7914ad9cfcdd8944c8857b0216a373ff8c77a3f9148f43732752043127
+Size: 49185226
+Filename: pool/main/m/msft-golang/msft-golang_1.25.5-debian11u1_amd64.deb
+
+Package: mdatp
+Version: 101.25092.0002
+Architecture: amd64
+Section: devel
+Priority: optional
+Installed-Size: 702521
+Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
+Description: Microsoft Defender (Production)
+   Microsoft Defender is a complete endpoint
+  security solution. It delivers preventative protection, post-breach
+ detection, automated investigation, and response.
+Depends: libc6 (>= 2.23)
+SHA256: c3c9f4384bd99866fcad3f82733448bbec2a2dfb8c49109fc501248255a9ceaf
+Size: 195655144
+Filename: pool/main/m/mdatp/mdatp_101.25092.0002_amd64.deb
+
+Package: moby-cli
+Version: 28.5.2-debian11u1
+Architecture: amd64
+Section: admin
+Priority: optional
+Installed-Size: 44265
+Maintainer: Microsoft <support@microsoft.com>
+Description: Docker container platform (client package)
+ Docker is a platform for developers and sysadmins to develop, ship, and run
+ applications. Docker lets you quickly assemble applications from components and
+ eliminates the friction that can come when shipping code. Docker lets you get
+ your code tested and deployed into production as fast as possible.
+ .
+ This package provides the "docker" client binary (and supporting files).
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2)
+Recommends: ca-certificates, git, moby-buildx, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 8846ec8c3e932012fe6181a020ccf4f6e149b72a5a220f02fc2be39dbfb07e54
+Size: 19395324
+Filename: pool/main/m/moby-cli/moby-cli_28.5.2-debian11u1_amd64.deb
+
+Package: moby-cli
+Version: 29.1.2-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 30692
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 4b1a9dd46604637fdaecabbad82725ab6d4db2fec62a6b52c3b41d9d51f36ae4
+Size: 7502174
+Filename: pool/main/m/moby-cli/moby-cli_29.1.2-debian11u1_amd64.deb
+
+Package: moby-cli-dbgsym
+Source: moby-cli
+Version: 29.1.2-debian11u2
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 11856
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-cli
+Depends: moby-cli (= 29.1.2-debian11u2)
+Build-Ids: 02baaf4f5180343285fb70487ecd5245ba121ade
+Auto-Built-Package: debug-symbols
+SHA256: eb4b63f876a28d491ec8fb2e2deda0b09540e0298513e4aadd3f983d3c3b2d57
+Size: 8865342
+Filename: pool/main/m/moby-cli/moby-cli-dbgsym_29.1.2-debian11u2_amd64.deb
+
+Package: moby-cli
+Version: 29.1.2-debian11u2
+Architecture: amd64
+Section: -
+Installed-Size: 30692
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 4d9db11d357c7af4c957e9613fc9f80b086e3ab6a4f96876a3792029d9d1c952
+Size: 7497078
+Filename: pool/main/m/moby-cli/moby-cli_29.1.2-debian11u2_amd64.deb
+
 Package: moby-buildx-dbgsym
 Source: moby-buildx
 Version: 0.30.1-debian11u1
@@ -29999,37 +30117,6 @@ Filename: pool/main/j/jaz/jaz_0.0.0~preview+20251126.1_amd64.deb
 
 Package: msft-golang-dbgsym
 Source: msft-golang
-Version: 1.24.11-debian11u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 9068
-Maintainer: Azure Container Upstream
-Description: debug symbols for msft-golang
-Depends: msft-golang (= 1.24.11-debian11u1)
-Build-Ids: 00d0b7270c97c297fb6ecc8b36e223f249094bd7 2c5f69b96b222988b7e951d94ab0c72085c87918 311110afe49160bbbf5a44097059c242c2ae0434 3154f2bce054b1c51bf171683327f573309be624 36d84e2c9852f7f108a126ea1a0f9bb73034a5f8 396a904f9ae6c3c3bced3268ec91c7b3cd87c930 446636d891bb6261a771ebc1d05b8c29e811568b 5ae3f345bd5541513705e53eb3625652e67edb1b 5cadc0bd1bcae196ae7791dcb1fe4980ed5d2c3e 75b0377ee620a4a61b1f6bd1ddc265bc171c5b74 88591fd2e04a2e328305485b613e622d5213ed98 89fd3875dad2baed34a503275507ed1139346e3e 8e20f7b8dddc5aea35346e617d8ac6dc52efea5f 935a63bebfe21ee5d127413627ce05adcc4e3233 9e9263d15294b1e304a613081a0626f109eebffa ac5d13a207b525c72c8b8327a126b885fa8601a8 c4fe69a4a951c14a2e6aebdc1d9ffde3a3f941c2 d6abcbb067cbc930db4a001410dd1d98ebc4cc0c eae9d1be460e68f32c78f951aed8aff8b7ac1055 f722e65b1226fb645207eda4a3d167c42531e85b fd1d72eb34b0cdef96bba01afc0766e8a13e3297 ff931784ee45e0c54aefdcdea8fe82d6f830ff42
-Auto-Built-Package: debug-symbols
-SHA256: 4b9b375150c6efc02e3d0c858fefb74727f0533fe7f6683d33784f801f4964e6
-Size: 854898
-Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.24.11-debian11u1_amd64.deb
-
-Package: msft-golang
-Version: 1.25.5-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 228072
-Maintainer: Azure Container Upstream
-Description: The Microsoft build of the Go toolset
-Homepage: https://github.com/microsoft/go
-Conflicts: golang
-Recommends: g++, gcc, libc6-dev, pkg-config
-Provides: golang (= 1.25.5)
-SHA256: a7cc8d7914ad9cfcdd8944c8857b0216a373ff8c77a3f9148f43732752043127
-Size: 49185226
-Filename: pool/main/m/msft-golang/msft-golang_1.25.5-debian11u1_amd64.deb
-
-Package: msft-golang-dbgsym
-Source: msft-golang
 Version: 1.25.5-debian11u1
 Architecture: amd64
 Section: debug
@@ -30059,22 +30146,6 @@ SHA256: d4c4eaaffeb5f48ea4476f4e464176ed8ca92c6857c5e8eba07fd7fe62157bcb
 Size: 49340338
 Filename: pool/main/m/msft-golang/msft-golang_1.24.11-debian11u1_amd64.deb
 
-Package: mdatp
-Version: 101.25092.0002
-Architecture: amd64
-Section: devel
-Priority: optional
-Installed-Size: 702521
-Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
-Description: Microsoft Defender (Production)
-   Microsoft Defender is a complete endpoint
-  security solution. It delivers preventative protection, post-breach
- detection, automated investigation, and response.
-Depends: libc6 (>= 2.23)
-SHA256: c3c9f4384bd99866fcad3f82733448bbec2a2dfb8c49109fc501248255a9ceaf
-Size: 195655144
-Filename: pool/main/m/mdatp/mdatp_101.25092.0002_amd64.deb
-
 Package: jaz
 Version: 0.0.0~preview+20251205.1
 Architecture: amd64
@@ -30088,29 +30159,6 @@ License: EULA
 SHA256: da982fb9e8c566cdf8c8b4fe4c6aba11ed0917eb907b9d475b2ba24da423ab2d
 Size: 3990412
 Filename: pool/main/j/jaz/jaz_0.0.0~preview+20251205.1_amd64.deb
-
-Package: moby-cli
-Version: 28.5.2-debian11u1
-Architecture: amd64
-Section: admin
-Priority: optional
-Installed-Size: 44265
-Maintainer: Microsoft <support@microsoft.com>
-Description: Docker container platform (client package)
- Docker is a platform for developers and sysadmins to develop, ship, and run
- applications. Docker lets you quickly assemble applications from components and
- eliminates the friction that can come when shipping code. Docker lets you get
- your code tested and deployed into production as fast as possible.
- .
- This package provides the "docker" client binary (and supporting files).
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.3.2)
-Recommends: ca-certificates, git, moby-buildx, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: 8846ec8c3e932012fe6181a020ccf4f6e149b72a5a220f02fc2be39dbfb07e54
-Size: 19395324
-Filename: pool/main/m/moby-cli/moby-cli_28.5.2-debian11u1_amd64.deb
 
 Package: moby-engine
 Version: 28.5.2-debian11u1
@@ -30146,22 +30194,6 @@ SHA256: a275aa9002db1b91068838c9f6e7b45c3a5afdbdd61294a5553af55d4407b3ad
 Size: 8864062
 Filename: pool/main/m/moby-cli/moby-cli-dbgsym_29.1.2-debian11u1_amd64.deb
 
-Package: moby-cli
-Version: 29.1.2-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 30692
-Maintainer: Azure Container Upstream
-Description: The docker client binary used for connecting to Docker
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.3.2)
-Recommends: moby-engine
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: 4b1a9dd46604637fdaecabbad82725ab6d4db2fec62a6b52c3b41d9d51f36ae4
-Size: 7502174
-Filename: pool/main/m/moby-cli/moby-cli_29.1.2-debian11u1_amd64.deb
-
 Package: moby-compose-dbgsym
 Source: moby-compose
 Version: 5.0.0-debian11u1
@@ -30192,112 +30224,6 @@ Recommends: moby-cli
 SHA256: 463056bbc62ff8b9f8f0a91b3888ca046fc0b91b6ae3a9baca96f52daf253059
 Size: 7543266
 Filename: pool/main/m/moby-compose/moby-compose_5.0.0-debian11u1_amd64.deb
-
-Package: moby-cli-dbgsym
-Source: moby-cli
-Version: 29.1.2-debian11u2
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 11856
-Maintainer: Azure Container Upstream
-Description: debug symbols for moby-cli
-Depends: moby-cli (= 29.1.2-debian11u2)
-Build-Ids: 02baaf4f5180343285fb70487ecd5245ba121ade
-Auto-Built-Package: debug-symbols
-SHA256: eb4b63f876a28d491ec8fb2e2deda0b09540e0298513e4aadd3f983d3c3b2d57
-Size: 8865342
-Filename: pool/main/m/moby-cli/moby-cli-dbgsym_29.1.2-debian11u2_amd64.deb
-
-Package: moby-cli
-Version: 29.1.2-debian11u2
-Architecture: amd64
-Section: -
-Installed-Size: 30692
-Maintainer: Azure Container Upstream
-Description: The docker client binary used for connecting to Docker
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.3.2)
-Recommends: moby-engine
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: 4d9db11d357c7af4c957e9613fc9f80b086e3ab6a4f96876a3792029d9d1c952
-Size: 7497078
-Filename: pool/main/m/moby-cli/moby-cli_29.1.2-debian11u2_amd64.deb
-
-Package: jaz
-Version: 0.0.0~preview+20251211.7
-Architecture: amd64
-Section: default
-Priority: extra
-Installed-Size: 9773
-Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
-Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
-Homepage: https://learn.microsoft.com/java/jaz/overview
-License: EULA
-SHA256: 47e532a18f7029ae6d0772ced081dd93ab1bd6789a58484ffa83196b619a0a37
-Size: 3999336
-Filename: pool/main/j/jaz/jaz_0.0.0~preview+20251211.7_amd64.deb
-
-Package: msodbcsql18
-Version: 18.6.1.1-1
-Architecture: amd64
-Section: database
-Installed-Size: 0
-Maintainer: Microsoft SQL ODBC Team <mssql-odbc@microsoft.com>
-Description: ODBC Driver for Microsoft(R) SQL Server(R)
- This package provides an ODBC driver that can connect to Microsoft(R)
- SQL Server(R).
-Conflicts: libodbc1-utf16, odbcinst-utf16, odbcinst1debian2-utf16, unixodbc-utf16
-Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1), odbcinst
-SHA256: cd217d3bf471d521dac6886456e6c758c21d4f84f88f7adf48ef672c70e57cb0
-Size: 794222
-Filename: pool/main/m/msodbcsql18/msodbcsql18_18.6.1.1-1_amd64.deb
-
-Package: mssql-tools18
-Version: 18.6.1.1-1
-Architecture: amd64
-Section: database
-Installed-Size: 0
-Maintainer: Microsoft SQL Tools Team <mssql-tools@microsoft.com>
-Description: Tools for Microsoft(R) SQL Server(R)
- This package provides tools for Microsoft(R) SQL Server(R).
-Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), msodbcsql18 (>= 18.0.0.0)
-SHA256: c90c16188a533576d0c3b0f4af82cb679edccd369e2626b928998918840c7787
-Size: 230638
-Filename: pool/main/m/mssql-tools18/mssql-tools18_18.6.1.1-1_amd64.deb
-
-Package: azure-functions-core-tools-4
-Version: 4.6.0-1
-Architecture: amd64
-Section: devel
-Priority: optional
-Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
-Description: Azure Function Core Tools v4
- The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
-Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
-Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
-Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
-Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
-SHA256: 3c7a6546c403734a371beabbbd0d91d82eb9799ca7f8b909af2d660c5333948b
-Size: 430795202
-Filename: pool/main/a/azure-functions-core-tools-4/azure-functions-core-tools-4_4.6.0-1_amd64.deb
-
-Package: azure-functions-core-tools
-Version: 4.6.0-1
-Architecture: amd64
-Section: devel
-Priority: optional
-Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
-Description: Azure Function Core Tools v4
- The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
-Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
-Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
-Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
-Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
-SHA256: 110db6d5616f73d4d19c0d93c2aa91704b9a2d8f4b3c229b562ac4da2605af9d
-Size: 430749346
-Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.6.0-1_amd64.deb
 
 Package: moby-cli-dbgsym
 Source: moby-cli
@@ -31103,6 +31029,22 @@ Size: 1160390
 Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.1.5-debian11u1_amd64.deb
 
 Package: moby-engine
+Version: 29.2.0-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 91522
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2), libnftables1 (>= 0.9.8), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: becb66d5f618ab355e564411ea7ce28642c7477cb14d53971f4fb11dbb21b09b
+Size: 21182098
+Filename: pool/main/m/moby-engine/moby-engine_29.2.0-debian11u1_amd64.deb
+
+Package: moby-engine
 Version: 29.2.1-debian11u1
 Architecture: amd64
 Section: -
@@ -31117,6 +31059,38 @@ Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.
 SHA256: 7f9397d166f98f3796d7641af38b72974cdc3896179904250703b08b3e6dd173
 Size: 21185134
 Filename: pool/main/m/moby-engine/moby-engine_29.2.1-debian11u1_amd64.deb
+
+Package: moby-engine-dbgsym
+Source: moby-engine
+Version: 29.2.0-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 11558
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-engine
+Depends: moby-engine (= 29.2.0-debian11u1)
+Build-Ids: 0614c8801edd80a7dffae0aea1146e7292a9678e d497590d9028a6ed991a26d7218c6b47ab2b6fd8
+Auto-Built-Package: debug-symbols
+SHA256: 4e7f33b95ccf56c32c3624dfd0aa35e91fe010eed7dfe1f0442450d6ecd4714a
+Size: 1239098
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.2.0-debian11u1_amd64.deb
+
+Package: moby-engine-dbgsym
+Source: moby-engine
+Version: 29.2.1-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 11559
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-engine
+Depends: moby-engine (= 29.2.1-debian11u1)
+Build-Ids: 6bc400808d3db6fa7747c669561943c82f1d8e54 d59b51621e9a766639367807dace6c26d93e78e0
+Auto-Built-Package: debug-symbols
+SHA256: 4b0801876fc82c0ded414a0a0cc2a1c241e17b31ad6cfec451a55b1b0b549bbf
+Size: 1241638
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.2.1-debian11u1_amd64.deb
 
 Package: azcmagent
 Version: 1.61.03319.859
@@ -31143,6 +31117,38 @@ License: unknown
 SHA256: 3de7b7ae39a3ca19584e5744af168e220e7ec017e4030aed2942c6af6418ebe5
 Size: 23150448
 Filename: pool/main/a/azcopy/azcopy_10.32.1_amd64.deb
+
+Package: azure-functions-core-tools-4
+Version: 4.7.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
+Description: Azure Function Core Tools v4
+ The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
+Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
+Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
+Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
+Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
+SHA256: f57d6e722029e29a54dfcb3c6892701ae555f70d97cd02e866ece8d6eb4d4384
+Size: 430717866
+Filename: pool/main/a/azure-functions-core-tools-4/azure-functions-core-tools-4_4.7.0-1_amd64.deb
+
+Package: azure-functions-core-tools
+Version: 4.7.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
+Description: Azure Function Core Tools v4
+ The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
+Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
+Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
+Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
+Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
+SHA256: f60a252e8bab8227fa0482103b0ce92ed0914f4f824a920d73b0717693f1973c
+Size: 430748810
+Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.7.0-1_amd64.deb
 
 Package: aadsshlogin
 Version: 1.0.033370002
@@ -31187,6 +31193,22 @@ SHA256: bf2b9706a9bb0f69d36d84065b427121b175640936cc3938f71b97c58190608c
 Size: 56661342
 Filename: pool/main/m/msft-golang/msft-golang_1.26.0-debian11u1_amd64.deb
 
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.26.0-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 9365
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.26.0-debian11u1)
+Build-Ids: 3aa5a95b3a0a5005e2fe0bcaf50eb76f96567b24 43bdecd02473362fdf572179341d3a5121aa3fd6 47932e4eed043d576d073ced86200aa911ec7c5d 49bace0623bf9ccbdb19b8790aa2d2e14a359dff 8ad98a5390637ebea0ca3357983643e3c841d213 93bf10b171bdda04ea155cd34cb7428cdce43f4a b4ad2942226a34a1e57df83a77dd87fe1170163e c24ab92a9579b8b919a0d8b8763a513f0b132c84 d36975d4ac0bfc37173904ed0a4cc8fdcc17417d fa09002d1bb3f109848b990d528d88ee0f4a40e6
+Auto-Built-Package: debug-symbols
+SHA256: f6432395627170d2faeb3d292b5fe3a828f6710c2eb0a4ae72f28d581cb528dc
+Size: 811598
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.0-debian11u1_amd64.deb
+
 Package: jaz
 Version: 0.0.0~preview+20260223.1
 Architecture: amd64
@@ -31200,6 +31222,36 @@ License: EULA
 SHA256: 6d6d847f60de8da14b7fa6ad2509b81c6a15e89fa275e6226c9bb48c0244b326
 Size: 4150248
 Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260223.1_amd64.deb
+
+Package: powershell-preview
+Version: 7.6.0-rc.1-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 193260
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: f1fafa9382f3a3915d47b278c40fd56ae051d6de0d4041de3c13415332859e5a
+Size: 56321346
+Filename: pool/main/p/powershell-preview/powershell-preview_7.6.0-rc.1-1.deb_amd64.deb
+
+Package: moby-compose
+Version: 5.1.0-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 28956
+Maintainer: Azure Container Upstream
+Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
+Homepage: https://github.com/docker/compose
+Conflicts: docker-ce, docker-compose-plugin, docker-ee
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-cli
+SHA256: 7ac79424e59ed8ab1431c778ea5025e6539b7ab95d2d7a5e8d76c35a41bf7706
+Size: 7720526
+Filename: pool/main/m/moby-compose/moby-compose_5.1.0-debian11u1_amd64.deb
 
 Package: moby-compose-dbgsym
 Source: moby-compose
@@ -31216,6 +31268,17 @@ Auto-Built-Package: debug-symbols
 SHA256: 0f2e485f0524d50faa28a79f16ee07ff78c08be2b662c3dabdad021ce229dd79
 Size: 388994
 Filename: pool/main/m/moby-compose/moby-compose-dbgsym_5.1.0-debian11u1_amd64.deb
+
+Package: sysmonforlinux
+Version: 1.5.1
+Architecture: amd64
+Installed-Size: 58934
+Maintainer: Sysinternals <syssite@microsoft.com>
+Description: A system monitor based on eBPF, ported from Windows, that outputs events to Syslog
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), libxml2 (>= 2.7.4), libssl-dev, sysinternalsebpf (>= 1.5.0)
+SHA256: 62e53b2d671da388047b32ae4f8d4246830a655e309e0717fa45a6c6c578509f
+Size: 3290910
+Filename: pool/main/s/sysmonforlinux/sysmonforlinux_1.5.1_amd64.deb
 
 Package: moby-cli-dbgsym
 Source: moby-cli
@@ -31249,174 +31312,6 @@ Size: 56696366
 Filename: pool/main/m/msft-golang/msft-golang_1.26.1-debian11u1_amd64.deb
 
 Package: moby-buildx
-Version: 0.32.1-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 90190
-Maintainer: Azure Container Upstream
-Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
-Homepage: https://github.com/docker/buildx
-Conflicts: docker-buildx-plugin, docker-ce, docker-ee
-Depends: libc6 (>= 2.3.2), libssl1.1
-Recommends: moby-cli
-SHA256: 9e10145bdf8117cd0e132dd84249156ce1d37bed9be9ea0a981cd3026595a83f
-Size: 19649486
-Filename: pool/main/m/moby-buildx/moby-buildx_0.32.1-debian11u1_amd64.deb
-
-Package: moby-engine
-Version: 29.3.0-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 93168
-Maintainer: Azure Container Upstream
-Description: Docker container platform (engine package)
-Homepage: https://github.com/moby/moby
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.3.2), libnftables1 (>= 0.9.8), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
-Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: 4de98c894a35c04a823ac82ddbab30291a61a58e81d60c26ee8243f4873419de
-Size: 21505682
-Filename: pool/main/m/moby-engine/moby-engine_29.3.0-debian11u1_amd64.deb
-
-Package: moby-engine
-Version: 29.2.0-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 91522
-Maintainer: Azure Container Upstream
-Description: Docker container platform (engine package)
-Homepage: https://github.com/moby/moby
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.3.2), libnftables1 (>= 0.9.8), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
-Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: becb66d5f618ab355e564411ea7ce28642c7477cb14d53971f4fb11dbb21b09b
-Size: 21182098
-Filename: pool/main/m/moby-engine/moby-engine_29.2.0-debian11u1_amd64.deb
-
-Package: moby-engine-dbgsym
-Source: moby-engine
-Version: 29.2.0-debian11u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 11558
-Maintainer: Azure Container Upstream
-Description: debug symbols for moby-engine
-Depends: moby-engine (= 29.2.0-debian11u1)
-Build-Ids: 0614c8801edd80a7dffae0aea1146e7292a9678e d497590d9028a6ed991a26d7218c6b47ab2b6fd8
-Auto-Built-Package: debug-symbols
-SHA256: 4e7f33b95ccf56c32c3624dfd0aa35e91fe010eed7dfe1f0442450d6ecd4714a
-Size: 1239098
-Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.2.0-debian11u1_amd64.deb
-
-Package: moby-engine-dbgsym
-Source: moby-engine
-Version: 29.2.1-debian11u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 11559
-Maintainer: Azure Container Upstream
-Description: debug symbols for moby-engine
-Depends: moby-engine (= 29.2.1-debian11u1)
-Build-Ids: 6bc400808d3db6fa7747c669561943c82f1d8e54 d59b51621e9a766639367807dace6c26d93e78e0
-Auto-Built-Package: debug-symbols
-SHA256: 4b0801876fc82c0ded414a0a0cc2a1c241e17b31ad6cfec451a55b1b0b549bbf
-Size: 1241638
-Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.2.1-debian11u1_amd64.deb
-
-Package: azure-functions-core-tools-4
-Version: 4.7.0-1
-Architecture: amd64
-Section: devel
-Priority: optional
-Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
-Description: Azure Function Core Tools v4
- The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
-Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
-Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
-Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
-Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
-SHA256: f57d6e722029e29a54dfcb3c6892701ae555f70d97cd02e866ece8d6eb4d4384
-Size: 430717866
-Filename: pool/main/a/azure-functions-core-tools-4/azure-functions-core-tools-4_4.7.0-1_amd64.deb
-
-Package: azure-functions-core-tools
-Version: 4.7.0-1
-Architecture: amd64
-Section: devel
-Priority: optional
-Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
-Description: Azure Function Core Tools v4
- The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
-Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
-Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
-Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
-Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
-SHA256: f60a252e8bab8227fa0482103b0ce92ed0914f4f824a920d73b0717693f1973c
-Size: 430748810
-Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.7.0-1_amd64.deb
-
-Package: msft-golang-dbgsym
-Source: msft-golang
-Version: 1.26.0-debian11u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 9365
-Maintainer: Azure Container Upstream
-Description: debug symbols for msft-golang
-Depends: msft-golang (= 1.26.0-debian11u1)
-Build-Ids: 3aa5a95b3a0a5005e2fe0bcaf50eb76f96567b24 43bdecd02473362fdf572179341d3a5121aa3fd6 47932e4eed043d576d073ced86200aa911ec7c5d 49bace0623bf9ccbdb19b8790aa2d2e14a359dff 8ad98a5390637ebea0ca3357983643e3c841d213 93bf10b171bdda04ea155cd34cb7428cdce43f4a b4ad2942226a34a1e57df83a77dd87fe1170163e c24ab92a9579b8b919a0d8b8763a513f0b132c84 d36975d4ac0bfc37173904ed0a4cc8fdcc17417d fa09002d1bb3f109848b990d528d88ee0f4a40e6
-Auto-Built-Package: debug-symbols
-SHA256: f6432395627170d2faeb3d292b5fe3a828f6710c2eb0a4ae72f28d581cb528dc
-Size: 811598
-Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.0-debian11u1_amd64.deb
-
-Package: powershell-preview
-Version: 7.6.0-rc.1-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 193260
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: f1fafa9382f3a3915d47b278c40fd56ae051d6de0d4041de3c13415332859e5a
-Size: 56321346
-Filename: pool/main/p/powershell-preview/powershell-preview_7.6.0-rc.1-1.deb_amd64.deb
-
-Package: moby-compose
-Version: 5.1.0-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 28956
-Maintainer: Azure Container Upstream
-Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
-Homepage: https://github.com/docker/compose
-Conflicts: docker-ce, docker-compose-plugin, docker-ee
-Depends: libc6 (>= 2.3.2)
-Recommends: moby-cli
-SHA256: 7ac79424e59ed8ab1431c778ea5025e6539b7ab95d2d7a5e8d76c35a41bf7706
-Size: 7720526
-Filename: pool/main/m/moby-compose/moby-compose_5.1.0-debian11u1_amd64.deb
-
-Package: sysmonforlinux
-Version: 1.5.1
-Architecture: amd64
-Installed-Size: 58934
-Maintainer: Sysinternals <syssite@microsoft.com>
-Description: A system monitor based on eBPF, ported from Windows, that outputs events to Syslog
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:3.0), libstdc++6 (>= 5), libxml2 (>= 2.7.4), libssl-dev, sysinternalsebpf (>= 1.5.0)
-SHA256: 62e53b2d671da388047b32ae4f8d4246830a655e309e0717fa45a6c6c578509f
-Size: 3290910
-Filename: pool/main/s/sysmonforlinux/sysmonforlinux_1.5.1_amd64.deb
-
-Package: moby-buildx
 Version: 0.32.0-debian11u1
 Architecture: amd64
 Section: -
@@ -31430,6 +31325,21 @@ Recommends: moby-cli
 SHA256: 60d24443dc7da60c7baffca5b870af803ba2fdc5ee3f822b367e915f3516b763
 Size: 19652082
 Filename: pool/main/m/moby-buildx/moby-buildx_0.32.0-debian11u1_amd64.deb
+
+Package: moby-buildx
+Version: 0.32.1-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 90190
+Maintainer: Azure Container Upstream
+Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
+Homepage: https://github.com/docker/buildx
+Conflicts: docker-buildx-plugin, docker-ce, docker-ee
+Depends: libc6 (>= 2.3.2), libssl1.1
+Recommends: moby-cli
+SHA256: 9e10145bdf8117cd0e132dd84249156ce1d37bed9be9ea0a981cd3026595a83f
+Size: 19649486
+Filename: pool/main/m/moby-buildx/moby-buildx_0.32.1-debian11u1_amd64.deb
 
 Package: moby-buildx-dbgsym
 Source: moby-buildx
@@ -31463,6 +31373,38 @@ SHA256: 2711622dfc5e0f95abaf4deaafa0369cde8e15ee2483f5cdb742bea1a862d740
 Size: 25007130
 Filename: pool/main/m/moby-buildx/moby-buildx-dbgsym_0.32.1-debian11u1_amd64.deb
 
+Package: moby-cli
+Version: 29.3.0-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 31516
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 3afcb27b0994d982519b8b6f79f4eea1af01a5b6f30948f8454fe6d20edc7a30
+Size: 7696066
+Filename: pool/main/m/moby-cli/moby-cli_29.3.0-debian11u1_amd64.deb
+
+Package: moby-engine
+Version: 29.3.0-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 93168
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2), libnftables1 (>= 0.9.8), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.1.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 4de98c894a35c04a823ac82ddbab30291a61a58e81d60c26ee8243f4873419de
+Size: 21505682
+Filename: pool/main/m/moby-engine/moby-engine_29.3.0-debian11u1_amd64.deb
+
 Package: moby-engine-dbgsym
 Source: moby-engine
 Version: 29.3.0-debian11u1
@@ -31478,6 +31420,192 @@ Auto-Built-Package: debug-symbols
 SHA256: adaa2cb2002ef13ddd13a686f6c75efd8389ee0e2ccfd1766c8ae0f7d26fc8fc
 Size: 1148782
 Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.3.0-debian11u1_amd64.deb
+
+Package: msft-golang
+Version: 1.25.8-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 228162
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.25.8)
+SHA256: d59107c9a22040b2aae6dfa7eaaaf31362ff8ecf697a34d1d84047c6b73074c4
+Size: 49341958
+Filename: pool/main/m/msft-golang/msft-golang_1.25.8-debian11u1_amd64.deb
+
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.25.8-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 7677
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.25.8-debian11u1)
+Build-Ids: 0b2dc6f7826e7a6a8d0d67e01b5222f93be01d10 129014b6d0878f63939815d38166ac488c664600 3bf69675a66cecabb6289620ba3fdeaddd0debcb 754387a58dc216e22d9c1179cb132a6f6ae982c6 8279eef5759cde1d0faa71f4904848e9cf673639 d425ddebd778336fff2721156afa817fbba5da94 d4a3013476b363a611d539590e35f8f3059a1d3f eaea9adc2f1f361795df5def36576335108877a1 f1fb83a3b2c3f9de45937be1ae943f854732e496
+Auto-Built-Package: debug-symbols
+SHA256: 5f7fa425f3bd295b3454787327cb19452d0ace63995625e9e310d1e0eafea9c3
+Size: 696758
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.25.8-debian11u1_amd64.deb
+
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.26.1-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 9369
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.26.1-debian11u1)
+Build-Ids: 278b1666e30a9dcaeb92016a469f2d13e3009bb5 3f194f185cee43fb7b4b9f76b200eac6abfa8156 41278bae8d757da379fa912d26d2fe4ecc7aa634 51808e6722ca18550b5ce4e95e958ea7e8df2e29 7a65957171e7b541d72aa31f712794adf7d30673 9db82999c42ecbb33deeb1238fffa59fa1bcf6ea 9eca3a3cfa78f1df6ec82a52f92f1daa4b29c39d a5220f5e991c5705bd5fd35c0e531724a89518a4 a557fbafec2af821475fc087f80fec954d1f5e52 b3543df6849cac3cf7a64755587ff5ff382473ed
+Auto-Built-Package: debug-symbols
+SHA256: 67444589d44389a73a0d6a2140c405184707ebdc2bcbef105b6f8e808d1276d2
+Size: 810066
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.1-debian11u1_amd64.deb
+
+Package: azure-functions-core-tools-4
+Version: 4.8.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
+Description: Azure Function Core Tools v4
+ The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
+Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
+Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
+Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
+Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
+SHA256: 57da16ef196e276a3305d20b5e1fdf86a849513a0e9453e1aa771d970a45f59b
+Size: 419079106
+Filename: pool/main/a/azure-functions-core-tools-4/azure-functions-core-tools-4_4.8.0-1_amd64.deb
+
+Package: azure-functions-core-tools
+Version: 4.8.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
+Description: Azure Function Core Tools v4
+ The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
+Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
+Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
+Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
+Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
+SHA256: 58ef30d1d46a6471a236f12c463bf6c109fa4844f83481de6183ec311027b6eb
+Size: 419164598
+Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.8.0-1_amd64.deb
+
+Package: powershell
+Version: 7.5.5-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 187969
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: a8bc51c83316d93ec38d14c5877fa4749ca3a843864985c408d6c0a104069093
+Size: 54982394
+Filename: pool/main/p/powershell/powershell_7.5.5-1.deb_amd64.deb
+
+Package: powershell
+Version: 7.4.14-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 180642
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu74|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu63|libicu60|libicu57|libicu55|libicu52, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: 5baf1cad3e017ab4a3638145d8f98f351a4f8af5775f9cdfc8159b7bbfc75445
+Size: 52668802
+Filename: pool/main/p/powershell/powershell_7.4.14-1.deb_amd64.deb
+
+Package: powershell-lts
+Version: 7.4.14-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 180642
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu74|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu63|libicu60|libicu57|libicu55|libicu52, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: 919d3744aa6bd293759f446d2fb7220dfb023e7786de65bff5c50fee951609bc
+Size: 52667206
+Filename: pool/main/p/powershell-lts/powershell-lts_7.4.14-1.deb_amd64.deb
+
+Package: mdatp
+Version: 101.26012.0007
+Architecture: amd64
+Section: devel
+Priority: optional
+Installed-Size: 882453
+Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
+Description: Microsoft Defender (Production)
+   Microsoft Defender is a complete endpoint
+  security solution. It delivers preventative protection, post-breach
+ detection, automated investigation, and response.
+Depends: libc6 (>= 2.23)
+SHA256: 6684c7ed9ca9434e7e563c2afe6afbf370441542950a65a6b0a7a31c307e1b1f
+Size: 229349312
+Filename: pool/main/m/mdatp/mdatp_101.26012.0007_amd64.deb
+
+Package: powershell
+Version: 7.6.0-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 193369
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: 2d2e57d80f72247620070a664ca3405c4897093461d6eccd71e328f0d3e2c6f8
+Size: 56378398
+Filename: pool/main/p/powershell/powershell_7.6.0-1.deb_amd64.deb
+
+Package: azcopy
+Version: 10.32.2
+Architecture: amd64
+Section: default
+Priority: optional
+Installed-Size: 56915
+Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
+Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
+Homepage: https://github.com/Azure/azure-storage-azcopy
+Vendor: none
+License: unknown
+SHA256: 55835a58effc1b8ea78ea04482c142439918255731397d04c12b5f534e3ecc13
+Size: 23484458
+Filename: pool/main/a/azcopy/azcopy_10.32.2_amd64.deb
+
+Package: moby-containerd
+Version: 2.2.2-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 84628
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: dd35432e8a5639f73d62afa835fb992a869e553a6ab22436d394214c1b9c3b8c
+Size: 21401718
+Filename: pool/main/m/moby-containerd/moby-containerd_2.2.2-debian11u1_amd64.deb
 
 Package: moby-compose
 Version: 5.1.1-debian11u1
@@ -32981,207 +33109,21 @@ SHA256: cb048d36044d04737186f75c5614a338b46e5e9540be087b064a8a33e7845e0f
 Size: 1165106
 Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.5.1-debian11u1_amd64.deb
 
-Package: moby-cli
-Version: 29.3.0-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 31516
-Maintainer: Azure Container Upstream
-Description: The docker client binary used for connecting to Docker
-Homepage: https://github.com/docker/cli
-Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-Depends: libc6 (>= 2.3.2)
-Recommends: moby-engine
-Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
-SHA256: 3afcb27b0994d982519b8b6f79f4eea1af01a5b6f30948f8454fe6d20edc7a30
-Size: 7696066
-Filename: pool/main/m/moby-cli/moby-cli_29.3.0-debian11u1_amd64.deb
-
-Package: msft-golang
-Version: 1.25.8-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 228162
-Maintainer: Azure Container Upstream
-Description: The Microsoft build of the Go toolset
-Homepage: https://github.com/microsoft/go
-Conflicts: golang
-Recommends: g++, gcc, libc6-dev, pkg-config
-Provides: golang (= 1.25.8)
-SHA256: d59107c9a22040b2aae6dfa7eaaaf31362ff8ecf697a34d1d84047c6b73074c4
-Size: 49341958
-Filename: pool/main/m/msft-golang/msft-golang_1.25.8-debian11u1_amd64.deb
-
-Package: msft-golang-dbgsym
-Source: msft-golang
-Version: 1.25.8-debian11u1
+Package: moby-engine-dbgsym
+Source: moby-engine
+Version: 29.5.2-debian11u1
 Architecture: amd64
 Section: debug
 Priority: optional
-Installed-Size: 7677
+Installed-Size: 11667
 Maintainer: Azure Container Upstream
-Description: debug symbols for msft-golang
-Depends: msft-golang (= 1.25.8-debian11u1)
-Build-Ids: 0b2dc6f7826e7a6a8d0d67e01b5222f93be01d10 129014b6d0878f63939815d38166ac488c664600 3bf69675a66cecabb6289620ba3fdeaddd0debcb 754387a58dc216e22d9c1179cb132a6f6ae982c6 8279eef5759cde1d0faa71f4904848e9cf673639 d425ddebd778336fff2721156afa817fbba5da94 d4a3013476b363a611d539590e35f8f3059a1d3f eaea9adc2f1f361795df5def36576335108877a1 f1fb83a3b2c3f9de45937be1ae943f854732e496
+Description: debug symbols for moby-engine
+Depends: moby-engine (= 29.5.2-debian11u1)
+Build-Ids: 11b75870fd426cd1dd0da77f0106b689f854a56f ba8443f6c98f5ee301560d92c53391c0cf27a183
 Auto-Built-Package: debug-symbols
-SHA256: 5f7fa425f3bd295b3454787327cb19452d0ace63995625e9e310d1e0eafea9c3
-Size: 696758
-Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.25.8-debian11u1_amd64.deb
-
-Package: msft-golang-dbgsym
-Source: msft-golang
-Version: 1.26.1-debian11u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 9369
-Maintainer: Azure Container Upstream
-Description: debug symbols for msft-golang
-Depends: msft-golang (= 1.26.1-debian11u1)
-Build-Ids: 278b1666e30a9dcaeb92016a469f2d13e3009bb5 3f194f185cee43fb7b4b9f76b200eac6abfa8156 41278bae8d757da379fa912d26d2fe4ecc7aa634 51808e6722ca18550b5ce4e95e958ea7e8df2e29 7a65957171e7b541d72aa31f712794adf7d30673 9db82999c42ecbb33deeb1238fffa59fa1bcf6ea 9eca3a3cfa78f1df6ec82a52f92f1daa4b29c39d a5220f5e991c5705bd5fd35c0e531724a89518a4 a557fbafec2af821475fc087f80fec954d1f5e52 b3543df6849cac3cf7a64755587ff5ff382473ed
-Auto-Built-Package: debug-symbols
-SHA256: 67444589d44389a73a0d6a2140c405184707ebdc2bcbef105b6f8e808d1276d2
-Size: 810066
-Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.1-debian11u1_amd64.deb
-
-Package: azure-functions-core-tools-4
-Version: 4.8.0-1
-Architecture: amd64
-Section: devel
-Priority: optional
-Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
-Description: Azure Function Core Tools v4
- The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
-Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
-Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
-Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
-Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
-SHA256: 57da16ef196e276a3305d20b5e1fdf86a849513a0e9453e1aa771d970a45f59b
-Size: 419079106
-Filename: pool/main/a/azure-functions-core-tools-4/azure-functions-core-tools-4_4.8.0-1_amd64.deb
-
-Package: azure-functions-core-tools
-Version: 4.8.0-1
-Architecture: amd64
-Section: devel
-Priority: optional
-Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
-Description: Azure Function Core Tools v4
- The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
-Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
-Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
-Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
-Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
-SHA256: 58ef30d1d46a6471a236f12c463bf6c109fa4844f83481de6183ec311027b6eb
-Size: 419164598
-Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.8.0-1_amd64.deb
-
-Package: powershell
-Version: 7.5.5-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 187969
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: a8bc51c83316d93ec38d14c5877fa4749ca3a843864985c408d6c0a104069093
-Size: 54982394
-Filename: pool/main/p/powershell/powershell_7.5.5-1.deb_amd64.deb
-
-Package: powershell
-Version: 7.4.14-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 180642
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu74|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu63|libicu60|libicu57|libicu55|libicu52, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: 5baf1cad3e017ab4a3638145d8f98f351a4f8af5775f9cdfc8159b7bbfc75445
-Size: 52668802
-Filename: pool/main/p/powershell/powershell_7.4.14-1.deb_amd64.deb
-
-Package: powershell-lts
-Version: 7.4.14-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 180642
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu74|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu63|libicu60|libicu57|libicu55|libicu52, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: 919d3744aa6bd293759f446d2fb7220dfb023e7786de65bff5c50fee951609bc
-Size: 52667206
-Filename: pool/main/p/powershell-lts/powershell-lts_7.4.14-1.deb_amd64.deb
-
-Package: mdatp
-Version: 101.26012.0007
-Architecture: amd64
-Section: devel
-Priority: optional
-Installed-Size: 882453
-Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
-Description: Microsoft Defender (Production)
-   Microsoft Defender is a complete endpoint
-  security solution. It delivers preventative protection, post-breach
- detection, automated investigation, and response.
-Depends: libc6 (>= 2.23)
-SHA256: 6684c7ed9ca9434e7e563c2afe6afbf370441542950a65a6b0a7a31c307e1b1f
-Size: 229349312
-Filename: pool/main/m/mdatp/mdatp_101.26012.0007_amd64.deb
-
-Package: powershell
-Version: 7.6.0-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 193369
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: 2d2e57d80f72247620070a664ca3405c4897093461d6eccd71e328f0d3e2c6f8
-Size: 56378398
-Filename: pool/main/p/powershell/powershell_7.6.0-1.deb_amd64.deb
-
-Package: azcopy
-Version: 10.32.2
-Architecture: amd64
-Section: default
-Priority: optional
-Installed-Size: 56915
-Maintainer: Azcopy v-Team <azcopyvteam@microsoft.com>
-Description: A command-line utility that is used to copy data to and from containers and file shares in Azure Storage accounts
-Homepage: https://github.com/Azure/azure-storage-azcopy
-Vendor: none
-License: unknown
-SHA256: 55835a58effc1b8ea78ea04482c142439918255731397d04c12b5f534e3ecc13
-Size: 23484458
-Filename: pool/main/a/azcopy/azcopy_10.32.2_amd64.deb
-
-Package: moby-containerd
-Version: 2.2.2-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 84628
-Maintainer: Azure Container Upstream
-Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
-Homepage: https://github.com/containerd/containerd
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
-Recommends: ca-certificates, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-SHA256: dd35432e8a5639f73d62afa835fb992a869e553a6ab22436d394214c1b9c3b8c
-Size: 21401718
-Filename: pool/main/m/moby-containerd/moby-containerd_2.2.2-debian11u1_amd64.deb
+SHA256: c064e5b8096fa2c8b5f80c2792189c659e8f260d97c2c707f5312d3b788ad140
+Size: 1159602
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.5.2-debian11u1_amd64.deb
 
 Package: powershell
 Version: 7.6.2-1.deb
@@ -33530,22 +33472,6 @@ Size: 21407210
 Filename: pool/main/m/moby-containerd/moby-containerd_2.2.1-debian11u2_amd64.deb
 
 Package: moby-containerd
-Version: 2.2.2-debian11u2
-Architecture: amd64
-Section: -
-Installed-Size: 84708
-Maintainer: Azure Container Upstream
-Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
-Homepage: https://github.com/containerd/containerd
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
-Recommends: ca-certificates, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-SHA256: 6bc38bf56e0312cd6608eda09ccc492d374103af6e1bad60ef95e30fa4c4a60e
-Size: 21426834
-Filename: pool/main/m/moby-containerd/moby-containerd_2.2.2-debian11u2_amd64.deb
-
-Package: moby-containerd
 Version: 2.2.3-debian11u2
 Architecture: amd64
 Section: -
@@ -33578,22 +33504,6 @@ Size: 21451974
 Filename: pool/main/m/moby-containerd/moby-containerd_2.2.4-debian11u2_amd64.deb
 
 Package: moby-containerd
-Version: 2.3.0-debian11u2
-Architecture: amd64
-Section: -
-Installed-Size: 77289
-Maintainer: Azure Container Upstream
-Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
-Homepage: https://github.com/containerd/containerd
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
-Recommends: ca-certificates, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-SHA256: a45a930cb325ffae1e0c6c0ebd78a201230541989978aba058175a51d4565259
-Size: 19944314
-Filename: pool/main/m/moby-containerd/moby-containerd_2.3.0-debian11u2_amd64.deb
-
-Package: moby-containerd
 Version: 2.3.1-debian11u2
 Architecture: amd64
 Section: -
@@ -33609,19 +33519,235 @@ SHA256: df422c50b2fd88b6e8c9ad5e1bc8bc993bf6c03de8774743dc11645a12d8677e
 Size: 19952114
 Filename: pool/main/m/moby-containerd/moby-containerd_2.3.1-debian11u2_amd64.deb
 
+Package: moby-cli
+Version: 29.5.2-debian11u2
+Architecture: amd64
+Section: -
+Installed-Size: 31829
+Maintainer: Azure Container Upstream
+Description: The docker client binary used for connecting to Docker
+Homepage: https://github.com/docker/cli
+Conflicts: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-engine
+Replaces: docker, docker-ce, docker-ce-cli, docker-ee, docker-ee-cli, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: f451ca9856fa9a3c3bd0af14ba0cd43e149a584a6db15c57e3e42a3b43ccf44f
+Size: 7764962
+Filename: pool/main/m/moby-cli/moby-cli_29.5.2-debian11u2_amd64.deb
+
+Package: moby-compose-dbgsym
+Source: moby-compose
+Version: 5.1.4-debian11u2
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 3519
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-compose
+Depends: moby-compose (= 5.1.4-debian11u2)
+Build-Ids: ef88c7ca20ad4e138ed8d902301131f0b5f806e6
+Auto-Built-Package: debug-symbols
+SHA256: 1b191c51b325d69db218046749f3f728219491509693d321bb82aa1344864637
+Size: 399418
+Filename: pool/main/m/moby-compose/moby-compose-dbgsym_5.1.4-debian11u2_amd64.deb
+
+Package: moby-engine
+Version: 29.5.2-debian11u3
+Architecture: amd64
+Section: -
+Installed-Size: 93831
+Maintainer: Azure Container Upstream
+Description: Docker container platform (engine package)
+Homepage: https://github.com/moby/moby
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+Depends: libc6 (>= 2.3.2), libnftables1 (>= 0.9.8), libsystemd0, iptables, moby-containerd (>= 1.7.0), moby-runc (>= 1.2.0), moby-tini (>= 0.19.0), nftables
+Recommends: apparmor, ca-certificates, kmod, moby-cli, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io, lxc-docker, lxc-docker-virtual-package
+SHA256: 2e12ec611b5d233aceca8188886bfb80b545b14bf7c62aa788723d406122d615
+Size: 21647522
+Filename: pool/main/m/moby-engine/moby-engine_29.5.2-debian11u3_amd64.deb
+
+Package: jaz
+Version: 0.0.0~preview+20251211.7
+Architecture: amd64
+Section: default
+Priority: extra
+Installed-Size: 9773
+Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
+Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
+Homepage: https://learn.microsoft.com/java/jaz/overview
+License: EULA
+SHA256: 47e532a18f7029ae6d0772ced081dd93ab1bd6789a58484ffa83196b619a0a37
+Size: 3999336
+Filename: pool/main/j/jaz/jaz_0.0.0~preview+20251211.7_amd64.deb
+
+Package: msodbcsql18
+Version: 18.6.1.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL ODBC Team <mssql-odbc@microsoft.com>
+Description: ODBC Driver for Microsoft(R) SQL Server(R)
+ This package provides an ODBC driver that can connect to Microsoft(R)
+ SQL Server(R).
+Conflicts: libodbc1-utf16, odbcinst-utf16, odbcinst1debian2-utf16, unixodbc-utf16
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), unixodbc (>= 2.3.1), odbcinst
+SHA256: cd217d3bf471d521dac6886456e6c758c21d4f84f88f7adf48ef672c70e57cb0
+Size: 794222
+Filename: pool/main/m/msodbcsql18/msodbcsql18_18.6.1.1-1_amd64.deb
+
+Package: mssql-tools18
+Version: 18.6.1.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL Tools Team <mssql-tools@microsoft.com>
+Description: Tools for Microsoft(R) SQL Server(R)
+ This package provides tools for Microsoft(R) SQL Server(R).
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), msodbcsql18 (>= 18.0.0.0)
+SHA256: c90c16188a533576d0c3b0f4af82cb679edccd369e2626b928998918840c7787
+Size: 230638
+Filename: pool/main/m/mssql-tools18/mssql-tools18_18.6.1.1-1_amd64.deb
+
+Package: azure-functions-core-tools-4
+Version: 4.6.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
+Description: Azure Function Core Tools v4
+ The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
+Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
+Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
+Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
+Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
+SHA256: 3c7a6546c403734a371beabbbd0d91d82eb9799ca7f8b909af2d660c5333948b
+Size: 430795202
+Filename: pool/main/a/azure-functions-core-tools-4/azure-functions-core-tools-4_4.6.0-1_amd64.deb
+
+Package: azure-functions-core-tools
+Version: 4.6.0-1
+Architecture: amd64
+Section: devel
+Priority: optional
+Maintainer: Ahmed ElSayed <ahmels@microsoft.com>
+Description: Azure Function Core Tools v4
+ The Azure Functions Core Tools provide a local development experience for creating, developing, testing, running, and debugging Azure Functions.
+Homepage: https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#run-azure-functions-core-tools
+Conflicts: azure-functions-core-tools-2, azure-functions-core-tools-3
+Replaces: azure-functions-core-tools-2, azure-functions-core-tools-3
+Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
+SHA256: 110db6d5616f73d4d19c0d93c2aa91704b9a2d8f4b3c229b562ac4da2605af9d
+Size: 430749346
+Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.6.0-1_amd64.deb
+
+Package: moby-containerd
+Version: 2.2.2-debian11u2
+Architecture: amd64
+Section: -
+Installed-Size: 84708
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: 6bc38bf56e0312cd6608eda09ccc492d374103af6e1bad60ef95e30fa4c4a60e
+Size: 21426834
+Filename: pool/main/m/moby-containerd/moby-containerd_2.2.2-debian11u2_amd64.deb
+
+Package: moby-containerd
+Version: 2.3.0-debian11u2
+Architecture: amd64
+Section: -
+Installed-Size: 77289
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: a45a930cb325ffae1e0c6c0ebd78a201230541989978aba058175a51d4565259
+Size: 19944314
+Filename: pool/main/m/moby-containerd/moby-containerd_2.3.0-debian11u2_amd64.deb
+
+Package: moby-buildx
+Version: 0.34.1-debian11u2
+Architecture: amd64
+Section: -
+Installed-Size: 64787
+Maintainer: Azure Container Upstream
+Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
+Homepage: https://github.com/docker/buildx
+Conflicts: docker-buildx-plugin, docker-ce, docker-ee
+Depends: libc6 (>= 2.3.2), libssl1.1
+Recommends: moby-cli
+SHA256: 0d5fc6696c49ef1499aa64e3dc1cf34a8c16af60c4a9299f8231de59d0d081f4
+Size: 16651370
+Filename: pool/main/m/moby-buildx/moby-buildx_0.34.1-debian11u2_amd64.deb
+
+Package: moby-buildx-dbgsym
+Source: moby-buildx
+Version: 0.34.1-debian11u2
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 25065
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-buildx
+Depends: moby-buildx (= 0.34.1-debian11u2)
+Build-Ids: 404b4f42dc58a820790e8aca5467a7d464cbcafb
+Auto-Built-Package: debug-symbols
+SHA256: e6fccb0104e274cbf53b47b7b61418709a83186f990c75d58df7882bee00d263
+Size: 19028750
+Filename: pool/main/m/moby-buildx/moby-buildx-dbgsym_0.34.1-debian11u2_amd64.deb
+
+Package: moby-cli-dbgsym
+Source: moby-cli
+Version: 29.5.2-debian11u2
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 12464
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-cli
+Depends: moby-cli (= 29.5.2-debian11u2)
+Build-Ids: d754a2bfb22276a005014d2140b4aa07844b9a4d
+Auto-Built-Package: debug-symbols
+SHA256: 9968b707b247bf97b7d9b502bed408808722cb139546752201068fc8be750a29
+Size: 9372514
+Filename: pool/main/m/moby-cli/moby-cli-dbgsym_29.5.2-debian11u2_amd64.deb
+
+Package: moby-compose
+Version: 5.1.4-debian11u2
+Architecture: amd64
+Section: -
+Installed-Size: 29794
+Maintainer: Azure Container Upstream
+Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
+Homepage: https://github.com/docker/compose
+Conflicts: docker-ce, docker-compose-plugin, docker-ee
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-cli
+SHA256: a4179890ebbcaf61c94f0cd55ab54dbfcddc3747a3634bf3d15709146f3b8bb9
+Size: 7930686
+Filename: pool/main/m/moby-compose/moby-compose_5.1.4-debian11u2_amd64.deb
+
 Package: moby-engine-dbgsym
 Source: moby-engine
-Version: 29.5.2-debian11u1
+Version: 29.5.2-debian11u3
 Architecture: amd64
 Section: debug
 Priority: optional
 Installed-Size: 11667
 Maintainer: Azure Container Upstream
 Description: debug symbols for moby-engine
-Depends: moby-engine (= 29.5.2-debian11u1)
-Build-Ids: 11b75870fd426cd1dd0da77f0106b689f854a56f ba8443f6c98f5ee301560d92c53391c0cf27a183
+Depends: moby-engine (= 29.5.2-debian11u3)
+Build-Ids: 64e113c81cfc7464773eecaef754c53b40f40d8e 89df3913d7bcec41c21041c821160b108cdda7c4
 Auto-Built-Package: debug-symbols
-SHA256: c064e5b8096fa2c8b5f80c2792189c659e8f260d97c2c707f5312d3b788ad140
-Size: 1159602
-Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.5.2-debian11u1_amd64.deb
+SHA256: cc4d825bcaa6a2b778fc4519b9ee234737a6999483fecddfe5bd8a53b5f811ab
+Size: 1165314
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.5.2-debian11u3_amd64.deb
 
