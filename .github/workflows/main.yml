@@ -148,6 +148,12 @@ jobs:
           cp .editorconfig _gh-pages-worktree/ 2>/dev/null || true
 
           # Sync submodule refs
+          # gh-pages has .gitmodules deleted by cleanup-generated,
+          # so we need to sync git config after copying .gitmodules
+          (cd _gh-pages-worktree && git submodule sync)
+
+          # Init submodules in worktree
+          (cd _gh-pages-worktree && git submodule update --init --force) || true
           mkdir -p _gh-pages-worktree/src/diepxuan
           for submodule_dir in src/diepxuan/*/; do
             name=$(basename "$submodule_dir")
@@ -156,9 +162,6 @@ jobs:
             # Update the submodule in gh-pages worktree
             if [ -d "_gh-pages-worktree/src/diepxuan/$name" ]; then
               (cd "_gh-pages-worktree/src/diepxuan/$name" && git fetch origin main && git checkout "$ref" 2>/dev/null) || true
-            else
-              git submodule update --init "src/diepxuan/$name" 2>/dev/null || true
-              (cd "_gh-pages-worktree/src/diepxuan/$name" && git checkout "$ref" 2>/dev/null) || true
             fi
           done
 
