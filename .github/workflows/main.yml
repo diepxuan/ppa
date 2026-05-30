@@ -149,21 +149,26 @@ jobs:
 
           # Sync submodule refs
           # gh-pages has .gitmodules deleted by cleanup-generated,
-          # so we need to sync git config after copying .gitmodules
-          (cd _gh-pages-worktree && git submodule sync)
+          # so we re-register submodules from the copied .gitmodules
+          cd _gh-pages-worktree
+          git submodule sync
 
-          # Init submodules in worktree
-          (cd _gh-pages-worktree && git submodule update --init --force) || true
-          mkdir -p _gh-pages-worktree/src/diepxuan
+          # Initialize submodules from .gitmodules
+          git submodule update --init --checkout 2>/dev/null || true
+
+          # Checkout each submodule to the correct ref from main
+          cd ..
           for submodule_dir in src/diepxuan/*/; do
             name=$(basename "$submodule_dir")
-            # Get the commit ref from main
             ref=$(cd "$submodule_dir" && git rev-parse HEAD 2>/dev/null) || continue
-            # Update the submodule in gh-pages worktree
-            if [ -d "_gh-pages-worktree/src/diepxuan/$name" ]; then
-              (cd "_gh-pages-worktree/src/diepxuan/$name" && git fetch origin main && git checkout "$ref" 2>/dev/null) || true
+            wt_dir="_gh-pages-worktree/src/diepxuan/$name"
+            if [ -d "$wt_dir" ]; then
+              (cd "$wt_dir" && git fetch origin main 2>/dev/null && git checkout "$ref" 2>/dev/null) || true
             fi
           done
+
+          # Add submodules to index (git rm removed them; git add -A won't auto-add new submodules)
+          (cd _gh-pages-worktree && git add src/) || true
 
           # Sync conf directory
           rm -rf _gh-pages-worktree/conf 2>/dev/null || true
