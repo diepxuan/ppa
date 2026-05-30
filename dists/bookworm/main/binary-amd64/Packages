@@ -36,6 +36,24 @@ Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
+Package: ductn-dbgsym
+Source: diepxuan
+Version: 5.6.4+debian~12
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 1060
+Depends: ductn (= 5.6.4+debian~12)
+Priority: optional
+Section: debug
+Filename: pool/main/d/diepxuan/ductn-dbgsym_5.6.4+debian~12_amd64.deb
+Size: 171028
+SHA256: e99a2b9badfbb1a1fd7a0844ab4052f3d42e7aab58d26047ea74a2561a2c30a0
+SHA1: c8d7a9f4d7e1df9d7c7e5722429d0d3cc6411511
+MD5sum: d04727245b38281ef226cbf419d22fef
+Description: debug symbols for ductn
+Build-Ids: 0fea5392059042c17eeb05d1db4aa1730b945414
+
 Package: ductn-ll
 Source: diepxuan
 Version: 5.6.4+debian~12
