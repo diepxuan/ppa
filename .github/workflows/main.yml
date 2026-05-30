@@ -96,3 +96,53 @@ jobs:
       GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
       GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
       SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
+
+  sync-gh-pages:
+    needs: package-build
+    if: success()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main (generated files)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-worktree
+          fetch-depth: 1
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-worktree
+          fetch-depth: 1
+
+      - name: Sync generated files to gh-pages
+        run: |
+          cd gh-pages-worktree
+          git config user.name "DiepXuan CI"
+          git config user.email "ci@diepxuan.com"
+
+          # Remove old generated files
+          rm -rf dists pool db lists key.gpg Release.gpg keyrings
+
+          # Copy new generated files from main
+          cp -r ../main-worktree/dists ./dists
+          cp -r ../main-worktree/pool ./pool
+          cp -r ../main-worktree/db ./db
+          cp -r ../main-worktree/lists ./lists
+          cp ../main-worktree/key.gpg ./key.gpg
+          cp ../main-worktree/Release.gpg ./Release.gpg
+          if [ -d ../main-worktree/keyrings ]; then
+            cp -r ../main-worktree/keyrings ./keyrings
+          fi
+
+          # Commit and push
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "ci: sync generated files from main@${{ github.sha }}"
+            git push origin gh-pages
+          else
+            echo "No changes to sync"
+          fi

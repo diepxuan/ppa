@@ -7,3 +7,11 @@
 
 # Local agent memory
 memory/
+
+# Generated APT repository files (synced to gh-pages branch)
+dists/
+pool/
+db/
+lists/
+key.gpg
+Release.gpg
