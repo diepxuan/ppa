@@ -71,10 +71,12 @@ jobs:
 
           BASE_REF="${{ github.base_ref }}"
           if [[ -z "$BASE_REF" ]]; then
-            BASE_REF="main"
+            # Direct push to main (not a PR) — compare with previous commit
+            CHANGES=$(git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
+          else
+            # PR — compare with base branch
+            CHANGES=$(git diff --name-only "origin/$BASE_REF...HEAD" 2>/dev/null || echo "")
           fi
-
-          CHANGES=$(git diff --name-only "origin/$BASE_REF...HEAD" 2>/dev/null || git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
           echo "Changes detected: $CHANGES"
 
           CHANGED_PACKAGES="[]"
@@ -171,7 +173,7 @@ jobs:
           # Stage and commit
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "ci: sync source from main@${{ github.sha }}"
+            git commit -m "ci: sync source from main@${{ github.sha }} [skip ci]"
             git push origin gh-pages
           else
             echo "No changes to sync"

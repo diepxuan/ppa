@@ -51,6 +51,7 @@ jobs:
     needs: lint
     outputs:
       packages: ${{ steps.detect.outputs.packages }}
+      has_changes: ${{ steps.detect.outputs.has_changes }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -64,24 +65,29 @@ jobs:
         run: |
           set -euo pipefail
 
-          SUBMODULES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+          # Get submodule list once, reuse throughout
+          SUBMODULE_NAMES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||')
+          SUBMODULES=$(echo "$SUBMODULE_NAMES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
 
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "packages=$SUBMODULES" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "All packages will be built (manual trigger)"
             exit 0
           fi
 
-          BASE_REF="gh-pages"
-          CHANGES=$(git diff --name-only "origin/$BASE_REF~1...HEAD" 2>/dev/null || git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
+          # Compare with previous commit on gh-pages
+          CHANGES=$(git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
           echo "Changes detected: $CHANGES"
 
           CHANGED_PACKAGES="[]"
+          HAS_CHANGES="false"
           if [[ -n "$CHANGES" ]]; then
-            for submodule in $(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||'); do
+            for submodule in $SUBMODULE_NAMES; do
               if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
                 echo "Package '$submodule' has changes"
                 CHANGED_PACKAGES=$(echo "$CHANGED_PACKAGES" | jq -c ". + [\"$submodule\"]")
+                HAS_CHANGES="true"
               fi
             done
           fi
@@ -89,8 +95,10 @@ jobs:
           if [[ "$CHANGED_PACKAGES" == "[]" ]]; then
             echo "No package changes detected"
             echo "packages=[]" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+            echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
             echo "Will build: $CHANGED_PACKAGES"
           fi
 
@@ -185,7 +193,7 @@ jobs:
             2>/dev/null || true
 
           if ! git diff --cached --quiet; then
-            git commit -m "ci: remove source files (built packages synced)"
+            git commit -m "ci: remove source files (built packages synced) [skip ci]"
             git push origin gh-pages
           else
             echo "No source files to clean"
