@@ -1,0 +1,200 @@
+# PPA Build workflow — runs on gh-pages branch
+# Detects source changes, builds packages, commits generated files to gh-pages.
+name: PPA Build
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - "src/**"
+      - ".gitmodules"
+      - "conf/**"
+      - ".github/workflows/build.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+          submodules: true
+
+      - name: Lint shell scripts
+        run: |
+          set -euo pipefail
+          echo "Checking shell syntax..."
+          find . -name "*.sh" -not -path "./.git/*" -print0 | while IFS= read -r -d '' file; do
+            echo "  Checking: $file"
+            bash -n "$file" || exit 1
+          done
+          echo "All shell scripts passed syntax check"
+
+      - name: Lint YAML workflows
+        run: |
+          set -euo pipefail
+          echo "Checking workflow YAML syntax..."
+          for f in .github/workflows/*.yml; do
+            echo "  OK: $f"
+            python3 -c "import yaml; yaml.safe_load(open('$f'))" || exit 1
+          done
+
+  detect-changes:
+    runs-on: ubuntu-latest
+    needs: lint
+    outputs:
+      packages: ${{ steps.detect.outputs.packages }}
+      has_changes: ${{ steps.detect.outputs.has_changes }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+          submodules: true
+
+      - name: Detect changed submodules
+        id: detect
+        run: |
+          set -euo pipefail
+
+          # Get submodule list once, reuse throughout
+          SUBMODULE_NAMES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||')
+          SUBMODULES=$(echo "$SUBMODULE_NAMES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "packages=$SUBMODULES" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "All packages will be built (manual trigger)"
+            exit 0
+          fi
+
+          # Compare with previous commit on gh-pages
+          CHANGES=$(git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
+          echo "Changes detected: $CHANGES"
+
+          CHANGED_PACKAGES="[]"
+          HAS_CHANGES="false"
+          if [[ -n "$CHANGES" ]]; then
+            for submodule in $SUBMODULE_NAMES; do
+              if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
+                echo "Package '$submodule' has changes"
+                CHANGED_PACKAGES=$(echo "$CHANGED_PACKAGES" | jq -c ". + [\"$submodule\"]")
+                HAS_CHANGES="true"
+              fi
+            done
+          fi
+
+          if [[ "$CHANGED_PACKAGES" == "[]" ]]; then
+            echo "No package changes detected"
+            echo "packages=[]" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+            echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
+            echo "Will build: $CHANGED_PACKAGES"
+          fi
+
+  package-build:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.packages != '[]' && needs.detect-changes.outputs.packages != ''
+    permissions:
+      contents: write
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        package: ${{ fromJson(needs.detect-changes.outputs.packages) }}
+    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
+    with:
+      module: ${{ matrix.package }}
+    secrets:
+      GPG_KEY: ${{ secrets.GPG_KEY }}
+      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
+
+  verify-build:
+    needs: package-build
+    if: success() && needs.package-build.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+          submodules: true
+
+      - name: Setup GPG
+        uses: diepxuan/.github/.github/actions/gpg-setup@main
+        with:
+          gpg_key: ${{ secrets.GPG_KEY }}
+          gpg_key_id: ${{ secrets.GPG_KEY_ID }}
+          committer_email: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          committer_name: ${{ github.repository_owner }}
+
+      - name: Verify .deb packages
+        run: |
+          set -euo pipefail
+          echo "Verifying .deb packages in pool..."
+          DEB_COUNT=0
+          for deb in pool/main/*/*.deb; do
+            [ -f "$deb" ] || continue
+            DEB_COUNT=$((DEB_COUNT + 1))
+            echo "  Verifying: $deb"
+            dpkg-deb --info "$deb" > /dev/null 2>&1 || { echo "INVALID: $deb"; exit 1; }
+            dpkg-deb --field "$deb" Package Version Architecture > /dev/null 2>&1 || { echo "MISSING FIELDS: $deb"; exit 1; }
+          done
+          echo "Verified $DEB_COUNT .deb packages"
+
+      - name: Verify APT repository metadata
+        run: |
+          set -euo pipefail
+          echo "Verifying APT repository metadata..."
+          for release in dists/*/Release; do
+            [ -f "$release" ] || continue
+            DIST=$(echo "$release" | cut -d/ -f2)
+            echo "  Checking dist: $DIST"
+            gpg --verify "dists/$DIST/Release.gpg" "dists/$DIST/Release" 2>&1 || { echo "GPG VERIFY FAILED: $DIST"; exit 1; }
+          done
+          echo "All APT metadata verified"
+
+  cleanup-generated:
+    needs: package-build
+    if: success() && needs.package-build.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+
+      - name: Remove source files from gh-pages
+        run: |
+          set -euo pipefail
+          git config user.name "DiepXuan CI"
+          git config user.email "ci@diepxuan.com"
+
+          # Remove tracked source files (keep generated dirs)
+          git rm -rf --ignore-unmatch \
+            README.md .gitignore .gitmodules .editorconfig \
+            src/ conf/ .github/workflows/main.yml .github/workflows/gpgsetup.yml \
+            2>/dev/null || true
+
+          if ! git diff --cached --quiet; then
+            git commit -m "ci: remove source files (built packages synced) [skip ci]"
+            git push origin gh-pages
+          else
+            echo "No source files to clean"
+          fi
