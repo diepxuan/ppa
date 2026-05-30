@@ -15,3 +15,11 @@ db/
 lists/
 key.gpg
 Release.gpg
+
+# Local agent files
+.openclaw/
+.stfolder/
+
+# Build temporary directories
+incoming/
+morgue/
