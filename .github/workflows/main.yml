@@ -1,20 +1,12 @@
-# Main PPA build workflow
-# Triggers on PPA updates to build all packages
-name: PPA Build (Main)
+# Main PPA workflow — lint & source sync
+# Triggers on pushes/PRs to main. Tests source, then syncs to gh-pages.
+name: PPA Main
 
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - "**.md"
-      - "docs/**"
-      - ".github/workflows/main.yml"
   pull_request:
     branches: [main]
-    paths-ignore:
-      - "**.md"
-      - "docs/**"
-      - ".github/workflows/main.yml"
   workflow_dispatch:
 
 concurrency:
@@ -22,10 +14,40 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+
+      - name: Lint shell scripts
+        run: |
+          set -euo pipefail
+          echo "Checking shell syntax..."
+          find . -name "*.sh" -not -path "./.git/*" -print0 | while IFS= read -r -d '' file; do
+            echo "  Checking: $file"
+            bash -n "$file" || exit 1
+          done
+          echo "All shell scripts passed syntax check"
+
+      - name: Lint YAML workflows
+        run: |
+          set -euo pipefail
+          echo "Checking workflow YAML syntax..."
+          for f in .github/workflows/*.yml; do
+            echo "  OK: $f"
+            python3 -c "import yaml; yaml.safe_load(open('$f'))" || exit 1
+          done
+
   detect-changes:
     runs-on: ubuntu-latest
+    needs: lint
     outputs:
       packages: ${{ steps.detect.outputs.packages }}
+      has_changes: ${{ steps.detect.outputs.has_changes }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,113 +58,125 @@ jobs:
       - name: Detect changed submodules
         id: detect
         run: |
-          # Get list of all submodules (as JSON array)
+          set -euo pipefail
+
           SUBMODULES=$(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||' | jq -R -s -c 'split("\n") | map(select(length > 0))')
 
-          # For manual trigger, build all
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             echo "packages=$SUBMODULES" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
             echo "All packages will be built (manual trigger)"
             exit 0
           fi
 
-          # Get base ref
           BASE_REF="${{ github.base_ref }}"
           if [[ -z "$BASE_REF" ]]; then
             BASE_REF="main"
           fi
 
-          # Get changed files
-          CHANGES=$(git diff --name-only origin/$BASE_REF...HEAD 2>/dev/null || git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
-
+          CHANGES=$(git diff --name-only "origin/$BASE_REF...HEAD" 2>/dev/null || git diff --name-only HEAD~1...HEAD 2>/dev/null || echo "")
           echo "Changes detected: $CHANGES"
 
-          # Find which submodules have changes (as JSON array)
-          CHANGED_PACKAGES="$SUBMODULES"
+          CHANGED_PACKAGES="[]"
+          HAS_CHANGES="false"
           if [[ -n "$CHANGES" ]]; then
-            CHANGED_JSON="[]"
             for submodule in $(git submodule status | awk '{print $2}' | grep '^src/diepxuan/' | sed 's|^src/diepxuan/||' | sed 's|/$||'); do
               if echo "$CHANGES" | grep -q "^src/diepxuan/$submodule/"; then
                 echo "Package '$submodule' has changes"
-                CHANGED_JSON=$(echo "$CHANGED_JSON" | jq -c ". + [\"$submodule\"]")
+                CHANGED_PACKAGES=$(echo "$CHANGED_PACKAGES" | jq -c ". + [\"$submodule\"]")
+                HAS_CHANGES="true"
               fi
             done
-            CHANGED_PACKAGES="$CHANGED_JSON"
           fi
 
           if [[ "$CHANGED_PACKAGES" == "[]" ]]; then
             echo "No package changes detected"
             echo "packages=[]" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+            echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
             echo "Will build: $CHANGED_PACKAGES"
           fi
 
-  package-build:
-    needs: detect-changes
-    if: needs.detect-changes.outputs.packages != ''
-    permissions:
-      contents: write
-    strategy:
-      max-parallel: 1 # Chỉ chạy 1 matrix job tại 1 thời điểm
-      fail-fast: false
-      matrix:
-        package: ${{ fromJson(needs.detect-changes.outputs.packages) }}
-    uses: diepxuan/.github/.github/workflows/debian-package-ppa.yml@main
-    with:
-      module: ${{ matrix.package }}
-    secrets:
-      GPG_KEY: ${{ secrets.GPG_KEY }}
-      GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-      GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-      SSH_ID_RSA: ${{ secrets.SSH_ID_RSA }}
-
-  sync-gh-pages:
-    needs: package-build
-    if: success()
+  sync-to-gh-pages:
     runs-on: ubuntu-latest
+    needs: [lint, detect-changes]
+    if: github.ref == 'refs/heads/main'
     permissions:
       contents: write
     steps:
-      - name: Checkout main (generated files)
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: main
-          path: main-worktree
           fetch-depth: 1
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages-worktree
-          fetch-depth: 1
-
-      - name: Sync generated files to gh-pages
+      - name: Sync to gh-pages
         run: |
-          cd gh-pages-worktree
+          set -euo pipefail
           git config user.name "DiepXuan CI"
           git config user.email "ci@diepxuan.com"
 
-          # Remove old generated files
-          rm -rf dists pool db lists key.gpg Release.gpg keyrings
+          # Fetch gh-pages
+          git fetch origin gh-pages
 
-          # Copy new generated files from main
-          cp -r ../main-worktree/dists ./dists
-          cp -r ../main-worktree/pool ./pool
-          cp -r ../main-worktree/db ./db
-          cp -r ../main-worktree/lists ./lists
-          cp ../main-worktree/key.gpg ./key.gpg
-          cp ../main-worktree/Release.gpg ./Release.gpg
-          if [ -d ../main-worktree/keyrings ]; then
-            cp -r ../main-worktree/keyrings ./keyrings
+          # Create worktree for gh-pages
+          rm -rf _gh-pages-worktree 2>/dev/null || true
+          git worktree add -B gh-pages _gh-pages-worktree origin/gh-pages
+
+          cd _gh-pages-worktree
+
+          # Remove all tracked non-generated files
+          git rm -rf --ignore-unmatch \
+            AGENTS.md BOOTSTRAP.md SOUL.md IDENTITY.md USER.md TOOLS.md HEARTBEAT.md \
+            README.md .gitignore .gitmodules .editorconfig \
+            Dockerfile install.sh \
+            docs/ .github/ .openclaw/ .stfolder/ \
+            src/ conf/ \
+            2>/dev/null || true
+
+          # Copy source files from main (excluding generated dirs)
+          cd ..
+          cp README.md _gh-pages-worktree/
+          cp .gitignore _gh-pages-worktree/
+          cp .gitmodules _gh-pages-worktree/ 2>/dev/null || true
+          cp .editorconfig _gh-pages-worktree/ 2>/dev/null || true
+
+          # Sync submodule refs
+          mkdir -p _gh-pages-worktree/src/diepxuan
+          for submodule_dir in src/diepxuan/*/; do
+            name=$(basename "$submodule_dir")
+            # Get the commit ref from main
+            ref=$(cd "$submodule_dir" && git rev-parse HEAD 2>/dev/null) || continue
+            # Update the submodule in gh-pages worktree
+            if [ -d "_gh-pages-worktree/src/diepxuan/$name" ]; then
+              (cd "_gh-pages-worktree/src/diepxuan/$name" && git fetch origin main && git checkout "$ref" 2>/dev/null) || true
+            else
+              git submodule update --init "src/diepxuan/$name" 2>/dev/null || true
+              (cd "_gh-pages-worktree/src/diepxuan/$name" && git checkout "$ref" 2>/dev/null) || true
+            fi
+          done
+
+          # Sync conf directory
+          rm -rf _gh-pages-worktree/conf 2>/dev/null || true
+          if [ -d conf ]; then
+            cp -r conf _gh-pages-worktree/conf
           fi
 
-          # Commit and push
+          cd _gh-pages-worktree
+
+          # Stage and commit
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "ci: sync generated files from main@${{ github.sha }}"
+            git commit -m "ci: sync source from main@${{ github.sha }}"
             git push origin gh-pages
           else
             echo "No changes to sync"
           fi
+
+          # Cleanup worktree
+          cd ..
+          git worktree remove _gh-pages-worktree -f 2>/dev/null || rm -rf _gh-pages-worktree
