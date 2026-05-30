@@ -173,7 +173,7 @@ jobs:
           # Stage and commit
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "ci: sync source from main@${{ github.sha }} [skip ci]"
+            git commit -m "ci: sync source from main@${{ github.sha }}"
             git push origin gh-pages
           else
             echo "No changes to sync"
