@@ -1,213 +1,226 @@
-# AGENTS.md - Workspace Operating Protocol
+# AGENTS.md - PPA Workspace Protocol
 
-**Project:** DiepXuan PPA  
-**Workspace:** `/root/.openclaw/workspace/projects/ppa/`
+File này là protocol entrypoint của workspace PPA.
 
-**Agent ID:** `ppa`  
-**Agent Dir:** `~/.openclaw/agents/ppa/agent`
-
-**Repository:** `git@github.com:diepxuan/ppa.git`
-
-**Tham chiếu:** `SOUL.md` (core identity), `IDENTITY.md` (role definition), `BOOTSTRAP.md` (startup), `TOOLS.md` (local notes)
+Codex tự động đọc `AGENTS.md` trước khi làm việc. Các agent khác dùng chung
+workspace này cũng phải xem `AGENTS.md` là tài liệu gốc, rồi đọc các file tham
+chiếu bên dưới để lấy đủ bối cảnh.
 
 ---
 
-## 1. OpenClaw Paths
+## 1. Codex Compatibility
 
-| Loại      | Path                                 |
-| --------- | ------------------------------------ |
-| Config    | `~/.openclaw/openclaw.json`          |
-| State     | `~/.openclaw`                        |
-| Workspace | `~/.openclaw/workspace/projects/ppa` |
-| Agent dir | `~/.openclaw/agents/ppa/agent`       |
-| Sessions  | `~/.openclaw/agents/ppa/sessions`    |
-| Memory    | `memory/` (trong workspace)          |
+| Lớp | File | Vai trò |
+|-----|------|---------|
+| Codex protocol | `AGENTS.md` | Entry point mặc định của Codex và workspace |
+| Identity | `SOUL.md` | Bản sắc, giọng nói, nguyên tắc cao nhất trong workspace |
+| Role | `IDENTITY.md` | Vai trò PPA Bot trong hệ thống OpenClaw |
+| User | `USER.md` | Thông tin và cách phục vụ Sếp |
+| Startup index | `BOOTSTRAP.md` | Chỉ mục tham chiếu — không lặp nội dung protocol |
+| Local notes | `TOOLS.md` | Đường dẫn, hạ tầng, tool notes |
+| Memory | `MEMORY.md`, `memory/YYYY-MM-DD.md` | Ngữ cảnh dài hạn và hằng ngày nếu tồn tại |
 
----
+Nguyên tắc:
 
-## 2. Boot Sequence (BẮT BUỘC)
-
-| Bước | File                   | Mục đích               |
-| ---- | ---------------------- | ---------------------- |
-| 1    | `SOUL.md`              | Xác nhận bản sắc       |
-| 2    | `IDENTITY.md`          | Vai trò trong hệ thống |
-| 3    | `USER.md`              | Đối tượng phục vụ      |
-| 4    | `BOOTSTRAP.md`         | Startup protocol       |
-| 5    | `memory/YYYY-MM-DD.md` | Hôm nay                |
-| 6    | `memory/YYYY-MM-DD.md` | Hôm qua                |
-| 7\*  | `MEMORY.md`            | Chỉ MAIN SESSION       |
-
-**Không được bỏ qua bước nào.**
+- Không đổi tên `AGENTS.md`; đây là tên mặc định Codex dùng để lấy project instructions.
+- Không nhồi toàn bộ context vào `AGENTS.md`; giữ file này là router/protocol ngắn gọn.
+- Các file tham chiếu còn lại là nguồn context bắt buộc theo workspace, dù không phải file mặc định của Codex.
+- Cấu hình Codex thuộc `.codex/config.toml` hoặc `~/.codex/config.toml`, không đặt lẫn vào protocol nếu không cần.
 
 ---
 
-## 3. Memory Structure
+## 2. Boot Sequence
 
-| File                   | Mục đích                                           |
-| ---------------------- | -------------------------------------------------- |
-| `MEMORY.md`            | Long-term memory: quyết định, sở thích, chiến lược |
-| `memory/YYYY-MM-DD.md` | Daily notes: context và observations               |
-| `DREAMS.md`            | (Optional) Dream Diary                             |
+Mỗi session phải:
 
-**Quy tắc:** Muốn nhớ gì → viết vào file. Không giữ "mental notes" trong brain.
+1. Xác nhận `AGENTS.md` đã được nạp làm protocol gốc.
+2. Đọc `SOUL.md` — xác nhận bản sắc và giọng nói.
+3. Đọc `IDENTITY.md` — xác nhận vai trong hệ thống.
+4. Đọc `USER.md` — xác nhận đối tượng phục vụ.
+5. Đọc `BOOTSTRAP.md` — chỉ mục tham chiếu nhanh.
+6. Đọc `TOOLS.md` nếu task liên quan đường dẫn, hạ tầng, build hoặc tool.
+7. Đọc memory hôm nay và hôm qua nếu tồn tại: `memory/YYYY-MM-DD.md`.
+8. Nếu MAIN SESSION và `MEMORY.md` tồn tại: đọc `MEMORY.md`.
+
+Nếu file memory chưa tồn tại, báo cáo ngắn gọn rồi tiếp tục. Không tự tạo memory
+chỉ để hoàn tất boot sequence, trừ khi Sếp yêu cầu hoặc task cần ghi nhớ context.
+
+---
+
+## 3. Instruction Precedence
+
+Thứ tự xử lý trong workspace này:
+
+1. System/developer instructions của môi trường đang chạy.
+2. `AGENTS.md` ở workspace này.
+3. Các file tham chiếu: `SOUL.md`, `IDENTITY.md`, `USER.md`, `BOOTSTRAP.md`, `TOOLS.md`.
+4. Memory files nếu tồn tại.
+5. Yêu cầu trực tiếp mới nhất của Sếp.
+
+Khi các file tham chiếu mâu thuẫn nhau, ưu tiên:
+
+1. `SOUL.md` cho bản sắc, xưng hô, ngôn ngữ.
+2. `AGENTS.md` cho protocol vận hành workspace.
+3. `BOOTSTRAP.md` cho chỉ mục tham chiếu nhanh.
+4. `TOOLS.md` cho đường dẫn và tool notes.
 
 ---
 
 ## 4. Session Types
 
-| Loại           | Key              | Quyền hạn                      |
-| -------------- | ---------------- | ------------------------------ |
-| MAIN SESSION   | `agent:ppa:main` | Cập nhật MEMORY.md, chiến lược |
-| Session thường | `agent:ppa:xxx`  | Ghi daily, thực thi task       |
+| Loại | Key | Quyền hạn |
+|------|-----|-----------|
+| MAIN SESSION | `agent:ppa:main` | Cập nhật `MEMORY.md`, quyết định chiến lược |
+| Session thường | `agent:ppa:<channel>:<scope>` | Ghi `memory/YYYY-MM-DD.md`, thực thi task |
+
+- MAIN SESSION chạy trong channel trực tiếp với Sếp (webchat/Telegram DM...).
+- Session thường phục vụ task cụ thể, không ghi đè `MEMORY.md`.
 
 ---
 
-## 5. Git Workflow
+## 5. Memory Structure
 
-### 5.1 Nguyên tắc
+| File | Mục đích |
+|------|----------|
+| `MEMORY.md` | Long-term: quyết định, sở thích, chiến lược |
+| `memory/YYYY-MM-DD.md` | Daily: context và observations |
 
-| Rule           | Mô tả                          |
-| -------------- | ------------------------------ |
-| 1 task         | 1 branch mới                   |
-| 1 set thay đổi | 1 PR mới                       |
-| Luôn           | Commit cho mọi thay đổi        |
-| Không          | Làm việc trực tiếp trên `main` |
+---
 
-### 5.2 Cấm tuyệt đối
+## 6. Git Discipline
 
-- Không tự ý push
-- Không tự ý tạo PR
-- Không tự ý merge / revert / close PR
-- Không force push main branch
-- Không reset main về commit cũ
-- Không chỉnh sửa lịch sử main branch
+### 6.1 Nguyên tắc
 
-### 5.3 Commit Convention
+- 1 task = 1 branch mới.
+- 1 set thay đổi = 1 PR mới.
+- Luôn commit cho mọi thay đổi.
+- Không làm việc trực tiếp trên `main`.
+
+### 6.2 Cấm tuyệt đối
+
+- Không tự ý push.
+- Không tự ý tạo PR.
+- Không tự ý merge / revert / close PR.
+- Không force push `main`.
+- Không reset `main` về commit cũ.
+- Không chỉnh sửa lịch sử `main`.
+- Không làm sạch, revert, reset hoặc ghi đè thay đổi đang có nếu chưa được Sếp yêu cầu.
+
+### 6.3 Commit Convention
 
 ```
 <type>: <description>
 
-feat: add new package
-fix: fix build error
-docs: update documentation
-chore: maintenance tasks
-refactor: code refactoring
+Ví dụ:
+- feat: add new package
+- fix: fix build error
+- docs: update documentation
+- chore: maintenance tasks
+- refactor: code refactoring
 ```
 
-### 5.4 Branch Naming
+### 6.4 Branch Naming
 
 ```
-<type>/<description>
+<type>/<short-description>
 
-feat/add-php-sqlsrv
-fix/gpg-signing-issue
-chore/update-docs
+Ví dụ:
+- feat/add-php-sqlsrv
+- fix/gpg-signing-issue
+- chore/update-docs
 ```
 
-**Chỉ push khi Sếp nói:** "Em tạo PR đi"
+**Chỉ push khi Sếp nói:** "Em tạo PR đi".
+
+### 6.5 Multi-agent safety
+
+Vì nhiều AI agent dùng chung workspace, luôn chạy `git status` trước khi sửa file.
 
 ---
 
-## 6. External vs Internal Actions
+## 7. External vs Internal Actions
 
-### 6.1 Safe (làm không cần hỏi)
+### 7.1 Safe (làm không cần hỏi)
 
-- Đọc file, explore codebase
-- Search web, check documentation
-- Organize workspace, refactor nội bộ
-- Update documentation
-- Commit changes (local)
-- Tạo branch mới
+- Đọc file, explore codebase.
+- Search web, check documentation.
+- Organize workspace, refactor nội bộ.
+- Update documentation.
+- Commit changes (local).
+- Tạo branch mới.
 
-### 6.2 Ask First (phải hỏi Sếp)
+### 7.2 Ask First (phải hỏi Sếp)
 
-- Push lên remote
-- Tạo PR
-- Merge/revert PR
-- Gửi email, tweet, public posts
-- Chạy destructive commands (`rm`, `drop`, `delete`)
-- Thay đổi workflow nền tảng
+- Push lên remote.
+- Tạo PR.
+- Merge / revert / close PR.
+- Gửi email, tweet, public posts.
+- Chạy destructive commands (`rm`, `drop`, `delete`).
+- Thay đổi workflow nền tảng.
 
-**Rule:** Khi nghi ngờ → hỏi.
-
----
-
-## 7. Sub-Agent Orchestration
-
-| Yêu cầu      | Mô tả                    |
-| ------------ | ------------------------ |
-| **Gọi là**   | **đệ**                   |
-| **Mục tiêu** | Rõ ràng, đo lường được   |
-| **Input**    | Đầy đủ context cần thiết |
-| **Output**   | Định nghĩa cụ thể        |
-
-**Giám sát:** Không để đệ tự quyết định vượt thẩm quyền.
+**Rule:** Khi nghi ngờ → hỏi Sếp.
 
 ---
 
-## 8. Context Validation
+## 8. Sub-Agents
 
-| Câu hỏi                            | Mục đích                |
-| ---------------------------------- | ----------------------- |
-| Task đã rõ chưa?                   | Hiểu yêu cầu            |
-| Có liên quan Git không?            | Áp dụng workflow đúng   |
-| Có cần spawn đệ không?             | Delegate nếu cần        |
-| Có cần update documentation không? | Duy trì tài liệu        |
-| File sẽ tạo ở vị trí nào?          | Đảm bảo workspace scope |
-
-**Nếu chưa rõ → hỏi Sếp.**
+- Gọi là **đệ**.
+- Mô tả rõ: mục tiêu, input, output, giới hạn quyền.
+- Đệ không được vượt quyền PPA Bot.
+- Giám sát: không để đệ tự quyết định vượt thẩm quyền.
 
 ---
 
-## 9. Documentation Trigger
+## 9. Workspace Scope
 
-| Trigger                 | Hành động                 |
-| ----------------------- | ------------------------- |
-| Feature mới             | README.md, docs/          |
-| Thay đổi cấu trúc       | ARCHITECTURE.md           |
-| Thay đổi behavior       | docs/UPDATE-YYYY-MM-DD.md |
-| Fix bug ảnh hưởng logic | CHANGELOG.md              |
+### 9.1 Cho phép
 
----
+| Vị trí | Mục đích |
+|--------|---------|
+| `src/` | Source packages |
+| `conf/` | PPA configuration |
+| `memory/` | Daily memory logs |
+| `docs/` | Documentation |
+| `README.md` | Project overview |
+| `.github/workflows/` | GitHub Actions |
 
-## 10. Failure Handling
+### 9.2 Cấm
 
-1. **Dừng** — không continue mù quáng
-2. **Phân tích** — tìm nguyên nhân gốc
-3. **Không patch** — vào branch cũ
-4. **Branch mới** — nếu cần fix
-5. **Báo cáo** — Sếp rõ ràng
-
----
-
-## 11. Workspace Scope
-
-### 11.1 Cho phép
-
-| Vị trí               | Mục đích          |
-| -------------------- | ----------------- |
-| `src/`               | Source packages   |
-| `conf/`              | PPA configuration |
-| `memory/`            | Daily memory logs |
-| `docs/`              | Documentation     |
-| `.github/workflows/` | GitHub Actions    |
-
-### 11.2 Cấm
-
-- Không tạo file ngoài `/root/.openclaw/workspace/projects/ppa/`
-- Không sửa core PPA files (trừ khi được yêu cầu)
+- Không tạo file ngoài `/root/.openclaw/workspace/projects/ppa/`.
+- Không sửa core PPA files (trừ khi được yêu cầu).
 
 ---
 
-## 12. Giao Tiếp
+## 10. Documentation Trigger
 
-| Rule       | Mô tả               |
-| ---------- | ------------------- |
-| Ngôn ngữ   | Tiếng Việt có dấu   |
-| Emoji      | Không sử dụng emoji |
-| Phong cách | Ngắn gọn, trực tiếp |
+Phải tạo hoặc cập nhật tài liệu khi:
+
+- Feature mới → `README.md`, `docs/`.
+- Thay đổi cấu trúc → `ARCHITECTURE.md` (nếu có) hoặc `docs/`.
+- Thay đổi behavior → `docs/UPDATE-YYYY-MM-DD.md` hoặc `CHANGELOG.md`.
+- Fix bug ảnh hưởng logic → `CHANGELOG.md`.
+
+Chi tiết build/release → `TOOLS.md` §5.
 
 ---
 
-**Workspace này không phải chỗ thử nghiệm.**  
-Đây là hệ điều hành tư duy cho PPA Project.
+## 11. Failure Handling
+
+1. **Dừng** — không continue mù quáng.
+2. **Phân tích** — tìm nguyên nhân gốc.
+3. **Không patch** trực tiếp vào branch cũ.
+4. **Tạo branch mới** nếu cần fix.
+5. **Báo cáo** Sếp rõ ràng.
+
+---
+
+## 12. Shared Workspace Rules
+
+- Không xóa hoặc rút gọn protocol files nếu chưa được Sếp yêu cầu rõ.
+- Khi cập nhật protocol, giữ `AGENTS.md` là entrypoint và dùng ref đến file con.
+- Thay đổi protocol phải nêu rõ tác động đến Codex và các AI agent khác.
+- Không tự ý đổi cấu trúc memory hoặc Codex config.
+
+---
+
+Không bỏ qua boot sequence. Không hành động khi chưa nắm đủ context.

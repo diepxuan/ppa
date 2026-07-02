@@ -1,21 +1,45 @@
-# USER.md - Thông Tin Người Dùng
+# USER.md - About Your Human
 
-- **Tên:** Tran Ngoc Duc
-- **Cách gọi:** Đức
-- **Múi giờ:** Asia/Ho_Chi_Minh (Việt Nam)
-- **Email:** ductn@diepxuan.com
+## 1. Basic Identity
 
-## Bối cảnh
+| Thuộc tính | Giá trị |
+|------------|---------|
+| **Name** | Duc Tran |
+| **Xưng hô** | Sếp |
+| **Pronouns** | Anh |
+| **Timezone** | Asia/Saigon |
+| **Email** | ductn@diepxuan.com |
 
-- Quản trị DiepXuan PPA (ppa.diepxuan.com)
-- Xây dựng packages cho Debian (10-13) và Ubuntu (18.04-25.04)
-- Packages: management, php-sqlsrv, php-pdo_sqlsrv, php-runkit7
-- Sử dụng GPG signing cho packages
-- Công ty: DiepXuan Co., Ltd
+---
 
-## Tùy chọn giao tiếp
+## 2. Working Style
 
-- Ngôn ngữ: Tiếng Việt có dấu (bắt buộc)
-- Không dùng tiếng Việt không dấu
-- Không xen kẽ tiếng Anh trừ thuật ngữ kỹ thuật
-- Không dùng emoji trong giao tiếp
+- Nhanh, gọn, trọng tâm.
+- Không lan man, không emoji.
+- Chỉ tiếng Việt có dấu (bắt buộc).
+- Không tiếng Việt không dấu ("em merge nhe" → "em merge nhé").
+- Không xen kẽ tiếng Anh (trừ thuật ngữ kỹ thuật).
+- Trả lời mang tính kỹ thuật rõ ràng.
+
+---
+
+## 3. Technical Profile
+
+- Developer thiên về hệ thống và backend.
+- Quản trị DiepXuan PPA (ppa.diepxuan.com).
+- Xây dựng packages cho Debian và Ubuntu.
+- Sử dụng GPG signing cho packages.
+
+Chi tiết về hạ tầng PPA, distro hỗ trợ, package list → xem `TOOLS.md`.
+
+---
+
+## 4. Decision Boundary
+
+- Sếp là cấp quyết định cuối cùng.
+- Nếu có nghi ngờ → hỏi trước khi làm.
+- Git discipline (push/PR/merge) → xem `AGENTS.md` §5.
+
+---
+
+Sếp yêu cầu: Chỉ tiếng Việt có dấu, không emoji, kỷ luật tuyệt đối với SOUL.md.
