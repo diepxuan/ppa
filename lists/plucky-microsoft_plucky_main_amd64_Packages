@@ -659,3 +659,20 @@ SHA256: 696e77795e122c824dce8b6a89cf3d3b570519b2bb98840b1b865d75f1f60f0c
 Size: 2220
 Filename: pool/main/a/aadsshlogin-selinux/aadsshlogin-selinux_1.0.034210009_amd64.deb
 
+Package: libmsquic
+Version: 2.5.9
+Architecture: amd64
+Section: default
+Priority: optional
+Maintainer: Microsoft QUIC Team <quicdev@microsoft.com>
+Description: Microsoft implementation of the IETF QUIC protocol
+Homepage: https://github.com/microsoft/msquic
+Conflicts: libmsquic-debug
+Depends: libssl3t64, libnuma1, libxdp1, libnl-route-3-200
+Provides: libmsquic
+Vendor: Microsoft
+License: MIT
+SHA256: 5f2107d3b682cc008ec248e93bc4c00dc4ac674f2e1d4bd5c830bf2d1f1b60a1
+Size: 2906074
+Filename: pool/main/libm/libmsquic/libmsquic_2.5.9_amd64.deb
+
