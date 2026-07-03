@@ -54,6 +54,98 @@ Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
 
+Package: ductn-lar
+Version: 1.0.0+ppa~1
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 10
+Depends: ductn
+Conflicts: lar
+Replaces: lar
+Provides: lar
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/ductn-lar/ductn-lar_1.0.0+ppa~1_all.deb
+Size: 1568
+SHA256: 7583fd568da73fcc71a2e42c4a0ea79429711230efa91c9194cb2384fcdb4426
+SHA1: 7997e8bf7109e6b3b0c1b2f3dd6ccd74b3f4771c
+MD5sum: b322076cba5cd4e10480fa4b7201ec12
+Description: DiepXuan Laravel CLI wrapper
+ Provides the lar command and forwards arguments to ductn php:lar.
+
+Package: ductn-ll
+Version: 1:1.0.0+ppa~1
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 10
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: utils
+Filename: pool/main/d/ductn-ll/ductn-ll_1.0.0+ppa~1_all.deb
+Size: 1456
+SHA256: bbd46d0d069b6c6e13b623837779fd67f26d294ee5aaffc1c5a504b6f21e7360
+SHA1: e6ff9f970d51cd2aad3d4481787b3c5067929365
+MD5sum: 4a7333c111932a674daa865f24e8f902
+Description: DiepXuan ll command wrapper
+ Provides the ll command as a convenient ls -lah wrapper.
+
+Package: ductn-m2
+Version: 1.0.0+ppa~1
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 10
+Depends: ductn
+Conflicts: m2
+Replaces: m2
+Provides: m2
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/ductn-m2/ductn-m2_1.0.0+ppa~1_all.deb
+Size: 1576
+SHA256: 41120826d1b501b4461d5fea9e433b354fa010cc198beee2d8d422e3e0e23ce9
+SHA1: b773f1ac8db169016536b5e60b88017fcee85b07
+MD5sum: 003976d63a0c66ff032732528ff18cf1
+Description: DiepXuan Magento 2 CLI wrapper
+ Provides the m2 command and forwards arguments to ductn php:m2.
+
+Package: lar
+Source: diepxuan
+Version: 5.7.1+debian~11
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 14
+Depends: ductn-lar
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/lar_5.7.1+debian~11_all.deb
+Size: 8180
+SHA256: 9de7918f864193bb4dd1e1e10ed97dc0cf1f8e092aafa815520e432af0c6196d
+SHA1: 2d24d22a4d16900bb42ce53b261bd06a659703cc
+MD5sum: 0aef4e9d94ee005f5f6acb6da529375c
+Description: Transitional package for ductn-lar
+ This package safely migrates existing lar installations to ductn-lar.
+
+Package: m2
+Source: diepxuan
+Version: 5.7.1+debian~11
+Architecture: all
+Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
+Installed-Size: 14
+Depends: ductn-m2
+Homepage: https://ppa.diepxuan.com
+Priority: optional
+Section: devel
+Filename: pool/main/d/diepxuan/m2_5.7.1+debian~11_all.deb
+Size: 8176
+SHA256: 95a14e67bdfc73255d242adecb5184c39c3a0ed565ae6fc30edeb5a353ed7c1a
+SHA1: 0978c7389ddc4827ed868136bb2ff949ed9f11c0
+MD5sum: 2608aa600fe207b34deffd40ad5c8bb6
+Description: Transitional package for ductn-m2
+ This package safely migrates existing m2 installations to ductn-m2.
+
 Package: php-pdo-sqlsrv
 Version: 5.13.1+debian~11
 Architecture: all
