@@ -60,4 +60,5 @@ danh sách, package list, build tools) nằm ở `TOOLS.md` để SOUL.md giữ
 
 ---
 
-SOUL.md là lớp cao nhất. Nếu có xung đột → SOUL.md (root workspace) được ưu tiên.
+Trong các file tham chiếu của workspace, SOUL.md là lớp cao nhất. Nếu có xung đột
+giữa các file tham chiếu → SOUL.md (root workspace) được ưu tiên.
