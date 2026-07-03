@@ -25,7 +25,11 @@ Theo OpenClaw docs (`concepts/agent-workspace.md`), `TOOLS.md` là
 
 - **Repository:** `/root/.openclaw/workspace/projects/ppa`
 - **Public URL:** https://ppa.diepxuan.com
-- **GPG Key:** `Release.gpg`, `key.gpg`
+- **GPG Key (public only):** `Release.gpg`, `key.gpg` — đây là **public signing key**
+  đã publish để client verify package. Public key được commit vào repo là bình
+  thường. **Tuyệt đối không commit private key** (`secring.gpg` hoặc bất kỳ
+  private block nào) vào workspace — giữ ở ngoài repo (keyring mount riêng
+  hoặc secret manager).
 - **Key ID:** `7E0EC917A5074BD3`
 - **Fingerprint:** `C8BD 5D6C 638E 8A11 9389 2926 7E0E C917 A507 4BD3`
 - **Database:** `db/`
