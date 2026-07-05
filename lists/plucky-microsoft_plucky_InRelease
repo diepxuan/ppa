@@ -5,40 +5,40 @@ Origin: microsoft-ubuntu-plucky-prod plucky
 Label: microsoft-ubuntu-plucky-prod plucky
 Suite: plucky
 Codename: plucky
-Date: Fri, 03 Jul 2026 17:45:26 +0000
+Date: Sat, 04 Jul 2026 06:47:24 +0000
 Architectures: amd64 arm64 armhf all
 Components: main
 Acquire-By-Hash: yes
 SHA256:
  a13c574b87260223924e42ab655bb667da02d732995b494ebd9e07ccd40bec7e            26466 main/binary-amd64/Packages
- 68dfc5fd79f580c1ce321b3960691ee5cb11f123266e0628d4a99640c1ff0c99             4034 main/binary-amd64/Packages.gz
+ 80d5f5121a3c260afe52ee65dd3a3eec60dbba62eceea01bf7e4a734caf7af48             4034 main/binary-amd64/Packages.gz
  14794815209c5c6dafb905b6bc91e32f0b9c070b1a30c4bd385636d2cec252e6            10032 main/binary-arm64/Packages
- 1f0bb0a8dab46107f729c9a683e8a2a4ed66629a6ec82b96c268dcb8741cc4a6             1698 main/binary-arm64/Packages.gz
+ 86d550a28e54f9daf1f2fe310ae27531a2ee78ba8fc7d47b7c27f2d7c89544fe             1698 main/binary-arm64/Packages.gz
  8f69c1fc8000bbe9ea12f27cc44ae5d075709079a5f27c090c6c011e736fc264             4112 main/binary-armhf/Packages
- 5117768df818f3c5599d35064ae4f0648ea0aa62c8171433241abf097a558a73              786 main/binary-armhf/Packages.gz
+ 934b582bfdcc4f38854990720b67cd9e1f49db7e1d535b7814b1f744b94c51fe              786 main/binary-armhf/Packages.gz
  c2c7f8154cf4bb8f2a4dfdbd63778b1d02e7a4ce3da86c5282ff3b4a6691ebb2              530 main/binary-all/Packages
- 2a3f17f9b05b1ae29140c6165e46e21e2ef204fc70cd89c88c4f5201cf4dd532              345 main/binary-all/Packages.gz
+ e2c4e7cda791d1762e12ff39b41a65fbd1f3759e52bdfe7f52446ec2fa15b5de              345 main/binary-all/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/source/Sources
- 6929c3fbea0c68f85486953c59f94b651400b9a1e716356613e966dbcc287fc0               28 main/source/Sources.gz
+ 4d0e98ab0ae288f280bb3398843b5bb13002639729ea3319daa90a72cf391308               28 main/source/Sources.gz
 SHA512:
  32572f514f972f43e933585c689b2e84404e4e4c337fd8812321d34f4d2719e8cca18aac35edda1eabdfe405f2dc8849cae4217b4b0d648cba5d32663c2c2166            26466 main/binary-amd64/Packages
- e0f2c9b60965da102f2311366e089e241d757f93cc5a516928b1e1bca7525d072f1720e955a3773c2e39bdf93ab503f90a42d4b127b1d29e9212a9a8a461a7b5             4034 main/binary-amd64/Packages.gz
+ 5b57db6030c9db0c788c411b48ca1042a5db3d033060e54662892816ee5e4e465a2342d13d710449a57baa7cd8c845185a29beb521af587a7962434d2b0f18e7             4034 main/binary-amd64/Packages.gz
  003717e73907aa42d13c4bbf6e4b47be2ec0cc91c114e4f3b0a23a7074e40ec347b3fab8c7286896ff59fb9a44ba2ebc6a0de68982b4ef149ca0c98091061188            10032 main/binary-arm64/Packages
- 8f4a5909c4cf913cb6a7b28cf39b43552bd6ba4abc19d8c35e45527165229f8aaa0e96a31892da77ddcc565928a8785b1cf2ca43fcd9fc5c4438653e8598fac1             1698 main/binary-arm64/Packages.gz
+ 06186e195b252d9c708d561dda62b9c781b605f43d7db45aba957fcd02231adbeee49131221d9aa3e03427a1bc7c7eb579cfab6fb0670509f941f84eaa285637             1698 main/binary-arm64/Packages.gz
  a7af49877c7c7aed6386ab91a81722eaab98c1d63bcd63a27bc6cfe3253dd422dd06e3e96915575ddb7a73c230cb522e6665a391daa496c473a04dc09c9acf3a             4112 main/binary-armhf/Packages
- 13734001063421bd52877f4c50240736acec480e4eb882be41565f2d4ffac0bbcc890678dcf78fa0f1ce51ea0f24acd878d7eb1fc7012e9dd8c3f9c74b801260              786 main/binary-armhf/Packages.gz
+ 925e73d133b0e1272d99c3ff66e1126b2b0d076f1aa20c504250561a11f8db966c37039fec42bdfc1f9a54ed564b76e859770798af82ce7f8d0513cb7485f1a1              786 main/binary-armhf/Packages.gz
  c171b275d4c54230dd03bb991fc4916cb9487f999c8b223178012d7cade6436ed1f496675c8d961c1cb57a67fbcfb9cc9d49d61f7a63f9b016649193521eddc4              530 main/binary-all/Packages
- 28a87eac44684794371c9fd0957aad187ee422c1de9d7a600e8b8bb712f74d22333c965ac35fa2e26dd96d039ad884bc74d40ea721f38127533441532c271ed0              345 main/binary-all/Packages.gz
+ 7bc0794b95a1eec9ee93b01a33a1e901805b48ef1070c6e5c7aa95e87ae62593c8584d14e98c95ef6d38eb898d7ed22e22dd5a7bf848f76c3a2826e11f8a7351              345 main/binary-all/Packages.gz
  cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 main/source/Sources
- 58a459275a930cb4fc67824f90d1e89f3269ca7471c378d03a2ea297777e1c83eaec89881a48d0e79c9e7b7f5517e82e01d41f17adee0496f6906cc8da14310f               28 main/source/Sources.gz
+ 5cf36684ced8e1c442864bcbe29d2e8d54c4aee45b3149f70dc8c400ff74059019fa39b606cd39bf694235bc4e975aa4c8f091dabb6405701c4c54344aef96e2               28 main/source/Sources.gz
 
 -----BEGIN PGP SIGNATURE-----
 Version: BSN Pgp v1.0.0.0
 
-iQEcBAEBCAAGBQJqR/WLAAoJEOs+lK2+EinPkm4IAJNYCu7sro269+HQViBUbHgP
-yiYeBOEaV3V3tOqwIS/QeXKrICMfgM1CysmpD2m4CZ6krc3yfRPmNHzVLWmnGWqA
-I2K6030TbCvQN/67oibUSbNAQ1M9nWPNCWuPISUTRlSi3B79M/XDe/tOIpcsKayb
-KWnlMY3r3l/ExRkDT/8Lc9acmhHD1d1JX4yk2llQlQ9HywUGDTtUFl89fM34yHvR
-PeFJfN5eRh4Oq+UMlMIaAIB8As+SXq+tt+Io0IteIZnR6WAMOYyYE45nGPqUgzN/
-HH6dwQD/EuBNPMnCwIH5aGSu9CBnfuVlq75QFYiNmv1Y3+r/TCWzijGL9XFliJA=
+iQEcBAEBCAAGBQJqSKzSAAoJEOs+lK2+EinPrUgH/AuscsuEkm61WPgcG/10/h2H
+w58tL0Uws8SwBscKHnY2hZoP73OGhRMdl39MZ9KV/f2io3p4aVUDO4WoWCbK0Co9
+tOnBH00lxXGKxzG/Da8oHnzwVINPZexzSOpTxQmMjMmC5fjoaKEobvtkCSzN5JF8
+0+t6cha4PzXrTatZT5ukMRBpx2aBrO+ayPDapmaZ0y9I9BGMSU2csHkEAOQD8Guv
+9wRa7I62akhs2nVFKgrPSdK72yX1CwkWBvXImQOdl2jS7N/AP/DjrJp1KfcY0S8L
+IryekH7HbC1Osy6P2kIYmZPxMuE1slfO3zwFIBgRSUymEvfzIW+25n8UEO1xoXQ=
 -----END PGP SIGNATURE-----

@@ -17068,6 +17068,23 @@ SHA256: 619d008420478c2463f747bf654e58ef6a67104e42e20a564314376d90819973
 Size: 186211286
 Filename: pool/main/m/mdatp/mdatp_101.25082.0003_amd64.deb
 
+Package: msopenjdk-25
+Version: 25.0.0-1
+Architecture: amd64
+Section: java
+Priority: optional
+Installed-Size: 395283
+Maintainer: Microsoft Package Maintainers <openjdk@microsoft.com>
+Description: Microsoft Build of OpenJDK 25
+ Microsoft Build of OpenJDK is an OpenJDK-based development environment to create
+ applications and components using the Java programming language.
+Depends: ca-certificates, java-common, libc6, zlib1g
+Recommends: libasound2, libx11-6, libfontconfig1, libfreetype6, libxext6, libxi6, libxrender1, libxtst6, fonts-dejavu-core, fonts-dejavu-extra
+Provides: java-compiler, java-runtime, java-runtime-headless, java-sdk, java-sdk-headless, java10-runtime, java10-runtime-headless, java10-sdk, java10-sdk-headless, java11-runtime, java11-runtime-headless, java11-sdk, java11-sdk-headless, java12-runtime, java12-runtime-headless, java12-sdk, java12-sdk-headless, java13-runtime, java13-runtime-headless, java13-sdk, java13-sdk-headless, java14-runtime, java14-runtime-headless, java14-sdk, java14-sdk-headless, java15-runtime, java15-runtime-headless, java15-sdk, java15-sdk-headless, java16-runtime, java16-runtime-headless, java16-sdk, java16-sdk-headless, java17-runtime, java17-runtime-headless, java17-sdk, java17-sdk-headless, java18-runtime, java18-runtime-headless, java18-sdk, java18-sdk-headless, java19-runtime, java19-runtime-headless, java19-sdk, java19-sdk-headless, java2-runtime, java2-runtime-headless, java2-sdk, java2-sdk-headless, java20-runtime, java20-runtime-headless, java20-sdk, java20-sdk-headless, java21-runtime, java21-runtime-headless, java21-sdk, java21-sdk-headless, java22-runtime, java22-runtime-headless, java22-sdk, java22-sdk-headless, java23-runtime, java23-runtime-headless, java23-sdk, java23-sdk-headless, java24-runtime, java24-runtime-headless, java24-sdk, java24-sdk-headless, java25-runtime, java25-runtime-headless, java25-sdk, java25-sdk-headless, java5-runtime, java5-runtime-headless, java5-sdk, java5-sdk-headless, java6-runtime, java6-runtime-headless, java6-sdk, java6-sdk-headless, java7-runtime, java7-runtime-headless, java7-sdk, java7-sdk-headless, java8-runtime, java8-runtime-headless, java8-sdk, java8-sdk-headless, java9-runtime, java9-runtime-headless, java9-sdk, java9-sdk-headless
+SHA256: 8a2408ece5025dea4d0c9e68c4990c5a15beae5e681742576408d9e0fc7c0e92
+Size: 192709174
+Filename: pool/main/m/msopenjdk-25/msopenjdk-25_25.0.0-1_amd64.deb
+
 Package: moby-buildx
 Version: 0.29.0-debian12u1
 Architecture: amd64
@@ -17116,23 +17133,6 @@ Replaces: runc (<= 1.3.1), runc-io (<= 1.3.1)
 SHA256: 549d5f88e06400924184e1618a2b994421b12c07f756b85a6d684b46a6164617
 Size: 3294866
 Filename: pool/main/m/moby-runc/moby-runc_1.3.1-debian12u1_amd64.deb
-
-Package: msopenjdk-25
-Version: 25.0.0-1
-Architecture: amd64
-Section: java
-Priority: optional
-Installed-Size: 395283
-Maintainer: Microsoft Package Maintainers <openjdk@microsoft.com>
-Description: Microsoft Build of OpenJDK 25
- Microsoft Build of OpenJDK is an OpenJDK-based development environment to create
- applications and components using the Java programming language.
-Depends: ca-certificates, java-common, libc6, zlib1g
-Recommends: libasound2, libx11-6, libfontconfig1, libfreetype6, libxext6, libxi6, libxrender1, libxtst6, fonts-dejavu-core, fonts-dejavu-extra
-Provides: java-compiler, java-runtime, java-runtime-headless, java-sdk, java-sdk-headless, java10-runtime, java10-runtime-headless, java10-sdk, java10-sdk-headless, java11-runtime, java11-runtime-headless, java11-sdk, java11-sdk-headless, java12-runtime, java12-runtime-headless, java12-sdk, java12-sdk-headless, java13-runtime, java13-runtime-headless, java13-sdk, java13-sdk-headless, java14-runtime, java14-runtime-headless, java14-sdk, java14-sdk-headless, java15-runtime, java15-runtime-headless, java15-sdk, java15-sdk-headless, java16-runtime, java16-runtime-headless, java16-sdk, java16-sdk-headless, java17-runtime, java17-runtime-headless, java17-sdk, java17-sdk-headless, java18-runtime, java18-runtime-headless, java18-sdk, java18-sdk-headless, java19-runtime, java19-runtime-headless, java19-sdk, java19-sdk-headless, java2-runtime, java2-runtime-headless, java2-sdk, java2-sdk-headless, java20-runtime, java20-runtime-headless, java20-sdk, java20-sdk-headless, java21-runtime, java21-runtime-headless, java21-sdk, java21-sdk-headless, java22-runtime, java22-runtime-headless, java22-sdk, java22-sdk-headless, java23-runtime, java23-runtime-headless, java23-sdk, java23-sdk-headless, java24-runtime, java24-runtime-headless, java24-sdk, java24-sdk-headless, java25-runtime, java25-runtime-headless, java25-sdk, java25-sdk-headless, java5-runtime, java5-runtime-headless, java5-sdk, java5-sdk-headless, java6-runtime, java6-runtime-headless, java6-sdk, java6-sdk-headless, java7-runtime, java7-runtime-headless, java7-sdk, java7-sdk-headless, java8-runtime, java8-runtime-headless, java8-sdk, java8-sdk-headless, java9-runtime, java9-runtime-headless, java9-sdk, java9-sdk-headless
-SHA256: 8a2408ece5025dea4d0c9e68c4990c5a15beae5e681742576408d9e0fc7c0e92
-Size: 192709174
-Filename: pool/main/m/msopenjdk-25/msopenjdk-25_25.0.0-1_amd64.deb
 
 Package: moby-buildx
 Version: 0.29.1-debian12u1
@@ -21496,6 +21496,37 @@ SHA256: fdebc6b3b90e556ed9a9d65164c22a1c92aa96c63e18fb09e462ce08ab0c39aa
 Size: 2382
 Filename: pool/main/a/aadsshlogin-selinux/aadsshlogin-selinux_1.0.033370002_amd64.deb
 
+Package: msft-golang
+Version: 1.26.0-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 258028
+Maintainer: Azure Container Upstream
+Description: The Microsoft build of the Go toolset
+Homepage: https://github.com/microsoft/go
+Conflicts: golang
+Recommends: g++, gcc, libc6-dev, pkg-config
+Provides: golang (= 1.26.0)
+SHA256: 4bb2b7963c68df588b71c748c931e2df863689f72b58a10fa98a0ecebf1819a6
+Size: 56661878
+Filename: pool/main/m/msft-golang/msft-golang_1.26.0-debian12u1_amd64.deb
+
+Package: msft-golang-dbgsym
+Source: msft-golang
+Version: 1.26.0-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 9363
+Maintainer: Azure Container Upstream
+Description: debug symbols for msft-golang
+Depends: msft-golang (= 1.26.0-debian12u1)
+Build-Ids: 3aa5a95b3a0a5005e2fe0bcaf50eb76f96567b24 43bdecd02473362fdf572179341d3a5121aa3fd6 47932e4eed043d576d073ced86200aa911ec7c5d 49bace0623bf9ccbdb19b8790aa2d2e14a359dff 8ad98a5390637ebea0ca3357983643e3c841d213 93bf10b171bdda04ea155cd34cb7428cdce43f4a b4ad2942226a34a1e57df83a77dd87fe1170163e c24ab92a9579b8b919a0d8b8763a513f0b132c84 d36975d4ac0bfc37173904ed0a4cc8fdcc17417d fa09002d1bb3f109848b990d528d88ee0f4a40e6
+Auto-Built-Package: debug-symbols
+SHA256: 409df341d31fe6e9d9819d72e6e358960fb14d64ddbabd8c02b71b86125a469a
+Size: 810618
+Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.0-debian12u1_amd64.deb
+
 Package: jaz
 Version: 0.0.0~preview+20260223.1
 Architecture: amd64
@@ -21509,6 +21540,34 @@ License: EULA
 SHA256: 6d6d847f60de8da14b7fa6ad2509b81c6a15e89fa275e6226c9bb48c0244b326
 Size: 4150248
 Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260223.1_amd64.deb
+
+Package: powershell-preview
+Version: 7.6.0-rc.1-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 193260
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: f1fafa9382f3a3915d47b278c40fd56ae051d6de0d4041de3c13415332859e5a
+Size: 56321346
+Filename: pool/main/p/powershell-preview/powershell-preview_7.6.0-rc.1-1.deb_amd64.deb
+
+Package: kubelogin
+Version: 0.2.15-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 48917
+Maintainer: Azure Container Upstream
+Description: This is a client-go credential (exec) plugin implementing azure authentication. This plugin provides features that are not available in kubectl. It is supported on kubectl v1.11+
+Homepage: https://github.com/Azure/kubelogin
+Depends: libc6 (>= 2.34), libssl3
+SHA256: a6b4aaf936321aa7003b339cf3fb6983523c090eeae601773d0c8c0ac6135ad6
+Size: 11720494
+Filename: pool/main/k/kubelogin/kubelogin_0.2.15-debian12u1_amd64.deb
 
 Package: kubelogin-dbgsym
 Source: kubelogin
@@ -21525,6 +21584,37 @@ Auto-Built-Package: debug-symbols
 SHA256: 769d275994daf11e715083b8a02e555e0364d233d5e0dd26be131e81a4c05cda
 Size: 12143418
 Filename: pool/main/k/kubelogin/kubelogin-dbgsym_0.2.15-debian12u1_amd64.deb
+
+Package: moby-compose
+Version: 5.1.0-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 28956
+Maintainer: Azure Container Upstream
+Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
+Homepage: https://github.com/docker/compose
+Conflicts: docker-ce, docker-compose-plugin, docker-ee
+Depends: libc6 (>= 2.34)
+Recommends: moby-cli
+SHA256: 62fc14394ef92c436e59c2e101dcbd11ff871b647ed48a0ad57abcc9078d4fb0
+Size: 7720638
+Filename: pool/main/m/moby-compose/moby-compose_5.1.0-debian12u1_amd64.deb
+
+Package: moby-compose-dbgsym
+Source: moby-compose
+Version: 5.1.0-debian12u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 3409
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-compose
+Depends: moby-compose (= 5.1.0-debian12u1)
+Build-Ids: 5d4fdc06a908f17d3a4c10f3149bcaa133fb3d80
+Auto-Built-Package: debug-symbols
+SHA256: 0cbee0048a0c5a801ce0702f9495a89cbb0fe653abd31693c10af6cbf93e06d9
+Size: 388330
+Filename: pool/main/m/moby-compose/moby-compose-dbgsym_5.1.0-debian12u1_amd64.deb
 
 Package: sysmonforlinux
 Version: 1.5.1
@@ -21551,6 +21641,21 @@ Recommends: moby-cli
 SHA256: 1d3407d59da2e8bf10741852984a00c0ee7e73a5234aae6b5a219920b0d929b9
 Size: 19651174
 Filename: pool/main/m/moby-buildx/moby-buildx_0.32.0-debian12u1_amd64.deb
+
+Package: moby-buildx
+Version: 0.32.1-debian12u1
+Architecture: amd64
+Section: -
+Installed-Size: 90186
+Maintainer: Azure Container Upstream
+Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
+Homepage: https://github.com/docker/buildx
+Conflicts: docker-buildx-plugin, docker-ce, docker-ee
+Depends: libc6 (>= 2.34), libssl3
+Recommends: moby-cli
+SHA256: 9c0cb40f21f42678b9a6724a4f0ef0ba9af566251f62a22d441b222fbeeb05bf
+Size: 19652590
+Filename: pool/main/m/moby-buildx/moby-buildx_0.32.1-debian12u1_amd64.deb
 
 Package: moby-buildx-dbgsym
 Source: moby-buildx
@@ -21585,109 +21690,19 @@ Size: 25003578
 Filename: pool/main/m/moby-buildx/moby-buildx-dbgsym_0.32.1-debian12u1_amd64.deb
 
 Package: msft-golang
-Version: 1.26.0-debian12u1
+Version: 1.26.1-debian12u1
 Architecture: amd64
 Section: -
-Installed-Size: 258028
+Installed-Size: 258137
 Maintainer: Azure Container Upstream
 Description: The Microsoft build of the Go toolset
 Homepage: https://github.com/microsoft/go
 Conflicts: golang
 Recommends: g++, gcc, libc6-dev, pkg-config
-Provides: golang (= 1.26.0)
-SHA256: 4bb2b7963c68df588b71c748c931e2df863689f72b58a10fa98a0ecebf1819a6
-Size: 56661878
-Filename: pool/main/m/msft-golang/msft-golang_1.26.0-debian12u1_amd64.deb
-
-Package: msft-golang-dbgsym
-Source: msft-golang
-Version: 1.26.0-debian12u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 9363
-Maintainer: Azure Container Upstream
-Description: debug symbols for msft-golang
-Depends: msft-golang (= 1.26.0-debian12u1)
-Build-Ids: 3aa5a95b3a0a5005e2fe0bcaf50eb76f96567b24 43bdecd02473362fdf572179341d3a5121aa3fd6 47932e4eed043d576d073ced86200aa911ec7c5d 49bace0623bf9ccbdb19b8790aa2d2e14a359dff 8ad98a5390637ebea0ca3357983643e3c841d213 93bf10b171bdda04ea155cd34cb7428cdce43f4a b4ad2942226a34a1e57df83a77dd87fe1170163e c24ab92a9579b8b919a0d8b8763a513f0b132c84 d36975d4ac0bfc37173904ed0a4cc8fdcc17417d fa09002d1bb3f109848b990d528d88ee0f4a40e6
-Auto-Built-Package: debug-symbols
-SHA256: 409df341d31fe6e9d9819d72e6e358960fb14d64ddbabd8c02b71b86125a469a
-Size: 810618
-Filename: pool/main/m/msft-golang/msft-golang-dbgsym_1.26.0-debian12u1_amd64.deb
-
-Package: powershell-preview
-Version: 7.6.0-rc.1-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 193260
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: f1fafa9382f3a3915d47b278c40fd56ae051d6de0d4041de3c13415332859e5a
-Size: 56321346
-Filename: pool/main/p/powershell-preview/powershell-preview_7.6.0-rc.1-1.deb_amd64.deb
-
-Package: kubelogin
-Version: 0.2.15-debian12u1
-Architecture: amd64
-Section: -
-Installed-Size: 48917
-Maintainer: Azure Container Upstream
-Description: This is a client-go credential (exec) plugin implementing azure authentication. This plugin provides features that are not available in kubectl. It is supported on kubectl v1.11+
-Homepage: https://github.com/Azure/kubelogin
-Depends: libc6 (>= 2.34), libssl3
-SHA256: a6b4aaf936321aa7003b339cf3fb6983523c090eeae601773d0c8c0ac6135ad6
-Size: 11720494
-Filename: pool/main/k/kubelogin/kubelogin_0.2.15-debian12u1_amd64.deb
-
-Package: moby-compose
-Version: 5.1.0-debian12u1
-Architecture: amd64
-Section: -
-Installed-Size: 28956
-Maintainer: Azure Container Upstream
-Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
-Homepage: https://github.com/docker/compose
-Conflicts: docker-ce, docker-compose-plugin, docker-ee
-Depends: libc6 (>= 2.34)
-Recommends: moby-cli
-SHA256: 62fc14394ef92c436e59c2e101dcbd11ff871b647ed48a0ad57abcc9078d4fb0
-Size: 7720638
-Filename: pool/main/m/moby-compose/moby-compose_5.1.0-debian12u1_amd64.deb
-
-Package: moby-compose-dbgsym
-Source: moby-compose
-Version: 5.1.0-debian12u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 3409
-Maintainer: Azure Container Upstream
-Description: debug symbols for moby-compose
-Depends: moby-compose (= 5.1.0-debian12u1)
-Build-Ids: 5d4fdc06a908f17d3a4c10f3149bcaa133fb3d80
-Auto-Built-Package: debug-symbols
-SHA256: 0cbee0048a0c5a801ce0702f9495a89cbb0fe653abd31693c10af6cbf93e06d9
-Size: 388330
-Filename: pool/main/m/moby-compose/moby-compose-dbgsym_5.1.0-debian12u1_amd64.deb
-
-Package: moby-buildx
-Version: 0.32.1-debian12u1
-Architecture: amd64
-Section: -
-Installed-Size: 90186
-Maintainer: Azure Container Upstream
-Description: Buildx is a Docker CLI plugin for extended build capabilities with BuildKit.
-Homepage: https://github.com/docker/buildx
-Conflicts: docker-buildx-plugin, docker-ce, docker-ee
-Depends: libc6 (>= 2.34), libssl3
-Recommends: moby-cli
-SHA256: 9c0cb40f21f42678b9a6724a4f0ef0ba9af566251f62a22d441b222fbeeb05bf
-Size: 19652590
-Filename: pool/main/m/moby-buildx/moby-buildx_0.32.1-debian12u1_amd64.deb
+Provides: golang (= 1.26.1)
+SHA256: 32b426d944c86fd52c41b930f516fc8f40563d2d2af3b7f0c555509a90861486
+Size: 56692954
+Filename: pool/main/m/msft-golang/msft-golang_1.26.1-debian12u1_amd64.deb
 
 Package: moby-cli
 Version: 29.3.0-debian12u1
@@ -28514,38 +28529,6 @@ SHA256: a116706f729bd75f8113e3794b3847913053e4461529e7cdfa4f2af0be0284f0
 Size: 31547370
 Filename: pool/main/k/kubectl/kubectl_1.35.6-debian12u2_amd64.deb
 
-Package: msft-golang
-Version: 1.26.1-debian12u1
-Architecture: amd64
-Section: -
-Installed-Size: 258137
-Maintainer: Azure Container Upstream
-Description: The Microsoft build of the Go toolset
-Homepage: https://github.com/microsoft/go
-Conflicts: golang
-Recommends: g++, gcc, libc6-dev, pkg-config
-Provides: golang (= 1.26.1)
-SHA256: 32b426d944c86fd52c41b930f516fc8f40563d2d2af3b7f0c555509a90861486
-Size: 56692954
-Filename: pool/main/m/msft-golang/msft-golang_1.26.1-debian12u1_amd64.deb
-
-Package: libmsquic
-Version: 2.5.9
-Architecture: amd64
-Section: default
-Priority: optional
-Maintainer: Microsoft QUIC Team <quicdev@microsoft.com>
-Description: Microsoft implementation of the IETF QUIC protocol
-Homepage: https://github.com/microsoft/msquic
-Conflicts: libmsquic-debug
-Depends: libssl3, libnuma1
-Provides: libmsquic
-Vendor: Microsoft
-License: MIT
-SHA256: 89097dcf77bc8ac421f5bca1afe8826a268137f5639e93ddb039682059498ab5
-Size: 2768774
-Filename: pool/main/libm/libmsquic/libmsquic_2.5.9_amd64.deb
-
 Package: kubectl-dbgsym
 Source: kubectl
 Version: 1.35.6-debian12u2
@@ -28577,4 +28560,21 @@ Auto-Built-Package: debug-symbols
 SHA256: a09a230ba50ddc4079a69312a88721dbe88248b9d683a0dc95d78749b256bcb8
 Size: 23804494
 Filename: pool/main/k/kubectl/kubectl-dbgsym_1.34.9-debian12u2_amd64.deb
+
+Package: libmsquic
+Version: 2.5.9
+Architecture: amd64
+Section: default
+Priority: optional
+Maintainer: Microsoft QUIC Team <quicdev@microsoft.com>
+Description: Microsoft implementation of the IETF QUIC protocol
+Homepage: https://github.com/microsoft/msquic
+Conflicts: libmsquic-debug
+Depends: libssl3, libnuma1
+Provides: libmsquic
+Vendor: Microsoft
+License: MIT
+SHA256: 89097dcf77bc8ac421f5bca1afe8826a268137f5639e93ddb039682059498ab5
+Size: 2768774
+Filename: pool/main/libm/libmsquic/libmsquic_2.5.9_amd64.deb
 

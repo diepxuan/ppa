@@ -32218,22 +32218,6 @@ Size: 31869474
 Filename: pool/main/m/moby-containerd/moby-containerd_1.7.31-debian11u1_amd64.deb
 
 Package: moby-containerd
-Version: 2.0.8-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 92383
-Maintainer: Azure Container Upstream
-Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
-Homepage: https://github.com/containerd/containerd
-Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
-Recommends: ca-certificates, pigz, xz-utils
-Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
-SHA256: 67c9e835d04854f788f2f5768ea49bf1886a493f49293a9dd27fa4252d2fc4ef
-Size: 23693470
-Filename: pool/main/m/moby-containerd/moby-containerd_2.0.8-debian11u1_amd64.deb
-
-Package: moby-containerd
 Version: 2.1.7-debian11u1
 Architecture: amd64
 Section: -
@@ -32265,21 +32249,6 @@ SHA256: 8febdeb6c26a9eee0cb22ee198cf4d14dcd2765f53320a690370329bfafd0cce
 Size: 21415670
 Filename: pool/main/m/moby-containerd/moby-containerd_2.2.3-debian11u1_amd64.deb
 
-Package: moby-compose
-Version: 5.1.3-debian11u1
-Architecture: amd64
-Section: -
-Installed-Size: 29690
-Maintainer: Azure Container Upstream
-Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
-Homepage: https://github.com/docker/compose
-Conflicts: docker-ce, docker-compose-plugin, docker-ee
-Depends: libc6 (>= 2.3.2)
-Recommends: moby-cli
-SHA256: f5ee551318121bc97767aab270e058cd01b108fc3b6591ccd40e615e122f196d
-Size: 7900162
-Filename: pool/main/m/moby-compose/moby-compose_5.1.3-debian11u1_amd64.deb
-
 Package: moby-compose-dbgsym
 Source: moby-compose
 Version: 5.1.3-debian11u1
@@ -32295,6 +32264,126 @@ Auto-Built-Package: debug-symbols
 SHA256: c21bda689410d10c7532561ad03a53249661cdb5a5e412d8d909e43b771382cb
 Size: 397770
 Filename: pool/main/m/moby-compose/moby-compose-dbgsym_5.1.3-debian11u1_amd64.deb
+
+Package: moby-engine-dbgsym
+Source: moby-engine
+Version: 29.4.1-debian11u1
+Architecture: amd64
+Section: debug
+Priority: optional
+Installed-Size: 11567
+Maintainer: Azure Container Upstream
+Description: debug symbols for moby-engine
+Depends: moby-engine (= 29.4.1-debian11u1)
+Build-Ids: 38fb8735b8aad831a9141cf7182cfddba0687080 75bd2fad61e16a351366ec0a1d938eb5aecb6696
+Auto-Built-Package: debug-symbols
+SHA256: d82364e53c5b20428ff34ed256dd25d9fac2d2112e81fc707a3427534c08c12f
+Size: 1144034
+Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.4.1-debian11u1_amd64.deb
+
+Package: jaz
+Version: 0.0.0~preview+20260421.1
+Architecture: amd64
+Section: default
+Priority: extra
+Installed-Size: 10121
+Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
+Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
+Homepage: https://learn.microsoft.com/java/jaz/overview
+License: EULA
+SHA256: 90b86eea44cd127c2759232ae46dbf5411f4f135bd0980cf17f4ba54a74ab09d
+Size: 4151478
+Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260421.1_amd64.deb
+
+Package: mdatp
+Version: 101.26032.0000
+Architecture: amd64
+Section: devel
+Priority: optional
+Installed-Size: 462644
+Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
+Description: Microsoft Defender (Production)
+   Microsoft Defender is a complete endpoint
+  security solution. It delivers preventative protection, post-breach
+ detection, automated investigation, and response.
+Depends: libc6 (>= 2.17)
+SHA256: ec5f9aecb7e46462bcc866b795f6aa9f9ca72485b17774168e53739c8cae7fb3
+Size: 169856470
+Filename: pool/main/m/mdatp/mdatp_101.26032.0000_amd64.deb
+
+Package: powershell
+Version: 7.5.6-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 187977
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: fde7b29237f3fcd8483b36859d3b5aa84380034d8d1d999a090c22a6fc3fd793
+Size: 54996822
+Filename: pool/main/p/powershell/powershell_7.5.6-1.deb_amd64.deb
+
+Package: powershell-preview
+Version: 7.7.0-preview.1-1.deb
+Architecture: amd64
+Section: shells
+Priority: optional
+Installed-Size: 194714
+Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
+Description: PowerShell is an automation and configuration management platform.
+ It consists of a cross-platform command-line shell and associated scripting language.
+Homepage: https://microsoft.com/powershell
+Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
+SHA256: 476655fc7a0917965a9c66a2b0f772bc9790d4d6c263e849863eee22c0726a29
+Size: 56985782
+Filename: pool/main/p/powershell-preview/powershell-preview_7.7.0-preview.1-1.deb_amd64.deb
+
+Package: mssql-tools
+Version: 17.11.1.1-1
+Architecture: amd64
+Section: database
+Installed-Size: 0
+Maintainer: Microsoft SQL Tools Team <mssql-tools@microsoft.com>
+Description: Tools for Microsoft(R) SQL Server(R)
+ This package provides tools for Microsoft(R) SQL Server(R).
+Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), msodbcsql17 (>= 17.3.0.0)
+SHA256: 8944c928aff5e6965988291446f7e4d18f3cf4d09faff99432259d1613800891
+Size: 228990
+Filename: pool/main/m/mssql-tools/mssql-tools_17.11.1.1-1_amd64.deb
+
+Package: moby-containerd
+Version: 2.0.8-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 92383
+Maintainer: Azure Container Upstream
+Description: containerd is an industry-standard container runtime with an emphasis on simplicity, robustness, and portability.
+Homepage: https://github.com/containerd/containerd
+Conflicts: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+Depends: libc6 (>= 2.3.2), moby-runc (>= 1.1.0)
+Recommends: ca-certificates, pigz, xz-utils
+Replaces: docker, docker-ce, docker-ee, docker-engine, docker-engine-cs, docker.io
+SHA256: 67c9e835d04854f788f2f5768ea49bf1886a493f49293a9dd27fa4252d2fc4ef
+Size: 23693470
+Filename: pool/main/m/moby-containerd/moby-containerd_2.0.8-debian11u1_amd64.deb
+
+Package: moby-compose
+Version: 5.1.3-debian11u1
+Architecture: amd64
+Section: -
+Installed-Size: 29690
+Maintainer: Azure Container Upstream
+Description: A Docker CLI plugin which allows you to run Docker Compose applications from the Docker CLI
+Homepage: https://github.com/docker/compose
+Conflicts: docker-ce, docker-compose-plugin, docker-ee
+Depends: libc6 (>= 2.3.2)
+Recommends: moby-cli
+SHA256: f5ee551318121bc97767aab270e058cd01b108fc3b6591ccd40e615e122f196d
+Size: 7900162
+Filename: pool/main/m/moby-compose/moby-compose_5.1.3-debian11u1_amd64.deb
 
 Package: moby-cli
 Version: 29.4.1-debian11u1
@@ -32344,52 +32433,6 @@ SHA256: e91b4719d17f782125153359b2f88c9cb32f33d3e4cc5ab81999093e931e7a23
 Size: 21463138
 Filename: pool/main/m/moby-engine/moby-engine_29.4.1-debian11u1_amd64.deb
 
-Package: moby-engine-dbgsym
-Source: moby-engine
-Version: 29.4.1-debian11u1
-Architecture: amd64
-Section: debug
-Priority: optional
-Installed-Size: 11567
-Maintainer: Azure Container Upstream
-Description: debug symbols for moby-engine
-Depends: moby-engine (= 29.4.1-debian11u1)
-Build-Ids: 38fb8735b8aad831a9141cf7182cfddba0687080 75bd2fad61e16a351366ec0a1d938eb5aecb6696
-Auto-Built-Package: debug-symbols
-SHA256: d82364e53c5b20428ff34ed256dd25d9fac2d2112e81fc707a3427534c08c12f
-Size: 1144034
-Filename: pool/main/m/moby-engine/moby-engine-dbgsym_29.4.1-debian11u1_amd64.deb
-
-Package: jaz
-Version: 0.0.0~preview+20260421.1
-Architecture: amd64
-Section: default
-Priority: extra
-Installed-Size: 10121
-Maintainer: Microsoft Build of OpenJDK Team <openjdk-support@microsoft.com>
-Description: Azure Command Launcher for Java is a lightweight utility that simplifies how Java developers launch their applications on Azure.
-Homepage: https://learn.microsoft.com/java/jaz/overview
-License: EULA
-SHA256: 90b86eea44cd127c2759232ae46dbf5411f4f135bd0980cf17f4ba54a74ab09d
-Size: 4151478
-Filename: pool/main/j/jaz/jaz_0.0.0~preview+20260421.1_amd64.deb
-
-Package: mdatp
-Version: 101.26032.0000
-Architecture: amd64
-Section: devel
-Priority: optional
-Installed-Size: 462644
-Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
-Description: Microsoft Defender (Production)
-   Microsoft Defender is a complete endpoint
-  security solution. It delivers preventative protection, post-breach
- detection, automated investigation, and response.
-Depends: libc6 (>= 2.17)
-SHA256: ec5f9aecb7e46462bcc866b795f6aa9f9ca72485b17774168e53739c8cae7fb3
-Size: 169856470
-Filename: pool/main/m/mdatp/mdatp_101.26032.0000_amd64.deb
-
 Package: powershell
 Version: 7.4.15-1.deb
 Architecture: amd64
@@ -32437,21 +32480,6 @@ Size: 31861690
 Filename: pool/main/m/moby-containerd/moby-containerd_1.7.30-debian11u4_amd64.deb
 
 Package: powershell
-Version: 7.5.6-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 187977
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: fde7b29237f3fcd8483b36859d3b5aa84380034d8d1d999a090c22a6fc3fd793
-Size: 54996822
-Filename: pool/main/p/powershell/powershell_7.5.6-1.deb_amd64.deb
-
-Package: powershell
 Version: 7.6.1-1.deb
 Architecture: amd64
 Section: shells
@@ -32465,21 +32493,6 @@ Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu1
 SHA256: 41de10d3ab6768b0de59c7d03d25a603b54695614845dd73dcb49a21380cf2a0
 Size: 56366242
 Filename: pool/main/p/powershell/powershell_7.6.1-1.deb_amd64.deb
-
-Package: powershell-preview
-Version: 7.7.0-preview.1-1.deb
-Architecture: amd64
-Section: shells
-Priority: optional
-Installed-Size: 194714
-Maintainer: PowerShell Team <PowerShellTeam@hotmail.com>
-Description: PowerShell is an automation and configuration management platform.
- It consists of a cross-platform command-line shell and associated scripting language.
-Homepage: https://microsoft.com/powershell
-Depends: libc6, libgcc1, libgssapi-krb5-2, libstdc++6, zlib1g, libicu106|libicu105|libicu104|libicu103|libicu102|libicu101|libicu100|libicu99|libicu98|libicu97|libicu96|libicu95|libicu94|libicu93|libicu92|libicu91|libicu90|libicu89|libicu88|libicu87|libicu86|libicu85|libicu84|libicu83|libicu82|libicu81|libicu80|libicu79|libicu78|libicu77|libicu76|libicu75|libicu74|libicu73|libicu72|libicu71|libicu70|libicu69|libicu68|libicu67|libicu66|libicu65|libicu64|libicu63|libicu62|libicu61|libicu60, libssl3|libssl1.1|libssl1.0.2|libssl1.0.0
-SHA256: 476655fc7a0917965a9c66a2b0f772bc9790d4d6c263e849863eee22c0726a29
-Size: 56985782
-Filename: pool/main/p/powershell-preview/powershell-preview_7.7.0-preview.1-1.deb_amd64.deb
 
 Package: msodbcsql17
 Version: 17.11.1.1-1
@@ -32543,19 +32556,6 @@ Vcs-Git: https://github.com/Azure/azure-functions-core-tools.git
 SHA256: cc2ca91348ae39614f04ce9557c551535d2e50784102dc7f946bafccede12d7c
 Size: 433035930
 Filename: pool/main/a/azure-functions-core-tools/azure-functions-core-tools_4.10.0-1_amd64.deb
-
-Package: mssql-tools
-Version: 17.11.1.1-1
-Architecture: amd64
-Section: database
-Installed-Size: 0
-Maintainer: Microsoft SQL Tools Team <mssql-tools@microsoft.com>
-Description: Tools for Microsoft(R) SQL Server(R)
- This package provides tools for Microsoft(R) SQL Server(R).
-Depends: libc6 (>= 2.19), libstdc++6 (>= 4.8.2), libkrb5-3, openssl, debconf (>= 0.5), msodbcsql17 (>= 17.3.0.0)
-SHA256: 8944c928aff5e6965988291446f7e4d18f3cf4d09faff99432259d1613800891
-Size: 228990
-Filename: pool/main/m/mssql-tools/mssql-tools_17.11.1.1-1_amd64.deb
 
 Package: msopenjdk-11
 Version: 11.0.31-1
