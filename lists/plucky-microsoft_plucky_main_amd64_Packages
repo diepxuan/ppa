@@ -676,3 +676,19 @@ SHA256: 5f2107d3b682cc008ec248e93bc4c00dc4ac674f2e1d4bd5c830bf2d1f1b60a1
 Size: 2906074
 Filename: pool/main/libm/libmsquic/libmsquic_2.5.9_amd64.deb
 
+Package: mdatp
+Version: 101.26042.0011
+Architecture: amd64
+Section: devel
+Priority: optional
+Installed-Size: 462027
+Maintainer: Microsoft Defender Group <mdatplinuxpackages@microsoft.com>
+Description: Microsoft Defender (Production)
+   Microsoft Defender is a complete endpoint
+  security solution. It delivers preventative protection, post-breach
+ detection, automated investigation, and response.
+Depends: libc6 (>= 2.17)
+SHA256: 0e7fc0a9134d5d8e367b088867745bb01ccb0fa9be33c8c62d1f51972c344019
+Size: 168469690
+Filename: pool/main/m/mdatp/mdatp_101.26042.0011_amd64.deb
+
