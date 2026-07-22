@@ -1,37 +1,37 @@
 Origin: DiepXuan
 Label: DiepXuan
 Codename: bullseye
-Date: Tue, 21 Jul 2026 19:36:38 UTC
+Date: Wed, 22 Jul 2026 12:48:56 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Debian 11 (Bullseye)
 MD5Sum:
- df43fcb4c185844a1db752bd2632b05a 48842 main/binary-amd64/Packages
- ea94677a4671167f0ff9bbab4100e127 9717 main/binary-amd64/Packages.gz
+ 913fb4b59bf7f0e6b520489854f753d0 48842 main/binary-amd64/Packages
+ ebe69e8993dc6926a87eb356eeea328f 9713 main/binary-amd64/Packages.gz
  48f58df194a70cbcb5068e57c6e9739b 103 main/binary-amd64/Release
- c4d7f15cf6ba8c31f6c1de38c5cc4dad 25493 main/binary-arm64/Packages
- 015385aefb0eff6f3c55541c2e1ec093 5044 main/binary-arm64/Packages.gz
+ 0001b8a86874b8f8542d56e8d1321323 25493 main/binary-arm64/Packages
+ 8eeb969a4d2f6088a5e482031351e02d 5045 main/binary-arm64/Packages.gz
  00dd72958792f6a52983856a7fe8f24e 103 main/binary-arm64/Release
- 0a9f2576c50c74e61307e93d490c0876 10677 main/binary-i386/Packages
- a888980ffffd2c9fa57c42c3049fb4bd 2584 main/binary-i386/Packages.gz
+ 1d5cc0215d4e7fab8e22df4724572536 10677 main/binary-i386/Packages
+ 5c00cf3ffefda30f07d0d0821d1dcdd2 2586 main/binary-i386/Packages.gz
  01cd082c267cadcb91920043316c65c4 102 main/binary-i386/Release
 SHA1:
- 07d87a5aaee9e34377fd285888f26a9b4b669bf8 48842 main/binary-amd64/Packages
- 91f80ce235627f26206ff0a388c79ad3c0c5d3fc 9717 main/binary-amd64/Packages.gz
+ 0b063be6f458a013abac43ba1ba23a7cf0bd2d6b 48842 main/binary-amd64/Packages
+ 5be54aac2751c11be33dff1e6ae68776e585a0b4 9713 main/binary-amd64/Packages.gz
  6e1a65df0a754f29dc5c33150179f6ce42799d4d 103 main/binary-amd64/Release
- dc27b7550760336af760778c57662eb2dd94bd9b 25493 main/binary-arm64/Packages
- 097f0796e3114bb22b7b172fc7ef11cac108a811 5044 main/binary-arm64/Packages.gz
+ e56939733c0daa83e254b2edab7538f6bb751208 25493 main/binary-arm64/Packages
+ d98861828bd1e8f4d4bcd4a6288edc5e874a05b9 5045 main/binary-arm64/Packages.gz
  437450fbcbf0623b5077cfb8424dc13251de0257 103 main/binary-arm64/Release
- f95c8fa16dfbde76f9c382b068e70e7d60e9f0d1 10677 main/binary-i386/Packages
- 7a9fdc779a4a5c86e7ed978ca2a5b20818497e20 2584 main/binary-i386/Packages.gz
+ 6834abb1110e18a480157a76da8d666ab3cec6d1 10677 main/binary-i386/Packages
+ acad5e52cbe84040f229c85594c448c3660dc746 2586 main/binary-i386/Packages.gz
  10c5fdc1c24b68d0a06bd24519ff32aa974d957d 102 main/binary-i386/Release
 SHA256:
- fff4c8ab12939ce5efed2a827aedcc42433460e88223aba03c1d4e43b693283f 48842 main/binary-amd64/Packages
- 6a15a8af82849f2ecf44c1a4feb88cf82e2beaf3b3ed21b2feec84fdc4b5633c 9717 main/binary-amd64/Packages.gz
+ d649dafc9e2f995c6e7827a198b6c5444b1473ef1a69a3b03712317893b1d3fe 48842 main/binary-amd64/Packages
+ e1bd86a7cfa4efb32bcdca155fc8e491f6e8bca975fd7dacefd4d16158d5b99e 9713 main/binary-amd64/Packages.gz
  e0236c200899ed40a0aa0261e1077a47d492ea3b5bf444e943a953f3c9c2d21e 103 main/binary-amd64/Release
- 61e4272946d4bb9356185213e53dfe4654722b6e41ae919520faaac5822c565c 25493 main/binary-arm64/Packages
- 81746268b250c81fa90cc38c39629be5818f89822d893b312c63c5945851b600 5044 main/binary-arm64/Packages.gz
+ ed7a41efc94099abc7580f86b3cc299184c458a36ead1abc60e45fff98955107 25493 main/binary-arm64/Packages
+ 305a707840f86f875e0de72f99604b3cc2021570001296c6162632a2e2828e92 5045 main/binary-arm64/Packages.gz
  aed7ed4d370cff8554c3e722e1fb78015baa074f695f73940e73d98dc3516f46 103 main/binary-arm64/Release
- bb5d4d33bd35efdde721bb8bcf615839dd2f89d0e84ac5a9c1ae16e0c4e0ab18 10677 main/binary-i386/Packages
- 7bcf136c79fc79127c60572c3ba0c730af038e71dddf3160990b985b4d8b0633 2584 main/binary-i386/Packages.gz
+ a00dd78952947aa90a883a59aa7ce5a1be179e80c65d4fa0adaf397f38af7402 10677 main/binary-i386/Packages
+ 3260893a36bcdde53b12530f3ac317f5c52aa159c500d1b1c8d5239c76cedfb0 2586 main/binary-i386/Packages.gz
  55bf4cde892f94d0d2e38289ecb5e9472b677e68d02ac8eb7fb0c2a2602be8ab 102 main/binary-i386/Release
