@@ -56,7 +56,7 @@ Description: DiepXuan super package
 
 Package: lar
 Source: diepxuan
-Version: 5.8.1+ubuntu~25.04
+Version: 5.8.2+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 15
@@ -64,17 +64,17 @@ Depends: ductn-lar
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.8.1+ubuntu~25.04_all.deb
-Size: 8964
-SHA256: 19e3d61308a24bb7d25f408377fea7859d7e402378191402579e0d514bf86a85
-SHA1: a72e7ad4c18fd154c949c87c6cdcdafedcbad16f
-MD5sum: 29c229cc31704d947f907db11e280165
+Filename: pool/main/d/diepxuan/lar_5.8.2+ubuntu~25.04_all.deb
+Size: 9016
+SHA256: 10936c0482f704aba2da005ccb18e371453c8bcabbad6606cf68d3ee39f83901
+SHA1: af611c2061872241528a3ab52ece4825a040b6a3
+MD5sum: 1ac59773b8023c1829556e47dcde5c06
 Description: Transitional package for ductn-lar
  This package safely migrates existing lar installations to ductn-lar.
 
 Package: m2
 Source: diepxuan
-Version: 5.8.1+ubuntu~25.04
+Version: 5.8.2+ubuntu~25.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
 Installed-Size: 15
@@ -82,11 +82,11 @@ Depends: ductn-m2
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.8.1+ubuntu~25.04_all.deb
-Size: 8964
-SHA256: 86b93974106b1ec173ab72e1aa4de4064857b7ca7bac7259d929eaedaf45bad2
-SHA1: 42300bc7e039a8899feeebb73a60720764c9dded
-MD5sum: e138e80613485e736d72663f11198eb0
+Filename: pool/main/d/diepxuan/m2_5.8.2+ubuntu~25.04_all.deb
+Size: 9014
+SHA256: e7c85e439f595187d97a3e3c6e5056ed897089475b6236010ed7705a72b6ff18
+SHA1: f3605dbad9a00d656c1e68a435a5be15157ed42f
+MD5sum: 29a8db1e4eae07a274ad7d2283478f77
 Description: Transitional package for ductn-m2
  This package safely migrates existing m2 installations to ductn-m2.
 
