@@ -19,37 +19,37 @@ Description: DiepXuan Microsoft APT repository setup
 
 Package: lar
 Source: diepxuan
-Version: 5.8.3+ubuntu~24.04
+Version: 5.8.4+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 15
+Installed-Size: 16
 Depends: ductn-lar
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.8.3+ubuntu~24.04_all.deb
-Size: 9176
-SHA256: 9c90b0319601cf6a866b85e0f0a7626b9bad15ad1508fa973daf691bae74a5d5
-SHA1: 5422d85e098299ae4270113f8219bf09d355db13
-MD5sum: a1b2dbeadc28b9c925cd2486ebf9bc7f
+Filename: pool/main/d/diepxuan/lar_5.8.4+ubuntu~24.04_all.deb
+Size: 10192
+SHA256: 039c5c553ca13b6ad93401a3212864d4ad4e753826a9ceb4918718321314fba2
+SHA1: ae04e1bcd3814723eeefb01c7c4eb394d36c905e
+MD5sum: 3ea2531c39800eb6f3ceb083b0889a49
 Description: Transitional package for ductn-lar
  This package safely migrates existing lar installations to ductn-lar.
 
 Package: m2
 Source: diepxuan
-Version: 5.8.3+ubuntu~24.04
+Version: 5.8.4+ubuntu~24.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 15
+Installed-Size: 16
 Depends: ductn-m2
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.8.3+ubuntu~24.04_all.deb
-Size: 9172
-SHA256: 0bfa002d2ddfec8185a279b3692203e1de51ba9ddc0fbc42480b9559365d3079
-SHA1: c7ac045fb22fd6238cdc75f0f789325a2355aaa3
-MD5sum: 8530c72b7523dcf565c486dab7563cbd
+Filename: pool/main/d/diepxuan/m2_5.8.4+ubuntu~24.04_all.deb
+Size: 10188
+SHA256: 40f3904b0c9bd2699dac40ec273d292f1eae77dd64ddbd49262fd124ca5ddaf5
+SHA1: 9b857e1e25346da47623a7a9ce4f608cee691f94
+MD5sum: 2cb90aca65c16c2d17edf422c1b7f29d
 Description: Transitional package for ductn-m2
  This package safely migrates existing m2 installations to ductn-m2.
 
