@@ -4,51 +4,51 @@ Hash: SHA512
 Origin: DiepXuan
 Label: DiepXuan
 Codename: jammy
-Date: Wed, 22 Jul 2026 17:51:02 UTC
+Date: Fri, 24 Jul 2026 08:42:34 UTC
 Architectures: amd64 arm64 i386
 Components: main
 Description: Ubuntu 22.04 (Jammy)
 MD5Sum:
- 23fb9538770d26a98607c068b4315bb0 31259 main/binary-amd64/Packages
- bad6d9223bc079b460133c383599b08e 4973 main/binary-amd64/Packages.gz
+ ce6c7da2d6c94c68cda7912edfeaee73 31261 main/binary-amd64/Packages
+ 08f7ec9fc673703d7c6a26d6145aa717 4977 main/binary-amd64/Packages.gz
  4bffc06e32fddcdb7fa06640127f4a04 103 main/binary-amd64/Release
- c21c27d0f409aa3b903835e50beadaac 18806 main/binary-arm64/Packages
- 2e888228ba2fcf3aad45fecfbe110310 3388 main/binary-arm64/Packages.gz
+ 4ef5000da00fcd9f8cb6267b14784411 18808 main/binary-arm64/Packages
+ c6a12a3aadf67c007120f46088103edd 3389 main/binary-arm64/Packages.gz
  26cbc07e892f48bc4a23fe62ebcaef17 103 main/binary-arm64/Release
- 7ae4586998fd4cac1372f6061fae2b39 9072 main/binary-i386/Packages
- 4f166bba63c69aed7693b4c241029a1d 2090 main/binary-i386/Packages.gz
+ 0c13f28a52e8f91a8384d0fa6f421352 9074 main/binary-i386/Packages
+ 71cb1bca280b7187f3e778cdc90248ab 2094 main/binary-i386/Packages.gz
  39d0f2b8642741468b7920eaf7f1f692 102 main/binary-i386/Release
 SHA1:
- ff511fe3a523bda77dc44810c7059cad20f868fc 31259 main/binary-amd64/Packages
- c089a38e191fb9f5efa4cbb6e788ae88f2032c04 4973 main/binary-amd64/Packages.gz
+ 4087a295ac42853df36d0cdf24b69a2afca71238 31261 main/binary-amd64/Packages
+ f5c3740c6e70f28e9f983bdc0c9012f08efacb6c 4977 main/binary-amd64/Packages.gz
  d26d92d29d4b3cbd407630ff15ad06e506556319 103 main/binary-amd64/Release
- ae0d0207f526b84cdd2b316f6ee356411895813c 18806 main/binary-arm64/Packages
- a29cc0cbef8f2a51193242d1b132d752cdad1151 3388 main/binary-arm64/Packages.gz
+ 666cf61d91d167ddabb9d3503aaacee35e5e1585 18808 main/binary-arm64/Packages
+ b650edb02e6b04a22e456eaf2c6ac4431abf5359 3389 main/binary-arm64/Packages.gz
  f62f7b13e0b60e960158c76697eeb2632a49f88c 103 main/binary-arm64/Release
- ae79d0b95fa7c319fd32b351ff10275b41ac613c 9072 main/binary-i386/Packages
- 313bd52ce1890ac9c2f7a7110cd7d21c03108486 2090 main/binary-i386/Packages.gz
+ 010b749641527c16605ea9e0e270bbd6ab4f2958 9074 main/binary-i386/Packages
+ 204ec0d12f31c2ff29d62acc84c11d56e45f1c11 2094 main/binary-i386/Packages.gz
  368eee1553b640ba468802a3a1688e424d5c0bda 102 main/binary-i386/Release
 SHA256:
- bf3e2ef3817b2fc7549b6bc84215fbe66aadb9d15509c7ff48c574aa08d6d587 31259 main/binary-amd64/Packages
- 1cbc0b1e95598f9564669c01c795ae2d5f96a60a2c8b9e3b815d6c35ca3016b9 4973 main/binary-amd64/Packages.gz
+ 5707b95b19266a7c8e923cd2c2c6c28535c5c554c92840ed8cf076601c904e0e 31261 main/binary-amd64/Packages
+ c8ae281a8b1fac7885c4d43d9ed6039f71e2e35050e1e1443fc87963b7bae91c 4977 main/binary-amd64/Packages.gz
  ab8fa8f517ca8e30fa522ad93ef6a94a788a899ab542403db316a66de11d030e 103 main/binary-amd64/Release
- 7ca3da3d90aaa427eab5c356b7cd88c647dafa289f67dfe2efca51660101872f 18806 main/binary-arm64/Packages
- e28b8270add912a15d7bacf558b46e192aa1ed7ef26953a745d09d4c590b4a1e 3388 main/binary-arm64/Packages.gz
+ e6a789638af18305a49ba7c36ed7438c7f4f28477a3611e68e31f182e5bf7d94 18808 main/binary-arm64/Packages
+ 4608b5e14cae5cf97855fa17c4ebde2ec127f26e0e052d782d38508e40bb1a9b 3389 main/binary-arm64/Packages.gz
  f6f85425b33c3c6fa138d077d990b55b574685fb2d8926562bb070f39f4b6b20 103 main/binary-arm64/Release
- d4b7da200dc207680c81185a4680080361af3f83cc16b9608dc623eb59ac0bee 9072 main/binary-i386/Packages
- 150711d4ae463f5953915f68769e7e71e6e6d71e21a1cc108a8ce4e88afa54ac 2090 main/binary-i386/Packages.gz
+ 14812a21ca61fe519c3a82f5837e0be0ab0cb436f2a35b387b5877fe09d339b1 9074 main/binary-i386/Packages
+ e7e4ef2035c056126313925be4b899046340b80075535958af4d60ea66b43cdf 2094 main/binary-i386/Packages.gz
  5142599bd9398f26cd6f08103a02e142140cc2b3adb2944e56f772bec2f9b3f5 102 main/binary-i386/Release
 -----BEGIN PGP SIGNATURE-----
 
-iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmphAwYACgkQfg7JF6UH
-S9OBkQv+JGq2wUMcvNWcjBddSad1L2zqdA63v58CfhMrhWdLWdivmJnRIoGvBDrq
-tVeGPnIAI/RDO8b+5ahLgQDybhSdWDYGmMSc4uykJumJBn8d+2K4OMhqnr9RB1aX
-7MoQUF6dr4Utj00DD+0fzvtLVto0Didmfc8ANsVodIvdaXNZKKNRMgLwOAP6T69q
-NosSfcSV6ggEHeQ94K+jaWk/VhSdRGg47dlSk/sY6fw2gbh7LCvAzdpB+mbbKgSC
-kR4vLwZxh4rbCVnOvj9yi1Lv/lpnlA25zBstfqezI9Tnd1lkidmbXyImnb45DZ9n
-mj0XBeN4GFBoYoom2MYn+jKIvr8FhLmTWDWDb4vHE0hHX/0Sdr/HTlzGqKlMde2+
-n6FELVWqTmCp5pVi62lkggDmB2UtTdRmNsAW2mUgwfb7eqAAYPciaC1KvjS1PiQK
-ylpzmPaM3pz33DiDBtCVHmQk4XYR/lo9iam6hCHukVdrrbGa4cY39oJQjMpjcKMp
-uES77mIT
-=vjAY
+iQGzBAEBCgAdFiEEyL1dbGOOihGTiSkmfg7JF6UHS9MFAmpjJXoACgkQfg7JF6UH
+S9NP0gv/WbpL5JUhi4EwE9iTwAps8GV09FPbdVBp9zMjFm/r/slGvnOGH8HXdWHM
+rYKBslyMUVCKzignUUCHNK2tlj1XGEoc+6jnbD8am4muN23u6PMuEs1cUL98qt5s
+WVk9eF4t5UKajDkIA2gTCXv3kcy0bbkGfEfcEFClcdz0K/NcOEw9ZNv8FupVVX/f
+YKMWH0+rvNmy/VpvglqDIPuNAdTa9E3wwCA79UOzx+3RqZYs4S60cZu5vYlRHVBd
+nT47oOoXjptGyQm3q4LcI+jQkBWh1feoH+281Lyey+OU1EUZ5UDQx9Y0Te+n4Trr
+ykmn/cxf35mBk6jM+Y7XGHP90vVBadvRuaeKdJjRq4ebWye5+UPTThffS28kg8CI
+N16GjbdrxOJvnFmE6UTXoJMOghIMvnN3NVQ13AY0QDyekPjthUSBEsXQDRYoklRo
+RRGzMWvF2REPHdU7qDy5DFryubuKaY7BWq5iq3ngyiNeCutg8CgBrWlYOlDbBNSr
+/WFnIb0x
+=UCDK
 -----END PGP SIGNATURE-----
