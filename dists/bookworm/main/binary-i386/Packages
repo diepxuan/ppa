@@ -75,37 +75,37 @@ Description: DiepXuan Magento 2 CLI wrapper
 
 Package: lar
 Source: diepxuan
-Version: 5.8.3+debian~12
+Version: 5.8.4+debian~12
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 15
+Installed-Size: 16
 Depends: ductn-lar
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.8.3+debian~12_all.deb
-Size: 9424
-SHA256: 9ad05a66296cb2b9aa9baa74c4e2ab41559840c3d20bbac36321ea14a4560dea
-SHA1: d72e8565af6f3836c92df5350d3d8c1da5036ab2
-MD5sum: 839e134780a814dbcdfb3267c70d620e
+Filename: pool/main/d/diepxuan/lar_5.8.4+debian~12_all.deb
+Size: 10452
+SHA256: 2e278925a300763e2d6bfaf4b88f08819842a37cc2cf44e3348e1317114f9b84
+SHA1: fc8280d1848614d6027bbaa75c378adce5163a0f
+MD5sum: 99f7e59e9c449f4b71fe90b1ea48a418
 Description: Transitional package for ductn-lar
  This package safely migrates existing lar installations to ductn-lar.
 
 Package: m2
 Source: diepxuan
-Version: 5.8.3+debian~12
+Version: 5.8.4+debian~12
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 15
+Installed-Size: 16
 Depends: ductn-m2
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.8.3+debian~12_all.deb
-Size: 9432
-SHA256: 7f22ba5769f3858d2249509a1c563cc94b6e6ff61063f6c842cb1720d3b1bed5
-SHA1: 9c9e92adef13dfca611e5ff64a1f0a1e5537a9aa
-MD5sum: 3f486cb97fdb9be3be2874eaf448ddfe
+Filename: pool/main/d/diepxuan/m2_5.8.4+debian~12_all.deb
+Size: 10448
+SHA256: ec85f00345e63f38dfebbb7e7f4bb0a47007d046c008826885753c61c42cf72c
+SHA1: c7e7bcb7b823bc49c6a75ecbf1caf659cf5b7f06
+MD5sum: b48675170fc7c204180eef1717e7dad5
 Description: Transitional package for ductn-m2
  This package safely migrates existing m2 installations to ductn-m2.
 
