@@ -19,19 +19,19 @@ Description: DiepXuan Microsoft APT repository setup
 
 Package: ductn
 Source: diepxuan
-Version: 5.8.4+ubuntu~20.04
+Version: 5.8.6+ubuntu~20.04
 Architecture: amd64
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 8696
+Installed-Size: 8840
 Depends: ductn-ll (>= 1.0.0), net-tools, jq, curl, bash-completion, openssl, unzip, apt-transport-https, sudo, dnsutils, lsof, locales
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/ductn_5.8.4+ubuntu~20.04_amd64.deb
-Size: 8707176
-SHA256: 08f6c932309300457e643e8d59bb71f8a37d2b9a42ff430d15daa0784a0fb279
-SHA1: 170418619d4e5ce2e6a19f7edf79082fcc52efea
-MD5sum: aa6a83ff1dcbc262639635cfea41a97f
+Filename: pool/main/d/diepxuan/ductn_5.8.6+ubuntu~20.04_amd64.deb
+Size: 8849584
+SHA256: e45df536a2f4726ff3597b8b08a3b7226ae0cb237383bfde673da1dbe2e57dee
+SHA1: e24355139ab40b0c0edf6bb6cfc7a884d2bedba9
+MD5sum: 9984b7a6ee7b27c803b08cb50329aa4d
 Description: DiepXuan super package
   Private package for DiepXuan Co.,Ltd
   Building by Tran Ngoc Duc
@@ -94,37 +94,37 @@ Description: DiepXuan Magento 2 CLI wrapper
 
 Package: lar
 Source: diepxuan
-Version: 5.8.4+ubuntu~20.04
+Version: 5.8.6+ubuntu~20.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 16
+Installed-Size: 9
 Depends: ductn-lar
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/lar_5.8.4+ubuntu~20.04_all.deb
-Size: 10456
-SHA256: 08d0f69fd795c71bd1bc9c17b9290b2328ddc124f75c36068ace12db503528df
-SHA1: 42490a88d4f0b9e7f253538fd1b9535651df8a72
-MD5sum: a5e20503531b133b66dbdd093d92152d
+Filename: pool/main/d/diepxuan/lar_5.8.6+ubuntu~20.04_all.deb
+Size: 2724
+SHA256: 4d23dbe37dfe0cfc9a2d8052c8475b7d5627a6dcba6b26324cf8431a971c4fcf
+SHA1: 5a9fe88f88c67a14c50973dce01d16f1b68c9991
+MD5sum: e94c9f0a5b47f7e82408716fa4b442be
 Description: Transitional package for ductn-lar
  This package safely migrates existing lar installations to ductn-lar.
 
 Package: m2
 Source: diepxuan
-Version: 5.8.4+ubuntu~20.04
+Version: 5.8.6+ubuntu~20.04
 Architecture: all
 Maintainer: Tran Ngoc Duc <ductn@diepxuan.com>
-Installed-Size: 16
+Installed-Size: 9
 Depends: ductn-m2
 Homepage: https://ppa.diepxuan.com
 Priority: optional
 Section: devel
-Filename: pool/main/d/diepxuan/m2_5.8.4+ubuntu~20.04_all.deb
-Size: 10464
-SHA256: c6ac4e897d6ade6b5f3e2420f620c75f84e0ab55083d4c27fd0b89f6d8322ffb
-SHA1: 7ed52db630f7d698dc9caaa38074584847531392
-MD5sum: 255cf311dd023da3e3cc09907b6c4f19
+Filename: pool/main/d/diepxuan/m2_5.8.6+ubuntu~20.04_all.deb
+Size: 2720
+SHA256: ed17e33e399a0c23264401192f525a0195f602c1422d0f48db49937dec58e9d9
+SHA1: a1a221929822ed1a38493afacd1a37b3de0fbc6f
+MD5sum: f3ad66c3846df178eb12ec70c87e5a59
 Description: Transitional package for ductn-m2
  This package safely migrates existing m2 installations to ductn-m2.
 
